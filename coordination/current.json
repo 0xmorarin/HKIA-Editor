@@ -21,30 +21,37 @@
     },
     "03_LINKAGE": {
       "status": "DELIVERED_PARTIAL",
-      "graphEdges": 17284,
-      "newRequiredWrites": 0,
-      "sourcePersistedPair": "OBSERVED_NOT_CAUSAL",
-      "next": "TRACE_TARGET_SPECIFIC_PERSISTED_REWARD_QUEST_UNLOCK_PATH"
+      "nativeStorageRoutes": 4,
+      "missionSourceLinks": 171,
+      "missionSourceTargetGuids": 170,
+      "sampleMissionMatches": 134,
+      "requiredNewEdges": 0,
+      "sourceScopedQA": "LOCAL_PASSED",
+      "remaining": "reward receipt / Quest unlock game acceptance unknown"
     },
     "04_SAVE_CORE": {
       "status": "DELIVERED_PARTIAL",
       "nativeWriterEnabled": false,
-      "structuralFutureRead": "SYNTHETIC_PASS_NOT_UI_CONNECTED",
-      "next": "VERIFY_SAVE_FORMAT_AND_IMPLEMENT_SAFE_TYPED_COMPOSITE_WRITER_WITHOUT_EXPORT"
+      "zipPreflight": "LOCAL_PASSED",
+      "sameGUIDDifferentDocId": "REJECT",
+      "realPrivateFixtures": "UNVERIFIED",
+      "remaining": "native authenticated reencode and real Switch acceptance"
     },
     "05_WEB": {
       "status": "DELIVERED_PARTIAL",
-      "chromiumInline": "PASS",
-      "chromiumHttp": "BLOCKED_ENVIRONMENT",
-      "futureVersionUi": "NOT_CONNECTED",
-      "writerPort": "MOCK_OFF",
-      "next": "FUTURE_VERSION_PARTIAL_READ_UI_AND_TYPED_WRITER_PREVIEW"
+      "futureStructuralReader": "LOCAL_PASSED_SYNTHETIC",
+      "chromeInline": "PASS",
+      "chromeHttp": "UNVERIFIED_ENVIRONMENT",
+      "nativeWriterMock": "OFF",
+      "sourceReadOnly": true
     },
     "06_QA": {
-      "status": "NEXT_INDEPENDENT_SOURCE_QA_REQUIRED",
-      "candidateSha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
-      "priorScopeQA": "NOT_TRANSFERRABLE",
-      "next": "SCOPED_QA_NEW_161_FILE_CANDIDATE"
+      "status": "PREVIOUS_161_FILES_SCOPED_RED_COMMENTS",
+      "previousSourceSha": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+      "previousFunctionalScope": "PASS_REPORTED",
+      "newSourceSha": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
+      "newIndependentQA": "PENDING",
+      "commentFixImplementedBy00": true
     }
   },
   "p0FixCandidate": {
@@ -74,12 +81,12 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA new candidate scoped verdict",
-    "00 accept fixed local Source if scoped pass",
-    "04/03 gather native writer proof in parallel",
-    "05 final read-only and writer bridge with proven API",
-    "06 final source-frozen browser and private-save QA",
-    "00 GitHub public-safe Source integration and Owner release gate"
+    "06 QA independent scoped recheck of new 177-file Source SHA",
+    "00 accept and GitHub source landing after scoped QA & public-safe asset gate",
+    "03 / 04 continue independent persistence validation and native writer core",
+    "05 UI adapter only after 04 typed API changes",
+    "06 final source-frozen browser/private save checks",
+    "00 Owner approves formal Pages/image/publication gate"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -107,52 +114,45 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_Next_20261111.zip",
-    "driveId": "1_UERCJeX30_l_3J3yjCVSPR9XVYUqBpw",
-    "sha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
-    "entries": 161,
-    "sourceBaseSha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
-    "streams": [
-      "01",
-      "02",
-      "03",
-      "04",
-      "05",
-      "00"
-    ],
-    "changedPaths": 35,
-    "sourceDeltaSha256": {
-      "01": "85c45d8f57f9a4565cf626ae06ac6e437ad2847c0588864d1e944544ce32dade",
-      "02": "7b72b3c7758b08036202774363042b3ee7b88d37ea00249267ca2beebfd38064",
-      "03": "66c161371b1c65ce5946dd0cd32a954718189d654e9af176947673de3a33e326",
-      "04": "ed0d32542b541e5755f44a291b679968dfc1ee0567e1d7d5416ff8a2f46107b8",
-      "05": "0b06e98d5bd64b113cee4861abfd4b40090c72e6522fcef9ee29edcbc5e37a66"
+    "artifact": "HKIA_CTRL_Scoped_Integration_Candidate_20261111.zip",
+    "driveId": "1lPKMVWzoIvJDUy4pnP25GHm5ZGWJ389q",
+    "sha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
+    "entries": 177,
+    "baseSha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+    "baseFiles": 161,
+    "modifiedPaths": 16,
+    "addedPaths": 16,
+    "unchangedPaths": 145,
+    "deltas": {
+      "03_NATIVE": "d06982bb89db9490c0c97e0e7aa8c566ddbef5291cd21a6fd80591059ee2978d",
+      "04_SAFE_READ": "20d3d18d2a974960deb712e913830f30edf94775a4fd5aefcdaedf21aed5ab8e",
+      "05_STRUCTURAL_UI": "362db0bea3cbcab4cf9047f6b3f58439e25cd127bfefaa2817618f78cec3ecc6"
     },
-    "scopedTests": {
-      "total": 252,
-      "passed": 216,
-      "skipped": 36,
-      "failed": 0
+    "tests": {
+      "total": 315,
+      "pass": 279,
+      "skip": 36,
+      "fail": 0,
+      "build": "PASS",
+      "check": "PASS",
+      "chromeInline": "PASS",
+      "chromeHttp": "UNVERIFIED_BLOCKED_ENVIRONMENT",
+      "sourceChangedScopeComments": "CLEANED",
+      "pagesComments": "PASS",
+      "readme": "ABSENT",
+      "assetsLosslessWebp": 25
     },
-    "build": "PASS",
-    "check": "PASS",
-    "chromiumInline": "PASS",
-    "chromiumHttp": "UNVERIFIED_ENVIRONMENT",
+    "independentQa": "PENDING_NEW_SHA",
     "privateFixtureRun": false,
     "switchDeviceRun": false,
-    "localOnlyGameImages": 25,
-    "imageFormat": "VP8L lossless WebP",
-    "buildFiles": 51,
-    "pagesCommentReadmePolicy": "PASS",
-    "productSourceMergedToGitHubMain": false,
     "nativeWriterEnabled": false,
-    "ownerApprovalToPublish": false,
-    "status": "LOCAL_INTEGRATION_SCOPED_PASS_QA_PENDING"
+    "pagesEnabled": false,
+    "productSourceMergedToGitHubMain": false
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Local_Candidate_20261111.zip",
-    "sha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
-    "driveId": "13v8Z47ziSyXQT23FRyQ9CsMmbN6Wc8a3",
-    "entries": 133
+    "artifact": "HKIA_CTRL_Integrated_Candidate_Next_20261111.zip",
+    "sha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+    "driveId": "1_UERCJeX30_l_3J3yjCVSPR9XVYUqBpw",
+    "entries": 161
   }
 }
