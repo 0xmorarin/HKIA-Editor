@@ -31,37 +31,29 @@
       "next": "TARGET_SPECIFIC_PRIVATE_BEFORE_AFTER_OR_NATIVE_PERSISTED_CLAIM_PROOF_ONLY"
     },
     "04_SAVE_CORE": {
-      "status": "V6_LOCAL_DELTA_READY_FOR_QA",
-      "nativeWriterEnabled": false,
-      "work": "SYNTHETIC_NATIVE_ACCOUNT_ATOMIC_LAB",
-      "sourceFileCount": 3,
-      "addedFiles": 3,
-      "writerOutput": false,
-      "privateSaveVerified": false,
-      "next": "NATIVE_INTEGRITY_AND_ACTUAL_CROSS_STORE_EDITED_ZIP_REPARSE"
+      "status": "V7_LOCAL_INTEGRATED_QA_PENDING",
+      "deliverable": "NATIVE_CANDIDATE_READ_ONLY_VERIFIER",
+      "syntheticCandidateVerify": true,
+      "hardCommitGate": "OFF",
+      "candidateModifiedNativeBytesReturned": false,
+      "realPrivateSave": "UNVERIFIED",
+      "next": "VALIDATE_REAL_NATIVE_ENVELOPE_AND_BUILD_ATOMIC_TYPED_WRITE_ONLY_WHEN_PRECONDITIONS_PROVEN"
     },
     "05_WEB": {
-      "status": "V6_LOCAL_DELTA_READY_FOR_QA",
-      "work": "READ_ONLY_SOURCE_REVISION_CAS_UI",
-      "nativeWriterMock": "OFF",
-      "browsers": "INLINE_PASS",
-      "secureContextHttp": "UNVERIFIED",
-      "newSourceSnapshot": true,
-      "stalePreviewFailClosed": true,
-      "next": "AWAIT_04_PRODUCTION_TYPED_API"
+      "status": "V6_SOURCE_REVISION_UI_LOCAL_INTEGRATED",
+      "writeCapability": "OFF",
+      "currentProductApi": "READ_ONLY_PREVIEW_WITH_STALE_SOURCE_REJECTION",
+      "next": "READY_AFTER_04_ACCEPTED_NATIVE_WRITER_API"
     },
     "06_QA": {
-      "status": "V5_SCOPED_PASS_NEW_V6_PENDING",
-      "v5SourceSha": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
-      "v5Decision": "SCOPED_PASS_RESEARCH_ONLY",
-      "v5IndependentlyExecuted": {
-        "focused": 23,
-        "syntheticAndCas": 27,
-        "browser": 4
-      },
-      "v6SourceSha": "ae3260406f38ecc3b59145e4c8032ba1853a5d21a995386418173b89d90ce5c2",
-      "v6IndependentQA": "PENDING",
-      "scope": "04+05 12-path diff and browser harness adapter"
+      "status": "V5_SCOPED_PASS_V6_V7_CUMULATIVE_QA_PENDING",
+      "acceptedHeadSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+      "sourceToVerifySha256": "2bf91326634d1e12868ef70fd040a91d835fd560f7f1b4abdc8b2a9302c9a646",
+      "sourceToVerifyDrive": "1v_lK7MWgqQkw-biBIrpYQbaKXuHmXugL",
+      "focusedScope": "V5->V7 7_MOD_12_ADD",
+      "v6IndependentVerdict": "NOT_CONFIRMED",
+      "v7IndependentVerdict": "PENDING",
+      "nativeWriterRelease": false
     }
   },
   "p0FixCandidate": {
@@ -91,13 +83,13 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA independent changed-scope V6 206-file Source QA",
-    "04 SAVE CORE targeted native authentication/real-private-Save nonexporting writer validation in parallel",
-    "00 after QA, reconcile github Draft PR #1 with QA-accepted full scope and staged catalogs",
-    "05 WEB only after 04 accepted production API or specific E2E environment unblock",
-    "03 LINKAGE only on evidence of target-specific persisted REQUIRED dependency",
-    "06 final fixed-Git-HEAD browser HTTP and real-save/real-device QA",
-    "00 serial main merge only after accepted build/test/rights gate; Pages and writer remain OFF until Owner release approval"
+    "06 QA independently verify cumulative V5->V7 changed-only 19 paths; V5 already scoped accepted",
+    "04 SAVE_CORE independent real-save envelope/authentication evidence and typed atomic writer; no export",
+    "00 integrate GitHub code-only PR #1 only after its scoped QA and without game data or lossless WebP until formal release",
+    "05 WEB new writer adapter only after 04 typed writer accepted by 06; current source revision CAS already delivered",
+    "03 LINKAGE only on target-specific new persistence causality evidence",
+    "06 final fixed-head real Browser HTTP, private save and device tests",
+    "00 owner explicit Pages and game-media formal release approval"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -125,22 +117,26 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V6_20261111.zip",
-    "driveId": "1X0n6EGCSiVtX_1SR2z3NEhlZpIjujALK",
-    "sha256": "ae3260406f38ecc3b59145e4c8032ba1853a5d21a995386418173b89d90ce5c2",
-    "baseSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
-    "entries": 206,
-    "bytes": 2456431,
-    "modifiedPaths": 6,
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V7_20261111.zip",
+    "driveId": "1v_lK7MWgqQkw-biBIrpYQbaKXuHmXugL",
+    "sha256": "2bf91326634d1e12868ef70fd040a91d835fd560f7f1b4abdc8b2a9302c9a646",
+    "entries": 212,
+    "bytes": 2467992,
+    "baseSha256": "ae3260406f38ecc3b59145e4c8032ba1853a5d21a995386418173b89d90ce5c2",
+    "baseEntries": 206,
+    "modifiedPaths": 4,
     "addedPaths": 6,
-    "unchangedPaths": 194,
-    "sourceDeltas": {
-      "04_NATIVE_ACCOUNT_SYNTHETIC": "d4bac80abcd5c14ab509c87a329c33eff416e14d9e67ca661e6a636423312fd5",
-      "05_SOURCE_REVISION_UI": "27ccf99ba00f635ba642658cdbc5406f3fa9dbca90c162a4ee7e9daaba2b0443"
+    "unchangedPaths": 202,
+    "scope": "04 READ_ONLY_NATIVE_CANDIDATE_VERIFIER_AND_HARD_OFF_COMMIT_GATE; 00 MARK_HISTORICAL_SOURCE_SHA_PROVENANCE",
+    "acceptedIndependentQaSource": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+    "pendingQaCumulativeChangesFromV5": {
+      "modifiedPaths": 7,
+      "addedPaths": 12,
+      "removedPaths": 0
     },
     "checks": {
       "tests": {
-        "passed": 373,
+        "passed": 388,
         "skipped": 36,
         "failed": 0
       },
@@ -149,33 +145,30 @@
       "pagesPolicy": "PASS",
       "distFiles": 53,
       "webpLossless": 25,
-      "chromeInline": "PASS",
-      "chromeHttp": "UNVERIFIED_BLOCKED_ENVIRONMENT",
-      "privateFixture": "NOT_RUN",
-      "realDevice": "NOT_RUN"
+      "chromiumInline": "PASS",
+      "chromiumHttp": "BLOCKED_ENVIRONMENT",
+      "privateFixture": "UNVERIFIED",
+      "realDevice": "UNVERIFIED"
     },
-    "status": "LOCAL_INTEGRATION_PASS_INDEPENDENT_QA_PENDING",
-    "writer": false,
-    "pages": false
+    "nativeWriterEnabled": false,
+    "pagesEnabled": false,
+    "productSourceMergedToGitHubMain": false,
+    "independentQa": "PENDING"
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V5_20261111.zip",
-    "driveId": "1O0s5SzSK4KaeYGDQn9_aLe7UxjtfFrVa",
-    "sha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
-    "entries": 200
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V6_20261111.zip",
+    "driveId": "1X0n6EGCSiVtX_1SR2z3NEhlZpIjujALK",
+    "sha256": "ae3260406f38ecc3b59145e4c8032ba1853a5d21a995386418173b89d90ce5c2",
+    "entries": 206
   },
   "githubSourceBootstrap": {
-    "state": "DRAFT_PR_OPEN_NOT_MERGED",
     "pr": 1,
     "branch": "source/v5-code-only",
-    "commit": "7a9bfdaa3a01eedf755e361f511dd95d9cd0ef16",
-    "baseMain": "c1c9139d0fe66fd55bf44c78d6262b20bbe1d76d",
-    "scopedV5CodeFiles": 22,
-    "assetsPublished": false,
-    "catalogsPublished": false,
-    "privateSavePublished": false,
-    "repositoryBuildComplete": false,
-    "sourceCommitIndependentQa": "V5_SCOPED_ONLY",
-    "mergeAllowed": false
+    "head": "7a9bfdaa3a01eedf755e361f511dd95d9cd0ef16",
+    "state": "OPEN_DRAFT",
+    "files": 22,
+    "mainMerged": false,
+    "assetsUploaded": false,
+    "standaloneBuild": false
   }
 }
