@@ -38,7 +38,36 @@
         "animated-webp"
       ],
       "localVerification": "MANDATORY_BEFORE_RELEASE",
-      "releaseNeedsOwnerApproval": true
+      "releaseNeedsOwnerApproval": true,
+      "requiredImageScope": "ALL_GAME_IMAGES_RELATED_TO_EDITABLE_ACHIEVEMENTS_AND_COLLECTIONS",
+      "include": [
+        "collection_group_icons",
+        "collection_detail_and_item_icons_when_game_image_exists",
+        "account_achievement_icons",
+        "ingame_achievement_icons_and_category_images",
+        "associated_reward_item_images"
+      ],
+      "gameUiLayoutReproduction": "NOT_REQUIRED",
+      "uiDesignPriority": "INDEPENDENT_USABILITY_FIRST_SEARCH_FILTER_PROGRESS_BULK_EDIT_DIFF",
+      "assetIdentity": "SOURCE_VERIFIED_SPRITE_OR_TEXTURE_ID_ONLY",
+      "imageCoverageGate": "ALL_EDIT_RELEVANT_VISUAL_REFERENCES_MAPPED_AND_RESOLVED_OR_SOURCE_VERIFIED_NO_GAME_ART",
+      "deduplicateIdenticalGameArtwork": true,
+      "unknownAssetPolicy": "NEUTRAL_PLACEHOLDER_AND_REMAIN_UNVERIFIED_NOT_FAKE_MATCH",
+      "extractionAndConversion": "LOCAL_PRIVATE_ONLY_BEFORE_FORMAL_RELEASE",
+      "copyrightDistributionReview": "REQUIRED_BEFORE_PUBLICATION"
+    },
+    "userExperience": {
+      "layout": "CUSTOM_NOT_NATIVE_SCREEN_RECREATION",
+      "priorities": [
+        "SEARCH_AND_FILTER",
+        "CATEGORY_AND_PROGRESS",
+        "BULK_AND_INDIVIDUAL_EDIT",
+        "DIFF_AND_WARNINGS",
+        "RESPONSIVE_KEYBOARD"
+      ],
+      "preserveExistingTabs": true,
+      "noFullRedesign": true,
+      "gameImagesMandatoryForAllVerifiedRelatedAssets": true
     }
   },
   "compatibility": {
