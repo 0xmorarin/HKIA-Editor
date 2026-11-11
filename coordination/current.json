@@ -31,28 +31,33 @@
       "next": "TARGET_SPECIFIC_PRIVATE_BEFORE_AFTER_OR_NATIVE_PERSISTED_CLAIM_PROOF_ONLY"
     },
     "04_SAVE_CORE": {
-      "status": "V9_LZ4_TOUCHED_BLOCK_LOCAL_INTEGRATED_QA_PENDING",
-      "addedTests": 4,
-      "realNativeWriterEnabled": false,
-      "realPrivateSave": "UNVERIFIED",
-      "next": "AUTHENTIC_V300_V301_REENCODE_WITH_REAL_SAVE_EVIDENCE"
+      "status": "V10_LZ4_MATCH_ENCODER_LOCAL_PASS_INDEPENDENT_QA_PENDING",
+      "sourceSha256": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
+      "newTestsPass": 7,
+      "fullTestsPass": 429,
+      "nativeWriterEnabled": false,
+      "privateRealSave": "UNVERIFIED",
+      "next": "REAL_SWITCH_V300_V301_PRIVATE_SAVE_AUTHENTICATION_REENCODE_REPARSE"
     },
     "05_WEB": {
-      "status": "V9_ACCOUNT_ASYNC_ZIP_CAS_LOCAL_PASS_INDEPENDENT_QA_PENDING",
+      "status": "ACCOUNT_ASYNC_CAS_LOCALLY_PASSED_WAIT_V10_INDEPENDENT_QA",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
-      "nativeWriterFeature": "READY_AFTER_04_TYPED_API_ACCEPTED",
-      "next": "WAIT_06_P0_SCOPED_QA"
+      "nativeWriterFeature": "READY_AFTER_04_TYPED_NATIVE_WRITER_ACCEPTED",
+      "next": "WAIT_06_P0_SCOPED_QA",
+      "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
+      "localChromiumRaces": 8
     },
     "06_QA": {
-      "status": "V5_ACCEPTED_V9_CUMULATIVE_QA_READY_NOW",
-      "acceptedSourceSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
-      "candidateSourceSha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
-      "changedPaths": "7_MOD_20_ADD_0_DEL",
-      "v6v7v8IndependentVerdict": "NOT_VERIFIED_IN_AVAILABLE_RECORDS",
-      "checkAccountZipAsyncRace": true,
-      "requiredVerdict": "SCOPED_PASS_OR_TRUE_RED"
+      "status": "READY_NOW_V5_TO_V10_CHANGED_ONLY",
+      "sourceSha256": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
+      "acceptedBaseSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+      "scope": "7_MOD_23_ADD_0_DEL",
+      "priorV9Verdict": "UNVERIFIED_IN_AVAILABLE_FILES",
+      "accountRaceP0": "FIX_LOCALLY_PASS_NOT_ACCEPTED",
+      "newLz4Encoder": "LOCAL_PASS_QA_PENDING",
+      "next": "SCOPED_PASS_OR_TRUE_RED_FIXED_SOURCE"
     }
   },
   "p0FixCandidate": {
@@ -82,13 +87,13 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "START_NOW_PARALLEL 06_QA: independently verify V5→V9 7MOD+20ADD including Account export CAS true red fix and 04 LZ4 touched blocks",
-    "START_NOW_PARALLEL 04_SAVE_CORE: authentic Switch 3.0.0/3.0.1 native save verification and codec/atomic writer completion, no duplicate synthetic research",
-    "START_NOW_PARALLEL 00_MEDIA: all editable Achievement/Collection source-linked artwork from private Steam/Switch assets, verified loseless VP8L, no public media",
-    "READY_AFTER_04_API_ACCEPTED 05_WEB: Native writer API UI connection, preserve approved Account ZIP fix",
-    "SERIAL 00_CTRL: integrate only QA-accepted exact source, preserve code-only Draft PR1 and media privacy",
-    "06_QA final fixed HEAD real HTTP Chrome/private real-save checks",
-    "00_CTRL public release requires Owner explicit approval for Pages, game media and Writer"
+    "06 QA independent scoped V5→V10 7MOD+23ADD, test 05 Account async CAS regression and 04 new match encoder, no reQA of accepted V5",
+    "04 SAVE CORE analyze authentic v3.0.0/3.0.1 native private saves, leading 32-byte envelope and load/validate path, implement safe true writer without speculative linkage",
+    "00 MEDIA continue full private achievements+collections source-verified mapping, lossless WebP conversion, pixel exact, no repeat 25 collection category assets",
+    "00 CTRL freeze accepted 06 Source; PR1 code-only still Draft; do not publish game media",
+    "05 WEB only after accepted 04 typed native writer API, integrate verified ImageMap from 00 MEDIA, usability-first design",
+    "06 final fixed-head real HTTP Chrome and private real-save verification, real device conditional",
+    "00 Owner explicit approval before formal Pages, game art and writer release"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -146,48 +151,44 @@
       "rewardItemImages": 0
     },
     "extractionSources": "EXISTING_STEAM_V301_DEFINITIONS_AND_ATLAS_REFERENCES_PRIVATE",
-    "mediaTasks": "READY_NOT_RUNNING_AUTOMATICALLY",
+    "mediaTasks": "STARTABLE_NO_NEW_ARTIFACT_FOUND",
     "assetMappingPolicy": "SOURCE_VERIFIED_ONLY_NO_NAME_SIMILARITY_GUESSES",
     "imageFileFormat": "WEBP_LOSSLESS_VP8L"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V9_20261111.zip",
-    "privateContainerOnly": true,
-    "privateDriveFullZip": "NOT_UPLOADED",
-    "sha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
-    "entries": 220,
-    "bytes": 2491399,
-    "baseDriveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM",
-    "baseSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
-    "reconstruction": [
-      {
-        "stream": "04",
-        "driveId": "175wDGcWWKIVGwG_Sv6_cOG-MtfckUz27",
-        "sha256": "3b54306549806dc2225146abcd962a1b884959d68e37ef4b03b398eead69ebdc"
-      },
-      {
-        "stream": "05",
-        "driveId": "1sU-RXWvSmAbhoIylW_8-hsFJvJ1QETM8",
-        "sha256": "2912206c0cc1fa4091c66aa0b975df4763f804428f9f971e8ce3736c3012ed20"
-      }
-    ],
-    "changedPaths": {
-      "modified": 4,
-      "added": 5,
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V10_20261111.zip",
+    "driveId": "1Mu-YF5zthk76pZPW1NtiPGKVhQ3RRqIW",
+    "sha256": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
+    "entries": 223,
+    "bytes": 2497409,
+    "baseSha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
+    "baseEntries": 220,
+    "deltaDriveId": "11U96JSG1azRUgbB1--kTTCFa1sC_b1PV",
+    "deltaSha256": "ad98824391c5121a281a0c141e4efd9fb58792e54fc6ca1343b5d3dd9ca46335",
+    "exactComparison": {
+      "modifiedPaths": [
+        "scripts/research/save-cross-store-dry-run.mjs",
+        "scripts/research/save-transaction-engine.mjs"
+      ],
+      "addedPaths": [
+        "docs/research/04-LZ4-MATCH-CODEC-HANDOFF-20261111.md",
+        "scripts/research/lz4-match-encoder.mjs",
+        "tests/04-lz4-match-encoder.test.mjs"
+      ],
+      "unchanged": 218,
       "deleted": 0,
-      "unchanged": 211,
-      "conflicting": 0
+      "conflicts": 0
     },
     "acceptedIndependentQaBase": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
     "cumulativeQaScopeFromV5": {
       "modified": 7,
-      "added": 20,
+      "added": 23,
       "deleted": 0
     },
     "checks": {
       "tests": {
-        "pass": 422,
+        "pass": 429,
         "skip": 36,
         "fail": 0
       },
@@ -195,24 +196,25 @@
       "npmBuild": "PASS",
       "pagesPolicy": "PASS",
       "distFiles": 53,
+      "distByteIdenticalToV9": true,
       "losslessWebp": 25,
       "chromeAccountRaceInline8": "PASS",
       "chromeMobile320375": "PASS",
-      "chromeHttp": "UNVERIFIED_ENVIRONMENT",
+      "chromeHttp": "UNVERIFIED",
       "privateFixture": "UNVERIFIED",
       "realDevice": "UNVERIFIED"
     },
+    "independentQa": "PENDING_V10_7_MOD_23_ADD",
     "writerEnabled": false,
     "pagesEnabled": false,
     "productSourceMergedToGitHubMain": false,
-    "independentQa": "PENDING_V9_CHANGED_SCOPE",
-    "privacy": "PRIVATE_MEDIA_AND_DEFINITIONS_LOCAL_ONLY"
+    "scope": "04 LZ4 match encoder research; preserve 05 Account ZIP async CAS and full existing UI"
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V8_20261111.zip",
-    "driveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM",
-    "sha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
-    "entries": 215
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V9_20261111.zip",
+    "sha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
+    "entries": 220,
+    "baseDriveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM"
   },
   "githubSourceBootstrap": {
     "pr": 1,
@@ -265,38 +267,38 @@
       {
         "priority": "P0",
         "owner": "06_QA",
-        "task": "INDEPENDENT_V5_TO_V9_7MOD20ADD_AND_ACCOUNT_ZIP_RACE",
+        "task": "V5_TO_V10_CHANGED_ONLY_7_MOD_23_ADD_AND_ACCOUNT_ZIP_CAS",
         "status": "READY_NOW"
       },
       {
         "priority": "P0",
         "owner": "04_SAVE_CORE",
-        "task": "REAL_NATIVE_SAVE_INTEGRITY_AND_TYPED_ATOMIC_WRITER",
+        "task": "PRIVATE_NATIVE_SAVE_AUTH_AND_REAL_REENCODE",
         "status": "READY_NOW"
       },
       {
-        "priority": "P1",
+        "priority": "P1_PARALLEL",
         "owner": "00_MEDIA",
-        "task": "PRIVATE_ALL_EDIT_RELEVANT_GAME_IMAGES_MAPPING_EXTRACT_LOSSLESS_VP8L",
+        "task": "GAME_IMAGES_ALL_EDIT_RELEVANT_ACHIEVEMENTS_COLLECTIONS_LOSSLESS_VP8L",
         "status": "READY_NOW"
       },
       {
-        "priority": "P1_DEPENDENT",
+        "priority": "P1_AFTER_DEP",
         "owner": "05_WEB",
-        "task": "NATIVE_WRITER_UI_ADAPTER",
-        "status": "WAIT_ACCEPTED_04_API"
+        "task": "NATIVE_WRITER_TYPED_API_UI",
+        "status": "WAIT_04_ACCEPTED_API"
       }
     ],
     "parallelSafeNow": [
-      "06_QA_V9",
-      "04_REAL_NATIVE_WRITER",
+      "06_QA_V10",
+      "04_NATIVE_REAL_SAVE",
       "00_MEDIA_PRIVATE_ASSETS"
     ],
     "serialAfter": [
-      "00_ACCEPT_FIXED_06_QA_SOURCE",
-      "05_CONNECT_ACCEPTED_NATIVE_WRITER",
-      "06_FINAL_FIXED_HEAD_QA",
-      "00_OWNER_PUBLIC_RELEASE_GATE"
+      "00_ACCEPT_06_SCOPED_FIXED_HEAD",
+      "05_CONNECT_ACCEPTED_NATIVE_API",
+      "06_FINAL_BROWSER_AND_PRIVATE_SAVE_QA",
+      "00_OWNER_RELEASE_GATE"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED"
   }
