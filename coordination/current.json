@@ -1,0 +1,72 @@
+{
+  "schema": "HKIA.IntegrationStatus.1",
+  "repo": "0xmorarin/HKIA-Editor",
+  "sourceBaseline": {
+    "version": "0.2.11",
+    "sha256": "1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
+    "mainSourceImported": false
+  },
+  "streams": {
+    "01_COLLECTION": {
+      "status": "PARTIAL",
+      "localCandidateIncluded": true,
+      "contract": "COLLECTION_STATE"
+    },
+    "02_ACHIEVEMENT": {
+      "status": "PARTIAL_REPORTED",
+      "localCandidateIncluded": false,
+      "needsSourceDelivery": true
+    },
+    "03_LINKAGE": {
+      "status": "PARTIAL_GRAPH_DELIVERED",
+      "graphEdges": 17284,
+      "autoApplyRelated": false
+    },
+    "04_SAVE_CORE": {
+      "status": "PARTIAL_RESEARCH_ONLY",
+      "localCandidateIncluded": true,
+      "nativeWriterEnabled": false
+    },
+    "05_WEB": {
+      "status": "PARTIAL_REPORTED",
+      "localCandidateIncluded": false,
+      "needsSourceDelivery": true
+    },
+    "06_QA": {
+      "status": "BLOCKED_SCOPED_ON_BASE",
+      "baseSourceRedCount": 2,
+      "fixCandidateReady": true,
+      "independentRetestPending": true
+    }
+  },
+  "p0FixCandidate": {
+    "sha256": "e766431aec8806cf18ac6e2866f0f8d286540d723a2d69df186968e3835e81e8",
+    "test": {
+      "passed": 59,
+      "skipped": 31,
+      "failed": 0,
+      "privateFixtureRun": false,
+      "build": "PASS",
+      "check": "PASS",
+      "pagesCommentReadme": "PASS"
+    },
+    "fixes": [
+      "reject invalid SettingsAccount JSON before ZIP repack",
+      "reject duplicate JSON keys and case-insensitive GUID collisions"
+    ]
+  },
+  "release": {
+    "pagesEnabled": false,
+    "nativeSlotWriterEnabled": false,
+    "formalApprovalRequired": true,
+    "readmeForbidden": true,
+    "pagesCommentsForbidden": true
+  },
+  "nextSerial": [
+    "06 QA fixed-candidate scoped retest",
+    "00 adopt fixed candidate after evidence",
+    "04 typed atomic safe subset",
+    "05 verified API/UI join",
+    "06 final fixed-SHA E2E and 00 release gating"
+  ]
+}
