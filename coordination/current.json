@@ -31,36 +31,28 @@
       "next": "TARGET_SPECIFIC_PRIVATE_BEFORE_AFTER_OR_NATIVE_PERSISTED_CLAIM_PROOF_ONLY"
     },
     "04_SAVE_CORE": {
-      "status": "V8_SEALED_LAB_LOCAL_VERIFIED_QA_PENDING",
-      "nativeWriterEnabled": false,
-      "proof": {
-        "syntheticDualTarget": true,
-        "memoryOnlyCandidate": true,
-        "editedZipBytesReturned": false,
-        "realGameAcceptance": false,
-        "nativeAuthentication": "UNKNOWN"
-      },
-      "next": "REAL_V300_V301_SAVE_VALIDATION_AND_AUTHENTIC_NATIVE_ROUNDTRIP"
+      "status": "V9_LZ4_TOUCHED_BLOCK_LOCAL_INTEGRATED_QA_PENDING",
+      "addedTests": 4,
+      "realNativeWriterEnabled": false,
+      "realPrivateSave": "UNVERIFIED",
+      "next": "AUTHENTIC_V300_V301_REENCODE_WITH_REAL_SAVE_EVIDENCE"
     },
     "05_WEB": {
-      "status": "READY_NOW_P0_ACCOUNT_ASYNC_EXPORT_RACE_FIX",
-      "writeCapability": "OFF",
-      "currentProductApi": "READ_ONLY_PREVIEW_WITH_STALE_SOURCE_REJECTION",
-      "next": "READY_AFTER_04_ACCEPTED_NATIVE_WRITER_API",
-      "pendingNativeWriter": true,
-      "nativeWriterFeature": "READY_AFTER_04_ACCEPTED_TYPED_API",
-      "p0FixTarget": "src/app.js downloadEditedArchive() post-await source/edit CAS and output filename guard"
+      "status": "V9_ACCOUNT_ASYNC_ZIP_CAS_LOCAL_PASS_INDEPENDENT_QA_PENDING",
+      "ownerFocusedPass": 15,
+      "ownerChromiumInlinePass": 8,
+      "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
+      "nativeWriterFeature": "READY_AFTER_04_TYPED_API_ACCEPTED",
+      "next": "WAIT_06_P0_SCOPED_QA"
     },
     "06_QA": {
-      "status": "V5_SCOPED_PASS_V8_CUMULATIVE_QA_PENDING",
+      "status": "V5_ACCEPTED_V9_CUMULATIVE_QA_READY_NOW",
       "acceptedSourceSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
-      "nextSourceSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
-      "scope": "7_MOD_15_ADD_FROM_V5",
-      "v6v7IndependentVerdict": "NOT_VERIFIED",
-      "nativeReleaseApproved": false,
-      "knownP0FromPriorQA": "V6_V7_ASYNC_ACCOUNT_ZIP_EXPORT_REPORTED_TRUE_RED",
-      "v8CodeStillAffected": true,
-      "v8ScopeQA": "PENDING_7_MOD_15_ADD"
+      "candidateSourceSha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
+      "changedPaths": "7_MOD_20_ADD_0_DEL",
+      "v6v7v8IndependentVerdict": "NOT_VERIFIED_IN_AVAILABLE_RECORDS",
+      "checkAccountZipAsyncRace": true,
+      "requiredVerdict": "SCOPED_PASS_OR_TRUE_RED"
     }
   },
   "p0FixCandidate": {
@@ -90,12 +82,13 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "START_NOW_PARALLEL: 05 WEB Account ZIP asynchronous stale export P0 fix in src/app.js; no Native Writer dependency",
-    "START_NOW_PARALLEL: 04 SAVE_CORE authentic v3.0.0/v3.0.1 Native integrity/reencode real private save; no extra redundant synthetic gates",
-    "START_NOW_PARALLEL: 06 QA V5->V8 scoped changed-only verification and Account ZIP P0, follow 05 fix under frozen new Source",
-    "START_NOW_PARALLEL: 00 MEDIA inventory-driven Achievement+Collection every game image from private Steam/Switch source, lossless VP8L WebP; no GitHub assets",
-    "READY_AFTER_04_ACCEPTED_API: 05 WEB connect typed Native Writer while retaining usability-first UI",
-    "SERIAL: 00 integrate fixed accepted Source; 06 final frozen-head independent QA/browser/private-save; 00 owner publication gate"
+    "START_NOW_PARALLEL 06_QA: independently verify V5→V9 7MOD+20ADD including Account export CAS true red fix and 04 LZ4 touched blocks",
+    "START_NOW_PARALLEL 04_SAVE_CORE: authentic Switch 3.0.0/3.0.1 native save verification and codec/atomic writer completion, no duplicate synthetic research",
+    "START_NOW_PARALLEL 00_MEDIA: all editable Achievement/Collection source-linked artwork from private Steam/Switch assets, verified loseless VP8L, no public media",
+    "READY_AFTER_04_API_ACCEPTED 05_WEB: Native writer API UI connection, preserve approved Account ZIP fix",
+    "SERIAL 00_CTRL: integrate only QA-accepted exact source, preserve code-only Draft PR1 and media privacy",
+    "06_QA final fixed HEAD real HTTP Chrome/private real-save checks",
+    "00_CTRL public release requires Owner explicit approval for Pages, game media and Writer"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -153,59 +146,73 @@
       "rewardItemImages": 0
     },
     "extractionSources": "EXISTING_STEAM_V301_DEFINITIONS_AND_ATLAS_REFERENCES_PRIVATE",
-    "mediaTasks": "READY_NOT_AUTOMATICALLY_RUNNING",
+    "mediaTasks": "READY_NOT_RUNNING_AUTOMATICALLY",
     "assetMappingPolicy": "SOURCE_VERIFIED_ONLY_NO_NAME_SIMILARITY_GUESSES",
     "imageFileFormat": "WEBP_LOSSLESS_VP8L"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V8_20261111.zip",
-    "driveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM",
-    "sha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
-    "sourceBlob": "HKIA_04_Sealed_NativeCrossStore_Source_20261111.zip",
-    "entries": 215,
-    "bytes": 2516271,
-    "baseSha256": "2bf91326634d1e12868ef70fd040a91d835fd560f7f1b4abdc8b2a9302c9a646",
-    "baseEntries": 212,
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V9_20261111.zip",
+    "privateContainerOnly": true,
+    "privateDriveFullZip": "NOT_UPLOADED",
+    "sha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2",
+    "entries": 220,
+    "bytes": 2491399,
+    "baseDriveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM",
+    "baseSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
+    "reconstruction": [
+      {
+        "stream": "04",
+        "driveId": "175wDGcWWKIVGwG_Sv6_cOG-MtfckUz27",
+        "sha256": "3b54306549806dc2225146abcd962a1b884959d68e37ef4b03b398eead69ebdc"
+      },
+      {
+        "stream": "05",
+        "driveId": "1sU-RXWvSmAbhoIylW_8-hsFJvJ1QETM8",
+        "sha256": "2912206c0cc1fa4091c66aa0b975df4763f804428f9f971e8ce3736c3012ed20"
+      }
+    ],
     "changedPaths": {
-      "modified": 3,
-      "added": 3,
-      "unchanged": 209,
-      "deleted": 0
+      "modified": 4,
+      "added": 5,
+      "deleted": 0,
+      "unchanged": 211,
+      "conflicting": 0
     },
-    "qaCumulativeSinceV5": {
-      "baseSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+    "acceptedIndependentQaBase": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+    "cumulativeQaScopeFromV5": {
       "modified": 7,
-      "added": 15,
+      "added": 20,
       "deleted": 0
     },
     "checks": {
       "tests": {
-        "pass": 403,
+        "pass": 422,
         "skip": 36,
         "fail": 0
       },
-      "build": "PASS",
-      "check": "PASS",
+      "npmCheck": "PASS",
+      "npmBuild": "PASS",
       "pagesPolicy": "PASS",
       "distFiles": 53,
-      "distByteIdenticalV7": true,
-      "webpLossless": 25,
+      "losslessWebp": 25,
+      "chromeAccountRaceInline8": "PASS",
+      "chromeMobile320375": "PASS",
+      "chromeHttp": "UNVERIFIED_ENVIRONMENT",
       "privateFixture": "UNVERIFIED",
-      "realDevice": "UNVERIFIED",
-      "chromeHttp": "UNVERIFIED"
+      "realDevice": "UNVERIFIED"
     },
-    "independentQa": "PENDING_V8_CUMULATIVE_22_PATHS",
-    "nativeWriterEnabled": false,
+    "writerEnabled": false,
     "pagesEnabled": false,
     "productSourceMergedToGitHubMain": false,
-    "scope": "04 sealed in-memory cross-store native+account candidate research, no edited bytes returned"
+    "independentQa": "PENDING_V9_CHANGED_SCOPE",
+    "privacy": "PRIVATE_MEDIA_AND_DEFINITIONS_LOCAL_ONLY"
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V7_20261111.zip",
-    "driveId": "1v_lK7MWgqQkw-biBIrpYQbaKXuHmXugL",
-    "sha256": "2bf91326634d1e12868ef70fd040a91d835fd560f7f1b4abdc8b2a9302c9a646",
-    "entries": 212
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V8_20261111.zip",
+    "driveId": "14CBZiOoHkvuN2G-HLGZjU-kegVNL8ccM",
+    "sha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
+    "entries": 215
   },
   "githubSourceBootstrap": {
     "pr": 1,
@@ -238,8 +245,9 @@
       "qaObservation": "4 negative failures at 320px and 375px; reported V7, not re-executed by CTRL this audit",
       "v7AndV8AppBlobSha256": "3c7bb1a2d49c65980d175aa66943622b3648a3e61cf51576717b7c0923753a7a",
       "v8CodeObservation": "downloadEditedArchive awaits repackSettingsZip without post-await Source revision, edit generation, file identity and filename CAS recheck",
-      "status": "OPEN_BLOCKS_ACCOUNT_ZIP_EXPORT_RELEASE",
-      "next": "05_WEB_SOURCE_FIX_THEN_06_SCOPED_INDEPENDENT_QA"
+      "status": "FIX_LOCALLY_VERIFIED_IN_V9_PENDING_06_INDEPENDENT_QA",
+      "next": "05_WEB_SOURCE_FIX_THEN_06_SCOPED_INDEPENDENT_QA",
+      "fixSourceSha256": "02d286054cefaf4a15aaf885454b4cc4423a9cec4cbfd9f35ba2d9da841e3dd2"
     },
     "browserHTTP": "UNVERIFIED_PREVIOUS_ENVIRONMENT_BLOCK",
     "nativeWriter": "OFF",
@@ -247,7 +255,8 @@
     "releaseApproval": "NOT_REQUESTED",
     "ownerImageDecision": "ALL_EDIT_RELEVANT_GAME_IMAGES_IN_BOTH_TABS",
     "ownerUiDecision": "CUSTOM_USABILITY_FIRST_NOT_GAME_LAYOUT_REPLICA",
-    "decisionStatus": "PERSISTED_RELEASE_GATES_AND_COORDINATION"
+    "decisionStatus": "PERSISTED_RELEASE_GATES_AND_COORDINATION",
+    "imagesReadyForPublic": false
   },
   "ownerPriorities": {
     "effectiveDate": "2026-11-11",
@@ -255,43 +264,38 @@
     "workOrder": [
       {
         "priority": "P0",
-        "owner": "05_WEB",
-        "task": "FIX_ASYNC_ACCOUNT_ZIP_EXPORT_STALE_CONTENT",
-        "status": "READY_NOW",
-        "dependency": "NONE"
+        "owner": "06_QA",
+        "task": "INDEPENDENT_V5_TO_V9_7MOD20ADD_AND_ACCOUNT_ZIP_RACE",
+        "status": "READY_NOW"
       },
       {
         "priority": "P0",
         "owner": "04_SAVE_CORE",
-        "task": "PROVE_NATIVE_WRITER_REAL_SAVE_REENCODE_REPARSE_ATOMICITY",
-        "status": "READY_NOW",
-        "dependency": "REAL_PRIVATE_SAVE_EVIDENCE"
+        "task": "REAL_NATIVE_SAVE_INTEGRITY_AND_TYPED_ATOMIC_WRITER",
+        "status": "READY_NOW"
       },
       {
-        "priority": "P0",
-        "owner": "06_QA",
-        "task": "INDEPENDENT_CHANGED_SCOPE_V8_AND_05_FIX",
-        "status": "READY_NOW",
-        "dependency": "FIXED_SOURCE_HEAD_FOR_FINAL_VERDICT"
-      },
-      {
-        "priority": "P1_PARALLEL",
+        "priority": "P1",
         "owner": "00_MEDIA",
-        "task": "EXTRACT_AND_CONVERT_ALL_EDIT_RELEVANT_ACHIEVEMENTS_AND_COLLECTIONS_GAME_IMAGES",
-        "status": "READY_NOW_PRIVATE_LOCAL",
-        "dependency": "SOURCE_ASSET_MAPPING"
+        "task": "PRIVATE_ALL_EDIT_RELEVANT_GAME_IMAGES_MAPPING_EXTRACT_LOSSLESS_VP8L",
+        "status": "READY_NOW"
+      },
+      {
+        "priority": "P1_DEPENDENT",
+        "owner": "05_WEB",
+        "task": "NATIVE_WRITER_UI_ADAPTER",
+        "status": "WAIT_ACCEPTED_04_API"
       }
     ],
     "parallelSafeNow": [
-      "05_ACCOUNT_ASYNC_P0",
-      "04_NATIVE_WRITER_P0",
-      "06_QA_V8",
-      "00_MEDIA_ALL_EDIT_IMAGES"
+      "06_QA_V9",
+      "04_REAL_NATIVE_WRITER",
+      "00_MEDIA_PRIVATE_ASSETS"
     ],
     "serialAfter": [
-      "00_INTEGRATE_QA_ACCEPTED_SOURCE",
-      "05_CONNECT_ACCEPTED_NATIVE_API",
-      "06_FINAL_BROWSER_AND_SAVE_QA",
+      "00_ACCEPT_FIXED_06_QA_SOURCE",
+      "05_CONNECT_ACCEPTED_NATIVE_WRITER",
+      "06_FINAL_FIXED_HEAD_QA",
       "00_OWNER_PUBLIC_RELEASE_GATE"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED"
