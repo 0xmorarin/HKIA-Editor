@@ -68,5 +68,29 @@
     "04 typed atomic safe subset",
     "05 verified API/UI join",
     "06 final fixed-SHA E2E and 00 release gating"
-  ]
+  ],
+  "imageAssets": {
+    "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
+    "scope": "25 COLLECTION ICONS",
+    "sourceBaseline": "v0.2.11 CTRL P0 + 04 Candidate",
+    "format": "WEBP_LOSSLESS_VP8L",
+    "converted": 25,
+    "pixelIdentical": 25,
+    "sourceBytes": 1022719,
+    "webpBytes": 742256,
+    "localCandidateSha256": "7e7033a793ab828d188f3edb3e839b419cae9d7850b794ed21bb26eda5ce5f13",
+    "localDeltaSha256": "bcbc6c9405cdfc0300fe473afa96af8c212592479513e8e446e73b318de14710",
+    "localTests": {
+      "passed": 62,
+      "skipped": 31,
+      "failed": 0,
+      "build": "PASS",
+      "check": "PASS",
+      "httpWebp200": 25,
+      "chromeUiE2E": "UNVERIFIED_TIMEOUT"
+    },
+    "gameImagesInPublicRepo": false,
+    "pagesAssetsPublic": false,
+    "finalPublish": "OWNER_APPROVAL_ONLY"
+  }
 }
