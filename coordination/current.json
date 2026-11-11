@@ -20,38 +20,48 @@
       "next": "NO_RESTART_UNLESS_REQUIRED_LINKAGE_CHANGES"
     },
     "03_LINKAGE": {
-      "status": "DELIVERED_PARTIAL",
-      "nativeStorageRoutes": 4,
-      "missionSourceLinks": 171,
-      "missionSourceTargetGuids": 170,
-      "sampleMissionMatches": 134,
-      "requiredNewEdges": 0,
-      "sourceScopedQA": "LOCAL_PASSED",
-      "remaining": "reward receipt / Quest unlock game acceptance unknown"
+      "status": "DELIVERED_ADDITIVE_STATIC_PARTIAL",
+      "frozenStructuralEdges": 17284,
+      "newRequiredWrites": 0,
+      "rewardClaimStorage": "UNKNOWN",
+      "rewardQueue": "RUNTIME_ONLY",
+      "countedGuidsDistinctLoadRisk": "RELATED",
+      "nativeWriterEnabled": false,
+      "newSourceIntegrated": true,
+      "next": "TARGET_SPECIFIC_PRIVATE_BEFORE_AFTER_OR_NATIVE_PERSISTED_CLAIM_PROOF_ONLY"
     },
     "04_SAVE_CORE": {
-      "status": "DELIVERED_PARTIAL",
-      "nativeWriterEnabled": false,
-      "zipPreflight": "LOCAL_PASSED",
-      "sameGUIDDifferentDocId": "REJECT",
-      "realPrivateFixtures": "UNVERIFIED",
-      "remaining": "native authenticated reencode and real Switch acceptance"
+      "status": "DELIVERED_RESEARCH_GATE_PARTIAL",
+      "newResearchApi": "inspectNativeWriterPlanReadOnly",
+      "atomicZipEncode": false,
+      "editedZipReparse": false,
+      "nativeOutputAuthorized": false,
+      "writerEnabled": false,
+      "newSourceIntegrated": true,
+      "next": "REAL_PRIVATE_FIXTURE_VALIDATION_AND_ATOMIC_ZIP_WRITER_SAFE_CORE"
     },
     "05_WEB": {
-      "status": "DELIVERED_PARTIAL",
+      "status": "READY_AFTER_04_TYPED_WRITER_SOURCE_ACCEPTED",
       "futureStructuralReader": "LOCAL_PASSED_SYNTHETIC",
       "chromeInline": "PASS",
       "chromeHttp": "UNVERIFIED_ENVIRONMENT",
       "nativeWriterMock": "OFF",
-      "sourceReadOnly": true
+      "sourceReadOnly": true,
+      "noChangeThisTurn": true,
+      "writerPort": "MOCK_OFF"
     },
     "06_QA": {
-      "status": "PREVIOUS_161_FILES_SCOPED_RED_COMMENTS",
-      "previousSourceSha": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
-      "previousFunctionalScope": "PASS_REPORTED",
-      "newSourceSha": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
-      "newIndependentQA": "PENDING",
-      "commentFixImplementedBy00": true
+      "status": "NEW_INTEGRATION_NEEDS_INDEPENDENT_QA",
+      "lastIntegratedSha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
+      "previousAcceptedSourceOnly": null,
+      "previousScoping": "PRIOR_SHA_NOT_TRANSFERRABLE",
+      "pending": [
+        "03 claim-unique guard tests and native evidence boundaries",
+        "04 raw ZIP copyability gates",
+        "full Page build policy and comment/README",
+        "New Source SHA fixed"
+      ],
+      "sourceChangesAllowed": false
     }
   },
   "p0FixCandidate": {
@@ -81,12 +91,13 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA independent scoped recheck of new 177-file Source SHA",
-    "00 accept and GitHub source landing after scoped QA & public-safe asset gate",
-    "03 / 04 continue independent persistence validation and native writer core",
-    "05 UI adapter only after 04 typed API changes",
-    "06 final source-frozen browser/private save checks",
-    "00 Owner approves formal Pages/image/publication gate"
+    "06 QA: new source SHA d18c7241 independent changed-scope verdict",
+    "00 CTRL: accept exact Source after 06; public-safe GitHub code landing, no game imagery",
+    "04 SAVE_CORE: independent P0 ZIP writer and real private-save checks; do not block on unproven generic linkage",
+    "03 LINKAGE: targeted persisted receipt/Quest causal proof only when new evidence available",
+    "05 WEB: after 04 typed API accepted, minimum port connection",
+    "06 QA: after 04/05 new Source HEAD final scope QA and real Chrome HTTP",
+    "00 CTRL: sequential merge, Owner explicit release approval"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -114,45 +125,52 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Scoped_Integration_Candidate_20261111.zip",
-    "driveId": "1lPKMVWzoIvJDUy4pnP25GHm5ZGWJ389q",
-    "sha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
-    "entries": 177,
-    "baseSha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
-    "baseFiles": 161,
-    "modifiedPaths": 16,
-    "addedPaths": 16,
-    "unchangedPaths": 145,
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V4_20261111.zip",
+    "driveId": "1gwEM9Bkj1zPtHO9_nfzexeW2yli6vm6p",
+    "sha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
+    "entries": 190,
+    "baseSha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
+    "baseFiles": 177,
+    "changedPaths": 14,
+    "modifiedPaths": 1,
+    "addedPaths": 13,
+    "unchangedPaths": 176,
     "deltas": {
-      "03_NATIVE": "d06982bb89db9490c0c97e0e7aa8c566ddbef5291cd21a6fd80591059ee2978d",
-      "04_SAFE_READ": "20d3d18d2a974960deb712e913830f30edf94775a4fd5aefcdaedf21aed5ab8e",
-      "05_STRUCTURAL_UI": "362db0bea3cbcab4cf9047f6b3f58439e25cd127bfefaa2817618f78cec3ecc6"
+      "03_CLAIM_UNIQUE": "ca7af79ed53edf82d49618bb384c73420847082157ec80353affde80aeb9b0b2",
+      "04_NATIVE_WRITER_GATES": "0e5b3abebbe5ba8e7dc57c60451152f0deb8344e2e737ffa0bfaaf2eb41c9f22"
     },
+    "excluded": [
+      "README.txt",
+      "SHA256_MANIFEST.json"
+    ],
     "tests": {
-      "total": 315,
-      "pass": 279,
+      "total": 360,
+      "pass": 324,
       "skip": 36,
       "fail": 0,
       "build": "PASS",
       "check": "PASS",
       "chromeInline": "PASS",
-      "chromeHttp": "UNVERIFIED_BLOCKED_ENVIRONMENT",
-      "sourceChangedScopeComments": "CLEANED",
+      "chromeHttp": "UNVERIFIED_ENVIRONMENT",
       "pagesComments": "PASS",
       "readme": "ABSENT",
-      "assetsLosslessWebp": 25
+      "assetsLosslessWebp": 25,
+      "distArtifacts": 52,
+      "distByteIdenticalToPrevious": true
     },
     "independentQa": "PENDING_NEW_SHA",
     "privateFixtureRun": false,
     "switchDeviceRun": false,
     "nativeWriterEnabled": false,
     "pagesEnabled": false,
-    "productSourceMergedToGitHubMain": false
+    "productSourceMergedToGitHubMain": false,
+    "rightsProtectedLocalOnlyAggregate": true,
+    "scope": "03/04 added research and read-only gate; 00 pinned receipt"
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_Next_20261111.zip",
-    "sha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
-    "driveId": "1_UERCJeX30_l_3J3yjCVSPR9XVYUqBpw",
-    "entries": 161
+    "artifact": "HKIA_CTRL_Scoped_Integration_Candidate_20261111.zip",
+    "driveId": "1lPKMVWzoIvJDUy4pnP25GHm5ZGWJ389q",
+    "sha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
+    "entries": 177
   }
 }
