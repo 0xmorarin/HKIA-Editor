@@ -14,10 +14,32 @@
     "nativeSaveWriter": "OFF",
     "formalRelease": "OWNER_EXPLICIT_APPROVAL_REQUIRED",
     "gameUiIcons": "INCLUDE_AT_FORMAL_RELEASE",
-    "iconsBeforeFormalRelease": "DO_NOT_PUBLISH",
+    "iconsBeforeFormalRelease": "LOCAL_UI_PREVIEW_ONLY_NO_PUBLIC_UPLOAD",
     "commentsInPageArtifacts": "FORBIDDEN",
     "readmeFiles": "FORBIDDEN",
-    "privateSaveAndGameBinaryUploads": "FORBIDDEN"
+    "privateSaveAndGameBinaryUploads": "FORBIDDEN",
+    "gameImagePolicy": {
+      "localUiPreview": "ALLOWED_WITH_GAME_IMAGES",
+      "imageRelease": "FORMAL_GITHUB_PAGES_RELEASE_ONLY",
+      "publicRepositoryImagesBeforeRelease": "PROHIBITED",
+      "canonicalRasterFormat": "image/webp",
+      "requiredCodec": "VP8L_LOSSLESS",
+      "pixelIdentity": "RGBA_PIXEL_EXACT",
+      "retainAlpha": true,
+      "retainDimensions": true,
+      "forbiddenPublicImageFormats": [
+        "png",
+        "jpg",
+        "jpeg",
+        "gif",
+        "bmp",
+        "avif",
+        "lossy-webp",
+        "animated-webp"
+      ],
+      "localVerification": "MANDATORY_BEFORE_RELEASE",
+      "releaseNeedsOwnerApproval": true
+    }
   },
   "compatibility": {
     "unknownRecognizedAchievements": "READ_AND_PLAN_EDIT_WITH_GATES",
