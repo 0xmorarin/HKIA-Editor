@@ -8,38 +8,43 @@
   },
   "streams": {
     "01_COLLECTION": {
-      "status": "LOCAL_INTEGRATED_PARTIAL",
-      "contract": "COLLECTION_STATE_AND_HISTORY",
-      "pending": "persisted linkage and native edit semantics"
+      "status": "DELIVERED_IN_LOCAL_CANDIDATE",
+      "scope": "MUTATION_SEMANTICS_DRAFT",
+      "independentFinalQA": "PENDING",
+      "next": "NO_RESTART_UNLESS_NEW_FIELD_EVIDENCE"
     },
     "02_ACHIEVEMENT": {
-      "status": "LOCAL_INTEGRATED_PARTIAL",
-      "contract": "ACHIEVEMENT_FIELD_CONTRACT_v2",
-      "pending": "generic REQUIRED linkage and production edit rules"
+      "status": "DELIVERED_IN_LOCAL_CANDIDATE",
+      "scope": "GROUP_COUNTER_TIMESTAMP_V3_RESEARCH_DRAFT",
+      "independentFinalQA": "PENDING",
+      "next": "NO_RESTART_UNLESS_REQUIRED_LINKAGE_CHANGES"
     },
     "03_LINKAGE": {
-      "status": "LOCAL_INTEGRATED_PARTIAL",
+      "status": "DELIVERED_PARTIAL",
       "graphEdges": 17284,
       "newRequiredWrites": 0,
-      "autoApplyRelated": false,
-      "pending": "Quest/Unlock/Reward claim/counter recount evidence"
+      "sourcePersistedPair": "OBSERVED_NOT_CAUSAL",
+      "next": "TRACE_TARGET_SPECIFIC_PERSISTED_REWARD_QUEST_UNLOCK_PATH"
     },
     "04_SAVE_CORE": {
-      "status": "LOCAL_INTEGRATED_RESEARCH_ONLY",
+      "status": "DELIVERED_PARTIAL",
       "nativeWriterEnabled": false,
-      "crossStoreDryRun": "8_SLOT_FIELDS_PLUS_2_ACCOUNT_FIELDS",
-      "pending": "codec/native integrity and atomic export"
+      "structuralFutureRead": "SYNTHETIC_PASS_NOT_UI_CONNECTED",
+      "next": "VERIFY_SAVE_FORMAT_AND_IMPLEMENT_SAFE_TYPED_COMPOSITE_WRITER_WITHOUT_EXPORT"
     },
     "05_WEB": {
-      "status": "LOCAL_INTEGRATED_PARTIAL",
+      "status": "DELIVERED_PARTIAL",
       "chromiumInline": "PASS",
-      "chromiumHttp": "BLOCKED_BY_ADMINISTRATOR",
-      "writerPort": "OFF"
+      "chromiumHttp": "BLOCKED_ENVIRONMENT",
+      "futureVersionUi": "NOT_CONNECTED",
+      "writerPort": "MOCK_OFF",
+      "next": "FUTURE_VERSION_PARTIAL_READ_UI_AND_TYPED_WRITER_PREVIEW"
     },
     "06_QA": {
-      "status": "ACCOUNT_P0_SCOPED_PASS_REPORTED",
-      "independentFinalIntegratedCandidateQA": "NOT_RUN",
-      "pending": "new integrated source focused QA and real-device verification"
+      "status": "NEXT_INDEPENDENT_SOURCE_QA_REQUIRED",
+      "candidateSha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+      "priorScopeQA": "NOT_TRANSFERRABLE",
+      "next": "SCOPED_QA_NEW_161_FILE_CANDIDATE"
     }
   },
   "p0FixCandidate": {
@@ -69,12 +74,12 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA fixed local candidate independent scoped review",
-    "00 GitHub source import after public-safe gate",
-    "04 approved semantic writer after 03 dependencies",
-    "05 final writer/UI connection",
-    "06 final real Chrome HTTP and hardware tests",
-    "00 Owner release approval"
+    "06 QA new candidate scoped verdict",
+    "00 accept fixed local Source if scoped pass",
+    "04/03 gather native writer proof in parallel",
+    "05 final read-only and writer bridge with proven API",
+    "06 final source-frozen browser and private-save QA",
+    "00 GitHub public-safe Source integration and Owner release gate"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -102,10 +107,11 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Local_Candidate_20261111.zip",
-    "driveId": "13v8Z47ziSyXQT23FRyQ9CsMmbN6Wc8a3",
-    "sha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
-    "entries": 133,
+    "artifact": "HKIA_CTRL_Integrated_Candidate_Next_20261111.zip",
+    "driveId": "1_UERCJeX30_l_3J3yjCVSPR9XVYUqBpw",
+    "sha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+    "entries": 161,
+    "sourceBaseSha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
     "streams": [
       "01",
       "02",
@@ -114,23 +120,39 @@
       "05",
       "00"
     ],
+    "changedPaths": 35,
+    "sourceDeltaSha256": {
+      "01": "85c45d8f57f9a4565cf626ae06ac6e437ad2847c0588864d1e944544ce32dade",
+      "02": "7b72b3c7758b08036202774363042b3ee7b88d37ea00249267ca2beebfd38064",
+      "03": "66c161371b1c65ce5946dd0cd32a954718189d654e9af176947673de3a33e326",
+      "04": "ed0d32542b541e5755f44a291b679968dfc1ee0567e1d7d5416ff8a2f46107b8",
+      "05": "0b06e98d5bd64b113cee4861abfd4b40090c72e6522fcef9ee29edcbc5e37a66"
+    },
     "scopedTests": {
-      "passed": 132,
-      "skipped": 34,
+      "total": 252,
+      "passed": 216,
+      "skipped": 36,
       "failed": 0
     },
     "build": "PASS",
     "check": "PASS",
     "chromiumInline": "PASS",
-    "chromiumHttp": "UNVERIFIED_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "chromiumHttp": "UNVERIFIED_ENVIRONMENT",
     "privateFixtureRun": false,
     "switchDeviceRun": false,
     "localOnlyGameImages": 25,
     "imageFormat": "VP8L lossless WebP",
+    "buildFiles": 51,
     "pagesCommentReadmePolicy": "PASS",
     "productSourceMergedToGitHubMain": false,
     "nativeWriterEnabled": false,
     "ownerApprovalToPublish": false,
-    "delta": "expose existing Collection union39 key1 int64 ticks without losing 100ns precision; wire to UI read model"
+    "status": "LOCAL_INTEGRATION_SCOPED_PASS_QA_PENDING"
+  },
+  "previousLocalIntegratedCandidate": {
+    "artifact": "HKIA_CTRL_Integrated_Local_Candidate_20261111.zip",
+    "sha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
+    "driveId": "13v8Z47ziSyXQT23FRyQ9CsMmbN6Wc8a3",
+    "entries": 133
   }
 }
