@@ -8,35 +8,38 @@
   },
   "streams": {
     "01_COLLECTION": {
-      "status": "PARTIAL",
-      "localCandidateIncluded": true,
-      "contract": "COLLECTION_STATE"
+      "status": "LOCAL_INTEGRATED_PARTIAL",
+      "contract": "COLLECTION_STATE_AND_HISTORY",
+      "pending": "persisted linkage and native edit semantics"
     },
     "02_ACHIEVEMENT": {
-      "status": "PARTIAL_REPORTED",
-      "localCandidateIncluded": false,
-      "needsSourceDelivery": true
+      "status": "LOCAL_INTEGRATED_PARTIAL",
+      "contract": "ACHIEVEMENT_FIELD_CONTRACT_v2",
+      "pending": "generic REQUIRED linkage and production edit rules"
     },
     "03_LINKAGE": {
-      "status": "PARTIAL_GRAPH_DELIVERED",
+      "status": "LOCAL_INTEGRATED_PARTIAL",
       "graphEdges": 17284,
-      "autoApplyRelated": false
+      "newRequiredWrites": 0,
+      "autoApplyRelated": false,
+      "pending": "Quest/Unlock/Reward claim/counter recount evidence"
     },
     "04_SAVE_CORE": {
-      "status": "PARTIAL_RESEARCH_ONLY",
-      "localCandidateIncluded": true,
-      "nativeWriterEnabled": false
+      "status": "LOCAL_INTEGRATED_RESEARCH_ONLY",
+      "nativeWriterEnabled": false,
+      "crossStoreDryRun": "8_SLOT_FIELDS_PLUS_2_ACCOUNT_FIELDS",
+      "pending": "codec/native integrity and atomic export"
     },
     "05_WEB": {
-      "status": "PARTIAL_REPORTED",
-      "localCandidateIncluded": false,
-      "needsSourceDelivery": true
+      "status": "LOCAL_INTEGRATED_PARTIAL",
+      "chromiumInline": "PASS",
+      "chromiumHttp": "BLOCKED_BY_ADMINISTRATOR",
+      "writerPort": "OFF"
     },
     "06_QA": {
-      "status": "BLOCKED_SCOPED_ON_BASE",
-      "baseSourceRedCount": 2,
-      "fixCandidateReady": true,
-      "independentRetestPending": true
+      "status": "ACCOUNT_P0_SCOPED_PASS_REPORTED",
+      "independentFinalIntegratedCandidateQA": "NOT_RUN",
+      "pending": "new integrated source focused QA and real-device verification"
     }
   },
   "p0FixCandidate": {
@@ -60,14 +63,18 @@
     "nativeSlotWriterEnabled": false,
     "formalApprovalRequired": true,
     "readmeForbidden": true,
-    "pagesCommentsForbidden": true
+    "pagesCommentsForbidden": true,
+    "gameImagesInPublicRepo": false,
+    "imagePublicationGate": "FORMAL_RELEASE_ONLY",
+    "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA fixed-candidate scoped retest",
-    "00 adopt fixed candidate after evidence",
-    "04 typed atomic safe subset",
-    "05 verified API/UI join",
-    "06 final fixed-SHA E2E and 00 release gating"
+    "06 QA fixed local candidate independent scoped review",
+    "00 GitHub source import after public-safe gate",
+    "04 approved semantic writer after 03 dependencies",
+    "05 final writer/UI connection",
+    "06 final real Chrome HTTP and hardware tests",
+    "00 Owner release approval"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -92,5 +99,38 @@
     "gameImagesInPublicRepo": false,
     "pagesAssetsPublic": false,
     "finalPublish": "OWNER_APPROVAL_ONLY"
+  },
+  "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
+  "localIntegratedCandidate": {
+    "artifact": "HKIA_CTRL_Integrated_Local_Candidate_20261111.zip",
+    "driveId": "13v8Z47ziSyXQT23FRyQ9CsMmbN6Wc8a3",
+    "sha256": "4335720fe1257cb65cf426b556a15a7555a1a7ecd37f89393c55a6c48ec043f7",
+    "entries": 133,
+    "streams": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "00"
+    ],
+    "scopedTests": {
+      "passed": 132,
+      "skipped": 34,
+      "failed": 0
+    },
+    "build": "PASS",
+    "check": "PASS",
+    "chromiumInline": "PASS",
+    "chromiumHttp": "UNVERIFIED_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "privateFixtureRun": false,
+    "switchDeviceRun": false,
+    "localOnlyGameImages": 25,
+    "imageFormat": "VP8L lossless WebP",
+    "pagesCommentReadmePolicy": "PASS",
+    "productSourceMergedToGitHubMain": false,
+    "nativeWriterEnabled": false,
+    "ownerApprovalToPublish": false,
+    "delta": "expose existing Collection union39 key1 int64 ticks without losing 100ns precision; wire to UI read model"
   }
 }
