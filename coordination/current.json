@@ -31,37 +31,42 @@
       "next": "TARGET_SPECIFIC_PRIVATE_BEFORE_AFTER_OR_NATIVE_PERSISTED_CLAIM_PROOF_ONLY"
     },
     "04_SAVE_CORE": {
-      "status": "DELIVERED_RESEARCH_GATE_PARTIAL",
-      "newResearchApi": "inspectNativeWriterPlanReadOnly",
-      "atomicZipEncode": false,
-      "editedZipReparse": false,
-      "nativeOutputAuthorized": false,
-      "writerEnabled": false,
-      "newSourceIntegrated": true,
-      "next": "REAL_PRIVATE_FIXTURE_VALIDATION_AND_ATOMIC_ZIP_WRITER_SAFE_CORE"
+      "status": "V5_LAB_LOCAL_INTEGRATED_PARTIAL",
+      "sourceDelta": "04_ATOMIC_RAW_ZIP_LAB",
+      "syntheticOnly": true,
+      "twoTargetsCAS": true,
+      "untouchedCompressedFramesPreservedInSyntheticLab": true,
+      "zipEditedPayloadReturned": false,
+      "nativeWriterEnabled": false,
+      "nativeCrossStoreWriter": false,
+      "privateRealSaveAccepted": false,
+      "next": "PROVE_NATIVE_INTEGRITY_AND_REAL_SAVE_ROUNDTRIP_ATOMIC_WRITER_NO_EXPORT"
     },
     "05_WEB": {
-      "status": "READY_AFTER_04_TYPED_WRITER_SOURCE_ACCEPTED",
+      "status": "READY_NOW_READ_ONLY_CAS_CONSUMER",
       "futureStructuralReader": "LOCAL_PASSED_SYNTHETIC",
       "chromeInline": "PASS",
       "chromeHttp": "UNVERIFIED_ENVIRONMENT",
       "nativeWriterMock": "OFF",
       "sourceReadOnly": true,
       "noChangeThisTurn": true,
-      "writerPort": "MOCK_OFF"
+      "writerPort": "MOCK_OFF",
+      "newReadOnlyContract": "04-native-writer-revision-cas.d.ts",
+      "next": "WIRE_SCOPED_READ_ONLY_REVISION_CAS_PREVIEW_NO_APPLY"
     },
     "06_QA": {
-      "status": "NEW_INTEGRATION_NEEDS_INDEPENDENT_QA",
-      "lastIntegratedSha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
-      "previousAcceptedSourceOnly": null,
-      "previousScoping": "PRIOR_SHA_NOT_TRANSFERRABLE",
-      "pending": [
-        "03 claim-unique guard tests and native evidence boundaries",
-        "04 raw ZIP copyability gates",
-        "full Page build policy and comment/README",
-        "New Source SHA fixed"
+      "status": "V4_PARTIAL_SCOPED_PASS_WITH_INHERITED_TRUE_RED_V5_PENDING",
+      "v4Sha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
+      "v4Scope03_04": "SCOPED_PASS_74_PASS",
+      "v4InheritedErrors": [
+        "03_MANIFEST_THREE_SHA_MISMATCH",
+        "MOBILE_320_STATUS_OVERFLOW"
       ],
-      "sourceChangesAllowed": false
+      "v5FixesLocallyVerified": true,
+      "v5CandidateSha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+      "v5IndependentVerdict": "PENDING",
+      "nativeWriter": false,
+      "next": "VERIFY_V5_03_MANIFEST_REPAIR_MOBILE320_AND_04_LAB_SCOPE"
     }
   },
   "p0FixCandidate": {
@@ -91,13 +96,13 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA: new source SHA d18c7241 independent changed-scope verdict",
-    "00 CTRL: accept exact Source after 06; public-safe GitHub code landing, no game imagery",
-    "04 SAVE_CORE: independent P0 ZIP writer and real private-save checks; do not block on unproven generic linkage",
-    "03 LINKAGE: targeted persisted receipt/Quest causal proof only when new evidence available",
-    "05 WEB: after 04 typed API accepted, minimum port connection",
-    "06 QA: after 04/05 new Source HEAD final scope QA and real Chrome HTTP",
-    "00 CTRL: sequential merge, Owner explicit release approval"
+    "06 QA independently verify V5 200-file Source SHA 2af6b58f and two inherited error repairs plus 04 lab",
+    "04 SAVE_CORE keep working on real-save native signature/integrity and typed atomic writer without export",
+    "05 WEB use accepted read-only revision CAS contract for guarded preview, do not enable apply/export",
+    "00 only after 06 V5 QA and public-safe source selection integrate Source into GitHub main serially",
+    "03 LINKAGE only upon new target-specific causal persistence evidence",
+    "06 final private real-save and browser HTTP evidence after stable source",
+    "00 Owner formal Pages/game image/native writer release gate"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -125,52 +130,55 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V4_20261111.zip",
-    "driveId": "1gwEM9Bkj1zPtHO9_nfzexeW2yli6vm6p",
-    "sha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
-    "entries": 190,
-    "baseSha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
-    "baseFiles": 177,
-    "changedPaths": 14,
-    "modifiedPaths": 1,
-    "addedPaths": 13,
-    "unchangedPaths": 176,
-    "deltas": {
-      "03_CLAIM_UNIQUE": "ca7af79ed53edf82d49618bb384c73420847082157ec80353affde80aeb9b0b2",
-      "04_NATIVE_WRITER_GATES": "0e5b3abebbe5ba8e7dc57c60451152f0deb8344e2e737ffa0bfaaf2eb41c9f22"
-    },
-    "excluded": [
-      "README.txt",
-      "SHA256_MANIFEST.json"
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V5_20261111.zip",
+    "driveId": "1O0s5SzSK4KaeYGDQn9_aLe7UxjtfFrVa",
+    "sha256": "2af6b58f6f85e503f8fa59bddb6198588732ab15a13801d97955701f1e3a3c3d",
+    "entries": 200,
+    "bytes": 2442419,
+    "baseSha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
+    "baseFiles": 190,
+    "modifiedPaths": [
+      "SHA256_MANIFEST.json",
+      "src/style.css"
+    ],
+    "addedPaths": 10,
+    "unchangedFiles": 188,
+    "integrated04LabDeltaSha256": "24a55c1c938a155cc69ecfe02dc06cc7b190dc12ae4d1a2f69094400ca9a4218",
+    "manifestOldFailuresRepaired": [
+      "contracts/03-linkage-native-writepath.mjs",
+      "scripts/03-linkage-writepath-native-proof.py",
+      "scripts/03-linkage-mission-ptr-crosswalk.py"
     ],
     "tests": {
-      "total": 360,
-      "pass": 324,
+      "total": 383,
+      "pass": 347,
       "skip": 36,
       "fail": 0,
       "build": "PASS",
       "check": "PASS",
       "chromeInline": "PASS",
-      "chromeHttp": "UNVERIFIED_ENVIRONMENT",
+      "chromeMobile320": "PASS",
+      "chromeMobile375": "PASS",
+      "statusOverflowV4": 373,
+      "statusOverflowV5": 320,
+      "chromiumHttp": "UNVERIFIED_BLOCKED_ENVIRONMENT",
       "pagesComments": "PASS",
       "readme": "ABSENT",
       "assetsLosslessWebp": 25,
-      "distArtifacts": 52,
-      "distByteIdenticalToPrevious": true
+      "distArtifacts": 52
     },
-    "independentQa": "PENDING_NEW_SHA",
+    "independentQa": "PENDING_V5_SHA",
     "privateFixtureRun": false,
     "switchDeviceRun": false,
     "nativeWriterEnabled": false,
     "pagesEnabled": false,
     "productSourceMergedToGitHubMain": false,
-    "rightsProtectedLocalOnlyAggregate": true,
-    "scope": "03/04 added research and read-only gate; 00 pinned receipt"
+    "scope": "04 synthetic-only raw-preserving ZIP lab + revision CAS, 00 3 source SHA corrections and 320px fileStatus fix"
   },
   "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Scoped_Integration_Candidate_20261111.zip",
-    "driveId": "1lPKMVWzoIvJDUy4pnP25GHm5ZGWJ389q",
-    "sha256": "6c76f61bffa6ad5e33806a73c499eafe056fa45a7070f5039f2a12923deec832",
-    "entries": 177
+    "artifact": "HKIA_CTRL_Integrated_Candidate_V4_20261111.zip",
+    "driveId": "1gwEM9Bkj1zPtHO9_nfzexeW2yli6vm6p",
+    "sha256": "d18c7241d4c0449080c5912b50769b8830e51c00eca015bea873f7f319519a5f",
+    "entries": 190
   }
 }
