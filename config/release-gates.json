@@ -1,0 +1,32 @@
+{
+  "schema": "HKIA.ReleaseGates.1",
+  "repository": "0xmorarin/HKIA-Editor",
+  "productScope": [
+    "Achievements",
+    "Collections"
+  ],
+  "sourceBaseline": {
+    "version": "v0.2.11",
+    "sha256": "1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf"
+  },
+  "distribution": {
+    "githubPages": "OFF",
+    "nativeSaveWriter": "OFF",
+    "formalRelease": "OWNER_EXPLICIT_APPROVAL_REQUIRED",
+    "gameUiIcons": "INCLUDE_AT_FORMAL_RELEASE",
+    "iconsBeforeFormalRelease": "DO_NOT_PUBLISH",
+    "commentsInPageArtifacts": "FORBIDDEN",
+    "readmeFiles": "FORBIDDEN",
+    "privateSaveAndGameBinaryUploads": "FORBIDDEN"
+  },
+  "compatibility": {
+    "unknownRecognizedAchievements": "READ_AND_PLAN_EDIT_WITH_GATES",
+    "unknownRecognizedCollections": "READ_AND_PLAN_EDIT_WITH_GATES",
+    "unknownFields": "PRESERVE",
+    "unverifiedDependencies": "RESTRICT_AFFECTED_WRITE_SCOPE"
+  },
+  "notices": {
+    "verifiedRightsComplaint": "STOP_PUBLIC_DISTRIBUTION_AND_DELETE_REPOSITORY",
+    "automaticDeletion": false
+  }
+}
