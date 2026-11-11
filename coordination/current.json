@@ -43,11 +43,13 @@
       "next": "REAL_V300_V301_SAVE_VALIDATION_AND_AUTHENTIC_NATIVE_ROUNDTRIP"
     },
     "05_WEB": {
-      "status": "V6_CAS_UI_LOCALLY_INTEGRATED_READY_AFTER_WRITER",
+      "status": "READY_NOW_P0_ACCOUNT_ASYNC_EXPORT_RACE_FIX",
       "writeCapability": "OFF",
       "currentProductApi": "READ_ONLY_PREVIEW_WITH_STALE_SOURCE_REJECTION",
       "next": "READY_AFTER_04_ACCEPTED_NATIVE_WRITER_API",
-      "pendingNativeWriter": true
+      "pendingNativeWriter": true,
+      "nativeWriterFeature": "READY_AFTER_04_ACCEPTED_TYPED_API",
+      "p0FixTarget": "src/app.js downloadEditedArchive() post-await source/edit CAS and output filename guard"
     },
     "06_QA": {
       "status": "V5_SCOPED_PASS_V8_CUMULATIVE_QA_PENDING",
@@ -55,7 +57,10 @@
       "nextSourceSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
       "scope": "7_MOD_15_ADD_FROM_V5",
       "v6v7IndependentVerdict": "NOT_VERIFIED",
-      "nativeReleaseApproved": false
+      "nativeReleaseApproved": false,
+      "knownP0FromPriorQA": "V6_V7_ASYNC_ACCOUNT_ZIP_EXPORT_REPORTED_TRUE_RED",
+      "v8CodeStillAffected": true,
+      "v8ScopeQA": "PENDING_7_MOD_15_ADD"
     }
   },
   "p0FixCandidate": {
@@ -85,13 +90,14 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA: independent V5→V8 changed-only 7 MOD+15 ADD, no previous accepted scope repeat",
-    "04 SAVE CORE: native signature/auth + real private v3.0.0/v3.0.1 validation; no more redundant synthetic-only gates",
-    "00 CTRL: keep PR1 draft; GitHub source integration only on complete public-safe reproducible source and accepted HEAD",
-    "05 WEB: final native writer API after 04 source accepted and QA scoped pass",
-    "03 LINKAGE: only new target-specific causal persistence evidence",
-    "06 QA: final fixed-head real Chrome HTTP, private saves, real device",
-    "00 CTRL: Owner approval required for Pages/game imagery/native writer production"
+    "06 QA frozen V5->V8 changed-scope QA and previously reported Account ZIP async race evidence",
+    "05 WEB P0 async Account ZIP post-await Source/edit-generation/file identity/filename CAS fix independent of native writer",
+    "04 SAVE CORE real v3.0.0/v3.0.1 save authentication and safe native roundtrip; no duplicate synthetic-only work",
+    "00 LOCAL MEDIA independent audit; targeted achievement/item-image extraction only after UI target inventory, lossless VP8L and RGBA verification, never GitHub until formal release",
+    "00 serially integrate 05 patch and any 04 accepted work on fixed Source, changed-only 06 QA",
+    "05 WEB Native writer adapter only after 04 typed API independent accepted",
+    "06 real HTTP Chrome and private-save verification, real device only where needed",
+    "00 complete public-safe GitHub source packaging, Owner approval for Pages/game imagery and writer"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -115,7 +121,13 @@
     },
     "gameImagesInPublicRepo": false,
     "pagesAssetsPublic": false,
-    "finalPublish": "OWNER_APPROVAL_ONLY"
+    "finalPublish": "OWNER_APPROVAL_ONLY",
+    "independentBaselinePngToWebpRgbaPass": 25,
+    "gameAchievementsIconsInCandidate": 0,
+    "perCollectableImagesInCandidate": 0,
+    "allGameMediaExtracted": false,
+    "mediaExtractionStreamActive": false,
+    "mediaInventoryIndependentWork": "READY_NOW_00_LOCAL_ONLY"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
@@ -176,5 +188,34 @@
     "mainMerged": false,
     "assetsUploaded": false,
     "standaloneBuild": false
+  },
+  "releaseReadinessAudit": {
+    "date": "2026-11-11",
+    "fixedSourceSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
+    "assessment": "READ_UI_AND_SYNTHETIC_RESEARCH_ADVANCED_NATIVE_EDIT_EXPORT_NOT_READY",
+    "assetEvidence": {
+      "currentUiCollectionCategoryImages": 25,
+      "validatedLosslessWebp": 25,
+      "baselinePngRgbaPixelIdentity": 25,
+      "provenanceVerified": 25,
+      "achievementGameIconsStaged": 0,
+      "individualCollectableIconsStaged": 0,
+      "allGameImageExtractionComplete": false,
+      "formalPublicationAllowed": false
+    },
+    "trueRedReported": {
+      "owner": "05_WEB",
+      "issue": "ASYNC_ACCOUNT_ZIP_EXPORT_STALE_CONTENT_AFTER_UNDO_OR_FILE_SWITCH",
+      "reportedBy": "06_QA_V6_V7_CONVERSATION",
+      "qaObservation": "4 negative failures at 320px and 375px; reported V7, not re-executed by CTRL this audit",
+      "v7AndV8AppBlobSha256": "3c7bb1a2d49c65980d175aa66943622b3648a3e61cf51576717b7c0923753a7a",
+      "v8CodeObservation": "downloadEditedArchive awaits repackSettingsZip without post-await Source revision, edit generation, file identity and filename CAS recheck",
+      "status": "OPEN_BLOCKS_ACCOUNT_ZIP_EXPORT_RELEASE",
+      "next": "05_WEB_SOURCE_FIX_THEN_06_SCOPED_INDEPENDENT_QA"
+    },
+    "browserHTTP": "UNVERIFIED_PREVIOUS_ENVIRONMENT_BLOCK",
+    "nativeWriter": "OFF",
+    "nativeGameAccepted": "UNVERIFIED",
+    "releaseApproval": "NOT_REQUESTED"
   }
 }
