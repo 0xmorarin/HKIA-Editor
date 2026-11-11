@@ -87,13 +87,14 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA independent scoped V5→V10 7MOD+23ADD, test 05 Account async CAS regression and 04 new match encoder, no reQA of accepted V5",
-    "04 SAVE CORE analyze authentic v3.0.0/3.0.1 native private saves, leading 32-byte envelope and load/validate path, implement safe true writer without speculative linkage",
-    "00 MEDIA continue full private achievements+collections source-verified mapping, lossless WebP conversion, pixel exact, no repeat 25 collection category assets",
-    "00 CTRL freeze accepted 06 Source; PR1 code-only still Draft; do not publish game media",
-    "05 WEB only after accepted 04 typed native writer API, integrate verified ImageMap from 00 MEDIA, usability-first design",
-    "06 final fixed-head real HTTP Chrome and private real-save verification, real device conditional",
-    "00 Owner explicit approval before formal Pages, game art and writer release"
+    "READY_NOW_PARALLEL: 06_QA independent only V5->V10 7 modified+23 added; prioritize Account ZIP export CAS race and Native LZ4 match encoder; fixed exact source SHA",
+    "READY_NOW_PARALLEL: 04_SAVE_CORE reuse validated native parser/SaveGameV2 historical private tests and live Platform/DLC code paths; real private save files currently not located; avoid speculative writer and redundant synthetic gate",
+    "READY_NOW_PARALLEL: 00_MEDIA prior category25 complete; continue private game-derived image extraction for all 31 Account, 820 InGame, 181 Collection definitions, mapped item images, 77 distinct reward IDs with provenance and VP8L",
+    "READY_AFTER_06: 00_CTRL accept QA-scoped V10; keep PR1 draft until updated code and reproducible public-safe build; no images until Owner release",
+    "READY_AFTER_04_TYPED_API_ACCEPTED: 05_WEB connect Native Writer and validated private ImageMap in usability-first UI without native-like layout",
+    "SERIAL: 06 final fixed-head HTTP Chrome / private real save tests; 00 main integration and explicit Owner Pages/game media/Writer publication approval",
+    "03 LINKAGE only if 04 finds new target-specific persistent causal evidence",
+    "01/02 completed scopes not restarted"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -301,5 +302,60 @@
       "00_OWNER_RELEASE_GATE"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED"
+  },
+  "ownerCheckpoint20261112": {
+    "status": "PARTIAL_WITH_NEW_00_EVIDENCE",
+    "sourceSha256": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
+    "sourceFileCount": 223,
+    "latestStreamDelta": "NONE_FOUND_AFTER_V10_IN_AVAILABLE_DRIVE_FOLDER",
+    "independentQaHead": "V5_SCOPED_PASS_ONLY_V10_PENDING",
+    "qaChangedScope": {
+      "modified": 7,
+      "added": 23,
+      "deleted": 0,
+      "file": "HKIA_CTRL_V5_to_V10_ChangedScope_Freeze_20261112.json",
+      "localSha256": "b7b8914564a04375bea3fd574c1c4db3144fa2b439523cf96dec6ad555084da1"
+    },
+    "pr1": {
+      "state": "DRAFT_UNMERGED_CODE_ONLY",
+      "files": 22,
+      "verifiedMatchedV5": 22,
+      "changedVsV10": [
+        "index.html",
+        "src/app.js"
+      ],
+      "missingAfterV10Upgrade": [
+        "src/source-revision-ui.js"
+      ],
+      "v5ImportClosure": "PASS_NO_MISSING_INTERNAL_MODULES",
+      "standaloneProductBuild": "NOT_BUILDABLE_NO_GAME_DATA_ASSETS",
+      "localAuditFile": "HKIA_CTRL_PublicSafe_Source_Readiness_20261112.json",
+      "localAuditSha256": "1cbd98a1e022522549259319cf3b6fc11ecb28aebbb9ba4086a66c202698e3b9"
+    },
+    "nativeEvidence": {
+      "historicalV300V301PrivateFixtureTests": "EXIST_HISTORICAL_SCOPE_ONLY_NOT_CURRENT_V10",
+      "rawPrivateFixtureAvailableNow": "NOT_LOCATED_THROUGH_SEARCH",
+      "nativeLeading32Bytes": "UNVERIFIED_MEANING",
+      "publicReferencedPatcherRepos": [
+        "0xmorarin/HKIA-Save-Platform-Patcher",
+        "0xmorarin/HKIA-DLC-Patcher"
+      ],
+      "reusePolicy": "CROSS_REFERENCE_EXISTING_PARSER_LZ4_REPARSE_IMPLEMENTATIONS_NO_REIMPLEMENTATION",
+      "handoffFile": "HKIA_CTRL_04_NativeWriter_Reuse_Handoff_20261112.json"
+    },
+    "media": {
+      "existingCollectionIcons": 25,
+      "additionalAchievementCollectionItemRewardAssets": "NO_NEW_DELIVERY_OBSERVED",
+      "extractionSource": "PRIVATE_STEAM_V301_DEFINITIONS_AND_ATLAS_AVAILABLE",
+      "allImagesRequired": true,
+      "losslessWebp": true,
+      "publicUploadAllowed": false
+    },
+    "release": {
+      "writerEnabled": false,
+      "pagesEnabled": false,
+      "gameMediaPublic": false,
+      "ownerApprovalRequired": true
+    }
   }
 }
