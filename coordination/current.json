@@ -44,10 +44,20 @@
       "nativeWriterEnabled": false,
       "realPrivateSave": "NOT_LOCATED_IN_CONNECTED_FILES",
       "gameAcceptance": "UNVERIFIED",
-      "next": "REAL_SAVE_AND_NATIVE_VALIDATION_PATH_WITHOUT_SYNTHETIC_GATE_DUPLICATION"
+      "next": "USE_EXISTING_PRIVATE_V300_V301_SAVE_INPUTS_FOR_NATIVE_VERIFICATION; SUBMIT_EXACT_TYPED_KEY1_DELTA_AND_SHA",
+      "latestReportedAfterV11": {
+        "sha256": "2320939558d9f80903231e93b8222fa522d4ae09959505e4916c36d27c5b57fe",
+        "entries": 227,
+        "pass": 437,
+        "skip": 36,
+        "fail": 0,
+        "scope": "COLLECTION_KEY1_TYPED_TICKS",
+        "status": "REPORTED_NOT_INTEGRATED_SOURCE_ARTIFACT_MISSING"
+      },
+      "realSaveFixtures": "AUTHORIZED_PRIVATE_DRIVE_FOUND_REQUIRES_DIRECT_READ_AND_TYPED_CHECK"
     },
     "05_WEB": {
-      "status": "V11_ACCOUNT_ZIP_ASYNC_CAS_LOCAL_CHROME_8_PASS_WAIT_NEW_SHA_QA",
+      "status": "READY_NOW_PRIVATE_IMAGEMAP_UI_CONNECT",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
@@ -60,10 +70,13 @@
         375
       ],
       "chromeRacePass": 8,
-      "accountZipProductionSafety": "PENDING_V11_QA"
+      "accountZipProductionSafety": "PENDING_V11_QA",
+      "immediateScope": "EXACT_IMAGE_RESOLVER_IN_EXISTING_TABS_WITHOUT_NATIVE_WRITER",
+      "sourceImageAdapter": "00_MEDIA_PRIVATE_HANDOFF_VALIDATED",
+      "writerConnection": "WAIT_04_ACCEPTED_API"
     },
     "06_QA": {
-      "status": "V10_REPORTED_SCOPED_PASS_V11_QA_PENDING",
+      "status": "V11_SCOPED_PASS_REPORTED_PRIVATE_EVIDENCE_DELIVERY_PENDING",
       "v10SourceSha256": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "v10Report": "HKIA_06_QA_V10_SCOPED_REPORT_20261112.md",
       "v10Evidence": "HKIA_06_QA_V10_INDEPENDENT_EVIDENCE_20261112.zip",
@@ -74,7 +87,19 @@
       "v11ChangedScopeIfV10EvidenceVerified": "2_MOD_1_ADD_0_DEL",
       "v11CumulativeFallbackFromV5": "7_MOD_24_ADD_0_DEL",
       "nativeWriterApproval": false,
-      "next": "RETRIEVE_V10_FIXED_QA_EVIDENCE_THEN_V11_CHANGED_ONLY_INDEPENDENT_QA"
+      "next": "SUPPLY_FIXED_V11_QA_REPORT_EVIDENCE_PRIVATE; THEN_VERIFY_04_AND_05_NEW_SCOPE_AFTER_SOURCE_FREEZE",
+      "sourceSha256": "acb237f141e742c566ae7e5232679a7c4705adb30db2730e8386c8433cbfee7b"
+    },
+    "00_MEDIA": {
+      "status": "DONE_PRIVATE_SOURCE_MAPPING_AND_WEBP_DELIVERY",
+      "privateWebpFiles": 4076,
+      "preexistingCategoryFiles": 25,
+      "addedWebpFiles": 4051,
+      "mediaHandoff": "HKIA_MEDIA_00_05_PRIVATE_HANDOFF_20261112.md",
+      "nativeUIIntegration": "PENDING_05_WEB",
+      "switchImageParity": "UNVERIFIED",
+      "rightsAndPublicRelease": "OWNER_APPROVAL_REQUIRED",
+      "next": "NO_RESTART_UNLESS_NEW_SOURCE_OR_05_FINDS_TARGETED_MAPPING_ERROR"
     }
   },
   "p0FixCandidate": {
@@ -104,17 +129,15 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA retrieve fixed V10 report/evidence (Stream-reported SCOPED_PASS 492), verify SHA, then independently QA V11 changed 2MOD+1ADD; if unavailable use V5→V11 cumulative 7MOD+24ADD only; do not redo already accepted scopes",
-    "04 SAVE CORE Native verifier 32-byte prefix/outer validation + typed real save edits using private fixtures; source 32KiB alignment does not prove game requirement; no new repetitive synthetic-only gates",
-    "00 MEDIA private output for source-linked achievement/collection/reward artwork, deliver image map and VP8L assets with files/Drive IDs; 25 group assets remain",
-    "00 CTRL after exact 06 verdict freeze V11 and public-safe code integration; PR1 remains Draft and 22 old code files not sufficient to build",
-    "05 WEB connect verified private ImageMap independently of Native Writer readiness, maintain usability-first UI and Account ZIP CAS",
-    "05 WEB connect Native Writer only after 04 API accepted and independent QA, fail closed for unknown scopes",
-    "06 final frozen-source real HTTP browser and private real save tests",
-    "00 owner explicit release permission required for GitHub Pages, extracted game art and Native Writer"
+    "START_NOW: 04_SAVE_CORE use original private Switch save Drive fixture IDs issued in private handoff, verify v3.0.0 and named v3.0.3 v3.0.1 header; complete real scoped typed edits without game export; submit new 227-file candidate Source+Delta exact IDs",
+    "START_NOW_PARALLEL: 05_WEB integrate 00 MEDIA private source-verified 4076 WebP ImageMap lookup into UI; no game data/public asset upload; writer waits",
+    "06_QA: V11 fixed SCOPED_PASS already reported, deliver exact signed/fixed evidence to private Drive; do not rerun 38 tests; independently QA new 04/05 fixed changes after they exist",
+    "00_CTRL: serially integrate only fixed accepted 04/05 deltas on newest SHA, make source reproducible, keep PR1 Draft and images private",
+    "03_LINKAGE: restart only if real private save before/after proves exact REQUIRED new linkage; 01/02 remain completed",
+    "FINAL: 06 exact HEAD full Chrome local HTTP and native private save readback, game device if possible, Owner approval for Pages/images/Writer"
   ],
   "imageAssets": {
-    "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
+    "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
     "scope": "25 COLLECTION ICONS",
     "sourceBaseline": "v0.2.11 CTRL P0 + 04 Candidate",
     "format": "WEBP_LOSSLESS_VP8L",
@@ -139,7 +162,7 @@
     "independentBaselinePngToWebpRgbaPass": 25,
     "gameAchievementsIconsInCandidate": 0,
     "perCollectableImagesInCandidate": 0,
-    "allGameMediaExtracted": false,
+    "allGameMediaExtracted": "STEAM301_SOURCE_LINKED_SCOPE_COMPLETE_GAME_FALLBACK_SOURCE_NULL_NOT_PROVEN_ABSENT",
     "mediaExtractionStreamActive": false,
     "mediaInventoryIndependentWork": "READY_NOW_00_LOCAL_ONLY",
     "requiredCoverage": "ALL_EDIT_RELEVANT_ACHIEVEMENTS_AND_COLLECTIONS_GAME_ART",
@@ -166,10 +189,20 @@
       "accountAchievementImages": 0,
       "inGameAchievementImages": 0,
       "individualCollectionItemImages": 0,
-      "rewardItemImages": 0
+      "rewardItemImages": 0,
+      "mediaSourceAcceptedMetadataOnly": true,
+      "collectionGroupWebp": 25,
+      "additionalWebpReported": 4051,
+      "privateMediaImageTotalReported": 4076,
+      "accountAchievementExact": 13,
+      "inGameAchievementExact": 261,
+      "collectionDefinitionsMapped": 181,
+      "linkedItemIdsMapped": 10262,
+      "distinctRewardItemIdsMapped": 77,
+      "integrationAppUI": "NOT_DONE"
     },
     "extractionSources": "EXISTING_STEAM_V301_DEFINITIONS_AND_ATLAS_REFERENCES_PRIVATE",
-    "mediaTasks": "REPORT_OF_NEW_MAPPING_FROM_OTHER_STREAM_NOT_VERIFIED_AS_SHARED_ARTIFACT",
+    "mediaTasks": "COMPLETE_FOR_EXACT_STEAM301_REFERENCE_MAPPING_NO_RESTART",
     "assetMappingPolicy": "SOURCE_VERIFIED_ONLY_NO_NAME_SIMILARITY_GUESSES",
     "imageFileFormat": "WEBP_LOSSLESS_VP8L",
     "recentMediaReport": "4076_IMAGES_RGBA_REFERENCE_CHECK_REPORTED_NO_NEW_WEBP_CONFIRMED",
@@ -180,7 +213,7 @@
       "individualCollectableImages": 0,
       "rewardItemImages": 0
     },
-    "next": "DELIVER_PRIVATE_IMAGE_MAP_AND_PROVENANCE_ARTIFACTS_WITH_EXACT_SHA_AND_LOSSLESS_WEBP_NOT_ONLY_IN_CONVERSATION"
+    "next": "05 WEB PRIVATE_SOURCE_VERIFIED_IMAGEMAP_UI_INTEGRATION_WITHOUT_WRITER_DEPENDENCY; NO_MEDIA_RESTART"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
@@ -291,49 +324,48 @@
   },
   "ownerPriorities": {
     "effectiveDate": "2026-11-11",
-    "decision": "ACCEPTED",
+    "decision": "CURRENT_20261112_PRIVATE_FIXTURE_AND_MEDIA_UNLOCK",
     "workOrder": [
       {
         "priority": "P0",
-        "owner": "06_QA",
-        "task": "VERIFY_REPORTED_V10_REPORT_AND_INDEPENDENT_V11_2MOD1ADD",
-        "status": "READY_NOW"
-      },
-      {
-        "priority": "P0",
         "owner": "04_SAVE_CORE",
-        "task": "REAL_PRIVATE_SAVE_NATIVE_INTEGRITY_AND_TYPED_WRITER",
+        "task": "REAL_SAVE_NATIVE_VALIDATION_AND_TYPED_WRITER_WITH_PRIVATE_V300_V301_FIXTURES",
         "status": "READY_NOW"
       },
       {
         "priority": "P1_PARALLEL",
-        "owner": "00_MEDIA",
-        "task": "DELIVER_AND_VERIFY_ALL_EDIT_RELEVANT_IMAGE_ARTIFACTS",
+        "owner": "05_WEB",
+        "task": "PRIVATE_IMAGES_UI_CONNECT_FROM_00_MEDIA_MAP_IN_EXISTING_TABS",
         "status": "READY_NOW"
       },
       {
-        "priority": "P1_DEPENDENT",
-        "owner": "05_WEB",
-        "task": "ACCEPTED_WRITER_API_AND_IMAGE_MAP_UI_CONNECT",
-        "status": "WAIT_04_OR_MEDIA_DEP"
+        "priority": "P0_CHANGED_SCOPE_QA",
+        "owner": "06_QA",
+        "task": "HANDOFF_PREVIOUS_V11_FIXED_REPORT_NO_REDUNDANT_QA_THEN_04_05_NEW_SOURCE_QA",
+        "status": "READY_NOW_ARTIFACT_DELIVERY_AND_AFTER_NEW_SHA"
+      },
+      {
+        "priority": "P1_DEP",
+        "owner": "00_CTRL",
+        "task": "SERIAL_REVIEW_AND_MERGE_AFTER_FIXED_SOURCE_QA",
+        "status": "READY_AFTER_QA"
       }
     ],
     "parallelSafeNow": [
-      "06_QA_V11",
-      "04_NATIVE_REAL_SAVE",
-      "00_MEDIA_PRIVATE_MAP_AND_WEBP"
+      "04_NATIVE_PRIVATE_SAVE_VERIFICATION",
+      "05_PRIVATE_IMAGE_UI_CONNECT",
+      "06_V11_EVIDENCE_HANDOFF_READ_ONLY"
     ],
     "serialAfter": [
-      "00_ACCEPT_QA_FIXED_SHA",
-      "05_CONNECT_ACCEPTED_IMAGE_MAP_EVEN_IF_WRITER_WAITING",
-      "05_CONNECT_ACCEPTED_NATIVE_WRITER_ONLY_AFTER_04_QA",
-      "06_FINAL_BROWSER_AND_PRIVATE_SAVE_QA",
-      "00_OWNER_RELEASE_GATE"
+      "00_SCOPED_04_05_INTEGRATE_ONLY_FIXED_ARTIFACTS",
+      "06_NEW_FIXED_HEAD_QA",
+      "00_GITHUB_SOURCE_SAFE_MERGE",
+      "OWNER_PUBLIC_APPROVAL"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED"
   },
   "ownerCheckpoint20261112": {
-    "status": "V11_FIXED_LOCAL_INTEGRATION_PASS_QA_PENDING",
+    "status": "V11_00_CTRL_HANDOFF_READY_NEW_DEPENDENCIES_UNLOCKED",
     "sourceSha256": "acb237f141e742c566ae7e5232679a7c4705adb30db2730e8386c8433cbfee7b",
     "sourceFileCount": 224,
     "latestStreamDelta": "04_NATIVE_FRAMING_V10_2_MOD_1_ADD",
@@ -373,18 +405,58 @@
       "handoffFile": "HKIA_CTRL_04_NativeWriter_Reuse_Handoff_20261112.json"
     },
     "media": {
-      "existingCollectionIcons": 25,
-      "additionalAchievementCollectionItemRewardAssets": "NO_NEW_DELIVERY_OBSERVED",
-      "extractionSource": "PRIVATE_STEAM_V301_DEFINITIONS_AND_ATLAS_AVAILABLE",
-      "allImagesRequired": true,
-      "losslessWebp": true,
-      "publicUploadAllowed": false
+      "status": "PRIVATE_FULL_IMAGE_MAP_AND_WEBP_PACK_DELIVERED",
+      "imageCount": 4076,
+      "newImageCount": 4051,
+      "existingCategoryCount": 25,
+      "accountAchievementsExact": 13,
+      "accountAchievementsSourceNull": 18,
+      "inGameExact": 261,
+      "inGameSourceNull": 559,
+      "collectionDefinitionsMapped": 181,
+      "collectionItemIdsMapped": 10262,
+      "distinctRewardIdsMapped": 77,
+      "privateOnly": true,
+      "uiConnected": false,
+      "sourceAssetParity": "STEAM301_VERIFIED_BY_MEDIA_STREAM_SWITCH_PARITY_NOT_VERIFIED"
     },
     "release": {
       "writerEnabled": false,
       "pagesEnabled": false,
       "gameMediaPublic": false,
       "ownerApprovalRequired": true
+    },
+    "fixedCandidateEntries": 224,
+    "new04Candidate": {
+      "status": "REPORTED_NOT_INTEGRATED_ARTIFACT_NOT_ACCESSIBLE",
+      "sha256": "2320939558d9f80903231e93b8222fa522d4ae09959505e4916c36d27c5b57fe",
+      "entries": 227,
+      "reportedLocalTests": "437_PASS_36_SKIP_0_FAIL",
+      "scope": "COLLECTION_KEY1_SIGNED_INT64_TICKS_TYPED_CAS"
+    },
+    "independentQa": {
+      "status": "V11_SCOPED_PASS_REPORTED_FIXED_EVIDENCE_NOT_SHARED",
+      "sourceSha256": "acb237f141e742c566ae7e5232679a7c4705adb30db2730e8386c8433cbfee7b",
+      "reportedFocusedTestsPassed": 38,
+      "requiredNext": "FIXED_REPORT_AND_EVIDENCE_SHARE_TO_OWNER; NO_DUPLICATE_RETEST"
+    },
+    "nativePrivateEvidence": {
+      "state": "FOUND_IN_AUTHORIZED_PRIVATE_DRIVE",
+      "versions": "V300_AND_NAMED_V303_REPORTED_V301_INTERNAL_HEADER_UNVERIFIED_THIS_TURN",
+      "rawDataPublic": false,
+      "originalBytesUnchanged": true,
+      "next": "PRIVATE_ACTUAL_V300_V301_HEADER_AND_ENCODE_TESTS",
+      "artifactIdsInPublicLedger": false
+    },
+    "git": {
+      "pr1": "DRAFT_UNMERGED",
+      "publicImages": false,
+      "sourceMerged": false
+    },
+    "approval": {
+      "pagesEnabled": false,
+      "writerEnabled": false,
+      "ownerFormalRequired": true
     }
   }
 }
