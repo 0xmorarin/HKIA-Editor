@@ -90,14 +90,12 @@
     "ownerApprovalRequired": true
   },
   "nextSerial": [
-    "06 QA frozen V5->V8 changed-scope QA and previously reported Account ZIP async race evidence",
-    "05 WEB P0 async Account ZIP post-await Source/edit-generation/file identity/filename CAS fix independent of native writer",
-    "04 SAVE CORE real v3.0.0/v3.0.1 save authentication and safe native roundtrip; no duplicate synthetic-only work",
-    "00 LOCAL MEDIA independent audit; targeted achievement/item-image extraction only after UI target inventory, lossless VP8L and RGBA verification, never GitHub until formal release",
-    "00 serially integrate 05 patch and any 04 accepted work on fixed Source, changed-only 06 QA",
-    "05 WEB Native writer adapter only after 04 typed API independent accepted",
-    "06 real HTTP Chrome and private-save verification, real device only where needed",
-    "00 complete public-safe GitHub source packaging, Owner approval for Pages/game imagery and writer"
+    "START_NOW_PARALLEL: 05 WEB Account ZIP asynchronous stale export P0 fix in src/app.js; no Native Writer dependency",
+    "START_NOW_PARALLEL: 04 SAVE_CORE authentic v3.0.0/v3.0.1 Native integrity/reencode real private save; no extra redundant synthetic gates",
+    "START_NOW_PARALLEL: 06 QA V5->V8 scoped changed-only verification and Account ZIP P0, follow 05 fix under frozen new Source",
+    "START_NOW_PARALLEL: 00 MEDIA inventory-driven Achievement+Collection every game image from private Steam/Switch source, lossless VP8L WebP; no GitHub assets",
+    "READY_AFTER_04_ACCEPTED_API: 05 WEB connect typed Native Writer while retaining usability-first UI",
+    "SERIAL: 00 integrate fixed accepted Source; 06 final frozen-head independent QA/browser/private-save; 00 owner publication gate"
   ],
   "imageAssets": {
     "status": "LOCAL_PREVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -127,7 +125,37 @@
     "perCollectableImagesInCandidate": 0,
     "allGameMediaExtracted": false,
     "mediaExtractionStreamActive": false,
-    "mediaInventoryIndependentWork": "READY_NOW_00_LOCAL_ONLY"
+    "mediaInventoryIndependentWork": "READY_NOW_00_LOCAL_ONLY",
+    "requiredCoverage": "ALL_EDIT_RELEVANT_ACHIEVEMENTS_AND_COLLECTIONS_GAME_ART",
+    "gameUiLayoutCloneRequired": false,
+    "independentUsabilityFirstUI": true,
+    "imageInventory": {
+      "sourceSha256": "77d41157a768fbd40e9272f6b47a2d6be16ec03201b4b645269449905514dcc4",
+      "artifact": "HKIA_Editor_Image_Scope_Inventory_20261111.json",
+      "artifactSha256": "846dadbe8706c8ddb73d00163e1352f9f7a7db62b692cf43245602d1c21b7e18",
+      "visibility": "LOCAL_PRIVATE_ONLY",
+      "collectionGroups": 25,
+      "collectionDefinitions": 181,
+      "collectionLinkedItemIds": 10262,
+      "accountAchievements": 31,
+      "accountWithSpriteReference": 13,
+      "uniqueExplicitAccountSprites": 2,
+      "inGameAchievementDefinitions": 820,
+      "distinctRewardItemIds": 77,
+      "knownNestedCollectionIconPptrs": "NULL",
+      "actualRequiredUniqueSpriteCount": "UNKNOWN_UNTIL_ASSET_REFERENCE_CROSSWALK"
+    },
+    "coverageVerified": {
+      "collectedGroupImageWebp": 25,
+      "accountAchievementImages": 0,
+      "inGameAchievementImages": 0,
+      "individualCollectionItemImages": 0,
+      "rewardItemImages": 0
+    },
+    "extractionSources": "EXISTING_STEAM_V301_DEFINITIONS_AND_ATLAS_REFERENCES_PRIVATE",
+    "mediaTasks": "READY_NOT_AUTOMATICALLY_RUNNING",
+    "assetMappingPolicy": "SOURCE_VERIFIED_ONLY_NO_NAME_SIMILARITY_GUESSES",
+    "imageFileFormat": "WEBP_LOSSLESS_VP8L"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
@@ -216,6 +244,56 @@
     "browserHTTP": "UNVERIFIED_PREVIOUS_ENVIRONMENT_BLOCK",
     "nativeWriter": "OFF",
     "nativeGameAccepted": "UNVERIFIED",
-    "releaseApproval": "NOT_REQUESTED"
+    "releaseApproval": "NOT_REQUESTED",
+    "ownerImageDecision": "ALL_EDIT_RELEVANT_GAME_IMAGES_IN_BOTH_TABS",
+    "ownerUiDecision": "CUSTOM_USABILITY_FIRST_NOT_GAME_LAYOUT_REPLICA",
+    "decisionStatus": "PERSISTED_RELEASE_GATES_AND_COORDINATION"
+  },
+  "ownerPriorities": {
+    "effectiveDate": "2026-11-11",
+    "decision": "ACCEPTED",
+    "workOrder": [
+      {
+        "priority": "P0",
+        "owner": "05_WEB",
+        "task": "FIX_ASYNC_ACCOUNT_ZIP_EXPORT_STALE_CONTENT",
+        "status": "READY_NOW",
+        "dependency": "NONE"
+      },
+      {
+        "priority": "P0",
+        "owner": "04_SAVE_CORE",
+        "task": "PROVE_NATIVE_WRITER_REAL_SAVE_REENCODE_REPARSE_ATOMICITY",
+        "status": "READY_NOW",
+        "dependency": "REAL_PRIVATE_SAVE_EVIDENCE"
+      },
+      {
+        "priority": "P0",
+        "owner": "06_QA",
+        "task": "INDEPENDENT_CHANGED_SCOPE_V8_AND_05_FIX",
+        "status": "READY_NOW",
+        "dependency": "FIXED_SOURCE_HEAD_FOR_FINAL_VERDICT"
+      },
+      {
+        "priority": "P1_PARALLEL",
+        "owner": "00_MEDIA",
+        "task": "EXTRACT_AND_CONVERT_ALL_EDIT_RELEVANT_ACHIEVEMENTS_AND_COLLECTIONS_GAME_IMAGES",
+        "status": "READY_NOW_PRIVATE_LOCAL",
+        "dependency": "SOURCE_ASSET_MAPPING"
+      }
+    ],
+    "parallelSafeNow": [
+      "05_ACCOUNT_ASYNC_P0",
+      "04_NATIVE_WRITER_P0",
+      "06_QA_V8",
+      "00_MEDIA_ALL_EDIT_IMAGES"
+    ],
+    "serialAfter": [
+      "00_INTEGRATE_QA_ACCEPTED_SOURCE",
+      "05_CONNECT_ACCEPTED_NATIVE_API",
+      "06_FINAL_BROWSER_AND_SAVE_QA",
+      "00_OWNER_PUBLIC_RELEASE_GATE"
+    ],
+    "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED"
   }
 }
