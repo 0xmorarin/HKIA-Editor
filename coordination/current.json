@@ -465,15 +465,15 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_V24_PRIVATE_ACTIVATION_QA",
+      "status": "V24_ACTIVATION_SCOPED_PASS_FINAL_BROWSER_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
-      "targetSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-      "targetScope": "2_MOD_PRIVACY_POLICY_TEST",
-      "next": "00_RELEASE_EQUIVALENT_ACTIVATION_CANDIDATE_AND_AUTHORIZED_BROWSER_ENV; 06_FINAL_REAL_BROWSER_AFTER_DEP; 07_WAIT_ENV",
+      "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+      "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
+      "next": "00_AUTHORIZED_PRIVATE_BROWSER_ENV; 06_FINAL_REAL_BROWSER_V24_AFTER_DEP; 00_RELEASE_GATE_AND_OWNER_APPROVAL; 07_WAIT_ENV",
       "execution": {
         "task": "V24_PRIVATE_ACTIVATION_SCOPED_QA_AND_AUTHORIZED_BROWSER",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "4f7f23a055944c504b69d739f1db6c972906ca46",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "fixedSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
@@ -883,7 +883,66 @@
             "nextAfter": "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_DEP"
           },
           "rollback": "V22 development only; old privacy gate TRUE_RED not publishable; R2 OFF artifact byte-identical verified not deployable"
-        }
+        },
+        "verdict": "SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER",
+        "deltaSha256": "e8752df6ccea65129ae252ba13b99e2bd68860dbd746e0f098423c12936da043",
+        "manifestSha256": "1a3eb6095363d9bd996292ca7e8d71265e2395c0e830ee265505b17398d39792",
+        "verified": {
+          "sourceEntries": 396,
+          "modified": 3,
+          "unchanged": 393,
+          "settingValues": 5,
+          "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
+          "distEntries": 4144,
+          "distBytes": 146154761,
+          "distModified": 3,
+          "distUnchanged": 4141,
+          "webp": 4076,
+          "artifactManifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+          "artifactPolicy": "PASS",
+          "build": "PASS_DEFAULT_SOURCE_BUILD",
+          "check": "PASS",
+          "actualDistNodeDefaultUIController": "PASS",
+          "genuineMixedBatchOutputs": 2,
+          "fieldsPerBatch": 2,
+          "genuineRecipeOutputs": 2,
+          "independentPythonRawZip": 4,
+          "nonTargetFramesPerOutput": 10,
+          "capabilityCases": 9,
+          "recipeNegativeAssertions": 4,
+          "originalsUnchanged": true,
+          "browserKitSyntax": "PASS",
+          "browserKitRealRun": "NOT_RUN_WAIT_ENV",
+          "newProductTrueRed": 0
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_QA_V24_ACTIVATION_REPORT_20261112.md",
+            "sha256": "c885528bc534a1cc9bfea326f8344fe46867656f2402c7435df8b8a38e4e4ee6"
+          },
+          "zip": {
+            "file": "HKIA_06_QA_V24_ACTIVATION_EVIDENCE_20261112.zip",
+            "sha256": "154173259fc4aaaedf15cdfe8b5e859c0c322ea037c27e6130be62cd3a6cecf3",
+            "entries": 10
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V24_ACTIVATION_20261112.md",
+            "sha256": "4ad82573760b62380ba74eef5b6f71e2be2e1a6d8868ba7f400f7bb1917c8d28"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+        },
+        "remaining": [
+          "Authorized private real HTTP/HTTPS Chrome native WebCrypto Module Worker E2E; unchanged admin-blocked environment not retried",
+          "BrowserKit representative scope: extend actual batch/add/remove/progress, raw frames, context+worker network audit, viewport keyboard, rollback; QA coverage not product TRUE_RED",
+          "Native auth/load/resave/reboot and Recipe zero-row retention/recount unobserved",
+          "Owner explicit deployment approval; 07 independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "condition": "Record scoped activation offline acceptance; arrange authorized private Chrome and trusted localhost TLS, exact V24 pinned artifact and genuine inputs; 06 final browser after environment",
+          "nextAfter": "06_REAL_BROWSER_FINAL_V24_AFTER_AUTHORIZED_ENV; 00_RELEASE_GATE_AFTER_REQUIRED_EVIDENCE"
+        },
+        "rollback": "V23 R2 exact OFF source and accepted OFF artifact"
       }
     },
     "00_MEDIA": {
