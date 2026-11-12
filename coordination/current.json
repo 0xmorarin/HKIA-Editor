@@ -185,12 +185,12 @@
       }
     },
     "05_WEB": {
-      "status": "V20_RECIPE_RECEIPT_UI_IN_FLIGHT",
+      "status": "V20_RECIPE_RECEIPT_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_V19_ATOMIC_BATCH_UI_4_PATHS; 00_SERIAL_INTEGRATE; AFTER_04_ACCEPTED_RECEIPT_CONTRACT_RECEIPT_UI_ONLY_IF_NEEDED; REAL_HTTP_HTTPS_MODULE_WORKER_WEBCRYPTO_FINAL_QA",
+      "next": "06_SCOPED_QA_V20_RECIPE_RECEIPT_UI_4_PATHS; 00_SERIAL_INTEGRATION; FINAL_FIXED_BETA_BROWSER_AFTER_DEP; SVELTE_ONLY_AFTER_JS_BETA_FIXED",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -201,7 +201,7 @@
       "accountZipProductionSafety": "PENDING_V11_QA",
       "immediateScope": "EXACT_IMAGE_RESOLVER_IN_EXISTING_TABS_WITHOUT_NATIVE_WRITER",
       "sourceImageAdapter": "00_MEDIA_PRIVATE_HANDOFF_VALIDATED",
-      "writerConnection": "STAGED_ATOMIC_BATCH_OUTPUT_AND_OFFLINE_CAPABILITIES_IMPLEMENTED_UI_AND_CORE_RELEASE_OFF",
+      "writerConnection": "ORDINARY_ATOMIC_BATCH_ACCEPTED_RECEIPT_UI_LOCAL_PASS_RELEASE_OFF",
       "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "mediaMap": "PRIVATE_IMAGE_MAP_DELIVERED_4076_LOSSLESS_WEBP",
       "v13NativeReadMode": "STRUCTURAL_READ_ONLY_FOR_AMBIGUOUS_MAPS_ACCOUNT_ZIP_EXPORT_DISABLED",
@@ -242,7 +242,7 @@
       },
       "execution": {
         "task": "V20_RECIPE_RECEIPT_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "67c537b1668467bd6b2fb140fb1d7e04e0a2e593",
         "baseSourceSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
         "dependency": "V20 closure + accepted exact 05 batch delta 892b63ec; 04 receipt same-runtime pre-resave scoped PASS; private local only, flags OFF",
@@ -320,6 +320,58 @@
             "dependency": "06 independent scoped verdict on 05 four paths and 04 trusted receipt; 00 serial integration only",
             "note": "V20 preflight is not accepted; no combined source created, no product change, no activation"
           }
+        },
+        "fixedSourceSha256": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
+        "deltaSha256": "ad7d7832c439e1b4710588ca1e813b91985f49672f18be8c1f810b14a06fe977",
+        "manifestSha256": "0c2df3d5523224fecada55d117cb0fefd75fa5c8bfef4573ccaded6e5367120b",
+        "evidenceSha256": "73a1f05070e7356493bf4bd59e2814afb9d08b698802be746254edd8a03d3295",
+        "handoffSha256": "5d1a40a969378374051423b7463e8d6f16e3d197aef11dd237a0f0d8902b4b67",
+        "changedPaths": "2_MOD_2_ADD_0_DEL",
+        "baseComposite": "V20 33ece2e6 + accepted 05 batch delta 892b63ec; 381 logical entries; not official 00 integration",
+        "artifacts": {
+          "source": "libfile_52a97e30d5a08191867c11edbc312f07",
+          "delta": "libfile_5968d12392448191888201ae18efd0bf",
+          "manifest": "libfile_c0077311a6e0819193e6d5f64d1104f6",
+          "evidence": "libfile_c4a86785e8d081918d08e1f4876ca90d",
+          "handoff": "libfile_55352c1810d88191a3826d9fe046778e"
+        },
+        "verified": {
+          "focusedNew": 5,
+          "focusedRegression": 17,
+          "nodePass": 753,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "deltaReplay": "383/383",
+          "chromeInlineOff": [
+            320,
+            1280
+          ],
+          "chromeInlineIsolatedOutput": [
+            375
+          ],
+          "genuineVersion": "3.0.1",
+          "quantity": [
+            1,
+            0,
+            1
+          ],
+          "directNodeExactDiff": 2,
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "releaseFlags": "OFF"
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_AUTH_RESAVE_ZERO_ROW_RETENTION",
+          "GENERAL_RECIPE_ACQUISITION"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "4 exact paths, 381 logical base V20+accepted Batch; same-runtime pre-resave exact candidate only",
+          "nextAfter": "00 serial integrate accepted 05 receipt UI and Batch; final actual browser and gated beta; no release activation"
         }
       },
       "atomicBatchUi": {
