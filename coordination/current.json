@@ -1183,13 +1183,13 @@
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ctrlExecution": {
-    "task": "V18_SUCCESSOR_CANDIDATE_PREFLIGHT_AND_BROWSER_ENV",
-    "status": "PARTIAL_PREFLIGHT_COMPLETE_QA_READY",
+    "task": "V19_SCOPED_ACCEPTANCE_AND_RECEIPT_SUCCESSOR_PREFLIGHT",
+    "status": "IN_FLIGHT",
     "owner": "00 CTRL",
-    "baseMain": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+    "baseMain": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
     "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-    "scope": "private candidate assembly only; compare 03/04/05 exact deltas, resolve integration dependencies, real browser environment check, no product source edits outside 00, no deployment or accepted merge",
-    "dependency": "06 independent scoped QA required for accepted integration; pending QA does not prevent private preflight",
+    "scope": "Verify accepted 03/04/05 exact blobs in V19; isolate CTRL closure QA; assemble unaccepted new receipt delta only if conflict-free; prepare capability handoff and dependency closure; no main product merge or flags",
+    "dependency": "06 accepted separate deltas; receipt new 16 paths pending; final browser external environment",
     "sourceInputs": {
       "core": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
       "web": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
@@ -1271,6 +1271,7 @@
       "00_SERIAL_INTEGRATION_AFTER_SCOPED_QA_AND_UI_E2E",
       "07_READER_PARITY_AFTER_TOOLCHAIN"
     ],
-    "risks": "No deployment or product flag authorization. V19 preflight not an accepted candidate; localIntegratedCandidate remains V18. No game acceptance inferred."
+    "risks": "No deployment or product flag authorization. V19 preflight not an accepted candidate; localIntegratedCandidate remains V18. No game acceptance inferred.",
+    "previousTask": "V18_SUCCESSOR_CANDIDATE_PREFLIGHT_AND_BROWSER_ENV"
   }
 }
