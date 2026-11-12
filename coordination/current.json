@@ -1429,7 +1429,19 @@
           "scope": "5 exact 05 paths on V26 NextDelta preflight 471. Validate exact directional targets, old/new GUID DocumentId UTC, dynamic capability and 6+0/8+2 proof, genuine controller 3 shapes and inline actual output. Reuse independent 04 20-output and accepted batch scope; no V24 change.",
           "nextAfter": "00 serial integrate formal successor; 05 new 04 exact9/29 accepted operation UI only after independent PASS"
         },
-        "next": "06_SCOPED_QA_FORMAL49_EXACT20_UI_5_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_EXACT9_29_UI_AFTER_ACCEPTED_CONTRACT"
+        "next": "06_SCOPED_QA_FORMAL49_EXACT20_UI_5_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_EXACT9_29_UI_AFTER_ACCEPTED_CONTRACT",
+        "integrationPreflight": {
+          "status": "V27_EXACT_PREIMAGES_COMPATIBLE_QA_PENDING",
+          "baseSourceSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
+          "baseEntries": 479,
+          "previousBaseExact": 471,
+          "additionalV27ResearchPaths": 8,
+          "webPreimagesExact": 5,
+          "manual9DeltaOverlap": 0,
+          "combinedEntriesAfter05": 482,
+          "release": "V24_FROZEN_OFF",
+          "note": "No formal merge; 00 after exact scoped acceptance. Manual9 independently pending."
+        }
       }
     },
     "06_QA": {
