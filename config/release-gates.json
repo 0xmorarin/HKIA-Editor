@@ -179,5 +179,33 @@
     "unprovenWriteScope": "FAIL_CLOSED_OR_EXCLUDE_FROM_RELEASE_UNTIL_PROVEN",
     "releaseNeedsOwnerApproval": true,
     "publicValidation": "FUNCTIONAL_BETA_WITH_REAL_NATIVE_SAVE_EDIT_AND_OUTPUT; SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; ACTUAL_HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA"
+  },
+  "architecture": {
+    "ownerDecision": "OWNER_ARCHITECTURE_DECISION_20261112",
+    "status": "OWNER_APPROVED_FINAL",
+    "record": "coordination/architecture-decision-20261112.md",
+    "product": "Yumekiraboshi shared HKIA save foundation",
+    "frontend": "Svelte + TypeScript",
+    "saveCore": "Rust",
+    "runtime": "WebAssembly",
+    "execution": "Web Worker",
+    "architecture": "Single ProductSession",
+    "build": "Vite baseline",
+    "host": "GitHub Pages current editor",
+    "community": "Independent web service, save-free supported, raw save upload forbidden",
+    "migration": "JS functional beta independent P0; Rust and UI migration separate; no dual permanent writers; switch only parity/independent QA/real browser",
+    "targets": {
+      "decodedNormalMiB": 64,
+      "stressMiB": 128,
+      "documents": 2000000,
+      "notMeasured": true
+    },
+    "approvalBoundary": "NO_DEPLOY_LIVE_FLAG_SERVICE_CONTRACT_PROD_DB_EXTERNAL_SAVE_TRANSMISSION_WAND_PRODUCTION_CHANGE",
+    "unresolved": [
+      "SvelteKit adoption",
+      "community backend",
+      "release timing",
+      "actual game limits"
+    ]
   }
 }
