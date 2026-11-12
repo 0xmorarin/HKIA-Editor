@@ -16,12 +16,14 @@
       "next": "FORMAL_READY_FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 06 scoped QA",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
         "acceptance": "Native producer/consumer, genuine offline exact diff, no invented IDs/unique data, REQUIRED/RELATED/UNKNOWN and denied cases; typed contract/tests; no activation.",
-        "next": "04 SAVE CORE and 06 scoped QA"
+        "next": "04 SAVE CORE and 06 scoped QA",
+        "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431",
+        "executionScope": "Targeted Non-Recipe reference closure and exact native persistence; additive 01 contract/tests only; V24 frozen"
       }
     },
     "02_ACHIEVEMENT": {
