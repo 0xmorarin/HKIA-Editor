@@ -299,7 +299,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R1_TOOLCHAIN_LOCAL_EXECUTION_KIT",
+      "status": "BLOCKED_R1_TOOLCHAIN_LOCAL_EXECUTION_KIT_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -316,7 +316,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "07 CONTINUE ONLY AFTER VERIFIED_LOCAL_RUST_TOOLCHAIN: CARGO_TEST_OFFLINE_32; BUILD_PRIVATE_PARITY; GENUINE_SWITCH300_301_JS_RUST_EXACT_PAYLOAD_SPANS; THEN_06_INDEPENDENT_SCOPED_QA; 00_TOOLCHAIN_SUPPORT_ONLY_IF_NEEDED; JS_BETA_INDEPENDENT",
+      "next": "WAIT_ENV: authorized private installed Rust/Cargo/linker and Node >=22.16; execute kit --mode synthetic (32 tests+release build), then --mode real with genuine Switch 300/301 original archives; pin observed evidence; 06 independent QA only after compile and real parity. No repeat R1 source drafting or toolchain retry without changed environment. JS beta independent.",
       "task": "HKIA-RUST-001",
       "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
       "scope": "Existing bootstrap compile; V18 envelope/LZ4 and bounded structural index; isolated Rust only",
@@ -355,10 +355,23 @@
       },
       "implementation": "SAVEGAMEV2_SLOT_ENVELOPE_LZ4_BLOCK_SPANS_TYPED_NATIVE_SCHEMA_AND_TARGET_BYTE_RANGES; NO_ZIP_ACCOUNT_SESSION_WRITER_WASM",
       "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
-      "handoffTo": "06_QA_AFTER_COMPILED_SOURCE_AND_REAL_PARITY; 00_CTRL_TOOLCHAIN_UNBLOCK_IF_NEEDED",
-      "dependency": "VERIFIED_RUST_TOOLCHAIN_LOCAL; GENUINE_SWITCH_300_301_PRIVATE_INPUTS_LOCAL; NO_BETA_DEPENDENCY",
+      "handoffTo": "00_CTRL: arrange authorized private execution environment if available; 07 then 06 QA",
+      "dependency": "VERIFIED_LOCAL_RUST_TOOLCHAIN_AND_NATIVE_LINKER; GENUINE_SWITCH_300_301_LOCAL_INPUT_PROVENANCE; NO_BETA_DEPENDENCY",
       "resumeBaseHead": "511ec1c28f6d1d7311a7eafce172f73f82a39914",
-      "resumeScope": "R1 unchanged; toolchain availability and offline execution/evidence runner; no product or CI changes"
+      "resumeScope": "R1 unchanged; toolchain availability and offline execution/evidence runner; no product or CI changes",
+      "executionKit": {
+        "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
+        "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
+        "manifest": "HKIA_Rust07_R1_LocalExecutionKit_20261112_Manifest.json",
+        "manifestSha256": "a7c5f3f503d9fcaa2f2cc9c9bd97374b4d592b500fb89824d4456c7dd1d442f8",
+        "entries": 4,
+        "libraryReadback": "EXACT_PASS",
+        "wrapperTests": "13_PASS",
+        "sourceExtracted": "43_R1_363_V18",
+        "modifiedSourceRejected": true,
+        "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
+        "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
+      }
     }
   },
   "p0FixCandidate": {
