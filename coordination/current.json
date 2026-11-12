@@ -3148,6 +3148,14 @@
       "handoff": {
         "to": "06 QA",
         "scope": "V26 30-path aggregate affected paths, 882/36, 441 source, seven distribution changes and 4144 SHA. Reuse V25 and separate accepted scopes. New 02 9ADD,03 reference 8ADD,03 missing Manual 8ADD,05 batch UI 4 paths on exact respective bases; V24 frozen."
+      },
+      "preflight": {
+        "task": "V26_NEXT_DELTA_COMPATIBILITY_AND_DISTRIBUTION_PREFLIGHT",
+        "status": "IN_FLIGHT",
+        "owner": "00 CTRL",
+        "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "scope": "Exact20/05 batch UI and new02/03 additive deltas preimage/postimage/closure only; QA status not inferred; no candidate replacement or live flag",
+        "qaAtClaim": "IN_FLIGHT"
       }
     }
   },
