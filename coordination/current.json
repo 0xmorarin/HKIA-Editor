@@ -192,7 +192,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "03_WAIT_DEP_06_REFERENCE_AND_MISSING_MANUAL; 04_EXACT20_QA_READY; 04_EXACT29_AFTER_02_03_SCOPED_PASS; 01_REFERENCE_ADVISORY_AFTER_QA; NO_REPEAT",
+      "next": "IN_FLIGHT_RECIPE32_CAUSAL",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -267,7 +267,7 @@
       },
       "formalNextTask": {
         "task": "FORMAL_COLLECTION_DUNEBUG_COMIC_REFERENCE_CLOSURE",
-        "status": "PARTIAL_LOCAL_PASS_QA_PENDING",
+        "status": "SCOPED_PASS_06_ADVISORY_ONLY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "01 prior 18 Native anchors/3 target source facts; 01 restore token repair separate pending QA; use static facts only, no reliance on unaccepted restore verifier",
@@ -289,7 +289,7 @@
       },
       "manualAbsenceReview": {
         "task": "FORMAL_02_MISSING_MANUAL_CAUSAL_REVIEW",
-        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
+        "status": "SCOPED_PASS_06_EXISTING29_ONLY",
         "baseMain": "86b2dbc2ad71a867cb5e4905012e8eb1dce63402",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 564fd22d...9b66 owner fixed research; 06 independent QA pending; 03 causal review independent; no product authorization",
@@ -319,6 +319,14 @@
           "web05": "85c8122649c51a52b5ceb17205c6337ba2a1447e60fb836022fdbd6c2fb68466"
         },
         "decision": "No 03 source change; 06 scope QA pending; 00 serial integration after acceptance; not V26 combined acceptance or release permission"
+      },
+      "recipe32Review": {
+        "task": "FORMAL_RECIPE32_TARGETED_CAUSAL",
+        "status": "IN_FLIGHT",
+        "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
+        "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "dependency": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
+        "scope": "32 exact existing Recipe targets, prioritize 4 representative and 5 tag8 references; distinguish typed GUID reference from actual recount; no product authority or V24 change"
       }
     },
     "04_SAVE_CORE": {
