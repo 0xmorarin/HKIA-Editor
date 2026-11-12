@@ -2482,6 +2482,15 @@
       "scope": "Existing current.json only; matched private Library files by actual lookup; preserve status/ownership/SHA/filenames; no new private identifier; historical Git commits and other files not scrubbed",
       "next": "All streams use filename + SHA in public current.json, private identifiers only in private Library. Audit historical exposure separately; no force push or destructive history rewrite without Owner authorization.",
       "note": "Concurrent new 05/other stream updates can reintroduce private identifiers; re-read latest CAS and replace by verified filename. Other stream statuses/SHA unchanged. History not scrubbed."
+    },
+    "formalIntegration": {
+      "task": "V25_FORMAL_ACCEPTED_R2_SERIAL_INTEGRATION",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "baseMain": "31595debd417feee593767ddde0802a7194fd5c5",
+      "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+      "scope": "02/03 research 18 ADD, 04 accepted 12 paths, 05 accepted 7 paths; exclude 01 TRUE_RED and new unaccepted followups; preserve V24 and R2 OFF",
+      "dependency": "FORMAL_01_SCOPED_TRUE_RED_02_03_04_05_AND_00_CLOSURE_SCOPED_PASS"
     }
   },
   "formalRelease": {
