@@ -1,0 +1,86 @@
+name: HKIA fixed OFF artifact privacy repair
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_ref:
+        description: 'Full commit SHA containing only approved site/ and site-manifest.json'
+        required: true
+        type: string
+      target:
+        description: 'Approved OFF distribution or OFF rollback'
+        required: true
+        type: choice
+        options:
+          - V30
+          - V29
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Require isolated Actions publishing and OFF gates
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_REF: ${{ inputs.artifact_ref }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          [[ "$ARTIFACT_REF" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$TARGET" == V30 || "$TARGET" == V29 ]]
+          test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
+          node --input-type=module -e 'import fs from "node:fs";const d=JSON.parse(fs.readFileSync("config/release-gates.json")).distribution;if(d.githubPages!=="OFF"||d.nativeSaveWriter!=="OFF_PENDING_FUNCTIONAL_BETA_SAFETY_QA")throw Error("OFF repair only; functional beta uses separate gate")'
+          test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(git hash-object scripts/pages-artifact-policy.mjs)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(git hash-object scripts/lossless-webp.mjs)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.artifact_ref }}
+          path: approved-artifact
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Verify exact accepted OFF site, never repository root
+        env:
+          ARTIFACT_REF: ${{ inputs.artifact_ref }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          test "$(git -C approved-artifact rev-parse HEAD)" = "$ARTIFACT_REF"
+          case "$TARGET" in
+            V30) expected=564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6; source=a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a ;;
+            V29) expected=859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d; source=aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0 ;;
+            *) exit 1 ;;
+          esac
+          node scripts/00-verify-beta-artifact.mjs approved-artifact/site approved-artifact/site-manifest.json "$expected"
+          EXPECTED_SOURCE="$source" node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("approved-artifact/site-manifest.json"));if(m.writer!=="OFF"||m.sourceSha256!==process.env.EXPECTED_SOURCE||m.entries!==4146||m.webp!==4076||m.modules!==55)throw Error("Unexpected OFF source or scope");if(Object.keys(m.files).some(p=>p.startsWith("coordination/")||p.startsWith("tests/")||p.startsWith(".github/")))throw Error("Internal path")'
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: approved-artifact/site
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
