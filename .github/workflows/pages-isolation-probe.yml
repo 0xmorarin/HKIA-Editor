@@ -1,0 +1,20 @@
+name: HKIA Pages isolation probe (no deploy)
+on:
+  push:
+    branches:
+      - ctrl/pages-isolation-probe-20261113
+permissions:
+  contents: read
+  pages: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read Pages configuration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/pages" --jq '{build_type,https_enforced,status}'
+          test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
+          echo "PASS: Pages source is workflow; no deployment was attempted."
