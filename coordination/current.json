@@ -106,12 +106,14 @@
       },
       "formalNextTask": {
         "task": "FORMAL_MANUAL_UNPERSISTED_MEMBER_PRODUCER",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 49-target research scoped PASS; 39 GROUP_MEMBER_NOT_PERSISTED in formal COVERAGE.json; independent of existing 49 and 04 writer",
         "scope": "New exact Manual missing persisted group-member class only; reuse V14/V15 and 02 formal catalog. Locate native member/Counter creation, ID allocation, Load/Migration and missing/ambiguous state; derive exact typed row/field preconditions only for concrete witnesses. No arbitrary record synthesis, DLC/event or reward writes, no redo of 49.",
-        "acceptance": "Pinned Native producer/consumer + exact typed missing-row/creation evidence (or specific WAIT_DEP witness); contract and tests, no product authorization; direct 03/04 only proven scope; 06 scoped QA."
+        "acceptance": "Pinned Native producer/consumer + exact typed missing-row/creation evidence (or specific WAIT_DEP witness); contract and tests, no product authorization; direct 03/04 only proven scope; 06 scoped QA.",
+        "baseHead": "238080910f56392744c9a9a75c99cf7c3e89896b",
+        "executionScope": "Missing persisted Manual group members: native creation, document identity allocation, exact observed missing witnesses; no product changes"
       }
     },
     "03_LINKAGE": {
