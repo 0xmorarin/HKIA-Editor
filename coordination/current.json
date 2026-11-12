@@ -192,7 +192,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "RECIPE32_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_CAUSAL_ACCEPTANCE; 03_NO_REPEAT",
+      "next": "IN_FLIGHT_CELEBRATION5_CAUSAL",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -322,7 +322,7 @@
       },
       "recipe32Review": {
         "task": "FORMAL_RECIPE32_TARGETED_CAUSAL",
-        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
+        "status": "SCOPED_PASS_06_ADVISORY_ONLY",
         "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "dependency": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
@@ -338,6 +338,14 @@
         },
         "remaining": "Switch source definition parity, runtime characteristic filters, other counter/event/quest consumers, actual game load/resave/reboot and post-resave receipt remain UNKNOWN. Preserve all non-target data. 04 exact subset only after 06; do not generalize product batch.",
         "next": "06 independent scoped 8 ADD on exact V26+01; 04 exact 4 representative then accepted subset trusted receipt proof; 01 reuse complete managed body facts; 00 serial formal integration after QA; V24 frozen; 03 wait new concrete witness or QA failure"
+      },
+      "celebration5Review": {
+        "task": "FORMAL_RECIPE_CELEBRATION5_TARGETED_CAUSAL",
+        "status": "IN_FLIGHT",
+        "baseMain": "e447ad758cda5074c1ebbaaa5cf371ae44a040e7",
+        "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+        "dependency": "06 Recipe32 advisory and Recipe23 offline writer accepted; prior 5 targets excluded",
+        "scope": "Exact five tag8 membership; Native celebration manager producer/consumer, save/load, exact preserved bytes and no authority; V24 frozen"
       }
     },
     "04_SAVE_CORE": {
