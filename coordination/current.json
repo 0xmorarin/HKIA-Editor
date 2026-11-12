@@ -1951,15 +1951,15 @@
       }
     },
     "06_QA": {
-      "status": "V32_COMBINED_AND_CELEBRATION5_UI_QA_IN_FLIGHT",
-      "acceptedSha256": "609c9680e79df7c109246687f4f8c991648880e83463e05b43d96543dbc723d2",
-      "acceptedScope": "V31 OFF combined; Celebration5 exact Writer separate scoped PASS; no actual HTTP HTTPS or game acceptance",
-      "targetSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
-      "targetScope": "V32 7 changed paths / 4 dist / 55 modules / 4146 hashes; 05 exact UI 5 paths independently",
-      "next": "06_IN_FLIGHT_THEN_00_DIRECT_HANDOFF",
+      "status": "FORMAL_V32_AND_CELEBRATION5_UI_SCOPED_PASS_V24_WAIT_ENV",
+      "acceptedSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
+      "acceptedScope": "V32 fixed OFF combined 518 source, 4146 artifact, 55 modules; separate 05 fixed 521 source Exact5 Receipt UI inline scoped PASS. Recipe32 limited 32/32 writer/UI accepted; no actual HTTP/HTTPS or game acceptance",
+      "targetSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+      "targetScope": "00 successor integration of exact 05 five paths; new fixed source required",
+      "next": "00_SERIAL_V32_PLUS_05_EXACT5_UI; 06_AFTER_NEW_FIXED_SUCCESSOR_OR_REAL_PAGES; V24_WAIT_ENV",
       "execution": {
         "task": "V32_COMBINED_AND_CELEBRATION5_UI_SCOPED_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "owner": "06 QA",
         "baseHead": "1fc2d6dd95e7f8d9fe5db0c48a9ed793ed5e2672",
         "baseSourceSha256": "609c9680e79df7c109246687f4f8c991648880e83463e05b43d96543dbc723d2",
@@ -3266,6 +3266,60 @@
             "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
           },
           "rollback": "V29 accepted OFF; restore 5+2 preimages and remove 3+3 additions; V24 unchanged"
+        },
+        "verdict": "SCOPED_PASS_FORMAL_V32_OFF_COMBINED_AND_CELEBRATION5_UI_INLINE",
+        "verified": {
+          "v32Source": 518,
+          "exactCore04Paths": 7,
+          "v32Dist": 4146,
+          "distChanged": 4,
+          "webp": 4076,
+          "modules": 55,
+          "v32Focused": 32,
+          "uiSource": 521,
+          "uiChanged": 5,
+          "uiFocused": 17,
+          "uiRealForward": 5,
+          "uiRealReverse": 5,
+          "uiIndependentNegative": 70,
+          "uiRawFrames": 100,
+          "uiTag8": 10,
+          "uiReusedLz4Blocks": 330,
+          "uiInlineChromium": 5,
+          "originalUnchanged": true,
+          "buildCheck": "PASS",
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06_V32_CELEBRATION5_UI_QA_20261113_RESULT.json",
+            "sha256": "6231c587ad8ef777f05db649e474c103ceaadea41bec67c7a9413f50a67ba0e8"
+          },
+          "report": {
+            "file": "HKIA_06_V32_CELEBRATION5_UI_QA_20261113_REPORT.md",
+            "sha256": "f7f11dfcd30dbf4bbda225fc9b3b088cf4ec446cdbf7b8eff1b2ff2d782e750c"
+          },
+          "zip": {
+            "file": "HKIA_06_V32_CELEBRATION5_UI_QA_20261113_EVIDENCE.zip",
+            "sha256": "dc4429804ce6f9418249a0526c12bd040b95e0e05b7516242ab822c4edcf33cd",
+            "entries": 73
+          },
+          "readback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "00_SERIAL_V32_PLUS_05_5_PATHS",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_NATIVE_AUTH_LOAD_RESAVE_REBOOT_RUNTIME_EFFECTS",
+          "PAGES_FIXED_ARTIFACT_LIVE_ACCEPTANCE",
+          "V24_FROZEN"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SERIAL_V32_PLUS_05_CELEBRATION5_UI",
+          "baseSourceSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
+          "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "deltaSha256": "b048af393965098cbe54c10cbc5ab0e162e0acf4def2a1fee19e878b82a9b4f1",
+          "scope": "2 MOD 3 ADD, all V32 base hashes exact, 521 successor logical entries; 2 UI dist files expected; fixed successor + 4146 exact hashes + 55 module closure + OFF + rollback V32. No full repeat. Separate Pages live verification."
         }
       },
       "handoffRecheck": {
