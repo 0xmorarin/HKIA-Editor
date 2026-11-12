@@ -229,6 +229,15 @@
         "realOutput": "OFF_EMPTY_ACCEPTANCE_LIST",
         "independentQa": "PENDING",
         "http": "UNVERIFIED_TIMEOUT"
+      },
+      "execution": {
+        "task": "V19_ATOMIC_SCALAR_BATCH_UI",
+        "status": "IN_FLIGHT",
+        "baseHead": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
+        "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
+        "scope": "05 src/app.js src/native-preview-ui.js tests; use 00 V19 preflight; no core/00 files",
+        "dependency": "06 04 repair and 05 V18 output scoped PASS; nonrecipe six operations offline evidence only; release flags OFF; recipe receipt excluded",
+        "owner": "05 WEB"
       }
     },
     "06_QA": {
