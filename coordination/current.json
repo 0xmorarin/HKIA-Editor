@@ -1128,10 +1128,11 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW parallel 01/02/03/04/05 formalTask on V23 R2 OFF, 00 Pages staging preparation; 06 V24 QA already IN_FLIGHT, no duplicate. V24 frozen.",
-    "06 V24 scoped verdict then authorized HTTP/HTTPS native WebCrypto Module Worker genuine 300/301; only irreducible game acceptance for enabled Beta scope. 00 earliest functional Pages beta with approved exact artifact, safe public source, existing manual workflow, rollback, explicit Owner approval. No read-only demo or live activation from this update.",
-    "Formal direct handoffs per fixed contract/delta: 04 implement proven operations, 06 scoped QA, 05 connect, 00 serial integrate accepted scope. Do not wait for all formal features before Beta Pages.",
-    "07 WAIT_ENV; toolchain/parity independent; Svelte after frozen JS UI/accepted source."
+    "NOW parallel 01/02/03/04/05 formalTask on V23 R2 OFF, 00 public-safe source/test closure and release staging; V24 frozen and independent activation scoped PASS, no duplicate 06 offline QA.",
+    "WAIT_ENV 06 actual authorized HTTP/HTTPS ESM native WebCrypto Module Worker with genuine 300/301 both domains; V24 BrowserKit review scoped PASS but required full actual UI cases remain. Owner private PC possible; no admin bypass. Local preview pack is optional view, not acceptance. Narrow game witness only if irreducible release-critical.",
+    "00 earliest functional GitHub Pages Beta after fixed source/site, full required evidence, exact approved commit/manifest and rollback, explicit Owner approval; no pre-approval publication or live flag. Old draft PR1 not current product.",
+    "Formal direct handoffs per newly fixed contract/delta: 04 implement proven operations, 06 scoped QA, 05 connect, 00 serial integrate. No wait for full formal coverage before Beta Pages.",
+    "07 WAIT_ENV independent Rust kit; no JS Beta gate."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1834,7 +1835,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_PRIVATE_ACTIVATION_FIXED_FINAL_QA_READY_WAIT_ENV",
+    "status": "V24_SCOPED_ACCEPTED_OFFLINE_WAIT_ENV_REAL_BROWSER",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -1949,7 +1950,7 @@
       "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
       "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
       "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
-      "00_PAGES_PUBLIC_SAFE_STAGING_PREP"
+      "00_PAGES_PUBLIC_SAFE_SOURCE_TEST_CLOSURE"
     ],
     "nextAfterDep": [
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
@@ -1958,7 +1959,19 @@
       "05_NEW_CORE_UI_AFTER_ACCEPTED_CONTRACT",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
-    "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations."
+    "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
+    "activationAcceptance": {
+      "verdict": "SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER",
+      "source": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+      "qaHandoffSha256": "4ad82573760b62380ba74eef5b6f71e2be2e1a6d8868ba7f400f7bb1917c8d28",
+      "distManifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+      "genuineMixedBatchOutputs": 2,
+      "genuineRecipeOutputs": 2,
+      "independentPythonRawZip": 4,
+      "originalsUnchanged": true,
+      "realBrowser": "WAIT_ENV",
+      "gameAccepted": false
+    }
   },
   "formalRelease": {
     "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
@@ -1967,7 +1980,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
     "pages": {
-      "status": "NOT_DEPLOYED_GATE_CLOSED",
+      "status": "V24_OFFLINE_SCOPED_ACCEPTED_STAGING_PREFLIGHT_COMPLETE_REAL_BROWSER_WAIT_ENV",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -1983,9 +1996,29 @@
         "workflow": "manual dispatch; exact approved commit and manifest SHA; requires Pages ON, writer ON_PROVEN_BETA_CAPABILITIES, manifest BETA_ACCEPTED; reuse no automatic deployment",
         "candidateManifestState": "PRIVATE_RELEASE_EQUIVALENT_NOT_RELEASE_AUTHORIZED",
         "remaining": "06 V24 in flight + authorized real Browser; 00 public-safe source/artifact staging and fixed workflow/rollback; actual deploy explicit Owner approval",
-        "remotePagesSettings": "UNVERIFIED_CONNECTOR_NO_PAGES_ADMIN_ACTION; project gate OFF, no active workflow at main"
+        "remotePagesSettings": "UNVERIFIED_CONNECTOR_NO_PAGES_ADMIN_ACTION; project gate OFF, no active workflow at main",
+        "qa": "06 SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER; 4 genuine output witnesses independent raw ZIP exact",
+        "pr1": {
+          "head": "7a9bfdaa3a01eedf755e361f511dd95d9cd0ef16",
+          "draft": true,
+          "changed": 22,
+          "decision": "old bootstrap; do not merge as current product"
+        },
+        "privateKit": {
+          "file": "HKIA_CTRL_PagesStagingPreflight_20261112.zip",
+          "sha256": "17af3179af40e7d73d901af97357ee018fc2396ccaff1436c5bffb68acad7f37",
+          "verified": "exact disabled workflow + 4 verifier/test dependency paths; focused 7/7 and original verifier actual V24 4144/4076 PASS; private Library readback SHA PASS",
+          "note": "not a complete public CI source closure; do not reduce full QA to focused tests"
+        },
+        "localPreview": {
+          "file": "HKIA_V24_PrivatePreview.zip",
+          "sha256": "363cb9ac1456b73d377560f3c0814f655b2987f89973d5b711c47ae0f59778ec",
+          "bytes": 120057053,
+          "verified": "all 4144 file hashes; actual local HTTP index/ESM/WebP, three nonallowlisted paths denied; user PC optional preview, not GitHub Pages or real browser QA",
+          "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
+        }
       },
-      "next": "00 prepare public-safe code-only verifier/test and approved artifact layout, verify exact workflow inputs and no private refs; do not publish or enable before accepted gate and explicit Owner authorization."
+      "next": "00 public-safe code/test closure on exact R2/V24; existing manual workflow retained disabled until acceptance/explicit Owner approval. 06 real Browser WAIT_ENV; owner local authorized PC is immediate route; final site-manifest BETA_ACCEPTED and approvedArtifact fixed commit/SHA only after required evidence."
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes."
   }
