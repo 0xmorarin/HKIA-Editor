@@ -577,6 +577,15 @@
         "dependency": "06 exact 03 FORMAL49 7 ADD scoped acceptance before new Writer; 04 batch 11 paths separate QA; 00 serial integration",
         "next": "04 after 03 scoped PASS: 20 exact v301 targets only, browser-safe V14 planner parity, dedicated 6+0 atomic slot and existing 8+2 pair path; new flags OFF; private genuine edited-copy proof then 06; preserve batch and V24",
         "unverified": "No new product implementation or genuine output; no independent QA, actual game or browser proof; main protection not accessible"
+      },
+      "formal49Execution": {
+        "task": "FORMAL49_EXACT20_PRIVATE_WRITER",
+        "status": "IN_FLIGHT",
+        "baseMain": "6324c95a1c195430125d9d916864bbb2fc59831a",
+        "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+        "scope": "04 owned native-product code and tests; 20 exact v301 targets; dedicated OFF gate; 6+0 and 8+2; no V24 or other streams",
+        "dependency": "06 scoped PASS exact 03 FORMAL49 and V25; 04 batch accepted",
+        "owner": "04 SAVE CORE"
       }
     },
     "05_WEB": {
