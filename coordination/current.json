@@ -3793,7 +3793,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "Execute exact extended V24 kit on authorized Chrome with trusted TLS; 06 evidence review, then actual GitHub source/artifact staging, CI, Pages admin, rollback and explicit Owner approval. No live flags/deploy now.",
+      "next": "Actual GitHub source staging; real Browser acceptance required; Owner explicitly requests immediate deploy, no repeat approval for same fixed scope after gates; formal release separate.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -3904,6 +3904,20 @@
           "scope": "Authorized Windows with Python/Playwright/Node22.16/Chrome; local genuine saves and existing trusted localhost TLS cert/key; no trust change/upload; three widths. Actual Windows execution UNVERIFIED."
         },
         "environment": "Managed browser still blocks loopback. No unchanged retry or bypass. Authorized host only; game witness if irreducible; Owner deployment approval required."
+      },
+      "ownerDecision": {
+        "date": "2026-11-12",
+        "status": "OWNER_REQUESTS_IMMEDIATE_PUBLICATION",
+        "scope": "Earliest functional Pages beta on fixed V24; explicit Owner deployment request. Existing release gates remain; no waiver of Browser/private data/game safety or formal promotion. Public source staging as prerequisite.",
+        "request": "Owner reports persistent Page not found and inability to visually inspect UI/images; prioritize actual Pages publication over additional preflight/kit generation."
+      },
+      "remoteStaging": {
+        "task": "V24_ACTUAL_GITHUB_SOURCE_STAGING",
+        "status": "IN_FLIGHT",
+        "owner": "00 CTRL",
+        "baseMain": "eedac927548a4a83c429b3ab166eb545e2da5657",
+        "sourceSha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+        "scope": "Accepted 178-file public-safe OFF closure only; no live flags, deploy workflow or private inputs. Actual GitHub branch/PR and CI preparation."
       }
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
