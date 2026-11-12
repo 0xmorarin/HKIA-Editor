@@ -400,12 +400,12 @@
       }
     },
     "05_WEB": {
-      "status": "V20_RECIPE_RECEIPT_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "FORMAL_BULK_SELECTION_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "FORMAL_READY_FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX; BASE_R2_OFF; V24_FROZEN; 06 scoped QA; new Core operation UI after accepted contract",
+      "next": "06_SCOPED_QA_FORMAL_BULK_SELECTION_7_PATHS; 00_SERIAL_FORMAL_INTEGRATION; NEW_CORE_OPERATION_UI_AFTER_ACCEPTED_CONTRACT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -620,15 +620,74 @@
       },
       "formalTask": {
         "task": "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Independent UI-only on R2 OFF: current renderNativeBatch/renderCollectionBulk filtered scalar/date 64/128 caps and unmapped reject. Explicit subset selection/counts, unsupported target reasons, category/all selection preview and bounds. Never silently truncate/split atomic Apply. Preserve frozen V24 and existing output; no unaccepted completion/acquisition capability.",
         "acceptance": "Focused selection, filtered/all, unknown IDs, over-limit fail-closed, 320/375/1280 keyboard and exact existing atomic batch request. No Core/flags. If equivalent already exists, DONE without reimplementation.",
-        "next": "06 scoped QA; new Core operation UI after accepted contract",
+        "next": "06_SCOPED_QA_FORMAL_BULK_SELECTION_7_PATHS; 00_SERIAL_FORMAL_INTEGRATION; NEW_CORE_OPERATION_UI_AFTER_ACCEPTED_CONTRACT",
         "baseHead": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
         "owner": "05 WEB",
-        "activation": "20261112_05_FORMAL_BULK_SELECTION"
+        "activation": "20261112_05_FORMAL_BULK_SELECTION",
+        "fixedSourceSha256": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8",
+        "deltaSha256": "9dc85c47e05806157b37d9b1dee99be9e75ce13f077855187f9b527d3faba81c",
+        "manifestSha256": "0cf5d3c396ed5945698dde379e2a3155388402b7f57978c81966f3572c858939",
+        "evidenceSha256": "66b8be5ff25b0e908a573274657746d184723ff3ce784f2d4751fb19fb875e4b",
+        "handoffSha256": "466ebd9c04e833193942705de981c0dfe31f09f7c7679029d9689e810f20ea55",
+        "changedPaths": "5_MOD_2_ADD_0_DEL",
+        "artifacts": {
+          "source": "libfile_9ba3d03b2c388191af8f8c1d61a73431",
+          "delta": "libfile_82fb28e488fc8191864692bc1cb46f51",
+          "manifest": "libfile_0759f78a53e88191beb87ff02c6eb723",
+          "evidence": "libfile_2e56fd200ae08191ad6ec7858a79c66a",
+          "handoff": "libfile_71f589abd5ec8191b16eccbdaa9c3e51"
+        },
+        "verified": {
+          "focused": 6,
+          "nodePass": 799,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "exactReplay": "398/398",
+          "chromeInline": [
+            320,
+            375,
+            1280
+          ],
+          "genuineVersions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "twoExactSelectedAtomicFields": true,
+          "collectionExactTick": true,
+          "categoryAllFilteredSelected": true,
+          "overLimitFailClosed": true,
+          "maxPickerRows": 40,
+          "keyboard": true,
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "downloads": 0,
+          "canonicalBetaLocalBuild": {
+            "entries": 4144,
+            "webp": 4076,
+            "modules": 53
+          },
+          "libraryReadbackAll5Sha": "PASS",
+          "V24Frozen": true,
+          "writerFlags": "OFF"
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "NEW_CORE_COMPLETION_REVOKE_ACQUISITION",
+          "NO_NEW_EDITED_COPY_OUTPUT_TEST_FOR_UX_SCOPE"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "7 exact paths on R2 OFF, formal branch only; no V24 changes; selection/unsupported/64-128 limits and exact atomic requests; reuse accepted Core and output scope",
+          "nextAfter": "00 serial integrate formal candidate only; new 04 operation UI after independent acceptance"
+        }
       }
     },
     "06_QA": {
