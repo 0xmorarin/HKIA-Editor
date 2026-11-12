@@ -13,7 +13,16 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "HANDOFF_04_RECIPE_RECEIPT_CONTRACT; TARGETED_NONRECIPE_REFERENCE_CLOSURE_ONLY_IF_NEW_CONCRETE_OPERATION; NO_REPEAT"
+      "next": "FORMAL_READY_FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 06 scoped QA",
+      "formalTask": {
+        "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
+        "status": "READY",
+        "priority": "P0_FORMAL_RELEASE",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
+        "acceptance": "Native producer/consumer, genuine offline exact diff, no invented IDs/unique data, REQUIRED/RELATED/UNKNOWN and denied cases; typed contract/tests; no activation.",
+        "next": "04 SAVE CORE and 06 scoped QA"
+      }
     },
     "02_ACHIEVEMENT": {
       "status": "V16_REMAINING_COUNTER_COVERAGE_INTEGRATED_LOCAL_PASS",
@@ -22,7 +31,16 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "ONLY_NEW_PROVEN_COMPLETION_REVERSAL_FAMILY_OR_DERIVED_PRODUCER_PERSISTENCE; OTHERWISE_HANDOFF_04_03_NO_REDO"
+      "next": "FORMAL_READY_FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 03 LINKAGE, then 06",
+      "formalTask": {
+        "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
+        "status": "READY",
+        "priority": "P0_FORMAL_RELEASE",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "scope": "Reuse V14 Manual planner/V15 remaining 820 catalog and 03 V16 family evidence. Prioritize new exact completion/revoke witnesses beyond the existing three V16 terminal-revoke families and puzzle; partition Manual leaf/family, Account Meta, derived Mission/Visitor/Item/unique/history and other producer classes. No 571/586 mapping redo or date-only proof.",
+        "acceptance": "Operation x family/version coverage; concrete Native/source identity, typed plans, genuine witnesses for newly proven families, negatives; unsupported derived scopes fail closed.",
+        "next": "04 SAVE CORE and 03 LINKAGE, then 06"
+      }
     },
     "03_LINKAGE": {
       "status": "V20_ALWAYSRUN_CAUSAL_LOCAL_PASS_QA_PENDING",
@@ -30,7 +48,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_SCOPED_QA_03_10_ADD_ON_EXACT_V21; 00_SERIAL_INTEGRATE_ACCEPTED_03_04_05_DELTAS; 03_WAIT_NEW_CAUSAL_WITNESS_OR_QA_FAILURE_NO_REPEAT",
+      "next": "FORMAL_READY_FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE / 06 scoped QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -59,6 +77,15 @@
         ],
         "verified": "ALL_FIVE_ZIP_SHA256_CRC; 03_04_05_CHANGED_PATHS_DISJOINT; 03_ADDITIONS_ABSENT_IN_V21",
         "acceptance": "COMPATIBILITY_ONLY_NOT_INDEPENDENT_QA_OR_MERGE"
+      },
+      "formalTask": {
+        "task": "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
+        "status": "READY",
+        "priority": "P0_FORMAL_RELEASE",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "scope": "Reuse V16 three terminal-revoke families and prior reward service queue/Native Load. Target COMPLETE/REVOKE reward claim/replay, parent/root and derived effects; no 02 definition redo or speculative reward/inventory writes.",
+        "acceptance": "Persisted claim/receipt proof or explicit UNKNOWN/irreducible device witness; classify new writes and safe subset for 04. Preserve AlwaysRun and V16 ten-field snapshot contract.",
+        "next": "04 SAVE CORE / 06 scoped QA"
       }
     },
     "04_SAVE_CORE": {
@@ -78,7 +105,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_04_3_ADD_AND_03_10_ADD_AND_05_RECEIPT_4_PATHS; 00_SERIAL_ACCEPTED_INTEGRATION; 04_NO_REPEAT_WAIT_NEW_CAUSAL_OR_GAME_LOAD_WITNESS",
+      "next": "FORMAL_READY_FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF; BASE_R2_OFF; V24_FROZEN; 06 scoped QA; 05 UI after accepted contract",
       "execution": {
         "task": "NATIVE_V301_ALWAYSRUN_BODY_EFFECTS",
         "status": "PARTIAL_STATIC_PASS_QA_READY",
@@ -242,6 +269,15 @@
           "nextAfter": "00 serial integrate accepted disjoint evidence/UI; final actual browser and irreducible game acceptance; 04 waits new evidence or scoped QA failure"
         },
         "rollback": "Remove exactly 3 additive evidence paths; 381 original V21 entries unchanged"
+      },
+      "formalTask": {
+        "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
+        "status": "READY",
+        "priority": "P0_FORMAL_RELEASE",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "scope": "Independent existing V16 terminal-revoke three families and api.mjs family planner/dryRunSchemaGeneralAchievementPairResearch. Bind 8 Slot + 2 Account changes in immutable Session/revision; private gated atomic ZIP candidate output, independent reparse, rollback negatives on genuine 300/301 as proven. No V24 activation or reward mutation; separate OFF source.",
+        "acceptance": "Private edited-copy proof for existing family revoke; non-target bytes, CAS, no partial output, same archive Account pairing, no fabricated reward. Block unresolved native/reward scope only. New 01/02/03 families are later deltas.",
+        "next": "06 scoped QA; 05 UI after accepted contract"
       }
     },
     "05_WEB": {
@@ -250,7 +286,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_05_RECEIPT_4_04_LOAD_3_03_ALWAYSRUN_10; 00_SERIAL_INTEGRATE_V21_EXACT_ACCEPTED_DELTAS; FINAL_FIXED_BETA_BROWSER; SVELTE_AFTER_JS_BETA_FIXED",
+      "next": "FORMAL_READY_FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX; BASE_R2_OFF; V24_FROZEN; 06 scoped QA; new Core operation UI after accepted contract",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -462,6 +498,15 @@
         ],
         "releaseActivation": false,
         "independentQa": "SCOPED_PASS_ORDINARY_SIX_ATOMIC_BATCH"
+      },
+      "formalTask": {
+        "task": "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
+        "status": "READY",
+        "priority": "P0_FORMAL_RELEASE",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "scope": "Independent UI-only on R2 OFF: current renderNativeBatch/renderCollectionBulk filtered scalar/date 64/128 caps and unmapped reject. Explicit subset selection/counts, unsupported target reasons, category/all selection preview and bounds. Never silently truncate/split atomic Apply. Preserve frozen V24 and existing output; no unaccepted completion/acquisition capability.",
+        "acceptance": "Focused selection, filtered/all, unknown IDs, over-limit fail-closed, 320/375/1280 keyboard and exact existing atomic batch request. No Core/flags. If equivalent already exists, DONE without reimplementation.",
+        "next": "06 scoped QA; new Core operation UI after accepted contract"
       }
     },
     "06_QA": {
@@ -1083,10 +1128,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 06 QA V24 private activation 3 paths / 5 settings, exact dist delta and independent scope review, browser kit review. R2 privacy and unchanged accepted product scopes reuse; no duplicate 03/04/05.",
-    "WAIT_ENV actual authorized HTTP+HTTPS ESM WebCrypto Module Worker genuine 300/301 both domains; run private kit and full required QA without bridge or policy bypass. Only irreducible release-critical game acceptance witness if static/offline cannot resolve.",
-    "00 release gate fixed accepted activation artifact and rollback, explicit Owner approval for live flags and deployment. V23 R2 OFF rollback, V24 not deployable until gates.",
-    "07 WAIT_ENV Rust independent; no JS Beta gate."
+    "NOW parallel 01/02/03/04/05 formalTask on V23 R2 OFF, 00 Pages staging preparation; 06 V24 QA already IN_FLIGHT, no duplicate. V24 frozen.",
+    "06 V24 scoped verdict then authorized HTTP/HTTPS native WebCrypto Module Worker genuine 300/301; only irreducible game acceptance for enabled Beta scope. 00 earliest functional Pages beta with approved exact artifact, safe public source, existing manual workflow, rollback, explicit Owner approval. No read-only demo or live activation from this update.",
+    "Formal direct handoffs per fixed contract/delta: 04 implement proven operations, 06 scoped QA, 05 connect, 00 serial integrate accepted scope. Do not wait for all formal features before Beta Pages.",
+    "07 WAIT_ENV; toolchain/parity independent; Svelte after frozen JS UI/accepted source."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1899,13 +1944,49 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V24_ACTIVATION_SCOPE_AND_BROWSER_KIT_REVIEW"
+      "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
+      "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
+      "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
+      "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
+      "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
+      "00_PAGES_PUBLIC_SAFE_STAGING_PREP"
     ],
     "nextAfterDep": [
-      "06_REAL_BROWSER_AUTHORIZED_ENV",
-      "00_RELEASE_GATE_AFTER_BROWSER_AND_IRREDUCIBLE_GAME_EVIDENCE",
+      "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
+      "00_PAGES_DEPLOY_AFTER_FINAL_ACCEPTANCE_AND_OWNER_APPROVAL",
+      "04_NEW_01_02_03_CONTRACTS_AFTER_PROOF",
+      "05_NEW_CORE_UI_AFTER_ACCEPTED_CONTRACT",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations."
+  },
+  "formalRelease": {
+    "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
+    "priority": "PARALLEL_FORMAL_FEATURES_AND_EARLIEST_FUNCTIONAL_PAGES_BETA",
+    "sourceBaseline": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+    "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+    "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
+    "pages": {
+      "status": "NOT_DEPLOYED_GATE_CLOSED",
+      "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
+      "preflight": {
+        "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
+        "mainPathsAbsent": [
+          ".github/workflows/pages.yml",
+          ".github/workflows/pages.yml.disabled",
+          "package.json",
+          "scripts/00-verify-beta-artifact.mjs",
+          "site-manifest.json",
+          "index.html"
+        ],
+        "existingPrivateWorkflow": ".github/workflows/pages.yml.disabled",
+        "workflow": "manual dispatch; exact approved commit and manifest SHA; requires Pages ON, writer ON_PROVEN_BETA_CAPABILITIES, manifest BETA_ACCEPTED; reuse no automatic deployment",
+        "candidateManifestState": "PRIVATE_RELEASE_EQUIVALENT_NOT_RELEASE_AUTHORIZED",
+        "remaining": "06 V24 in flight + authorized real Browser; 00 public-safe source/artifact staging and fixed workflow/rollback; actual deploy explicit Owner approval",
+        "remotePagesSettings": "UNVERIFIED_CONNECTOR_NO_PAGES_ADMIN_ACTION; project gate OFF, no active workflow at main"
+      },
+      "next": "00 prepare public-safe code-only verifier/test and approved artifact layout, verify exact workflow inputs and no private refs; do not publish or enable before accepted gate and explicit Owner authorization."
+    },
+    "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes."
   }
 }
