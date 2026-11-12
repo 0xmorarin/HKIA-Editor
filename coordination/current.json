@@ -45,7 +45,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "CONNECT_ACCEPTED_V16_PREVIEW_API_AND_ADJUST_SAME_PRODUCT_UI_FOR_PAGES_SUBPATH; V17_ADDITIONS_AFTER_QA; NO_EXPORT_WHILE_OFF",
+      "next": "CONNECT_ACCEPTED_V16_PREVIEW_API; SAME_PAGES_UI; ADD_VISIBLE_RIGHTSHOLDER_CREDITS_AND_UNOFFICIAL_NOTICE; V17_ADDITIONS_AFTER_QA; NO_EXPORT_WHILE_OFF",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -72,7 +72,8 @@
         375,
         1280
       ],
-      "publicValidationUi": "SAME_UI_AND_VERIFIED_IMAGES_AS_FORMAL_RELEASE"
+      "publicValidationUi": "SAME_UI_AND_VERIFIED_IMAGES_AS_FORMAL_RELEASE",
+      "attributionNotice": "REQUIRED_VISIBLE_NOTICE_FROM_CONFIG_RELEASE_GATES_EN_JA"
     },
     "06_QA": {
       "status": "V16_SCOPED_PASS_ACCEPTED_V17_PENDING",
@@ -94,7 +95,7 @@
       "mediaHandoff": "HKIA_MEDIA_00_05_PRIVATE_HANDOFF_20261112.md",
       "nativeUIIntegration": "PENDING_05_WEB",
       "switchImageParity": "UNVERIFIED",
-      "rightsAndPublicRelease": "OWNER_APPROVED_VALIDATION_SCOPE_RIGHTS_REVIEW_PENDING",
+      "rightsAndPublicRelease": "OWNER_EXPLICIT_IMAGE_PUBLICATION_APPROVAL_WITH_CREDITS; NO_RIGHTSHOLDER_LICENSE",
       "next": "OWNER_LOCAL_OFFICIAL_CDN_ACQUISITION_AND_OFFLINE_IMPORT_ONLY; APPLE_AUTHORIZED_METADATA_IF_AVAILABLE; NO_REPEAT",
       "uiIntegration": "READY_05_WEB",
       "publicAssets": false,
@@ -138,16 +139,17 @@
     "readmeForbidden": true,
     "pagesCommentsForbidden": true,
     "gameImagesInPublicRepo": false,
-    "imagePublicationGate": "OWNER_APPROVED_PUBLIC_VALIDATION_AND_FORMAL_RELEASE_AFTER_RIGHTS_ARTIFACT_CHECKS",
+    "imagePublicationGate": "OWNER_EXPLICIT_APPROVAL_WITH_VISIBLE_RIGHTSHOLDER_CREDITS",
     "ownerApprovalRequired": true,
     "realDevicePolicy": "CONDITIONAL_STATIC_FIRST_NO_UNOBSERVED_PASS",
     "publicValidationScopeApproved": true,
-    "publicValidationDeployed": false
+    "publicValidationDeployed": false,
+    "gameImagePublicationApproved": true
   },
   "nextSerial": [
-    "START_NOW 00 Pages same product source and verified 4076 WebP + 740 fallback; public artifact rights/privacy/build checks; no separate image-free demo",
-    "PARALLEL 06 V17 35 changed paths; 05 accepted preview UI and Pages subpath; 04 safe real output; 01 nonrecipe safe transitions",
-    "00 deploy owner-approved validation scope only after rights/artifact QA and rollback ready; Native Writer OFF; private saves and original binaries prohibited",
+    "START_NOW 00 Pages same product source and verified 4076 WebP + 740 fallback; visible rightsholder credits and public artifact privacy/build checks; no separate image-free demo",
+    "PARALLEL 06 V17 35 changed paths; 05 accepted preview UI, Pages subpath and mandatory EN/JA attribution; 04 safe real output; 01 nonrecipe safe transitions",
+    "00 deploy owner-approved validation scope after credits/artifact QA and rollback ready; Native Writer OFF; private saves and original binaries prohibited",
     "05/06 use actual Pages HTTPS for image UI/ESM/WebCrypto/Worker validation; synthetic public test data only",
     "04 safe operation export QA then 05 output UI and 06 final integrated QA",
     "00 formal release promotion on same implementation; separate Owner formal approval; real device only irreducible release-critical"
@@ -238,7 +240,7 @@
       "rewardItemImages": 0
     },
     "next": "05 WEB PRIVATE_SOURCE_VERIFIED_IMAGEMAP_UI_INTEGRATION_WITHOUT_WRITER_DEPENDENCY; NO_MEDIA_RESTART",
-    "publicationPolicy": "VERIFIED_ASSETS_ALLOWED_FOR_OWNER_APPROVED_PUBLIC_VALIDATION_AFTER_RIGHTS_REVIEW; NOT_DEPLOYED"
+    "publicationPolicy": "OWNER_EXPLICIT_APPROVAL_VALIDATION_AND_FORMAL_RELEASE_WITH_CREDITS; PERMISSION_NOT_OBTAINED; NOT_DEPLOYED"
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
@@ -485,7 +487,7 @@
     ],
     "serialAfter": [
       "00_ACCEPT_V17",
-      "00_PUBLIC_VALIDATION_ARTIFACT_RIGHTS_AND_PRIVACY_QA",
+      "00_05_VISIBLE_ATTRIBUTION_AND_PUBLIC_ARTIFACT_QA",
       "00_PAGES_VALIDATION_DEPLOY_WHEN_GATES_PASS",
       "04_PROVEN_OPERATION_OUTPUT_QA",
       "05_ACCEPTED_OUTPUT_UI",
@@ -573,7 +575,9 @@
       "ownerApprovalRequired": true,
       "realDevice": "CONDITIONAL_ONLY_IF_STATIC_OFFLINE_EVIDENCE_INSUFFICIENT",
       "previewImageScopeApproved": true,
-      "rightsReview": "PENDING"
+      "rightsReview": "OWNER_RISK_ACCEPTANCE_NOT_LEGAL_CLEARANCE",
+      "imagePublicationApproved": true,
+      "attribution": "REQUIRED_NOT_YET_RENDERED"
     },
     "fixedCandidateEntries": 224,
     "new04Candidate": {
@@ -629,7 +633,7 @@
       ],
       "strictWriterAllowed": false
     },
-    "publicValidation": "OWNER_APPROVED_FULL_FIDELITY_SCOPE_NOT_DEPLOYED"
+    "publicValidation": "OWNER_APPROVED_FULL_FIDELITY_AND_IMAGE_PUBLICATION_WITH_CREDITS_NOT_DEPLOYED"
   },
   "publicValidation": {
     "ownerDecision": "2026-11-12_FULL_FIDELITY_PUBLIC_VALIDATION",
@@ -640,13 +644,15 @@
     "verifiedGameWebp": 4076,
     "conditionalFallbackRows": 740,
     "externalImagesUnknown": 18,
-    "rightsReview": "REQUIRED_NOT_COMPLETED",
+    "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED; NO_RIGHTSHOLDER_PERMISSION_OR_LEGAL_CLEARANCE; OFFICIAL_SANRIO_POLICY_REVIEWED",
     "sourcePublicSafeBuild": "PENDING",
     "imagePipeline": "SAME_PRIVATE_PREVIEW_AND_PUBLIC_RELEASE_BUILD",
     "writer": "OFF",
     "privateSaveAndGameBinaries": "PROHIBITED",
     "publicUrlPlanned": "https://0xmorarin.github.io/HKIA-Editor/",
-    "activationCondition": "OWNER_APPROVED_VALIDATION_SCOPE; COMPLETE_RIGHTS_REVIEW_AND_ARTIFACT_QA_BEFORE_DEPLOY",
-    "next": "00_PREPARE_SAME_PRODUCT_SOURCE_BUILD_WITH_VERIFIED_WEBP_AND_MINIMAL_IMAGEMAP; VERIFY_DEPLOYABLE_MODULE_GRAPH_AND_SUBPATH; 06_SCOPED_ARTIFACT_QA; DEPLOY_VALIDATION_WHEN_GATES_PASS"
+    "activationCondition": "OWNER_APPROVED_VALIDATION_SCOPE_AND_IMAGES; VERIFY_VISIBLE_ATTRIBUTION_PRIVACY_BUILD_PATHS_WRITER_OFF_ROLLBACK",
+    "next": "00_BUILD_SAME_PRODUCT_WITH_4076_VERIFIED_WEBP_AND_740_FALLBACK; 05_RENDER_MANDATORY_ATTRIBUTION; 06_ARTIFACT_QA; DEPLOY_VALIDATION_WHEN_GATES_PASS",
+    "ownerImageApproval": "EXPLICIT_2026_11_12_VALIDATION_AND_FORMAL_RELEASE_WITH_CREDITS",
+    "rightsNotice": "REQUIRED_VISIBLE_EN_JA_FOOTER_OR_ABOUT; NOT_YET_VERIFIED_IN_PRODUCT"
   }
 }
