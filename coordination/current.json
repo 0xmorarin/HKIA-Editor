@@ -122,7 +122,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "FORMAL49_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_ACCEPTED_CAUSAL; 03_NO_REPEAT",
+      "next": "IN_FLIGHT_DUNEBUG_COMIC_REFERENCE_CLOSURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -196,12 +196,13 @@
       },
       "formalNextTask": {
         "task": "FORMAL_COLLECTION_DUNEBUG_COMIC_REFERENCE_CLOSURE",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "01 prior 18 Native anchors/3 target source facts; 01 restore token repair separate pending QA; use static facts only, no reliance on unaccepted restore verifier",
         "scope": "Exact Dunebug daily mission and active placement consumers; Comic Shop managed body and target-specific quest/counter references; Wollypog daily mission only if existing 01 concrete evidence supports. Prove REQUIRED/RELATED/INDEPENDENT/UNKNOWN for structural delete/reinsert; no general scan, no 01 raw token repair or 03 FORMAL49 redo.",
-        "acceptance": "Specific Native producer/consumer anchors, exact target identity and version, no guessed IDs or speculative writes. State unresolved witness; direct 01/04 for accepted safe scope and 06 QA."
+        "acceptance": "Specific Native producer/consumer anchors, exact target identity and version, no guessed IDs or speculative writes. State unresolved witness; direct 01/04 for accepted safe scope and 06 QA.",
+        "baseMain": "1d0510279b7e62e891cfa6c013de577d63f063cc"
       }
     },
     "04_SAVE_CORE": {
