@@ -97,7 +97,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_03_49_TARGET_CAUSAL_ADJUDICATION",
+      "next": "FORMAL49_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_ACCEPTED_CAUSAL; 03_NO_REPEAT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -152,11 +152,23 @@
       },
       "formalFollowup": {
         "task": "FORMAL_02_49_TARGET_CAUSAL_ADJUDICATION",
-        "status": "IN_FLIGHT",
+        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
         "baseMain": "06877ba4cd46661a0cd298959b2cf088c0ad4e9c",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 54c040bc…73b1 SCOPED_PASS research only; 03 5dfa67d3…0844 SCOPED_PASS",
-        "scope": "49 exact targets/13 groups; prioritize no defined reward; reuse native v301 conditional models; 01 structural facts only, no restore repair"
+        "scope": "49 exact targets/13 groups; prioritize no defined reward; reuse native v301 conditional models; 01 structural facts only, no restore repair",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL49_CAUSAL_DELTA_20261112.zip",
+          "sha256": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
+          "manifestSha256": "9fd36ab178f3b0657d67f68c3b8a79f0f0305b414ae9fa93f82213672522f295",
+          "libraryId": "libfile_e4605d04cce08191ade51cf08f1ccb1e",
+          "scope": "7_ADD_0_MOD_0_DEL; 396 base + accepted 02 8 and 03 10 unchanged",
+          "verification": "49 genuine v301 exact 02 plan static model evaluations; 14 COMPLETE old counter matches; 35 REVOKE old counter mismatch; 49 group migration repairs old pair conditional; 28 root omissions; Comic exact CountedGuids membership 1; 12 focused +31 adjacent PASS; tsc PASS",
+          "classification": "35 exact REVOKE conditional REQUIRED on leaf Counter and normal-load incomplete; parent/root conditional normal-load target; 14 COMPLETE coherent snapshot not unconditional native required; 20 no-defined-reward priority; 29 reward replay UNKNOWN; no new structural graph",
+          "gameAccepted": false
+        },
+        "remaining": "Actual game scheduling/load/resave/reward replay, v300 native equivalence, additional derived and terminal COMPLETE; 01 exact restore TRUE_RED owned by 01, Comic RELATED only; no product permission",
+        "next": "06 scoped 7 ADD with exact accepted 02 dependency; 04 private Writer expansion after scoped acceptance (20 no-defined-reward first); 00 serial integration; 03 WAIT new concrete witness/QA failure"
       }
     },
     "04_SAVE_CORE": {
