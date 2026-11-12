@@ -465,23 +465,67 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_V21_05_RECEIPT_03_04_NATIVE",
+      "status": "V21_COMBINED_05_RECEIPT_03_04_NATIVE_SCOPED_PASS",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "targetScope": "16_MOD_26_ADD",
-      "next": "00_SERIAL_INTEGRATE_05_ATOMIC_BATCH_ON_V20; 05_RECEIPT_UI_AFTER_QA; 04_03_NATIVE_ALWAYSRUN_TARGETED; 06_FINAL_FIXED_BETA_BROWSER_AFTER_DEP; 07_WAIT_ENV",
+      "next": "00_SERIAL_INTEGRATE_17_ACCEPTED_PATHS_ON_V21; 06_FINAL_FIXED_BETA_INTEGRATION_AND_AUTHORIZED_REAL_BROWSER_AFTER_DEP; 03_04_05_WAIT_NEW_CONCRETE_EVIDENCE; 07_WAIT_ENV",
       "execution": {
         "task": "V21_INTEGRATION_AND_05_RECEIPT_03_04_NATIVE",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "528b08e15270d3187a40f3461e4f2071ddda421d",
         "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
         "scope": "V21 combined 4 accepted paths; 05 receipt 4, 03 10 additive, 04 3 additive; no product writes",
         "owner": "06 QA",
         "fixedSources": {
-          "ui05": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
-          "core04": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
-          "link03Delta": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b"
+          "v21": {
+            "sha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+            "scope": "3_MOD_1_ADD",
+            "verdict": "SCOPED_PASS_COMBINED_OFFLINE",
+            "focused": 22,
+            "entries": 381,
+            "unchanged": 377,
+            "distEntries": 4144,
+            "webp": 4076,
+            "distManifestSha256": "3b3f60fd95376a05111b9daba29ad2e5cab2a267973e74566a04738855e36fb5"
+          },
+          "ui05": {
+            "sha256": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
+            "deltaSha256": "ad7d7832c439e1b4710588ca1e813b91985f49672f18be8c1f810b14a06fe977",
+            "scope": "2_MOD_2_ADD",
+            "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_UI",
+            "focusedNew": 5,
+            "focusedRegression": 17,
+            "inlineChromium": 4,
+            "realRecipeRoundtrip": 1,
+            "realFileReselectRevokes": 1,
+            "offViewport": [
+              320,
+              1280
+            ],
+            "isolatedViewport": 375
+          },
+          "link03": {
+            "deltaSha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
+            "scope": "10_ADD",
+            "verdict": "SCOPED_PASS_STATIC_CONDITIONAL_PAIR_RELATED",
+            "focused": 37,
+            "nativeAnchors": 72,
+            "metadataBindings": 11,
+            "realAggregateExact": true,
+            "newUnconditionalRequired": 0
+          },
+          "core04": {
+            "sha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+            "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
+            "scope": "3_ADD",
+            "verdict": "SCOPED_PASS_EVIDENCE_ONLY",
+            "nativeAnchors": 72,
+            "fixedMarkers": 2,
+            "realRecords": 6,
+            "aggregateExact": true
+          }
         },
         "previous": {
           "task": "V18_TRUSTED_RECIPE_RECEIPT_AND_V19_ATOMIC_BATCH_UI",
@@ -652,7 +696,33 @@
             "rust": "WAIT_ENV_NO_JS_BETA_GATE"
           },
           "rollback": "V19 recipe-denied preflight 61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631; or V17 whole accepted research"
-        }
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_QA_V21_NEW_DELTAS_REPORT_20261112.md",
+            "sha256": "1a87ca10166850db6c902191602ad06d58dd3951927d9680ab006c2fe9e422fb"
+          },
+          "zip": {
+            "file": "HKIA_06_QA_V21_NEW_DELTAS_EVIDENCE_20261112.zip",
+            "sha256": "afbe2b7923f8e2bd34f9c4f19d8bdd46ab81d050b085b9118765287cfe7a0dbd",
+            "entries": 21
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V21_NEW_DELTAS_20261112.md",
+            "sha256": "5bba56e18bdb3fbee5c24964d29bc51eb2b86c89829bbce1803169e4dafc87ae"
+          },
+          "privateLibraryReadback": "ALL_3_EXACT"
+        },
+        "remaining": [
+          "00 serial integrate 17 disjoint new paths on V21; final fixed artifact and affected graph",
+          "actual HTTP/HTTPS native WebCrypto Module Worker, authorized environment (no unchanged retry)",
+          "Native authentication/load/resave/reboot and Recipe zero-row retention unobserved"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "condition": "17 disjoint accepted paths on V21, 396 logical entries; fixed final artifact then 06 final integration/real browser. 03/04/05 wait new concrete evidence or failure; 07 WAIT_ENV"
+        },
+        "rollback": "V21 688fc18f... before new deltas; V20 batch rollback; V17 research full fallback"
       }
     },
     "00_MEDIA": {
