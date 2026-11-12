@@ -341,7 +341,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL_RECIPE4_REAL_FORWARD_RECEIPT_REVERSE_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_RECIPE23_REAL_FORWARD_RECEIPT_REVERSE_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -357,7 +357,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_RECIPE4_8_PATHS; 05_AFTER_PASS_RECIPE4_UI; 00_SERIAL_ACCEPTED_INTEGRATION; 04_REMAINING23_AFTER_EXACT4_ACCEPTANCE_AND_SCOPE; 5_CELEBRATION_WAIT_CAUSAL_PROOF; V24_FROZEN",
+      "next": "06_SCOPED_QA_RECIPE23_8_PATHS; 05_AFTER_PASS_RECIPE23_UI; 00_SERIAL_INTEGRATION_V29_COMPATIBLE; 04_WAIT_NEW_ACCEPTED_CAUSAL_SCOPE; 5_CELEBRATION_WAIT_CAUSAL_PROOF; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1000,12 +1000,120 @@
       },
       "recipe23Execution": {
         "task": "FORMAL_RECIPE_REMAINING23_SCOPED_WRITER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "04 SAVE CORE",
         "baseMain": "269545cc796b9de91c1cfcfb6916d2cdfab7a4c9",
         "baseSourceSha256": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
         "scope": "23 lower-observed-reference existing Recipe rows; reuse accepted Recipe4 same-runtime receipt, no celebration 5, no new rows or V24",
-        "dependency": "06 exact Recipe4 and V28 scoped PASS; 01/03 Recipe32 research accepted"
+        "dependency": "06 exact Recipe4 and V28 scoped PASS; 01/03 Recipe32 research accepted",
+        "baseCompositeSha256": "205276437b1f4cb7caa878b68a6bf92b6c6bf2a340d24ba7d4299c0ab4ec2e5f",
+        "baseCompositeEntries": 496,
+        "baseReconstruction": "V28 493 + exact accepted Recipe4 5MOD3ADD; all 8 pre/postimages verified",
+        "fixedSourceSha256": "8b5c7bc261bcc63f20ac4a17906d313e88dfec7e1db9dd9b72e58a4f8587218a",
+        "deltaSha256": "1e3c88c6736032020fa98d6dd500e3c1e672ac2c378e0feb9c2adf8aba4ff531",
+        "manifestSha256": "5f2cec1a63849d5511f26be3834bae9f271f769e2bf3de8111b802dc705e733d",
+        "evidenceSha256": "ed4990b4288ff5e71bb095f1df9dfd8478aa569f8370a1c0959d96cce9fbc6e0",
+        "changedPaths": "5_MOD_3_ADD_0_DEL; 491 unchanged of 496; 499 source",
+        "artifacts": {
+          "base": "HKIA_04_FormalRecipe23_20261112_Base.zip",
+          "source": "HKIA_04_FormalRecipe23_20261112_Source.zip",
+          "delta": "HKIA_04_FormalRecipe23_20261112_Delta.zip",
+          "manifest": "HKIA_04_FormalRecipe23_20261112_Manifest.json",
+          "evidence": "HKIA_04_FormalRecipe23_20261112_Evidence.zip",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "targets": [
+          278946815,
+          470867067,
+          650012187,
+          676331574,
+          686416184,
+          763159048,
+          788820261,
+          823539905,
+          924742307,
+          996589226,
+          1094683890,
+          1243081722,
+          1272993231,
+          1287994935,
+          1358571907,
+          1409872840,
+          1426534251,
+          1743827999,
+          1803731982,
+          1872339478,
+          1984595003,
+          2057550216,
+          2097311220
+        ],
+        "excludedCelebration": [
+          81841632,
+          436991714,
+          883856013,
+          1597283478,
+          2090982333
+        ],
+        "operation": "collection-recipe-expansion23-quantity",
+        "verified": {
+          "tests": {
+            "pass": 980,
+            "skip": 36,
+            "fail": 0
+          },
+          "focusedNew": 8,
+          "priorRecipe4": 6,
+          "build": "SOURCE_ONLY_PASS",
+          "check": "PASS",
+          "tsc": "STRICT_BUNDLER_PASS",
+          "worker": "NODE_SYNTHETIC_RPC_PASS",
+          "genuineVersion": "3.0.1",
+          "collectionVersion": 87,
+          "offPreview": 23,
+          "offDenied": 23,
+          "offNegatives": 162,
+          "genuineForward": 23,
+          "genuineReverse": 23,
+          "exactDiff": 46,
+          "accountRaw": 46,
+          "nonTargetRawFrames": 46,
+          "rollback": 3,
+          "onNegatives": 276,
+          "originalUnchanged": true,
+          "sourceIdentityParity": 32,
+          "acceptedAggregateParity": 27,
+          "excludedCelebration": 5,
+          "newModuleImports": 0,
+          "flags": "ALL_OFF; isolated beta+expansion23 ON only",
+          "libraryReadback": "ALL5_BYTE_EXACT_CRC_499_HASHES_496_PLUS8_REPLAY",
+          "fixedSourceVerification": "499 SHA/CRC; full Node suite; isolated 188 production paths byte match fixed except 2 switches",
+          "gameAccepted": false,
+          "privateBytesWritten": false
+        },
+        "compatibility": {
+          "sourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+          "entries": 499,
+          "preimages": 5,
+          "additionsAbsent": 3,
+          "conflicts": 0,
+          "classification": "V29_COMPATIBILITY_ONLY_NOT_INTEGRATED_NOT_QA"
+        },
+        "unverified": [
+          "NEW_06_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_RESAVE_NATIVE_AUTH_AND_GENERIC_RUNTIME_CONSUMERS",
+          "SWITCH_ASSET_DEFINITION_PARITY",
+          "5_CELEBRATION_REFERENCES_BATCH_POST_RESAVE_RECEIPT",
+          "V300_OR_GENERAL_ACQUISITION_OR_NEW_ROWS",
+          "00_FULL_DISTRIBUTION_REBUILD_AFTER_INTEGRATION",
+          "MAIN_PROTECTION_NOT_AVAILABLE_IN_CONNECTOR"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "Exact 5MOD3ADD on 496 composite fixed source 8b5c7bc2...7218a; independently verify all23 genuine v301 forward/reverse same-runtime receipts, exact semantic diff/raw frames, old4 and original5913958 flags, full typed reference and duplicate/absent checks, final permit/CAS/forged/cross item/operation/replay/rollback/close and v300, excluded5, no broad re-QA",
+          "nextAfter": "05 exact23 UI after scoped PASS (reuse Recipe4 UI), 00 serial integrate exact preimages on V29 or successor with no added module import path; 04 WAIT 03 specific five celebration reference/side-effect witness or other independently accepted causal scope, no batch/general acquisition/post-resave restore; V24 frozen"
+        },
+        "rollback": "Restore 5 preimages from 496 composite; remove 3 additions; preserve prior accepted Recipe4 and V28"
       }
     },
     "05_WEB": {
