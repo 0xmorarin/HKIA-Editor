@@ -1719,10 +1719,10 @@
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ctrlExecution": {
-    "task": "V22_PRIVACY_DECODED_VALUE_REPAIR",
-    "status": "DONE_LOCAL_REPAIR_DIRECT_QA_HANDOFF",
+    "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
+    "status": "IN_FLIGHT",
     "owner": "00 CTRL",
-    "baseMain": "6ae59c1134849cd84b240b0b3dd1e56b503f132f",
+    "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
     "candidate": {
       "label": "V23_PRIVACY_DECODED_REPAIR_R2_LOCAL_PASS_QA_PENDING",
@@ -1749,7 +1749,7 @@
       "readback": "ALL_4_ARTIFACTS_BYTE_EXACT_396_SOURCE_CRC_SHA_PASS",
       "supersedesUnsubmittedDraftSha256": "3cd55cd4ca400ba1c282de949375c57c9a3f54345b454fb57bbba08d12bdf448"
     },
-    "scope": "2 MOD only pages-artifact-policy.mjs and policy test; exact 17 prior accepted paths unchanged",
+    "scope": "private release-equivalent capability candidate only; preserve accepted R2 OFF source and artifact; no live flags/deploy; exact version/operation evidence; browser execution kit if needed",
     "changes": {
       "policy": "JSON.parse reviver checks decoded keys and string values using existing pattern; raw scan preserved; validated lexical string scan also rejects shadowed duplicate members (keys and values); sanitizer unchanged; no values in private-reference-value error",
       "tests": "new regression includes escaped slash, Unicode URL/Library, key, root/nested strings, shadowed duplicates, normal Unicode and raw non-JSON",
@@ -1825,6 +1825,8 @@
       "00_RELEASE_GATE_AFTER_QA_AND_BROWSER",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
-    "risks": "Gate local fix not yet independent PASS; exact artifact bytes unchanged, no claim broader private pattern coverage beyond existing regex; no public data or flags."
+    "risks": "Gate local fix not yet independent PASS; exact artifact bytes unchanged, no claim broader private pattern coverage beyond existing regex; no public data or flags.",
+    "previousTask": "V22_PRIVACY_DECODED_VALUE_REPAIR",
+    "dependency": "06 R2 scoped PASS; real browser and game persistence remain distinct"
   }
 }
