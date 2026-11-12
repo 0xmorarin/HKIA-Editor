@@ -10,33 +10,7 @@ import RECIPE_EVIDENCE from '../../docs/03-linkage/v18/RECIPE_NATIVE_SOURCE.json
 export const RECIPE_EXPANSION4=Object.freeze([
   [167744018,'033d2c68:9ba1dc84:cbf57819:4c6e3f9f'],[167310698,'3d484039:f5903c64:c9322bea:f92c7365'],[297899965,'38023185:3ecfb254:98aee70c:3f60a0d4'],[575014896,'f81c864d:dd748774:cb08c53c:03f2496e']
 ].map(([itemId,guid])=>Object.freeze({itemId,guid:guid.split(':').map(w=>[...w].reverse().join('')).join(':')})));
-export const RECIPE_EXPANSION23=Object.freeze([
-  [278946815,'8b92dd3f:0b509ef4:395c95d8:e5b035fd'],
-  [470867067,'a91a0df3:81224404:0ab066d1:392e09c5'],
-  [650012187,'4b8b9b81:c494b3a4:5a72226a:ef45dec4'],
-  [676331574,'12e67e2c:1549da44:c92dce81:4e1af77a'],
-  [686416184,'8adbb2c9:282f1c94:d8a4a0b8:0fc7772e'],
-  [763159048,'425f05b7:41b72a54:6808e035:74ea619d'],
-  [788820261,'61010ceb:d1fca8f4:88f996c8:1a88f625'],
-  [823539905,'e624dddb:d1c5ad04:683ad372:0a383486'],
-  [924742307,'9c0edd3f:9a021d34:0b6bf6b2:e1e84eaf'],
-  [996589226,'cfcb650b:8bc15c14:4ac502dd:b7d89663'],
-  [1094683890,'5194993e:da1748c4:99b16c5b:ad0fbc80'],
-  [1243081722,'8350f322:bac8aee4:4bda160c:997ed5a2'],
-  [1272993231,'6cc94e3e:33ef73b4:4b4ba987:f61e2f7b'],
-  [1287994935,'7e17274e:913f5084:aac61f64:3bad7f78'],
-  [1358571907,'3f778f19:97d4ab14:095f65fa:8f12933f'],
-  [1409872840,'84838ba0:201b4ba4:48c8bbd3:80a5f645'],
-  [1426534251,'b30ce5eb:db3ded34:8a991f5e:c6593284'],
-  [1743827999,'b30a1c06:b679a414:e8d20ada:1fc3d4cd'],
-  [1803731982,'3b93d13f:0ea90b44:6b7f57fe:29c6c290'],
-  [1872339478,'c257c5ba:db850a14:0934a57c:a255de3f'],
-  [1984595003,'dcc8fef7:fa86cb04:2aee0c3a:16c99e18'],
-  [2057550216,'3afa80c6:d08c0684:a8ee9b8b:f2383972'],
-  [2097311220,'86865ab2:622ddb34:cb09c6d5:24dfe15f']
-].map(([itemId,guid])=>Object.freeze({itemId,guid:guid.split(':').map(w=>[...w].reverse().join('')).join(':')})));
-const RECIPE_EXPANSION_ALL=Object.freeze([...RECIPE_EXPANSION4,...RECIPE_EXPANSION23]);
-const RECIPE_EXPANSION_IDS=new Set(RECIPE_EXPANSION_ALL.map(t=>t.itemId));
+const RECIPE_EXPANSION_IDS=new Set(RECIPE_EXPANSION4.map(t=>t.itemId));
 const RECIPE_MEMBER_IDS=new Set(RECIPE_EVIDENCE.items.map(x=>x.itemId));
 function freezeSchema(x){if(x&&typeof x==='object'&&!Object.isFrozen(x)){for(const v of Object.values(x))freezeSchema(v);Object.freeze(x);}return x;}
 freezeSchema(SCHEMA);
@@ -190,6 +164,6 @@ export function decodeNativePayloadBySchema(expanded,expectedVersion){
   stats.documents=root[2].length;stats.distinctDocumentTypeIds=ids.size;
   const collectionHistoryEntries=collection.key1.map(([id,tick])=>[id,String(tick)]);
   return {version,collectionVersionNumber,achievements,counters,collections:{historyEntries:collectionHistoryEntries.length,deprecatedEntries:collection.key0.length,kind:'item-id-collected-ticks',editable:false},
-    collectedItemIds:collectionHistoryEntries.map(x=>x[0]),collectionHistoryEntries,collectionDeprecatedEntries:collection.key0,inventoryRecipeRows,inventoryRecipeRecountRows,inventoryRecipeExpansionRows,recipeExpansionReferences:RECIPE_EXPANSION_ALL.map(t=>({itemId:t.itemId,celebrated:root[2].filter(x=>x[0]===8).reduce((n,x)=>n+x[1][1].filter(g=>GUID(g)===t.guid).length,0),counter:counters.reduce((n,x)=>n+x.countedGuidWords.filter(g=>GUID(g)===t.guid).length,0)})),models,collectionSpans,collectionMap,stats:Object.freeze(stats),
+    collectedItemIds:collectionHistoryEntries.map(x=>x[0]),collectionHistoryEntries,collectionDeprecatedEntries:collection.key0,inventoryRecipeRows,inventoryRecipeRecountRows,inventoryRecipeExpansionRows,recipeExpansionReferences:RECIPE_EXPANSION4.map(t=>({itemId:t.itemId,celebrated:root[2].filter(x=>x[0]===8).reduce((n,x)=>n+x[1][1].filter(g=>GUID(g)===t.guid).length,0),counter:counters.reduce((n,x)=>n+x.countedGuidWords.filter(g=>GUID(g)===t.guid).length,0)})),models,collectionSpans,collectionMap,stats:Object.freeze(stats),
     fullLogicalPayloadConsumed:true,typedDictionaryKeysVerified:true,typedDocumentIdsVerified:true};
 }

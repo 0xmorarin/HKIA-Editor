@@ -6,7 +6,7 @@
    
 import {MAGIC,MessagePackReader,lz4Decompress,readSave,inspectSaveGameV2Header} from '../../src/save.js';
 import {sha256Hex} from './native-browser-primitives.mjs';
-import {decodeNativePayloadBySchema,RECIPE_EXPANSION4,RECIPE_EXPANSION23} from './save-native-schema-reader.mjs';
+import {decodeNativePayloadBySchema,RECIPE_EXPANSION4} from './save-native-schema-reader.mjs';
 import {lz4EncodeLiteralOnly} from './save-envelope-noop.mjs';
 import {lz4EncodeBoundedMatch} from './lz4-match-encoder.mjs';
 
@@ -245,7 +245,7 @@ const FIELD_MAP={AchievementModel:{tag:16,fields:['IsComplete','CurrentValue','C
 function parseChange(c,models,expanded,collection,original){
   failUnless(c&&typeof c==='object'&&!Array.isArray(c),'Invalid field change');
   if(c.model==='InventoryItem'){
-    const expandedTarget=(RECIPE_EXPANSION4.some(t=>t.itemId===c.itemId)||RECIPE_EXPANSION23.some(t=>t.itemId===c.itemId));
+    const expandedTarget=RECIPE_EXPANSION4.some(t=>t.itemId===c.itemId);
     const rows=c.itemId===5913958?original?.inventoryRecipeRows:expandedTarget?original?.inventoryRecipeExpansionRows.filter(x=>x.itemId===c.itemId):null;
     failUnless(original?.version==='3.0.1'&&original.collectionDeprecatedEntries.length===0&&rows?.length===1&&c.field==='Quantity'&&(c.itemId===5913958||expandedTarget&&original.collectionVersionNumber===87&&original.recipeExpansionReferences.some(t=>t.itemId===c.itemId&&t.celebrated===0&&t.counter===0)&&original.collectionHistoryEntries.some(([id])=>id===c.itemId)),'Recipe exact scope required');
     const r=rows[0];failUnless(r.id===c.documentId&&r.uniqueId===0&&r.uniqueData===null&&r.quantity===c.expected&&((c.expected===0&&c.next===1)||(c.expected===1&&c.next===0)),'Recipe quantity CAS or transition invalid');

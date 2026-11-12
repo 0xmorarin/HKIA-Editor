@@ -1,4 +1,4 @@
-import {RECIPE_EXPANSION4,RECIPE_EXPANSION23} from '../scripts/research/save-native-schema-reader.mjs';
+import {RECIPE_EXPANSION4} from '../scripts/research/save-native-schema-reader.mjs';
 import {planFormal49,FORMAL49_TARGETS,planFormal9,FORMAL9_TARGETS} from './formal49-plan.mjs';
 import {dryRunSchemaFormal49} from '../scripts/research/save-transaction-engine.mjs';
 import {parseZip} from '../src/zip.js';
@@ -50,9 +50,9 @@ export function validateRecipeOutputPermit(token,revision,request){
   if(permit.receipt&&(!permit.reservation||recipeReceipts.get(request.receipt)!==permit.receipt||permit.receipt.reservation!==permit.reservation))return false;
   return true;
 }
-function receiptRecord(token,revision,documentId,itemId,operation){
+function receiptRecord(token,revision,documentId,itemId){
   const r=typeof token==='string'&&/^[a-f0-9]{32}$/.test(token)?recipeReceipts.get(token):null;
-  return r&&r.zeroRevision===revision&&r.documentId===documentId&&r.itemId===itemId&&r.operation===operation?r:null;
+  return r&&r.zeroRevision===revision&&r.documentId===documentId&&r.itemId===itemId?r:null;
 }
 function issueRecipeReceipt(owner,originalRevision,zeroRevision,documentId,itemId,operation){
   requireValue(recipeReceipts.size<MAX_RECEIPTS,'Recipe receipt limit reached; close unused issuer sessions');
@@ -83,7 +83,7 @@ function displayFromSchema(s){
   return deepFreeze(structuredClone({...adapted,nativeSchemaEvidence:{fullLogicalPayloadConsumed:true,typedDictionaryKeysVerified:true,typedDocumentIdsVerified:true,stats:s.stats,collectionVersion:s.collectionVersionNumber,gameAccepted:false},recipeQuantityEvidence:s.version==='3.0.1'&&s.inventoryRecipeRows.length===1&&s.inventoryRecipeRows[0].uniqueId===0&&s.inventoryRecipeRows[0].uniqueData===null?{itemId:5913958,documentId:s.inventoryRecipeRows[0].id,quantity:s.inventoryRecipeRows[0].quantity,projectionOnly:true}:null}));
 }
 export function readNativeSlotForProductDisplay(bytes){return displayFromSchema(readSchemaNativeSlotResearch(bytes));}
-export const nativeProductCapability=()=>Object.freeze({...nativeWriterCapability(),browserCodecAvailable:true,privateEditedCopyVerificationAvailable:true,allowedPreviewOperations:Object.freeze(['collection-key1-ticks','puzzle-goals-complete','collection-key1-add','collection-key1-remove','achievement-timestamp','achievement-progress','collection-recipe-quantity','collection-recipe-expansion-quantity','collection-recipe-expansion23-quantity','batch-independent-scalars','batch-family-revoke','achievement-formal49-edit','achievement-manual9-revoke']),betaWriterCandidateEnabled:betaWriterEnabled(),productExportAvailable:betaWriterEnabled(),devOutput:devOutputCapability(),allowedFamilyResearchOperations:Object.freeze(['achievement-family-complete','achievement-family-revoke'])});
+export const nativeProductCapability=()=>Object.freeze({...nativeWriterCapability(),browserCodecAvailable:true,privateEditedCopyVerificationAvailable:true,allowedPreviewOperations:Object.freeze(['collection-key1-ticks','puzzle-goals-complete','collection-key1-add','collection-key1-remove','achievement-timestamp','achievement-progress','collection-recipe-quantity','collection-recipe-expansion-quantity','batch-independent-scalars','batch-family-revoke','achievement-formal49-edit','achievement-manual9-revoke']),betaWriterCandidateEnabled:betaWriterEnabled(),productExportAvailable:betaWriterEnabled(),devOutput:devOutputCapability(),allowedFamilyResearchOperations:Object.freeze(['achievement-family-complete','achievement-family-revoke'])});
 export async function openNativeProductSession(input,{sameVersionWitnessArchive=null}={}){
   const caller=view(input),source=Uint8Array.from(caller),revision=await sha256Hex(source);
   const layout=await auditZipRawCopyability(source);requireValue(layout.rawMemberCopyLayoutDeterminate,'Unclassified ZIP bytes');
@@ -91,11 +91,11 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
   const accountState=parseAccount(account);
   const s=readSchemaNativeSlotResearch(slot),display=displayFromSchema(s),prefix=await sha256Hex(slot.subarray(0,32));
   const history=new Map(s.collectionHistoryEntries),plans=new WeakMap(),receiptOwner=Symbol('recipe issuer');
-  const expansionRow=(itemId,targets=RECIPE_EXPANSION4)=>{
+  const expansionRow=itemId=>{
     const rows=s.inventoryRecipeExpansionRows.filter(x=>x.itemId===itemId),r=rows[0];
-    return s.version==='3.0.1'&&s.collectionVersionNumber===87&&s.collectionDeprecatedEntries.length===0&&targets.some(t=>t.itemId===itemId)&&rows.length===1&&Number.isInteger(r.id)&&r.id>0&&r.uniqueId===0&&r.uniqueData===null&&[0,1].includes(r.quantity)&&r.span.end-r.span.start===1&&history.has(itemId)&&s.recipeExpansionReferences.some(t=>t.itemId===itemId&&t.celebrated===0&&t.counter===0)?r:null;
+    return s.version==='3.0.1'&&s.collectionVersionNumber===87&&s.collectionDeprecatedEntries.length===0&&RECIPE_EXPANSION4.some(t=>t.itemId===itemId)&&rows.length===1&&Number.isInteger(r.id)&&r.id>0&&r.uniqueId===0&&r.uniqueData===null&&[0,1].includes(r.quantity)&&r.span.end-r.span.start===1&&history.has(itemId)&&s.recipeExpansionReferences.some(t=>t.itemId===itemId&&t.celebrated===0&&t.counter===0)?r:null;
   };
-  const expansionTargets=(targets=RECIPE_EXPANSION4)=>targets.flatMap(t=>{const r=expansionRow(t.itemId,targets);return r&&(r.quantity===1||[...recipeReceipts.values()].some(x=>x.zeroRevision===revision&&x.itemId===t.itemId&&x.documentId===r.id&&!x.reservation))?[{itemId:t.itemId,documentId:r.id,quantity:r.quantity}]:[];});
+  const expansionTargets=()=>RECIPE_EXPANSION4.flatMap(t=>{const r=expansionRow(t.itemId);return r&&(r.quantity===1||[...recipeReceipts.values()].some(x=>x.zeroRevision===revision&&x.itemId===t.itemId&&x.documentId===r.id&&!x.reservation))?[{itemId:t.itemId,documentId:r.id,quantity:r.quantity}]:[];});
   const recipeAdvisory=request=>inspectV18RecipeRecount({...s,inventoryRows:s.inventoryRecipeRecountRows},request);
   function recipeCapability(){const row=s.inventoryRecipeRows[0];if(s.version!=='3.0.1'||s.inventoryRecipeRows.length!==1||!row||![0,1].includes(row.quantity))return false;
     if(row.quantity===0&&![...recipeReceipts.values()].some(r=>r.zeroRevision===revision&&r.documentId===row.id&&r.itemId===row.itemId&&!r.reservation))return false;
@@ -126,7 +126,7 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
   guard(revision);
   function plan(request){
     guard(request?.expectedRevision);
-    let typedPlan,diff,completedAt,familyRequest,batchKeys,recipeEligible=false,familyEligible=false,batchEligible=false,formal49Eligible=false,formal9Eligible=false,recipeExpansionEligible=false,recipeExpansion23Eligible=false;
+    let typedPlan,diff,completedAt,familyRequest,batchKeys,recipeEligible=false,familyEligible=false,batchEligible=false,formal49Eligible=false,formal9Eligible=false,recipeExpansionEligible=false;
     if(request.operation==='achievement-manual9-revoke'){
       const result=planFormal9(catalog,s,accountState,request,linkage);typedPlan=result.plan;formal9Eligible=true;
       diff={nativeFields:typedPlan.changes,accountFields:[],requiredScope:'EXPLICIT_MANUAL9_ABSENCE_REVOKE',semanticLinkageVerified:false,causal:result.causal};
@@ -168,16 +168,15 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
       requireValue(research.codecResearchEligible,'Collection membership blocked: '+research.blockers.join(','));
       const membership={operation:add?'add':'remove',itemId:request.itemId,expected,next};
       typedPlan={version:s.version,changes:[],membership};diff={nativeFields:[],membership,accountFields:[],requiredScope:'KEY1_MEMBERSHIP_HISTORY_ONLY',semanticLinkageVerified:false};
-    }else if(['collection-recipe-expansion-quantity','collection-recipe-expansion23-quantity'].includes(request.operation)){
-      const is23=request.operation==='collection-recipe-expansion23-quantity';
+    }else if(request.operation==='collection-recipe-expansion-quantity'){
       requireValue(Object.keys(request).every(k=>['operation','expectedRevision','itemId','documentId','expectedQuantity','nextQuantity','acknowledgeRecipeAvailabilityChange','acknowledgeAchievementAndRewardReference','receipt'].includes(k)),'Invalid recipe expansion request');
-      const r=expansionRow(request.itemId,is23?RECIPE_EXPANSION23:RECIPE_EXPANSION4);
+      const r=expansionRow(request.itemId);
       requireValue(r&&r.id===request.documentId&&r.quantity===request.expectedQuantity&&request.nextQuantity===1-r.quantity&&(r.quantity===0||!Object.hasOwn(request,'receipt')),'Recipe expansion exact existing row CAS required');
       requireValue(request.acknowledgeRecipeAvailabilityChange===true&&request.acknowledgeAchievementAndRewardReference===true,'Recipe expansion consent required');
-      requireValue(r.quantity===1||receiptRecord(request.receipt,revision,r.id,r.itemId,request.operation),'RESTORE_PROVEN_SAME_ROW_REQUIRED');
+      requireValue(r.quantity===1||receiptRecord(request.receipt,revision,r.id,r.itemId),'RESTORE_PROVEN_SAME_ROW_REQUIRED');
       const changes=[{model:'InventoryItem',field:'Quantity',itemId:r.itemId,documentId:r.id,expected:r.quantity,next:1-r.quantity}];
-      recipeExpansionEligible=!is23;recipeExpansion23Eligible=is23;
-      typedPlan={version:s.version,changes};diff={nativeFields:changes,accountFields:[],requiredScope:is23?'EXPLICIT_RECIPE_EXPANSION23_EXISTING_ROW':'EXPLICIT_RECIPE_EXPANSION4_EXISTING_ROW',semanticLinkageVerified:false,recipeProjection:{before:r.quantity===1,after:r.quantity===0,historyPreserved:true,gameAccepted:false,advisory:{status:'RELATED_ONLY',requiredWrites:[],celebratedGuidMatches:0,observedCounterGuidMatches:0,recountPrediction:null,switchAssetParity:false,gameAccepted:false}}};
+      recipeExpansionEligible=true;
+      typedPlan={version:s.version,changes};diff={nativeFields:changes,accountFields:[],requiredScope:'EXPLICIT_RECIPE_EXPANSION4_EXISTING_ROW',semanticLinkageVerified:false,recipeProjection:{before:r.quantity===1,after:r.quantity===0,historyPreserved:true,gameAccepted:false,advisory:{status:'RELATED_ONLY',requiredWrites:[],celebratedGuidMatches:0,observedCounterGuidMatches:0,recountPrediction:null,switchAssetParity:false,gameAccepted:false}}};
     }else if(request.operation==='collection-recipe-quantity'){
       requireValue(Object.keys(request).every(k=>['operation','expectedRevision','itemId','documentId','expectedQuantity','nextQuantity','acknowledgeRecipeAvailabilityChange','acknowledgeAchievementAndRewardReference','receipt'].includes(k))&&request.itemId===RECIPE_TARGET.itemId&&(request.expectedQuantity===0||!Object.hasOwn(request,'receipt')),'Exact recipe target required');
       const rows=s.inventoryRecipeRows,r=rows[0],fact=acquisitionSource.targets.find(x=>x.itemId===RECIPE_TARGET.itemId);
@@ -186,7 +185,7 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
       requireValue(rows.length===1&&r&&parents.length===0,'Exact existing recipe row required');
       const evidence={...RECIPE_TARGET,version:s.version,definitionVerified:true,parentGraphComplete:true,parentCount:0,childCount:0,gates:'CLEAR_SOURCE_ONLY',key0Empty:s.collectionDeprecatedEntries.length===0,typedInventoryComplete:true,inventoryRows:rows.length,documentId:r.id,uniqueId:r.uniqueId,uniqueData:r.uniqueData,quantity:r.quantity,revision};
       const recipeRequest={...request,operation:'RECIPE_EXISTING_ROW_QUANTITY'};
-      const receipt=receiptRecord(request.receipt,revision,r.id,r.itemId,request.operation);
+      const receipt=receiptRecord(request.receipt,revision,r.id,r.itemId);
       const beta=assessBetaAcquisition({...evidence,sameRowRestorationVerified:request.expectedQuantity===0&&!!receipt},recipeRequest);
       requireValue(beta.planEligible,'Recipe transition blocked: '+beta.blockers.join(','));
       const assessment=assessExistingRecipeTransition(evidence,recipeRequest);
@@ -228,7 +227,7 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
       const result=preparePrivateCrossStoreCommitComponents({slotBytes:slot,accountJson:account,localDefs,slotDefs,metaDefs,completedAt,nativeSchema:true});
       typedPlan=result.plan;diff={nativeFields:typedPlan.changes,accountFields:[{field:'Local_RootAchievement.CurrentValue',expected:19,next:20},{field:'Local_RootAchievement.Counter.CurrentValue',expected:19,next:20}],requiredScope:'PUZZLE_GOALS_ONLY',semanticLinkageVerified:true};
     }else throw Error('Unsupported Native product operation');
-    const canOutput=devOutputCapability(s.version,s.collectionVersionNumber,recipeEligible,familyEligible,batchEligible,formal49Eligible,formal9Eligible,recipeExpansionEligible,recipeExpansion23Eligible).authorizedOperations.includes(request.operation);
+    const canOutput=devOutputCapability(s.version,s.collectionVersionNumber,recipeEligible,familyEligible,batchEligible,formal49Eligible,formal9Eligible,recipeExpansionEligible).authorizedOperations.includes(request.operation);
     const token=deepFreeze({schema:'HKIA.04.ProductNativePlan.1',revision,version:s.version,operation:request.operation,diff,writerEnabled:false,canApply:canOutput,canExport:canOutput});
     plans.set(token,{typedPlan:structuredClone(typedPlan),completedAt,familyRequest:familyRequest&&structuredClone(familyRequest),batchKeys,operation:request.operation,request:structuredClone(request)});return token;
   }
@@ -256,8 +255,8 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
     let entry=null,keep=false,recipePermit=null;
     try{
       requireValue(!prepared.familyRequest||formalFamilyRevokeEnabled()&&prepared.operation==='achievement-family-revoke'&&token.canExport,'DEV_NATIVE_OUTPUT_FAMILY_RESEARCH_ONLY');
-      const isRecipe=['collection-recipe-quantity','collection-recipe-expansion-quantity','collection-recipe-expansion23-quantity'].includes(prepared.operation),request=prepared.request;
-      if(isRecipe&&request.expectedQuantity===0){const receipt=receiptRecord(request.receipt,revision,request.documentId,request.itemId,request.operation);requireValue(receipt&&!receipt.reservation,'Recipe receipt unavailable or busy');const reservation=Symbol('recipe restore');receipt.reservation=reservation;entry={receipt,receiptToken:request.receipt,reservation};}
+      const isRecipe=['collection-recipe-quantity','collection-recipe-expansion-quantity'].includes(prepared.operation),request=prepared.request;
+      if(isRecipe&&request.expectedQuantity===0){const receipt=receiptRecord(request.receipt,revision,request.documentId,request.itemId);requireValue(receipt&&!receipt.reservation,'Recipe receipt unavailable or busy');const reservation=Symbol('recipe restore');receipt.reservation=reservation;entry={receipt,receiptToken:request.receipt,reservation};}
       if(isRecipe){const permit=randomToken();requireValue(recipePermits.size<MAX_RECEIPTS&&!recipePermits.has(permit),'Recipe output permit unavailable');recipePermits.set(permit,{revision,request:JSON.stringify(request),receipt:entry?.receipt??null,reservation:entry?.reservation??null});recipePermit=permit;}
       await assertDevOutputAuthorized({version:s.version,operation:prepared.operation,revision,plan:prepared.typedPlan,source,request:prepared.request,sameVersionWitnessArchive:witnessSnapshot,recipePermit});
       requireValue(!closed&&same(caller,source),'Source/session changed during authorization');
@@ -286,7 +285,7 @@ export async function openNativeProductSession(input,{sameVersionWitnessArchive=
   const formal49Targets=betaWriterEnabled()&&formal49Enabled()?FORMAL49_TARGETS.filter(t=>{try{planFormal49(catalog,s,accountState,{operation:'achievement-formal49-edit',expectedRevision:revision,key:t.key,action:t.action,...(t.action==='REVOKE'?{progress:0}:{completedAt:'2026-11-12T00:00:00.1234567Z'})},linkage);return true;}catch{return false;}}):[];
   const formal9Targets=betaWriterEnabled()&&formal9Enabled()?FORMAL9_TARGETS.filter(t=>{try{planFormal9(catalog,s,accountState,{operation:'achievement-manual9-revoke',expectedRevision:revision,key:t.key,action:'REVOKE',progress:0},linkage);return true;}catch{return false;}}):[];
   const formalBatchEligible=(()=>{if(!formalFamilyBatchEnabled()||formalFamilyKeys.length<2)return false;try{planFormalFamilyBatch(catalog,s,accountState,formalFamilyKeys.slice(0,2),linkage);return true;}catch{return false;}})();
-  return Object.freeze({schema:'HKIA.04.ProductNativeSession.1',revision,version:s.version,display,capability:Object.freeze({...nativeProductCapability(),formalFamilyRevokeKeys:Object.freeze(formalFamilyKeys),formal49Targets:Object.freeze(formal49Targets),formal9Targets:Object.freeze(formal9Targets),recipeExpansionTargets:Object.freeze(expansionTargets().map(Object.freeze)),recipeExpansion23Targets:Object.freeze(expansionTargets(RECIPE_EXPANSION23).map(Object.freeze)),devOutput:devOutputCapability(s.version,s.collectionVersionNumber,recipeCapability(),formalFamilyKeys.length>0,formalBatchEligible,formal49Targets.length>0,formal9Targets.length>0,expansionTargets().length>0,expansionTargets(RECIPE_EXPANSION23).length>0),productExportAvailable:betaWriterEnabled()&&devOutputCapability(s.version,s.collectionVersionNumber,recipeCapability(),formalFamilyKeys.length>0,formalBatchEligible,formal49Targets.length>0,formal9Targets.length>0,expansionTargets().length>0,expansionTargets(RECIPE_EXPANSION23).length>0).authorizedOperations.length>0}),plan,verifyEditedCopy,
+  return Object.freeze({schema:'HKIA.04.ProductNativeSession.1',revision,version:s.version,display,capability:Object.freeze({...nativeProductCapability(),formalFamilyRevokeKeys:Object.freeze(formalFamilyKeys),formal49Targets:Object.freeze(formal49Targets),formal9Targets:Object.freeze(formal9Targets),recipeExpansionTargets:Object.freeze(expansionTargets().map(Object.freeze)),devOutput:devOutputCapability(s.version,s.collectionVersionNumber,recipeCapability(),formalFamilyKeys.length>0,formalBatchEligible,formal49Targets.length>0,formal9Targets.length>0,expansionTargets().length>0),productExportAvailable:betaWriterEnabled()&&devOutputCapability(s.version,s.collectionVersionNumber,recipeCapability(),formalFamilyKeys.length>0,formalBatchEligible,formal49Targets.length>0,formal9Targets.length>0,expansionTargets().length>0).authorizedOperations.length>0}),plan,verifyEditedCopy,
     exportDevEditedCopy(token,expectedRevision,options){return produceOutput(token,expectedRevision,options);},
     verifyNoop(expectedRevision){guard(expectedRevision);const proof=auditSchemaNativeSlotNoopResearch(slot);return deepFreeze({...proof,sourceZipByteIdentical:same(caller,source)});},
     apply(token,expectedRevision,options={}){if(!betaWriterEnabled())return commitNativeCrossStoreZip();return produceOutput(token,expectedRevision,options,true);},
