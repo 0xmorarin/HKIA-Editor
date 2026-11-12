@@ -16,7 +16,7 @@
       "next": "FORMAL_READY_FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 06 scoped QA",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-        "status": "PARTIAL_QA_READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
@@ -35,7 +35,13 @@
           "gameAccepted": false,
           "productAuthorized": false
         },
-        "remaining": "Comic Shop managed body and target-specific active placement/quest/counter closure; Dunebug daily mission and placement; Wollypog daily mission; generic consumers, game load/resave and platform parity unknown; both current genuine fixtures contain all 282 Recipe rows, absent Recipe new producer unproven."
+        "remaining": "Comic Shop managed body and target-specific active placement/quest/counter closure; Dunebug daily mission and placement; Wollypog daily mission; generic consumers, game load/resave and platform parity unknown; both current genuine fixtures contain all 282 Recipe rows, absent Recipe new producer unproven.",
+        "repair": {
+          "task": "FORMAL_01_EXACT_RESTORE_RAW_TOKEN_REPAIR",
+          "baseMain": "31595debd417feee593767ddde0802a7194fd5c5",
+          "baseDeltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+          "scope": "01 restore verifier trusted donor raw digest; regression only; V24 frozen"
+        }
       }
     },
     "02_ACHIEVEMENT": {
