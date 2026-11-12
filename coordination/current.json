@@ -72,7 +72,7 @@
       "v13ReportedDefect": "DUPLICATE_PRIMITIVE_MAP_PAIR_COLLAPSE_OR_AMBIGUOUS_COLLECTION_ANCESTOR",
       "v14Repair": "ORDERED_PAIRS_PRESERVED_AMBIGUOUS_ANCESTOR_UNKNOWN_LOCAL_20_PASS",
       "targetSha256": "64024d3fa5b5e93d80ec554b2c5c7269f70192d18891df1316ec2cda065af31d",
-      "scope": "V13_TO_V14_7_MOD_8_ADD_AND_V13_UNACCEPTED_PATHS_FROM_V11; REUSE_FIXED_PRIOR_PASSES_ONLY",
+      "scope": "V11_TO_V14_10_MOD_11_ADD_0_DEL; REUSE VERIFIED V13 PASS EVIDENCE ONLY FOR EXACT UNCHANGED PATHS; REPLAY 2 V13 NEGATIVES",
       "next": "REPLAY_EXACT_TWO_V13_NEGATIVES_THEN_SCHEMA_REAL_FIXTURE_AND_CHANGED_SCOPE_INDEPENDENT_QA"
     },
     "00_MEDIA": {
@@ -268,7 +268,13 @@
     "pagesEnabled": false,
     "independentQa": "PENDING_V14_SCOPED",
     "productSourceMergedToGitHubMain": false,
-    "gameMediaPublic": false
+    "gameMediaPublic": false,
+    "qaScopeFromV11": {
+      "modified": 10,
+      "added": 11,
+      "deleted": 0,
+      "unchanged": 214
+    }
   },
   "previousLocalIntegratedCandidate": {
     "artifact": "HKIA_CTRL_Integrated_Candidate_V13_20261112.zip",
