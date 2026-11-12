@@ -1603,15 +1603,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL_SCOPED_PASS_V24_WAIT_ENV",
+      "status": "FORMAL_V28_RECIPE4_MANUAL9_UI_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_V27_SUCCESSOR; 04_RECIPE32_EXACT_SAFE_SUBSET_WRITER; 05_MANUAL9_UI; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
+      "next": "00_SERIAL_V28_SUCCESSOR; 04_RECIPE_REMAINING23_SCOPED_WRITER; 05_RECIPE4_RECEIPT_UI; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
       "execution": {
         "task": "FORMAL_V28_RECIPE4_MANUAL9_UI_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "a3f067eb547f242905959f7d747c03fe52534988",
         "scope": "04 Recipe4 8 paths; 05 Manual9 UI 5 paths; V28 22 paths; Pages OFF read-only check",
         "owner": "06 QA",
@@ -2670,7 +2670,93 @@
             "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
           },
           "rollback": "V27 fixed OFF; restore 04/05 exact preimages and remove 03 additions; V24 unchanged"
-        }
+        },
+        "verdict": "SCOPED_PASS_V28_RECIPE4_MANUAL9_UI",
+        "fixedSources": {
+          "v28": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
+          "recipe4": "364c6cb76747ffebc7439924309e95261042a77b14078200eea81575278f8eca",
+          "manual9ui": "cd856cae7c76ba5ebb3da524b6a4138c34456d1ee92b9e98f0413e5304ba6df3"
+        },
+        "verified": {
+          "focused": 31,
+          "recipe4": {
+            "scope": "5MOD3ADD",
+            "verdict": "SCOPED_PASS_V301_EXISTING_RECIPE4_SAME_RUNTIME_RECEIPT",
+            "genuineForward": 4,
+            "genuineReverse": 4,
+            "exactDiff": 8,
+            "independentPythonRawZip": 8,
+            "rawNonTargetFrames": 80,
+            "accountRaw": 8,
+            "offPreview": 4,
+            "offDenied": 4,
+            "offNegatives": 29,
+            "onNegatives": 52,
+            "rollback": 3,
+            "originalUnchanged": true,
+            "workerSynthetic": true
+          },
+          "manual9ui": {
+            "scope": "2MOD3ADD",
+            "verdict": "SCOPED_PASS_MANUAL9_UI_INLINE",
+            "genuineControllerOutputs": 9,
+            "offPreviews": 9,
+            "slotFields": 54,
+            "accountFields": 0,
+            "inlineChromiumCases": 5,
+            "isolatedDownloadReimport": 1,
+            "wrongVersion300Denied": true,
+            "originalUnchanged": true
+          },
+          "v28": {
+            "scope": "8MOD14ADD",
+            "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+            "acceptedExactPaths": 22,
+            "sourceEntries": 493,
+            "distEntries": 4146,
+            "distBytes": 146319889,
+            "webp": 4076,
+            "modules": 55,
+            "allArtifactHashesEqual": true,
+            "artifactManifestSha256": "76e4603bde71982aabbbf578c315aaf65fbdffe18483e2b921bfb3049a68e89f",
+            "build": "PASS",
+            "check": "PASS",
+            "writer": "OFF"
+          },
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_REPORT.md",
+            "sha256": "e4c8a80ccdeec5594b76c7ed5ad55a4118e50f8b95683ebec565de6764684b9b"
+          },
+          "zip": {
+            "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_EVIDENCE.zip",
+            "sha256": "7fc08bdc680690a5ce7dfa5ae65db63c0a3980e60fd2f5e2f5e0442185ea2da7",
+            "entries": 34
+          },
+          "result": {
+            "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_RESULT.json",
+            "sha256": "33ba043199384e60f623a58315795185e30be512a19ee47b72bccf753541890a"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; OFF preview deployed per 00 ledger, independent HTTP check DNS blocked",
+          "Native game authentication/load/resave/reboot/runtime effects UNKNOWN",
+          "Recipe4 only pre-resave exact same-runtime receipt; remaining23 need scoped proof; five celebration isolated",
+          "00 integrate exact 04/05; 05 Recipe4 UI; 04 remaining23 scoped proof"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "04 SAVE CORE",
+            "05 WEB"
+          ],
+          "condition": "00 serial integrate 04 Recipe4 8 paths + 05 Manual9 UI 5 paths on fixed V28, verify exact preimages and rebuild; 05 Recipe4 typed receipt UI; 04 remaining23 safe subset scoped proof with 5 celebration isolated. V24 frozen.",
+          "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
+        },
+        "rollback": "V28 fixed OFF; restore 04/05 exact preimages and remove additions; V24 unchanged"
       },
       "handoffRecheck": {
         "date": "2026-11-12",
