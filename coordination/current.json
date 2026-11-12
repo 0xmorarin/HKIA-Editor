@@ -1624,11 +1624,11 @@
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ctrlExecution": {
-    "task": "V22_SERIAL_ACCEPTED_RECEIPT_NATIVE_INTEGRATION",
-    "status": "DONE_PRIVATE_INTEGRATION_PRIVACY_REPAIR_LOCAL_PASS_FINAL_QA_READY",
+    "task": "V22_PRIVACY_DECODED_VALUE_REPAIR",
+    "status": "IN_FLIGHT",
     "owner": "00 CTRL",
-    "baseMain": "ee8e79a2fb0a5b8766f8b9e831b6b7b59d1b1285",
-    "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+    "baseMain": "6ae59c1134849cd84b240b0b3dd1e56b503f132f",
+    "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
     "candidate": {
       "label": "V22_INTEGRATED_SCOPED_ACCEPTED_INPUTS_CTRL_PRIVACY_QA_PENDING",
       "file": "HKIA_CTRL_V22_Integrated_20261112_Source.zip",
@@ -1725,6 +1725,9 @@
       "00_RELEASE_GATE_AFTER_FINAL_SCOPED_QA_AND_BROWSER",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
-    "risks": "V22 no live deploy or product merge; native markers and static evidence do not establish game acceptance; no claim prior Git history globally scrubbed; independent QA new privacy fix pending"
+    "risks": "V22 no live deploy or product merge; native markers and static evidence do not establish game acceptance; no claim prior Git history globally scrubbed; independent QA new privacy fix pending",
+    "previousTask": "V22_SERIAL_ACCEPTED_RECEIPT_NATIVE_INTEGRATION",
+    "scope": "00 privacy policy and regression tests only; preserve 17 accepted paths; fixed artifact rebuild; all flags OFF",
+    "dependency": "06 V22 exact source scoped TRUE_RED decoded value only; final independent retest after repair"
   }
 }
