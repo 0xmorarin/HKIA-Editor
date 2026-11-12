@@ -65,12 +65,12 @@
       }
     },
     "05_WEB": {
-      "status": "V18_PREVIEW_UI_AND_CREDITS_INTEGRATED_LOCAL_PASS_QA_PENDING",
+      "status": "V18_OUTPUT_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "CONNECT_REAL_OUTPUT_UI_TO_04_STABLE_CONTRACT_AND_ACCEPTED_CAPABILITIES; ACTUAL_BROWSER_E2E; AFTER_JS_BETA_UI_FIXED_START_ISOLATED_SVELTE_TS_USING_JS_ADAPTER; NO_CODEC_CHANGES",
+      "next": "06_SCOPED_QA_OUTPUT_UI_6_PATHS; 04_ACCEPTED_OPERATION_CONTRACT_THEN_ENABLE_ONLY_ACCEPTED_VERSION_OPERATION_AND_FINAL_BROWSER_E2E",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -81,7 +81,7 @@
       "accountZipProductionSafety": "PENDING_V11_QA",
       "immediateScope": "EXACT_IMAGE_RESOLVER_IN_EXISTING_TABS_WITHOUT_NATIVE_WRITER",
       "sourceImageAdapter": "00_MEDIA_PRIVATE_HANDOFF_VALIDATED",
-      "writerConnection": "PREVIEW_ONLY_REAL_OUTPUT_UI_PENDING",
+      "writerConnection": "STAGED_OUTPUT_HANDLERS_IMPLEMENTED_CORE_AND_UI_ACCEPTANCE_OFF",
       "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "mediaMap": "PRIVATE_IMAGE_MAP_DELIVERED_4076_LOSSLESS_WEBP",
       "v13NativeReadMode": "STRUCTURAL_READ_ONLY_FOR_AMBIGUOUS_MAPS_ACCOUNT_ZIP_EXPORT_DISABLED",
@@ -101,7 +101,25 @@
       "attributionNotice": "REQUIRED_VISIBLE_NOTICE_FROM_CONFIG_RELEASE_GATES_EN_JA",
       "betaRequired": true,
       "upstreamSha256": "352f4f9bc84779962b4cb7c9b1044c20d14fbca59b79d7ea9d54ab2392a40713",
-      "credits": "PRESENT_EN_JA_DEDUP_BUILD"
+      "credits": "PRESENT_EN_JA_DEDUP_BUILD",
+      "outputUi": {
+        "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+        "sourceSha256": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
+        "deltaSha256": "5df0b97442c787598e438ce4f0fb553607ee2fe2f6049764174f20d0cee88ab5",
+        "artifact": "HKIA_WEB05_OutputUI_V18_20261112_Source.zip",
+        "scope": "6_MOD_0_ADD_0_DEL",
+        "focusedPass": 13,
+        "nodePass": 700,
+        "chromeInline": [
+          320,
+          375,
+          1280
+        ],
+        "isolatedSyntheticApplyExportReopen": "PASS",
+        "realOutput": "OFF_EMPTY_ACCEPTANCE_LIST",
+        "independentQa": "PENDING",
+        "http": "UNVERIFIED_TIMEOUT"
+      }
     },
     "06_QA": {
       "status": "V17_SCOPED_PASS_V18_PENDING",
