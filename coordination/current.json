@@ -1272,15 +1272,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V26_EXACT20_BATCH_UI_MISSING_MANUAL_REFERENCE_SCOPED_PASS_V24_WAIT_ENV",
+      "status": "FORMAL_V26_EXACT20_BATCH_UI_02_03_AND_RECIPE32_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_V26_SUCCESSOR; 05_EXACT20_UI; 06_NEW_01_RECIPE_AND_04_EXACT9_QA; 03_RECIPE_CAUSAL; V24_WAIT_ENV",
+      "next": "00_SERIAL_V26_SUCCESSOR; 04_EXACT9_ABSENCE_REVOKE; 05_EXACT20_UI; 03_RECIPE32_CAUSAL; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
       "execution": {
         "task": "FORMAL_01_RECIPE_EXPANSION_V26_SCOPED_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "8c2bd9e6026dadbef06306446e287cb3a4731207",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "fixedDeltaSha256": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
@@ -2167,6 +2167,47 @@
             "condition": "00 integrate scoped accepted inputs and exact two new module allowlist entries; 05 exact20 UI; 04 existing29 causal research accepted, first exact9 no-defined-reward Writer only, others reward UNKNOWN; 01 reference advisory only. New fixed 01/04 evidence separately QA. V24 frozen."
           },
           "rollback": "V26 OFF exact source; remove new additions and restore exact preimages; V24 unchanged"
+        },
+        "verdict": "SCOPED_PASS_RECIPE32_EXISTING_ROW_RESEARCH_ONLY",
+        "manifestSha256": "d584e3eb99d9002a47361c5102269f6e478084de28515d9c37459b78d68482c2",
+        "verified": {
+          "focused": 20,
+          "independentPositive": 32,
+          "independentNegative": 128,
+          "baseExact": 441,
+          "added": 8,
+          "sourceIdentities": 32,
+          "sourceAndGenuineAggregateExact": true,
+          "genuineIndividualPairs": 4,
+          "genuineBatchTargets": 32,
+          "changedExpandedBytes": 32,
+          "reusedBlocks": 33,
+          "celebratedReferences": 5,
+          "lowerObservedPriority": 27,
+          "originalUnchanged": true,
+          "productAuthorized": false,
+          "gameAccepted": false,
+          "switchParity": false
+        },
+        "evidence": {
+          "zip": {
+            "file": "HKIA_06_RECIPE_EXPANSION_V26_QA_EVIDENCE_20261112.zip",
+            "sha256": "cb98e4fe206e4d530676bc8ed68e1f5ea8c37db0a81308f6ffeb7e8cf4b1ad61",
+            "entries": 3
+          },
+          "privateLibraryReadback": "BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "03 targeted causal review 32, 4 representatives then 5 tag8; generic/external/managed body and runtime UNKNOWN",
+          "04 existing-row receipt Writer only after 03 accepted, no product permission",
+          "V24 real HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave unverified"
+        ],
+        "handoff": {
+          "to": [
+            "03 LINKAGE",
+            "00 CTRL"
+          ],
+          "condition": "03 consume exact fixed 01 research only, 00 integrate exact 8 additive paths with accepted V26/other followups; 04 after 03 independent acceptance. V24 frozen."
         }
       },
       "handoffRecheck": {
