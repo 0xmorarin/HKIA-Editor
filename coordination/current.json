@@ -1272,15 +1272,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_01_RESTORE_REPAIR_03_FORMAL49_04_BATCH_05_UI_V25_SCOPED_PASS_V24_WAIT_ENV",
+      "status": "FORMAL_V26_EXACT20_BATCH_UI_MISSING_MANUAL_REFERENCE_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_ACCEPTED_FORMAL_SUCCESSOR_AND_V24_BROWSER_ENV; 04_FORMAL49_EXACT20_PRIVATE_WRITER; 05_FORMAL_FAMILY_BATCH_UI; 02_03_IN_FLIGHT_DO_NOT_DUPLICATE; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER; 07_WAIT_ENV",
+      "next": "00_SERIAL_V26_SUCCESSOR; 05_EXACT20_UI; 06_NEW_01_RECIPE_AND_04_EXACT9_QA; 03_RECIPE_CAUSAL; V24_WAIT_ENV",
       "execution": {
         "task": "FORMAL_V26_EXACT20_BATCH_UI_MISSING_MANUAL_REFERENCE_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
         "scope": "V26 integration 30 paths; 04 exact20 9 paths; 05 batch UI 4 paths; 02 missing Manual 9 ADD; 03 reference and manual causal deltas; no V24 change",
         "owner": "06 QA",
@@ -2036,7 +2036,129 @@
             "v24": "FROZEN_WAIT_ENV"
           },
           "rollback": "R2 OFF; 01 remove 8 additive paths, old verifier not accepted; 04 revert exact 11 paths to single-family; 05 revert four paths to accepted composite; V25 revert 37; V24 untouched"
-        }
+        },
+        "verdict": "SCOPED_PASS_V26_04_EXACT20_05_BATCH_UI_02_03_RESEARCH",
+        "fixedSources": {
+          "v26": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+          "core04": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+          "ui05": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
+          "research02": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
+          "reference03": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
+          "manual03": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb"
+        },
+        "verified": {
+          "focused": 58,
+          "core04": {
+            "verdict": "SCOPED_PASS_EXACT20_V301_OFFLINE_WRITER",
+            "scope": "6MOD3ADD",
+            "genuineOutputs": 20,
+            "complete": 10,
+            "revoke": 10,
+            "slotFields": 132,
+            "accountFields": 12,
+            "pythonRawZip": 20,
+            "accountRaw": 14,
+            "pairs": 6,
+            "reimport": 20,
+            "originalUnchanged": true
+          },
+          "ui05": {
+            "verdict": "SCOPED_PASS_DISTINCT_FAMILY_BATCH_UI_INLINE",
+            "scope": "2MOD2ADD",
+            "controllerRealOutputs": 2,
+            "fields": [
+              18,
+              26
+            ],
+            "inlineChromium": [
+              320,
+              375,
+              1280
+            ],
+            "isolatedDownloadReimport": 1,
+            "wrongVersionDenied": true,
+            "staleExportDenied": true
+          },
+          "research02": {
+            "verdict": "SCOPED_PASS_RESEARCH_EXISTING29_ONLY",
+            "scope": "9ADD",
+            "genuineSlotReparse": 58,
+            "staleCAS": 58,
+            "partialPair": 58,
+            "reverseDenied": 58,
+            "nativeInstructions": 46,
+            "nativeBranches": 9,
+            "typeChecks": 12,
+            "structuralWrites": 0
+          },
+          "manual03": {
+            "verdict": "SCOPED_PASS_CONDITIONAL_EXISTING29_ONLY",
+            "scope": "8ADD",
+            "realTargets": 29,
+            "groups": 8,
+            "complete": 6,
+            "revoke": 23,
+            "nativeAnchors": 10,
+            "branches": 4,
+            "structuralWrites": 0
+          },
+          "reference03": {
+            "verdict": "SCOPED_PASS_REFERENCE_ADVISORY_ONLY",
+            "scope": "8ADD",
+            "nativeAnchors": 36,
+            "branches": 9,
+            "typedDocs": 20207,
+            "comicCounterMembers": 5,
+            "steamSwitchParity": false
+          },
+          "v26": {
+            "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+            "sourceEntries": 441,
+            "exactAcceptedPaths": 30,
+            "sourceUnchanged": 411,
+            "distEntries": 4144,
+            "distChanged": 7,
+            "distUnchanged": 4137,
+            "webp": 4076,
+            "modules": 53,
+            "artifactManifestSha256": "76c570673126232b812c32e59a430f13293bea25cd4c9b9997a81af92f03918f",
+            "independentRebuildAllHashes": "PASS"
+          }
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_V26_FORMAL_FOLLOWUP_REPORT_20261112.md",
+            "sha256": "a5e51a167ed8abc52659d9fb3f9477be76554ab1f7908ff3c79ffe30f43a4cc3"
+          },
+          "zip": {
+            "file": "HKIA_06_V26_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
+            "sha256": "2e551f10de18d7e6ef6ca535b07a41ba52fed3d4377d7115c74c7e0cd498c8e2",
+            "entries": 24
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V26_FORMAL_FOLLOWUP_20261112.md",
+            "sha256": "21015b672298a4b38890a85b8b1bba516972de3b3b1004a98f04a984ca2b4084"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+        },
+        "remaining": [
+          "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
+          "Native authentication/game load/resave/reboot/reward replay",
+          "Missing Manual first-progress creation and generic dispatch",
+          "Steam/Switch asset parity and active Collection reference closure",
+          "04 new exact20 modules allowlist + integration",
+          "06 newer 01 Recipe expansion and 04 exact9 after fixed dependencies"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "04 SAVE CORE",
+            "05 WEB",
+            "01 COLLECTION"
+          ],
+          "condition": "00 integrate scoped accepted inputs and exact two new module allowlist entries; 05 exact20 UI; 04 existing29 causal research accepted, first exact9 no-defined-reward Writer only, others reward UNKNOWN; 01 reference advisory only. New fixed 01/04 evidence separately QA. V24 frozen."
+        },
+        "rollback": "V26 OFF exact source; remove new additions and restore exact preimages; V24 unchanged"
       },
       "handoffRecheck": {
         "date": "2026-11-12",
