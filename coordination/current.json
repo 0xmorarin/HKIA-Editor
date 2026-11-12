@@ -16,14 +16,26 @@
       "next": "FORMAL_READY_FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 06 scoped QA",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
         "acceptance": "Native producer/consumer, genuine offline exact diff, no invented IDs/unique data, REQUIRED/RELATED/UNKNOWN and denied cases; typed contract/tests; no activation.",
-        "next": "04 SAVE CORE and 06 scoped QA",
+        "next": "06 scoped new 7 paths independent QA; 03 target evidence ingestion after current task; 04 reuse research structural contract only, no unrestricted ownership activation; wait new specific safe reference/producer evidence or QA counterexample for further 01 work.",
         "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431",
-        "executionScope": "Targeted Non-Recipe reference closure and exact native persistence; additive 01 contract/tests only; V24 frozen"
+        "executionScope": "Targeted Non-Recipe reference closure and exact native persistence; additive 01 contract/tests only; V24 frozen",
+        "latestEvidence": {
+          "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+          "deltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+          "manifestSha256": "6abd6de3139ee130e63012ae84109f02d6db357541ae65fcd69e9836382fb690",
+          "artifact": "HKIA_01_FORMAL_OWNERSHIP_R2_DELTA_20261112.zip",
+          "scope": "7 ADD 0 MOD 0 DEL; 396 base files unchanged",
+          "verified": "22 focused, 18 new Native anchors, 3 target source facts, Dunebug new genuine delete/reinsert 2, comic new R2 CAS/lineage 2, 2 version recipe presence, private readback SHA CRC",
+          "classification": "STRUCTURAL_REQUIRED_NEXTID_AND_DOCUMENTS; PREVIOUSLY_OWNED_CONDITION_AND_CELEBRATION_RELATED; NO_NEW_PRODUCT_AUTHORIZATION_OR_CROSS_STORE_WRITES",
+          "gameAccepted": false,
+          "productAuthorized": false
+        },
+        "remaining": "Comic Shop managed body and target-specific active placement/quest/counter closure; Dunebug daily mission and placement; Wollypog daily mission; generic consumers, game load/resave and platform parity unknown; both current genuine fixtures contain all 282 Recipe rows, absent Recipe new producer unproven."
       }
     },
     "02_ACHIEVEMENT": {
