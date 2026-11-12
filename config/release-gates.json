@@ -79,5 +79,21 @@
   "notices": {
     "verifiedRightsComplaint": "STOP_PUBLIC_DISTRIBUTION_AND_DELETE_REPOSITORY",
     "automaticDeletion": false
+  },
+  "verificationPolicy": {
+    "ownerDecision": "2026-11-12_STATIC_FIRST_RELEASE_PRIORITY",
+    "priority": "RELEASE_CRITICAL_P0_P1",
+    "evidenceOrder": [
+      "NATIVE_STATIC_READ_WRITE_TRACE",
+      "PRIVATE_REAL_SAVE_OFFLINE_TYPED_PARSE_AND_ROUNDTRIP",
+      "INDEPENDENT_SCOPED_NEGATIVE_AND_REGRESSION_QA",
+      "REAL_BROWSER_E2E",
+      "REAL_DEVICE_ONLY_IF_IRREDUCIBLE"
+    ],
+    "realDevice": "CONDITIONAL_NOT_BLANKET_REQUIRED",
+    "deviceEscalation": "ONLY_WHEN_RELEASE_CRITICAL_GAME_LOAD_PERSISTENCE_AUTH_OR_SIDE_EFFECT_CANNOT_BE_RESOLVED_BY_STATIC_AND_OFFLINE_EVIDENCE",
+    "unobservedGameBehavior": "UNVERIFIED_NEVER_INFER_PASS",
+    "unprovenWriteScope": "FAIL_CLOSED_OR_EXCLUDE_FROM_RELEASE_UNTIL_PROVEN",
+    "releaseNeedsOwnerApproval": true
   }
 }
