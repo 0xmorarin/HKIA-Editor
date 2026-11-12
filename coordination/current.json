@@ -863,10 +863,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 06 QA: independently verify exact 05 receipt UI 4 paths (P0), 03 AlwaysRun causal 10 ADD, 04 Native load boundary 3 ADD. Separate scopes, reuse V20/21 accepted evidence, compare fixed base and no duplicate full QA. Do not re-launch completed 03/04/05 source work absent new causal evidence or TRUE_RED.",
-    "After independent scoped PASS, 00 CTRL serial integrate only accepted deltas onto V21, verify exact manifests/unchanged entries and combined distribution; no product merge/deploy/flag.",
-    "06 final fixed Beta real HTTP/HTTPS ESM WebCrypto Module Worker after integrated source and authorized execution environment; no inline substitute. 07 WAIT_ENV private Rust toolchain + real v300/301 parity independent of JS Beta.",
-    "Owner explicit approval for actual deploy/live flags; rollback ready. Svelte migration after JS Beta UI fixed; no repeat media extraction."
+    "NOW 06 QA V22 fixed: 4 new CTRL privacy paths + affected distribution/runtime, exact 17 independently accepted inputs reused; verify 4144 artifact, two private parts, final combined offline scope. Do not repeat 03/04/05 accepted investigations.",
+    "06 actual HTTP/HTTPS ESM native WebCrypto Module Worker in authorized environment, genuine Switch 300/301 local-only; fixed OFF artifact and isolated release-equivalent activation witness separate. If unchanged admin block, wait authorized environment; no inline substitute. Resolve only irreducible game auth/load/resave evidence for supported operation scope.",
+    "00 after final QA: select fixed activation candidate, scoped validation, rollback, actual deploy/live flags explicit Owner approval. No deployment from this task. Pre-privacy-fix artifacts prohibited for publication.",
+    "07 WAIT_ENV private Rust kit, no JS Beta gate; Svelte migration only after JS Beta UI fixed."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -958,6 +958,73 @@
   },
   "lastVerifiedBase": "Drive v0.2.11 SHA256 1bf5fbf7cca8c0cb5084cdb43a1547f6507dc917b5328e46130fa805db4420bf",
   "localIntegratedCandidate": {
+    "artifact": "HKIA_CTRL_V22_Integrated_20261112_Source.zip",
+    "privateLibraryPath": "/HKIA Editor Private/HKIA_CTRL_V22_Integrated_20261112_Source.zip",
+    "sha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
+    "entries": 396,
+    "bytes": 2949168,
+    "baseSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+    "exactComparison": {
+      "modified": 6,
+      "added": 15,
+      "deleted": 0,
+      "unchanged": 375,
+      "upstreamConflicts": 0
+    },
+    "delta": {
+      "file": "HKIA_CTRL_V22_Integrated_20261112_Delta.zip",
+      "sha256": "b14ecf7768eb4588a0b70e343764552d714964a36bfa48595032db03f50e9207",
+      "modified": 6,
+      "added": 15,
+      "deleted": 0
+    },
+    "manifest": {
+      "file": "HKIA_CTRL_V22_Integrated_20261112_Manifest.json",
+      "sha256": "908f3724c5c5411b2f9ed1eb10fd08f52088a6b9e9ca8a2181b390fcefb63601"
+    },
+    "checks": {
+      "tests": {
+        "pass": 792,
+        "skip": 36,
+        "fail": 0
+      },
+      "check": "PASS_SERIAL_AFTER_BUILD",
+      "build": "PASS",
+      "distribution": {
+        "entries": 4144,
+        "bytes": 146154762,
+        "webp": 4076,
+        "modules": 53,
+        "additionalModules": 34,
+        "allFileHashes": "PASS",
+        "manifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+        "parts": [
+          {
+            "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART1.zip",
+            "sha256": "86da95d728a20a6d30132ac49d3f76e7c9914fbbeb2bfc58ff3a2227e08c6d22",
+            "entries": 2069,
+            "bytes": 59285956
+          },
+          {
+            "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART2.zip",
+            "sha256": "92ee87b1373891ab9ce83b034bf2effff4a487dfa0cf60066f1ae7526b0232da",
+            "entries": 2075,
+            "bytes": 60136617
+          }
+        ],
+        "artifactPolicy": "PASS_WITH_NEW_PRIVATE_REFERENCE_GATE",
+        "privacy": "5_JSON_8_PROVENANCE_KEYS_REMOVED_ALL_OTHER_JSON_VALUES_EQUAL"
+      },
+      "flags": "WRITER_RECIPE_UI_PAGES_OFF",
+      "noProductMainMerge": true
+    },
+    "independentQa": "17_INPUT_PATHS_SCOPED_PASS_NEW_CTRL_4_PATHS_AND_FINAL_COMBINED_PENDING",
+    "nativeWriterEnabled": false,
+    "pagesEnabled": false,
+    "gameMediaPublic": false,
+    "productSourceMergedToGitHubMain": false
+  },
+  "previousLocalIntegratedCandidate": {
     "artifact": "HKIA_CTRL_V21_Integrated_20261112_Source.zip",
     "privateLibraryPath": "/HKIA Editor Private/HKIA_CTRL_V21_Integrated_20261112_Source.zip",
     "sha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
@@ -1004,81 +1071,6 @@
       "noProductMainMerge": true
     },
     "independentQa": "INPUT_SCOPED_PASS_COMBINED_FINAL_QA_PENDING",
-    "nativeWriterEnabled": false,
-    "pagesEnabled": false,
-    "gameMediaPublic": false,
-    "productSourceMergedToGitHubMain": false
-  },
-  "previousLocalIntegratedCandidate": {
-    "artifact": "HKIA_CTRL_Integrated_Candidate_V18_20261112.zip",
-    "privateLibraryPath": "/HKIA Editor Private/HKIA_CTRL_Integrated_Candidate_V18_20261112.zip",
-    "sha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-    "entries": 363,
-    "bytes": 2914697,
-    "baseSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
-    "baseIndependentQA": "V17_SCOPED_PASS_RESEARCH_PREVIEW_SYNTHETIC_OUTPUT_ONLY",
-    "exactComparison": {
-      "modified": 16,
-      "added": 26,
-      "deleted": 0,
-      "unchanged": 321,
-      "upstreamConflicts": 0
-    },
-    "upstream": {
-      "core04": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
-      "web05": "352f4f9bc84779962b4cb7c9b1044c20d14fbca59b79d7ea9d54ab2392a40713",
-      "collection01Delta": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
-      "pages00": "d3e7a5d75bf08c76e543440a850de516f50e0b1d9fa62e8bff5fcb2ac90aeeef"
-    },
-    "delta": {
-      "file": "HKIA_CTRL_V17_to_V18_Delta_20261112.zip",
-      "sha256": "be504c736e274df23fb8022b436c28f0f60364224f4a53b0e9e38c0aa957146e",
-      "entries": 42
-    },
-    "manifest": {
-      "file": "HKIA_CTRL_V18_Manifest_20261112.json",
-      "sha256": "3b301f4f2fd3a8af8742c73c1859d89a77f2760ddd748d8ecf264e9ba8078ad0"
-    },
-    "checks": {
-      "tests": {
-        "pass": 698,
-        "skip": 36,
-        "fail": 0
-      },
-      "check": "PASS",
-      "build": "PASS",
-      "zipCrc": "PASS",
-      "privateIsolatedWriter": {
-        "version300": 6,
-        "version301": 8,
-        "rollback": 6,
-        "undoReset": 2,
-        "familyPreviewDenied": 3,
-        "originalUnchanged": 2,
-        "nativeAuthentication": "UNKNOWN",
-        "gameAccepted": false,
-        "flagOnlyInIsolatedCopy": true,
-        "aggregateSha256": "cdb147bed87bea8db959cd34868d5786e96eb88b41cd796cc3a0ccbc745eeba8",
-        "aggregateFile": "HKIA_CTRL_V18_Private_Output_Aggregate_20261112.json"
-      },
-      "distribution": {
-        "entries": 4141,
-        "bytes": 146119177,
-        "webp": 4076,
-        "modules": 50,
-        "additionalModules": 31,
-        "manifestSha256": "5d1bcded262e2dfaa35415ec519f42d8083c76a8ed19fcd0b0cb867bbc1dd6ad",
-        "allFileHashVerified": true,
-        "creditDedup": true,
-        "writer": "OFF",
-        "previewUI": "OFF"
-      },
-      "browserHTTP": "BLOCKED_ENVIRONMENT",
-      "nativeWebCrypto": "UNVERIFIED",
-      "browserModuleWorker": "UNVERIFIED"
-    },
-    "independentQa": "PENDING_V18_42_PATHS",
-    "specificContractMismatch": "RECIPE_REVERSE_ZERO_ROW_RESTORE_WITHOUT_TRUSTED_TRANSITION_RECEIPT; DO_NOT_ENABLE_RECIPE_UNTIL_FIXED",
     "nativeWriterEnabled": false,
     "pagesEnabled": false,
     "gameMediaPublic": false,
@@ -1555,118 +1547,106 @@
   },
   "ctrlExecution": {
     "task": "V22_SERIAL_ACCEPTED_RECEIPT_NATIVE_INTEGRATION",
-    "status": "IN_FLIGHT",
+    "status": "DONE_PRIVATE_INTEGRATION_PRIVACY_REPAIR_LOCAL_PASS_FINAL_QA_READY",
     "owner": "00 CTRL",
     "baseMain": "ee8e79a2fb0a5b8766f8b9e831b6b7b59d1b1285",
-    "baseSourceSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
-    "v20": {
-      "label": "V20_RECEIPT_PREFLIGHT_NOT_ACCEPTED",
-      "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Source.zip",
-      "sha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
-      "entries": 380,
-      "delta": {
-        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Delta.zip",
-        "sha256": "003f123e67c399b8726b4e2a2e3d0643d683bf6a5d64e7a10a32812c56d61db6",
-        "modified": 12,
-        "added": 5,
-        "deleted": 0
-      },
-      "manifest": {
-        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Manifest.json",
-        "sha256": "e81d14dcac33b19052763f5b78bab767d29c620cd3347e00299dd8e97bc778b2"
-      },
-      "evidence": {
-        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Evidence.zip",
-        "sha256": "771fbaf2583648606aae08f36ce893331fdc8776d0be2c2657ddf20470c87822"
-      },
-      "privateLibrary": "HKIA Editor Private",
-      "readback": "ALL_4_ARTIFACT_SHA_AND_380_ENTRY_HASHES_CRC_PASS",
-      "acceptance": "06 SCOPED_PASS_MODULE_CLOSURE_DISTRIBUTION_ONLY; 04 receipt exact 16 SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY"
-    },
+    "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
     "candidate": {
-      "label": "V21_INTEGRATED_SCOPED_ACCEPTED_INPUTS_FINAL_QA_PENDING",
-      "file": "HKIA_CTRL_V21_Integrated_20261112_Source.zip",
-      "sha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
-      "entries": 381,
+      "label": "V22_INTEGRATED_SCOPED_ACCEPTED_INPUTS_CTRL_PRIVACY_QA_PENDING",
+      "file": "HKIA_CTRL_V22_Integrated_20261112_Source.zip",
+      "sha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
+      "entries": 396,
+      "bytes": 2949168,
       "delta": {
-        "file": "HKIA_CTRL_V21_Integrated_20261112_Delta.zip",
-        "sha256": "19d4069c97dbdcb2f8639ff6f68ef4f6698721cb501a22388e1a521420be9815",
-        "modified": 3,
-        "added": 1,
+        "file": "HKIA_CTRL_V22_Integrated_20261112_Delta.zip",
+        "sha256": "b14ecf7768eb4588a0b70e343764552d714964a36bfa48595032db03f50e9207",
+        "modified": 6,
+        "added": 15,
         "deleted": 0
       },
       "manifest": {
-        "file": "HKIA_CTRL_V21_Integrated_20261112_Manifest.json",
-        "sha256": "b19876786c736b9db87500445f08d1de6cbbfbddd36210e5679981a22d1b81aa"
+        "file": "HKIA_CTRL_V22_Integrated_20261112_Manifest.json",
+        "sha256": "908f3724c5c5411b2f9ed1eb10fd08f52088a6b9e9ca8a2181b390fcefb63601"
       },
       "evidence": {
-        "file": "HKIA_CTRL_V21_Integrated_20261112_Evidence.zip",
-        "sha256": "895c8afe77ce0b6e770048a55f2a2138692b34b1c9f5a6a4179308fcbf48ddf8"
+        "file": "HKIA_CTRL_V22_Integrated_20261112_Evidence.zip",
+        "sha256": "ed74b1edaf44db08aa667d7de16acf4d03ff7ed319dabde720e68aca762f4e68"
       },
       "privateLibrary": "HKIA Editor Private",
-      "readback": "4_ARTIFACT_SHA_AND_381_ENTRY_HASHES_CRC_PASS"
+      "readback": "ALL_6_ARTIFACT_SHA_AND_396_SOURCE_4144_DIST_ENTRIES_CRC_SHA_PASS"
     },
     "acceptedInputs": {
-      "core04": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-      "web05": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
-      "webDelta": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
-      "qaHandoff": "d912d404150bd3fe63db304148c39d7b4720e279dfeaa46bb98f3fbed4523c8b"
+      "v21": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+      "web05": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
+      "core04": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+      "linkage03Delta": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
+      "qaHandoff": "5bba56e18bdb3fbee5c24964d29bc51eb2b86c89829bbce1803169e4dafc87ae",
+      "scope": "17 accepted exact paths; V21 combined offline accepted; receipt same-runtime pre-resave only; native evidence only, no unconditional new writes"
     },
-    "changes": "Exact 3 MOD 1 ADD from accepted 05 manifest; no CTRL/04/03 modifications; 377 unchanged V20 paths; no new dependency",
+    "changes": {
+      "upstream": "05 2MOD2ADD,04 3ADD,03 10ADD; exact manifests, zero overlap",
+      "ctrl": "4 MOD: scripts/build-site.mjs, scripts/pages-artifact-policy.mjs, scripts/00-beta-module-closure.mjs, tests/pages-artifact-policy.test.mjs; shared recursive distribution-only provenance sanitation and fail-closed gate",
+      "trueRed": "Existing 5 distribution JSONs had 8 private provenance reference keys; no public deploy; fixed locally, independent QA pending",
+      "distChanged": "Only five JSONs changed relative to pre-fix V22 artifact; 8 keys removed, all other semantic values equal; 4139 dist paths unchanged",
+      "executionRace": "Concurrent check read partially written JSON; sequential build then check PASS; avoid concurrent write/read on dist; not product defect"
+    },
     "verified": {
       "tests": {
-        "pass": 748,
+        "pass": 792,
         "skip": 36,
         "fail": 0
       },
-      "check": "PASS",
+      "check": "PASS_SERIAL_AFTER_BUILD",
       "build": "PASS",
       "distribution": {
         "entries": 4144,
-        "bytes": 146148581,
+        "bytes": 146154762,
         "webp": 4076,
         "modules": 53,
         "additionalModules": 34,
         "allFileHashes": "PASS",
-        "manifestSha256": "3b3f60fd95376a05111b9daba29ad2e5cab2a267973e74566a04738855e36fb5",
-        "artifactPolicy": "PASS"
+        "manifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+        "parts": [
+          {
+            "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART1.zip",
+            "sha256": "86da95d728a20a6d30132ac49d3f76e7c9914fbbeb2bfc58ff3a2227e08c6d22",
+            "entries": 2069,
+            "bytes": 59285956
+          },
+          {
+            "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART2.zip",
+            "sha256": "92ee87b1373891ab9ce83b034bf2effff4a487dfa0cf60066f1ae7526b0232da",
+            "entries": 2075,
+            "bytes": 60136617
+          }
+        ],
+        "artifactPolicy": "PASS_WITH_NEW_PRIVATE_REFERENCE_GATE",
+        "privacy": "5_JSON_8_PROVENANCE_KEYS_REMOVED_ALL_OTHER_JSON_VALUES_EQUAL"
       },
       "flags": "WRITER_RECIPE_UI_PAGES_OFF",
       "noProductMainMerge": true
     },
     "unverified": [
-      "FINAL_COMBINED_INDEPENDENT_QA",
-      "RECIPE_UI",
-      "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
-      "NATIVE_AUTH_LOAD_RESAVE_REBOOT",
+      "06_NEW_CTRL_4_PATHS_PRIVACY_AND_COMBINED_V22",
+      "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+      "GAME_AUTH_LOAD_RESAVE_REBOOT_ZERO_ROW_RETENTION",
       "RUST_COMPILE_PARITY"
     ],
-    "rollback": "V20 preflight exact previous source; V19 recipe-denied; V17 research accepted",
+    "rollback": "V21 source for development only; previous pre-privacy-fix artifacts NOT eligible for publication; maintain OFF flags",
     "handoff": {
-      "to": [
-        "05 WEB",
-        "04 SAVE CORE",
-        "03 LINKAGE",
-        "06 QA"
-      ],
-      "web": "V21 base; recipe-aware UI issuer worker stays alive; exact zero edited File and volatile token only; two confirmations; no token persistence; revoke close/restart/resave; no ordinary batch redo; flags OFF",
-      "core": "04: actual body/conditions of FixBrokenBouldersFromMp_ENG_4777 and LogDuplicateInventoryItems, native envelope authentication and load/persistence boundary. Do not duplicate MigrateAchievementCounters body owned by 03; consume its causal contract. No speculative writes.",
-      "qa": "Final combined V21 4 paths plus affected interaction and exact dist, reuse matching fixed scoped evidence; real HTTP/HTTPS native WebCrypto Module Worker on authorized environment; if environment unchanged wait, do not rerun inline as browser acceptance; receipt UI new source independent QA after 05",
-      "linkage": "03: exact resolved MigrateAchievementCounters AlwaysRun body/condition, only impact on already-supported Achievement progress/timestamp and Collection/Recipe derived counters; prove REQUIRED/RELATED/INDEPENDENT/UNKNOWN, no blanket graph or 04 product edits. Direct to 04 with static anchors and scoped contract."
+      "to": "06 QA",
+      "scope": "V22 fixed 21 paths vs V21: reuse exact 17 accepted paths; independently test new 00 4 changes, JSON provenance removal and fail-closed regression; reverify 4144-file fixed dist parts with manifest, affected runtime catalog/import/recipe UI paths; no wholesale re-QA",
+      "condition": "Fixed OFF artifact private Library saved/readback; if authorized real browser environment available run actual HTTP/HTTPS ESM WebCrypto Module Worker genuine 300/301 local-only isolated release-equivalent operations; no inline or Node bridge PASS; do not retry unchanged blocked env; record exact gate outcomes and precise remaining irreducible native/game witnesses",
+      "after": "00 integrate any QA repair, determine actual release activation candidate (OFF shipped baseline not release-ready), final fixed-source/real-browser/rollback/Owner approval before live flag/deploy; game evidence conditional only where irreducible"
     },
     "nextReadyParallel": [
-      "06_QA_05_RECEIPT_UI_4_PATHS",
-      "06_QA_03_ALWAYSRUN_CAUSAL_10_ADD",
-      "06_QA_04_NATIVE_LOAD_BOUNDARY_3_ADD"
+      "06_V22_NEW_CTRL_PRIVACY_AND_FINAL_COMBINED_SCOPED_QA"
     ],
     "nextAfterDep": [
-      "00_SERIAL_ACCEPTED_NEW_DELTA_AFTER_SCOPED_QA",
-      "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_UI_AND_AUTHORIZED_ENV",
-      "07_VERIFIED_RUST_TOOLCHAIN",
-      "03_04_05_ONLY_NEW_CAUSAL_EVIDENCE_OR_SCOPED_QA_TRUE_RED"
+      "06_REAL_BROWSER_AUTHORIZED_ENV",
+      "00_RELEASE_GATE_AFTER_FINAL_SCOPED_QA_AND_BROWSER",
+      "07_VERIFIED_RUST_TOOLCHAIN"
     ],
-    "previousTask": "V21_SERIAL_ACCEPTED_BATCH_INTEGRATION",
-    "scope": "V21 accepted 17 disjoint paths; private serial integration, cumulative checks, fixed artifact and final gate handoff; no live flag or deploy",
-    "dependency": "06 exact scoped acceptance 05/03/04; final combined/browser/game acceptance pending"
+    "risks": "V22 no live deploy or product merge; native markers and static evidence do not establish game acceptance; no claim prior Git history globally scrubbed; independent QA new privacy fix pending"
   }
 }
