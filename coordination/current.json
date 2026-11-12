@@ -130,7 +130,6 @@
           "manifestSha256": "b8f907f34110e8b75a80b1af11a465239efd5f6db686189d4330d1f25e932ec3",
           "entries": 10,
           "scope": "10_ADD_0_MOD_0_DEL; 396 R2 base entries unchanged",
-          "libraryId": "libfile_ef620bc2ac808191882a610bc74c1ba5",
           "evidence": "17 focused; 85 including V16/V20 adjacent; 56 Native anchors/6 slots/17 method bindings; 3 genuine forward and exact inverse expanded reparse, reward rows preserved, Account clone inverse",
           "classification": "RELATED_REWARD_DISPATCH_TO_INVENTORY_AND_SAVE_REQUEST; NO_NEW_REQUIRED; PERSISTED_CLAIM_IDEMPOTENCY_UNKNOWN",
           "gameAccepted": false
@@ -193,9 +192,9 @@
               "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
               "changedPaths": "8_MOD_2_ADD",
               "artifacts": {
-                "source": "libfile_90d193c19fbc81918cc70762c45a0667",
-                "delta": "libfile_c0699fb1510881919649d28c16dbbb28",
-                "manifest": "libfile_2d465011fd3081918d70809a14f23dd7"
+                "source": "HKIA_04_RecipeContractRepair_V18_20261112_Source.zip",
+                "delta": "HKIA_04_RecipeContractRepair_V18_20261112_Delta.zip",
+                "manifest": "HKIA_04_RecipeContractRepair_V18_20261112_Manifest.json"
               },
               "verified": {
                 "unitPass": 701,
@@ -234,9 +233,9 @@
             "manifestSha256": "e61f9c5385b96b2f7d6644c0dc058f774b99a218a615252317d00e5b66f82688",
             "changedPaths": "11_MOD_5_ADD_AGAINST_ACCEPTED_04_REPAIR_PLUS_03_DELTA",
             "artifacts": {
-              "source": "libfile_3730f8fe88d88191b4547e5dc8591623",
-              "delta": "libfile_59cf06cab5d88191b4dbdf7fa52cff87",
-              "manifest": "libfile_4858a81c56e48191bcc21aa132f9a8e5"
+              "source": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Source.zip",
+              "delta": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Delta.zip",
+              "manifest": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Manifest.json"
             },
             "verified": {
               "unitPass": 742,
@@ -286,9 +285,9 @@
           "manifestSha256": "ef55d4f895a93ac3312be853198683783dcb65e86c3c4c4d0a1a155a7bbaa8ec",
           "changedPaths": "3_ADD_0_MOD_0_DEL",
           "artifacts": {
-            "source": "libfile_2e7dcce2134c8191b680747cbdcfff94",
-            "delta": "libfile_a6481dcae25c8191a9548bba5c4b81ca",
-            "manifest": "libfile_8d06c200a3c8819185e238b0f281c1bc"
+            "source": "HKIA_04_NativeLoadBoundary_V21_20261112_Source.zip",
+            "delta": "HKIA_04_NativeLoadBoundary_V21_20261112_Delta.zip",
+            "manifest": "HKIA_04_NativeLoadBoundary_V21_20261112_Manifest.json"
           },
           "verified": {
             "nativeInstructionAnchors": 72,
@@ -333,9 +332,9 @@
         "manifestSha256": "59d66c5cfdc83963093c73cfe8ba7c69462cfd12ab1be2d922fa3b466ffabe7c",
         "changedPaths": "8_MOD_4_ADD_0_DEL",
         "artifacts": {
-          "source": "libfile_77c4d0af22608191b2ead1b2e0131967",
-          "delta": "libfile_b4077e5f09d481919726417cbeb7e0f0",
-          "manifest": "libfile_300e6c296f148191b97517ab8921d84a"
+          "source": "HKIA_04_FormalFamilyRevoke_R2_20261112_Source.zip",
+          "delta": "HKIA_04_FormalFamilyRevoke_R2_20261112_Delta.zip",
+          "manifest": "HKIA_04_FormalFamilyRevoke_R2_20261112_Manifest.json"
         },
         "verified": {
           "baseUnchangedEntries": 388,
@@ -478,11 +477,11 @@
           "evidenceSha256": "22b9cada77e7482beba356323c5bf6a1c7632ad4de22902746da727cebd9beed",
           "changedPaths": "3_MOD_1_ADD_0_DEL",
           "artifacts": {
-            "source": "libfile_94c0b729bf348191842206797bf3c915",
-            "delta": "libfile_c22b0e71a3f08191b78d2ef0c29c09d5",
-            "manifest": "libfile_8c20eabd1bc08191832a03eeecf526d1",
-            "evidence": "libfile_58b3c4f2e4a881918f6177b9db6c378a",
-            "handoff": "libfile_8ca003cfe56481919e6750862fbfc05f"
+            "source": "HKIA_WEB05_AtomicBatchUI_V19_20261112_Source.zip",
+            "delta": "HKIA_WEB05_AtomicBatchUI_V19_20261112_Delta.zip",
+            "manifest": "HKIA_WEB05_AtomicBatchUI_V19_20261112_Manifest.json",
+            "evidence": "HKIA_WEB05_AtomicBatchUI_V19_20261112_Evidence.zip",
+            "handoff": "HKIA_WEB05_AtomicBatchUI_V19_20261112_HANDOFF.md"
           },
           "verified": {
             "focused": 17,
@@ -545,11 +544,11 @@
         "changedPaths": "2_MOD_2_ADD_0_DEL",
         "baseComposite": "V20 33ece2e6 + accepted 05 batch delta 892b63ec; 381 logical entries; not official 00 integration",
         "artifacts": {
-          "source": "libfile_52a97e30d5a08191867c11edbc312f07",
-          "delta": "libfile_5968d12392448191888201ae18efd0bf",
-          "manifest": "libfile_c0077311a6e0819193e6d5f64d1104f6",
-          "evidence": "libfile_c4a86785e8d081918d08e1f4876ca90d",
-          "handoff": "libfile_55352c1810d88191a3826d9fe046778e"
+          "source": "HKIA_WEB05_RecipeReceiptUI_V20_20261112_Source.zip",
+          "delta": "HKIA_WEB05_RecipeReceiptUI_V20_20261112_Delta.zip",
+          "manifest": "HKIA_WEB05_RecipeReceiptUI_V20_20261112_Manifest.json",
+          "evidence": "HKIA_WEB05_RecipeReceiptUI_V20_20261112_Evidence.zip",
+          "handoff": "HKIA_WEB05_RecipeReceiptUI_V20_20261112_HANDOFF.md"
         },
         "verified": {
           "focusedNew": 5,
@@ -1023,19 +1022,16 @@
           "evidence": {
             "report": {
               "file": "HKIA_06_QA_V23_R2_PRIVACY_SCOPED_REPORT_20261112.md",
-              "sha256": "43ed5a3ba8235ffb8a4c318f46a577454385590a23136c6e9291d50cdc61d19a",
-              "libraryId": "libfile_a5aa2f41d7a4819186ae2968cbb17dad"
+              "sha256": "43ed5a3ba8235ffb8a4c318f46a577454385590a23136c6e9291d50cdc61d19a"
             },
             "zip": {
               "file": "HKIA_06_QA_V23_R2_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
               "sha256": "fe73a8280a01800c8bc23602b8a2249cfe51d6af0639974db0a58400e3b10ad7",
-              "entries": 15,
-              "libraryId": "libfile_f248947cd6288191af5cb8881fc0f76c"
+              "entries": 15
             },
             "handoff": {
               "file": "HKIA_06_HANDOFF_00_V23_R2_20261112.md",
-              "sha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd",
-              "libraryId": "libfile_379742514c348191be2a7a2615c74d59"
+              "sha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd"
             },
             "privateLibraryReadback": "ALL_3_BYTE_EXACT"
           },
@@ -1251,11 +1247,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW parallel 01/02/03/04/05 formalTask on V23 R2 OFF, 00 public-safe source/test closure and release staging; V24 frozen and independent activation scoped PASS, no duplicate 06 offline QA.",
-    "WAIT_ENV 06 actual authorized HTTP/HTTPS ESM native WebCrypto Module Worker with genuine 300/301 both domains; V24 BrowserKit review scoped PASS but required full actual UI cases remain. Owner private PC possible; no admin bypass. Local preview pack is optional view, not acceptance. Narrow game witness only if irreducible release-critical.",
-    "00 earliest functional GitHub Pages Beta after fixed source/site, full required evidence, exact approved commit/manifest and rollback, explicit Owner approval; no pre-approval publication or live flag. Old draft PR1 not current product.",
-    "Formal direct handoffs per newly fixed contract/delta: 04 implement proven operations, 06 scoped QA, 05 connect, 00 serial integrate. No wait for full formal coverage before Beta Pages.",
-    "07 WAIT_ENV independent Rust kit; no JS Beta gate."
+    "NOW 04 existing V16 private family revoke writer proof on R2 OFF; 06 independently review 02 fixed 8 ADD + 03 fixed 10 ADD and 00 178-file public source closure (13 projection changes); separate scopes, parallel with 01 and 05 already IN_FLIGHT. 02/03 no duplicate restart. V24 frozen.",
+    "06 actual authorized HTTP/HTTPS native WebCrypto Module Worker genuine 300/301 remains WAIT_ENV. Review closure independently; after required browser and irreducible game evidence, 00 exact public source CI and manual artifact deployment, rollback and explicit Owner approval; no live changes now.",
+    "Formal direct handoffs after scoped PASS: 04 new proven operations, 05 UI, 06 scoped QA, 00 serial integration. 07 WAIT_ENV independent.",
+    "Current ledger privacy: use filenames and SHA only; no private Library/Drive IDs. Historical Git exposure not removed; no force-push without Owner authorization."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -2068,12 +2063,8 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-      "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
-      "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
-      "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-      "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
-      "00_PAGES_PUBLIC_SAFE_SOURCE_TEST_CLOSURE"
+      "04_FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
+      "06_FORMAL_02_8_ADD_AND_03_10_ADD_AND_00_PAGES_CLOSURE_SCOPED_QA"
     ],
     "nextAfterDep": [
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
@@ -2094,6 +2085,69 @@
       "originalsUnchanged": true,
       "realBrowser": "WAIT_ENV",
       "gameAccepted": false
+    },
+    "pagesStaging": {
+      "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
+      "status": "DONE_PRIVATE_STAGING_QA_READY",
+      "baseMain": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
+      "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+      "frozenV24SourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+      "source": {
+        "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Source.zip",
+        "sha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+        "entries": 178,
+        "bytes": 2259964
+      },
+      "manifest": {
+        "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Manifest.json",
+        "sha256": "0d938d0969b7760b3804ef91bdc46080833f8f8fa0bb8b5efcf8f053b343dfa3"
+      },
+      "evidence": {
+        "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Evidence.zip",
+        "sha256": "b64bd94c23a5937f8e3bba73c5e64fbc5c8b6efa0ed3d16016fd3e19a152595e"
+      },
+      "changes": "178 selected from R2 396; 165 exact unchanged, 13 projection-only changed: 15 metadata keys from 10 JSON, one document provenance reference, SHA256_MANIFEST rebind after verifying original pins, tests/ctrl-baseline gate-state test. No product JS/HTML/Writer edits; disabled workflow exact. No publication.",
+      "verified": {
+        "baseline": {
+          "pass": 793,
+          "skip": 36,
+          "fail": 0
+        },
+        "projectionBeforeGateTest": {
+          "pass": 793,
+          "skip": 36,
+          "fail": 0
+        },
+        "staging": {
+          "pass": 794,
+          "skip": 36,
+          "fail": 0
+        },
+        "workflowOnSyntheticFocused": "4/4 PASS",
+        "build": "PASS",
+        "check": "PASS",
+        "sourceReadback": "3 artifacts byte-exact, 178 SHA/CRC PASS",
+        "distRecomposition": "4144/4144 exact V24 using fixed media, 53 modules, 4076 WebP; V24 manifest SHA 8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+        "privacy": "known source private reference values absent; 15 provenance JSON keys + 1 doc reference removed; synthetic negative URLs only; no raw Save/game binary/archive"
+      },
+      "unverified": [
+        "06_INDEPENDENT_PUBLIC_SOURCE_CLOSURE_REVIEW",
+        "ACTUAL_PUBLIC_GITHUB_CI_AND_PROTECTED_MAIN",
+        "REMOTE_PAGES_ADMIN_SETTINGS",
+        "AUTHORIZED_REAL_BROWSER_AND_IRREDUCIBLE_GAME_EVIDENCE",
+        "OWNER_DEPLOY_APPROVAL"
+      ],
+      "rollback": "V23 R2 canonical OFF source; V24 frozen artifact unchanged; closure is private staging projection, not replacement source",
+      "handoff": {
+        "to": "06 QA",
+        "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately."
+      }
+    },
+    "ledgerPrivacy": {
+      "status": "CURRENT_SNAPSHOT_REFERENCES_REPLACED_WITH_FILENAMES",
+      "count": 26,
+      "scope": "Existing current.json only; matched private Library files by actual lookup; preserve status/ownership/SHA/filenames; no new private identifier; historical Git commits and other files not scrubbed",
+      "next": "All streams use filename + SHA in public current.json, private identifiers only in private Library. Audit historical exposure separately; no force push or destructive history rewrite without Owner authorization."
     }
   },
   "formalRelease": {
@@ -2103,7 +2157,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
     "pages": {
-      "status": "V24_OFFLINE_SCOPED_ACCEPTED_STAGING_PREFLIGHT_COMPLETE_REAL_BROWSER_WAIT_ENV",
+      "status": "PUBLIC_SOURCE_CLOSURE_LOCAL_PASS_QA_READY_V24_BROWSER_WAIT_ENV",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -2118,7 +2172,7 @@
         "existingPrivateWorkflow": ".github/workflows/pages.yml.disabled",
         "workflow": "manual dispatch; exact approved commit and manifest SHA; requires Pages ON, writer ON_PROVEN_BETA_CAPABILITIES, manifest BETA_ACCEPTED; reuse no automatic deployment",
         "candidateManifestState": "PRIVATE_RELEASE_EQUIVALENT_NOT_RELEASE_AUTHORIZED",
-        "remaining": "06 V24 in flight + authorized real Browser; 00 public-safe source/artifact staging and fixed workflow/rollback; actual deploy explicit Owner approval",
+        "remaining": "06 closure scope review + authorized real Browser; actual public source CI and Pages settings, final fixed approved artifact/rollback/Owner approval",
         "remotePagesSettings": "UNVERIFIED_CONNECTOR_NO_PAGES_ADMIN_ACTION; project gate OFF, no active workflow at main",
         "qa": "06 SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER; 4 genuine output witnesses independent raw ZIP exact",
         "pr1": {
@@ -2141,7 +2195,64 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "00 public-safe code/test closure on exact R2/V24; existing manual workflow retained disabled until acceptance/explicit Owner approval. 06 real Browser WAIT_ENV; owner local authorized PC is immediate route; final site-manifest BETA_ACCEPTED and approvedArtifact fixed commit/SHA only after required evidence."
+      "next": "06 scoped public-source closure QA; authorized real V24 HTTP/HTTPS browser; then public code/CI closure and manual deploy only exact Owner-approved artifact after required gate. No automatic or live flag now.",
+      "closure": {
+        "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
+        "status": "DONE_PRIVATE_STAGING_QA_READY",
+        "baseMain": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
+        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+        "frozenV24SourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+        "source": {
+          "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Source.zip",
+          "sha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+          "entries": 178,
+          "bytes": 2259964
+        },
+        "manifest": {
+          "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Manifest.json",
+          "sha256": "0d938d0969b7760b3804ef91bdc46080833f8f8fa0bb8b5efcf8f053b343dfa3"
+        },
+        "evidence": {
+          "file": "HKIA_CTRL_V24_PublicSourceClosure_20261112_Evidence.zip",
+          "sha256": "b64bd94c23a5937f8e3bba73c5e64fbc5c8b6efa0ed3d16016fd3e19a152595e"
+        },
+        "changes": "178 selected from R2 396; 165 exact unchanged, 13 projection-only changed: 15 metadata keys from 10 JSON, one document provenance reference, SHA256_MANIFEST rebind after verifying original pins, tests/ctrl-baseline gate-state test. No product JS/HTML/Writer edits; disabled workflow exact. No publication.",
+        "verified": {
+          "baseline": {
+            "pass": 793,
+            "skip": 36,
+            "fail": 0
+          },
+          "projectionBeforeGateTest": {
+            "pass": 793,
+            "skip": 36,
+            "fail": 0
+          },
+          "staging": {
+            "pass": 794,
+            "skip": 36,
+            "fail": 0
+          },
+          "workflowOnSyntheticFocused": "4/4 PASS",
+          "build": "PASS",
+          "check": "PASS",
+          "sourceReadback": "3 artifacts byte-exact, 178 SHA/CRC PASS",
+          "distRecomposition": "4144/4144 exact V24 using fixed media, 53 modules, 4076 WebP; V24 manifest SHA 8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+          "privacy": "known source private reference values absent; 15 provenance JSON keys + 1 doc reference removed; synthetic negative URLs only; no raw Save/game binary/archive"
+        },
+        "unverified": [
+          "06_INDEPENDENT_PUBLIC_SOURCE_CLOSURE_REVIEW",
+          "ACTUAL_PUBLIC_GITHUB_CI_AND_PROTECTED_MAIN",
+          "REMOTE_PAGES_ADMIN_SETTINGS",
+          "AUTHORIZED_REAL_BROWSER_AND_IRREDUCIBLE_GAME_EVIDENCE",
+          "OWNER_DEPLOY_APPROVAL"
+        ],
+        "rollback": "V23 R2 canonical OFF source; V24 frozen artifact unchanged; closure is private staging projection, not replacement source",
+        "handoff": {
+          "to": "06 QA",
+          "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately."
+        }
+      }
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes."
   }
