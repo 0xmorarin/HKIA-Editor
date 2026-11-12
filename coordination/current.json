@@ -328,7 +328,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_EXACT20_9_PATHS; 05_AFTER_PASS_EXACT20_UI; 00_SERIAL_INTEGRATION_AND_2_MODULE_ALLOWLIST; 04_WAIT_NEXT_ACCEPTED_SCOPE; V24_FROZEN",
+      "next": "06_SCOPED_QA_EXACT20_AND_NEW02_03; 04_EXACT9_ABSENCE_REVOKE_AFTER_02_03_PASS; 20_REWARD_DEFINED_WAIT_EVIDENCE; 00_EXACT20_V26_COMPAT_PASS_AFTER_QA; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -761,22 +761,48 @@
       },
       "formalNextTask": {
         "task": "FORMAL49_EXACT20_NO_DEFINED_REWARD_PRIVATE_WRITER",
-        "status": "READY",
+        "status": "IMPLEMENTED_LOCAL_PASS_QA_PENDING",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "dependency": "06 accepted 03 FORMAL49 dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8 and 02 exact49 research; 04 batch af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41; V26 integrated exact paths. No wait for new 02/03.",
         "scope": "Exact 20 no-defined-leaf/group-reward v301 candidates only where typed fields and conditional invariants proven; reuse single ProductSession, existing family/pair planner and atomic ZIP CAS, separate OFF gate. No reward/Inventory mutation, unverified v300, structural creation or V24 changes. Full archive preimage, parent/root snapshot, isolate unresolved targets and continue safe subset.",
         "acceptance": "Exact candidate inventory; genuine edited-copy and independent semantic reparse/non-target raw frames; stale/forged/replay/rollback/wrong version/unsupported rejection. Fixed scoped delta/source/manifest and 06 QA. No blanket permission or game acceptance.",
-        "next": "06 scoped QA then 05 UI and 00 integration; exact29 only after new02+03 manual causal QA."
+        "next": "06 exact20 QA; no reimplementation on V26; exact 9 path preimage compatibility PASS",
+        "fixedSourceSha256": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef"
       },
       "formal29Preflight": {
         "task": "FORMAL29_ABSENCE_WRITER_PREFLIGHT_AND_V26_COMPATIBILITY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_READ_ONLY_WAIT_DEP",
         "baseMain": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "scope": "Read-only exact20 V26 preimage and next29 authorization/reward/absence preflight; no product source change or QA promotion",
         "dependency": "New02+03 independent acceptance pending; exact20 06 pending",
-        "owner": "04 SAVE CORE"
+        "owner": "04 SAVE CORE",
+        "evidence": {
+          "file": "HKIA_04_V26_Exact20_Manual29_Preflight_20261112.json",
+          "sha256": "1d3396aa0946110adf763dc5a254e081cd53509fb4b1c638247c2d3df3b52693",
+          "readback": "BYTE_EXACT"
+        },
+        "verified": {
+          "v26Entries": 441,
+          "exact20Source": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+          "preimages": 6,
+          "addAbsent": 3,
+          "conflicts": 0,
+          "compositeEntries": 444,
+          "unchanged": 435,
+          "focusedPass": 5,
+          "exact29Identities": 29,
+          "groups": 8,
+          "distinctAbsentPairs": 87,
+          "blockedDerived": 10,
+          "noDefinedRewardRevoke": 9,
+          "leafRewardRevoke": 14,
+          "leafRewardComplete": 6
+        },
+        "classification": "COMPATIBILITY_ONLY_NOT_QA; 9 no-defined-reward candidates after 02/03 QA; 20 leaf reward-defined candidates WAIT_REWARD_SIDE_EFFECT_EVIDENCE; no automatic authorization",
+        "next": "06 exact20 and new02/03 scoped QA; after both new02/03 accepted, 04 exact9 v301 nonterminal revoke with full archive absence CAS and separate OFF flag; reward-defined 20 isolated until specific causal acceptance; 00 reuse exact20 9 paths on V26 after QA; V24 frozen",
+        "unverified": "No new product code or genuine outputs; actual game/auth/load/reward/Browser unknown"
       }
     },
     "05_WEB": {
