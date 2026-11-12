@@ -1000,12 +1000,12 @@
       }
     },
     "05_WEB": {
-      "status": "FORMAL49_EXACT20_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "FORMAL_MANUAL9_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "IN_FLIGHT_FORMAL_MANUAL9_UI",
+      "next": "06_SCOPED_QA_MANUAL9_UI_5_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_RECIPE32_UI_AFTER_ACCEPTED_WRITER",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -1220,7 +1220,7 @@
       },
       "formalTask": {
         "task": "FORMAL_MANUAL9_TYPED_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "05 WEB",
         "priority": "P0_FORMAL_RELEASE",
         "baseHead": "e2d3468cfae0063e77ea969b1af2cc9b01be8ed3",
@@ -1543,7 +1543,63 @@
             "release": "V24_FROZEN_OFF",
             "note": "No formal merge; 00 after exact scoped acceptance. Manual9 independently pending."
           }
-        }
+        },
+        "fixedSourceSha256": "cd856cae7c76ba5ebb3da524b6a4138c34456d1ee92b9e98f0413e5304ba6df3",
+        "deltaSha256": "db48613e70afe5f37866aa0f6dc9a729a737d7d7a087c7c3df5027beda72c7df",
+        "manifestSha256": "c024a4e68b0d5721d947a5eb126af8ede8fa0b6a8ea8e219242aec3cbe3e2928",
+        "evidenceSha256": "c27d3cbcf0028db283af2428206d511afb00627d0607ec050d97a12c7787867c",
+        "handoffSha256": "bc57af492271923bd7292d03c9798b3a086341b11ab394db2e7df66cd4a63e6b",
+        "baseComposite": "V27 afe1ff72 + accepted 04 Manual9 delta 9ac19cfb + 05 Exact20 delta 69db7eef; 485 entries, all 14 exact pre/postimages; local composite only",
+        "changedPaths": "2_MOD_3_ADD_0_DEL",
+        "artifacts": {
+          "source": "HKIA_WEB05_FormalManual9UI_V27_20261112_Source.zip",
+          "delta": "HKIA_WEB05_FormalManual9UI_V27_20261112_Delta.zip",
+          "manifest": "HKIA_WEB05_FormalManual9UI_V27_20261112_Manifest.json",
+          "evidence": "HKIA_WEB05_FormalManual9UI_V27_20261112_Evidence.zip",
+          "handoff": "HKIA_WEB05_FormalManual9UI_V27_20261112_HANDOFF.md"
+        },
+        "verified": {
+          "focused": 3,
+          "nodePass": 956,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS_SOURCE_ONLY",
+          "exactReplay": "488/488",
+          "chromeInlineOff": [
+            320,
+            375,
+            1280
+          ],
+          "chromeInlineWrongVersion300Denied": 320,
+          "chromeIsolatedActualDownloadReimport": 1,
+          "genuineVersion": "3.0.1",
+          "realOffPreview": 9,
+          "realOffOutput": 0,
+          "realIsolatedOutputs": 9,
+          "slotFieldsPerOutput": 6,
+          "accountFieldsPerOutput": 0,
+          "accountRawPreserved": true,
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "libraryReadbackAll5Sha": "PASS",
+          "V24Frozen": true,
+          "releaseFlags": "OFF"
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_AUTH_LOAD_RESAVE_REWARD_EFFECTS",
+          "GENERAL_BATCH_REVERSE_OR_UNSUPPORTED_VERSION",
+          "00_FORMAL_INTEGRATION_AND_FULL_DISTRIBUTION",
+          "MAIN_PROTECTION_CONNECTOR_UNAVAILABLE"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "5 exact 05 paths on V27+accepted Manual9+Exact20 UI composite 485; nine directional v301 revoke, exact missing members, no row creation, 6+0, Account raw, output proof and capability, genuine output/reimport, negative CAS/tamper/wrong version; reuse accepted Core. V24 frozen.",
+          "nextAfter": "00 serial formal integration; 05 Recipe32 UI only after 04 independent acceptance"
+        },
+        "next": "06_SCOPED_QA_MANUAL9_UI_5_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_RECIPE32_UI_AFTER_ACCEPTED_WRITER"
       }
     },
     "06_QA": {
