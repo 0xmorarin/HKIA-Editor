@@ -1318,7 +1318,7 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 04 existing V16 private family revoke writer proof on R2 OFF; 06 independently review 02 fixed 8 ADD + 03 fixed 10 ADD + 05 bulk selection exact fixed delta and 00 178-file public source closure (13 projection changes); separate scopes, parallel with 01 if already IN_FLIGHT. 02/03/05 no duplicate restart. V24 frozen.",
+    "NOW 04 existing V16 private family revoke writer proof on R2 OFF; 06 scoped independent review of 01 fixed 7 ADD, 02 fixed 8 ADD, 03 fixed 10 ADD, 05 fixed bulk selection delta, and 00 178-file public source closure (13 projection changes). Separate scopes and reuse exact baseline; no duplicate 01/02/03/05 restart. V24 frozen.",
     "06 actual authorized HTTP/HTTPS native WebCrypto Module Worker genuine 300/301 remains WAIT_ENV. Review closure independently; after required browser and irreducible game evidence, 00 exact public source CI and manual artifact deployment, rollback and explicit Owner approval; no live changes now.",
     "Formal direct handoffs after scoped PASS: 04 new proven operations, 05 UI, 06 scoped QA, 00 serial integration. 07 WAIT_ENV independent.",
     "Current ledger privacy: use filenames and SHA only; no private Library/Drive IDs. Historical Git exposure not removed; no force-push without Owner authorization."
@@ -2135,7 +2135,7 @@
     },
     "nextReadyParallel": [
       "04_FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-      "06_FORMAL_02_8_ADD_03_10_ADD_05_BULK_UI_AND_00_PAGES_CLOSURE_SCOPED_QA"
+      "06_FORMAL_01_7_ADD_02_8_ADD_03_10_ADD_05_BULK_UI_AND_00_PAGES_CLOSURE_SCOPED_QA"
     ],
     "nextAfterDep": [
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
@@ -2211,7 +2211,7 @@
       "rollback": "V23 R2 canonical OFF source; V24 frozen artifact unchanged; closure is private staging projection, not replacement source",
       "handoff": {
         "to": "06 QA",
-        "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately. 05 newly fixed bulk UI delta may be independently reviewed in same activation without repeating accepted UI."
+        "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately. 05 newly fixed bulk UI delta may be independently reviewed in same activation without repeating accepted UI. Also 01 new 7 ADD ready: separate formal ownership contract scope, no activation."
       }
     },
     "ledgerPrivacy": {
