@@ -311,10 +311,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW parallel 06 V18 QA, 04 JS beta output contract/native load, 05 output UI, 03 narrow recipe causal, 07 Rust bootstrap/envelope/schema parity. 01/02/00 MEDIA no repeat.",
-    "00 serial integrate scoped accepted JS source, fixed beta artifact and final browser QA; actual deployment not authorized by architecture decision.",
-    "07 independently compile and port envelope/schema/byte-range reader then real fixture parity; writer parity follows accepted JS operation contracts. 06 independent Rust/WASM browser/budget QA before cutover.",
-    "05 Svelte/TS separate workspace after beta UI fixed, initially JS adapter, independent UI parity; no SvelteKit/backend selection until needed. Rust and Svelte migrations not one merge."
+    "NOW 06 independent QA on V19 fixed preflight (V18 pending + exact 27 path delta; reuse matching V18 observations if in progress). Do not duplicate QA. 03/04/05 owners wait for scoped QA or concrete new task; 07 waits verified Rust toolchain.",
+    "After scoped QA, 04/05 targeted true-red fixes only; 05 accepted version-operation capability and actual browser E2E, 00 serial accepted integration and fixed Beta distribution; actual deployment requires explicit Owner approval.",
+    "07 independently compile and validate real JS/Rust reader parity when toolchain available; 06 Rust/WASM/browser/budget QA before cutover. JS Beta independent.",
+    "05 Svelte/TS migration after Beta UI fixed; separate JS adapter parity and Rust cutover."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1036,15 +1036,93 @@
   },
   "ctrlExecution": {
     "task": "V18_SUCCESSOR_CANDIDATE_PREFLIGHT_AND_BROWSER_ENV",
-    "status": "IN_FLIGHT",
+    "status": "PARTIAL_PREFLIGHT_COMPLETE_QA_READY",
     "owner": "00 CTRL",
     "baseMain": "c09691437084f0bb1d63ebc798fac19ec58843d6",
     "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
     "scope": "private candidate assembly only; compare 03/04/05 exact deltas, resolve integration dependencies, real browser environment check, no product source edits outside 00, no deployment or accepted merge",
     "dependency": "06 independent scoped QA required for accepted integration; pending QA does not prevent private preflight",
     "sourceInputs": {
+      "core": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
       "web": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
       "linkage": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
-    }
+    },
+    "candidate": {
+      "label": "V19_PREFLIGHT_NOT_ACCEPTED",
+      "file": "HKIA_CTRL_V19_Preflight_20261112_Source.zip",
+      "sha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
+      "entries": 375,
+      "delta": {
+        "file": "HKIA_CTRL_V18_to_V19_Preflight_20261112_Delta.zip",
+        "sha256": "9377494cbda7b7f3f82228594ef4f55fc8ddc9b998ba115c087bb9c9957a4b02",
+        "modified": 15,
+        "added": 12,
+        "deleted": 0
+      },
+      "manifest": {
+        "file": "HKIA_CTRL_V19_Preflight_20261112_Manifest.json",
+        "sha256": "f6518facedf71c4db48fc48be765da68cac4d09018855786509a428028c7bb9c"
+      },
+      "evidence": {
+        "file": "HKIA_CTRL_V19_Preflight_20261112_Evidence.zip",
+        "sha256": "324c55fee2803547243455cbcea7149a17b56897f9a2af2845a60cf7eb307f50"
+      },
+      "privateLibrary": "HKIA Editor Private",
+      "readback": "SOURCE_DELTA_MANIFEST_SHA_AND_375_ENTRY_HASHES_PASS"
+    },
+    "changes": {
+      "upstream": "03 10ADD, 04 8MOD2ADD, 05 6MOD; no overlaps",
+      "ctrl": "scripts/00-beta-module-closure.mjs exact allowlist add scripts/research/01-collection-v17-beta-contract.mjs",
+      "reproduced": "Dependency not approved: scripts/research/01-collection-v17-beta-contract.mjs",
+      "classification": "TRUE_RED_DISTRIBUTION_BUILD_FIXED_LOCAL_QA_PENDING"
+    },
+    "verified": {
+      "tests": {
+        "pass": 739,
+        "skip": 36,
+        "fail": 0
+      },
+      "check": "PASS",
+      "build": "PASS",
+      "distribution": {
+        "entries": 4142,
+        "bytes": 146127636,
+        "webp": 4076,
+        "modules": 51,
+        "additionalModules": 32,
+        "allFileHashes": "PASS",
+        "manifestSha256": "67849e075877adabec730c6ce3529599bf8c041774582e4da7bf8d1cd837065a"
+      },
+      "noProductMainMerge": true,
+      "writer": "OFF",
+      "previewUI": "OFF",
+      "pages": "OFF"
+    },
+    "unverified": [
+      "INDEPENDENT_QA_V18_PLUS_V19",
+      "NATIVE_AUTH_LOAD_GAME_PERSISTENCE",
+      "REAL_HTTP_WEBCRYPTO_MODULE_WORKER_E2E",
+      "RUST_COMPILE_PARITY"
+    ],
+    "blockers": {
+      "browser": "Chromium loopback navigation rejected ERR_BLOCKED_BY_ADMINISTRATOR; no HTTP/Worker/WebCrypto PASS",
+      "rust": "cargo/rustc absent; prior apt DNS failure not retried",
+      "recipe": "trusted same-row restoration receipt and final load/recount acceptance; no blanket block on other six operations"
+    },
+    "handoff": {
+      "to": "06 QA",
+      "condition": "V18 pending: use fixed V19 candidate, compare V17 accepted scope to V19; reuse V18 QA evidence only if exact matching blobs and scope; target V18 42 plus V19 27 paths (deduplicate cumulative), new build regression, 03/04/05 interaction, true real output only where proven; preserve independent QA authority and avoid duplicate running task",
+      "after": "04/05 targeted fixes if TRUE_RED; then 05 accepted version-operation UI capability and actual browser E2E; 00 serial accepted integration/fixed artifact/owner approval"
+    },
+    "nextReadyParallel": [
+      "06_QA_FIXED_V19_OR_CONTINUE_EXISTING_V18_WITH_CUMULATIVE_DELTA",
+      "07_ONLY_WHEN_VERIFIED_RUST_TOOLCHAIN_AVAILABLE"
+    ],
+    "nextAfterDep": [
+      "05_ACCEPTED_CAPABILITY_CONNECTION_AND_REAL_BROWSER_AFTER_06_SCOPED_QA",
+      "00_SERIAL_INTEGRATION_AFTER_SCOPED_QA_AND_UI_E2E",
+      "07_READER_PARITY_AFTER_TOOLCHAIN"
+    ],
+    "risks": "No deployment or product flag authorization. V19 preflight not an accepted candidate; localIntegratedCandidate remains V18. No game acceptance inferred."
   }
 }
