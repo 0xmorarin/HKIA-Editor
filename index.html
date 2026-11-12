@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja" data-native-preview="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="HKIA実績とコレクションをローカルで確認するセーブツール。Steam版v3.0.1から解析したカテゴリ画像を使用。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>HKIA Save Editor — Local Preview v0.2.11</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <div class="identity"><div class="identity-mark" aria-hidden="true">✦</div><div><div class="eyebrow">Unofficial • HKIA Save Tools</div><h1>Achievements &amp; Collections</h1></div></div>
+    <div class="privacy-mark" title="セーブの内容はブラウザー内のみで処理します">🔒 Local-only</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="section-kicker">LOCAL PREVIEW • V0.2</p><h2>アチーブメントとコレクションを<br class="desktop-break">1か所で管理</h2><p>タブは分離しています。ゲーム由来のアイコン・名称の権利は各権利者に帰属します。ファイルはサーバーに送信しません。</p></div>
+      <div class="support-badge"><b>v3.0.0 / v3.0.1</b><small>Switch save (read-only)<br>Account JSON (editable)</small></div>
+    </section>
+    <section class="file-surface" aria-labelledby="upload-heading">
+      <div class="file-heading"><h3 id="upload-heading">セーブファイル</h3><span id="fileStatus" class="file-pill">未読み込み</span></div>
+      <div id="dropArea" class="drop-area">
+        <div class="drop-icon" aria-hidden="true">⇧</div>
+        <div><strong>ファイルをここにドロップ</strong><p>SwitchバックアップZIP、<code>save_0.save</code>、または<code>SettingsAccount/settings.json</code></p></div>
+        <label class="choose-file">ファイルを選択<input id="saveInput" type="file" accept=".zip,.save,.json,.bak,.lbak,application/json,application/zip" aria-label="セーブファイルを選択"></label>
+      </div>
+      <p id="loadError" class="error-message" role="alert" hidden></p>
+      <section id="sourceRevisionNotice" class="linked-state-info" role="status" aria-live="polite" hidden></section>
+      <section class="linked-state-info" aria-label="Native検証Session"><div id="nativeSessionStatus" role="status" aria-live="polite"></div><div class="button-row"><button id="openNativePreview" class="btn-secondary" type="button" disabled>Native検証Sessionを開く</button><button id="closeNativePreview" class="btn-secondary" type="button" disabled>Sessionを閉じる</button><button id="nativeDownload" class="btn-primary" type="button" disabled>Edited-copy Download</button><button id="nativeDiscard" class="btn-secondary" type="button" disabled>候補を破棄（Reset）</button></div></section>
+      <div id="fileInfo" class="file-info" hidden>
+        <div id="loadDescription"></div>
+        <section id="slotReadNotice" class="linked-state-info" role="status" aria-live="polite" hidden></section>
+        <div class="button-row"><button id="downloadOriginal" class="btn-secondary" type="button">元ファイルをバックアップ</button><button id="downloadEdited" class="btn-secondary" type="button" disabled>編集したsettings.jsonを保存</button><button id="downloadZip" class="btn-primary" type="button" disabled hidden>編集したZIPを保存</button></div>
+      </div>
+    </section>
+    <section class="workspace" aria-label="実績とコレクション">
+      <div class="primary-tabs" role="tablist" aria-label="表示する機能">
+        <button id="achTab" role="tab" aria-controls="achPanel" aria-selected="true" class="primary-tab active" type="button">🏅 <span>アチーブメント</span></button>
+        <button id="colTab" role="tab" aria-controls="colPanel" aria-selected="false" class="primary-tab" tabindex="-1" type="button">✿ <span>コレクション</span></button>
+      </div>
+      <section id="achPanel" class="content-panel" role="tabpanel" aria-labelledby="achTab">
+        <div class="panel-header"><div><h3>アチーブメント</h3><p id="achSubTitle">ファイルを読み込むと達成記録が表示されます。</p></div><span id="achCount" class="count-pill">0件</span></div>
+        <div id="sourceSwitch" class="source-switch" role="group" aria-label="アチーブメントの保存先" hidden><button id="accountSource" class="small-tab" type="button">Account（編集可能）</button><button id="slotSource" class="small-tab" type="button">Save slot（読み取りのみ）</button></div>
+        <div id="achSummary" class="metric-grid" hidden></div>
+        <p id="achLinkedInfo" class="linked-state-info" hidden></p>
+        <div class="toolbar"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="achievementSearch" type="search" placeholder="日本語名・英語名・GUIDで検索" autocomplete="off" aria-label="実績を検索"></label><select id="achievementFilter" aria-label="達成状況"><option value="all">すべて</option><option value="complete">達成済み</option><option value="incomplete">未達成</option><option value="missing">定義のみ・未保存</option><option value="unknown-source">保存済み・定義UNKNOWN</option></select><select id="achievementImageFilter" aria-label="実績画像で絞り込み" hidden><option value="all">全画像状態</option><option value="exact">直接画像あり</option><option value="source-null">直接画像 SOURCE_NULL</option><option value="unknown">画像未照合</option></select><select id="achievementSort" aria-label="実績の並び順"><option value="source">元の順番</option><option value="name">名称順</option><option value="progress-desc">進捗値の大きい順</option><option value="progress-asc">進捗値の小さい順</option><option value="completed-first">達成済みを先頭</option></select></div>
+        <section id="accountChangeBar" class="change-bar" aria-label="Account編集履歴" hidden>
+          <div><strong id="accountChangeCount">変更なし</strong><p>この表示は Account の変更差分です。関連カウンター等の自動変更はありません。</p></div>
+          <div class="button-row"><button id="undoAccount" class="btn-secondary" type="button">直前の操作を取り消す</button><button id="resetAccount" class="btn-secondary" type="button">Accountを原本に戻す</button></div>
+          <details id="accountDiffDetails"><summary>原本との変更差分を表示</summary><div id="accountDiffList" class="diff-list"></div></details>
+        </section>
+        <section id="accountBatch" class="batch-panel" aria-label="Account一括編集" hidden>
+          <div class="batch-topline"><strong>Account の一括編集（現在の検索・絞り込み対象のみ）</strong><button id="batchToggle" class="btn-secondary" type="button" aria-expanded="false" aria-controls="batchControls">一括編集を開く</button></div>
+          <div id="batchControls" hidden>
+            <p class="editor-hint">達成状態のみ変更。現在の進捗値・関連カウンターは維持します。変更前に対象・差分・未検証連動を確認します。</p>
+            <div class="toolbar"><label class="editor-field">変更後の状態<select id="batchState"><option value="complete">達成済み</option><option value="incomplete">未達成</option></select></label><label class="editor-field">新たに達成するレコードのUTC日時<input id="batchTimestamp" value="" placeholder="2026-11-11T00:00:00Z" aria-label="一括達成日時"></label><button id="batchPreview" class="btn-secondary" type="button">変更内容を確認</button></div>
+            <div id="batchResult" aria-live="polite"></div>
+          </div>
+        </section>
+        <section id="nativeBatch" class="batch-panel" hidden></section>
+        <div class="ach-layout"><div id="achievementsList" class="achievement-list"><p class="placeholder">ファイル未読み込み。右上ではなく、上のファイル選択から読み込んでください。</p></div><aside id="editorPanel" class="editor-panel" aria-live="polite"><h4>達成記録の詳細</h4><p>一覧から実績を選択してください。</p></aside></div>
+      </section>
+      <section id="colPanel" class="content-panel" role="tabpanel" aria-labelledby="colTab" hidden>
+        <div class="panel-header"><div><h3>コレクション</h3><p>ゲーム定義のアイテムIDと収集履歴を直接照合します。ゲーム内の達成率とは異なります。</p></div><span id="colCount" class="count-pill">25カテゴリ</span></div>
+        <div class="notice">カテゴリ画像はSteam版v3.0.1から抽出したゲームアセットです。権利帰属はフッターを参照してください。セーブ読込後は各定義に属するアイテムIDの保存有無を表示します。親アイテムの統合・DLC・イベント等は未反映のため、ゲーム内の達成率と一致するとは限りません。</div>
+        <label class="search-wrap collections-search"><span aria-hidden="true">⌕</span><input id="collectionSearch" type="search" placeholder="コレクションカテゴリを検索" autocomplete="off" aria-label="コレクションカテゴリを検索"></label>
+        <p id="colHistoryInfo" class="linked-state-info" hidden></p>
+        <section id="colUnknownPanel" class="unknown-items-panel" aria-label="未知の収集履歴 ItemId" hidden></section>
+        <div class="toolbar"><select id="collectionStatusFilter" aria-label="コレクション収集履歴で絞り込み"><option value="all">全カテゴリ</option><option value="has-record">収集履歴あり</option><option value="no-record">収集履歴なし</option><option value="unknown">未照合</option></select><select id="collectionSort" aria-label="コレクションの並び順"><option value="source">定義順</option><option value="name">名称順</option><option value="record-desc">記録ID数の多い順</option></select></div>
+        <div id="collectionGrid" class="collection-grid"></div>
+        <div id="collectionDetail" class="collection-detail" hidden></div>
+      </section>
+    </section>
+  </main>
+  <footer><div><b>HKIA Save Tools</b> — 非公式ファンツール。ゲーム開発元とは無関係です。</div><div>このプレビューは公開前の検証用です • セーブは端末内で処理 • 編集前に必ずバックアップ</div><div class="footnotes">Nativeの変更案・再読込検証は保存済み変更ではありません。未受入のNative Apply/Exportおよび外部実績同期は無効です。</div><section id="attributionNotice" aria-label="権利帰属 / Attribution"><h2>権利帰属 / Attribution</h2><p lang="en">HKIA Editor is an unofficial fan-made tool and is not affiliated with, endorsed by, or sponsored by Sunblink, Sanrio, or Apple. Game artwork, characters, icons, and other game assets are the property of their respective rights holders, including Sunblink and SANRIO CO., LTD. HKIA Editor does not claim ownership of these assets. All rights remain with their respective owners.</p><p lang="ja">HKIA Editorは非公式のファンメイドツールであり、Sunblink、株式会社サンリオ、Appleによる提供・承認・提携を受けたものではありません。ゲームの画像、キャラクター、アイコンその他のゲーム素材の権利は、Sunblink、株式会社サンリオを含む各権利者に帰属します。HKIA Editorはこれらの素材の権利を所有していません。</p></section></footer>
+</div>
+</body>
+</html>
