@@ -1356,12 +1356,12 @@
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ctrlExecution": {
-    "task": "V19_SCOPED_ACCEPTANCE_AND_RECEIPT_SUCCESSOR_PREFLIGHT",
-    "status": "PARTIAL_SCOPED_INTEGRATION_VERIFIED_V20_QA_READY",
+    "task": "V21_SERIAL_ACCEPTED_BATCH_INTEGRATION",
+    "status": "IN_FLIGHT",
     "owner": "00 CTRL",
-    "baseMain": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
+    "baseMain": "290aca245d1dcc874632a37c0efa34eb4f76415e",
     "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
-    "scope": "V19 accepted input byte reconciliation; V20 private receipt preflight only; no product main merge or live flags",
+    "scope": "V20 fixed accepted receipt/closure plus exact 05 four paths; private integration and cumulative build; no live flags or public source merge",
     "v19": {
       "label": "V19_PREFLIGHT_NOT_ACCEPTED",
       "file": "HKIA_CTRL_V19_Preflight_20261112_Source.zip",
@@ -1451,7 +1451,7 @@
       "NATIVE_AUTH_LOAD_RESAVE",
       "RUST_COMPILE_PARITY"
     ],
-    "dependency": "Ordinary six operations have scoped offline acceptance; recipe new receipt independent gate; no live enablement until release gates. 05 can develop ordinary batch/capability UI on V19, coordinate V20 by exact 05 path ownership; receipt UI only after 06 receipt QA.",
+    "dependency": "06 fixed scope pass V20/04/05; final actual browser and game load pending",
     "handoff": {
       "to": [
         "06 QA",
@@ -1469,6 +1469,7 @@
       "05_RECEIPT_UI_AFTER_06_ACCEPTANCE",
       "00_SERIAL_INTEGRATION_AND_REAL_BROWSER_AFTER_FIXED_UI_QA",
       "07_AFTER_VERIFIED_LOCAL_RUST_TOOLCHAIN"
-    ]
+    ],
+    "previousTask": "V19_SCOPED_ACCEPTANCE_AND_RECEIPT_SUCCESSOR_PREFLIGHT"
   }
 }
