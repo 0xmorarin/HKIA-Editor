@@ -34,12 +34,14 @@
       "next": "FORMAL_READY_FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 03 LINKAGE, then 06",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V14 Manual planner/V15 remaining 820 catalog and 03 V16 family evidence. Prioritize new exact completion/revoke witnesses beyond the existing three V16 terminal-revoke families and puzzle; partition Manual leaf/family, Account Meta, derived Mission/Visitor/Item/unique/history and other producer classes. No 571/586 mapping redo or date-only proof.",
         "acceptance": "Operation x family/version coverage; concrete Native/source identity, typed plans, genuine witnesses for newly proven families, negatives; unsupported derived scopes fail closed.",
-        "next": "04 SAVE CORE and 03 LINKAGE, then 06"
+        "next": "04 SAVE CORE and 03 LINKAGE, then 06",
+        "baseHead": "5c85c2e5220acf9b98095483589d1e42cd367431",
+        "executionScope": "New exact non-Puzzle completion/revoke witnesses; research contracts/tests only; R2 OFF immutable"
       }
     },
     "03_LINKAGE": {
