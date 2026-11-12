@@ -1014,10 +1014,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 06 QA V23 R2 fixed exact 2 paths: replay original six privacy negatives, escaped mini build, duplicate key/value cases and normal regression; V22 artifact byte-identical rebuild 4144 and existing 17 accepted paths unchanged. No other stream restart.",
-    "After independent scoped PASS, actual HTTP/HTTPS native WebCrypto Module Worker authorized environment; game load/auth/resave only irreducible release-critical evidence. Do not retry unchanged blocked env.",
-    "00 release gate after final QA and required real browser/game evidence, explicit Owner approval actual deploy/live flags; no pre-repair gate acceptance.",
-    "07 WAIT_ENV independent Rust kit; no JS Beta gate."
+    "NOW 06 QA V24 private activation 3 paths / 5 settings, exact dist delta and independent scope review, browser kit review. R2 privacy and unchanged accepted product scopes reuse; no duplicate 03/04/05.",
+    "WAIT_ENV actual authorized HTTP+HTTPS ESM WebCrypto Module Worker genuine 300/301 both domains; run private kit and full required QA without bridge or policy bypass. Only irreducible release-critical game acceptance witness if static/offline cannot resolve.",
+    "00 release gate fixed accepted activation artifact and rollback, explicit Owner approval for live flags and deployment. V23 R2 OFF rollback, V24 not deployable until gates.",
+    "07 WAIT_ENV Rust independent; no JS Beta gate."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1176,7 +1176,7 @@
       "unchangedSourcePaths": 394,
       "noProductMainMerge": true
     },
-    "independentQa": "V23_R2_PRIVACY_REPAIR_PENDING_INDEPENDENT_RETEST",
+    "independentQa": "V23_R2_SCOPED_PASS_PRIVACY_GATE_AND_BYTE_IDENTICAL_OFF_ARTIFACT",
     "nativeWriterEnabled": false,
     "pagesEnabled": false,
     "gameMediaPublic": false,
@@ -1720,113 +1720,123 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "IN_FLIGHT",
+    "status": "DONE_PRIVATE_ACTIVATION_FIXED_FINAL_QA_READY_WAIT_ENV",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
-    "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
-    "candidate": {
-      "label": "V23_PRIVACY_DECODED_REPAIR_R2_LOCAL_PASS_QA_PENDING",
-      "file": "HKIA_CTRL_V23_PrivacyDecodedRepair_R2_20261112_Source.zip",
+    "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+    "offBaseline": {
       "sha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+      "artifact": "HKIA_CTRL_V23_PrivacyDecodedRepair_R2_20261112_Source.zip",
+      "qa": "06 SCOPED_PASS_PRIVACY_GATE_AND_BYTE_IDENTICAL_OFF_ARTIFACT",
+      "qaHandoffSha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd",
+      "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6"
+    },
+    "candidate": {
+      "label": "V24_PRIVATE_RELEASE_EQUIVALENT_NOT_DEPLOYABLE",
+      "file": "HKIA_CTRL_V24_PrivateActivation_20261112_Source.zip",
+      "sha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "entries": 396,
-      "bytes": 2949694,
+      "bytes": 2992500,
       "delta": {
-        "file": "HKIA_CTRL_V23_PrivacyDecodedRepair_R2_20261112_Delta.zip",
-        "sha256": "775f231ce33c667179e877a1ef2fed29594d8a99d8b3bb22c606fec1b20c087b",
-        "modified": 2,
+        "file": "HKIA_CTRL_V24_PrivateActivation_20261112_Delta.zip",
+        "sha256": "e8752df6ccea65129ae252ba13b99e2bd68860dbd746e0f098423c12936da043",
+        "modified": 3,
         "added": 0,
         "deleted": 0
       },
       "manifest": {
-        "file": "HKIA_CTRL_V23_PrivacyDecodedRepair_R2_20261112_Manifest.json",
-        "sha256": "80170c5f1d600d4532f8b46db5cfd76cd866d0b3f90bd589172f0195e5338270"
+        "file": "HKIA_CTRL_V24_PrivateActivation_20261112_Manifest.json",
+        "sha256": "1a3eb6095363d9bd996292ca7e8d71265e2395c0e830ee265505b17398d39792"
+      },
+      "artifactManifest": {
+        "file": "HKIA_CTRL_V24_PrivateActivation_20261112_ArtifactManifest.json",
+        "sha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b"
       },
       "evidence": {
-        "file": "HKIA_CTRL_V23_PrivacyDecodedRepair_R2_20261112_Evidence.zip",
-        "sha256": "88844ce4ff8844e891fb37e7be3fe96c65a1e17b8754d75b1d9a86abc06666ab"
+        "file": "HKIA_CTRL_V24_PrivateActivation_20261112_Evidence.zip",
+        "sha256": "1839a02907004142b71ff2dbe777450d4de69f5da88605963167c4648bffcbdf"
+      },
+      "browserKit": {
+        "file": "HKIA_CTRL_V24_PrivateActivation_20261112_BrowserKit.zip",
+        "sha256": "6202f93541df72b4d0e7c77fac2a094ee551d9959098d034e0c7c1188ad91ba2",
+        "status": "PREPARED_SYNTAX_CHECK_AND_SYNTHETIC_EXACT_DIFF_HELPER_PASS_REAL_BROWSER_NOT_RUN"
       },
       "privateLibrary": "HKIA Editor Private",
-      "readback": "ALL_4_ARTIFACTS_BYTE_EXACT_396_SOURCE_CRC_SHA_PASS",
-      "supersedesUnsubmittedDraftSha256": "3cd55cd4ca400ba1c282de949375c57c9a3f54345b454fb57bbba08d12bdf448"
+      "readback": "ALL_7_NEW_ARTIFACT_SHA_CRC_PASS_396_SOURCE_4144_DIST"
     },
-    "scope": "private release-equivalent capability candidate only; preserve accepted R2 OFF source and artifact; no live flags/deploy; exact version/operation evidence; browser execution kit if needed",
+    "scope": "Private candidate only 3 existing paths, five setting values; accepted product algorithms untouched. Main OFF baseline remains canonical; no main product merge, live activation or deploy.",
     "changes": {
-      "policy": "JSON.parse reviver checks decoded keys and string values using existing pattern; raw scan preserved; validated lexical string scan also rejects shadowed duplicate members (keys and values); sanitizer unchanged; no values in private-reference-value error",
-      "tests": "new regression includes escaped slash, Unicode URL/Library, key, root/nested strings, shadowed duplicates, normal Unicode and raw non-JSON",
-      "blobSha256": {
-        "policy": "f72a4619087df4e782410413a92bdc1a8c15ec31e142a0fbe0f036332f5eff1f",
-        "test": "f6d9aa2f595c174d3efda62846b80a1745690d169db3eb990e6d0fdcce9b0721"
-      }
+      "paths": {
+        "index.html": "data-native-preview off -> staged",
+        "native-product/dev-output-policy.mjs": "BETA_WRITER_ENABLED and RECIPE_WRITER_ENABLED false -> true",
+        "src/native-preview-ui.js": "OUTPUT_UI_RELEASE_ENABLED and RECIPE_UI_RELEASE_ENABLED false -> true"
+      },
+      "dist": "same 3 paths only, remaining 4141 bytes identical, reused part1",
+      "buildManifest": "Existing build emits static OFF description; external pinned candidate manifest explicitly labels PRIVATE_TEST_ACTIVATION_ONLY; no product source change for metadata."
     },
     "verified": {
-      "tests": {
-        "pass": 793,
-        "skip": 36,
-        "fail": 0
-      },
-      "focusedPolicy": "7/7 PASS",
-      "qaOriginalSix": "6/6 PASS_LOCAL_REPLAY_UNMODIFIED_QA_SCRIPT",
-      "reproduction": "3_PASS_3_FAIL_BEFORE;6_PASS_0_FAIL_AFTER",
-      "miniBuild": "ESCAPED_URL_EXIT_1_PRIVATE_REFERENCE_VALUE_PROHIBITED",
-      "check": "PASS",
+      "sourceDiff": "3_MOD_393_UNCHANGED_5_SETTING_VALUES_ONLY",
+      "distDiff": "3_MOD_4141_UNCHANGED",
       "build": "PASS",
-      "distribution": {
+      "check": "PASS",
+      "dist": {
         "entries": 4144,
-        "bytes": 146154762,
+        "bytes": 146154761,
         "webp": 4076,
         "modules": 53,
         "additionalModules": 34,
         "allFileHashes": "PASS",
-        "manifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+        "artifactPolicy": "PASS",
+        "manifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
         "parts": [
           {
             "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART1.zip",
             "sha256": "86da95d728a20a6d30132ac49d3f76e7c9914fbbeb2bfc58ff3a2227e08c6d22",
             "entries": 2069,
-            "bytes": 59285956
+            "bytes": 59285956,
+            "reused": true
           },
           {
-            "file": "HKIA_CTRL_V22_Beta_OFF_20261112_PART2.zip",
-            "sha256": "92ee87b1373891ab9ce83b034bf2effff4a487dfa0cf60066f1ae7526b0232da",
+            "file": "HKIA_CTRL_V24_PrivateActivation_20261112_PART2.zip",
+            "sha256": "dc075ab19267c14b4a111a87eb90b03eb63fd7db1d33b92182e311809c35ae61",
             "entries": 2075,
-            "bytes": 60136617
+            "bytes": 59877845,
+            "reused": false
           }
-        ],
-        "artifactPolicy": "PASS_WITH_NEW_PRIVATE_REFERENCE_GATE",
-        "privacy": "5_JSON_8_KEYS_REMOVED_OTHER_VALUES_EQUAL; 4076_WEBP_BYTE_IDENTICAL; DECODED_GATE_PASS",
-        "reuse": "REBUILT_FROM_R2_BYTE_IDENTICAL_ALL_4144; V22 OFF PART1/PART2 exact CRC SHA and manifest verified; submit as R2 artifact without copying identical ZIPs"
+        ]
       },
-      "flags": "WRITER_RECIPE_UI_PAGES_OFF",
-      "accepted17PathsUnchanged": true,
-      "unchangedSourcePaths": 394,
-      "noProductMainMerge": true
+      "activationSmoke": "SYNTHETIC_NODE_ACTUAL_DIST_IMPORTS_PASS_DEFAULT_UI_CONTROLLER_COLLECTION_TICKS_300_301_AND_RECIPE_1_0_1_MISSING_WITNESS_REPLAY_DENIED",
+      "capabilityMatrix": "6_ORDINARY_PER_300_301; RECIPE_301_EXACT_WITNESS_ONLY; WRONG_VERSION_SCHEMA_AND_COMPLETION_DENIED",
+      "kit": "PYTHON_NODE_SYNTAX_PASS; EXACT_DIFF_HELPER_3_SYNTHETIC_OUTPUTS_PASS; REAL_BROWSER_UNEXECUTED",
+      "baselineTests": "R2_OFF_793_PASS_36_SKIP_REUSE_ONLY; FULL_SUITE_NOT_RUN_ON_ACTIVATION_VARIANT_OFF_EXPECTATIONS_NOT_REWRITTEN",
+      "liveFlags": "OFF",
+      "gameAccepted": false
     },
     "unverified": [
-      "06_INDEPENDENT_FIXED_R2_SCOPED_RETEST",
-      "REAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
-      "GAME_AUTH_LOAD_RESAVE_REBOOT_ZERO_ROW_RETENTION",
-      "RUST_COMPILE_PARITY"
+      "06_V24_INDEPENDENT_ACTIVATION_SCOPE",
+      "AUTHORIZED_REAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER_GENUINE_BOTH_DOMAINS",
+      "REAL_GAME_AUTH_LOAD_RESAVE_REBOOT_RECIPE_ZERO_ROW_RETENTION_RECOUNT",
+      "RUST_COMPILE_PARITY",
+      "MAIN_PROTECTION_STATE_UNAVAILABLE_BRANCH_SEARCH_NO_PROTECTION_FIELD"
     ],
-    "rollback": "V22 development only; original gate TRUE_RED not publication eligible. R2 artifact OFF no deployment.",
+    "rollback": "V23 R2 exact OFF source and unchanged OFF artifact; pre-repair V22 source gate not deployable; V24 private activation candidate not live.",
     "handoff": {
       "to": "06 QA",
-      "task": "V23_PRIVACY_DECODED_REPAIR_R2_SCOPED_RETEST",
-      "fixedSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-      "scope": "2 exact MOD; run existing privacy-negative.mjs 6/6, escaped mini build exit 1, decoded nested/key/top-level/duplicate negative and normal, raw scan and sanitizer preservation, exact 17 accepted unchanged and 4144 identical distribution with 5 JSON/8 key removals and 4076 WebP; reuse accepted V22 non-affected scope; no repeated game research",
-      "evidence": "V23 R2 Source/Delta/Manifest/Evidence in existing private Library; V22 OFF PART1/PART2 are byte-identical rebuild, revalidated by R2 gate, fixed manifest ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
-      "condition": "Independent QA verdict on R2; then actual browser only in authorized environment; do not infer game acceptance or turn on flags",
-      "after": "00 release gate only after independent scoped retest and required browser/game evidence; Owner approval actual deployment"
+      "task": "V24_PRIVATE_ACTIVATION_SCOPED_QA_AND_AUTHORIZED_BROWSER",
+      "fixedSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+      "scope": "3 exact settings paths / 5 values and artifact delta only; verify 393 unchanged source and 4141 unchanged dist; operation/version/schema eligibility, unsupported completion/family/reward and recipe denial outside exact witness; reuse accepted R2 privacy and prior scoped operations; real UI HTTP+HTTPS under /HKIA-Editor/ with native WebCrypto, actual module Worker, genuine Switch300/301 both domains, atomic batch and eligible recipe pre-resave roundtrip, original and non-target bytes, rollback. BrowserKit prepared, syntax checked and helper synthetic PASS; independent QA review and extend as needed; do not infer real Browser PASS.",
+      "environment": "Prior admin-blocked environment unchanged; no retry. Run only authorized private host, trusted local TLS cert, original saves never transmitted or served. Kit inputs pinned, local only; do not install untrusted cert or bypass policy.",
+      "condition": "First scoped activation and kit review READY; actual browser WAIT_ENV until authorized host. Determine only irreducible Native game evidence required for release-critical accepted operation scope; game acceptance remains unobserved.",
+      "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V23_R2_SCOPED_PRIVACY_RETEST"
+      "06_V24_ACTIVATION_SCOPE_AND_BROWSER_KIT_REVIEW"
     ],
     "nextAfterDep": [
       "06_REAL_BROWSER_AUTHORIZED_ENV",
-      "00_RELEASE_GATE_AFTER_QA_AND_BROWSER",
+      "00_RELEASE_GATE_AFTER_BROWSER_AND_IRREDUCIBLE_GAME_EVIDENCE",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
-    "risks": "Gate local fix not yet independent PASS; exact artifact bytes unchanged, no claim broader private pattern coverage beyond existing regex; no public data or flags.",
-    "previousTask": "V22_PRIVACY_DECODED_VALUE_REPAIR",
-    "dependency": "06 R2 scoped PASS; real browser and game persistence remain distinct"
+    "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations."
   }
 }
