@@ -955,7 +955,7 @@
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_ACCEPTED_FORMAL_SUCCESSOR_AND_V24_BROWSER_ENV; 04_FORMAL49_EXACT20_PRIVATE_WRITER; 05_FORMAL_FAMILY_BATCH_UI; 03_DUNEBUG_COMIC_REFERENCE_CLOSURE; 02_MANUAL_UNPERSISTED_PRODUCER; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER; 07_WAIT_ENV",
+      "next": "00_SERIAL_ACCEPTED_FORMAL_SUCCESSOR_AND_V24_BROWSER_ENV; 04_FORMAL49_EXACT20_PRIVATE_WRITER; 05_FORMAL_FAMILY_BATCH_UI; 02_03_IN_FLIGHT_DO_NOT_DUPLICATE; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER; 07_WAIT_ENV",
       "execution": {
         "task": "FORMAL_01_EXACT_RESTORE_REPAIR_AND_NEW_READY",
         "status": "DONE",
@@ -1708,6 +1708,36 @@
           "v24": "FROZEN_WAIT_ENV"
         },
         "rollback": "R2 OFF; 01 remove 8 additive paths, old verifier not accepted; 04 revert exact 11 paths to single-family; 05 revert four paths to accepted composite; V25 revert 37; V24 untouched"
+      },
+      "handoffRecheck": {
+        "date": "2026-11-12",
+        "task": "06_HANDOFF_LIVE_READY_RECONCILIATION",
+        "status": "DONE_NO_NEW_FIXED_QA_SOURCE_WAIT_ENV",
+        "baseHead": "d5a1d70bd0143eb7876b4cec2c60ced6820d2545",
+        "baseLedgerBlob": "e53d68136ef74a0fad64ff69d633fa74574e96b5",
+        "sourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+        "scope": "Read-only latest main, existing accepted QA, private artifact catalog and changed-runtime availability; no product retest or source change",
+        "verified": "Prior formal repair/03/04/05/V25 exact scoped acceptance retained. Latest Library entries include previous QA report/evidence/BrowserKit, no newer fixed product delta identified. Browser installed Chromium 144; empty localhost HTTP navigation returned net::ERR_BLOCKED_BY_ADMINISTRATOR; no save supplied, no bypass, no further retry. Main API protected=false; bootstrap PR1 draft/open.",
+        "browser": {
+          "status": "WAIT_ENV",
+          "kitSha256": "d436cc4cdcec83dc2d744b5eeb428c6113cfd0dc6775ddc459ec8d8fa99d569c",
+          "actualProductRun": false,
+          "unblock": "Authorized private Chrome/Chromium loopback HTTP+trusted localhost HTTPS; execute fixed V24 at 320/375/1280 with both genuine versions; no administrator-policy bypass."
+        },
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "04 SAVE CORE",
+            "05 WEB"
+          ],
+          "condition": "00 integrate exact newly accepted formal followups into fixed successor; 04 exact20 writer and 05 batch UI after already-accepted scoped dependencies; 02/03 IN_FLIGHT, do not duplicate. 06 after new fixed source or authorized browser; 07 independent WAIT_ENV."
+        },
+        "unverified": [
+          "Actual V24 browser E2E",
+          "Native game load/auth/resave/reward replay",
+          "New formal successor",
+          "04 exact20 and 05 batch UI new fixed source"
+        ]
       }
     },
     "00_MEDIA": {
