@@ -49,8 +49,8 @@
       "priorRecipeAcceptance": "06_SCOPED_PASS_RELATED_ONLY_301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
     },
     "04_SAVE_CORE": {
-      "status": "TRUSTED_RECIPE_RECEIPT_LOCAL_PASS_QA_PENDING",
-      "sourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+      "status": "V21_NATIVE_LOAD_BOUNDARY_STATIC_PASS_QA_READY",
+      "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
         "collection-key1-ticks",
@@ -63,17 +63,17 @@
       ],
       "realIsolatedOutput": 14,
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
-      "nativeLoad": "COLLECTION_MIGRATION_MAX_REGISTERED_86_LATEST_87; ALWAYSRUN_3_METADATA_SLOTS_IDENTIFIED_METHOD_NAMES_EFFECTS_UNKNOWN; ADDITIONAL_AUTH_UNKNOWN",
-      "specificBlocker": "RECIPE_EXACT_SAME_RUNTIME_RESTORE_LOCAL_PASS; GAME_RESAVE_LINEAGE_AND_NEW_SCOPED_QA_UNVERIFIED; OTHER_SIX_OPERATIONS_NOT_BLOCKED",
-      "next": "06_SCOPED_QA_NEW_04_16_PATHS; 05_RECEIPT_UI_AFTER_QA; 00_SERIAL_INTEGRATION_GRAPH; GAME_RESAVE_LINEAGE_ONLY_IF_NEW_EVIDENCE",
+      "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
+      "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
+      "next": "06_SCOPED_QA_04_3_ADD_AND_03_10_ADD_AND_05_RECEIPT_4_PATHS; 00_SERIAL_ACCEPTED_INTEGRATION; 04_NO_REPEAT_WAIT_NEW_CAUSAL_OR_GAME_LOAD_WITNESS",
       "execution": {
         "task": "NATIVE_V301_ALWAYSRUN_BODY_EFFECTS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_STATIC_PASS_QA_READY",
         "baseHead": "a5cb28a745f8b8036df97c0145f5b5c58b8170b1",
-        "baseSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-        "scope": "04 static load audit; pinned NSO/dump; 03 semantic contract advisory only; no shared product files",
+        "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+        "scope": "04 evidence only: two Native AlwaysRun bodies, static marker init/consumer and 6 real record markers; 3 ADD 0 MOD; 381 V21 entries unchanged; no product or release change",
         "owner": "04 SAVE CORE",
-        "dependency": "06 receipt SCOPED_PASS; V20/V21 integration in 00",
+        "dependency": "06 receipt exact source SCOPED_PASS; V21 fixed integrated candidate; 03 new AlwaysRun contract QA pending",
         "previous": {
           "task": "V18_RECIPE_TRUSTED_RECEIPT",
           "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -182,7 +182,53 @@
             "condition": "Fixed source SHA; both shipped flags OFF; recipe independent activation gate",
             "nextAfter": "05 receipt-aware capability UI and 00 serial integration; ordinary six operations proceed independently"
           }
-        }
+        },
+        "fixedSourceSha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+        "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
+        "manifestSha256": "ef55d4f895a93ac3312be853198683783dcb65e86c3c4c4d0a1a155a7bbaa8ec",
+        "changedPaths": "3_ADD_0_MOD_0_DEL",
+        "artifacts": {
+          "source": "libfile_2e7dcce2134c8191b680747cbdcfff94",
+          "delta": "libfile_a6481dcae25c8191a9548bba5c4b81ca",
+          "manifest": "libfile_8d06c200a3c8819185e238b0f281c1bc"
+        },
+        "verified": {
+          "nativeInstructionAnchors": 72,
+          "staticInitializerFields": 2,
+          "realRecordsBothMarkersMatch": 6,
+          "versions": {
+            "2.18.1": 1,
+            "3.0.0": 4,
+            "3.0.1": 1
+          },
+          "duplicateInventory": "IMMEDIATE_RET_V301",
+          "boulder": "MISSION_STATUS3_OR_TASK4_COMPLETE_SKIP; REQ6_9; EIGHT_WORLD_OBJECT_IDS; EXISTING_FLAGS_ACTIVE_BIT_1_ONLY_DIRECT_WRITE",
+          "originalUnchanged": true,
+          "check": "PASS",
+          "build": "PASS",
+          "zipCrc": "PASS",
+          "unchangedV21Entries": 381,
+          "libraryReadbackAll3Sha": "PASS",
+          "readbackAuditAggregateIdentical": true,
+          "priorReceiptIndependentQA": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
+          "newFullTests": "NOT_RUN_EVIDENCE_ONLY_NO_PRODUCT_CHANGE"
+        },
+        "unverified": [
+          "ADDITIONAL_NATIVE_AUTH_OUTSIDE_FIXED_MARKER_CHECKS",
+          "RAW_METADATA_FIELD_HANDLE_TO_INITIALIZER_MAPPING",
+          "BOULDER_REAL_BRANCH_OUTCOMES_INDIRECT_EFFECTS",
+          "GAME_LOAD_RESAVE_REBOOT",
+          "03_ALWAYSRUN_CAUSAL_QA",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "FINAL_INTEGRATED_QA"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "3 additive evidence paths, pinned NSO/dump, aggregate and no-product-change check; 03 new 10 additive paths and 05 new 4 separately owned",
+          "condition": "No repeat V20 accepted receipt or V21 ordinary batch; source fixed; 03 existing paired operation satisfies local contract, no extra unconditional writes",
+          "nextAfter": "00 serial integrate accepted disjoint evidence/UI; final actual browser and irreducible game acceptance; 04 waits new evidence or scoped QA failure"
+        },
+        "rollback": "Remove exactly 3 additive evidence paths; 381 original V21 entries unchanged"
       }
     },
     "05_WEB": {
