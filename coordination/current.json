@@ -182,7 +182,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "REFERENCE_AND_MISSING_MANUAL_SCOPED_QA_PENDING; 04_EXACT20_INDEPENDENT; 04_EXACT29_AFTER_02_03_QA; 03_WAIT_NEW_CONCRETE_WITNESS_OR_FAILURE",
+      "next": "03_WAIT_DEP_06_REFERENCE_AND_MISSING_MANUAL; 04_EXACT20_QA_READY; 04_EXACT29_AFTER_02_03_SCOPED_PASS; 01_REFERENCE_ADVISORY_AFTER_QA; NO_REPEAT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -295,6 +295,20 @@
         },
         "remaining": "Actual runtime scheduling/progress events, v300 Native equivalence, missing-row producer/Id allocation witness, game load/resave/reboot and reward effects UNKNOWN. No structural creation.",
         "next": "06 independent scoped new02 9 ADD + 03 8 ADD; 04 exact29 existing v301 after both acceptance, full archive absence CAS, six fields, no Account or row creation; exact20 independent; 00 serial formal integration"
+      },
+      "formalIntegrationCompatibility": {
+        "sourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "sourceEntries": 441,
+        "status": "V26_COMPATIBILITY_PASS_NOT_INDEPENDENT_QA",
+        "verified": "441/441 source SHA and size, ZIP CRC; FORMAL49 7/7 exact integrated; reference8/manual8/new02 9 absent; exact20 9 and batchUI 4 pre/postimage exact; all five pending deltas 38 paths mutually disjoint",
+        "pendingDeltas": {
+          "reference": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
+          "manual": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb",
+          "upstream02": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
+          "core04": "46c3078ee73ce708cfa03358e7d3e22793542866fdbf9567b5bc57113e77948b",
+          "web05": "85c8122649c51a52b5ceb17205c6337ba2a1447e60fb836022fdbd6c2fb68466"
+        },
+        "decision": "No 03 source change; 06 scope QA pending; 00 serial integration after acceptance; not V26 combined acceptance or release permission"
       }
     },
     "04_SAVE_CORE": {
