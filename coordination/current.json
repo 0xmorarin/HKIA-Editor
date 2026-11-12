@@ -465,15 +465,15 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_V22_PRIVACY_COMBINED_QA",
+      "status": "V22_SCOPED_TRUE_RED_PRIVACY_DECODED_VALUE_ONLY",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "targetScope": "16_MOD_26_ADD",
-      "next": "00_SERIAL_INTEGRATE_17_ACCEPTED_PATHS_ON_V21; 06_FINAL_FIXED_BETA_INTEGRATION_AND_AUTHORIZED_REAL_BROWSER_AFTER_DEP; 03_04_05_WAIT_NEW_CONCRETE_EVIDENCE; 07_WAIT_ENV",
+      "next": "00_CTRL_MINIMAL_PRIVACY_GATE_REPAIR; 06_SCOPED_RETEST_AFTER_FIXED_SOURCE; REAL_BROWSER_AFTER_AUTHORIZED_ENV; 07_WAIT_ENV",
       "execution": {
         "task": "V22_PRIVACY_AND_COMBINED_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "3382b78b80ea8cb008883b484b97afad05bb651c",
         "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
         "fixedSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
@@ -732,7 +732,75 @@
             "condition": "17 disjoint accepted paths on V21, 396 logical entries; fixed final artifact then 06 final integration/real browser. 03/04/05 wait new concrete evidence or failure; 07 WAIT_ENV"
           },
           "rollback": "V21 688fc18f... before new deltas; V20 batch rollback; V17 research full fallback"
-        }
+        },
+        "verdict": "SCOPED_TRUE_RED_PRIVACY_GATE_DECODED_VALUE",
+        "verified": {
+          "sourceEntries": 396,
+          "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
+          "deltaEntries": 21,
+          "acceptedExactPaths": 17,
+          "unchanged": 375,
+          "focused": 28,
+          "independentPrivacyPass": 3,
+          "independentPrivacyFail": 3,
+          "rootCauses": 1,
+          "miniBuildBypass": true,
+          "distEntries": 4144,
+          "distBytes": 146154762,
+          "webp": 4076,
+          "modules": 53,
+          "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+          "rebuildManifestByteEqual": true,
+          "knownPrivateKeysRemoved": 8,
+          "affectedJson": 5,
+          "otherJsonValuesEqual": true,
+          "decodedActualArtifactHits": 0,
+          "realVersions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "realOffPreview": 4,
+          "realExportDenied": 4,
+          "originalsUnchanged": true
+        },
+        "trueRed": {
+          "owner": "00 CTRL",
+          "path": "scripts/pages-artifact-policy.mjs",
+          "cause": "JSON key check uses parsed keys but value check scans raw text only; escaped slash/Unicode decoded private references bypass verifyDist and build-site",
+          "repro": "synthetic JSON escaped Drive URL; 3 independent negatives and tiny build reproduced",
+          "expected": "reject decoded private values",
+          "actual": "accepted; synthetic value byte preserved in dist",
+          "observedActualLeak": false,
+          "repair": "recursive parsed JSON string/key privacy scan plus raw scan, preserve sanitizer, add escaped/nested/normal tests"
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_QA_V22_PRIVACY_SCOPED_REPORT_20261112.md",
+            "sha256": "0d0db8a5f6db5e86fbc79b46d34228d15c5d13aa9f281355b78dd0e305090458"
+          },
+          "zip": {
+            "file": "HKIA_06_QA_V22_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
+            "sha256": "84c7ee4d638687f0fd8d95d2cf991b740a6c65e004df9d54883324f13669a65e",
+            "entries": 14
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V22_PRIVACY_20261112.md",
+            "sha256": "4506c595b240be957c99cf12bb614ffb1febb25d7f81c7e17609b1d7b7ec4654"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+        },
+        "remaining": [
+          "00 privacy gate minimal repair and fixed new source/artifact",
+          "actual HTTP/HTTPS native WebCrypto browser Module Worker E2E authorized environment",
+          "game authentication/load/resave/reboot/Recipe zero-row retention unobserved",
+          "07 toolchain independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "condition": "fix decoded JSON value privacy scan, preserve current data and 17 accepted paths, pin repair source and artifact; 06 six-case and mini-build rejection scoped retest; no repeated unrelated QA",
+          "nextAfter": "06 scoped repair and final browser after authorized env"
+        },
+        "rollback": "V21 development source only; preprivacy artifacts NOT publishable. V22 fixed artifact clean under observed decoded patterns but gate not accepted."
       }
     },
     "00_MEDIA": {
