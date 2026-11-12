@@ -514,12 +514,15 @@
       },
       "formalTask": {
         "task": "FORMAL_BULK_TARGET_SELECTION_CAPABILITY_UX",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Independent UI-only on R2 OFF: current renderNativeBatch/renderCollectionBulk filtered scalar/date 64/128 caps and unmapped reject. Explicit subset selection/counts, unsupported target reasons, category/all selection preview and bounds. Never silently truncate/split atomic Apply. Preserve frozen V24 and existing output; no unaccepted completion/acquisition capability.",
         "acceptance": "Focused selection, filtered/all, unknown IDs, over-limit fail-closed, 320/375/1280 keyboard and exact existing atomic batch request. No Core/flags. If equivalent already exists, DONE without reimplementation.",
-        "next": "06 scoped QA; new Core operation UI after accepted contract"
+        "next": "06 scoped QA; new Core operation UI after accepted contract",
+        "baseHead": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
+        "owner": "05 WEB",
+        "activation": "20261112_05_FORMAL_BULK_SELECTION"
       }
     },
     "06_QA": {
