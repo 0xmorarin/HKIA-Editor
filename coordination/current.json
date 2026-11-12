@@ -1125,12 +1125,12 @@
       }
     },
     "05_WEB": {
-      "status": "FORMAL_RECIPE4_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "FORMAL_RECIPE23_UI_LOCAL_IMPLEMENTED_PARTIAL_RUNTIME_QA_READY",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "IN_FLIGHT_FORMAL_RECIPE23_UI",
+      "next": "06_SCOPED_QA_RECIPE23_UI_5_PATHS_AND_REMAINING_UI_EVIDENCE; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_ACCEPTED_CORE_AFTER_DEP",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -1345,7 +1345,7 @@
       },
       "formalTask": {
         "task": "FORMAL_RECIPE23_RECEIPT_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "05 WEB",
         "baseHead": "e447ad758cda5074c1ebbaaa5cf371ae44a040e7",
         "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
@@ -1800,7 +1800,60 @@
             "nextAfter": "00 serial integrate on V29 after scoped acceptance; 05 remaining23 only after accepted 04 proof; 5 celebration wait causal proof"
           },
           "next": "06_SCOPED_QA_RECIPE4_UI_5_PATHS_AND_V29; 00_SERIAL_FORMAL_INTEGRATION; 05_REMAINING23_UI_AFTER_ACCEPTED_WRITER"
-        }
+        },
+        "baseComposite": "V29 aedb4cf6 + accepted 04 Recipe23 1e3c88c6 + accepted 05 Recipe4 UI 5ee5f003; 505 entries",
+        "fixedSourceSha256": "8035c17455c08a8cb2bdbf7551c4423f97aad49ed33791bc39876fc94a10e751",
+        "deltaSha256": "ef9f6edd70885f44dedf75e2739ec4baab8edb2da7bc680fc546420805785bbf",
+        "manifestSha256": "b64d7124548d39eecd3315f8c62a729df9ea845185e979028db7d0322807c81a",
+        "evidenceSha256": "8ea973559f538efee5e336c2470abd6fa83214c2e393f407852e95e1dc78c885",
+        "handoffSha256": "1f881f633329b134ea18ed555a057400e0585dc1d15b3df96f19fc933f96f870",
+        "changedPaths": "2_MOD_3_ADD_0_DEL",
+        "artifacts": {
+          "source": "HKIA_WEB05_FormalRecipe23UI_V29_20261113_Source.zip",
+          "delta": "HKIA_WEB05_FormalRecipe23UI_V29_20261113_Delta.zip",
+          "manifest": "HKIA_WEB05_FormalRecipe23UI_V29_20261113_Manifest.json",
+          "evidence": "HKIA_WEB05_FormalRecipe23UI_V29_20261113_Evidence.zip",
+          "handoff": "HKIA_WEB05_FormalRecipe23UI_V29_20261113_HANDOFF.md"
+        },
+        "verified": {
+          "focusedNew": 5,
+          "recipe4Regression": 5,
+          "nodePass": 993,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS_SOURCE_ONLY",
+          "exactReplay": "508/508",
+          "realRepresentative": 278946815,
+          "realOffPreview": 1,
+          "realForward": 1,
+          "realReverse": 1,
+          "exactDiff": 2,
+          "accountRaw": 2,
+          "chromeInlineOff": [
+            320
+          ],
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "libraryReadbackAll5Sha": "PASS",
+          "releaseFlags": "OFF",
+          "V24Frozen": true
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ALL23_UI_CONTROLLER_RUN_TIMEOUT",
+          "CHROME375_ISOLATED_OUTPUT_TIMEOUT_EPIPE",
+          "OTHER_VIEWPORTS_AND_WRONG_VERSION_REAL_UI_NOT_RUN",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_AUTH_RESAVE_RUNTIME_EFFECTS",
+          "00_FULL_DISTRIBUTION_REBUILD"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "5 paths, exact 23 target allowlist, separate flag/operation, 1 genuine representative and 320 inline PASS; finish all23 controller in bounded batches, 375/1280 and isolated real Download, wrong version, scope isolation, old recipe regression. No V24 changes.",
+          "nextAfter": "00 serial integration after scoped PASS; 03 Celebration5 targeted causal independent; 04 waits accepted scope"
+        },
+        "next": "06_SCOPED_QA_RECIPE23_UI_5_PATHS_AND_REMAINING_UI_EVIDENCE; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_ACCEPTED_CORE_AFTER_DEP"
       }
     },
     "06_QA": {
