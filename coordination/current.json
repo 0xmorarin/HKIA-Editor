@@ -835,7 +835,7 @@
       },
       "formal9Execution": {
         "task": "FORMAL_MANUAL_EXACT9_ABSENCE_REVOKE",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS",
         "owner": "04 SAVE CORE",
         "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
@@ -916,6 +916,15 @@
           "nextAfter": "05 exact9 UI after scoped PASS; 00 integrate 9 paths on V27 (preimage confirmed) or successor with current CAS, same 55 modules, full distribution/privacy/rollback; 04 Recipe32 only after accepted 03 causal safe subset and exact restore/receipt/side-effect contract; other20 WAIT_REWARD_EVIDENCE; V24 frozen"
         },
         "rollback": "Restore 6 preimage files from 461 composite and remove 3 additions; preserve exact20 and V24"
+      },
+      "recipe32Execution": {
+        "task": "FORMAL_RECIPE32_EXACT_SAFE_SUBSET_WRITER",
+        "status": "IN_FLIGHT",
+        "baseMain": "8bdb323fd8685fe4212139260533870437b70cbc",
+        "baseSourceSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
+        "owner": "04 SAVE CORE",
+        "scope": "Existing row Recipe exact safe subset, trusted receipt/restore and atomic output; no new rows, reward or V24 changes",
+        "dependency": "06 Recipe32 01 + 03 research scoped PASS, V27 scoped PASS; preserve existing receipt authorization"
       }
     },
     "05_WEB": {
