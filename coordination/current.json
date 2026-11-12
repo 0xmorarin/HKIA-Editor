@@ -175,7 +175,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_DUNEBUG_COMIC_REFERENCE_CLOSURE",
+      "next": "FORMAL_REFERENCE_CLOSURE_PARTIAL_QA_PENDING; 06_SCOPED_QA; 01_04_ADVISORY; 03_WAIT_NEW_CONCRETE_WITNESS",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -230,7 +230,7 @@
       },
       "formalFollowup": {
         "task": "FORMAL_02_49_TARGET_CAUSAL_ADJUDICATION",
-        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
+        "status": "SCOPED_PASS_06",
         "baseMain": "06877ba4cd46661a0cd298959b2cf088c0ad4e9c",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 54c040bc…73b1 SCOPED_PASS research only; 03 5dfa67d3…0844 SCOPED_PASS",
@@ -245,17 +245,30 @@
           "gameAccepted": false
         },
         "remaining": "Actual game scheduling/load/resave/reward replay, v300 native equivalence, additional derived and terminal COMPLETE; 01 exact restore TRUE_RED owned by 01, Comic RELATED only; no product permission",
-        "next": "06 scoped 7 ADD with exact accepted 02 dependency; 04 private Writer expansion after scoped acceptance (20 no-defined-reward first); 00 serial integration; 03 WAIT new concrete witness/QA failure"
+        "next": "04 exact20 private Writer; V24 frozen",
+        "acceptedScope": "49 exact v301 causal models; 20 priority no-defined-reward; research only"
       },
       "formalNextTask": {
         "task": "FORMAL_COLLECTION_DUNEBUG_COMIC_REFERENCE_CLOSURE",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_PENDING",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "01 prior 18 Native anchors/3 target source facts; 01 restore token repair separate pending QA; use static facts only, no reliance on unaccepted restore verifier",
         "scope": "Exact Dunebug daily mission and active placement consumers; Comic Shop managed body and target-specific quest/counter references; Wollypog daily mission only if existing 01 concrete evidence supports. Prove REQUIRED/RELATED/INDEPENDENT/UNKNOWN for structural delete/reinsert; no general scan, no 01 raw token repair or 03 FORMAL49 redo.",
         "acceptance": "Specific Native producer/consumer anchors, exact target identity and version, no guessed IDs or speculative writes. State unresolved witness; direct 01/04 for accepted safe scope and 06 QA.",
-        "baseMain": "1d0510279b7e62e891cfa6c013de577d63f063cc"
+        "baseMain": "1d0510279b7e62e891cfa6c013de577d63f063cc",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL_REFERENCE_CLOSURE_DELTA_20261112.zip",
+          "sha256": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
+          "manifestSha256": "357cd8dcca6182e952a3ae8c4f4aa9ca2fec46a368231b485e1f5bdeca790320",
+          "scope": "8_ADD_0_MOD_0_DEL; 396 base entries unchanged; 1 transport manifest",
+          "verified": "36 Native anchors and 9 branches; ComicShop complete 194 entries; 2 Daily Catch prototype typed prefixes; Fantastic Friends exact 5 member PPtrs and genuine 5/5 positive inventory/count history; typed 20207 docs, 5 daily, 248 Home, 403 HomeObject; 14 focused + 37 adjacent PASS; tsc; CRC and Library byte-exact readback",
+          "classification": "RELATED item definitions and conditional recount; Comic three ownership gates independent only if matched runtime definition; no new cross-model REQUIRED; no structural Writer authority",
+          "gameAccepted": false
+        },
+        "priorAcceptance": "06 exact01 restore repair fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947 and FORMAL49 scoped PASS; no repeat",
+        "remaining": "Active mission event/managed conditions, placement runtime ownership, opaque and cross-store reference closure, actual load/resave/reboot and Steam/Switch asset parity UNKNOWN. Wollypog no structural witness. No general acquisition permission.",
+        "next": "06 independent 8 ADD scoped QA; 01 and 04 consume conservative evidence, preserve exact restore contract, no ownership enablement; 04 exact20 independent continues; 00 serial accepted integration; 03 WAIT active reference/game witness or QA failure"
       }
     },
     "04_SAVE_CORE": {
