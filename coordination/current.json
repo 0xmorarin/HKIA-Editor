@@ -361,7 +361,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL_RECIPE23_REAL_FORWARD_RECEIPT_REVERSE_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_RECIPE23_SCOPED_PASS_CELEBRATION5_PREFLIGHT_WAIT_DEP",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -377,7 +377,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_RECIPE23_8_PATHS; 05_AFTER_PASS_RECIPE23_UI; 00_SERIAL_INTEGRATION_V29_COMPATIBLE; 04_WAIT_NEW_ACCEPTED_CAUSAL_SCOPE; 5_CELEBRATION_WAIT_CAUSAL_PROOF; V24_FROZEN",
+      "next": "04_CELEBRATION5_AFTER_06_03_SCOPED_PASS; 06_V30_COMBINED_AND_03_CELEBRATION5_AND_05_RECIPE23_UI; 05_RECIPE23_UI_QA_PENDING; 00_SERIAL_ACCEPTED_INTEGRATION; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1137,12 +1137,49 @@
       },
       "celebration5Preflight": {
         "task": "FORMAL_CELEBRATION5_WRITER_PREFLIGHT",
-        "status": "IN_FLIGHT",
+        "status": "DONE_READ_ONLY_WAIT_DEP",
         "owner": "04 SAVE CORE",
         "baseMain": "d8b300bf03291df2ef265ff9ac52116c6f74741b",
         "baseSourceSha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
         "scope": "read-only V30 exact accepted Recipe23 and pending Celebration5 contract compatibility; exact product denial and raw preservation route; no product authorization",
-        "dependency": "06 scoped acceptance of 03 dfa4fb81...7d4a required before new Writer"
+        "dependency": "06 scoped acceptance of 03 dfa4fb81...7d4a required before new Writer",
+        "evidence": {
+          "file": "HKIA_04_Celebration5_Writer_Preflight_20261113.json",
+          "sha256": "6954467a465f0ea8aabfeac84ad66ec499074cc6dc6b0d0b5b622e2b48885210",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT"
+        },
+        "verified": {
+          "v30Entries": 505,
+          "archiveShaCrc": 3,
+          "acceptedRecipe23ExactPaths": 8,
+          "new03Adds": 8,
+          "conflicts": 0,
+          "hypotheticalEntries": 513,
+          "actualVersion": "3.0.1",
+          "collectionVersion": 87,
+          "typedDocuments": 20207,
+          "counterDocuments": 586,
+          "tag8Documents": 1,
+          "exactTargets": 5,
+          "quantityOneSimpleRows": 5,
+          "tag8MembershipOne": 5,
+          "counterMembershipZero": 5,
+          "oldProductDenied": 15,
+          "lowLevelDenied": 5,
+          "originalUnchanged": true,
+          "productSourceUnchanged": true,
+          "privateBytesWritten": false
+        },
+        "classification": "READ_ONLY_COMPATIBILITY_NOT_QA_NOT_AUTHORIZATION",
+        "next": "After 06 independent PASS exact 03 dfa4fb8172d9423e7750dda6cd8f9136a91f6681a9ee3b3647a801cfca607d4a: exact5 separate operation/flag; full typed tag8 membership=1, zero Counter, exact existing row CAS and all expanded/tag8 raw bytes preserved; 5 forward+5 receipt inverse genuine output, no generic/batch/new row/post-resave acquisition; 06 direct scoped QA",
+        "unverified": [
+          "NEW_03_INDEPENDENT_QA",
+          "NEW_PRODUCT_WRITER_AND_OUTPUTS",
+          "ACTUAL_GAME_AUTH_LOAD_RESAVE_RUNTIME_DEFINITION",
+          "REAL_HTTP_HTTPS_BROWSER",
+          "MAIN_PROTECTION"
+        ]
       }
     },
     "05_WEB": {
