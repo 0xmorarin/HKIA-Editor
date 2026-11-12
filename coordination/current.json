@@ -1787,1038 +1787,1137 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V28_RECIPE4_MANUAL9_UI_SCOPED_PASS_V24_WAIT_ENV",
+      "status": "FORMAL_V29_COMBINED_SCOPED_PASS_RECIPE23_RECIPE4_UI_IN_FLIGHT",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
       "next": "00_SERIAL_V28_SUCCESSOR; 04_RECIPE_REMAINING23_SCOPED_WRITER; 05_RECIPE4_RECEIPT_UI; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
       "execution": {
-        "task": "FORMAL_V29_COMBINED_SCOPED_QA",
+        "task": "FORMAL_RECIPE23_RECIPE4_UI_QA",
         "status": "IN_FLIGHT",
         "baseHead": "f253932657464e9120dd7f1b6c7831eb124b9c6b",
-        "baseSourceSha256": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
-        "fixedSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
-        "scope": "13 paths, accepted Recipe4 and Manual9 UI; 6 changed dist paths; 55 modules, OFF; V24 frozen",
+        "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+        "scope": "04 Recipe23 8 paths and 05 Recipe4 UI 5 paths; independent genuine outputs and receipt proof; V24 frozen",
         "owner": "06 QA",
         "previous": {
-          "task": "FORMAL_V28_RECIPE4_MANUAL9_UI_QA",
+          "task": "FORMAL_V29_COMBINED_SCOPED_QA",
           "status": "DONE",
-          "baseHead": "a3f067eb547f242905959f7d747c03fe52534988",
-          "scope": "04 Recipe4 8 paths; 05 Manual9 UI 5 paths; V28 22 paths; Pages OFF read-only check",
+          "baseHead": "f253932657464e9120dd7f1b6c7831eb124b9c6b",
+          "baseSourceSha256": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
+          "fixedSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+          "scope": "13 paths, accepted Recipe4 and Manual9 UI; 6 changed dist paths; 55 modules, OFF; V24 frozen",
           "owner": "06 QA",
           "previous": {
-            "task": "FORMAL_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL_QA",
+            "task": "FORMAL_V28_RECIPE4_MANUAL9_UI_QA",
             "status": "DONE",
-            "baseHead": "422c479b70c8bc8851299ab765c559f51d82ffc9",
-            "scope": "V27 integration 47 paths; 04 Manual9 9 paths; 05 Exact20 UI 5 paths; 03 Recipe32 causal 8 ADD; no V24 change",
+            "baseHead": "a3f067eb547f242905959f7d747c03fe52534988",
+            "scope": "04 Recipe4 8 paths; 05 Manual9 UI 5 paths; V28 22 paths; Pages OFF read-only check",
             "owner": "06 QA",
             "previous": {
-              "task": "FORMAL_01_RECIPE_EXPANSION_V26_SCOPED_QA",
+              "task": "FORMAL_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL_QA",
               "status": "DONE",
-              "baseHead": "8c2bd9e6026dadbef06306446e287cb3a4731207",
-              "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
-              "fixedDeltaSha256": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
-              "scope": "01 8 ADD existing Recipe 32 research targets; exact V26 base, no V24/product change",
+              "baseHead": "422c479b70c8bc8851299ab765c559f51d82ffc9",
+              "scope": "V27 integration 47 paths; 04 Manual9 9 paths; 05 Exact20 UI 5 paths; 03 Recipe32 causal 8 ADD; no V24 change",
               "owner": "06 QA",
               "previous": {
-                "task": "FORMAL_V26_EXACT20_BATCH_UI_MISSING_MANUAL_REFERENCE_QA",
+                "task": "FORMAL_01_RECIPE_EXPANSION_V26_SCOPED_QA",
                 "status": "DONE",
-                "baseHead": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
-                "scope": "V26 integration 30 paths; 04 exact20 9 paths; 05 batch UI 4 paths; 02 missing Manual 9 ADD; 03 reference and manual causal deltas; no V24 change",
+                "baseHead": "8c2bd9e6026dadbef06306446e287cb3a4731207",
+                "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+                "fixedDeltaSha256": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
+                "scope": "01 8 ADD existing Recipe 32 research targets; exact V26 base, no V24/product change",
                 "owner": "06 QA",
                 "previous": {
-                  "task": "FORMAL_01_EXACT_RESTORE_REPAIR_AND_NEW_READY",
+                  "task": "FORMAL_V26_EXACT20_BATCH_UI_MISSING_MANUAL_REFERENCE_QA",
                   "status": "DONE",
-                  "baseHead": "a21458bee72206e28143f3e76c0157f3ba1f2381",
-                  "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-                  "scope": "01 4MOD1ADD repair; 03 formal49 7ADD; 04 batch 11; 05 single-family UI 4; V25 accepted 37 paths integration; V24 frozen",
+                  "baseHead": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
+                  "scope": "V26 integration 30 paths; 04 exact20 9 paths; 05 batch UI 4 paths; 02 missing Manual 9 ADD; 03 reference and manual causal deltas; no V24 change",
                   "owner": "06 QA",
-                  "fixedSources": {
-                    "repair01": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
-                    "link03": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
-                    "core04": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
-                    "ui05": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
-                    "v25": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265"
-                  },
                   "previous": {
-                    "task": "FORMAL_R2_01_02_03_04_05_AND_PUBLIC_SOURCE_CLOSURE",
+                    "task": "FORMAL_01_EXACT_RESTORE_REPAIR_AND_NEW_READY",
                     "status": "DONE",
-                    "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
+                    "baseHead": "a21458bee72206e28143f3e76c0157f3ba1f2381",
                     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-                    "scope": "Separate new formal 01/02/03 additive scopes; 04 12 paths; 05 7 paths; 00 public source closure 178 paths. V24 frozen, browser WAIT_ENV.",
+                    "scope": "01 4MOD1ADD repair; 03 formal49 7ADD; 04 batch 11; 05 single-family UI 4; V25 accepted 37 paths integration; V24 frozen",
                     "owner": "06 QA",
                     "fixedSources": {
-                      "closure": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
-                      "delta01": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
-                      "delta02": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
-                      "delta03": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
-                      "core04": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
-                      "ui05": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8"
+                      "repair01": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
+                      "link03": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
+                      "core04": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
+                      "ui05": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
+                      "v25": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265"
                     },
                     "previous": {
-                      "task": "V24_PRIVATE_ACTIVATION_SCOPED_QA_AND_AUTHORIZED_BROWSER",
+                      "task": "FORMAL_R2_01_02_03_04_05_AND_PUBLIC_SOURCE_CLOSURE",
                       "status": "DONE",
-                      "baseHead": "4f7f23a055944c504b69d739f1db6c972906ca46",
+                      "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
                       "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-                      "fixedSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
-                      "scope": "3 settings paths, actual artifact, operation matrix, BrowserKit review; no product writes",
+                      "scope": "Separate new formal 01/02/03 additive scopes; 04 12 paths; 05 7 paths; 00 public source closure 178 paths. V24 frozen, browser WAIT_ENV.",
                       "owner": "06 QA",
-                      "dependency": "V23 R2 accepted; actual browser WAIT_ENV unless authorized host available",
+                      "fixedSources": {
+                        "closure": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+                        "delta01": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+                        "delta02": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+                        "delta03": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+                        "core04": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+                        "ui05": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8"
+                      },
                       "previous": {
-                        "task": "V23_PRIVACY_DECODED_REPAIR_R2_SCOPED_RETEST",
+                        "task": "V24_PRIVATE_ACTIVATION_SCOPED_QA_AND_AUTHORIZED_BROWSER",
                         "status": "DONE",
-                        "baseHead": "11ba38894ad8113a33390943da733586ab4d1ea6",
-                        "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
-                        "fixedSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-                        "scope": "2 MOD privacy gate and tests; old six cases, independent decoded/duplicate boundaries, exact dist and no product change",
+                        "baseHead": "4f7f23a055944c504b69d739f1db6c972906ca46",
+                        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+                        "fixedSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+                        "scope": "3 settings paths, actual artifact, operation matrix, BrowserKit review; no product writes",
                         "owner": "06 QA",
-                        "dependency": "V22 fixed source/QA and V23 R2 handoff; no authorized browser environment change",
+                        "dependency": "V23 R2 accepted; actual browser WAIT_ENV unless authorized host available",
                         "previous": {
-                          "task": "V22_PRIVACY_AND_COMBINED_QA",
+                          "task": "V23_PRIVACY_DECODED_REPAIR_R2_SCOPED_RETEST",
                           "status": "DONE",
-                          "baseHead": "3382b78b80ea8cb008883b484b97afad05bb651c",
-                          "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
-                          "fixedSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
-                          "scope": "V22 21 paths; reuse 17 accepted exact paths, new 4 CTRL privacy paths and combined distribution",
+                          "baseHead": "11ba38894ad8113a33390943da733586ab4d1ea6",
+                          "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
+                          "fixedSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+                          "scope": "2 MOD privacy gate and tests; old six cases, independent decoded/duplicate boundaries, exact dist and no product change",
                           "owner": "06 QA",
-                          "dependency": "V21 and 03/04/05 exact accepted scope; real browser authorized environment pending",
+                          "dependency": "V22 fixed source/QA and V23 R2 handoff; no authorized browser environment change",
                           "previous": {
-                            "task": "V21_INTEGRATION_AND_05_RECEIPT_03_04_NATIVE",
+                            "task": "V22_PRIVACY_AND_COMBINED_QA",
                             "status": "DONE",
-                            "baseHead": "528b08e15270d3187a40f3461e4f2071ddda421d",
+                            "baseHead": "3382b78b80ea8cb008883b484b97afad05bb651c",
                             "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
-                            "scope": "V21 combined 4 accepted paths; 05 receipt 4, 03 10 additive, 04 3 additive; no product writes",
+                            "fixedSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
+                            "scope": "V22 21 paths; reuse 17 accepted exact paths, new 4 CTRL privacy paths and combined distribution",
                             "owner": "06 QA",
-                            "fixedSources": {
-                              "v21": {
-                                "sha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
-                                "scope": "3_MOD_1_ADD",
-                                "verdict": "SCOPED_PASS_COMBINED_OFFLINE",
-                                "focused": 22,
-                                "entries": 381,
-                                "unchanged": 377,
-                                "distEntries": 4144,
-                                "webp": 4076,
-                                "distManifestSha256": "3b3f60fd95376a05111b9daba29ad2e5cab2a267973e74566a04738855e36fb5"
-                              },
-                              "ui05": {
-                                "sha256": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
-                                "deltaSha256": "ad7d7832c439e1b4710588ca1e813b91985f49672f18be8c1f810b14a06fe977",
-                                "scope": "2_MOD_2_ADD",
-                                "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_UI",
-                                "focusedNew": 5,
-                                "focusedRegression": 17,
-                                "inlineChromium": 4,
-                                "realRecipeRoundtrip": 1,
-                                "realFileReselectRevokes": 1,
-                                "offViewport": [
-                                  320,
-                                  1280
-                                ],
-                                "isolatedViewport": 375
-                              },
-                              "link03": {
-                                "deltaSha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
-                                "scope": "10_ADD",
-                                "verdict": "SCOPED_PASS_STATIC_CONDITIONAL_PAIR_RELATED",
-                                "focused": 37,
-                                "nativeAnchors": 72,
-                                "metadataBindings": 11,
-                                "realAggregateExact": true,
-                                "newUnconditionalRequired": 0
-                              },
-                              "core04": {
-                                "sha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
-                                "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
-                                "scope": "3_ADD",
-                                "verdict": "SCOPED_PASS_EVIDENCE_ONLY",
-                                "nativeAnchors": 72,
-                                "fixedMarkers": 2,
-                                "realRecords": 6,
-                                "aggregateExact": true
-                              }
-                            },
+                            "dependency": "V21 and 03/04/05 exact accepted scope; real browser authorized environment pending",
                             "previous": {
-                              "task": "V18_TRUSTED_RECIPE_RECEIPT_AND_V19_ATOMIC_BATCH_UI",
+                              "task": "V21_INTEGRATION_AND_05_RECEIPT_03_04_NATIVE",
                               "status": "DONE",
-                              "baseHead": "13cbd467920f795ee477f5238bea02bb6a47967c",
-                              "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+                              "baseHead": "528b08e15270d3187a40f3461e4f2071ddda421d",
+                              "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+                              "scope": "V21 combined 4 accepted paths; 05 receipt 4, 03 10 additive, 04 3 additive; no product writes",
+                              "owner": "06 QA",
                               "fixedSources": {
-                                "core04": {
-                                  "sha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-                                  "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
-                                  "scope": "11_MOD_5_ADD",
-                                  "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
-                                  "focused": 8,
-                                  "realRecipeOutput": 2,
-                                  "independentPythonExactDiff": 2,
-                                  "ordinaryRealOutput": 12,
-                                  "ordinaryPythonExactDiff": 12,
-                                  "rollback": 3,
-                                  "workerNode": "PASS",
-                                  "alwaysRunSlotsResolved": 3
-                                },
-                                "ui05": {
-                                  "sha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
-                                  "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+                                "v21": {
+                                  "sha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
                                   "scope": "3_MOD_1_ADD",
-                                  "verdict": "SCOPED_PASS_ORDINARY_SIX_ATOMIC_BATCH",
-                                  "focused": 17,
-                                  "isolatedActualUiOutput": 2,
-                                  "versions": [
-                                    "3.0.0",
-                                    "3.0.1"
-                                  ],
-                                  "fieldsPerVersion": 2,
-                                  "chromeInline": [
-                                    320,
-                                    375,
-                                    1280
-                                  ],
-                                  "fixedOffPreview": 1
-                                },
-                                "v20": {
-                                  "sha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
-                                  "deltaSha256": "003f123e67c399b8726b4e2a2e3d0643d683bf6a5d64e7a10a32812c56d61db6",
-                                  "scope": "12_MOD_5_ADD",
-                                  "verdict": "SCOPED_PASS_MODULE_CLOSURE_DISTRIBUTION_ONLY",
-                                  "sourceGraph": 53,
+                                  "verdict": "SCOPED_PASS_COMBINED_OFFLINE",
+                                  "focused": 22,
+                                  "entries": 381,
+                                  "unchanged": 377,
                                   "distEntries": 4144,
                                   "webp": 4076,
-                                  "distManifestSha256": "54f723108c5b0706c131e9639918db20da9083ebd44cdcee52276820e8a32110",
-                                  "disjointUiDelta": 4
+                                  "distManifestSha256": "3b3f60fd95376a05111b9daba29ad2e5cab2a267973e74566a04738855e36fb5"
+                                },
+                                "ui05": {
+                                  "sha256": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
+                                  "deltaSha256": "ad7d7832c439e1b4710588ca1e813b91985f49672f18be8c1f810b14a06fe977",
+                                  "scope": "2_MOD_2_ADD",
+                                  "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_UI",
+                                  "focusedNew": 5,
+                                  "focusedRegression": 17,
+                                  "inlineChromium": 4,
+                                  "realRecipeRoundtrip": 1,
+                                  "realFileReselectRevokes": 1,
+                                  "offViewport": [
+                                    320,
+                                    1280
+                                  ],
+                                  "isolatedViewport": 375
+                                },
+                                "link03": {
+                                  "deltaSha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
+                                  "scope": "10_ADD",
+                                  "verdict": "SCOPED_PASS_STATIC_CONDITIONAL_PAIR_RELATED",
+                                  "focused": 37,
+                                  "nativeAnchors": 72,
+                                  "metadataBindings": 11,
+                                  "realAggregateExact": true,
+                                  "newUnconditionalRequired": 0
+                                },
+                                "core04": {
+                                  "sha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+                                  "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
+                                  "scope": "3_ADD",
+                                  "verdict": "SCOPED_PASS_EVIDENCE_ONLY",
+                                  "nativeAnchors": 72,
+                                  "fixedMarkers": 2,
+                                  "realRecords": 6,
+                                  "aggregateExact": true
                                 }
                               },
-                              "scope": "04 16 paths against accepted repair + 03; 05 4 paths against V19 preflight; isolated tests only",
-                              "dependency": "04 prior repair and 03 accepted; 05 prior UI accepted; 00 final merged artifact pending",
-                              "owner": "06 QA",
                               "previous": {
-                                "task": "V18_42_PATHS_PLUS_04_REPAIR_10_05_UI_6_03_LINKAGE_10",
+                                "task": "V18_TRUSTED_RECIPE_RECEIPT_AND_V19_ATOMIC_BATCH_UI",
                                 "status": "DONE",
-                                "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
-                                "baseSourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
-                                "scope": "Independent V18 42 paths and separately fixed 04/05/03 deltas; no product source changes",
+                                "baseHead": "13cbd467920f795ee477f5238bea02bb6a47967c",
+                                "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
                                 "fixedSources": {
-                                  "v18": {
-                                    "sha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-                                    "verdict": "SCOPED_TRUE_RED_RECIPE_ONLY",
-                                    "node": "79_PASS",
-                                    "genuineNonRecipeOutput": 12,
-                                    "independentPythonExactDiff": 12
-                                  },
-                                  "repair04": {
-                                    "sha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-                                    "verdict": "SCOPED_PASS",
-                                    "scope": "8_MOD_2_ADD",
-                                    "focused": 14,
-                                    "negativeAssertions": 15,
-                                    "realOutput": 12,
-                                    "independentPythonExactDiff": 12,
-                                    "rollback": 6,
-                                    "nativeAnchors": 36
+                                  "core04": {
+                                    "sha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+                                    "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
+                                    "scope": "11_MOD_5_ADD",
+                                    "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
+                                    "focused": 8,
+                                    "realRecipeOutput": 2,
+                                    "independentPythonExactDiff": 2,
+                                    "ordinaryRealOutput": 12,
+                                    "ordinaryPythonExactDiff": 12,
+                                    "rollback": 3,
+                                    "workerNode": "PASS",
+                                    "alwaysRunSlotsResolved": 3
                                   },
                                   "ui05": {
-                                    "sha256": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
-                                    "verdict": "SCOPED_PASS",
-                                    "scope": "6_MOD",
-                                    "focused": 13,
-                                    "realInlineUIDownloadReimport": 4,
-                                    "viewport": [
+                                    "sha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
+                                    "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+                                    "scope": "3_MOD_1_ADD",
+                                    "verdict": "SCOPED_PASS_ORDINARY_SIX_ATOMIC_BATCH",
+                                    "focused": 17,
+                                    "isolatedActualUiOutput": 2,
+                                    "versions": [
+                                      "3.0.0",
+                                      "3.0.1"
+                                    ],
+                                    "fieldsPerVersion": 2,
+                                    "chromeInline": [
                                       320,
                                       375,
                                       1280
                                     ],
-                                    "accountRace": 8
+                                    "fixedOffPreview": 1
                                   },
-                                  "linkage03": {
-                                    "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-                                    "deltaSha256": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb",
-                                    "verdict": "SCOPED_PASS_RELATED_ONLY",
-                                    "scope": "10_ADD",
-                                    "focused": 36,
-                                    "independent": 8,
-                                    "newAnchors": 36,
-                                    "reusedAnchors": 39,
-                                    "realQuantityMemoryOnly": 1,
-                                    "newRequiredWrites": 0
+                                  "v20": {
+                                    "sha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+                                    "deltaSha256": "003f123e67c399b8726b4e2a2e3d0643d683bf6a5d64e7a10a32812c56d61db6",
+                                    "scope": "12_MOD_5_ADD",
+                                    "verdict": "SCOPED_PASS_MODULE_CLOSURE_DISTRIBUTION_ONLY",
+                                    "sourceGraph": 53,
+                                    "distEntries": 4144,
+                                    "webp": 4076,
+                                    "distManifestSha256": "54f723108c5b0706c131e9639918db20da9083ebd44cdcee52276820e8a32110",
+                                    "disjointUiDelta": 4
                                   }
+                                },
+                                "scope": "04 16 paths against accepted repair + 03; 05 4 paths against V19 preflight; isolated tests only",
+                                "dependency": "04 prior repair and 03 accepted; 05 prior UI accepted; 00 final merged artifact pending",
+                                "owner": "06 QA",
+                                "previous": {
+                                  "task": "V18_42_PATHS_PLUS_04_REPAIR_10_05_UI_6_03_LINKAGE_10",
+                                  "status": "DONE",
+                                  "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+                                  "baseSourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
+                                  "scope": "Independent V18 42 paths and separately fixed 04/05/03 deltas; no product source changes",
+                                  "fixedSources": {
+                                    "v18": {
+                                      "sha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+                                      "verdict": "SCOPED_TRUE_RED_RECIPE_ONLY",
+                                      "node": "79_PASS",
+                                      "genuineNonRecipeOutput": 12,
+                                      "independentPythonExactDiff": 12
+                                    },
+                                    "repair04": {
+                                      "sha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+                                      "verdict": "SCOPED_PASS",
+                                      "scope": "8_MOD_2_ADD",
+                                      "focused": 14,
+                                      "negativeAssertions": 15,
+                                      "realOutput": 12,
+                                      "independentPythonExactDiff": 12,
+                                      "rollback": 6,
+                                      "nativeAnchors": 36
+                                    },
+                                    "ui05": {
+                                      "sha256": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
+                                      "verdict": "SCOPED_PASS",
+                                      "scope": "6_MOD",
+                                      "focused": 13,
+                                      "realInlineUIDownloadReimport": 4,
+                                      "viewport": [
+                                        320,
+                                        375,
+                                        1280
+                                      ],
+                                      "accountRace": 8
+                                    },
+                                    "linkage03": {
+                                      "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+                                      "deltaSha256": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb",
+                                      "verdict": "SCOPED_PASS_RELATED_ONLY",
+                                      "scope": "10_ADD",
+                                      "focused": 36,
+                                      "independent": 8,
+                                      "newAnchors": 36,
+                                      "reusedAnchors": 39,
+                                      "realQuantityMemoryOnly": 1,
+                                      "newRequiredWrites": 0
+                                    }
+                                  },
+                                  "evidence": {
+                                    "report": {
+                                      "file": "HKIA_06_QA_V18_REPAIR_WEB05_REPORT_20261112.md",
+                                      "sha256": "9541417defd32497e32d6849d9ec6a98423204deece4987f76ea7d6da5a0bc2b"
+                                    },
+                                    "zip": {
+                                      "file": "HKIA_06_QA_V18_REPAIR_WEB05_LINKAGE_EVIDENCE_20261112.zip",
+                                      "sha256": "77d45dceda1a27b462a54fbdee14a873ce89131492f37ccd424881822ddb73c0",
+                                      "entries": 45
+                                    },
+                                    "handoff": {
+                                      "file": "HKIA_06_HANDOFF_00_V18_REPAIR_WEB05_20261112.md",
+                                      "sha256": "7179ef93fafd2b1ad9dc5acce6833a582479f2118173bff0e69b64fb4392dccd"
+                                    },
+                                    "privateLibraryReadback": "ALL_SHA_MATCH"
+                                  },
+                                  "accepted": "Separate fixed 04/05/03 scoped PASS; V18 full source not accepted; no activation or deployment",
+                                  "remaining": [
+                                    "00 integration dependency allowlist missing 01-collection-v17-beta-contract.mjs",
+                                    "05 atomic batch UI and actual accepted version/operation capabilities",
+                                    "04 native load/auth and trusted Recipe receipt",
+                                    "actual HTTP/HTTPS native WebCrypto Module Worker E2E",
+                                    "game acceptance/re-save/reboot unobserved"
+                                  ],
+                                  "handoff": {
+                                    "to": "00 CTRL",
+                                    "condition": "Serialize disjoint accepted deltas, fix module closure, fixed integrated artifact and actual UI; 06 scoped final QA only",
+                                    "rust": "WAIT_DEP_07_COMPILE_AND_GENUINE_PARITY_NO_JS_BETA_GATE"
+                                  },
+                                  "rollback": "V17 2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0"
                                 },
                                 "evidence": {
                                   "report": {
-                                    "file": "HKIA_06_QA_V18_REPAIR_WEB05_REPORT_20261112.md",
-                                    "sha256": "9541417defd32497e32d6849d9ec6a98423204deece4987f76ea7d6da5a0bc2b"
+                                    "file": "HKIA_06_QA_V20_RECEIPT_BATCH_SCOPED_REPORT_20261112.md",
+                                    "sha256": "b3d6d8858266836fb57aa984c1ed0ac2b3e7455acee8d8c26eb04c81ff215ebb"
                                   },
                                   "zip": {
-                                    "file": "HKIA_06_QA_V18_REPAIR_WEB05_LINKAGE_EVIDENCE_20261112.zip",
-                                    "sha256": "77d45dceda1a27b462a54fbdee14a873ce89131492f37ccd424881822ddb73c0",
-                                    "entries": 45
+                                    "file": "HKIA_06_QA_V20_RECEIPT_BATCH_INDEPENDENT_EVIDENCE_20261112.zip",
+                                    "sha256": "ec4957faafce10854e73cd5db26d3881d5e2ea97af791aab5be91678f0c56753",
+                                    "entries": 26
                                   },
                                   "handoff": {
-                                    "file": "HKIA_06_HANDOFF_00_V18_REPAIR_WEB05_20261112.md",
-                                    "sha256": "7179ef93fafd2b1ad9dc5acce6833a582479f2118173bff0e69b64fb4392dccd"
+                                    "file": "HKIA_06_HANDOFF_00_V20_RECEIPT_BATCH_20261112.md",
+                                    "sha256": "d912d404150bd3fe63db304148c39d7b4720e279dfeaa46bb98f3fbed4523c8b"
                                   },
                                   "privateLibraryReadback": "ALL_SHA_MATCH"
                                 },
-                                "accepted": "Separate fixed 04/05/03 scoped PASS; V18 full source not accepted; no activation or deployment",
                                 "remaining": [
-                                  "00 integration dependency allowlist missing 01-collection-v17-beta-contract.mjs",
-                                  "05 atomic batch UI and actual accepted version/operation capabilities",
-                                  "04 native load/auth and trusted Recipe receipt",
-                                  "actual HTTP/HTTPS native WebCrypto Module Worker E2E",
-                                  "game acceptance/re-save/reboot unobserved"
+                                  "00 serial integrate exact 05 four paths onto V20; fix final source and dist",
+                                  "05 receipt-aware UI for Recipe if enabled",
+                                  "04/03 targeted Native AlwaysRun method bodies, including MigrateAchievementCounters; no speculative writes",
+                                  "actual HTTP/HTTPS native WebCrypto browser Module Worker and final UI E2E",
+                                  "game authentication/load/resave/reboot and zero-row retention unobserved"
                                 ],
                                 "handoff": {
-                                  "to": "00 CTRL",
-                                  "condition": "Serialize disjoint accepted deltas, fix module closure, fixed integrated artifact and actual UI; 06 scoped final QA only",
-                                  "rust": "WAIT_DEP_07_COMPILE_AND_GENUINE_PARITY_NO_JS_BETA_GATE"
+                                  "to": [
+                                    "00 CTRL",
+                                    "05 WEB",
+                                    "04 SAVE CORE"
+                                  ],
+                                  "condition": "V20 + exact 05 delta; no source conflict; fixed integrated artifact and browser QA before activation",
+                                  "rust": "WAIT_ENV_NO_JS_BETA_GATE"
                                 },
-                                "rollback": "V17 2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0"
+                                "rollback": "V19 recipe-denied preflight 61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631; or V17 whole accepted research"
                               },
                               "evidence": {
                                 "report": {
-                                  "file": "HKIA_06_QA_V20_RECEIPT_BATCH_SCOPED_REPORT_20261112.md",
-                                  "sha256": "b3d6d8858266836fb57aa984c1ed0ac2b3e7455acee8d8c26eb04c81ff215ebb"
+                                  "file": "HKIA_06_QA_V21_NEW_DELTAS_REPORT_20261112.md",
+                                  "sha256": "1a87ca10166850db6c902191602ad06d58dd3951927d9680ab006c2fe9e422fb"
                                 },
                                 "zip": {
-                                  "file": "HKIA_06_QA_V20_RECEIPT_BATCH_INDEPENDENT_EVIDENCE_20261112.zip",
-                                  "sha256": "ec4957faafce10854e73cd5db26d3881d5e2ea97af791aab5be91678f0c56753",
-                                  "entries": 26
+                                  "file": "HKIA_06_QA_V21_NEW_DELTAS_EVIDENCE_20261112.zip",
+                                  "sha256": "afbe2b7923f8e2bd34f9c4f19d8bdd46ab81d050b085b9118765287cfe7a0dbd",
+                                  "entries": 21
                                 },
                                 "handoff": {
-                                  "file": "HKIA_06_HANDOFF_00_V20_RECEIPT_BATCH_20261112.md",
-                                  "sha256": "d912d404150bd3fe63db304148c39d7b4720e279dfeaa46bb98f3fbed4523c8b"
+                                  "file": "HKIA_06_HANDOFF_00_V21_NEW_DELTAS_20261112.md",
+                                  "sha256": "5bba56e18bdb3fbee5c24964d29bc51eb2b86c89829bbce1803169e4dafc87ae"
                                 },
-                                "privateLibraryReadback": "ALL_SHA_MATCH"
+                                "privateLibraryReadback": "ALL_3_EXACT"
                               },
                               "remaining": [
-                                "00 serial integrate exact 05 four paths onto V20; fix final source and dist",
-                                "05 receipt-aware UI for Recipe if enabled",
-                                "04/03 targeted Native AlwaysRun method bodies, including MigrateAchievementCounters; no speculative writes",
-                                "actual HTTP/HTTPS native WebCrypto browser Module Worker and final UI E2E",
-                                "game authentication/load/resave/reboot and zero-row retention unobserved"
+                                "00 serial integrate 17 disjoint new paths on V21; final fixed artifact and affected graph",
+                                "actual HTTP/HTTPS native WebCrypto Module Worker, authorized environment (no unchanged retry)",
+                                "Native authentication/load/resave/reboot and Recipe zero-row retention unobserved"
                               ],
                               "handoff": {
-                                "to": [
-                                  "00 CTRL",
-                                  "05 WEB",
-                                  "04 SAVE CORE"
-                                ],
-                                "condition": "V20 + exact 05 delta; no source conflict; fixed integrated artifact and browser QA before activation",
-                                "rust": "WAIT_ENV_NO_JS_BETA_GATE"
+                                "to": "00 CTRL",
+                                "condition": "17 disjoint accepted paths on V21, 396 logical entries; fixed final artifact then 06 final integration/real browser. 03/04/05 wait new concrete evidence or failure; 07 WAIT_ENV"
                               },
-                              "rollback": "V19 recipe-denied preflight 61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631; or V17 whole accepted research"
+                              "rollback": "V21 688fc18f... before new deltas; V20 batch rollback; V17 research full fallback"
+                            },
+                            "verdict": "SCOPED_TRUE_RED_PRIVACY_GATE_DECODED_VALUE",
+                            "verified": {
+                              "sourceEntries": 396,
+                              "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
+                              "deltaEntries": 21,
+                              "acceptedExactPaths": 17,
+                              "unchanged": 375,
+                              "focused": 28,
+                              "independentPrivacyPass": 3,
+                              "independentPrivacyFail": 3,
+                              "rootCauses": 1,
+                              "miniBuildBypass": true,
+                              "distEntries": 4144,
+                              "distBytes": 146154762,
+                              "webp": 4076,
+                              "modules": 53,
+                              "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+                              "rebuildManifestByteEqual": true,
+                              "knownPrivateKeysRemoved": 8,
+                              "affectedJson": 5,
+                              "otherJsonValuesEqual": true,
+                              "decodedActualArtifactHits": 0,
+                              "realVersions": [
+                                "3.0.0",
+                                "3.0.1"
+                              ],
+                              "realOffPreview": 4,
+                              "realExportDenied": 4,
+                              "originalsUnchanged": true
+                            },
+                            "trueRed": {
+                              "owner": "00 CTRL",
+                              "path": "scripts/pages-artifact-policy.mjs",
+                              "cause": "JSON key check uses parsed keys but value check scans raw text only; escaped slash/Unicode decoded private references bypass verifyDist and build-site",
+                              "repro": "synthetic JSON escaped Drive URL; 3 independent negatives and tiny build reproduced",
+                              "expected": "reject decoded private values",
+                              "actual": "accepted; synthetic value byte preserved in dist",
+                              "observedActualLeak": false,
+                              "repair": "recursive parsed JSON string/key privacy scan plus raw scan, preserve sanitizer, add escaped/nested/normal tests"
                             },
                             "evidence": {
                               "report": {
-                                "file": "HKIA_06_QA_V21_NEW_DELTAS_REPORT_20261112.md",
-                                "sha256": "1a87ca10166850db6c902191602ad06d58dd3951927d9680ab006c2fe9e422fb"
+                                "file": "HKIA_06_QA_V22_PRIVACY_SCOPED_REPORT_20261112.md",
+                                "sha256": "0d0db8a5f6db5e86fbc79b46d34228d15c5d13aa9f281355b78dd0e305090458"
                               },
                               "zip": {
-                                "file": "HKIA_06_QA_V21_NEW_DELTAS_EVIDENCE_20261112.zip",
-                                "sha256": "afbe2b7923f8e2bd34f9c4f19d8bdd46ab81d050b085b9118765287cfe7a0dbd",
-                                "entries": 21
+                                "file": "HKIA_06_QA_V22_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
+                                "sha256": "84c7ee4d638687f0fd8d95d2cf991b740a6c65e004df9d54883324f13669a65e",
+                                "entries": 14
                               },
                               "handoff": {
-                                "file": "HKIA_06_HANDOFF_00_V21_NEW_DELTAS_20261112.md",
-                                "sha256": "5bba56e18bdb3fbee5c24964d29bc51eb2b86c89829bbce1803169e4dafc87ae"
+                                "file": "HKIA_06_HANDOFF_00_V22_PRIVACY_20261112.md",
+                                "sha256": "4506c595b240be957c99cf12bb614ffb1febb25d7f81c7e17609b1d7b7ec4654"
                               },
-                              "privateLibraryReadback": "ALL_3_EXACT"
+                              "privateLibraryReadback": "ALL_3_BYTE_EXACT"
                             },
                             "remaining": [
-                              "00 serial integrate 17 disjoint new paths on V21; final fixed artifact and affected graph",
-                              "actual HTTP/HTTPS native WebCrypto Module Worker, authorized environment (no unchanged retry)",
-                              "Native authentication/load/resave/reboot and Recipe zero-row retention unobserved"
+                              "00 privacy gate minimal repair and fixed new source/artifact",
+                              "actual HTTP/HTTPS native WebCrypto browser Module Worker E2E authorized environment",
+                              "game authentication/load/resave/reboot/Recipe zero-row retention unobserved",
+                              "07 toolchain independent WAIT_ENV"
                             ],
                             "handoff": {
                               "to": "00 CTRL",
-                              "condition": "17 disjoint accepted paths on V21, 396 logical entries; fixed final artifact then 06 final integration/real browser. 03/04/05 wait new concrete evidence or failure; 07 WAIT_ENV"
+                              "condition": "fix decoded JSON value privacy scan, preserve current data and 17 accepted paths, pin repair source and artifact; 06 six-case and mini-build rejection scoped retest; no repeated unrelated QA",
+                              "nextAfter": "06 scoped repair and final browser after authorized env"
                             },
-                            "rollback": "V21 688fc18f... before new deltas; V20 batch rollback; V17 research full fallback"
+                            "rollback": "V21 development source only; preprivacy artifacts NOT publishable. V22 fixed artifact clean under observed decoded patterns but gate not accepted."
                           },
-                          "verdict": "SCOPED_TRUE_RED_PRIVACY_GATE_DECODED_VALUE",
+                          "verdict": "SCOPED_PASS_PRIVACY_GATE_AND_BYTE_IDENTICAL_OFF_ARTIFACT",
+                          "deltaSha256": "775f231ce33c667179e877a1ef2fed29594d8a99d8b3bb22c606fec1b20c087b",
+                          "manifestSha256": "80170c5f1d600d4532f8b46db5cfd76cd866d0b3f90bd589172f0195e5338270",
                           "verified": {
                             "sourceEntries": 396,
-                            "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
-                            "deltaEntries": 21,
+                            "modified": 2,
+                            "unchanged": 394,
                             "acceptedExactPaths": 17,
-                            "unchanged": 375,
-                            "focused": 28,
-                            "independentPrivacyPass": 3,
-                            "independentPrivacyFail": 3,
-                            "rootCauses": 1,
-                            "miniBuildBypass": true,
+                            "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
+                            "oldV22Reproduction": "3_PASS_3_FAIL",
+                            "oldSixR2": "6_PASS_0_FAIL",
+                            "independentAdditional": "20_PASS_0_FAIL",
+                            "focused": "7_PASS_0_FAIL",
+                            "miniBuild": "EXIT_1_PRIVATE_REFERENCE_VALUE_PROHIBITED",
+                            "build": "PASS",
+                            "check": "PASS",
                             "distEntries": 4144,
                             "distBytes": 146154762,
                             "webp": 4076,
                             "modules": 53,
                             "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
-                            "rebuildManifestByteEqual": true,
-                            "knownPrivateKeysRemoved": 8,
-                            "affectedJson": 5,
-                            "otherJsonValuesEqual": true,
-                            "decodedActualArtifactHits": 0,
-                            "realVersions": [
-                              "3.0.0",
-                              "3.0.1"
-                            ],
-                            "realOffPreview": 4,
-                            "realExportDenied": 4,
-                            "originalsUnchanged": true
-                          },
-                          "trueRed": {
-                            "owner": "00 CTRL",
-                            "path": "scripts/pages-artifact-policy.mjs",
-                            "cause": "JSON key check uses parsed keys but value check scans raw text only; escaped slash/Unicode decoded private references bypass verifyDist and build-site",
-                            "repro": "synthetic JSON escaped Drive URL; 3 independent negatives and tiny build reproduced",
-                            "expected": "reject decoded private values",
-                            "actual": "accepted; synthetic value byte preserved in dist",
-                            "observedActualLeak": false,
-                            "repair": "recursive parsed JSON string/key privacy scan plus raw scan, preserve sanitizer, add escaped/nested/normal tests"
+                            "allDistBytesEqual": true,
+                            "decodedJsonPairScan": 16,
+                            "decodedPatternHits": 0,
+                            "sourceJsonCompared": 14,
+                            "v21ToR2RemovedKeys": 8,
+                            "v21ToR2AffectedJson": 5,
+                            "sourceToR2RemovedKeys": 11,
+                            "sourceToR2AffectedJson": 6,
+                            "priorRuntimeEvidence": "REUSED_EXACT_ARTIFACT_BYTES",
+                            "trueRedNew": 0
                           },
                           "evidence": {
                             "report": {
-                              "file": "HKIA_06_QA_V22_PRIVACY_SCOPED_REPORT_20261112.md",
-                              "sha256": "0d0db8a5f6db5e86fbc79b46d34228d15c5d13aa9f281355b78dd0e305090458"
+                              "file": "HKIA_06_QA_V23_R2_PRIVACY_SCOPED_REPORT_20261112.md",
+                              "sha256": "43ed5a3ba8235ffb8a4c318f46a577454385590a23136c6e9291d50cdc61d19a"
                             },
                             "zip": {
-                              "file": "HKIA_06_QA_V22_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
-                              "sha256": "84c7ee4d638687f0fd8d95d2cf991b740a6c65e004df9d54883324f13669a65e",
-                              "entries": 14
+                              "file": "HKIA_06_QA_V23_R2_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
+                              "sha256": "fe73a8280a01800c8bc23602b8a2249cfe51d6af0639974db0a58400e3b10ad7",
+                              "entries": 15
                             },
                             "handoff": {
-                              "file": "HKIA_06_HANDOFF_00_V22_PRIVACY_20261112.md",
-                              "sha256": "4506c595b240be957c99cf12bb614ffb1febb25d7f81c7e17609b1d7b7ec4654"
+                              "file": "HKIA_06_HANDOFF_00_V23_R2_20261112.md",
+                              "sha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd"
                             },
                             "privateLibraryReadback": "ALL_3_BYTE_EXACT"
                           },
                           "remaining": [
-                            "00 privacy gate minimal repair and fixed new source/artifact",
-                            "actual HTTP/HTTPS native WebCrypto browser Module Worker E2E authorized environment",
-                            "game authentication/load/resave/reboot/Recipe zero-row retention unobserved",
-                            "07 toolchain independent WAIT_ENV"
+                            "00 release-equivalent accepted capability activation candidate fixed; current OFF artifact not functional beta",
+                            "actual HTTP/HTTPS native WebCrypto browser Module Worker on authorized private environment, no unchanged retry",
+                            "game auth/load/resave/reboot and Recipe zero-row persistence/recount unobserved",
+                            "07 independent WAIT_ENV"
                           ],
                           "handoff": {
                             "to": "00 CTRL",
-                            "condition": "fix decoded JSON value privacy scan, preserve current data and 17 accepted paths, pin repair source and artifact; 06 six-case and mini-build rejection scoped retest; no repeated unrelated QA",
-                            "nextAfter": "06 scoped repair and final browser after authorized env"
+                            "condition": "record scoped R2 acceptance; fixed activation candidate and authorized browser environment before final 06 E2E; Owner deployment approval separate",
+                            "nextAfter": "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_DEP"
                           },
-                          "rollback": "V21 development source only; preprivacy artifacts NOT publishable. V22 fixed artifact clean under observed decoded patterns but gate not accepted."
+                          "rollback": "V22 development only; old privacy gate TRUE_RED not publishable; R2 OFF artifact byte-identical verified not deployable"
                         },
-                        "verdict": "SCOPED_PASS_PRIVACY_GATE_AND_BYTE_IDENTICAL_OFF_ARTIFACT",
-                        "deltaSha256": "775f231ce33c667179e877a1ef2fed29594d8a99d8b3bb22c606fec1b20c087b",
-                        "manifestSha256": "80170c5f1d600d4532f8b46db5cfd76cd866d0b3f90bd589172f0195e5338270",
+                        "verdict": "SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER",
+                        "deltaSha256": "e8752df6ccea65129ae252ba13b99e2bd68860dbd746e0f098423c12936da043",
+                        "manifestSha256": "1a3eb6095363d9bd996292ca7e8d71265e2395c0e830ee265505b17398d39792",
                         "verified": {
                           "sourceEntries": 396,
-                          "modified": 2,
-                          "unchanged": 394,
-                          "acceptedExactPaths": 17,
+                          "modified": 3,
+                          "unchanged": 393,
+                          "settingValues": 5,
                           "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
-                          "oldV22Reproduction": "3_PASS_3_FAIL",
-                          "oldSixR2": "6_PASS_0_FAIL",
-                          "independentAdditional": "20_PASS_0_FAIL",
-                          "focused": "7_PASS_0_FAIL",
-                          "miniBuild": "EXIT_1_PRIVATE_REFERENCE_VALUE_PROHIBITED",
-                          "build": "PASS",
-                          "check": "PASS",
                           "distEntries": 4144,
-                          "distBytes": 146154762,
+                          "distBytes": 146154761,
+                          "distModified": 3,
+                          "distUnchanged": 4141,
                           "webp": 4076,
-                          "modules": 53,
-                          "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
-                          "allDistBytesEqual": true,
-                          "decodedJsonPairScan": 16,
-                          "decodedPatternHits": 0,
-                          "sourceJsonCompared": 14,
-                          "v21ToR2RemovedKeys": 8,
-                          "v21ToR2AffectedJson": 5,
-                          "sourceToR2RemovedKeys": 11,
-                          "sourceToR2AffectedJson": 6,
-                          "priorRuntimeEvidence": "REUSED_EXACT_ARTIFACT_BYTES",
-                          "trueRedNew": 0
+                          "artifactManifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+                          "artifactPolicy": "PASS",
+                          "build": "PASS_DEFAULT_SOURCE_BUILD",
+                          "check": "PASS",
+                          "actualDistNodeDefaultUIController": "PASS",
+                          "genuineMixedBatchOutputs": 2,
+                          "fieldsPerBatch": 2,
+                          "genuineRecipeOutputs": 2,
+                          "independentPythonRawZip": 4,
+                          "nonTargetFramesPerOutput": 10,
+                          "capabilityCases": 9,
+                          "recipeNegativeAssertions": 4,
+                          "originalsUnchanged": true,
+                          "browserKitSyntax": "PASS",
+                          "browserKitRealRun": "NOT_RUN_WAIT_ENV",
+                          "newProductTrueRed": 0
                         },
                         "evidence": {
                           "report": {
-                            "file": "HKIA_06_QA_V23_R2_PRIVACY_SCOPED_REPORT_20261112.md",
-                            "sha256": "43ed5a3ba8235ffb8a4c318f46a577454385590a23136c6e9291d50cdc61d19a"
+                            "file": "HKIA_06_QA_V24_ACTIVATION_REPORT_20261112.md",
+                            "sha256": "c885528bc534a1cc9bfea326f8344fe46867656f2402c7435df8b8a38e4e4ee6"
                           },
                           "zip": {
-                            "file": "HKIA_06_QA_V23_R2_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
-                            "sha256": "fe73a8280a01800c8bc23602b8a2249cfe51d6af0639974db0a58400e3b10ad7",
-                            "entries": 15
+                            "file": "HKIA_06_QA_V24_ACTIVATION_EVIDENCE_20261112.zip",
+                            "sha256": "154173259fc4aaaedf15cdfe8b5e859c0c322ea037c27e6130be62cd3a6cecf3",
+                            "entries": 10
                           },
                           "handoff": {
-                            "file": "HKIA_06_HANDOFF_00_V23_R2_20261112.md",
-                            "sha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd"
+                            "file": "HKIA_06_HANDOFF_00_V24_ACTIVATION_20261112.md",
+                            "sha256": "4ad82573760b62380ba74eef5b6f71e2be2e1a6d8868ba7f400f7bb1917c8d28"
                           },
                           "privateLibraryReadback": "ALL_3_BYTE_EXACT"
                         },
                         "remaining": [
-                          "00 release-equivalent accepted capability activation candidate fixed; current OFF artifact not functional beta",
-                          "actual HTTP/HTTPS native WebCrypto browser Module Worker on authorized private environment, no unchanged retry",
-                          "game auth/load/resave/reboot and Recipe zero-row persistence/recount unobserved",
-                          "07 independent WAIT_ENV"
+                          "Authorized private real HTTP/HTTPS Chrome native WebCrypto Module Worker E2E; unchanged admin-blocked environment not retried",
+                          "BrowserKit representative scope: extend actual batch/add/remove/progress, raw frames, context+worker network audit, viewport keyboard, rollback; QA coverage not product TRUE_RED",
+                          "Native auth/load/resave/reboot and Recipe zero-row retention/recount unobserved",
+                          "Owner explicit deployment approval; 07 independent WAIT_ENV"
                         ],
                         "handoff": {
                           "to": "00 CTRL",
-                          "condition": "record scoped R2 acceptance; fixed activation candidate and authorized browser environment before final 06 E2E; Owner deployment approval separate",
-                          "nextAfter": "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_DEP"
+                          "condition": "Record scoped activation offline acceptance; arrange authorized private Chrome and trusted localhost TLS, exact V24 pinned artifact and genuine inputs; 06 final browser after environment",
+                          "nextAfter": "06_REAL_BROWSER_FINAL_V24_AFTER_AUTHORIZED_ENV; 00_RELEASE_GATE_AFTER_REQUIRED_EVIDENCE"
                         },
-                        "rollback": "V22 development only; old privacy gate TRUE_RED not publishable; R2 OFF artifact byte-identical verified not deployable"
+                        "rollback": "V23 R2 exact OFF source and accepted OFF artifact"
                       },
-                      "verdict": "SCOPED_PASS_ACTIVATION_OFFLINE_WAIT_ENV_REAL_BROWSER",
-                      "deltaSha256": "e8752df6ccea65129ae252ba13b99e2bd68860dbd746e0f098423c12936da043",
-                      "manifestSha256": "1a3eb6095363d9bd996292ca7e8d71265e2395c0e830ee265505b17398d39792",
+                      "verdict": "FORMAL_01_SCOPED_TRUE_RED_02_03_04_05_AND_00_CLOSURE_SCOPED_PASS",
                       "verified": {
-                        "sourceEntries": 396,
-                        "modified": 3,
-                        "unchanged": 393,
-                        "settingValues": 5,
-                        "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
-                        "distEntries": 4144,
-                        "distBytes": 146154761,
-                        "distModified": 3,
-                        "distUnchanged": 4141,
-                        "webp": 4076,
-                        "artifactManifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
-                        "artifactPolicy": "PASS",
-                        "build": "PASS_DEFAULT_SOURCE_BUILD",
-                        "check": "PASS",
-                        "actualDistNodeDefaultUIController": "PASS",
-                        "genuineMixedBatchOutputs": 2,
-                        "fieldsPerBatch": 2,
-                        "genuineRecipeOutputs": 2,
-                        "independentPythonRawZip": 4,
-                        "nonTargetFramesPerOutput": 10,
-                        "capabilityCases": 9,
-                        "recipeNegativeAssertions": 4,
-                        "originalsUnchanged": true,
-                        "browserKitSyntax": "PASS",
-                        "browserKitRealRun": "NOT_RUN_WAIT_ENV",
-                        "newProductTrueRed": 0
+                        "focused": 64,
+                        "closure": {
+                          "sha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+                          "verdict": "SCOPED_PASS_PRIVATE_STAGING_ONLY",
+                          "entries": 178,
+                          "projected": 13,
+                          "unchanged": 165,
+                          "removedProvenanceKeys": 15,
+                          "changedJson": 10,
+                          "tests": 794,
+                          "skip": 36,
+                          "fail": 0,
+                          "workflowGateCases": 6,
+                          "distExact": 4144,
+                          "modules": 53,
+                          "webp": 4076
+                        },
+                        "collection01": {
+                          "deltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+                          "verdict": "SCOPED_TRUE_RED_EXACT_RESTORE_RAW_TOKEN_ONLY",
+                          "focused": 22,
+                          "realStructuralTargets": 2,
+                          "nativeAnchors": 18,
+                          "recipeRowsBothVersions": 282
+                        },
+                        "achievement02": {
+                          "deltaSha256": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+                          "verdict": "SCOPED_PASS_RESEARCH_ONLY",
+                          "focused": 14,
+                          "realSlotReparse": 98,
+                          "accountClone": 56,
+                          "sealedPairs": 6,
+                          "staleCAS": 98,
+                          "wrongPreimage": 98
+                        },
+                        "linkage03": {
+                          "deltaSha256": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+                          "verdict": "SCOPED_PASS_ADVISORY_REWARD_REPLAY_UNKNOWN",
+                          "focused": 17,
+                          "nativeAnchors": 56,
+                          "metadataSlots": 6,
+                          "methodBindings": 17,
+                          "realForwardInverse": 3,
+                          "newUnconditionalRequired": 0
+                        },
+                        "core04": {
+                          "sha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+                          "verdict": "SCOPED_PASS_FORMAL_THREE_V301_FAMILY_REVOKES_ONLY",
+                          "focused": 5,
+                          "realOutput": 3,
+                          "verifiedFields": 30,
+                          "independentPythonSemanticReparse": 3,
+                          "nonTargetRawFramesPerOutput": 9,
+                          "rollback": 9,
+                          "planNegatives": 17,
+                          "offDenials": 5,
+                          "betaOnlyDenials": 5,
+                          "wrongVersionDenied": 1
+                        },
+                        "ui05": {
+                          "sha256": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8",
+                          "verdict": "SCOPED_PASS_FORMAL_SELECTION_PREVIEW_INLINE",
+                          "focused": 6,
+                          "chromiumInline": [
+                            320,
+                            375,
+                            1280
+                          ],
+                          "genuineVersions": [
+                            "3.0.0",
+                            "3.0.1"
+                          ],
+                          "maxPickerRows": 40,
+                          "externalRequests": 0,
+                          "downloads": 0
+                        }
+                      },
+                      "trueRed": {
+                        "owner": "01 COLLECTION",
+                        "path": "scripts/research/01-formal-ownership-contract.mjs",
+                        "method": "verifyExactResearchRestore",
+                        "expected": "exact trusted donor raw bytes except new document ID token",
+                        "observed": "genuine v301 restore with additional zero UniqueId token-width change accepted; logical row same, typed reparse succeeds",
+                        "cause": "issued restore plan does not bind expected new-document bytes/hash; verifier compares caller snapshot new row hash to its own document hash plus logical fields",
+                        "impact": "research contract only; no product authorization; V24 beta unaffected",
+                        "repair": "bind expected raw donor restoration digest computed from trusted donor bytes with only ID span replaced; validate exact candidate digest and existing CAS; regression old adversary and normal delete/restore"
                       },
                       "evidence": {
                         "report": {
-                          "file": "HKIA_06_QA_V24_ACTIVATION_REPORT_20261112.md",
-                          "sha256": "c885528bc534a1cc9bfea326f8344fe46867656f2402c7435df8b8a38e4e4ee6"
+                          "file": "HKIA_06_FORMAL_R2_SCOPED_REPORT_20261112.md",
+                          "sha256": "bf465f474b7c5ebed80565071a6f500d87d756b5a221e62720ad34a187538557"
                         },
                         "zip": {
-                          "file": "HKIA_06_QA_V24_ACTIVATION_EVIDENCE_20261112.zip",
-                          "sha256": "154173259fc4aaaedf15cdfe8b5e859c0c322ea037c27e6130be62cd3a6cecf3",
-                          "entries": 10
+                          "file": "HKIA_06_FORMAL_R2_INDEPENDENT_EVIDENCE_20261112.zip",
+                          "sha256": "e49b1cada129386e634568ee0253824d6af5d98a95123896e9c1e47b70fc5fe6",
+                          "entries": 28
                         },
                         "handoff": {
-                          "file": "HKIA_06_HANDOFF_00_V24_ACTIVATION_20261112.md",
-                          "sha256": "4ad82573760b62380ba74eef5b6f71e2be2e1a6d8868ba7f400f7bb1917c8d28"
+                          "file": "HKIA_06_HANDOFF_00_FORMAL_R2_20261112.md",
+                          "sha256": "6db643bf932d242f13d5962fcbe8069487fcea721d6900be20fcd6feafc7fc3d"
                         },
                         "privateLibraryReadback": "ALL_3_BYTE_EXACT"
                       },
                       "remaining": [
-                        "Authorized private real HTTP/HTTPS Chrome native WebCrypto Module Worker E2E; unchanged admin-blocked environment not retried",
-                        "BrowserKit representative scope: extend actual batch/add/remove/progress, raw frames, context+worker network audit, viewport keyboard, rollback; QA coverage not product TRUE_RED",
-                        "Native auth/load/resave/reboot and Recipe zero-row retention/recount unobserved",
-                        "Owner explicit deployment approval; 07 independent WAIT_ENV"
+                        "01 scoped exact restore repair; 06 only new fixed delta",
+                        "00 serial integrate accepted formal scopes independently; V24 frozen",
+                        "05 formal family revoke UI after accepted exact 04 contract",
+                        "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave/reboot unobserved; Owner deployment approval",
+                        "07 independent WAIT_ENV"
                       ],
                       "handoff": {
-                        "to": "00 CTRL",
-                        "condition": "Record scoped activation offline acceptance; arrange authorized private Chrome and trusted localhost TLS, exact V24 pinned artifact and genuine inputs; 06 final browser after environment",
-                        "nextAfter": "06_REAL_BROWSER_FINAL_V24_AFTER_AUTHORIZED_ENV; 00_RELEASE_GATE_AFTER_REQUIRED_EVIDENCE"
+                        "to": [
+                          "01 COLLECTION",
+                          "05 WEB",
+                          "00 CTRL"
+                        ],
+                        "condition": "01 repair only; 05 exact 3 formal family revoke UI; 00 accept public closure staging and serial integrate accepted formal inputs without V24 change; browser only after authorized environment"
                       },
-                      "rollback": "V23 R2 exact OFF source and accepted OFF artifact"
+                      "rollback": "Formal each delta to R2 OFF; V24 frozen unchanged"
                     },
-                    "verdict": "FORMAL_01_SCOPED_TRUE_RED_02_03_04_05_AND_00_CLOSURE_SCOPED_PASS",
+                    "verdict": "SCOPED_PASS_01_EXACT_RESTORE_REPAIR_03_FORMAL49_04_BATCH_05_UI_V25_COMBINED",
                     "verified": {
-                      "focused": 64,
-                      "closure": {
-                        "sha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
-                        "verdict": "SCOPED_PASS_PRIVATE_STAGING_ONLY",
-                        "entries": 178,
-                        "projected": 13,
-                        "unchanged": 165,
-                        "removedProvenanceKeys": 15,
-                        "changedJson": 10,
-                        "tests": 794,
-                        "skip": 36,
-                        "fail": 0,
-                        "workflowGateCases": 6,
-                        "distExact": 4144,
-                        "modules": 53,
-                        "webp": 4076
-                      },
+                      "focusedAndIndependentNode": 103,
                       "collection01": {
-                        "deltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
-                        "verdict": "SCOPED_TRUE_RED_EXACT_RESTORE_RAW_TOKEN_ONLY",
-                        "focused": 22,
-                        "realStructuralTargets": 2,
-                        "nativeAnchors": 18,
-                        "recipeRowsBothVersions": 282
+                        "deltaSha256": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
+                        "manifestSha256": "5a98e6c46705c6513e6f723f0e26b0921ce7c002ae06198273ce0d8c1cef0c30",
+                        "verdict": "SCOPED_PASS_RESEARCH_EXACT_RESTORE_RAW_TOKEN_TRUE_RED_RESOLVED",
+                        "scope": "4MOD1ADD against old delta, 8ADD on R2; 396 unchanged",
+                        "focused": 26,
+                        "independent": 28,
+                        "oldRepro": "ACCEPTED_OLD_REJECTED_FIXED",
+                        "genuinePositive": 2,
+                        "genuineNegative": 2,
+                        "idWidthBoundaries": [
+                          128,
+                          256,
+                          65536,
+                          2147483647
+                        ],
+                        "productAuthorized": false,
+                        "originalUnchanged": true
                       },
-                      "achievement02": {
-                        "deltaSha256": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
-                        "verdict": "SCOPED_PASS_RESEARCH_ONLY",
-                        "focused": 14,
-                        "realSlotReparse": 98,
-                        "accountClone": 56,
-                        "sealedPairs": 6,
-                        "staleCAS": 98,
-                        "wrongPreimage": 98
-                      },
-                      "linkage03": {
-                        "deltaSha256": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
-                        "verdict": "SCOPED_PASS_ADVISORY_REWARD_REPLAY_UNKNOWN",
-                        "focused": 17,
-                        "nativeAnchors": 56,
-                        "metadataSlots": 6,
-                        "methodBindings": 17,
-                        "realForwardInverse": 3,
-                        "newUnconditionalRequired": 0
+                      "link03": {
+                        "deltaSha256": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
+                        "verdict": "SCOPED_PASS_CONDITIONAL_RESEARCH_ONLY",
+                        "focused": 12,
+                        "genuine301Targets": 49,
+                        "groups": 13,
+                        "completeCounterMatches": 14,
+                        "revokeCounterMismatch": 35,
+                        "rootOmission": 28,
+                        "noDefinedReward": 20,
+                        "aggregateExact": true
                       },
                       "core04": {
-                        "sha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
-                        "verdict": "SCOPED_PASS_FORMAL_THREE_V301_FAMILY_REVOKES_ONLY",
-                        "focused": 5,
-                        "realOutput": 3,
-                        "verifiedFields": 30,
-                        "independentPythonSemanticReparse": 3,
-                        "nonTargetRawFramesPerOutput": 9,
-                        "rollback": 9,
-                        "planNegatives": 17,
-                        "offDenials": 5,
-                        "betaOnlyDenials": 5,
+                        "sha256": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
+                        "verdict": "SCOPED_PASS_DISTINCT_2_3_V301_FAMILY_REVOKE",
+                        "scope": "7MOD4ADD",
+                        "focused": 4,
+                        "genuineOutputs": 2,
+                        "fields": [
+                          18,
+                          26
+                        ],
+                        "pythonSemanticReparse": 2,
+                        "nonTargetRawFrames": 9,
+                        "rollback": 6,
+                        "negativeAssertions": 14,
+                        "sequentialEquivalence": 2,
+                        "offDenied": 2,
                         "wrongVersionDenied": 1
                       },
                       "ui05": {
-                        "sha256": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8",
-                        "verdict": "SCOPED_PASS_FORMAL_SELECTION_PREVIEW_INLINE",
-                        "focused": 6,
-                        "chromiumInline": [
+                        "sha256": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
+                        "verdict": "SCOPED_PASS_SINGLE_FAMILY_UI_INLINE",
+                        "scope": "2MOD2ADD",
+                        "focused": 5,
+                        "inlineChromium": 5,
+                        "viewports": [
                           320,
                           375,
                           1280
                         ],
-                        "genuineVersions": [
-                          "3.0.0",
-                          "3.0.1"
-                        ],
-                        "maxPickerRows": 40,
-                        "externalRequests": 0,
-                        "downloads": 0
+                        "genuine301IsolatedDownloadReimport": 1,
+                        "wrongVersion300Denied": true
+                      },
+                      "v25": {
+                        "sha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+                        "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+                        "sourceEntries": 420,
+                        "exactAcceptedPaths": 37,
+                        "unchanged": 383,
+                        "affectedFocused": 28,
+                        "build": "PASS",
+                        "check": "PASS",
+                        "distEntries": 4144,
+                        "distChanged": 8,
+                        "distUnchanged": 4136,
+                        "webp": 4076,
+                        "modules": 53,
+                        "artifactManifestSha256": "a3ff4300d5c7ced6ec12bea82a0d80e23c89358f082ae510c118d039c224abfe",
+                        "independentRebuildAllHashes": "PASS"
+                      },
+                      "browserKit": {
+                        "file": "HKIA_06_V24_BrowserKit_CoverageExtension_20261112.zip",
+                        "sha256": "d436cc4cdcec83dc2d744b5eeb428c6113cfd0dc6775ddc459ec8d8fa99d569c",
+                        "status": "PREPARED_REAL_BROWSER_UNEXECUTED_WAIT_ENV",
+                        "entries": 7,
+                        "targetSelectionBothGenuine": "PASS",
+                        "v300AddFromWitnessedRemovedCopy": "PASS",
+                        "nodeHelperRealOutputs": 5,
+                        "pythonSynthetic": 8,
+                        "syntax": "PASS",
+                        "actualBrowser": false
                       }
-                    },
-                    "trueRed": {
-                      "owner": "01 COLLECTION",
-                      "path": "scripts/research/01-formal-ownership-contract.mjs",
-                      "method": "verifyExactResearchRestore",
-                      "expected": "exact trusted donor raw bytes except new document ID token",
-                      "observed": "genuine v301 restore with additional zero UniqueId token-width change accepted; logical row same, typed reparse succeeds",
-                      "cause": "issued restore plan does not bind expected new-document bytes/hash; verifier compares caller snapshot new row hash to its own document hash plus logical fields",
-                      "impact": "research contract only; no product authorization; V24 beta unaffected",
-                      "repair": "bind expected raw donor restoration digest computed from trusted donor bytes with only ID span replaced; validate exact candidate digest and existing CAS; regression old adversary and normal delete/restore"
                     },
                     "evidence": {
                       "report": {
-                        "file": "HKIA_06_FORMAL_R2_SCOPED_REPORT_20261112.md",
-                        "sha256": "bf465f474b7c5ebed80565071a6f500d87d756b5a221e62720ad34a187538557"
+                        "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_REPORT_20261112.md",
+                        "sha256": "8cb240eece127e79886f99d39075e8ef2f305815e00623adb80cf8df6dc64ce2"
                       },
                       "zip": {
-                        "file": "HKIA_06_FORMAL_R2_INDEPENDENT_EVIDENCE_20261112.zip",
-                        "sha256": "e49b1cada129386e634568ee0253824d6af5d98a95123896e9c1e47b70fc5fe6",
-                        "entries": 28
+                        "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_EVIDENCE_20261112.zip",
+                        "sha256": "7a4231f800dba22acf70a727276a9f07931eed552faafad7c059f02130cf57d9",
+                        "entries": 33
                       },
                       "handoff": {
-                        "file": "HKIA_06_HANDOFF_00_FORMAL_R2_20261112.md",
-                        "sha256": "6db643bf932d242f13d5962fcbe8069487fcea721d6900be20fcd6feafc7fc3d"
+                        "file": "HKIA_06_HANDOFF_00_FORMAL_REPAIR_FOLLOWUP_20261112.md",
+                        "sha256": "ed7cfac388894a9fbcb5ca5546a7dcdd6b7e7de1024d1f6d3689270676769e04"
                       },
-                      "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+                      "privateLibraryReadback": "ALL_4_BYTE_EXACT"
                     },
                     "remaining": [
-                      "01 scoped exact restore repair; 06 only new fixed delta",
-                      "00 serial integrate accepted formal scopes independently; V24 frozen",
-                      "05 formal family revoke UI after accepted exact 04 contract",
-                      "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave/reboot unobserved; Owner deployment approval",
-                      "07 independent WAIT_ENV"
+                      "01 specific reference closure and general acquisition, game load/resave unverified; no product permission",
+                      "00 serial integrate newly accepted 01/03/04/05 on formal V25 successor preserving exact research pins; V24 frozen",
+                      "04 exact 20 no-defined-reward v301 Writer proof; 05 family batch UI; 03 concrete Dunebug/Comic reference closure; 02 unpersisted Manual member producer",
+                      "V24 real HTTP/HTTPS native WebCrypto Module Worker authorized environment; extended kit actual selectors/interception/TLS unexecuted",
+                      "Native authentication/game load/resave/reboot/reward replay; Owner approval; 07 independent WAIT_ENV"
                     ],
                     "handoff": {
                       "to": [
-                        "01 COLLECTION",
+                        "00 CTRL",
+                        "04 SAVE CORE",
                         "05 WEB",
-                        "00 CTRL"
+                        "03 LINKAGE",
+                        "02 ACHIEVEMENT"
                       ],
-                      "condition": "01 repair only; 05 exact 3 formal family revoke UI; 00 accept public closure staging and serial integrate accepted formal inputs without V24 change; browser only after authorized environment"
+                      "condition": "New accepted scoped inputs can integrate independently; 04 exact 20 target proof and 05 batch UI now READY; 03/02 targeted tasks already READY; 06 final browser after authorized env and new fixed deltas only",
+                      "v24": "FROZEN_WAIT_ENV"
                     },
-                    "rollback": "Formal each delta to R2 OFF; V24 frozen unchanged"
+                    "rollback": "R2 OFF; 01 remove 8 additive paths, old verifier not accepted; 04 revert exact 11 paths to single-family; 05 revert four paths to accepted composite; V25 revert 37; V24 untouched"
                   },
-                  "verdict": "SCOPED_PASS_01_EXACT_RESTORE_REPAIR_03_FORMAL49_04_BATCH_05_UI_V25_COMBINED",
+                  "verdict": "SCOPED_PASS_V26_04_EXACT20_05_BATCH_UI_02_03_RESEARCH",
+                  "fixedSources": {
+                    "v26": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+                    "core04": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+                    "ui05": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
+                    "research02": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
+                    "reference03": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
+                    "manual03": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb"
+                  },
                   "verified": {
-                    "focusedAndIndependentNode": 103,
-                    "collection01": {
-                      "deltaSha256": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
-                      "manifestSha256": "5a98e6c46705c6513e6f723f0e26b0921ce7c002ae06198273ce0d8c1cef0c30",
-                      "verdict": "SCOPED_PASS_RESEARCH_EXACT_RESTORE_RAW_TOKEN_TRUE_RED_RESOLVED",
-                      "scope": "4MOD1ADD against old delta, 8ADD on R2; 396 unchanged",
-                      "focused": 26,
-                      "independent": 28,
-                      "oldRepro": "ACCEPTED_OLD_REJECTED_FIXED",
-                      "genuinePositive": 2,
-                      "genuineNegative": 2,
-                      "idWidthBoundaries": [
-                        128,
-                        256,
-                        65536,
-                        2147483647
-                      ],
-                      "productAuthorized": false,
+                    "focused": 58,
+                    "core04": {
+                      "verdict": "SCOPED_PASS_EXACT20_V301_OFFLINE_WRITER",
+                      "scope": "6MOD3ADD",
+                      "genuineOutputs": 20,
+                      "complete": 10,
+                      "revoke": 10,
+                      "slotFields": 132,
+                      "accountFields": 12,
+                      "pythonRawZip": 20,
+                      "accountRaw": 14,
+                      "pairs": 6,
+                      "reimport": 20,
                       "originalUnchanged": true
                     },
-                    "link03": {
-                      "deltaSha256": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
-                      "verdict": "SCOPED_PASS_CONDITIONAL_RESEARCH_ONLY",
-                      "focused": 12,
-                      "genuine301Targets": 49,
-                      "groups": 13,
-                      "completeCounterMatches": 14,
-                      "revokeCounterMismatch": 35,
-                      "rootOmission": 28,
-                      "noDefinedReward": 20,
-                      "aggregateExact": true
-                    },
-                    "core04": {
-                      "sha256": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
-                      "verdict": "SCOPED_PASS_DISTINCT_2_3_V301_FAMILY_REVOKE",
-                      "scope": "7MOD4ADD",
-                      "focused": 4,
-                      "genuineOutputs": 2,
+                    "ui05": {
+                      "verdict": "SCOPED_PASS_DISTINCT_FAMILY_BATCH_UI_INLINE",
+                      "scope": "2MOD2ADD",
+                      "controllerRealOutputs": 2,
                       "fields": [
                         18,
                         26
                       ],
-                      "pythonSemanticReparse": 2,
-                      "nonTargetRawFrames": 9,
-                      "rollback": 6,
-                      "negativeAssertions": 14,
-                      "sequentialEquivalence": 2,
-                      "offDenied": 2,
-                      "wrongVersionDenied": 1
-                    },
-                    "ui05": {
-                      "sha256": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
-                      "verdict": "SCOPED_PASS_SINGLE_FAMILY_UI_INLINE",
-                      "scope": "2MOD2ADD",
-                      "focused": 5,
-                      "inlineChromium": 5,
-                      "viewports": [
+                      "inlineChromium": [
                         320,
                         375,
                         1280
                       ],
-                      "genuine301IsolatedDownloadReimport": 1,
-                      "wrongVersion300Denied": true
+                      "isolatedDownloadReimport": 1,
+                      "wrongVersionDenied": true,
+                      "staleExportDenied": true
                     },
-                    "v25": {
-                      "sha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+                    "research02": {
+                      "verdict": "SCOPED_PASS_RESEARCH_EXISTING29_ONLY",
+                      "scope": "9ADD",
+                      "genuineSlotReparse": 58,
+                      "staleCAS": 58,
+                      "partialPair": 58,
+                      "reverseDenied": 58,
+                      "nativeInstructions": 46,
+                      "nativeBranches": 9,
+                      "typeChecks": 12,
+                      "structuralWrites": 0
+                    },
+                    "manual03": {
+                      "verdict": "SCOPED_PASS_CONDITIONAL_EXISTING29_ONLY",
+                      "scope": "8ADD",
+                      "realTargets": 29,
+                      "groups": 8,
+                      "complete": 6,
+                      "revoke": 23,
+                      "nativeAnchors": 10,
+                      "branches": 4,
+                      "structuralWrites": 0
+                    },
+                    "reference03": {
+                      "verdict": "SCOPED_PASS_REFERENCE_ADVISORY_ONLY",
+                      "scope": "8ADD",
+                      "nativeAnchors": 36,
+                      "branches": 9,
+                      "typedDocs": 20207,
+                      "comicCounterMembers": 5,
+                      "steamSwitchParity": false
+                    },
+                    "v26": {
                       "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
-                      "sourceEntries": 420,
-                      "exactAcceptedPaths": 37,
-                      "unchanged": 383,
-                      "affectedFocused": 28,
-                      "build": "PASS",
-                      "check": "PASS",
+                      "sourceEntries": 441,
+                      "exactAcceptedPaths": 30,
+                      "sourceUnchanged": 411,
                       "distEntries": 4144,
-                      "distChanged": 8,
-                      "distUnchanged": 4136,
+                      "distChanged": 7,
+                      "distUnchanged": 4137,
                       "webp": 4076,
                       "modules": 53,
-                      "artifactManifestSha256": "a3ff4300d5c7ced6ec12bea82a0d80e23c89358f082ae510c118d039c224abfe",
+                      "artifactManifestSha256": "76c570673126232b812c32e59a430f13293bea25cd4c9b9997a81af92f03918f",
                       "independentRebuildAllHashes": "PASS"
-                    },
-                    "browserKit": {
-                      "file": "HKIA_06_V24_BrowserKit_CoverageExtension_20261112.zip",
-                      "sha256": "d436cc4cdcec83dc2d744b5eeb428c6113cfd0dc6775ddc459ec8d8fa99d569c",
-                      "status": "PREPARED_REAL_BROWSER_UNEXECUTED_WAIT_ENV",
-                      "entries": 7,
-                      "targetSelectionBothGenuine": "PASS",
-                      "v300AddFromWitnessedRemovedCopy": "PASS",
-                      "nodeHelperRealOutputs": 5,
-                      "pythonSynthetic": 8,
-                      "syntax": "PASS",
-                      "actualBrowser": false
                     }
                   },
                   "evidence": {
                     "report": {
-                      "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_REPORT_20261112.md",
-                      "sha256": "8cb240eece127e79886f99d39075e8ef2f305815e00623adb80cf8df6dc64ce2"
+                      "file": "HKIA_06_V26_FORMAL_FOLLOWUP_REPORT_20261112.md",
+                      "sha256": "a5e51a167ed8abc52659d9fb3f9477be76554ab1f7908ff3c79ffe30f43a4cc3"
                     },
                     "zip": {
-                      "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_EVIDENCE_20261112.zip",
-                      "sha256": "7a4231f800dba22acf70a727276a9f07931eed552faafad7c059f02130cf57d9",
-                      "entries": 33
+                      "file": "HKIA_06_V26_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
+                      "sha256": "2e551f10de18d7e6ef6ca535b07a41ba52fed3d4377d7115c74c7e0cd498c8e2",
+                      "entries": 24
                     },
                     "handoff": {
-                      "file": "HKIA_06_HANDOFF_00_FORMAL_REPAIR_FOLLOWUP_20261112.md",
-                      "sha256": "ed7cfac388894a9fbcb5ca5546a7dcdd6b7e7de1024d1f6d3689270676769e04"
+                      "file": "HKIA_06_HANDOFF_00_V26_FORMAL_FOLLOWUP_20261112.md",
+                      "sha256": "21015b672298a4b38890a85b8b1bba516972de3b3b1004a98f04a984ca2b4084"
                     },
-                    "privateLibraryReadback": "ALL_4_BYTE_EXACT"
+                    "privateLibraryReadback": "ALL_3_BYTE_EXACT"
                   },
                   "remaining": [
-                    "01 specific reference closure and general acquisition, game load/resave unverified; no product permission",
-                    "00 serial integrate newly accepted 01/03/04/05 on formal V25 successor preserving exact research pins; V24 frozen",
-                    "04 exact 20 no-defined-reward v301 Writer proof; 05 family batch UI; 03 concrete Dunebug/Comic reference closure; 02 unpersisted Manual member producer",
-                    "V24 real HTTP/HTTPS native WebCrypto Module Worker authorized environment; extended kit actual selectors/interception/TLS unexecuted",
-                    "Native authentication/game load/resave/reboot/reward replay; Owner approval; 07 independent WAIT_ENV"
+                    "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
+                    "Native authentication/game load/resave/reboot/reward replay",
+                    "Missing Manual first-progress creation and generic dispatch",
+                    "Steam/Switch asset parity and active Collection reference closure",
+                    "04 new exact20 modules allowlist + integration",
+                    "06 newer 01 Recipe expansion and 04 exact9 after fixed dependencies"
                   ],
                   "handoff": {
                     "to": [
                       "00 CTRL",
                       "04 SAVE CORE",
                       "05 WEB",
-                      "03 LINKAGE",
-                      "02 ACHIEVEMENT"
+                      "01 COLLECTION"
                     ],
-                    "condition": "New accepted scoped inputs can integrate independently; 04 exact 20 target proof and 05 batch UI now READY; 03/02 targeted tasks already READY; 06 final browser after authorized env and new fixed deltas only",
-                    "v24": "FROZEN_WAIT_ENV"
+                    "condition": "00 integrate scoped accepted inputs and exact two new module allowlist entries; 05 exact20 UI; 04 existing29 causal research accepted, first exact9 no-defined-reward Writer only, others reward UNKNOWN; 01 reference advisory only. New fixed 01/04 evidence separately QA. V24 frozen."
                   },
-                  "rollback": "R2 OFF; 01 remove 8 additive paths, old verifier not accepted; 04 revert exact 11 paths to single-family; 05 revert four paths to accepted composite; V25 revert 37; V24 untouched"
+                  "rollback": "V26 OFF exact source; remove new additions and restore exact preimages; V24 unchanged"
                 },
-                "verdict": "SCOPED_PASS_V26_04_EXACT20_05_BATCH_UI_02_03_RESEARCH",
-                "fixedSources": {
-                  "v26": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
-                  "core04": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
-                  "ui05": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
-                  "research02": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
-                  "reference03": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
-                  "manual03": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb"
-                },
+                "verdict": "SCOPED_PASS_RECIPE32_EXISTING_ROW_RESEARCH_ONLY",
+                "manifestSha256": "d584e3eb99d9002a47361c5102269f6e478084de28515d9c37459b78d68482c2",
                 "verified": {
-                  "focused": 58,
-                  "core04": {
-                    "verdict": "SCOPED_PASS_EXACT20_V301_OFFLINE_WRITER",
-                    "scope": "6MOD3ADD",
-                    "genuineOutputs": 20,
-                    "complete": 10,
-                    "revoke": 10,
-                    "slotFields": 132,
-                    "accountFields": 12,
-                    "pythonRawZip": 20,
-                    "accountRaw": 14,
-                    "pairs": 6,
-                    "reimport": 20,
-                    "originalUnchanged": true
-                  },
-                  "ui05": {
-                    "verdict": "SCOPED_PASS_DISTINCT_FAMILY_BATCH_UI_INLINE",
-                    "scope": "2MOD2ADD",
-                    "controllerRealOutputs": 2,
-                    "fields": [
-                      18,
-                      26
-                    ],
-                    "inlineChromium": [
-                      320,
-                      375,
-                      1280
-                    ],
-                    "isolatedDownloadReimport": 1,
-                    "wrongVersionDenied": true,
-                    "staleExportDenied": true
-                  },
-                  "research02": {
-                    "verdict": "SCOPED_PASS_RESEARCH_EXISTING29_ONLY",
-                    "scope": "9ADD",
-                    "genuineSlotReparse": 58,
-                    "staleCAS": 58,
-                    "partialPair": 58,
-                    "reverseDenied": 58,
-                    "nativeInstructions": 46,
-                    "nativeBranches": 9,
-                    "typeChecks": 12,
-                    "structuralWrites": 0
-                  },
-                  "manual03": {
-                    "verdict": "SCOPED_PASS_CONDITIONAL_EXISTING29_ONLY",
-                    "scope": "8ADD",
-                    "realTargets": 29,
-                    "groups": 8,
-                    "complete": 6,
-                    "revoke": 23,
-                    "nativeAnchors": 10,
-                    "branches": 4,
-                    "structuralWrites": 0
-                  },
-                  "reference03": {
-                    "verdict": "SCOPED_PASS_REFERENCE_ADVISORY_ONLY",
-                    "scope": "8ADD",
-                    "nativeAnchors": 36,
-                    "branches": 9,
-                    "typedDocs": 20207,
-                    "comicCounterMembers": 5,
-                    "steamSwitchParity": false
-                  },
-                  "v26": {
-                    "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
-                    "sourceEntries": 441,
-                    "exactAcceptedPaths": 30,
-                    "sourceUnchanged": 411,
-                    "distEntries": 4144,
-                    "distChanged": 7,
-                    "distUnchanged": 4137,
-                    "webp": 4076,
-                    "modules": 53,
-                    "artifactManifestSha256": "76c570673126232b812c32e59a430f13293bea25cd4c9b9997a81af92f03918f",
-                    "independentRebuildAllHashes": "PASS"
-                  }
+                  "focused": 20,
+                  "independentPositive": 32,
+                  "independentNegative": 128,
+                  "baseExact": 441,
+                  "added": 8,
+                  "sourceIdentities": 32,
+                  "sourceAndGenuineAggregateExact": true,
+                  "genuineIndividualPairs": 4,
+                  "genuineBatchTargets": 32,
+                  "changedExpandedBytes": 32,
+                  "reusedBlocks": 33,
+                  "celebratedReferences": 5,
+                  "lowerObservedPriority": 27,
+                  "originalUnchanged": true,
+                  "productAuthorized": false,
+                  "gameAccepted": false,
+                  "switchParity": false
                 },
                 "evidence": {
-                  "report": {
-                    "file": "HKIA_06_V26_FORMAL_FOLLOWUP_REPORT_20261112.md",
-                    "sha256": "a5e51a167ed8abc52659d9fb3f9477be76554ab1f7908ff3c79ffe30f43a4cc3"
-                  },
                   "zip": {
-                    "file": "HKIA_06_V26_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
-                    "sha256": "2e551f10de18d7e6ef6ca535b07a41ba52fed3d4377d7115c74c7e0cd498c8e2",
-                    "entries": 24
+                    "file": "HKIA_06_RECIPE_EXPANSION_V26_QA_EVIDENCE_20261112.zip",
+                    "sha256": "cb98e4fe206e4d530676bc8ed68e1f5ea8c37db0a81308f6ffeb7e8cf4b1ad61",
+                    "entries": 3
                   },
-                  "handoff": {
-                    "file": "HKIA_06_HANDOFF_00_V26_FORMAL_FOLLOWUP_20261112.md",
-                    "sha256": "21015b672298a4b38890a85b8b1bba516972de3b3b1004a98f04a984ca2b4084"
-                  },
-                  "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+                  "privateLibraryReadback": "BYTE_EXACT_CRC_PASS"
                 },
                 "remaining": [
-                  "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
-                  "Native authentication/game load/resave/reboot/reward replay",
-                  "Missing Manual first-progress creation and generic dispatch",
-                  "Steam/Switch asset parity and active Collection reference closure",
-                  "04 new exact20 modules allowlist + integration",
-                  "06 newer 01 Recipe expansion and 04 exact9 after fixed dependencies"
+                  "03 targeted causal review 32, 4 representatives then 5 tag8; generic/external/managed body and runtime UNKNOWN",
+                  "04 existing-row receipt Writer only after 03 accepted, no product permission",
+                  "V24 real HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave unverified"
                 ],
                 "handoff": {
                   "to": [
-                    "00 CTRL",
-                    "04 SAVE CORE",
-                    "05 WEB",
-                    "01 COLLECTION"
+                    "03 LINKAGE",
+                    "00 CTRL"
                   ],
-                  "condition": "00 integrate scoped accepted inputs and exact two new module allowlist entries; 05 exact20 UI; 04 existing29 causal research accepted, first exact9 no-defined-reward Writer only, others reward UNKNOWN; 01 reference advisory only. New fixed 01/04 evidence separately QA. V24 frozen."
-                },
-                "rollback": "V26 OFF exact source; remove new additions and restore exact preimages; V24 unchanged"
+                  "condition": "03 consume exact fixed 01 research only, 00 integrate exact 8 additive paths with accepted V26/other followups; 04 after 03 independent acceptance. V24 frozen."
+                }
               },
-              "verdict": "SCOPED_PASS_RECIPE32_EXISTING_ROW_RESEARCH_ONLY",
-              "manifestSha256": "d584e3eb99d9002a47361c5102269f6e478084de28515d9c37459b78d68482c2",
+              "verdict": "SCOPED_PASS_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL",
+              "fixedSources": {
+                "v27": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
+                "core04": "9ebbe94f7d5a241f62ccacd8cb4ec07b200c8c78fb96368497428b1a06da64fb",
+                "ui05": "bdea9c817fd391d5b9c98030424abbbe2d8d7b9c1e91e7d6fdf0fe7cae589e76",
+                "link03": "0569736b9b300805ebd2f78b1e67bafb5237066b92359cb40271b0e0cc02496c"
+              },
               "verified": {
-                "focused": 20,
-                "independentPositive": 32,
-                "independentNegative": 128,
-                "baseExact": 441,
-                "added": 8,
-                "sourceIdentities": 32,
-                "sourceAndGenuineAggregateExact": true,
-                "genuineIndividualPairs": 4,
-                "genuineBatchTargets": 32,
-                "changedExpandedBytes": 32,
-                "reusedBlocks": 33,
-                "celebratedReferences": 5,
-                "lowerObservedPriority": 27,
-                "originalUnchanged": true,
-                "productAuthorized": false,
-                "gameAccepted": false,
-                "switchParity": false
+                "focused": 51,
+                "core04": {
+                  "verdict": "SCOPED_PASS_MANUAL9_V301_OFFLINE_REVOKE",
+                  "scope": "6MOD3ADD",
+                  "baseEntries": 461,
+                  "sourceEntries": 464,
+                  "genuineOutputs": 9,
+                  "independentGenuineOutputs": 9,
+                  "slotFields": 54,
+                  "accountFields": 0,
+                  "pythonRawFrames": 90,
+                  "independentNegatives": 54,
+                  "harnessNegatives": 57,
+                  "rollback": 9,
+                  "offPreview": 9,
+                  "wrongVersionDenied": true,
+                  "reimport": 9
+                },
+                "ui05": {
+                  "verdict": "SCOPED_PASS_EXACT20_UI_INLINE",
+                  "scope": "2MOD3ADD",
+                  "baseEntries": 471,
+                  "sourceEntries": 474,
+                  "controllerOutputs": 3,
+                  "offPreviewTargets": 20,
+                  "slotFields": 132,
+                  "accountFields": 12,
+                  "chromiumInlineCases": 5,
+                  "offViewports": [
+                    320,
+                    375,
+                    1280
+                  ],
+                  "wrongVersion300Denied": true,
+                  "isolatedDownloadReimport": 1,
+                  "originalUnchanged": true
+                },
+                "link03": {
+                  "verdict": "SCOPED_PASS_RECIPE32_CAUSAL_ADVISORY_ONLY",
+                  "scope": "8ADD_PLUS_TRANSPORT_MANIFEST",
+                  "sourceManagedBodies": 32,
+                  "sourceCounterDefs": 130,
+                  "nativeAnchors": 26,
+                  "typedDocs": 20207,
+                  "counterDocs": 586,
+                  "celebratedMatches": 5,
+                  "counterGuidMatches": 0,
+                  "requiredWrites": 0,
+                  "aggregateExact": true,
+                  "switchParity": false,
+                  "productAuthorized": false
+                },
+                "v27": {
+                  "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+                  "sourceEntries": 479,
+                  "modified": 9,
+                  "added": 38,
+                  "unchanged": 432,
+                  "distEntries": 4146,
+                  "distBytes": 146217560,
+                  "webp": 4076,
+                  "modules": 55,
+                  "distModified": 7,
+                  "distAdded": 2,
+                  "distManifestSha256": "03e3832920ccc03c90400bdc7cecacbad09bb1fea0514208fdd5d0911eee2f99",
+                  "allArtifactHashesEqual": true,
+                  "build": "PASS",
+                  "check": "PASS",
+                  "writer": "OFF"
+                },
+                "trueRedNew": 0
               },
               "evidence": {
-                "zip": {
-                  "file": "HKIA_06_RECIPE_EXPANSION_V26_QA_EVIDENCE_20261112.zip",
-                  "sha256": "cb98e4fe206e4d530676bc8ed68e1f5ea8c37db0a81308f6ffeb7e8cf4b1ad61",
-                  "entries": 3
+                "report": {
+                  "file": "HKIA_06_V27_FORMAL_FOLLOWUP_REPORT_20261112.md",
+                  "sha256": "e74824f3d666b1be989198cb494bf11a3d1ae15bdfc6816d13044465d48e97f7"
                 },
-                "privateLibraryReadback": "BYTE_EXACT_CRC_PASS"
+                "zip": {
+                  "file": "HKIA_06_V27_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
+                  "sha256": "87e8c79671565f2148735d4b11dd5260c7a8052335f32f180944d6b38567afcb",
+                  "entries": 28
+                },
+                "handoff": {
+                  "file": "HKIA_06_HANDOFF_00_V27_FORMAL_FOLLOWUP_20261112.md",
+                  "sha256": "119af672f48bec48e72127bb9e5a5d5312d982a94634577720005df6e813d56f"
+                },
+                "result": {
+                  "file": "HKIA_06_V27_FORMAL_FOLLOWUP_RESULT_20261112.json",
+                  "sha256": "6661afc6b184016b58c7e0b9b1dbe8c2624f6c5961524103b00eb741c70cf12c"
+                },
+                "privateLibraryReadback": "ALL_4_BYTE_EXACT_CRC_PASS"
               },
               "remaining": [
-                "03 targeted causal review 32, 4 representatives then 5 tag8; generic/external/managed body and runtime UNKNOWN",
-                "04 existing-row receipt Writer only after 03 accepted, no product permission",
-                "V24 real HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave unverified"
+                "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
+                "Native authentication/load/resave/reboot/reward and scheduling unknown",
+                "Recipe32 Switch parity/runtime references; trusted same-runtime restore only",
+                "00 serial integration; 05 Manual9 UI; 04 Recipe32 exact subset",
+                "07 independent WAIT_ENV"
               ],
               "handoff": {
                 "to": [
-                  "03 LINKAGE",
-                  "00 CTRL"
+                  "00 CTRL",
+                  "04 SAVE CORE",
+                  "05 WEB"
                 ],
-                "condition": "03 consume exact fixed 01 research only, 00 integrate exact 8 additive paths with accepted V26/other followups; 04 after 03 independent acceptance. V24 frozen."
-              }
+                "condition": "00 serial integrate 04 Manual9 9 paths + 05 Exact20 UI 5 paths + 03 Recipe32 8 additive paths (transport manifest excluded) on fixed V27, verify overlaps and rebuild; 04 exact 4 representative Recipe32 then proven subset only; 05 Manual9 9 target UI on accepted 04; V24 frozen",
+                "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
+              },
+              "rollback": "V27 fixed OFF; restore 04/05 exact preimages and remove 03 additions; V24 unchanged"
             },
-            "verdict": "SCOPED_PASS_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL",
+            "verdict": "SCOPED_PASS_V28_RECIPE4_MANUAL9_UI",
             "fixedSources": {
-              "v27": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
-              "core04": "9ebbe94f7d5a241f62ccacd8cb4ec07b200c8c78fb96368497428b1a06da64fb",
-              "ui05": "bdea9c817fd391d5b9c98030424abbbe2d8d7b9c1e91e7d6fdf0fe7cae589e76",
-              "link03": "0569736b9b300805ebd2f78b1e67bafb5237066b92359cb40271b0e0cc02496c"
+              "v28": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
+              "recipe4": "364c6cb76747ffebc7439924309e95261042a77b14078200eea81575278f8eca",
+              "manual9ui": "cd856cae7c76ba5ebb3da524b6a4138c34456d1ee92b9e98f0413e5304ba6df3"
             },
             "verified": {
-              "focused": 51,
-              "core04": {
-                "verdict": "SCOPED_PASS_MANUAL9_V301_OFFLINE_REVOKE",
-                "scope": "6MOD3ADD",
-                "baseEntries": 461,
-                "sourceEntries": 464,
-                "genuineOutputs": 9,
-                "independentGenuineOutputs": 9,
+              "focused": 31,
+              "recipe4": {
+                "scope": "5MOD3ADD",
+                "verdict": "SCOPED_PASS_V301_EXISTING_RECIPE4_SAME_RUNTIME_RECEIPT",
+                "genuineForward": 4,
+                "genuineReverse": 4,
+                "exactDiff": 8,
+                "independentPythonRawZip": 8,
+                "rawNonTargetFrames": 80,
+                "accountRaw": 8,
+                "offPreview": 4,
+                "offDenied": 4,
+                "offNegatives": 29,
+                "onNegatives": 52,
+                "rollback": 3,
+                "originalUnchanged": true,
+                "workerSynthetic": true
+              },
+              "manual9ui": {
+                "scope": "2MOD3ADD",
+                "verdict": "SCOPED_PASS_MANUAL9_UI_INLINE",
+                "genuineControllerOutputs": 9,
+                "offPreviews": 9,
                 "slotFields": 54,
                 "accountFields": 0,
-                "pythonRawFrames": 90,
-                "independentNegatives": 54,
-                "harnessNegatives": 57,
-                "rollback": 9,
-                "offPreview": 9,
-                "wrongVersionDenied": true,
-                "reimport": 9
-              },
-              "ui05": {
-                "verdict": "SCOPED_PASS_EXACT20_UI_INLINE",
-                "scope": "2MOD3ADD",
-                "baseEntries": 471,
-                "sourceEntries": 474,
-                "controllerOutputs": 3,
-                "offPreviewTargets": 20,
-                "slotFields": 132,
-                "accountFields": 12,
-                "chromiumInlineCases": 5,
-                "offViewports": [
-                  320,
-                  375,
-                  1280
-                ],
-                "wrongVersion300Denied": true,
+                "inlineChromiumCases": 5,
                 "isolatedDownloadReimport": 1,
+                "wrongVersion300Denied": true,
                 "originalUnchanged": true
               },
-              "link03": {
-                "verdict": "SCOPED_PASS_RECIPE32_CAUSAL_ADVISORY_ONLY",
-                "scope": "8ADD_PLUS_TRANSPORT_MANIFEST",
-                "sourceManagedBodies": 32,
-                "sourceCounterDefs": 130,
-                "nativeAnchors": 26,
-                "typedDocs": 20207,
-                "counterDocs": 586,
-                "celebratedMatches": 5,
-                "counterGuidMatches": 0,
-                "requiredWrites": 0,
-                "aggregateExact": true,
-                "switchParity": false,
-                "productAuthorized": false
-              },
-              "v27": {
+              "v28": {
+                "scope": "8MOD14ADD",
                 "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
-                "sourceEntries": 479,
-                "modified": 9,
-                "added": 38,
-                "unchanged": 432,
+                "acceptedExactPaths": 22,
+                "sourceEntries": 493,
                 "distEntries": 4146,
-                "distBytes": 146217560,
+                "distBytes": 146319889,
                 "webp": 4076,
                 "modules": 55,
-                "distModified": 7,
-                "distAdded": 2,
-                "distManifestSha256": "03e3832920ccc03c90400bdc7cecacbad09bb1fea0514208fdd5d0911eee2f99",
                 "allArtifactHashesEqual": true,
+                "artifactManifestSha256": "76e4603bde71982aabbbf578c315aaf65fbdffe18483e2b921bfb3049a68e89f",
                 "build": "PASS",
                 "check": "PASS",
                 "writer": "OFF"
@@ -2827,30 +2926,25 @@
             },
             "evidence": {
               "report": {
-                "file": "HKIA_06_V27_FORMAL_FOLLOWUP_REPORT_20261112.md",
-                "sha256": "e74824f3d666b1be989198cb494bf11a3d1ae15bdfc6816d13044465d48e97f7"
+                "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_REPORT.md",
+                "sha256": "e4c8a80ccdeec5594b76c7ed5ad55a4118e50f8b95683ebec565de6764684b9b"
               },
               "zip": {
-                "file": "HKIA_06_V27_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
-                "sha256": "87e8c79671565f2148735d4b11dd5260c7a8052335f32f180944d6b38567afcb",
-                "entries": 28
-              },
-              "handoff": {
-                "file": "HKIA_06_HANDOFF_00_V27_FORMAL_FOLLOWUP_20261112.md",
-                "sha256": "119af672f48bec48e72127bb9e5a5d5312d982a94634577720005df6e813d56f"
+                "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_EVIDENCE.zip",
+                "sha256": "7fc08bdc680690a5ce7dfa5ae65db63c0a3980e60fd2f5e2f5e0442185ea2da7",
+                "entries": 34
               },
               "result": {
-                "file": "HKIA_06_V27_FORMAL_FOLLOWUP_RESULT_20261112.json",
-                "sha256": "6661afc6b184016b58c7e0b9b1dbe8c2624f6c5961524103b00eb741c70cf12c"
+                "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_RESULT.json",
+                "sha256": "33ba043199384e60f623a58315795185e30be512a19ee47b72bccf753541890a"
               },
-              "privateLibraryReadback": "ALL_4_BYTE_EXACT_CRC_PASS"
+              "privateLibraryReadback": "ALL_3_BYTE_EXACT_CRC_PASS"
             },
             "remaining": [
-              "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
-              "Native authentication/load/resave/reboot/reward and scheduling unknown",
-              "Recipe32 Switch parity/runtime references; trusted same-runtime restore only",
-              "00 serial integration; 05 Manual9 UI; 04 Recipe32 exact subset",
-              "07 independent WAIT_ENV"
+              "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; OFF preview deployed per 00 ledger, independent HTTP check DNS blocked",
+              "Native game authentication/load/resave/reboot/runtime effects UNKNOWN",
+              "Recipe4 only pre-resave exact same-runtime receipt; remaining23 need scoped proof; five celebration isolated",
+              "00 integrate exact 04/05; 05 Recipe4 UI; 04 remaining23 scoped proof"
             ],
             "handoff": {
               "to": [
@@ -2858,97 +2952,48 @@
                 "04 SAVE CORE",
                 "05 WEB"
               ],
-              "condition": "00 serial integrate 04 Manual9 9 paths + 05 Exact20 UI 5 paths + 03 Recipe32 8 additive paths (transport manifest excluded) on fixed V27, verify overlaps and rebuild; 04 exact 4 representative Recipe32 then proven subset only; 05 Manual9 9 target UI on accepted 04; V24 frozen",
+              "condition": "00 serial integrate 04 Recipe4 8 paths + 05 Manual9 UI 5 paths on fixed V28, verify exact preimages and rebuild; 05 Recipe4 typed receipt UI; 04 remaining23 safe subset scoped proof with 5 celebration isolated. V24 frozen.",
               "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
             },
-            "rollback": "V27 fixed OFF; restore 04/05 exact preimages and remove 03 additions; V24 unchanged"
+            "rollback": "V28 fixed OFF; restore 04/05 exact preimages and remove additions; V24 unchanged"
           },
-          "verdict": "SCOPED_PASS_V28_RECIPE4_MANUAL9_UI",
-          "fixedSources": {
-            "v28": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
-            "recipe4": "364c6cb76747ffebc7439924309e95261042a77b14078200eea81575278f8eca",
-            "manual9ui": "cd856cae7c76ba5ebb3da524b6a4138c34456d1ee92b9e98f0413e5304ba6df3"
-          },
+          "verdict": "SCOPED_PASS_FORMAL_V29_OFF_COMBINED",
           "verified": {
-            "focused": 31,
-            "recipe4": {
-              "scope": "5MOD3ADD",
-              "verdict": "SCOPED_PASS_V301_EXISTING_RECIPE4_SAME_RUNTIME_RECEIPT",
-              "genuineForward": 4,
-              "genuineReverse": 4,
-              "exactDiff": 8,
-              "independentPythonRawZip": 8,
-              "rawNonTargetFrames": 80,
-              "accountRaw": 8,
-              "offPreview": 4,
-              "offDenied": 4,
-              "offNegatives": 29,
-              "onNegatives": 52,
-              "rollback": 3,
-              "originalUnchanged": true,
-              "workerSynthetic": true
-            },
-            "manual9ui": {
-              "scope": "2MOD3ADD",
-              "verdict": "SCOPED_PASS_MANUAL9_UI_INLINE",
-              "genuineControllerOutputs": 9,
-              "offPreviews": 9,
-              "slotFields": 54,
-              "accountFields": 0,
-              "inlineChromiumCases": 5,
-              "isolatedDownloadReimport": 1,
-              "wrongVersion300Denied": true,
-              "originalUnchanged": true
-            },
-            "v28": {
-              "scope": "8MOD14ADD",
-              "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
-              "acceptedExactPaths": 22,
-              "sourceEntries": 493,
-              "distEntries": 4146,
-              "distBytes": 146319889,
-              "webp": 4076,
-              "modules": 55,
-              "allArtifactHashesEqual": true,
-              "artifactManifestSha256": "76e4603bde71982aabbbf578c315aaf65fbdffe18483e2b921bfb3049a68e89f",
-              "build": "PASS",
-              "check": "PASS",
-              "writer": "OFF"
-            },
-            "trueRedNew": 0
+            "sourceEntries": 499,
+            "acceptedExactPaths": 13,
+            "unchanged": 486,
+            "focused": 26,
+            "distEntries": 4146,
+            "distChanged": 6,
+            "distUnchanged": 4140,
+            "distBytes": 146339611,
+            "modules": 55,
+            "webp": 4076,
+            "allArtifactHashesEqual": true,
+            "build": "PASS",
+            "check": "PASS",
+            "writer": "OFF",
+            "genuineRecipeOffPreview": 4,
+            "combinedOffPreview": 2,
+            "combinedIsolatedExports": 3,
+            "crossArchiveReceiptDenied": true,
+            "originalUnchanged": true
           },
           "evidence": {
-            "report": {
-              "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_REPORT.md",
-              "sha256": "e4c8a80ccdeec5594b76c7ed5ad55a4118e50f8b95683ebec565de6764684b9b"
-            },
             "zip": {
-              "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_EVIDENCE.zip",
-              "sha256": "7fc08bdc680690a5ce7dfa5ae65db63c0a3980e60fd2f5e2f5e0442185ea2da7",
-              "entries": 34
+              "file": "HKIA_06_V29_COMBINED_20261112_EVIDENCE.zip",
+              "sha256": "84b95f61a37517065789979fe9d78fb9571cf5616a5a3aa74a0c9f01adcdc68a"
             },
             "result": {
-              "file": "HKIA_06_V28_FORMAL_FOLLOWUP_20261112_RESULT.json",
-              "sha256": "33ba043199384e60f623a58315795185e30be512a19ee47b72bccf753541890a"
-            },
-            "privateLibraryReadback": "ALL_3_BYTE_EXACT_CRC_PASS"
+              "file": "HKIA_06_V29_COMBINED_20261112_RESULT.json",
+              "sha256": "22d314cd5cb0080e287c11a74214a4ffe1e11144596d2a113b1c89acfea3575c"
+            }
           },
           "remaining": [
-            "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; OFF preview deployed per 00 ledger, independent HTTP check DNS blocked",
-            "Native game authentication/load/resave/reboot/runtime effects UNKNOWN",
-            "Recipe4 only pre-resave exact same-runtime receipt; remaining23 need scoped proof; five celebration isolated",
-            "00 integrate exact 04/05; 05 Recipe4 UI; 04 remaining23 scoped proof"
-          ],
-          "handoff": {
-            "to": [
-              "00 CTRL",
-              "04 SAVE CORE",
-              "05 WEB"
-            ],
-            "condition": "00 serial integrate 04 Recipe4 8 paths + 05 Manual9 UI 5 paths on fixed V28, verify exact preimages and rebuild; 05 Recipe4 typed receipt UI; 04 remaining23 safe subset scoped proof with 5 celebration isolated. V24 frozen.",
-            "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
-          },
-          "rollback": "V28 fixed OFF; restore 04/05 exact preimages and remove additions; V24 unchanged"
+            "V24 real HTTP/HTTPS browser WAIT_ENV",
+            "game load/re-save unknown",
+            "04 Recipe23 and 05 Recipe4 UI new independent QA"
+          ]
         }
       },
       "handoffRecheck": {
