@@ -1554,10 +1554,10 @@
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ctrlExecution": {
-    "task": "V21_SERIAL_ACCEPTED_BATCH_INTEGRATION",
-    "status": "DONE_PRIVATE_INTEGRATION_FINAL_QA_PENDING",
+    "task": "V22_SERIAL_ACCEPTED_RECEIPT_NATIVE_INTEGRATION",
+    "status": "IN_FLIGHT",
     "owner": "00 CTRL",
-    "baseMain": "290aca245d1dcc874632a37c0efa34eb4f76415e",
+    "baseMain": "ee8e79a2fb0a5b8766f8b9e831b6b7b59d1b1285",
     "baseSourceSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
     "v20": {
       "label": "V20_RECEIPT_PREFLIGHT_NOT_ACCEPTED",
@@ -1664,6 +1664,9 @@
       "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_UI_AND_AUTHORIZED_ENV",
       "07_VERIFIED_RUST_TOOLCHAIN",
       "03_04_05_ONLY_NEW_CAUSAL_EVIDENCE_OR_SCOPED_QA_TRUE_RED"
-    ]
+    ],
+    "previousTask": "V21_SERIAL_ACCEPTED_BATCH_INTEGRATION",
+    "scope": "V21 accepted 17 disjoint paths; private serial integration, cumulative checks, fixed artifact and final gate handoff; no live flag or deploy",
+    "dependency": "06 exact scoped acceptance 05/03/04; final combined/browser/game acceptance pending"
   }
 }
