@@ -465,15 +465,15 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_V23_R2_PRIVACY_RETEST",
+      "status": "V23_R2_PRIVACY_SCOPED_PASS_FINAL_BROWSER_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
-      "targetSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-      "targetScope": "16_MOD_26_ADD",
-      "next": "00_CTRL_MINIMAL_PRIVACY_GATE_REPAIR; 06_SCOPED_RETEST_AFTER_FIXED_SOURCE; REAL_BROWSER_AFTER_AUTHORIZED_ENV; 07_WAIT_ENV",
+      "targetSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+      "targetScope": "2_MOD_PRIVACY_POLICY_TEST",
+      "next": "00_RELEASE_EQUIVALENT_ACTIVATION_CANDIDATE_AND_AUTHORIZED_BROWSER_ENV; 06_FINAL_REAL_BROWSER_AFTER_DEP; 07_WAIT_ENV",
       "execution": {
         "task": "V23_PRIVACY_DECODED_REPAIR_R2_SCOPED_RETEST",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "11ba38894ad8113a33390943da733586ab4d1ea6",
         "baseSourceSha256": "bca281ecd5911beb1ab0c3cb7a105985776e2758d86e6852b4a924f66af0bab4",
         "fixedSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -810,7 +810,70 @@
             "nextAfter": "06 scoped repair and final browser after authorized env"
           },
           "rollback": "V21 development source only; preprivacy artifacts NOT publishable. V22 fixed artifact clean under observed decoded patterns but gate not accepted."
-        }
+        },
+        "verdict": "SCOPED_PASS_PRIVACY_GATE_AND_BYTE_IDENTICAL_OFF_ARTIFACT",
+        "deltaSha256": "775f231ce33c667179e877a1ef2fed29594d8a99d8b3bb22c606fec1b20c087b",
+        "manifestSha256": "80170c5f1d600d4532f8b46db5cfd76cd866d0b3f90bd589172f0195e5338270",
+        "verified": {
+          "sourceEntries": 396,
+          "modified": 2,
+          "unchanged": 394,
+          "acceptedExactPaths": 17,
+          "sourceManifest": "ALL_SHA_SIZE_CRC_PASS",
+          "oldV22Reproduction": "3_PASS_3_FAIL",
+          "oldSixR2": "6_PASS_0_FAIL",
+          "independentAdditional": "20_PASS_0_FAIL",
+          "focused": "7_PASS_0_FAIL",
+          "miniBuild": "EXIT_1_PRIVATE_REFERENCE_VALUE_PROHIBITED",
+          "build": "PASS",
+          "check": "PASS",
+          "distEntries": 4144,
+          "distBytes": 146154762,
+          "webp": 4076,
+          "modules": 53,
+          "distManifestSha256": "ed0e2ffe43c82eaed4142a5ea1d98d721c8fabba0ddded1022ffa306bd0884d6",
+          "allDistBytesEqual": true,
+          "decodedJsonPairScan": 16,
+          "decodedPatternHits": 0,
+          "sourceJsonCompared": 14,
+          "v21ToR2RemovedKeys": 8,
+          "v21ToR2AffectedJson": 5,
+          "sourceToR2RemovedKeys": 11,
+          "sourceToR2AffectedJson": 6,
+          "priorRuntimeEvidence": "REUSED_EXACT_ARTIFACT_BYTES",
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_QA_V23_R2_PRIVACY_SCOPED_REPORT_20261112.md",
+            "sha256": "43ed5a3ba8235ffb8a4c318f46a577454385590a23136c6e9291d50cdc61d19a",
+            "libraryId": "libfile_a5aa2f41d7a4819186ae2968cbb17dad"
+          },
+          "zip": {
+            "file": "HKIA_06_QA_V23_R2_PRIVACY_INDEPENDENT_EVIDENCE_20261112.zip",
+            "sha256": "fe73a8280a01800c8bc23602b8a2249cfe51d6af0639974db0a58400e3b10ad7",
+            "entries": 15,
+            "libraryId": "libfile_f248947cd6288191af5cb8881fc0f76c"
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V23_R2_20261112.md",
+            "sha256": "7bb436585527560e09fba5d15a7ec3ba310020da4e2165af9fff17fb5aa3b1fd",
+            "libraryId": "libfile_379742514c348191be2a7a2615c74d59"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+        },
+        "remaining": [
+          "00 release-equivalent accepted capability activation candidate fixed; current OFF artifact not functional beta",
+          "actual HTTP/HTTPS native WebCrypto browser Module Worker on authorized private environment, no unchanged retry",
+          "game auth/load/resave/reboot and Recipe zero-row persistence/recount unobserved",
+          "07 independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "condition": "record scoped R2 acceptance; fixed activation candidate and authorized browser environment before final 06 E2E; Owner deployment approval separate",
+          "nextAfter": "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_DEP"
+        },
+        "rollback": "V22 development only; old privacy gate TRUE_RED not publishable; R2 OFF artifact byte-identical verified not deployable"
       }
     },
     "00_MEDIA": {
