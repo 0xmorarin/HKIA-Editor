@@ -1117,12 +1117,12 @@
       }
     },
     "05_WEB": {
-      "status": "FORMAL_MANUAL9_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "FORMAL_RECIPE4_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "IN_FLIGHT_FORMAL_RECIPE4_UI",
+      "next": "06_SCOPED_QA_RECIPE4_UI_5_PATHS_AND_V29; 00_SERIAL_FORMAL_INTEGRATION; 05_REMAINING23_UI_AFTER_ACCEPTED_WRITER",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -1337,7 +1337,7 @@
       },
       "formalTask": {
         "task": "FORMAL_RECIPE4_RECEIPT_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "05 WEB",
         "priority": "P0_FORMAL_RELEASE",
         "baseHead": "269545cc796b9de91c1cfcfb6916d2cdfab7a4c9",
@@ -1726,7 +1726,64 @@
             "nextAfter": "00 serial formal integration; 05 Recipe32 UI only after 04 independent acceptance"
           },
           "next": "06_SCOPED_QA_MANUAL9_UI_5_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_RECIPE32_UI_AFTER_ACCEPTED_WRITER"
-        }
+        },
+        "baseComposite": "V28 493 + accepted Recipe4 8 paths + accepted Manual9 UI 5 paths; exact byte equality to V29 aedb4cf6 499 entries",
+        "actualBaseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+        "fixedSourceSha256": "39f741f0e923752b920381827d19cf6a378a4e0dc3de5366467257728d5836bd",
+        "deltaSha256": "5ee5f0035feb11314e7fb59c172b5c2a1145d2539f2dccbe7dea9f14393bfe79",
+        "manifestSha256": "66573b3cd9585eb154f4228272fd94c3158d44d372944a3001706ffb0022c0d5",
+        "evidenceSha256": "b5972e7c383a483c4565ba5c9a9d9daeccd0015d9856a2178a6dcc88a2e4561f",
+        "handoffSha256": "3f455b07b4a6e1e6b88b1a654b00f438a0443a74464f128dcea18498cac34ba7",
+        "changedPaths": "2_MOD_3_ADD_0_DEL",
+        "artifacts": {
+          "source": "HKIA_WEB05_FormalRecipe4UI_V29_20261112_Source.zip",
+          "delta": "HKIA_WEB05_FormalRecipe4UI_V29_20261112_Delta.zip",
+          "manifest": "HKIA_WEB05_FormalRecipe4UI_V29_20261112_Manifest.json",
+          "evidence": "HKIA_WEB05_FormalRecipe4UI_V29_20261112_Evidence.zip",
+          "handoff": "HKIA_WEB05_FormalRecipe4UI_V29_20261112_HANDOFF.md"
+        },
+        "verified": {
+          "focusedNew": 5,
+          "oldReceiptRegression": 5,
+          "nodePass": 980,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS_SOURCE_ONLY",
+          "baseV29Exact": 499,
+          "exactReplay": "502/502",
+          "realOffPreview": 4,
+          "realForward": 4,
+          "realReverse": 4,
+          "exactDiff": 8,
+          "accountRaw": 8,
+          "chromeInlineOff": [
+            320,
+            375,
+            1280
+          ],
+          "chromeWrongVersion300Denied": true,
+          "chromeIsolatedActualForwardRestoreReimport": 1,
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "libraryReadbackAll5Sha": "PASS",
+          "releaseFlags": "OFF",
+          "V24Frozen": true
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_AUTH_RESAVE_RUNTIME_EFFECTS",
+          "SWITCH_ASSET_PARITY",
+          "REMAINING28_RECIPE_TARGETS_BATCH_GENERAL_ACQUISITION",
+          "00_FULL_DISTRIBUTION_REBUILD"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "5 exact 05 paths on V29 499; four v301 existing rows, both consents, exact diff, dynamic capability, operation/item/document/digest-bound volatile receipt, genuine forward/reverse, replay/close/cross-item refusal; existing 5913958 focused regression only; V24 unchanged",
+          "nextAfter": "00 serial integrate on V29 after scoped acceptance; 05 remaining23 only after accepted 04 proof; 5 celebration wait causal proof"
+        },
+        "next": "06_SCOPED_QA_RECIPE4_UI_5_PATHS_AND_V29; 00_SERIAL_FORMAL_INTEGRATION; 05_REMAINING23_UI_AFTER_ACCEPTED_WRITER"
       }
     },
     "06_QA": {
