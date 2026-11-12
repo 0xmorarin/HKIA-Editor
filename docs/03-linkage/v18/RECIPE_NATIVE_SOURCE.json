@@ -1,0 +1,165 @@
+{
+  "schema": "HKIA.03.V18.RecipeTypeEvidence.1",
+  "version": "3.0.1",
+  "nativeBuildSha256": "64bd5fb69239f57eb0578a1897a45a3c6f5e187480903f83df503b46bf827bfb",
+  "dumpSha256": "4b4eb6a543722e1dfaf8aad5593e9e1300723aff55e9e750d489744960feb738",
+  "metadataSha256": "26f59b7fea32ced82db32da8050a249c458e5f1ba8458d01ccc8fa216c59a1f5",
+  "steamSerialSha256": "ab6cef2ffc962c6a012c2cbc37db2378ac8980e4d4ee5944b268d9eb4d6f4e29",
+  "metadataName": "Sunblink.Game.RecipeItemDetails_TypeInfo",
+  "gotSlot": "0xb0dc978",
+  "typeInfoSlot": "0xb4e3a08",
+  "newInstructionAnchors": 36,
+  "priorAnchorsReused": 39,
+  "counterSourceGuid": "aa1a22ed0592ede4cb9bafff3f6c382c",
+  "counterSaveGuid": "de22a1aa:4ede2950:fffab9bc:c283c6f3",
+  "items": [
+    {
+      "itemId": 1690873624,
+      "sourceGuid": "70b05ee5ca43e514ab965d94d4b5a869",
+      "saveGuid": "5ee50b07:415e34ac:49d569ba:968a5b4d",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1160786090,
+      "sourceGuid": "f5742c0e10cf0f84298fdad0ba193067",
+      "saveGuid": "e0c2475f:48f0fc01:0dadf892:760391ab",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1816936329,
+      "sourceGuid": "ee244a60bf893694989f2f91584a3949",
+      "saveGuid": "06a442ee:496398fb:19f2f989:9493a485",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 729556798,
+      "sourceGuid": "535b81a2261af0d4b85a736a42a3bf8c",
+      "saveGuid": "2a18b535:4d0fa162:a637a58b:c8fb3a24",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1949290670,
+      "sourceGuid": "ba7a0379456547e4987fc84e73173a00",
+      "saveGuid": "9730a7ab:4e745654:e48cf789:00a37137",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 97389897,
+      "sourceGuid": "9cb9eaba4862f0549a6ffa79035432c2",
+      "saveGuid": "abae9bc9:450f2684:97aff6a9:2c234530",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 2119021872,
+      "sourceGuid": "52651641786da3d41861db3043fbf46c",
+      "saveGuid": "14615625:4d3ad687:03bd1681:c64fbf34",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 598502237,
+      "sourceGuid": "5e7f409e185bfb94f998dad9fe05f3ae",
+      "saveGuid": "e904f7e5:49bfb581:9dad899f:ea3f50ef",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 5913958,
+      "sourceGuid": "ba9885df3b8198041b4ce5617db825eb",
+      "saveGuid": "fd5889ab:408918b3:165ec4b1:be528bd7",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 908477039,
+      "sourceGuid": "f4942f05b6a31c54b842680293565a30",
+      "saveGuid": "50f2494f:45c13a6b:2086248b:03a56539",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1345973618,
+      "sourceGuid": "4a587b70416512643969d732a64fefb8",
+      "saveGuid": "07b785a4:46215614:237d9693:8bfef46a",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 507232552,
+      "sourceGuid": "c5b59a6b15a04b246809652686a39c77",
+      "saveGuid": "b6a95b5c:42b40a51:62569086:77c93a68",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1823269762,
+      "sourceGuid": "16cc32a3ca28c5d49a66e93e603d11fe",
+      "saveGuid": "3a23cc61:4d5c82ac:e39e66a9:ef11d306",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1420451784,
+      "sourceGuid": "6b08561dd3199fb499f1147ccd5788d8",
+      "saveGuid": "d16580b6:4bf9913d:c7411f99:8d8875dc",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1173966242,
+      "sourceGuid": "2fb48cb4fe1ee9743bfb12ee469c929e",
+      "saveGuid": "4bc84bf2:479ee1ef:ee21bfb3:e929c964",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 448820488,
+      "sourceGuid": "a97118db417633948a69fc5f8bd1ff21",
+      "saveGuid": "bd81179a:49336714:f5cf96a8:12ff1db8",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1995351712,
+      "sourceGuid": "d796b00f52454de4786a2a7739c05d0d",
+      "saveGuid": "f00b697d:4ed45425:77a2a687:d0d50c93",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1392514037,
+      "sourceGuid": "6ad2f3bc8c33a6b41bcec380e3a5d8ca",
+      "saveGuid": "cb3f2da6:4b6a33c8:083cecb1:ac8d5a3e",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1886024592,
+      "sourceGuid": "7ca7e84198ce1a7448e464e4d001b8a2",
+      "saveGuid": "148e7ac7:47a1ec89:4e464e84:2a8b100d",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1982474245,
+      "sourceGuid": "7ca8dcd84d1938d4597803d3511b8db7",
+      "saveGuid": "8dcd8ac7:4d8391d4:3d308795:7bd8b115",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1875574153,
+      "sourceGuid": "9daa75a68496d27448b916487394bdaa",
+      "saveGuid": "6a57aad9:472d6948:84619b84:aadb4937",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 554654777,
+      "sourceGuid": "9ed9eb4c7ec83da4a8b11d8ee508d101",
+      "saveGuid": "c4be9de9:4ad38ce7:e8d11b8a:101d805e",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 1635314697,
+      "sourceGuid": "65b04c285f6c16e48a1fc3603a57264c",
+      "saveGuid": "82c40b56:4e61c6f5:063cf1a8:c46275a3",
+      "detailType": "RecipeItemDetails"
+    },
+    {
+      "itemId": 756066683,
+      "sourceGuid": "2242e5bed563fcb4c860408bce40de0b",
+      "saveGuid": "eb5e2422:4bcf365d:b804068c:b0ed04ec",
+      "detailType": "RecipeItemDetails"
+    }
+  ],
+  "otherFiltersEmpty": true,
+  "sourceItemFieldsOnly": true,
+  "switchAssetParity": false,
+  "gameAccepted": false
+}

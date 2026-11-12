@@ -1,0 +1,58 @@
+name: Verify and deploy HKIA beta artifact
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_ref:
+        description: 'Fixed approved commit containing site/ and site-manifest.json'
+        required: true
+      manifest_sha256:
+        description: 'SHA-256 of the independently accepted site manifest'
+        required: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify publication gate
+        env:
+          EXPECTED_MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+          ARTIFACT_REF: ${{ inputs.artifact_ref }}
+        run: |
+          node --input-type=module -e 'import fs from "node:fs";const d=JSON.parse(fs.readFileSync("config/release-gates.json")),a=d.distribution.publicValidation.approvedArtifact;if(d.distribution.githubPages!=="ON"||d.distribution.nativeSaveWriter!=="ON_PROVEN_BETA_CAPABILITIES"||!a||a.commit!==process.env.ARTIFACT_REF||a.manifestSha256!==process.env.EXPECTED_MANIFEST_SHA||!/^[0-9a-f]{40}$/.test(a.commit)||!/^[0-9a-f]{64}$/.test(a.manifestSha256))throw Error("Owner beta activation or fixed artifact gate closed")' 
+      - run: npm test
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.artifact_ref }}
+          path: approved-artifact
+          persist-credentials: false
+      - name: Verify exact artifact
+        env:
+          EXPECTED_MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+          ARTIFACT_REF: ${{ inputs.artifact_ref }}
+        run: |
+          test "$(git -C approved-artifact rev-parse HEAD)" = "$ARTIFACT_REF"
+          node scripts/00-verify-beta-artifact.mjs approved-artifact/site approved-artifact/site-manifest.json "$EXPECTED_MANIFEST_SHA"
+          node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("approved-artifact/site-manifest.json"));if(m.state!=="BETA_ACCEPTED"||m.writer!=="ON_PROVEN_BETA_CAPABILITIES")throw Error("Not an accepted functional beta")'
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: approved-artifact/site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

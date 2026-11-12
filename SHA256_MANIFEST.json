@@ -1,0 +1,58 @@
+{
+  "schema": "HKIA.LinkageNativeWritePathDelivery.1",
+  "safeFiles": {
+    "HKIA_03_LINKAGE_NATIVE_PERSISTENCE_HANDOFF_20261111.md": {
+      "sha256": "262b5f31d0fdb93d1783be356336bcc4542f8b065427ff138bf9d6d7bcbd8b33",
+      "bytes": 12945
+    },
+    "contracts/03-linkage-native-writepath-delta.json": {
+      "sha256": "8ae9a1c9626874dde5506228ce97c5d00876751d1400ee46ab0a578cd2912f58",
+      "bytes": 6230
+    },
+    "contracts/03-linkage-native-writepath.mjs": {
+      "sha256": "cdefb10210d3ade3d2cd7c1536988ae249b51d1b9117bdea0c835dc3f8adc61a",
+      "bytes": 7792
+    },
+    "contracts/03-linkage-native-writepath.d.ts": {
+      "sha256": "741feaf19224640d8aa0544c54d50fcbbf0d36310e812fb4cd4b6ca9d828876a",
+      "bytes": 2652
+    },
+    "contracts/03-linkage-mission-source-crosswalk.json": {
+      "sha256": "6a8c1401bf754baff7ca2358667072fab19f229107f16e12da80ec5626e3e4a6",
+      "bytes": 130225
+    },
+    "scripts/03-linkage-writepath-native-proof.py": {
+      "sha256": "e55443e24193d2dcdb441936a13286e352cb23b09ad3c714c95c41f00b1b24b6",
+      "bytes": 4207
+    },
+    "scripts/03-linkage-mission-ptr-crosswalk.py": {
+      "sha256": "ed6ac2b5f105b3dc6a3ce9c43bcde276afbec6cb4d8bf5f7889440b3e5b7d7b0",
+      "bytes": 6749
+    },
+    "tests/03-linkage-native-writepath.test.mjs": {
+      "sha256": "35bdd6919b246a44bf0af43ae3b45ba8170981e490b67595b3c9388d9734b356",
+      "bytes": 9844
+    }
+  },
+  "privateSourceIncluded": false,
+  "privateSaveIncluded": false,
+  "nativeBinaryIncluded": false,
+  "copyrightedAssetsIncluded": false,
+  "frozenPriorGraphIncluded": false,
+  "frozenPriorGraphChanged": false,
+  "newRequiredEdges": 0,
+  "sourceZipSha256": "83580cee3e2effaee14780d921ba5621b1505774b6e0a349e8f08a61ec1c1a1a",
+  "validation": {
+    "newFocusedJsTests": "41 PASS, 0 FAIL",
+    "nativeOpcodeModels": "25 PASS",
+    "sourceMissionPptr": "171/171",
+    "integratedSourceBaseline": "216 PASS, 36 SKIP, 0 FAIL",
+    "integratedSourceCheck": "PASS",
+    "integratedSourceBuild": "PASS",
+    "tscDeclarations": "PASS",
+    "writerEnabled": false,
+    "pagesEnabled": false
+  },
+  "sourceZipSha256Role": "HISTORICAL_161_FILE_LINKAGE_INPUT_NOT_CURRENT_INTEGRATED_SOURCE",
+  "currentIntegratedSourceSha256": "EXTERNAL_FIXED_ZIP_MANIFEST_ONLY"
+}
