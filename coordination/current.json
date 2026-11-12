@@ -13,15 +13,15 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "FORMAL_READY_FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 06 scoped QA",
+      "next": "06_FORMAL_01_EXACT_RESTORE_REPAIR_SCOPED_QA; 04 structural research only; no V24 changes",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
         "acceptance": "Native producer/consumer, genuine offline exact diff, no invented IDs/unique data, REQUIRED/RELATED/UNKNOWN and denied cases; typed contract/tests; no activation.",
-        "next": "06 scoped new 7 paths independent QA; 03 target evidence ingestion after current task; 04 reuse research structural contract only, no unrestricted ownership activation; wait new specific safe reference/producer evidence or QA counterexample for further 01 work.",
+        "next": "06 QA exact 4 modified + 1 additive evidence path; existing 3 unchanged and 396 R2 base reuse; no V24 change",
         "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431",
         "executionScope": "Targeted Non-Recipe reference closure and exact native persistence; additive 01 contract/tests only; V24 frozen",
         "latestEvidence": {
@@ -40,7 +40,15 @@
           "task": "FORMAL_01_EXACT_RESTORE_RAW_TOKEN_REPAIR",
           "baseMain": "31595debd417feee593767ddde0802a7194fd5c5",
           "baseDeltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
-          "scope": "01 restore verifier trusted donor raw digest; regression only; V24 frozen"
+          "scope": "01 restore verifier trusted donor raw digest; regression only; V24 frozen",
+          "status": "LOCAL_SCOPED_PASS_QA_PENDING",
+          "artifact": "HKIA_01_FORMAL_OWNERSHIP_R2_RESTORE_REPAIR_20261112.zip",
+          "deltaSha256": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
+          "manifestSha256": "5a98e6c46705c6513e6f723f0e26b0921ce7c002ae06198273ce0d8c1cef0c30",
+          "changes": "4 MOD 1 ADD against prior 7; 8 ADD against R2; all 396 R2 entries byte identical",
+          "verified": "Old genuine Dunebug raw-token counterexample reproduced; new 26 focused PASS, 2 genuine targets normal restore + raw-token-width rejection; source unchanged; Library readback exact CRC",
+          "unverified": "Independent scoped repair QA; reference closure; game load/resave; no product authorization",
+          "next": "06 QA exact 4 modified + 1 additive evidence path; existing 3 unchanged and 396 R2 base reuse; no V24 change"
         }
       }
     },
