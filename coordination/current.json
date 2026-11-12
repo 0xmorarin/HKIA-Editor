@@ -152,11 +152,11 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "START_NOW_PARALLEL 06 V17 changed 35 paths, 04 real native Writer capability, 05 V16 accepted preview and credits, 01 actual acquisition, 00 same product Pages build; no repeat accepted scope",
-    "04 fixed real output Source and operation contract -> 06 independent scoped QA; 05 independent UI work proceeds now",
-    "05 connect only accepted output capabilities; 00 serial integrate fixed beta source and build 4076 images/740 fallback; no private fixtures",
-    "06 final integrated real browser E2E/actual WebCrypto/ESM/Worker/real save export-reopen/privacy; only irreducible game acceptance condition escalates to device",
-    "00 deploy owner-approved functional beta when gates pass; no automatic release promotion; formal separate approval"
+    "04 real native Writer and conditional Native Load gate; 05 accepted UI/credits; 06 V17 and 00 preparation delta; 01 actual acquisition independent scopes",
+    "00 use fixed 6-path Pages preparation delta; no redundant image extraction or separate demo; verify final closure after 04/05 changes",
+    "06 independent actual real export and actual browser UI/Worker/WebCrypto; current HTTP environment blocked, normal browser environment required",
+    "00 rebuild accepted functional beta with real Writer and exact public artifact manifest, set approvedArtifact only after gate pass, activate manual deployment; no deploy of current OFF artifact",
+    "formal promotion separate owner approval"
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -489,17 +489,16 @@
       }
     ],
     "parallelSafeNow": [
-      "06_V17_35_PATHS",
       "04_BETA_REAL_OUTPUT_CAPABILITIES",
       "05_V16_ACCEPTED_PREVIEW_UI_CREDITS_AND_OUTPUT_UI_CONTRACT",
-      "01_COLLECTION_ACQUIRED_STATE",
-      "00_FULL_FIDELITY_PAGES_BUILD_PREPARATION"
+      "06_V17_35_PATHS_PLUS_00_SIX_PATH_PREP",
+      "01_COLLECTION_ACQUIRED_STATE"
     ],
     "serialAfter": [
-      "00_ACCEPT_V17",
+      "00_ACCEPT_V17_AND_PREP_DELTA",
       "04_PROVEN_REAL_OUTPUT_SCOPED_QA",
       "05_CONNECT_ACCEPTED_OUTPUT_CAPABILITIES",
-      "00_INTEGRATE_FIXED_BETA_ARTIFACT",
+      "00_REBUILD_FIXED_BETA_ARTIFACT",
       "06_BETA_REAL_BROWSER_E2E_AND_PRIVACY",
       "00_OWNER_APPROVED_FUNCTIONAL_BETA_DEPLOY",
       "00_FORMAL_PROMOTION_SEPARATE_APPROVAL"
@@ -645,11 +644,12 @@
       ],
       "strictWriterAllowed": false
     },
-    "publicValidation": "OWNER_APPROVED_FUNCTIONAL_BETA_REAL_WRITER_WITH_IMAGES_CREDITS_NOT_DEPLOYED"
+    "publicValidation": "OWNER_APPROVED_FUNCTIONAL_BETA_REAL_WRITER_WITH_IMAGES_CREDITS_NOT_DEPLOYED",
+    "pagesPreparation": "FIXED_342_SOURCE_4136_ARTIFACT_LOCAL_PASS_NOT_DEPLOYED"
   },
   "publicValidation": {
     "ownerDecision": "2026-11-12_FUNCTIONAL_BETA_SAME_RELEASE_IMPLEMENTATION",
-    "status": "FUNCTIONAL_BETA_PREPARATION_NOT_DEPLOYED",
+    "status": "LOCAL_PAGES_ARTIFACT_PREPARED_WRITER_AND_QA_DEPENDENCIES_PENDING",
     "sameReleaseImplementation": true,
     "sourceBaselineSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
     "acceptedBaseSha256": "bd4e445b1ed015f84abdf23a242f7eb4684a086964e23398eff1bc28a6b00441",
@@ -657,15 +657,15 @@
     "conditionalFallbackRows": 740,
     "externalImagesUnknown": 18,
     "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED; NO_RIGHTSHOLDER_PERMISSION_OR_LEGAL_CLEARANCE; OFFICIAL_SANRIO_POLICY_REVIEWED",
-    "sourcePublicSafeBuild": "PENDING",
+    "sourcePublicSafeBuild": "LOCAL_DISTRIBUTION_PREPARATION_PASS_NOT_BETA_ACCEPTED",
     "imagePipeline": "SAME_PRIVATE_PREVIEW_AND_PUBLIC_RELEASE_BUILD",
     "writer": "REQUIRED_PROVEN_REAL_SAVE_OPERATIONS; ACTUAL_FLAG_OFF_PENDING_QA",
     "privateSaveAndGameBinaries": "PROHIBITED",
     "publicUrlPlanned": "https://0xmorarin.github.io/HKIA-Editor/",
     "activationCondition": "CREDITS_AND_PUBLIC_ARTIFACT_PRIVACY; BOTH_DOMAINS_REAL_NATIVE_EDIT_AND_INDEPENDENT_REOPEN_OUTPUT; OPERATION_SCOPED_QA; ACTUAL_BROWSER_E2E; ROLLBACK_READY",
-    "next": "04_REAL_OUTPUT_CAPABILITIES_AND_01_COLLECTION_STATE; 05_ACCEPTED_PREVIEW_UI_AND_CREDITS; 06_V17_QA; 00_SAME_PRODUCT_PAGES_BUILD_IN_PARALLEL_THEN_BETA_ACCEPTANCE",
+    "next": "INTEGRATE_00_PREPARATION_DELTA_WITH_NEXT_04_05_SOURCE; QA_WRITER_AND_ACTUAL_BROWSER; FINAL_ARTIFACT_PIN_AND_APPROVE",
     "ownerImageApproval": "EXPLICIT_2026_11_12_VALIDATION_AND_FORMAL_RELEASE_WITH_CREDITS",
-    "rightsNotice": "REQUIRED_VISIBLE_EN_JA_FOOTER_OR_ABOUT; NOT_YET_VERIFIED_IN_PRODUCT",
+    "rightsNotice": "EN_JA_GENERATED_FOOTER_STATIC_PRESENT_BROWSER_UNVERIFIED",
     "betaScope": {
       "realSaveInput": true,
       "realEdit": true,
@@ -684,5 +684,64 @@
       "unprovenOperations": "FAIL_CLOSED_ONLY_AFFECTED_SCOPE",
       "privateFixtures": "NEVER_PUBLISH"
     }
+  },
+  "pagesPreparation": {
+    "status": "LOCAL_FIXED_DISTRIBUTION_PREPARATION_PASS_NOT_BETA_ACCEPTED",
+    "baseSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
+    "source": {
+      "file": "HKIA_CTRL_V17_Pages_Preparation_Source_20261112.zip",
+      "sha256": "d3e7a5d75bf08c76e543440a850de516f50e0b1d9fa62e8bff5fcb2ac90aeeef",
+      "entries": 342,
+      "modified": 1,
+      "added": 5,
+      "unchanged": 336
+    },
+    "delta": {
+      "file": "HKIA_CTRL_V17_Pages_Preparation_Delta_20261112.zip",
+      "sha256": "b1bcefe5ca4ed5b6ce534d704aa97168f3c4b063e3ea7a62112b3ad8ac45f082",
+      "entries": 6
+    },
+    "manifest": {
+      "file": "HKIA_CTRL_V17_Pages_Preparation_Manifest_20261112.json",
+      "sha256": "6ffd6a7470aad52cec1a681e9c0edb58e5ecd563b8bb08cafd48a4caf769d11c"
+    },
+    "artifact": {
+      "entries": 4136,
+      "bytes": 146071703,
+      "manifest": "HKIA_Beta_Artifact_V17_Manifest.json",
+      "manifestSha256": "d6e0c75bf99cd3df3990c4a29968b531ccf398dcc6a43456768c9376dd433d0b",
+      "archiveSha256": "c9e21b550df1e67599c42e0ac92491ae3cca1481a53347c83d29b94dd41196aa",
+      "archiveBytes": 119336598,
+      "webp": 4076,
+      "fallback": 740,
+      "closureFiles": 46,
+      "addedDistributionDependencies": 27,
+      "credit": "EN_JA_GENERATED_FOOTER_STATIC_PRESENT",
+      "privacy": "EXPLICIT_PATH_ALLOWLIST_AND_PRIVATE_REFERENCE_SCAN_PASS",
+      "reproducibleManifest": "BYTE_IDENTICAL_2_BUILDS",
+      "tamperedManifest": "REJECTED",
+      "state": "LOCAL_CANDIDATE_NOT_RELEASE_AUTHORIZED",
+      "writer": "OFF_PENDING_REAL_OUTPUT_ACCEPTANCE"
+    },
+    "checks": {
+      "node": 657,
+      "skip": 36,
+      "fail": 0,
+      "realDistributionNoop": 2,
+      "realDistributionPreview": 4,
+      "realOutputDenied": 4,
+      "sourceUnchanged": 2,
+      "distributionImport": "PASS",
+      "mediaRegistration": "PASS",
+      "httpSubpathStatic": "PASS_7_GETS",
+      "browserHttp": "BLOCKED_ENVIRONMENT",
+      "browserWebCrypto": "UNVERIFIED",
+      "browserModuleWorker": "UNVERIFIED",
+      "publicDeployment": false
+    },
+    "workflow": "DISABLED_MANUAL_ONLY_PINNED_APPROVED_ARTIFACT_GATE",
+    "libraryPath": "/HKIA Editor Private/",
+    "rollback": "PRIOR_ACCEPTED_ARTIFACT_OR_STOP_PAGES; NO_UNACCEPTED_ARTIFACT",
+    "next": "QA_00_SIX_PATH_PREP_AND_FINAL_REBUILD_ON_ACCEPTED_REAL_WRITER_UI; DO_NOT_RELABEL_OFF_ARTIFACT"
   }
 }
