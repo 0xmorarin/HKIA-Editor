@@ -2824,12 +2824,12 @@
       "note": "Latest concurrent identifiers replaced with verified filenames. Historical Git not scrubbed."
     },
     "formalIntegration": {
-      "task": "V25_FORMAL_ACCEPTED_R2_SERIAL_INTEGRATION",
-      "status": "DONE_PRIVATE_INTEGRATION_SCOPED_INPUTS_FINAL_QA_READY",
+      "task": "V26_FORMAL_ACCEPTED_FOLLOWUP_INTEGRATION",
+      "status": "IN_FLIGHT",
       "owner": "00 CTRL",
-      "baseMain": "31595debd417feee593767ddde0802a7194fd5c5",
-      "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-      "scope": "02/03 research 18 ADD, 04 accepted 12 paths, 05 accepted 7 paths; exclude 01 TRUE_RED and new unaccepted followups; preserve V24 and R2 OFF",
+      "baseMain": "737d0c8e32d0b22a833f982f19501e7166d8fa5f",
+      "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+      "scope": "01 repaired 8 ADD,03 7 ADD,04 7 MOD 4 ADD,05 2 MOD 2 ADD; V25 accepted, V24 frozen",
       "dependency": "FORMAL_01_SCOPED_TRUE_RED_02_03_04_05_AND_00_CLOSURE_SCOPED_PASS",
       "candidate": {
         "label": "V25_FORMAL_OFF_SCOPED_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
@@ -2909,7 +2909,8 @@
       "handoff": {
         "to": "06 QA",
         "scope": "V25 exact 37-path aggregate and affected product/API/UI/graph; reuse already accepted separate scopes, no blanket re-QA. Confirm 420 entries, 835/36, 8 dist changes. Then independent 01 repair, 03 FORMAL49, 04 batch, 05 single-family UI separately on exact upstream base; no V24 change."
-      }
+      },
+      "previousTask": "V25_FORMAL_ACCEPTED_R2_SERIAL_INTEGRATION"
     }
   },
   "formalRelease": {
