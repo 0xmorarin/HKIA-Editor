@@ -544,7 +544,8 @@
       "00_SEPARATE_UI_INTEGRATION"
     ],
     "executionMode": "AUTONOMOUS_STREAM_DIRECT_HANDOFF",
-    "currentWorkOrderUnchanged": true
+    "currentWorkOrderUnchanged": true,
+    "executionDecision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   },
   "ownerCheckpoint20261112": {
     "status": "V18_LOCAL_INTEGRATED_AND_ARCHITECTURE_OWNER_APPROVED",
@@ -852,8 +853,8 @@
     "bootstrapFile": "HKIA_Rust_Core_Bootstrap_20261112.zip"
   },
   "executionPolicy": {
-    "decision": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112",
-    "status": "ACTIVE",
+    "decision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112",
+    "status": "OWNER_APPROVED_ACTIVE",
     "model": "CONTINUOUS_EXECUTION_DIRECT_STREAM_HANDOFF",
     "ownerInput": "STREAM_ID_AND_START_OR_CONTINUE_ONLY",
     "startup": [
@@ -895,11 +896,12 @@
       "NEXT_AFTER_DEP",
       "HANDOFF"
     ],
-    "ownerApproval": "UNCHANGED; NO_DEPLOY_LIVE_FLAG_PAID_SERVICE_COMMUNITY_PROD_DB_EXTERNAL_SAVE_TRANSFER_OR_WAND_PROD_CHANGE_WITHOUT_AUTHORIZATION",
+    "ownerApproval": "UNCHANGED; actual deployment, production flags, paid services, production community DB and Wand production changes require explicit authorization; raw save transfer forbidden",
     "templates": {
       "start": "HKIA Editor【STREAM】START_NOW",
       "continue": "HKIA Editor【STREAM】CONTINUE",
       "handover": "HKIA Editor【STREAM】会話引継ぎ。最新正本から担当状態を再構成し、自律実行を再開。既受入範囲再調査禁止。次READYを実行し直接HANDOFF。"
-    }
+    },
+    "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
   }
 }
