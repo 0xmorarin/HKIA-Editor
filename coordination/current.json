@@ -947,15 +947,15 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_01_REPAIR_FORMAL_FOLLOWUPS_V25",
+      "status": "FORMAL_01_RESTORE_REPAIR_03_FORMAL49_04_BATCH_05_UI_V25_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "01_SCOPED_EXACT_RESTORE_REPAIR; 05_FORMAL_3_TARGET_FAMILY_REVOKE_UI; 00_SERIAL_ACCEPTED_FORMAL_INTEGRATION_AND_V24_BROWSER_ENV; 06_NEW_FIXED_DELTA_OR_AUTHORIZED_BROWSER_ONLY; 07_WAIT_ENV",
+      "next": "00_SERIAL_ACCEPTED_FORMAL_SUCCESSOR_AND_V24_BROWSER_ENV; 04_FORMAL49_EXACT20_PRIVATE_WRITER; 05_FORMAL_FAMILY_BATCH_UI; 03_DUNEBUG_COMIC_REFERENCE_CLOSURE; 02_MANUAL_UNPERSISTED_PRODUCER; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER; 07_WAIT_ENV",
       "execution": {
         "task": "FORMAL_01_EXACT_RESTORE_REPAIR_AND_NEW_READY",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "a21458bee72206e28143f3e76c0157f3ba1f2381",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "01 4MOD1ADD repair; 03 formal49 7ADD; 04 batch 11; 05 single-family UI 4; V25 accepted 37 paths integration; V24 frozen",
@@ -1573,7 +1573,138 @@
             "condition": "01 repair only; 05 exact 3 formal family revoke UI; 00 accept public closure staging and serial integrate accepted formal inputs without V24 change; browser only after authorized environment"
           },
           "rollback": "Formal each delta to R2 OFF; V24 frozen unchanged"
-        }
+        },
+        "verdict": "SCOPED_PASS_01_EXACT_RESTORE_REPAIR_03_FORMAL49_04_BATCH_05_UI_V25_COMBINED",
+        "verified": {
+          "focusedAndIndependentNode": 103,
+          "collection01": {
+            "deltaSha256": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
+            "manifestSha256": "5a98e6c46705c6513e6f723f0e26b0921ce7c002ae06198273ce0d8c1cef0c30",
+            "verdict": "SCOPED_PASS_RESEARCH_EXACT_RESTORE_RAW_TOKEN_TRUE_RED_RESOLVED",
+            "scope": "4MOD1ADD against old delta, 8ADD on R2; 396 unchanged",
+            "focused": 26,
+            "independent": 28,
+            "oldRepro": "ACCEPTED_OLD_REJECTED_FIXED",
+            "genuinePositive": 2,
+            "genuineNegative": 2,
+            "idWidthBoundaries": [
+              128,
+              256,
+              65536,
+              2147483647
+            ],
+            "productAuthorized": false,
+            "originalUnchanged": true
+          },
+          "link03": {
+            "deltaSha256": "dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8",
+            "verdict": "SCOPED_PASS_CONDITIONAL_RESEARCH_ONLY",
+            "focused": 12,
+            "genuine301Targets": 49,
+            "groups": 13,
+            "completeCounterMatches": 14,
+            "revokeCounterMismatch": 35,
+            "rootOmission": 28,
+            "noDefinedReward": 20,
+            "aggregateExact": true
+          },
+          "core04": {
+            "sha256": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
+            "verdict": "SCOPED_PASS_DISTINCT_2_3_V301_FAMILY_REVOKE",
+            "scope": "7MOD4ADD",
+            "focused": 4,
+            "genuineOutputs": 2,
+            "fields": [
+              18,
+              26
+            ],
+            "pythonSemanticReparse": 2,
+            "nonTargetRawFrames": 9,
+            "rollback": 6,
+            "negativeAssertions": 14,
+            "sequentialEquivalence": 2,
+            "offDenied": 2,
+            "wrongVersionDenied": 1
+          },
+          "ui05": {
+            "sha256": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
+            "verdict": "SCOPED_PASS_SINGLE_FAMILY_UI_INLINE",
+            "scope": "2MOD2ADD",
+            "focused": 5,
+            "inlineChromium": 5,
+            "viewports": [
+              320,
+              375,
+              1280
+            ],
+            "genuine301IsolatedDownloadReimport": 1,
+            "wrongVersion300Denied": true
+          },
+          "v25": {
+            "sha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+            "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+            "sourceEntries": 420,
+            "exactAcceptedPaths": 37,
+            "unchanged": 383,
+            "affectedFocused": 28,
+            "build": "PASS",
+            "check": "PASS",
+            "distEntries": 4144,
+            "distChanged": 8,
+            "distUnchanged": 4136,
+            "webp": 4076,
+            "modules": 53,
+            "artifactManifestSha256": "a3ff4300d5c7ced6ec12bea82a0d80e23c89358f082ae510c118d039c224abfe",
+            "independentRebuildAllHashes": "PASS"
+          },
+          "browserKit": {
+            "file": "HKIA_06_V24_BrowserKit_CoverageExtension_20261112.zip",
+            "sha256": "d436cc4cdcec83dc2d744b5eeb428c6113cfd0dc6775ddc459ec8d8fa99d569c",
+            "status": "PREPARED_REAL_BROWSER_UNEXECUTED_WAIT_ENV",
+            "entries": 7,
+            "targetSelectionBothGenuine": "PASS",
+            "v300AddFromWitnessedRemovedCopy": "PASS",
+            "nodeHelperRealOutputs": 5,
+            "pythonSynthetic": 8,
+            "syntax": "PASS",
+            "actualBrowser": false
+          }
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_REPORT_20261112.md",
+            "sha256": "8cb240eece127e79886f99d39075e8ef2f305815e00623adb80cf8df6dc64ce2"
+          },
+          "zip": {
+            "file": "HKIA_06_FORMAL_REPAIR_FOLLOWUP_EVIDENCE_20261112.zip",
+            "sha256": "7a4231f800dba22acf70a727276a9f07931eed552faafad7c059f02130cf57d9",
+            "entries": 33
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_FORMAL_REPAIR_FOLLOWUP_20261112.md",
+            "sha256": "ed7cfac388894a9fbcb5ca5546a7dcdd6b7e7de1024d1f6d3689270676769e04"
+          },
+          "privateLibraryReadback": "ALL_4_BYTE_EXACT"
+        },
+        "remaining": [
+          "01 specific reference closure and general acquisition, game load/resave unverified; no product permission",
+          "00 serial integrate newly accepted 01/03/04/05 on formal V25 successor preserving exact research pins; V24 frozen",
+          "04 exact 20 no-defined-reward v301 Writer proof; 05 family batch UI; 03 concrete Dunebug/Comic reference closure; 02 unpersisted Manual member producer",
+          "V24 real HTTP/HTTPS native WebCrypto Module Worker authorized environment; extended kit actual selectors/interception/TLS unexecuted",
+          "Native authentication/game load/resave/reboot/reward replay; Owner approval; 07 independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "04 SAVE CORE",
+            "05 WEB",
+            "03 LINKAGE",
+            "02 ACHIEVEMENT"
+          ],
+          "condition": "New accepted scoped inputs can integrate independently; 04 exact 20 target proof and 05 batch UI now READY; 03/02 targeted tasks already READY; 06 final browser after authorized env and new fixed deltas only",
+          "v24": "FROZEN_WAIT_ENV"
+        },
+        "rollback": "R2 OFF; 01 remove 8 additive paths, old verifier not accepted; 04 revert exact 11 paths to single-family; 05 revert four paths to accepted composite; V25 revert 37; V24 untouched"
       }
     },
     "00_MEDIA": {
