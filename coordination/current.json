@@ -750,10 +750,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW parallel 05 Recipe receipt UI on fixed V21; 04 Native auth/load and exact FixBrokenBouldersFromMp_ENG_4777 / LogDuplicateInventoryItems bodies; 03 exact MigrateAchievementCounters causal effects only. No overlap/repeat. 06 final combined QA after new UI/fixed source; do not duplicate already accepted scopes.",
-    "After 05 new fixed receipt UI and targeted native findings, 06 independent scoped QA; 00 serial integrate accepted deltas. Final fixed Beta actual HTTP/HTTPS ESM WebCrypto Module Worker E2E in authorized environment, no inline substitute.",
-    "07 WAIT_ENV Rust local kit; independent JS Beta path.",
-    "Owner explicit approval for actual deploy/live flags, rollback ready. Svelte migration separate after JS Beta UI fixed."
+    "NOW 06 QA: independently verify exact 05 receipt UI 4 paths (P0), 03 AlwaysRun causal 10 ADD, 04 Native load boundary 3 ADD. Separate scopes, reuse V20/21 accepted evidence, compare fixed base and no duplicate full QA. Do not re-launch completed 03/04/05 source work absent new causal evidence or TRUE_RED.",
+    "After independent scoped PASS, 00 CTRL serial integrate only accepted deltas onto V21, verify exact manifests/unchanged entries and combined distribution; no product merge/deploy/flag.",
+    "06 final fixed Beta real HTTP/HTTPS ESM WebCrypto Module Worker after integrated source and authorized execution environment; no inline substitute. 07 WAIT_ENV private Rust toolchain + real v300/301 parity independent of JS Beta.",
+    "Owner explicit approval for actual deploy/live flags; rollback ready. Svelte migration after JS Beta UI fixed; no repeat media extraction."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1542,14 +1542,15 @@
       "linkage": "03: exact resolved MigrateAchievementCounters AlwaysRun body/condition, only impact on already-supported Achievement progress/timestamp and Collection/Recipe derived counters; prove REQUIRED/RELATED/INDEPENDENT/UNKNOWN, no blanket graph or 04 product edits. Direct to 04 with static anchors and scoped contract."
     },
     "nextReadyParallel": [
-      "05_RECIPE_RECEIPT_UI_V21",
-      "04_NATIVE_AUTH_LOAD_TWO_ALWAYSRUN_METHODS",
-      "03_MIGRATE_ACHIEVEMENT_COUNTERS_CAUSAL_ONLY"
+      "06_QA_05_RECEIPT_UI_4_PATHS",
+      "06_QA_03_ALWAYSRUN_CAUSAL_10_ADD",
+      "06_QA_04_NATIVE_LOAD_BOUNDARY_3_ADD"
     ],
     "nextAfterDep": [
+      "00_SERIAL_ACCEPTED_NEW_DELTA_AFTER_SCOPED_QA",
       "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_UI_AND_AUTHORIZED_ENV",
-      "00_SERIAL_ACCEPTED_NEW_DELTA_AND_RELEASE_GATE",
-      "07_VERIFIED_RUST_TOOLCHAIN"
+      "07_VERIFIED_RUST_TOOLCHAIN",
+      "03_04_05_ONLY_NEW_CAUSAL_EVIDENCE_OR_SCOPED_QA_TRUE_RED"
     ]
   }
 }
