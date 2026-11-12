@@ -736,15 +736,15 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_FORMAL_R2_AND_PUBLIC_SOURCE_CLOSURE",
+      "status": "FORMAL_01_RESTORE_TRUE_RED_02_03_04_05_00_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_AUTHORIZED_PRIVATE_BROWSER_ENV; 06_FINAL_REAL_BROWSER_V24_AFTER_DEP; 00_RELEASE_GATE_AND_OWNER_APPROVAL; 07_WAIT_ENV",
+      "next": "01_SCOPED_EXACT_RESTORE_REPAIR; 05_FORMAL_3_TARGET_FAMILY_REVOKE_UI; 00_SERIAL_ACCEPTED_FORMAL_INTEGRATION_AND_V24_BROWSER_ENV; 06_NEW_FIXED_DELTA_OR_AUTHORIZED_BROWSER_ONLY; 07_WAIT_ENV",
       "execution": {
         "task": "FORMAL_R2_01_02_03_04_05_AND_PUBLIC_SOURCE_CLOSURE",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Separate new formal 01/02/03 additive scopes; 04 12 paths; 05 7 paths; 00 public source closure 178 paths. V24 frozen, browser WAIT_ENV.",
@@ -1226,7 +1226,128 @@
             "nextAfter": "06_REAL_BROWSER_FINAL_V24_AFTER_AUTHORIZED_ENV; 00_RELEASE_GATE_AFTER_REQUIRED_EVIDENCE"
           },
           "rollback": "V23 R2 exact OFF source and accepted OFF artifact"
-        }
+        },
+        "verdict": "FORMAL_01_SCOPED_TRUE_RED_02_03_04_05_AND_00_CLOSURE_SCOPED_PASS",
+        "verified": {
+          "focused": 64,
+          "closure": {
+            "sha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
+            "verdict": "SCOPED_PASS_PRIVATE_STAGING_ONLY",
+            "entries": 178,
+            "projected": 13,
+            "unchanged": 165,
+            "removedProvenanceKeys": 15,
+            "changedJson": 10,
+            "tests": 794,
+            "skip": 36,
+            "fail": 0,
+            "workflowGateCases": 6,
+            "distExact": 4144,
+            "modules": 53,
+            "webp": 4076
+          },
+          "collection01": {
+            "deltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+            "verdict": "SCOPED_TRUE_RED_EXACT_RESTORE_RAW_TOKEN_ONLY",
+            "focused": 22,
+            "realStructuralTargets": 2,
+            "nativeAnchors": 18,
+            "recipeRowsBothVersions": 282
+          },
+          "achievement02": {
+            "deltaSha256": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+            "verdict": "SCOPED_PASS_RESEARCH_ONLY",
+            "focused": 14,
+            "realSlotReparse": 98,
+            "accountClone": 56,
+            "sealedPairs": 6,
+            "staleCAS": 98,
+            "wrongPreimage": 98
+          },
+          "linkage03": {
+            "deltaSha256": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+            "verdict": "SCOPED_PASS_ADVISORY_REWARD_REPLAY_UNKNOWN",
+            "focused": 17,
+            "nativeAnchors": 56,
+            "metadataSlots": 6,
+            "methodBindings": 17,
+            "realForwardInverse": 3,
+            "newUnconditionalRequired": 0
+          },
+          "core04": {
+            "sha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+            "verdict": "SCOPED_PASS_FORMAL_THREE_V301_FAMILY_REVOKES_ONLY",
+            "focused": 5,
+            "realOutput": 3,
+            "verifiedFields": 30,
+            "independentPythonSemanticReparse": 3,
+            "nonTargetRawFramesPerOutput": 9,
+            "rollback": 9,
+            "planNegatives": 17,
+            "offDenials": 5,
+            "betaOnlyDenials": 5,
+            "wrongVersionDenied": 1
+          },
+          "ui05": {
+            "sha256": "b190173477ff44f899997ec8ce37d07b187afd52498b4db80804f4ca3b8c58d8",
+            "verdict": "SCOPED_PASS_FORMAL_SELECTION_PREVIEW_INLINE",
+            "focused": 6,
+            "chromiumInline": [
+              320,
+              375,
+              1280
+            ],
+            "genuineVersions": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "maxPickerRows": 40,
+            "externalRequests": 0,
+            "downloads": 0
+          }
+        },
+        "trueRed": {
+          "owner": "01 COLLECTION",
+          "path": "scripts/research/01-formal-ownership-contract.mjs",
+          "method": "verifyExactResearchRestore",
+          "expected": "exact trusted donor raw bytes except new document ID token",
+          "observed": "genuine v301 restore with additional zero UniqueId token-width change accepted; logical row same, typed reparse succeeds",
+          "cause": "issued restore plan does not bind expected new-document bytes/hash; verifier compares caller snapshot new row hash to its own document hash plus logical fields",
+          "impact": "research contract only; no product authorization; V24 beta unaffected",
+          "repair": "bind expected raw donor restoration digest computed from trusted donor bytes with only ID span replaced; validate exact candidate digest and existing CAS; regression old adversary and normal delete/restore"
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_FORMAL_R2_SCOPED_REPORT_20261112.md",
+            "sha256": "bf465f474b7c5ebed80565071a6f500d87d756b5a221e62720ad34a187538557"
+          },
+          "zip": {
+            "file": "HKIA_06_FORMAL_R2_INDEPENDENT_EVIDENCE_20261112.zip",
+            "sha256": "e49b1cada129386e634568ee0253824d6af5d98a95123896e9c1e47b70fc5fe6",
+            "entries": 28
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_FORMAL_R2_20261112.md",
+            "sha256": "6db643bf932d242f13d5962fcbe8069487fcea721d6900be20fcd6feafc7fc3d"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT"
+        },
+        "remaining": [
+          "01 scoped exact restore repair; 06 only new fixed delta",
+          "00 serial integrate accepted formal scopes independently; V24 frozen",
+          "05 formal family revoke UI after accepted exact 04 contract",
+          "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; game auth/load/resave/reboot unobserved; Owner deployment approval",
+          "07 independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": [
+            "01 COLLECTION",
+            "05 WEB",
+            "00 CTRL"
+          ],
+          "condition": "01 repair only; 05 exact 3 formal family revoke UI; 00 accept public closure staging and serial integrate accepted formal inputs without V24 change; browser only after authorized environment"
+        },
+        "rollback": "Formal each delta to R2 OFF; V24 frozen unchanged"
       }
     },
     "00_MEDIA": {
