@@ -324,7 +324,8 @@
         "nativeAuthentication": "UNKNOWN",
         "gameAccepted": false,
         "flagOnlyInIsolatedCopy": true,
-        "aggregateSha256": "cdb147bed87bea8db959cd34868d5786e96eb88b41cd796cc3a0ccbc745eeba8"
+        "aggregateSha256": "cdb147bed87bea8db959cd34868d5786e96eb88b41cd796cc3a0ccbc745eeba8",
+        "aggregateFile": "HKIA_CTRL_V18_Private_Output_Aggregate_20261112.json"
       },
       "distribution": {
         "entries": 4141,
@@ -526,15 +527,22 @@
       "05_ACCEPTED_OUTPUT_UI",
       "00_FIXED_BETA_BUILD",
       "06_FINAL_BROWSER_QA",
-      "00_OWNER_BETA_DEPLOY_GATE",
-      "07_RUST_READER_PARITY",
-      "07_RUST_WRITER_PARITY",
-      "06_WASM_BROWSER_BUDGET_QA",
-      "00_RUST_CUTOVER",
-      "05_SVELTE_TS_MIGRATION_INDEPENDENT"
+      "00_OWNER_BETA_DEPLOY_GATE"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED",
-    "externalMedia": "WAIT_OWNER_LOCAL_BYTES_OR_AUTHORIZED_SOURCE; NO_REPEATED_BLOCKED_FETCH"
+    "externalMedia": "WAIT_OWNER_LOCAL_BYTES_OR_AUTHORIZED_SOURCE; NO_REPEATED_BLOCKED_FETCH",
+    "rustIndependentCriticalPath": [
+      "07_NATIVE_ENVELOPE_AND_TYPED_READER_PARITY",
+      "07_TRANSACTION_WRITER_PARITY",
+      "06_RUST_WASM_BROWSER_AND_BUDGET_QA",
+      "00_RUST_CUTOVER"
+    ],
+    "svelteIndependentCriticalPath": [
+      "05_JS_BETA_UI_FIXED",
+      "05_ISOLATED_SVELTE_TS_ADAPTER_UI_PARITY",
+      "06_SCOPED_UI_QA",
+      "00_SEPARATE_UI_INTEGRATION"
+    ]
   },
   "ownerCheckpoint20261112": {
     "status": "V18_LOCAL_INTEGRATED_AND_ARCHITECTURE_OWNER_APPROVED",
@@ -722,29 +730,24 @@
     "status": "V18_FULL_MEDIA_BUILD_LOCAL_PASS_WRITER_OFF_QA_PENDING",
     "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
     "source": {
-      "file": "HKIA_CTRL_V17_Pages_Preparation_Source_20261112.zip",
-      "sha256": "d3e7a5d75bf08c76e543440a850de516f50e0b1d9fa62e8bff5fcb2ac90aeeef",
-      "entries": 342,
-      "modified": 1,
-      "added": 5,
-      "unchanged": 336
+      "file": "HKIA_CTRL_Integrated_Candidate_V18_20261112.zip",
+      "sha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+      "entries": 363
     },
     "delta": {
-      "file": "HKIA_CTRL_V17_Pages_Preparation_Delta_20261112.zip",
-      "sha256": "b1bcefe5ca4ed5b6ce534d704aa97168f3c4b063e3ea7a62112b3ad8ac45f082",
-      "entries": 6
+      "file": "HKIA_CTRL_V17_to_V18_Delta_20261112.zip",
+      "sha256": "be504c736e274df23fb8022b436c28f0f60364224f4a53b0e9e38c0aa957146e",
+      "entries": 42
     },
     "manifest": {
-      "file": "HKIA_CTRL_V17_Pages_Preparation_Manifest_20261112.json",
-      "sha256": "6ffd6a7470aad52cec1a681e9c0edb58e5ecd563b8bb08cafd48a4caf769d11c"
+      "file": "HKIA_CTRL_V18_Manifest_20261112.json",
+      "sha256": "3b301f4f2fd3a8af8742c73c1859d89a77f2760ddd748d8ecf264e9ba8078ad0"
     },
     "artifact": {
       "entries": 4141,
       "bytes": 146119177,
       "manifest": "hkia-v18-dist-manifest.json",
       "manifestSha256": "5d1bcded262e2dfaa35415ec519f42d8083c76a8ed19fcd0b0cb867bbc1dd6ad",
-      "archiveSha256": "c9e21b550df1e67599c42e0ac92491ae3cca1481a53347c83d29b94dd41196aa",
-      "archiveBytes": 119336598,
       "webp": 4076,
       "fallback": 740,
       "closureFiles": 50,
@@ -754,19 +757,17 @@
       "reproducibleManifest": "BYTE_IDENTICAL_2_BUILDS",
       "tamperedManifest": "REJECTED",
       "state": "LOCAL_CANDIDATE_NOT_RELEASE_AUTHORIZED",
-      "writer": "OFF_PENDING_REAL_OUTPUT_ACCEPTANCE"
+      "writer": "OFF_PENDING_REAL_OUTPUT_ACCEPTANCE",
+      "archiveState": "V18_DIRECTORY_BUILD_AND_MANIFEST_ONLY_NO_NEW_ARCHIVE"
     },
     "checks": {
-      "node": 657,
+      "node": 698,
       "skip": 36,
       "fail": 0,
-      "realDistributionNoop": 2,
-      "realDistributionPreview": 4,
-      "realOutputDenied": 4,
-      "sourceUnchanged": 2,
-      "distributionImport": "PASS",
-      "mediaRegistration": "PASS",
-      "httpSubpathStatic": "PASS_7_GETS",
+      "realIsolatedWriterOutput": 14,
+      "realWriterProductionFlag": "OFF",
+      "allFileHashVerified": true,
+      "fullMediaBuild": "PASS",
       "browserHttp": "BLOCKED_ENVIRONMENT",
       "browserWebCrypto": "UNVERIFIED",
       "browserModuleWorker": "UNVERIFIED",
@@ -775,7 +776,28 @@
     "workflow": "DISABLED_MANUAL_ONLY_PINNED_APPROVED_ARTIFACT_GATE",
     "libraryPath": "/HKIA Editor Private/",
     "rollback": "PRIOR_ACCEPTED_ARTIFACT_OR_STOP_PAGES; NO_UNACCEPTED_ARTIFACT",
-    "next": "FINAL_REBUILD_AFTER_04_05_ACCEPTED_OUTPUT; QA_ACTUAL_BROWSER; DEPLOY_ONLY_SEPARATE_APPROVAL_BOUNDARY"
+    "next": "FINAL_REBUILD_AFTER_04_05_ACCEPTED_OUTPUT; QA_ACTUAL_BROWSER; DEPLOY_ONLY_SEPARATE_APPROVAL_BOUNDARY",
+    "previousPreparation": {
+      "source": {
+        "file": "HKIA_CTRL_V17_Pages_Preparation_Source_20261112.zip",
+        "sha256": "d3e7a5d75bf08c76e543440a850de516f50e0b1d9fa62e8bff5fcb2ac90aeeef",
+        "entries": 342,
+        "modified": 1,
+        "added": 5,
+        "unchanged": 336
+      },
+      "delta": {
+        "file": "HKIA_CTRL_V17_Pages_Preparation_Delta_20261112.zip",
+        "sha256": "b1bcefe5ca4ed5b6ce534d704aa97168f3c4b063e3ea7a62112b3ad8ac45f082",
+        "entries": 6
+      },
+      "manifest": {
+        "file": "HKIA_CTRL_V17_Pages_Preparation_Manifest_20261112.json",
+        "sha256": "6ffd6a7470aad52cec1a681e9c0edb58e5ecd563b8bb08cafd48a4caf769d11c"
+      },
+      "archiveSha256": "c9e21b550df1e67599c42e0ac92491ae3cca1481a53347c83d29b94dd41196aa",
+      "archiveBytes": 119336598
+    }
   },
   "architecture": {
     "ownerDecision": "OWNER_ARCHITECTURE_DECISION_20261112",
@@ -821,6 +843,10 @@
       "logicalNodes": 2000000,
       "depth": 80
     },
-    "approvalBoundary": "NO_DEPLOY_LIVE_FLAGS_COMMUNITY_PROD_DB_SERVICE_CONTRACT_WAND_PRODUCTION_CHANGE"
+    "approvalBoundary": "NO_DEPLOY_LIVE_FLAGS_COMMUNITY_PROD_DB_SERVICE_CONTRACT_WAND_PRODUCTION_CHANGE",
+    "repoMainProtection": "API_REPORTED_FALSE_ON_BASE_892eb414",
+    "driveHandoffTitle": "HKIA Editor — OWNER_ARCHITECTURE_DECISION_20261112 引継ぎ",
+    "driveHandoffStatus": "SAVED_EXISTING_COORDINATION_FOLDER_AND_READBACK_PASS",
+    "bootstrapFile": "HKIA_Rust_Core_Bootstrap_20261112.zip"
   }
 }
