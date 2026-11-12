@@ -674,12 +674,12 @@
       }
     },
     "05_WEB": {
-      "status": "FORMAL_SINGLE_FAMILY_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "FORMAL_DISTINCT_FAMILY_BATCH_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "IN_FLIGHT_FORMAL_FAMILY_BATCH_UI",
+      "next": "06_SCOPED_QA_FORMAL_DISTINCT_FAMILY_BATCH_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_OPERATIONS_AFTER_ACCEPTED_CONTRACT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -894,7 +894,7 @@
       },
       "formalTask": {
         "task": "FORMAL_DISTINCT_FAMILY_BATCH_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "05 WEB",
         "priority": "P0_FORMAL_RELEASE",
         "baseHead": "6324c95a1c195430125d9d916864bbb2fc59831a",
@@ -1050,7 +1050,61 @@
             "release": "V24_FROZEN_OFF",
             "note": "No new product source, no integration or activation; new 05 four paths and 04 batch eleven paths still awaiting independent QA."
           }
-        }
+        },
+        "fixedSourceSha256": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
+        "deltaSha256": "85c8122649c51a52b5ceb17205c6337ba2a1447e60fb836022fdbd6c2fb68466",
+        "manifestSha256": "51d3822bf4705e9a24c090f7894fcbaf3319889cd64eac47b15cd7a316ba4262",
+        "evidenceSha256": "30521fc2012afc15f932d131719b46001f26a4ef3a51901ded87fb0c022359ec",
+        "handoffSha256": "2c13e76e8ee74c6c855f5f5432bfbf06036001f3f7bbd1319b184c01201f4844",
+        "baseComposite": "V25 1381e203 + 04 accepted batch delta e7654f04 + 05 accepted single UI delta 5c4b3fe5; 426 exact preimage entries; local composite not official 00 integration",
+        "changedPaths": "2_MOD_2_ADD_0_DEL",
+        "artifacts": {
+          "source": "HKIA_WEB05_FormalFamilyBatchUI_V25_20261112_Source.zip",
+          "delta": "HKIA_WEB05_FormalFamilyBatchUI_V25_20261112_Delta.zip",
+          "manifest": "HKIA_WEB05_FormalFamilyBatchUI_V25_20261112_Manifest.json",
+          "evidence": "HKIA_WEB05_FormalFamilyBatchUI_V25_20261112_Evidence.zip",
+          "handoff": "HKIA_WEB05_FormalFamilyBatchUI_V25_20261112_HANDOFF.md"
+        },
+        "verified": {
+          "focused": 4,
+          "nodePass": 848,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "exactReplay": "428/428",
+          "chromeInline": [
+            320,
+            375,
+            1280
+          ],
+          "genuineVersion": "3.0.1",
+          "fieldCounts": [
+            18,
+            26
+          ],
+          "wrongVersion300Denied": true,
+          "realControllerOutputs": 2,
+          "actualAccountRootReimport": true,
+          "chromeIsolatedActualDownloadReimport": 1,
+          "originalUnchanged": true,
+          "externalRequests": 0,
+          "libraryReadbackAll5Sha": "PASS",
+          "V24Frozen": true,
+          "releaseFlags": "OFF"
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_AUTH_LOAD_RESAVE_REWARD_REPLAY",
+          "00_FORMAL_SUCCESSOR_INTEGRATION"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "4 exact 05 paths on V25+accepted 04 batch+accepted 05 single UI. Verify 2/3 keys 18/26 exact, shared root, selected subset and stale/proof negatives, genuine isolated download and reimport. No V24 change.",
+          "nextAfter": "00 serial formal integration; 05 new operations after 04 independent acceptance"
+        },
+        "next": "06_SCOPED_QA_FORMAL_DISTINCT_FAMILY_BATCH_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_OPERATIONS_AFTER_ACCEPTED_CONTRACT"
       }
     },
     "06_QA": {
