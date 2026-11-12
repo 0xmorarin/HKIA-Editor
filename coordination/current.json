@@ -746,6 +746,15 @@
         "scope": "Exact 20 no-defined-leaf/group-reward v301 candidates only where typed fields and conditional invariants proven; reuse single ProductSession, existing family/pair planner and atomic ZIP CAS, separate OFF gate. No reward/Inventory mutation, unverified v300, structural creation or V24 changes. Full archive preimage, parent/root snapshot, isolate unresolved targets and continue safe subset.",
         "acceptance": "Exact candidate inventory; genuine edited-copy and independent semantic reparse/non-target raw frames; stale/forged/replay/rollback/wrong version/unsupported rejection. Fixed scoped delta/source/manifest and 06 QA. No blanket permission or game acceptance.",
         "next": "06 scoped QA then 05 UI and 00 integration; exact29 only after new02+03 manual causal QA."
+      },
+      "formal29Preflight": {
+        "task": "FORMAL29_ABSENCE_WRITER_PREFLIGHT_AND_V26_COMPATIBILITY",
+        "status": "IN_FLIGHT",
+        "baseMain": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
+        "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "scope": "Read-only exact20 V26 preimage and next29 authorization/reward/absence preflight; no product source change or QA promotion",
+        "dependency": "New02+03 independent acceptance pending; exact20 06 pending",
+        "owner": "04 SAVE CORE"
       }
     },
     "05_WEB": {
