@@ -3,11 +3,15 @@ on:
   push:
     branches:
       - ctrl/pages-isolation-probe-20261113
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
 permissions:
   contents: read
   pages: read
 jobs:
   verify:
+    if: github.event_name == 'push' || github.head_ref == 'ctrl/pages-isolation-probe-20261113'
     runs-on: ubuntu-latest
     steps:
       - name: Read Pages configuration
