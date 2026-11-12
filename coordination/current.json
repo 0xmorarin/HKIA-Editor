@@ -704,7 +704,7 @@
       },
       "formal49Execution": {
         "task": "FORMAL49_EXACT20_PRIVATE_WRITER",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS",
         "baseMain": "6324c95a1c195430125d9d916864bbb2fc59831a",
         "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
         "scope": "04 owned native-product code and tests; 20 exact v301 targets; dedicated OFF gate; 6+0 and 8+2; no V24 or other streams",
@@ -821,6 +821,15 @@
         "classification": "COMPATIBILITY_ONLY_NOT_QA; 9 no-defined-reward candidates after 02/03 QA; 20 leaf reward-defined candidates WAIT_REWARD_SIDE_EFFECT_EVIDENCE; no automatic authorization",
         "next": "06 exact20 and new02/03 scoped QA; after both new02/03 accepted, 04 exact9 v301 nonterminal revoke with full archive absence CAS and separate OFF flag; reward-defined 20 isolated until specific causal acceptance; 00 reuse exact20 9 paths on V26 after QA; V24 frozen",
         "unverified": "No new product code or genuine outputs; actual game/auth/load/reward/Browser unknown"
+      },
+      "formal9Execution": {
+        "task": "FORMAL_MANUAL_EXACT9_ABSENCE_REVOKE",
+        "status": "IN_FLIGHT",
+        "owner": "04 SAVE CORE",
+        "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
+        "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "dependency": "06 accepted exact20, V26, 02 missing Manual 9ADD and 03 conditional 8ADD; use V26+exact20 byte compatible composite",
+        "scope": "04 only; 9 no-defined-reward v301 existing nonterminal revokes with full archive absence CAS; dedicated OFF flag, six Slot fields, no Account/creation, no V24 change"
       }
     },
     "05_WEB": {
