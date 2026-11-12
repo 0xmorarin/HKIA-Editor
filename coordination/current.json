@@ -771,7 +771,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_FORMAL_DISTINCT_FAMILY_BATCH_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_OPERATIONS_AFTER_ACCEPTED_CONTRACT",
+      "next": "06_SCOPED_QA_05_BATCH_4_AND_04_EXACT20_9_AND_V26; 05_EXACT20_UI_AFTER_04_PASS; 00_SERIAL_FORMAL_INTEGRATION",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -1196,7 +1196,29 @@
           "scope": "4 exact 05 paths on V25+accepted 04 batch+accepted 05 single UI. Verify 2/3 keys 18/26 exact, shared root, selected subset and stale/proof negatives, genuine isolated download and reimport. No V24 change.",
           "nextAfter": "00 serial formal integration; 05 new operations after 04 independent acceptance"
         },
-        "next": "06_SCOPED_QA_FORMAL_DISTINCT_FAMILY_BATCH_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_04_OPERATIONS_AFTER_ACCEPTED_CONTRACT"
+        "next": "06_SCOPED_QA_05_BATCH_4_AND_04_EXACT20_9_AND_V26; 05_EXACT20_UI_AFTER_04_PASS; 00_SERIAL_FORMAL_INTEGRATION",
+        "integrationPreflight": {
+          "status": "V26_BOTH_DELTAS_BYTE_COMPATIBLE_WAIT_INDEPENDENT_QA",
+          "checkedBaseHead": "0114b6affe49ee08150c2195d9505a74c966efcc",
+          "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+          "baseEntries": 441,
+          "webSourceSha256": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
+          "webDeltaSha256": "85c8122649c51a52b5ceb17205c6337ba2a1447e60fb836022fdbd6c2fb68466",
+          "webPrePostMatches": 4,
+          "webCommonOutsideDeltaExact": 424,
+          "webExtraV26Paths": 15,
+          "coreExact20SourceSha256": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+          "coreExact20DeltaSha256": "46c3078ee73ce708cfa03358e7d3e22793542866fdbf9567b5bc57113e77948b",
+          "coreExact20PrePostMatches": 9,
+          "coreCommonOutsideDeltaDifferences": "2 expected 05 app.js/native-preview-ui.js modifications already in V26; 416 other common unchanged",
+          "overlap": 0,
+          "webOnlyCombinedEntries": 443,
+          "bothCombinedEntries": 446,
+          "zipCrc": "PASS_5_SOURCE_DELTA_ZIPS",
+          "release": "V24_FROZEN_OFF",
+          "nextUiContract": "achievement-formal49-edit, exact v301 CollectionVersion87 targets; 10 COMPLETE 6+0, 4 REVOKE 6+0, 6 REVOKE 8+2; complete completedAt exact string, revoke progress:0; formal49Targets dynamic output eligibility only when Core flags enabled; no new batch or reverse direction. UI after exact 06 acceptance.",
+          "note": "Compatibility only, no combined source or product changes. 00 owns two module allowlist additions and serial integration."
+        }
       }
     },
     "06_QA": {
