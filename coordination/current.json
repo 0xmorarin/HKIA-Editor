@@ -192,7 +192,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_RECIPE32_CAUSAL",
+      "next": "RECIPE32_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_CAUSAL_ACCEPTANCE; 03_NO_REPEAT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -322,11 +322,22 @@
       },
       "recipe32Review": {
         "task": "FORMAL_RECIPE32_TARGETED_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
         "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "dependency": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
-        "scope": "32 exact existing Recipe targets, prioritize 4 representative and 5 tag8 references; distinguish typed GUID reference from actual recount; no product authority or V24 change"
+        "scope": "32 exact existing Recipe targets, prioritize 4 representative and 5 tag8 references; distinguish typed GUID reference from actual recount; no product authority or V24 change",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL_RECIPE32_CAUSAL_DELTA_20261112.zip",
+          "sha256": "0569736b9b300805ebd2f78b1e67bafb5237066b92359cb40271b0e0cc02496c",
+          "manifestSha256": "582f0c243066c77daf9828b89697ccbc5e1c99354aa61cfa0415928d0737bcf3",
+          "scope": "8 ADD 0 MOD 0 DEL + transport manifest; all 441 V26 paths unchanged; exact 01 dependency",
+          "verified": "32 full RecipeItemDetails managed bodies and matching food references; 130 ItemCounter definitions (67 explicit nonmatching,38 category disjoint,22 tag,1 avatar,2 runtime characteristic UNKNOWN); 26 Native anchors; genuine 20207 docs/586 counters, 32 typed current-row advisories, zero CountedGuids matches, 5 tag8 matches; 13 focused +56 adjacent PASS; tsc, CRC, Library byte-exact readback",
+          "classification": "RELATED cooking eligibility/collection predicate/history; conditional source filter nonmatch only; no new cross-model REQUIRED; extra saved Counter reference UNKNOWN; no write/restore authority",
+          "gameAccepted": false
+        },
+        "remaining": "Switch source definition parity, runtime characteristic filters, other counter/event/quest consumers, actual game load/resave/reboot and post-resave receipt remain UNKNOWN. Preserve all non-target data. 04 exact subset only after 06; do not generalize product batch.",
+        "next": "06 independent scoped 8 ADD on exact V26+01; 04 exact 4 representative then accepted subset trusted receipt proof; 01 reuse complete managed body facts; 00 serial formal integration after QA; V24 frozen; 03 wait new concrete witness or QA failure"
       }
     },
     "04_SAVE_CORE": {
