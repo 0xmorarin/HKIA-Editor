@@ -290,7 +290,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL_V16_DISTINCT_FAMILY_BATCH_REAL_OUTPUT_LOCAL_PASS_QA_READY",
+      "status": "FORMAL49_EXACT20_REAL_OUTPUT_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -306,7 +306,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_NEW_04_11_PATHS_AND_03_FORMAL49_7_ADD; 05_ACCEPTED_SINGLE_FAMILY_UI_PARALLEL; 04_NEW_20_NO_DEFINED_REWARD_AFTER_03_ACCEPTED; V24_FROZEN",
+      "next": "06_SCOPED_QA_EXACT20_9_PATHS; 05_AFTER_PASS_EXACT20_UI; 00_SERIAL_INTEGRATION_AND_2_MODULE_ALLOWLIST; 04_WAIT_NEXT_ACCEPTED_SCOPE; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -664,12 +664,78 @@
       },
       "formal49Execution": {
         "task": "FORMAL49_EXACT20_PRIVATE_WRITER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseMain": "6324c95a1c195430125d9d916864bbb2fc59831a",
         "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
         "scope": "04 owned native-product code and tests; 20 exact v301 targets; dedicated OFF gate; 6+0 and 8+2; no V24 or other streams",
         "dependency": "06 scoped PASS exact 03 FORMAL49 and V25; 04 batch accepted",
-        "owner": "04 SAVE CORE"
+        "owner": "04 SAVE CORE",
+        "baseCompositeSha256": "c74fb21a44d2fe1a3032ec6e3c0df0b2d95b35dda867f90c4d3933dcc8a3cb81",
+        "baseCompositeEntries": 424,
+        "baseReconstruction": "V25 1381e203...5265 + 06 accepted 04 batch delta e7654f04...9230 (7MOD4ADD, exact preimages)",
+        "fixedSourceSha256": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+        "deltaSha256": "46c3078ee73ce708cfa03358e7d3e22793542866fdbf9567b5bc57113e77948b",
+        "manifestSha256": "60ac85a36dd9fd431f89915546db4884991cccf0453ea704222a09643f023d8b",
+        "evidenceSha256": "8b7ed14a4221489c0c7b734322b3ad7a606dc2053adad44afb7d9fc9d39cd969",
+        "artifacts": {
+          "source": "HKIA_04_Formal49_Exact20_20261112_Source.zip",
+          "delta": "HKIA_04_Formal49_Exact20_20261112_Delta.zip",
+          "manifest": "HKIA_04_Formal49_Exact20_20261112_Manifest.json",
+          "evidence": "HKIA_04_Formal49_Exact20_20261112_Evidence.zip",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "changedPaths": "6_MOD_3_ADD_0_DEL; 418 unchanged of 424 composite; 427 source",
+        "verified": {
+          "tests": {
+            "pass": 844,
+            "skip": 36,
+            "fail": 0
+          },
+          "focused": 5,
+          "build": "PASS_SOURCE_ONLY",
+          "check": "PASS",
+          "tsc": "PASS_STRICT_BUNDLER",
+          "nodeWorker": "PASS_SYNTHETIC_RPC",
+          "genuineVersion": "3.0.1",
+          "collectionVersion": 87,
+          "offPreview": 20,
+          "offDenied": 20,
+          "realOutput": 20,
+          "complete": 10,
+          "revoke": 10,
+          "slotFields": 132,
+          "accountFields": 12,
+          "slotOnlyAccountRaw": 14,
+          "atomicPair": 6,
+          "rawPairs": 20,
+          "rollback": 21,
+          "onNegatives": 124,
+          "wrongVersion300Denied": 4,
+          "parityToAccepted03": 20,
+          "rewardDefinedExcluded": 29,
+          "conditionalRequired": 52,
+          "sourceReextract": "ALL_427_SHA_CRC_AND_DELTA_REPLAY_PASS",
+          "isolatedFlagChanges": "BETA_WRITER_ENABLED AND FORMAL49_ENABLED ONLY; recipe/V16/batch OFF",
+          "libraryReadback": "ALL_4_BYTE_EXACT_CRC_427_FILE_HASHES_9_PATHS_424_BASE_REPLAY_PASS",
+          "graph": 55,
+          "projectedNodeRealOffPreview": 2,
+          "gameAccepted": false,
+          "privateBytesWritten": false
+        },
+        "unverified": [
+          "NEW_06_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_RESAVE_REBOOT_NATIVE_AUTH_REWARD_SIDE_EFFECT",
+          "V300_OR_REVERSE_OR_OTHER_29_OR_GENERAL_BULK_NOT_AUTHORIZED",
+          "00_FULL_MEDIA_DISTRIBUTION_CLOSURE_PENDING_TWO_ALLOWLIST_ENTRIES",
+          "MAIN_PROTECTION_NOT_AVAILABLE_IN_CONNECTOR"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "Exact 9 changes over V25 + accepted batch composite 424; source 79ca9fee...1eef; independent 20 genuine v301 outputs and 6+0/8+2 raw+semantic proof, v300 and 29 exclusion, final File authorization, OFF/only flags, CAS/replay/rollback, parity to exact 03 dbd53d20...adb8; no prior accepted re-QA",
+          "nextAfter": "05 exact20 typed capability UI after independent PASS; 00 serial integrate with accepted batch and add ONLY native-product/formal49-plan.mjs + contracts/03-linkage-v20-alwaysrun.mjs to 00 allowlist, full media build/privacy/repro; V24 frozen; 04 waits next new accepted causal scope/QA repair"
+        },
+        "rollback": "Restore 6 preimage files from composite 424; remove 3 additions; V24 frozen"
       },
       "formalNextTask": {
         "task": "FORMAL49_EXACT20_NO_DEFINED_REWARD_PRIVATE_WRITER",
