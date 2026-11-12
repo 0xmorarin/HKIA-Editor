@@ -2197,9 +2197,9 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 04 exact20 private Writer on V26 OFF; 06 scoped V26 combined + new02 9ADD (564fd22d…9b66), 03 reference 8ADD (44a011c0…39e3), 03 missing Manual 8ADD (ce2cf192…c3eb), 05 batch UI 4 paths (70b843c4…69b8) on exact respective bases. Reuse V25 and accepted scopes; no repeat. 01 repair accepted in V26, no acquisition authorization.",
-    "After new02+03 manual causal PASS, 04 exact29 existing v301 only, full archive absence CAS, six fields, no Account/creation. 02 creation WAIT_DEP exact legitimate first-progress witness; 03 Collection active reference UNKNOWN. 00 integrate accepted scopes.",
-    "V24 Pages frozen: closure/rehearsal/extended QA kit and Windows launcher ready. Actual authorized HTTP/HTTPS Chrome WebCrypto Module Worker genuine both versions WAIT_ENV; game witness if irreducible, actual GitHub source/CI/Pages admin/rollback, Owner approval. No deploy/live flags.",
+    "06 current scoped QA IN_FLIGHT, 01 existing Recipe target expansion IN_FLIGHT: do not restart. 00 V26 next-delta private preflight done (471 source/924 tests/4146 dist); not accepted. V26 and V24 unchanged. After 06 verdict select exact accepted subset; if all pass reuse preflight bytes after new 00 allowlist scoped QA, otherwise isolate failed paths and rebuild only affected.",
+    "After exact20 04 independent PASS -> 05 exact20 UI. After new02+03 missing Manual scoped PASS -> 04 exact9 no-defined-reward nonterminal revoke with full archive absence CAS, six fields, no Account/structural creation. Other 20 leaf-reward-defined candidates WAIT_REWARD_SIDE_EFFECT_EVIDENCE. 01 Recipe extension after fixed source -> 06; no general ownership permission.",
+    "V24 actual browser WAIT_ENV unchanged; use existing Windows pack on authorized PC, no new kit or blocked rerun. Required game witness if irreducible; actual GitHub source/CI/Pages admin/rollback and explicit Owner approval. No deploy/live flags.",
     "07 WAIT_ENV independent."
   ],
   "imageAssets": {
@@ -3012,17 +3012,14 @@
       "condition": "First scoped activation and kit review READY; actual browser WAIT_ENV until authorized host. Determine only irreducible Native game evidence required for release-critical accepted operation scope; game acceptance remains unobserved.",
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
-    "nextReadyParallel": [
-      "04_FORMAL49_EXACT20_PRIVATE_WRITER",
-      "06_V26_COMBINED_02_MISSING_MANUAL_03_REFERENCE_AND_MANUAL_CAUSAL_SCOPED_QA",
-      "06_NEW_05_FAMILY_BATCH_UI_SCOPED_QA"
-    ],
+    "nextReadyParallel": [],
     "nextAfterDep": [
+      "00_SELECTIVE_INTEGRATION_AFTER_06_EXACT_VERDICT",
+      "04_EXACT9_NONTERMINAL_REVOKE_AFTER_NEW02_03_SCOPED_PASS",
+      "05_EXACT20_UI_AFTER_04_INDEPENDENT_PASS",
+      "06_01_RECIPE_EXPANSION_AFTER_FIXED_SOURCE",
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
-      "04_EXACT29_AFTER_NEW02_AND_03_MANUAL_CAUSAL_QA",
-      "05_UI_AFTER_EXACT20_WRITER_QA",
-      "00_SERIAL_ACCEPTED_FORMAL_NEXT_DELTAS",
-      "00_PAGES_DEPLOY_AFTER_REQUIRED_EVIDENCE_AND_OWNER_APPROVAL",
+      "00_PAGES_DEPLOY_AFTER_REQUIRED_EVIDENCE_OWNER_APPROVAL",
       "07_VERIFIED_RUST_TOOLCHAIN"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
@@ -3221,13 +3218,111 @@
       },
       "preflight": {
         "task": "V26_NEXT_DELTA_COMPATIBILITY_AND_DISTRIBUTION_PREFLIGHT",
-        "status": "IN_FLIGHT",
+        "status": "DONE_LOCAL_COMPATIBILITY_PASS_WAIT_INDEPENDENT_QA",
         "owner": "00 CTRL",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "scope": "Exact20/05 batch UI and new02/03 additive deltas preimage/postimage/closure only; QA status not inferred; no candidate replacement or live flag",
-        "qaAtClaim": "IN_FLIGHT"
+        "qaAtClaim": "IN_FLIGHT",
+        "candidate": {
+          "label": "PRIVATE_PREFLIGHT_NOT_ACCEPTED_NOT_RELEASE_AUTHORIZED",
+          "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_Source.zip",
+          "sha256": "8fafbdc73a26ba3a68508eec8ed833e7fe601a8372c086ba4433bedd58373d14",
+          "entries": 471,
+          "bytes": 3134570,
+          "delta": {
+            "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_Delta.zip",
+            "sha256": "5420c8a28e5c49f1ed2b9093259c25f47fb8eb0eaa16344c7a6f138db668b2bc",
+            "modified": 9,
+            "added": 30,
+            "deleted": 0
+          },
+          "manifest": {
+            "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_Manifest.json",
+            "sha256": "e847ff27366683c84eab7c8b25d3f616fd2ca1f41c21329fe20254425de273bd"
+          },
+          "evidence": {
+            "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_Evidence.zip",
+            "sha256": "30d231cbb62748b3575e43c8efbaf1d3c947e938f91ce5143ddc16dcfb2cf0cd"
+          },
+          "distribution": {
+            "artifactManifest": {
+              "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_ArtifactManifest.json",
+              "sha256": "dd0b0ffa5f69d69c0b0c5860a2aaabc314fae40c8def37db850f6c4c1c38a6b2"
+            },
+            "delta": {
+              "file": "HKIA_CTRL_V26_NextDelta_Preflight_20261112_DistributionDelta.zip",
+              "sha256": "4a2b745af95dc17631f141bab7502eef923c58558824b3470755df2fed528be2",
+              "entries": 9
+            },
+            "entries": 4146,
+            "bytes": 146217560,
+            "webp": 4076,
+            "modules": 55,
+            "modified": 7,
+            "added": 2,
+            "unchanged": 4137,
+            "flags": "OFF",
+            "baseArtifactManifestSha256": "76c570673126232b812c32e59a430f13293bea25cd4c9b9997a81af92f03918f"
+          },
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "ALL_6_ARTIFACTS_BYTE_EXACT_471_SOURCE_SHA_CRC_PASS"
+        },
+        "inputs": {
+          "core04": {
+            "source": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef",
+            "delta": "46c3078ee73ce708cfa03358e7d3e22793542866fdbf9567b5bc57113e77948b",
+            "paths": 9
+          },
+          "ui05": {
+            "source": "70b843c4845c2e9bfb78f9362bb38d1cfff86e408dd87c1d30fb5a03afb169b8",
+            "delta": "85c8122649c51a52b5ceb17205c6337ba2a1447e60fb836022fdbd6c2fb68466",
+            "paths": 4
+          },
+          "research02": {
+            "delta": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
+            "paths": 9
+          },
+          "reference03": {
+            "delta": "44a011c0d7c7c897243b6676c2cb9bd22af6d80d2269eb43ab2b230ff52739e3",
+            "paths": 8
+          },
+          "manual03": {
+            "delta": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb",
+            "paths": 8
+          }
+        },
+        "changes": "38 upstream exact pre/postimage, no overlap; 00 1 MOD only add native-product/formal49-plan.mjs and contracts/03-linkage-v20-alwaysrun.mjs to allowlist; 9 MOD 30 ADD total; no activation",
+        "verified": {
+          "tests": {
+            "pass": 924,
+            "skip": 36,
+            "fail": 0
+          },
+          "build": "PASS",
+          "check": "PASS",
+          "baseDistribution": "4144 exact hashes",
+          "closure": "55 modules/36 additional",
+          "dist": "4146 exact SHA/size; 4076 WebP identical; privacy gate PASS",
+          "sourceReadback": "6 artifact exact; 471 SHA CRC"
+        },
+        "qaAtFinish": "IN_FLIGHT",
+        "unverified": [
+          "06_INDEPENDENT_QA_ALL_UPSTREAM",
+          "06_NEW_CTRL_ALLOWLIST_AND_AGGREGATE",
+          "REAL_BROWSER",
+          "GAME_ACCEPTANCE"
+        ],
+        "rollback": "V26 unchanged canonical formal candidate. V24 frozen. If any input TRUE_RED, discard only affected scope and reconstruct accepted subset; never promote entire preflight by local test result.",
+        "handoff": {
+          "to": "00 CTRL after 06 independent verdict; 06 if accepted aggregate",
+          "scope": "Reuse fixed preflight only if each 38 upstream path matches exact independently accepted scope and V26 accepted; verify 00 one-path allowlist and 55-module graph separately. If verdict partial, select only accepted scope, no repeat unchanged scope. 01 Recipe expansion in flight separate."
+        }
       }
-    }
+    },
+    "inFlightStreams": [
+      "06 current scoped QA",
+      "01 existing Recipe target expansion"
+    ]
   },
   "formalRelease": {
     "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
