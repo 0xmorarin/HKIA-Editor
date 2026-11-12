@@ -33,17 +33,50 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "FORMAL_READY_FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE and 03 LINKAGE, then 06",
+      "next": "FORMAL_02_NEW_49_WITNESSES_QA_READY; 03 TARGETED_ADJUDICATION + 04 EXISTING_V16_PROOF + 06_02_SCOPED_QA; V24_FROZEN",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-        "scope": "Reuse V14 Manual planner/V15 remaining 820 catalog and 03 V16 family evidence. Prioritize new exact completion/revoke witnesses beyond the existing three V16 terminal-revoke families and puzzle; partition Manual leaf/family, Account Meta, derived Mission/Visitor/Item/unique/history and other producer classes. No 571/586 mapping redo or date-only proof.",
+        "scope": "8_ADD_0_MOD_0_DEL; 396 base paths byte-identical; V24 frozen",
         "acceptance": "Operation x family/version coverage; concrete Native/source identity, typed plans, genuine witnesses for newly proven families, negatives; unsupported derived scopes fail closed.",
-        "next": "04 SAVE CORE and 03 LINKAGE, then 06",
+        "next": "03 LINKAGE new exact targets and 04 SAVE CORE existing V16 private writer proof in parallel; 06 scoped QA on fixed 02 delta; 00 serial integration after acceptance",
         "baseHead": "5c85c2e5220acf9b98095483589d1e42cd367431",
-        "executionScope": "New exact non-Puzzle completion/revoke witnesses; research contracts/tests only; R2 OFF immutable"
+        "executionScope": "New exact non-Puzzle completion/revoke witnesses; research contracts/tests only; R2 OFF immutable",
+        "deltaSha256": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+        "manifestSha256": "d66114963306a38f6c8b7397f72b29092739c977e680ef3f04b44cbb0a7d2bd6",
+        "artifact": "HKIA_02_Formal_Complete_Revoke_R2_Delta_20261112.zip",
+        "verified": {
+          "newTargets": 49,
+          "groups": 13,
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "realSlotReparse": 98,
+          "accountClone": 56,
+          "sealedPair": 6,
+          "staleFieldCAS": 98,
+          "wrongPreimage": 98,
+          "archiveCAS": 2,
+          "staticModelMatchesV301": 6,
+          "staticOmissionMismatchV301": 15,
+          "focusedPass": 14,
+          "check": "PASS",
+          "libraryReadback": "BYTE_EXACT",
+          "noDefinedLeafOrGroupReward": 20,
+          "originalUnchanged": 2,
+          "newNativeAnchors": 0,
+          "reusedNativeEvidence": "EXACT_BASE_BLOBS"
+        },
+        "unverified": [
+          "03 new target causal classification",
+          "04 product writer and independent QA",
+          "game authentication/load/resave/reward replay",
+          "V300 Native RVA equivalence",
+          "derived counters and direct Account Meta editing"
+        ]
       }
     },
     "03_LINKAGE": {
