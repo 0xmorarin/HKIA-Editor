@@ -167,7 +167,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_FORMAL_04_12_PATHS_ON_R2_OFF; 05_FAMILY_REVOKE_UI_AFTER_ACCEPTED_CONTRACT; WAIT_NEW_01_02_03_CONTRACTS; V24_FROZEN",
+      "next": "06_FORMAL_R2_SCOPED_QA_IN_FLIGHT; 00_DEPENDENCY_PIN_PREFLIGHT_HANDOFF; 05_FAMILY_REVOKE_UI_AFTER_04_ACCEPTANCE; 04_NEW_02_03_TARGET_CONTRACT_AFTER_QA; 01_STRUCTURAL_ONLY",
       "execution": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -399,16 +399,49 @@
           "condition": "Fixed source 24f5e704…; no activation or V24 merge; formal candidate only",
           "nextAfter": "05 family revoke capability UI only after scoped acceptance; 00 serialize later formal integration; 04 new 01/02/03 proven scope after deps"
         },
-        "rollback": "Restore 8 MOD from R2 73a2b9e7…; remove 4 ADD; V24 frozen untouched"
+        "rollback": "Restore 8 MOD from R2 73a2b9e7…; remove 4 ADD; V24 frozen untouched",
+        "followup": {
+          "task": "FORMAL_R2_DEPENDENCY_PREFLIGHT",
+          "status": "DONE",
+          "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
+          "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+          "checkedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+          "inputs": {
+            "collection01": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+            "achievement02": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+            "linkage03": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+            "web05": "9dc85c47e05806157b37d9b1dee99be9e75ce13f077855187f9b527d3faba81c"
+          },
+          "verified": {
+            "pathCounts": {
+              "collection01": 7,
+              "achievement02": 8,
+              "linkage03": 10,
+              "core04": 12,
+              "web05": 7
+            },
+            "pairwiseOverlap": 0,
+            "totalPaths": 44,
+            "sourceDeltaCRC": "PASS",
+            "r2EngineSha256": "7e0bbdc352860e180ddf11721e3ad372b85eb2df4917803a6cc9654d092682c2",
+            "formal04EngineSha256": "7d5655a9f9e0146c848b9ce8df45ebe1aa9b0d1146974195d6fe6524773a9864",
+            "nodeVersion": "22.16.0",
+            "pinMismatchProbes": "01 and 03 exit 1 at exact engine SHA assertion before private Save input; 02 manifest pins R2",
+            "engineChangedScope": "Only dryRunSchemaGeneralAchievementPairResearch adds cloned devOutput and passes it to assembly; do not infer full equivalence"
+          },
+          "classification": "EVIDENCE_REPRODUCTION_DEPENDENCY_NOT_PRODUCT_TRUE_RED; NO_PRODUCT_OR_OTHER_STREAM_SOURCE_CHANGES",
+          "handoff": "00/06 preserve original R2 evidence and execute 01/02/03 fixed-scope QA on original R2; after acceptance and serial integration validate affected engine/assembly path; if integrated repeat is required, owner streams add distinct new pin/evidence on integrated SHA only after actual scoped verification; do not silently overwrite old provenance. 02 priority 20 no-defined-reward candidates after 03 target causal and QA; 01 structural only, no product authorization.",
+          "remaining": "06 formal in flight; no new 04 permission or code task until independent verdict or new accepted target-specific contract; V24 frozen; real browser WAIT_ENV"
+        }
       },
       "formalTask": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-        "status": "READY",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Independent existing V16 terminal-revoke three families and api.mjs family planner/dryRunSchemaGeneralAchievementPairResearch. Bind 8 Slot + 2 Account changes in immutable Session/revision; private gated atomic ZIP candidate output, independent reparse, rollback negatives on genuine 300/301 as proven. No V24 activation or reward mutation; separate OFF source.",
         "acceptance": "Private edited-copy proof for existing family revoke; non-target bytes, CAS, no partial output, same archive Account pairing, no fabricated reward. Block unresolved native/reward scope only. New 01/02/03 families are later deltas.",
-        "next": "06 scoped QA; 05 UI after accepted contract"
+        "next": "06 formal scoped QA in flight; 05 after 04 acceptance; next 04 after accepted target-specific 01/02/03 contracts"
       }
     },
     "05_WEB": {
