@@ -468,10 +468,10 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 06 independent QA on V19 fixed preflight (V18 pending + exact 27 path delta; reuse matching V18 observations if in progress). Do not duplicate QA. 03/04/05 owners wait for scoped QA or concrete new task; 07 waits verified Rust toolchain.",
-    "After scoped QA, 04/05 targeted true-red fixes only; 05 accepted version-operation capability and actual browser E2E, 00 serial accepted integration and fixed Beta distribution; actual deployment requires explicit Owner approval.",
-    "07 independently compile and validate real JS/Rust reader parity when toolchain available; 06 Rust/WASM/browser/budget QA before cutover. JS Beta independent.",
-    "05 Svelte/TS migration after Beta UI fixed; separate JS adapter parity and Rust cutover."
+    "NOW parallel 06 scoped V20 receipt 16 paths + CTRL closure/graph; 05 ordinary six accepted capabilities and atomic batch UI (V19 accepted 04 repair base, isolated 05 paths, shipped flags OFF; no receipt activation). No repeat 03/04/01/02/00 MEDIA.",
+    "After receipt scoped QA, 05 receipt-aware UI only if accepted; 00 serial integrate accepted source and fixed artifact, final 06 real HTTP/HTTPS WebCrypto Module Worker E2E. Actual deployment and live flags Owner approval.",
+    "07 WAIT_ENV local Rust kit; after verified toolchain synthetic compile then genuine parity, 06 independent; no JS Beta gate.",
+    "05 Svelte/TS separate after Beta UI fixed."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -1193,18 +1193,12 @@
   },
   "ctrlExecution": {
     "task": "V19_SCOPED_ACCEPTANCE_AND_RECEIPT_SUCCESSOR_PREFLIGHT",
-    "status": "IN_FLIGHT",
+    "status": "PARTIAL_SCOPED_INTEGRATION_VERIFIED_V20_QA_READY",
     "owner": "00 CTRL",
     "baseMain": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
-    "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-    "scope": "Verify accepted 03/04/05 exact blobs in V19; isolate CTRL closure QA; assemble unaccepted new receipt delta only if conflict-free; prepare capability handoff and dependency closure; no main product merge or flags",
-    "dependency": "06 accepted separate deltas; receipt new 16 paths pending; final browser external environment",
-    "sourceInputs": {
-      "core": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-      "web": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
-      "linkage": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
-    },
-    "candidate": {
+    "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
+    "scope": "V19 accepted input byte reconciliation; V20 private receipt preflight only; no product main merge or live flags",
+    "v19": {
       "label": "V19_PREFLIGHT_NOT_ACCEPTED",
       "file": "HKIA_CTRL_V19_Preflight_20261112_Source.zip",
       "sha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
@@ -1225,62 +1219,92 @@
         "sha256": "324c55fee2803547243455cbcea7149a17b56897f9a2af2845a60cf7eb307f50"
       },
       "privateLibrary": "HKIA Editor Private",
-      "readback": "SOURCE_DELTA_MANIFEST_SHA_AND_375_ENTRY_HASHES_PASS"
+      "readback": "SOURCE_DELTA_MANIFEST_SHA_AND_375_ENTRY_HASHES_PASS",
+      "acceptance": "03/04/05 26 paths exact independent scoped PASS; combined closure and final browser remain pending",
+      "qaHandoffSha256": "7179ef93fafd2b1ad9dc5acce6833a582479f2118173bff0e69b64fb4392dccd",
+      "rollback": "V17 independently accepted; V19 safe recipe-denied preflight for ordinary operations"
+    },
+    "candidate": {
+      "label": "V20_RECEIPT_PREFLIGHT_NOT_ACCEPTED",
+      "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Source.zip",
+      "sha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+      "entries": 380,
+      "delta": {
+        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Delta.zip",
+        "sha256": "003f123e67c399b8726b4e2a2e3d0643d683bf6a5d64e7a10a32812c56d61db6",
+        "modified": 12,
+        "added": 5,
+        "deleted": 0
+      },
+      "manifest": {
+        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Manifest.json",
+        "sha256": "e81d14dcac33b19052763f5b78bab767d29c620cd3347e00299dd8e97bc778b2"
+      },
+      "evidence": {
+        "file": "HKIA_CTRL_V20_Receipt_Preflight_20261112_Evidence.zip",
+        "sha256": "771fbaf2583648606aae08f36ce893331fdc8776d0be2c2657ddf20470c87822"
+      },
+      "privateLibrary": "HKIA Editor Private",
+      "readback": "ALL_4_ARTIFACT_SHA_AND_380_ENTRY_HASHES_CRC_PASS"
+    },
+    "sourceInputs": {
+      "receipt04": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+      "receiptDelta": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
+      "baseV19": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631"
     },
     "changes": {
-      "upstream": "03 10ADD, 04 8MOD2ADD, 05 6MOD; no overlaps",
-      "ctrl": "scripts/00-beta-module-closure.mjs exact allowlist add scripts/research/01-collection-v17-beta-contract.mjs",
-      "reproduced": "Dependency not approved: scripts/research/01-collection-v17-beta-contract.mjs",
+      "upstream": "16 exact before/after matches; 11MOD5ADD; 05 six accepted paths preserved; no overlap",
+      "ctrl": "scripts/00-beta-module-closure.mjs exact add contracts/03-linkage-v18-recipe-recount.mjs and docs/03-linkage/v18/RECIPE_NATIVE_SOURCE.json",
+      "reproduced": "Dependency not approved: contracts/03-linkage-v18-recipe-recount.mjs",
       "classification": "TRUE_RED_DISTRIBUTION_BUILD_FIXED_LOCAL_QA_PENDING"
     },
     "verified": {
       "tests": {
-        "pass": 739,
+        "pass": 744,
         "skip": 36,
         "fail": 0
       },
       "check": "PASS",
       "build": "PASS",
       "distribution": {
-        "entries": 4142,
-        "bytes": 146127636,
+        "entries": 4144,
+        "bytes": 146145869,
         "webp": 4076,
-        "modules": 51,
-        "additionalModules": 32,
+        "modules": 53,
+        "additionalModules": 34,
         "allFileHashes": "PASS",
-        "manifestSha256": "67849e075877adabec730c6ce3529599bf8c041774582e4da7bf8d1cd837065a"
+        "graphSourceHashes": "53/53 PASS",
+        "manifestSha256": "54f723108c5b0706c131e9639918db20da9083ebd44cdcee52276820e8a32110"
       },
-      "noProductMainMerge": true,
-      "writer": "OFF",
-      "previewUI": "OFF",
-      "pages": "OFF"
+      "flags": "WRITER_RECIPE_UI_ACCEPTANCE_PAGES_OFF",
+      "noProductMainMerge": true
     },
     "unverified": [
-      "INDEPENDENT_QA_V18_PLUS_V19",
-      "NATIVE_AUTH_LOAD_GAME_PERSISTENCE",
-      "REAL_HTTP_WEBCRYPTO_MODULE_WORKER_E2E",
+      "NEW_RECEIPT_INDEPENDENT_QA_16_PATHS",
+      "CTRL_CLOSURE_COMBINED_QA",
+      "05_ATOMIC_BATCH_AND_ACCEPTED_CAPABILITIES",
+      "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+      "NATIVE_AUTH_LOAD_RESAVE",
       "RUST_COMPILE_PARITY"
     ],
-    "blockers": {
-      "browser": "Chromium loopback navigation rejected ERR_BLOCKED_BY_ADMINISTRATOR; no HTTP/Worker/WebCrypto PASS",
-      "rust": "cargo/rustc absent; prior apt DNS failure not retried",
-      "recipe": "trusted same-row restoration receipt and final load/recount acceptance; no blanket block on other six operations"
-    },
+    "dependency": "Ordinary six operations have scoped offline acceptance; recipe new receipt independent gate; no live enablement until release gates. 05 can develop ordinary batch/capability UI on V19, coordinate V20 by exact 05 path ownership; receipt UI only after 06 receipt QA.",
     "handoff": {
-      "to": "06 QA",
-      "condition": "V18 pending: use fixed V19 candidate, compare V17 accepted scope to V19; reuse V18 QA evidence only if exact matching blobs and scope; target V18 42 plus V19 27 paths (deduplicate cumulative), new build regression, 03/04/05 interaction, true real output only where proven; preserve independent QA authority and avoid duplicate running task",
-      "after": "04/05 targeted fixes if TRUE_RED; then 05 accepted version-operation UI capability and actual browser E2E; 00 serial accepted integration/fixed artifact/owner approval"
+      "to": [
+        "06 QA",
+        "05 WEB"
+      ],
+      "qa": "V20 fixed 17 paths against V19 plus V19 CTRL closure and affected graph; receipt 16-path QA use accepted V19 exact matching scope, genuine private forward/reverse, forged/replay/close/CAS/atomicity, graph; no wholesale V18 QA",
+      "web": "Ordinary six operation version-scoped capability and atomic batch UI on accepted 04 repair/V19, flags OFF shipped; use separate UI delta, no receipt enable before 06; 00 integrate against V20 only after scoped acceptance",
+      "after": "00 serial integrate accepted fixed deltas and real browser artifact; release Owner approval"
     },
     "nextReadyParallel": [
-      "06_QA_FIXED_V19_OR_CONTINUE_EXISTING_V18_WITH_CUMULATIVE_DELTA",
-      "07_ONLY_WHEN_VERIFIED_RUST_TOOLCHAIN_AVAILABLE"
+      "06_NEW_RECEIPT_AND_CTRL_CLOSURE_QA",
+      "05_ORDINARY_SIX_CAPABILITY_AND_ATOMIC_BATCH_UI"
     ],
     "nextAfterDep": [
-      "05_ACCEPTED_CAPABILITY_CONNECTION_AND_REAL_BROWSER_AFTER_06_SCOPED_QA",
-      "00_SERIAL_INTEGRATION_AFTER_SCOPED_QA_AND_UI_E2E",
-      "07_READER_PARITY_AFTER_TOOLCHAIN"
-    ],
-    "risks": "No deployment or product flag authorization. V19 preflight not an accepted candidate; localIntegratedCandidate remains V18. No game acceptance inferred.",
-    "previousTask": "V18_SUCCESSOR_CANDIDATE_PREFLIGHT_AND_BROWSER_ENV"
+      "05_RECEIPT_UI_AFTER_06_ACCEPTANCE",
+      "00_SERIAL_INTEGRATION_AND_REAL_BROWSER_AFTER_FIXED_UI_QA",
+      "07_AFTER_VERIFIED_LOCAL_RUST_TOOLCHAIN"
+    ]
   }
 }
