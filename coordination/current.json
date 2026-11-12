@@ -175,12 +175,12 @@
       }
     },
     "05_WEB": {
-      "status": "V18_OUTPUT_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "V19_ATOMIC_BATCH_UI_LOCAL_SCOPED_DONE_QA_PENDING",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_OUTPUT_UI_6_PATHS; 04_ACCEPTED_OPERATION_CONTRACT_THEN_ENABLE_ONLY_ACCEPTED_VERSION_OPERATION_AND_FINAL_BROWSER_E2E",
+      "next": "06_SCOPED_QA_V19_ATOMIC_BATCH_UI_4_PATHS; 00_SERIAL_INTEGRATE; AFTER_04_ACCEPTED_RECEIPT_CONTRACT_RECEIPT_UI_ONLY_IF_NEEDED; REAL_HTTP_HTTPS_MODULE_WORKER_WEBCRYPTO_FINAL_QA",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -191,7 +191,7 @@
       "accountZipProductionSafety": "PENDING_V11_QA",
       "immediateScope": "EXACT_IMAGE_RESOLVER_IN_EXISTING_TABS_WITHOUT_NATIVE_WRITER",
       "sourceImageAdapter": "00_MEDIA_PRIVATE_HANDOFF_VALIDATED",
-      "writerConnection": "STAGED_OUTPUT_HANDLERS_IMPLEMENTED_CORE_AND_UI_ACCEPTANCE_OFF",
+      "writerConnection": "STAGED_ATOMIC_BATCH_OUTPUT_AND_OFFLINE_CAPABILITIES_IMPLEMENTED_UI_AND_CORE_RELEASE_OFF",
       "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "mediaMap": "PRIVATE_IMAGE_MAP_DELIVERED_4076_LOSSLESS_WEBP",
       "v13NativeReadMode": "STRUCTURAL_READ_ONLY_FOR_AMBIGUOUS_MAPS_ACCOUNT_ZIP_EXPORT_DISABLED",
@@ -227,17 +227,76 @@
         ],
         "isolatedSyntheticApplyExportReopen": "PASS",
         "realOutput": "OFF_EMPTY_ACCEPTANCE_LIST",
-        "independentQa": "PENDING",
+        "independentQa": "SCOPED_PASS_V18_EXACT_6_PATHS",
         "http": "UNVERIFIED_TIMEOUT"
       },
       "execution": {
         "task": "V19_ATOMIC_SCALAR_BATCH_UI",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
         "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
-        "scope": "05 src/app.js src/native-preview-ui.js tests; use 00 V19 preflight; no core/00 files",
+        "scope": "src/app.js; src/native-preview-ui.js; tests/05-native-preview-ui.test.mjs; scripts/qa-atomic-batch-ui-chrome.py; no Core/00 changes",
         "dependency": "06 04 repair and 05 V18 output scoped PASS; nonrecipe six operations offline evidence only; release flags OFF; recipe receipt excluded",
-        "owner": "05 WEB"
+        "owner": "05 WEB",
+        "fixedSourceSha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
+        "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+        "manifestSha256": "aa45b023eddf42dc98303713472e3f3517df8a29011b690c486885a581bed256",
+        "evidenceSha256": "22b9cada77e7482beba356323c5bf6a1c7632ad4de22902746da727cebd9beed",
+        "changedPaths": "3_MOD_1_ADD_0_DEL",
+        "artifacts": {
+          "source": "libfile_94c0b729bf348191842206797bf3c915",
+          "delta": "libfile_c22b0e71a3f08191b78d2ef0c29c09d5",
+          "manifest": "libfile_8c20eabd1bc08191832a03eeecf526d1",
+          "evidence": "libfile_58b3c4f2e4a881918f6177b9db6c378a",
+          "handoff": "libfile_8ca003cfe56481919e6750862fbfc05f"
+        },
+        "verified": {
+          "focused": 17,
+          "nodePass": 743,
+          "skip": 36,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "exactDeltaReplay": "376/376",
+          "chromeInline": [
+            320,
+            375,
+            1280
+          ],
+          "isolatedActualUiOutput": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "exactReimportFieldsPerVersion": 2,
+          "originalsUnchanged": true,
+          "externalRequests": 0,
+          "unknownGuidBlocked": true,
+          "uiReleaseEnabled": false,
+          "coreWriterEnabled": false
+        },
+        "unverified": [
+          "NEW_05_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_NATIVE_AUTHENTICATION",
+          "04_NEW_TRUSTED_RECEIPT_QA"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "4 exact paths on 00 V19 preflight; reuse accepted V18 output UI and 04 nonrecipe repair; validate atomic plan and 2 genuine versions isolated output; flags OFF",
+          "nextAfter": "00 serial integrate accepted deltas and fixed beta browser QA; no live activation until release gates and Owner approval"
+        }
+      },
+      "atomicBatchUi": {
+        "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
+        "sourceSha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
+        "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+        "offlineAcceptedOperations": 6,
+        "versions": [
+          "3.0.0",
+          "3.0.1"
+        ],
+        "releaseActivation": false,
+        "independentQa": "PENDING"
       }
     },
     "06_QA": {
