@@ -175,7 +175,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_MANUAL_ABSENCE_CAUSAL_REVIEW; REFERENCE_CLOSURE_QA_PENDING",
+      "next": "REFERENCE_AND_MISSING_MANUAL_SCOPED_QA_PENDING; 04_EXACT20_INDEPENDENT; 04_EXACT29_AFTER_02_03_QA; 03_WAIT_NEW_CONCRETE_WITNESS_OR_FAILURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -272,11 +272,22 @@
       },
       "manualAbsenceReview": {
         "task": "FORMAL_02_MISSING_MANUAL_CAUSAL_REVIEW",
-        "status": "IN_FLIGHT",
+        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
         "baseMain": "86b2dbc2ad71a867cb5e4905012e8eb1dce63402",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 564fd22d...9b66 owner fixed research; 06 independent QA pending; 03 causal review independent; no product authorization",
-        "scope": "29 exact existing targets v301; missing Manual null-load/group runtime and migration conditional proof; no row creation; v300 Native UNKNOWN"
+        "scope": "29 exact existing targets v301; missing Manual null-load/group runtime and migration conditional proof; no row creation; v300 Native UNKNOWN",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL_MISSING_MANUAL_CAUSAL_DELTA_20261112.zip",
+          "sha256": "ce2cf19221907f5fe3359c1ecc00455e290af95ef1c321c84ef92e33a865c3eb",
+          "manifestSha256": "3ab553c48cc02e8e558a05090fe5b174f05fa2ac3ecb12abeb9eb591df7ed300",
+          "scope": "8_ADD_0_MOD_0_DEL; 396 R2 base unchanged; exact 02 dependency; transport manifest excluded",
+          "verified": "10 Native anchors/4 branch targets; 29 genuine v301 models in 8 groups; 87 missing Manual; 29 original and planned parent matches; 6 COMPLETE old Counter match / 23 REVOKE mismatch; 10 derived denied; zero structural/Account writes; 6 focused +13 adjacent PASS; tsc; CRC and byte-exact Library readback",
+          "classification": "ABSENT_PERSISTED_MEMBER_SKIPPED_IN_GROUP_MIGRATION; runtime zero only conditional; existing 23 REVOKE conditional REQUIRED Counter pair; parent nonterminal six-field snapshot, Meta preserve; no new unconditional REQUIRED",
+          "gameAccepted": false
+        },
+        "remaining": "Actual runtime scheduling/progress events, v300 Native equivalence, missing-row producer/Id allocation witness, game load/resave/reboot and reward effects UNKNOWN. No structural creation.",
+        "next": "06 independent scoped new02 9 ADD + 03 8 ADD; 04 exact29 existing v301 after both acceptance, full archive absence CAS, six fields, no Account or row creation; exact20 independent; 00 serial formal integration"
       }
     },
     "04_SAVE_CORE": {
