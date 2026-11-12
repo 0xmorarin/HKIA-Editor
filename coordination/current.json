@@ -237,7 +237,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_V20_RECIPE_RECEIPT_UI_4_PATHS; 00_SERIAL_INTEGRATION; FINAL_FIXED_BETA_BROWSER_AFTER_DEP; SVELTE_ONLY_AFTER_JS_BETA_FIXED",
+      "next": "06_SCOPED_QA_05_RECEIPT_4_04_LOAD_3_03_ALWAYSRUN_10; 00_SERIAL_INTEGRATE_V21_EXACT_ACCEPTED_DELTAS; FINAL_FIXED_BETA_BROWSER; SVELTE_AFTER_JS_BETA_FIXED",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -419,6 +419,23 @@
           "to": "06 QA",
           "scope": "4 exact paths, 381 logical base V20+accepted Batch; same-runtime pre-resave exact candidate only",
           "nextAfter": "00 serial integrate accepted 05 receipt UI and Batch; final actual browser and gated beta; no release activation"
+        },
+        "integrationPreflight": {
+          "status": "V21_BYTE_EXACT_REPLAY_COMPATIBLE_QA_PENDING",
+          "checkedBaseHead": "7f3fab7fb22e5c89d4d5619ec12f8c61dee656a5",
+          "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+          "sourceSha256": "ffc9d5e41a11be88d483cb982298bba43dfc49afdc64dd34f6eea4cf64786d5c",
+          "deltaSha256": "ad7d7832c439e1b4710588ca1e813b91985f49672f18be8c1f810b14a06fe977",
+          "baseEntries": 381,
+          "replayEntries": 383,
+          "exactReplay": "383/383",
+          "crc": "PASS_4_ZIPS_PLUS_03_DELTA",
+          "core04EvidenceSourceSha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+          "linkage03DeltaSha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
+          "scopeOverlap": 0,
+          "hypotheticalCombinedEntries": 396,
+          "releaseFlags": "OFF",
+          "note": "Existing 05 delta exactly reproduces prior candidate from V21; 04/03 additive scopes disjoint. No new source or product change; independent QA and 00 serial integration required."
         }
       },
       "atomicBatchUi": {
