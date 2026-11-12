@@ -3279,11 +3279,11 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "NOW 06 V29 combined scoped QA exact 13 paths, 6 dist changes, 55 closure, 4146 files; reuse V28 and accepted Recipe4/Manual9 UI evidence. 04 remaining23 and 05 Recipe4 UI already IN_FLIGHT; do not duplicate.",
-    "After 04 remaining23 or 05 Recipe4 UI fixed output, direct 06 scoped QA; 00 serial integrate accepted deltas. 5 celebration references WAIT_CAUSAL.",
-    "V24 frozen; authorized actual HTTP/HTTPS Chrome with WebCrypto/Module Worker and genuine both versions WAIT_ENV. Existing Windows kit; no unchanged retry. Required game evidence, Pages admin/rollback and Owner release gate remain.",
+    "NOW 06 V30 combined scoped QA 13 paths, 6 dist changes, 55 modules, 4146 hashes; reuse V29 and accepted Recipe23/Recipe4UI.",
+    "Parallel 05 Recipe23 UI on accepted Writer; 03 Celebration5 targeted causal proof; 04 WAIT new accepted causal scope. No generic acquisition, batch or post-resave proof inferred.",
+    "V24 frozen; actual HTTP/HTTPS Chrome with WebCrypto/Module Worker genuine both versions WAIT_ENV. Existing Windows kit, no unchanged retry. Game evidence, Pages admin/rollback and Owner release gates remain.",
     "07 independent WAIT_ENV.",
-    "Pages actual: source OFF preview deployment succeeded; public HTTP/render unverified; full 4076-image fixed artifact not deployed. Correct authorized Pages settings and actual Browser acceptance; no unapproved activation."
+    "Pages source OFF preview deployed; HTTP/render unverified; full 4076-image artifact not deployed. Authorized Pages settings correction and real browser acceptance; no unapproved activation."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -4096,10 +4096,12 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V29_COMBINED_SCOPED_QA"
+      "06_V30_COMBINED_SCOPED_QA",
+      "03_CELEBRATION5_TARGETED_CAUSAL"
     ],
     "nextAfterDep": [
-      "06_NEW_04_RECIPE23_AND_05_RECIPE4_UI_FIXED_SCOPES",
+      "04_AFTER_03_CELEBRATION5_ACCEPTED_CONTRACT",
+      "06_NEW_FIXED_05_OR_03_SCOPES",
       "00_SERIAL_NEXT_ACCEPTED_DELTAS",
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
       "00_PAGES_DEPLOY_AFTER_REQUIRED_EVIDENCE_AND_AUTHORIZED_SETTINGS",
@@ -4214,7 +4216,7 @@
     },
     "formalIntegration": {
       "task": "V30_FORMAL_ACCEPTED_DELTA_SERIAL_INTEGRATION",
-      "status": "IN_FLIGHT",
+      "status": "LOCAL_PASS_COMBINED_QA_PENDING",
       "owner": "00 CTRL",
       "baseMain": "e447ad758cda5074c1ebbaaa5cf371ae44a040e7",
       "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
@@ -4460,12 +4462,70 @@
         "handoff": "06 QA fixed V29 13 paths, reuse exact accepted 04 Recipe4 and 05 Manual9 UI and V28; validate combined affected API/UI, 6 changed dist paths, 55 module closure, 4146 hashes, flags OFF; no whole re-QA. 04 remaining23 and 05 Recipe4 UI in flight independently."
       },
       "scope": "V29 + 04 Recipe23 8 paths + 05 Recipe4 UI 5 paths; exact preimages, OFF distribution, V24 frozen",
-      "dependency": "06 V29 + Recipe23 + Recipe4 UI scoped PASS"
+      "dependency": "06 V29 + Recipe23 + Recipe4 UI scoped PASS",
+      "candidate": {
+        "label": "V30_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
+        "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Source.zip",
+        "sha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
+        "entries": 505,
+        "bytes": 3279840,
+        "baseSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+        "delta": {
+          "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Delta.zip",
+          "sha256": "0fef51d689444ce05165a74b24dac4f85b46dd9c4a4e55ea4f1108ccc8dcdb31",
+          "modified": 7,
+          "added": 6,
+          "deleted": 0
+        },
+        "manifest": {
+          "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Manifest.json",
+          "sha256": "98e036148fcdb310aa6fb6e06359dad3f42d9134ba5556c31961e57aa1d5910c"
+        },
+        "evidence": {
+          "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Evidence.zip",
+          "sha256": "712f75e6c11180de83ee57de0e18c007472de9cef59705ab6193dba26accb223"
+        },
+        "distribution": {
+          "artifactManifest": {
+            "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_ArtifactManifest.json",
+            "sha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6"
+          },
+          "delta": {
+            "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_DistributionDelta.zip",
+            "sha256": "13cd7af3c75acd69b485e66fd59abe38b3de84ddc0f5740772d47f42e542956f",
+            "entries": 6
+          },
+          "baseArtifactManifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d",
+          "entries": 4146,
+          "bytes": 146346689,
+          "webp": 4076,
+          "modules": 55,
+          "modified": 6,
+          "added": 0,
+          "unchanged": 4140,
+          "flags": "OFF",
+          "reconstruct": "V29 exact OFF artifact + six-path distribution delta"
+        },
+        "readback": "ALL_6_BYTE_EXACT_SHA_CRC_AND_505_ENTRY_HASHES_PASS",
+        "privateLibrary": "HKIA Editor Private"
+      },
+      "acceptedInputs": {
+        "core04": "8b5c7bc261bcc63f20ac4a17906d313e88dfec7e1db9dd9b72e58a4f8587218a",
+        "ui05": "39f741f0e923752b920381827d19cf6a378a4e0dc3de5366467257728d5836bd",
+        "qaResult": "61c4f40d9c5445df3c4a9c9ee3529805e11b2b504292957045763165f9d554a0"
+      },
+      "changes": "7MOD6ADD0DEL; 492 unchanged; 13 exact pre/postimages; six dist modifications",
+      "verified": "988 PASS 36 SKIP 0 FAIL; check/build PASS; V29 exact 4146 hashes, V30 4146/4076 WebP/55 modules, verifyDist PASS; six private readbacks byte exact",
+      "unverified": [
+        "06_V30_COMBINED_SCOPED_QA",
+        "ACTUAL_HTTP_HTTPS_BROWSER",
+        "GAME_LOAD_RESAVE",
+        "NO_DEPLOYMENT"
+      ],
+      "rollback": "V29 exact accepted OFF, V24 frozen",
+      "handoff": "06 V30 fixed 13-path combined QA, 6 dist paths/55 modules/4146 hashes, reuse independent 04 Recipe23 and 05 Recipe4 UI evidence, no full re-QA. 05 Recipe23 receipt UI and 03 Celebration5 causal independent. 04 wait accepted causal."
     },
-    "inFlightStreams": [
-      "04_FORMAL_RECIPE_REMAINING23_SCOPED_WRITER",
-      "05_FORMAL_RECIPE4_RECEIPT_UI"
-    ]
+    "inFlightStreams": []
   },
   "formalRelease": {
     "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
@@ -4675,6 +4735,52 @@
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
     "integrationCandidate": {
+      "label": "V30_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
+      "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Source.zip",
+      "sha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
+      "entries": 505,
+      "bytes": 3279840,
+      "baseSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+      "delta": {
+        "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Delta.zip",
+        "sha256": "0fef51d689444ce05165a74b24dac4f85b46dd9c4a4e55ea4f1108ccc8dcdb31",
+        "modified": 7,
+        "added": 6,
+        "deleted": 0
+      },
+      "manifest": {
+        "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Manifest.json",
+        "sha256": "98e036148fcdb310aa6fb6e06359dad3f42d9134ba5556c31961e57aa1d5910c"
+      },
+      "evidence": {
+        "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_Evidence.zip",
+        "sha256": "712f75e6c11180de83ee57de0e18c007472de9cef59705ab6193dba26accb223"
+      },
+      "distribution": {
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_ArtifactManifest.json",
+          "sha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V30_FormalIntegrated_20261113_DistributionDelta.zip",
+          "sha256": "13cd7af3c75acd69b485e66fd59abe38b3de84ddc0f5740772d47f42e542956f",
+          "entries": 6
+        },
+        "baseArtifactManifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d",
+        "entries": 4146,
+        "bytes": 146346689,
+        "webp": 4076,
+        "modules": 55,
+        "modified": 6,
+        "added": 0,
+        "unchanged": 4140,
+        "flags": "OFF",
+        "reconstruct": "V29 exact OFF artifact + six-path distribution delta"
+      },
+      "readback": "ALL_6_BYTE_EXACT_SHA_CRC_AND_505_ENTRY_HASHES_PASS",
+      "privateLibrary": "HKIA Editor Private"
+    },
+    "previousIntegrationCandidate": {
       "label": "V29_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
       "file": "HKIA_CTRL_V29_FormalIntegrated_20261112_Source.zip",
       "sha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
@@ -4718,54 +4824,8 @@
         "reconstruct": "V28 exact OFF artifact + six-path distribution delta"
       },
       "readback": "ALL_6_BYTE_EXACT_SHA_CRC_AND_499_ENTRY_HASHES_PASS",
-      "privateLibrary": "HKIA Editor Private"
-    },
-    "previousIntegrationCandidate": {
-      "label": "V28_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
-      "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_Source.zip",
-      "sha256": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
-      "entries": 493,
-      "bytes": 3242071,
-      "baseSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
-      "delta": {
-        "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_Delta.zip",
-        "sha256": "b662a87e204a5f9876d404a50adf051b6503f415a496068396deabfba005435b",
-        "modified": 8,
-        "added": 14,
-        "deleted": 0
-      },
-      "manifest": {
-        "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_Manifest.json",
-        "sha256": "6085be0c21cbc00ea0699fa03ea6de8d5b0e3d3ff07d8cec35bbd9061c76b75d"
-      },
-      "evidence": {
-        "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_Evidence.zip",
-        "sha256": "125e2d4de3517dc53fece89c00f28760c316deb7b40c8236f87101e08bfeecd1"
-      },
-      "distribution": {
-        "artifactManifest": {
-          "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_ArtifactManifest.json",
-          "sha256": "76e4603bde71982aabbbf578c315aaf65fbdffe18483e2b921bfb3049a68e89f"
-        },
-        "delta": {
-          "file": "HKIA_CTRL_V28_FormalIntegrated_20261112_DistributionDelta.zip",
-          "sha256": "b799ff99b8a7939c5d9d482f837830407757f0510ca8b607578a2cde4d53013d",
-          "entries": 7
-        },
-        "baseArtifactManifestSha256": "03e3832920ccc03c90400bdc7cecacbad09bb1fea0514208fdd5d0911eee2f99",
-        "entries": 4146,
-        "bytes": 146319889,
-        "webp": 4076,
-        "modules": 55,
-        "modified": 7,
-        "added": 0,
-        "unchanged": 4139,
-        "flags": "OFF",
-        "reconstruct": "V27 exact OFF artifact + 7-path distribution delta"
-      },
-      "readback": "ALL_6_BYTE_EXACT_SHA_CRC_493_ENTRY_HASHES",
       "privateLibrary": "HKIA Editor Private",
-      "acceptance": "06_SCOPED_PASS_FORMAL_V28"
+      "acceptance": "06_SCOPED_PASS_FORMAL_V29_OFF_COMBINED"
     }
   }
 }
