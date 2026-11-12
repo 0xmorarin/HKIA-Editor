@@ -25,16 +25,26 @@
       "next": "ONLY_NEW_PROVEN_COMPLETION_REVERSAL_FAMILY_OR_DERIVED_PRODUCER_PERSISTENCE; OTHERWISE_HANDOFF_04_03_NO_REDO"
     },
     "03_LINKAGE": {
-      "status": "IN_FLIGHT_RECIPE_5913958_TARGETED_CAUSAL_V18",
+      "status": "V18_RECIPE_CAUSAL_DELTA_LOCAL_PASS_QA_PENDING",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "TARGETED_01_5913958_MATCHITEM_SPECIAL_DETAIL_TYPE_AND_ACHIEVEMENT_RECOUNT_SIDE_EFFECT; NO_BLANKET_GRAPH_REGEN; ONLY_PROVEN_REQUIRED",
+      "next": "06_SCOPED_QA_03_DELTA; 04_RECEIPT_SAFE_RECIPE_AND_OTHER_INDEPENDENT_OUTPUT; 05_ADVISORY_IF_CONNECTED; 03_NO_REPEAT_WAIT_NEW_CONCRETE_CAUSAL_TARGET_OR_DEVICE_EVIDENCE",
       "task": "RECIPE_TARGETED_CAUSAL",
       "taskBaseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-      "scope": "5913958 MatchItem zero-quantity special detail type and achievement recount; preserve prior family contracts",
-      "baseMain": "7ef20837cebdd9c934010a3e26cd0c34b697bf53"
+      "scope": "Exact 5913958 RecipeItemDetails zero quantity exclusion; 24 member real witness, conditional recount and SaveCounter",
+      "baseMain": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+      "latestDelta": {
+        "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+        "sha256": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb",
+        "artifact": "HKIA_03_LINKAGE_V18_RECIPE_RECOUNT_DELTA_20261112.zip",
+        "scope": "10_ADD_0_MOD_0_DEL; 363 base entries unchanged",
+        "evidence": "36 focused + 30 adjacent tests, 36 scoped and 39 reused native anchors, private in-memory quantity change + independent reparse",
+        "classification": "RELATED_ONLY_NEW_REQUIRED_0",
+        "actualGameAccepted": false
+      },
+      "remaining": "Final native load/resave/reboot, zero row retention, receipt restore and other counter/reward side effects unverified; exact 23 recount static prediction, no new cross-model writes; independent operations not blocked"
     },
     "04_SAVE_CORE": {
       "status": "RECIPE_CONTRACT_REPAIR_LOCAL_PASS_QA_PENDING",
