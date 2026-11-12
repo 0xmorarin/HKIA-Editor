@@ -1456,15 +1456,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V26_EXACT20_BATCH_UI_02_03_AND_RECIPE32_SCOPED_PASS_V24_WAIT_ENV",
+      "status": "FORMAL_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_V26_SUCCESSOR; 04_EXACT9_ABSENCE_REVOKE; 05_EXACT20_UI; 03_RECIPE32_CAUSAL; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
+      "next": "00_SERIAL_V27_SUCCESSOR; 04_RECIPE32_EXACT_SAFE_SUBSET_WRITER; 05_MANUAL9_UI; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
       "execution": {
         "task": "FORMAL_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "422c479b70c8bc8851299ab765c559f51d82ffc9",
         "scope": "V27 integration 47 paths; 04 Manual9 9 paths; 05 Exact20 UI 5 paths; 03 Recipe32 causal 8 ADD; no V24 change",
         "owner": "06 QA",
@@ -2399,7 +2399,124 @@
             ],
             "condition": "03 consume exact fixed 01 research only, 00 integrate exact 8 additive paths with accepted V26/other followups; 04 after 03 independent acceptance. V24 frozen."
           }
-        }
+        },
+        "verdict": "SCOPED_PASS_V27_MANUAL9_EXACT20_UI_RECIPE32_CAUSAL",
+        "fixedSources": {
+          "v27": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
+          "core04": "9ebbe94f7d5a241f62ccacd8cb4ec07b200c8c78fb96368497428b1a06da64fb",
+          "ui05": "bdea9c817fd391d5b9c98030424abbbe2d8d7b9c1e91e7d6fdf0fe7cae589e76",
+          "link03": "0569736b9b300805ebd2f78b1e67bafb5237066b92359cb40271b0e0cc02496c"
+        },
+        "verified": {
+          "focused": 51,
+          "core04": {
+            "verdict": "SCOPED_PASS_MANUAL9_V301_OFFLINE_REVOKE",
+            "scope": "6MOD3ADD",
+            "baseEntries": 461,
+            "sourceEntries": 464,
+            "genuineOutputs": 9,
+            "independentGenuineOutputs": 9,
+            "slotFields": 54,
+            "accountFields": 0,
+            "pythonRawFrames": 90,
+            "independentNegatives": 54,
+            "harnessNegatives": 57,
+            "rollback": 9,
+            "offPreview": 9,
+            "wrongVersionDenied": true,
+            "reimport": 9
+          },
+          "ui05": {
+            "verdict": "SCOPED_PASS_EXACT20_UI_INLINE",
+            "scope": "2MOD3ADD",
+            "baseEntries": 471,
+            "sourceEntries": 474,
+            "controllerOutputs": 3,
+            "offPreviewTargets": 20,
+            "slotFields": 132,
+            "accountFields": 12,
+            "chromiumInlineCases": 5,
+            "offViewports": [
+              320,
+              375,
+              1280
+            ],
+            "wrongVersion300Denied": true,
+            "isolatedDownloadReimport": 1,
+            "originalUnchanged": true
+          },
+          "link03": {
+            "verdict": "SCOPED_PASS_RECIPE32_CAUSAL_ADVISORY_ONLY",
+            "scope": "8ADD_PLUS_TRANSPORT_MANIFEST",
+            "sourceManagedBodies": 32,
+            "sourceCounterDefs": 130,
+            "nativeAnchors": 26,
+            "typedDocs": 20207,
+            "counterDocs": 586,
+            "celebratedMatches": 5,
+            "counterGuidMatches": 0,
+            "requiredWrites": 0,
+            "aggregateExact": true,
+            "switchParity": false,
+            "productAuthorized": false
+          },
+          "v27": {
+            "verdict": "SCOPED_PASS_FORMAL_OFF_COMBINED",
+            "sourceEntries": 479,
+            "modified": 9,
+            "added": 38,
+            "unchanged": 432,
+            "distEntries": 4146,
+            "distBytes": 146217560,
+            "webp": 4076,
+            "modules": 55,
+            "distModified": 7,
+            "distAdded": 2,
+            "distManifestSha256": "03e3832920ccc03c90400bdc7cecacbad09bb1fea0514208fdd5d0911eee2f99",
+            "allArtifactHashesEqual": true,
+            "build": "PASS",
+            "check": "PASS",
+            "writer": "OFF"
+          },
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_V27_FORMAL_FOLLOWUP_REPORT_20261112.md",
+            "sha256": "e74824f3d666b1be989198cb494bf11a3d1ae15bdfc6816d13044465d48e97f7"
+          },
+          "zip": {
+            "file": "HKIA_06_V27_FORMAL_FOLLOWUP_EVIDENCE_20261112.zip",
+            "sha256": "87e8c79671565f2148735d4b11dd5260c7a8052335f32f180944d6b38567afcb",
+            "entries": 28
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V27_FORMAL_FOLLOWUP_20261112.md",
+            "sha256": "119af672f48bec48e72127bb9e5a5d5312d982a94634577720005df6e813d56f"
+          },
+          "result": {
+            "file": "HKIA_06_V27_FORMAL_FOLLOWUP_RESULT_20261112.json",
+            "sha256": "6661afc6b184016b58c7e0b9b1dbe8c2624f6c5961524103b00eb741c70cf12c"
+          },
+          "privateLibraryReadback": "ALL_4_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "V24 authorized actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV",
+          "Native authentication/load/resave/reboot/reward and scheduling unknown",
+          "Recipe32 Switch parity/runtime references; trusted same-runtime restore only",
+          "00 serial integration; 05 Manual9 UI; 04 Recipe32 exact subset",
+          "07 independent WAIT_ENV"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "04 SAVE CORE",
+            "05 WEB"
+          ],
+          "condition": "00 serial integrate 04 Manual9 9 paths + 05 Exact20 UI 5 paths + 03 Recipe32 8 additive paths (transport manifest excluded) on fixed V27, verify overlaps and rebuild; 04 exact 4 representative Recipe32 then proven subset only; 05 Manual9 9 target UI on accepted 04; V24 frozen",
+          "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
+        },
+        "rollback": "V27 fixed OFF; restore 04/05 exact preimages and remove 03 additions; V24 unchanged"
       },
       "handoffRecheck": {
         "date": "2026-11-12",
