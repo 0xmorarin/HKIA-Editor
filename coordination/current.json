@@ -140,7 +140,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "V21_NATIVE_LOAD_BOUNDARY_STATIC_PASS_QA_READY",
+      "status": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_REAL_OUTPUT_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -156,10 +156,10 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "FORMAL_READY_FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF; BASE_R2_OFF; V24_FROZEN; 06 scoped QA; 05 UI after accepted contract",
+      "next": "06_SCOPED_QA_FORMAL_04_12_PATHS_ON_R2_OFF; 05_FAMILY_REVOKE_UI_AFTER_ACCEPTED_CONTRACT; WAIT_NEW_01_02_03_CONTRACTS; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "04 private family revoke writer proof using existing causal contract; R2 OFF; no V24/UI changes",
@@ -327,7 +327,68 @@
             "nextAfter": "00 serial integrate accepted disjoint evidence/UI; final actual browser and irreducible game acceptance; 04 waits new evidence or scoped QA failure"
           },
           "rollback": "Remove exactly 3 additive evidence paths; 381 original V21 entries unchanged"
-        }
+        },
+        "fixedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+        "deltaSha256": "7a73d5ce1779d599dd3dbb70891f01640844c381fc97cac3aad515c0c8e0dd8c",
+        "manifestSha256": "59d66c5cfdc83963093c73cfe8ba7c69462cfd12ab1be2d922fa3b466ffabe7c",
+        "changedPaths": "8_MOD_4_ADD_0_DEL",
+        "artifacts": {
+          "source": "libfile_77c4d0af22608191b2ead1b2e0131967",
+          "delta": "libfile_b4077e5f09d481919726417cbeb7e0f0",
+          "manifest": "libfile_300e6c296f148191b97517ab8921d84a"
+        },
+        "verified": {
+          "baseUnchangedEntries": 388,
+          "sourceEntries": 400,
+          "libraryReadbackAll3ShaAnd400Entries": "PASS",
+          "deltaReplay": "PASS",
+          "tests": {
+            "pass": 798,
+            "skip": 36,
+            "fail": 0
+          },
+          "focused": 5,
+          "check": "PASS",
+          "build": "PASS_SOURCE_ONLY",
+          "tsc": "PASS_STRICT_BUNDLER",
+          "graph": "53_MODULES_5_CHANGED_MODULE_HASHES",
+          "nodeWorkerRpc": "PASS_SYNTHETIC",
+          "genuineVersion": "3.0.1",
+          "collectionVersion": 87,
+          "targets": [
+            "achievement_aquariumDisplay",
+            "achievement_beginningBarista",
+            "achievement_betterMetal"
+          ],
+          "realEditedCopies": 3,
+          "verifiedFields": 30,
+          "rawZipPairs": 3,
+          "rollback": 9,
+          "planNegativeAssertions": 17,
+          "unrelatedFamilyDenials": 2,
+          "defaultOffDenials": 5,
+          "wrongVersionReal300Denied": 1,
+          "originalUnchanged": true,
+          "fixedSourceRealAggregateExact": true,
+          "gameAccepted": false,
+          "privateSaveBytesWritten": false
+        },
+        "unverified": [
+          "INDEPENDENT_QA_NEW_12_PATHS",
+          "NATIVE_AUTHENTICATION_LOAD_RESAVE_REBOOT_REWARD_REPLAY",
+          "V300_FAMILY_REVOKE_CONTRACT",
+          "GENERAL_COMPLETION_REVOCATION_AND_BULK_FAMILY",
+          "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER_WAIT_AUTHORIZED_ENV",
+          "NODE_NEXT_DECLARATION_EXTENSION_RESOLUTION_PREEXISTING"
+        ],
+        "dependency": "R2 OFF fixed baseline; 03 V16 terminal family persistence contract and V20 AlwaysRun accepted static conditional pair; no new 02/03 proof required for isolated 3-target scope; V24 private beta frozen; no release flag changes",
+        "handoff": {
+          "to": "06 QA",
+          "scope": "12 exact changed paths vs R2 OFF; 3 genuine v301 8+2 outputs, independent slot/account/raw ZIP verification, OFF/beta-only/formal flags and wrong-version/other-family negatives, 9 rollback, Node Worker RPC; no redo prior beta",
+          "condition": "Fixed source 24f5e704…; no activation or V24 merge; formal candidate only",
+          "nextAfter": "05 family revoke capability UI only after scoped acceptance; 00 serialize later formal integration; 04 new 01/02/03 proven scope after deps"
+        },
+        "rollback": "Restore 8 MOD from R2 73a2b9e7…; remove 4 ADD; V24 frozen untouched"
       },
       "formalTask": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
