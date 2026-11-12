@@ -12,7 +12,7 @@
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "recipeTransitions": 2,
       "actualAcquiredToggle": "NOT_AUTHORIZED",
-      "next": "TARGETED_NONRECIPE_EXISTING_ROW_LIFECYCLE_AND_REFERENCE_SAFE_ADD_REMOVE_CONTRACT; NO_REPEAT_RECIPE"
+      "next": "P0_BETA_COLLECTION_ACTUAL_ACQUIRED_STATE; EXISTING_RECIPE_AND_TARGETED_NONRECIPE_SAFE_TRANSITIONS; HANDOFF_PROVEN_SCOPE_04; DO_NOT_REDO_HISTORY"
     },
     "02_ACHIEVEMENT": {
       "status": "V16_REMAINING_COUNTER_COVERAGE_INTEGRATED_LOCAL_PASS",
@@ -37,7 +37,8 @@
       "devExportPolicy": "EMPTY_ACCEPTANCE_LIST_EXACT_SOURCE_PLAN",
       "realDevOutput": "NOT_AUTHORIZED",
       "nativeLoad": "29_STATIC_ANCHORS_UPSTREAM_MIGRATION_TABLE_MAX_UNKNOWN",
-      "next": "CLOSE_STATIC_NATIVE_LOAD_MIGRATION_AUTH_FOR_PROVEN_OPERATION_CLASSES; DESIGN_GENERAL_RELEASE_CAPABILITY_NOT_PER_USER_SAVE_HASH; INDEPENDENT_QA; KEEP_FLAG_OFF"
+      "next": "P0_BETA_REAL_SAVE_OUTPUT_GENERAL_VERSION_OPERATION_CAPABILITY; REUSE_DEV_OUTPUT; CLOSE_NATIVE_LOAD_AUTH_MIGRATION_FOR_PROVEN_SCOPE; OFF_UNTIL_INDEPENDENT_QA; 05_TYPED_API_HANDOFF",
+      "betaRequired": true
     },
     "05_WEB": {
       "status": "READY_NOW_V16_ACCEPTED_PREVIEW_UI",
@@ -45,7 +46,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "CONNECT_ACCEPTED_V16_PREVIEW_API; SAME_PAGES_UI; ADD_VISIBLE_RIGHTSHOLDER_CREDITS_AND_UNOFFICIAL_NOTICE; V17_ADDITIONS_AFTER_QA; NO_EXPORT_WHILE_OFF",
+      "next": "P0_CONNECT_ACCEPTED_V16_PREVIEW_UI_AND_VISIBLE_CREDITS_NOW; PREPARE_TYPED_OUTPUT_UI_AGAINST_04_CONTRACT; ENABLE_REAL_DOWNLOAD_ONLY_FOR_ACCEPTED_BETA_CAPABILITIES",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -73,7 +74,8 @@
         1280
       ],
       "publicValidationUi": "SAME_UI_AND_VERIFIED_IMAGES_AS_FORMAL_RELEASE",
-      "attributionNotice": "REQUIRED_VISIBLE_NOTICE_FROM_CONFIG_RELEASE_GATES_EN_JA"
+      "attributionNotice": "REQUIRED_VISIBLE_NOTICE_FROM_CONFIG_RELEASE_GATES_EN_JA",
+      "betaRequired": true
     },
     "06_QA": {
       "status": "V16_SCOPED_PASS_ACCEPTED_V17_PENDING",
@@ -85,7 +87,7 @@
       "v15Key0Negative": "FIXED_INDEPENDENTLY",
       "targetSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "targetScope": "9_MOD_26_ADD",
-      "next": "V17_CHANGED_SCOPE_INDEPENDENT_DEV_OUTPUT_AUTHORIZATION_FAMILY_RECIPE_CODEC_REPIN_AND_PRESERVATION"
+      "next": "V17_35_PATH_SCOPED_QA_NOW; THEN INDEPENDENT_BETA_REAL_WRITER_AND_05_UI_SOURCE; FINAL_REAL_HTTPS_BROWSER_ARTIFACT_QA"
     },
     "00_MEDIA": {
       "status": "EXTERNAL_REFERENCE_MAPPING_DONE_BYTES_BLOCKED",
@@ -144,15 +146,17 @@
     "realDevicePolicy": "CONDITIONAL_STATIC_FIRST_NO_UNOBSERVED_PASS",
     "publicValidationScopeApproved": true,
     "publicValidationDeployed": false,
-    "gameImagePublicationApproved": true
+    "gameImagePublicationApproved": true,
+    "functionalBetaScopeApproved": true,
+    "betaWriterRequired": true,
+    "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "START_NOW 00 Pages same product source and verified 4076 WebP + 740 fallback; visible rightsholder credits and public artifact privacy/build checks; no separate image-free demo",
-    "PARALLEL 06 V17 35 changed paths; 05 accepted preview UI, Pages subpath and mandatory EN/JA attribution; 04 safe real output; 01 nonrecipe safe transitions",
-    "00 deploy owner-approved validation scope after credits/artifact QA and rollback ready; Native Writer OFF; private saves and original binaries prohibited",
-    "05/06 use actual Pages HTTPS for image UI/ESM/WebCrypto/Worker validation; synthetic public test data only",
-    "04 safe operation export QA then 05 output UI and 06 final integrated QA",
-    "00 formal release promotion on same implementation; separate Owner formal approval; real device only irreducible release-critical"
+    "START_NOW_PARALLEL 06 V17 changed 35 paths, 04 real native Writer capability, 05 V16 accepted preview and credits, 01 actual acquisition, 00 same product Pages build; no repeat accepted scope",
+    "04 fixed real output Source and operation contract -> 06 independent scoped QA; 05 independent UI work proceeds now",
+    "05 connect only accepted output capabilities; 00 serial integrate fixed beta source and build 4076 images/740 fallback; no private fixtures",
+    "06 final integrated real browser E2E/actual WebCrypto/ESM/Worker/real save export-reopen/privacy; only irreducible game acceptance condition escalates to device",
+    "00 deploy owner-approved functional beta when gates pass; no automatic release promotion; formal separate approval"
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -451,48 +455,54 @@
   },
   "ownerPriorities": {
     "effectiveDate": "2026-11-11",
-    "decision": "RELEASE_FIRST_STATIC_FIRST",
+    "decision": "FUNCTIONAL_BETA_RELEASE_FIRST_STATIC_FIRST",
     "workOrder": [
       {
         "priority": "P0",
         "owner": "06_QA",
-        "task": "INDEPENDENT_V11_TO_V13_6MOD3ADD_WITH_REAL_READONLY_AND_WRITER_GATES",
+        "task": "V17_35_PATHS",
         "status": "READY_NOW"
       },
       {
         "priority": "P0",
         "owner": "04_SAVE_CORE",
-        "task": "REAL_V300_V301_NATIVE_DICTIONARY_CODEC_AND_TYPED_WRITER",
+        "task": "BETA_REAL_NATIVE_OUTPUT_CAPABILITY",
         "status": "READY_NOW"
       },
       {
-        "priority": "P1",
+        "priority": "P0",
         "owner": "05_WEB",
-        "task": "PRIVATE_4076_WEBP_EXACT_IMAGEMAP_UI_INTEGRATION",
+        "task": "ACCEPTED_PREVIEW_UI_CREDITS_OUTPUT_CONTRACT",
         "status": "READY_NOW"
       },
       {
-        "priority": "P1_AFTER_DEP",
-        "owner": "05_WEB",
-        "task": "NATIVE_WRITER_UI_ONLY_AFTER_04_QA_ACCEPTED",
-        "status": "WAIT_04_API"
+        "priority": "P0",
+        "owner": "01_COLLECTION",
+        "task": "SAFE_ACTUAL_ACQUISITION",
+        "status": "READY_NOW"
+      },
+      {
+        "priority": "P0",
+        "owner": "00_CTRL",
+        "task": "SAME_PRODUCT_PAGES_BUILD",
+        "status": "READY_NOW"
       }
     ],
     "parallelSafeNow": [
-      "00_FULL_FIDELITY_PAGES_PREPARATION",
       "06_V17_35_PATHS",
-      "05_V16_ACCEPTED_PREVIEW_UI",
-      "04_NATIVE_LOAD_AND_GENERAL_RELEASE_CAPABILITY",
-      "01_NONRECIPE_SAFE_TRANSITIONS"
+      "04_BETA_REAL_OUTPUT_CAPABILITIES",
+      "05_V16_ACCEPTED_PREVIEW_UI_CREDITS_AND_OUTPUT_UI_CONTRACT",
+      "01_COLLECTION_ACQUIRED_STATE",
+      "00_FULL_FIDELITY_PAGES_BUILD_PREPARATION"
     ],
     "serialAfter": [
       "00_ACCEPT_V17",
-      "00_05_VISIBLE_ATTRIBUTION_AND_PUBLIC_ARTIFACT_QA",
-      "00_PAGES_VALIDATION_DEPLOY_WHEN_GATES_PASS",
-      "04_PROVEN_OPERATION_OUTPUT_QA",
-      "05_ACCEPTED_OUTPUT_UI",
-      "06_FINAL_BROWSER_OFFLINE_QA",
-      "00_OWNER_FORMAL_RELEASE_APPROVAL"
+      "04_PROVEN_REAL_OUTPUT_SCOPED_QA",
+      "05_CONNECT_ACCEPTED_OUTPUT_CAPABILITIES",
+      "00_INTEGRATE_FIXED_BETA_ARTIFACT",
+      "06_BETA_REAL_BROWSER_E2E_AND_PRIVACY",
+      "00_OWNER_APPROVED_FUNCTIONAL_BETA_DEPLOY",
+      "00_FORMAL_PROMOTION_SEPARATE_APPROVAL"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED",
     "externalMedia": "WAIT_OWNER_LOCAL_BYTES_OR_AUTHORIZED_SOURCE; NO_REPEATED_BLOCKED_FETCH"
@@ -577,7 +587,9 @@
       "previewImageScopeApproved": true,
       "rightsReview": "OWNER_RISK_ACCEPTANCE_NOT_LEGAL_CLEARANCE",
       "imagePublicationApproved": true,
-      "attribution": "REQUIRED_NOT_YET_RENDERED"
+      "attribution": "REQUIRED_NOT_YET_RENDERED",
+      "betaWriterRequired": true,
+      "betaWriterActuallyEnabled": false
     },
     "fixedCandidateEntries": 224,
     "new04Candidate": {
@@ -633,11 +645,11 @@
       ],
       "strictWriterAllowed": false
     },
-    "publicValidation": "OWNER_APPROVED_FULL_FIDELITY_AND_IMAGE_PUBLICATION_WITH_CREDITS_NOT_DEPLOYED"
+    "publicValidation": "OWNER_APPROVED_FUNCTIONAL_BETA_REAL_WRITER_WITH_IMAGES_CREDITS_NOT_DEPLOYED"
   },
   "publicValidation": {
-    "ownerDecision": "2026-11-12_FULL_FIDELITY_PUBLIC_VALIDATION",
-    "status": "READY_PREPARATION_NOT_DEPLOYED",
+    "ownerDecision": "2026-11-12_FUNCTIONAL_BETA_SAME_RELEASE_IMPLEMENTATION",
+    "status": "FUNCTIONAL_BETA_PREPARATION_NOT_DEPLOYED",
     "sameReleaseImplementation": true,
     "sourceBaselineSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
     "acceptedBaseSha256": "bd4e445b1ed015f84abdf23a242f7eb4684a086964e23398eff1bc28a6b00441",
@@ -647,12 +659,30 @@
     "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED; NO_RIGHTSHOLDER_PERMISSION_OR_LEGAL_CLEARANCE; OFFICIAL_SANRIO_POLICY_REVIEWED",
     "sourcePublicSafeBuild": "PENDING",
     "imagePipeline": "SAME_PRIVATE_PREVIEW_AND_PUBLIC_RELEASE_BUILD",
-    "writer": "OFF",
+    "writer": "REQUIRED_PROVEN_REAL_SAVE_OPERATIONS; ACTUAL_FLAG_OFF_PENDING_QA",
     "privateSaveAndGameBinaries": "PROHIBITED",
     "publicUrlPlanned": "https://0xmorarin.github.io/HKIA-Editor/",
-    "activationCondition": "OWNER_APPROVED_VALIDATION_SCOPE_AND_IMAGES; VERIFY_VISIBLE_ATTRIBUTION_PRIVACY_BUILD_PATHS_WRITER_OFF_ROLLBACK",
-    "next": "00_BUILD_SAME_PRODUCT_WITH_4076_VERIFIED_WEBP_AND_740_FALLBACK; 05_RENDER_MANDATORY_ATTRIBUTION; 06_ARTIFACT_QA; DEPLOY_VALIDATION_WHEN_GATES_PASS",
+    "activationCondition": "CREDITS_AND_PUBLIC_ARTIFACT_PRIVACY; BOTH_DOMAINS_REAL_NATIVE_EDIT_AND_INDEPENDENT_REOPEN_OUTPUT; OPERATION_SCOPED_QA; ACTUAL_BROWSER_E2E; ROLLBACK_READY",
+    "next": "04_REAL_OUTPUT_CAPABILITIES_AND_01_COLLECTION_STATE; 05_ACCEPTED_PREVIEW_UI_AND_CREDITS; 06_V17_QA; 00_SAME_PRODUCT_PAGES_BUILD_IN_PARALLEL_THEN_BETA_ACCEPTANCE",
     "ownerImageApproval": "EXPLICIT_2026_11_12_VALIDATION_AND_FORMAL_RELEASE_WITH_CREDITS",
-    "rightsNotice": "REQUIRED_VISIBLE_EN_JA_FOOTER_OR_ABOUT; NOT_YET_VERIFIED_IN_PRODUCT"
+    "rightsNotice": "REQUIRED_VISIBLE_EN_JA_FOOTER_OR_ABOUT; NOT_YET_VERIFIED_IN_PRODUCT",
+    "betaScope": {
+      "realSaveInput": true,
+      "realEdit": true,
+      "realEditedCopyOutput": true,
+      "versions": [
+        "3.0.0",
+        "3.0.1"
+      ],
+      "domains": [
+        "Achievements",
+        "Collections"
+      ],
+      "historyNotAcquisition": true,
+      "actualAcquisitionAndCompleteRevokeReleaseCritical": true,
+      "perSavePreapproval": false,
+      "unprovenOperations": "FAIL_CLOSED_ONLY_AFFECTED_SCOPE",
+      "privateFixtures": "NEVER_PUBLISH"
+    }
   }
 }
