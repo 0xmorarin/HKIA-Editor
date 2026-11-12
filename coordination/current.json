@@ -198,7 +198,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_BOOTSTRAP_ENVELOPE_INDEX",
+      "status": "PARTIAL_READER_R1_SOURCE_FROZEN_TOOLCHAIN_BLOCKED",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -215,10 +215,47 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "COMPILE_FOCUSED_TESTS; PORT_SAVEGAMEV2_ENVELOPE_AND_LZ4_BLOCK_SPANS; TYPED_NATIVE_SCHEMA_AND_BYTE_RANGE_INDEX; PRIVATE_REAL_JS_RUST_PARITY; NO_JS_PRODUCT_FILES",
+      "next": "07 CONTINUE ONLY AFTER VERIFIED_LOCAL_RUST_TOOLCHAIN: CARGO_TEST_OFFLINE_32; BUILD_PRIVATE_PARITY; GENUINE_SWITCH300_301_JS_RUST_EXACT_PAYLOAD_SPANS; THEN_06_INDEPENDENT_SCOPED_QA; 00_TOOLCHAIN_SUPPORT_ONLY_IF_NEEDED; JS_BETA_INDEPENDENT",
       "task": "HKIA-RUST-001",
       "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
-      "scope": "Existing bootstrap compile; V18 envelope/LZ4 and bounded structural index; isolated Rust only"
+      "scope": "Existing bootstrap compile; V18 envelope/LZ4 and bounded structural index; isolated Rust only",
+      "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
+      "source": {
+        "file": "HKIA_Rust07_Reader_R1_20261112_Source.zip",
+        "entries": 43,
+        "bytes": 36995,
+        "libraryPath": "/HKIA Editor Private/HKIA_Rust07_Reader_R1_20261112_Source.zip",
+        "delta": "41_ADD_1_MOD_1_UNCHANGED_OWNED_PATHS; BOOTSTRAP_DRAFT_CONTRACT_RELOCATED_PRIVATE_ONLY"
+      },
+      "manifest": {
+        "file": "HKIA_Rust07_Reader_R1_20261112_Manifest.json",
+        "sha256": "6b30ea654d1de8ecc10570fe47e49fcc53dd5e29fa683df76a0a3336abbf6464"
+      },
+      "handoff": {
+        "file": "HKIA_Rust07_Reader_R1_20261112_HANDOFF.md",
+        "sha256": "6950fc13500da3e1ad8f0626d941239cd5bab9df920896e3bd3e1ab270ca82ab"
+      },
+      "verification": {
+        "sourceZipCRC": "PASS",
+        "libraryReadbackAll43Hashes": "PASS",
+        "schemaTypes": 214,
+        "schemaGeneration": "REPRODUCIBLE",
+        "jsFocusedPass": 7,
+        "jsOracleValid": 5,
+        "jsOracleRejected": 20,
+        "rustPlannedTests": 32,
+        "rustExecutedTests": 0,
+        "rustCompile": "BLOCKED_CARGO_NOT_FOUND_EXIT_127_APT_DNS_DOWNLOAD_FAILED",
+        "privateRealParity": "UNVERIFIED",
+        "nativeAuthentication": "UNKNOWN",
+        "wasm": "UNVERIFIED",
+        "browser": "UNVERIFIED",
+        "writer": "NOT_IMPLEMENTED"
+      },
+      "implementation": "SAVEGAMEV2_SLOT_ENVELOPE_LZ4_BLOCK_SPANS_TYPED_NATIVE_SCHEMA_AND_TARGET_BYTE_RANGES; NO_ZIP_ACCOUNT_SESSION_WRITER_WASM",
+      "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
+      "handoffTo": "06_QA_AFTER_COMPILED_SOURCE_AND_REAL_PARITY; 00_CTRL_TOOLCHAIN_UNBLOCK_IF_NEEDED",
+      "dependency": "VERIFIED_RUST_TOOLCHAIN_LOCAL; GENUINE_SWITCH_300_301_PRIVATE_INPUTS_LOCAL; NO_BETA_DEPENDENCY"
     }
   },
   "p0FixCandidate": {
