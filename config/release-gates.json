@@ -13,15 +13,15 @@
     "githubPages": "OFF",
     "nativeSaveWriter": "OFF",
     "formalRelease": "OWNER_EXPLICIT_APPROVAL_REQUIRED",
-    "gameUiIcons": "INCLUDE_AT_FORMAL_RELEASE",
-    "iconsBeforeFormalRelease": "LOCAL_UI_PREVIEW_ONLY_NO_PUBLIC_UPLOAD",
+    "gameUiIcons": "INCLUDE_IN_PUBLIC_VALIDATION_AND_FORMAL_RELEASE",
+    "iconsBeforeFormalRelease": "PUBLIC_VALIDATION_ALLOWED_WITH_VERIFIED_GAME_IMAGES_AFTER_RIGHTS_AND_ARTIFACT_CHECKS",
     "commentsInPageArtifacts": "FORBIDDEN",
     "readmeFiles": "FORBIDDEN",
     "privateSaveAndGameBinaryUploads": "FORBIDDEN",
     "gameImagePolicy": {
       "localUiPreview": "ALLOWED_WITH_GAME_IMAGES",
-      "imageRelease": "FORMAL_GITHUB_PAGES_RELEASE_ONLY",
-      "publicRepositoryImagesBeforeRelease": "PROHIBITED",
+      "imageRelease": "PUBLIC_GITHUB_PAGES_VALIDATION_AND_FORMAL_RELEASE_SAME_ASSET_PIPELINE",
+      "publicRepositoryImagesBeforeRelease": "VERIFIED_DISTRIBUTION_ASSETS_ONLY_FOR_OWNER_APPROVED_PUBLIC_VALIDATION_AFTER_RIGHTS_REVIEW; RAW_GAME_ASSETS_PROHIBITED",
       "canonicalRasterFormat": "image/webp",
       "requiredCodec": "VP8L_LOSSLESS",
       "pixelIdentity": "RGBA_PIXEL_EXACT",
@@ -37,7 +37,7 @@
         "lossy-webp",
         "animated-webp"
       ],
-      "localVerification": "MANDATORY_BEFORE_RELEASE",
+      "localVerification": "MANDATORY_BEFORE_ANY_PUBLICATION",
       "releaseNeedsOwnerApproval": true,
       "requiredImageScope": "ALL_GAME_IMAGES_RELATED_TO_EDITABLE_ACHIEVEMENTS_AND_COLLECTIONS",
       "include": [
@@ -50,11 +50,12 @@
       "gameUiLayoutReproduction": "NOT_REQUIRED",
       "uiDesignPriority": "INDEPENDENT_USABILITY_FIRST_SEARCH_FILTER_PROGRESS_BULK_EDIT_DIFF",
       "assetIdentity": "SOURCE_VERIFIED_SPRITE_OR_TEXTURE_ID_ONLY",
-      "imageCoverageGate": "ALL_EDIT_RELEVANT_VISUAL_REFERENCES_MAPPED_AND_RESOLVED_OR_SOURCE_VERIFIED_NO_GAME_ART",
+      "imageCoverageGate": "FORMAL_RELEASE_ALL_EDIT_RELEVANT_VISUAL_REFERENCES_MAPPED_AND_RESOLVED_OR_SOURCE_VERIFIED_NO_GAME_ART; PUBLIC_VALIDATION_MAY_TRACK_EXPLICIT_UNRESOLVED_ROWS",
       "deduplicateIdenticalGameArtwork": true,
       "unknownAssetPolicy": "NEUTRAL_PLACEHOLDER_AND_REMAIN_UNVERIFIED_NOT_FAKE_MATCH",
-      "extractionAndConversion": "LOCAL_PRIVATE_ONLY_BEFORE_FORMAL_RELEASE",
-      "copyrightDistributionReview": "REQUIRED_BEFORE_PUBLICATION"
+      "extractionAndConversion": "LOCAL_PRIVATE_WORKSPACE; ONLY_VERIFIED_DISTRIBUTION_WEBP_AND_MINIMAL_MAPPING_MAY_ENTER_APPROVED_PUBLIC_BUILD",
+      "copyrightDistributionReview": "REQUIRED_BEFORE_ANY_PUBLICATION_PREVIEW_OR_FORMAL",
+      "validationImageCoverage": "INCLUDE_ALL_CURRENTLY_VERIFIED_RELEVANT_ART; UNRESOLVED_EXTERNAL_ART_EXPLICIT_UNKNOWN; NO_FAKE_MATCH"
     },
     "userExperience": {
       "layout": "CUSTOM_NOT_NATIVE_SCREEN_RECREATION",
@@ -68,6 +69,26 @@
       "preserveExistingTabs": true,
       "noFullRedesign": true,
       "gameImagesMandatoryForAllVerifiedRelatedAssets": true
+    },
+    "publicValidation": {
+      "ownerDecision": "2026-11-12_FULL_FIDELITY_PUBLIC_VALIDATION",
+      "authorization": "OWNER_APPROVED_VALIDATION_SCOPE_AND_GAME_IMAGE_PUBLICATION",
+      "actualDeployment": "NOT_YET_DEPLOYED",
+      "sameProductSource": true,
+      "sameUi": true,
+      "sameAssetPipeline": true,
+      "gameImages": "INCLUDE_VERIFIED_LOSSLESS_WEBP_AND_EXACT_IMAGEMAP",
+      "unresolvedImages": "NEUTRAL_PLACEHOLDER_WITH_EXPLICIT_UNKNOWN",
+      "nativeWriter": "OFF_UNTIL_OPERATION_SAFETY_QA_AND_OWNER_APPROVAL",
+      "requiredBeforeDeploy": [
+        "COPYRIGHT_DISTRIBUTION_REVIEW",
+        "PUBLIC_ARTIFACT_PRIVACY_SCAN",
+        "FIXED_SOURCE_BUILD_AND_ASSET_PATH_CHECK",
+        "NATIVE_WRITER_OFF",
+        "ROLLBACK_READY"
+      ],
+      "privateInputs": "NEVER_PUBLISH",
+      "formalPromotion": "SAME_CODE_AND_ASSETS_WITH_ACCEPTED_WRITER_CAPABILITIES_AND_FINAL_QA; OWNER_APPROVAL_REQUIRED"
     }
   },
   "compatibility": {
@@ -94,6 +115,7 @@
     "deviceEscalation": "ONLY_WHEN_RELEASE_CRITICAL_GAME_LOAD_PERSISTENCE_AUTH_OR_SIDE_EFFECT_CANNOT_BE_RESOLVED_BY_STATIC_AND_OFFLINE_EVIDENCE",
     "unobservedGameBehavior": "UNVERIFIED_NEVER_INFER_PASS",
     "unprovenWriteScope": "FAIL_CLOSED_OR_EXCLUDE_FROM_RELEASE_UNTIL_PROVEN",
-    "releaseNeedsOwnerApproval": true
+    "releaseNeedsOwnerApproval": true,
+    "publicValidation": "SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA_BEFORE_FORMAL_PROMOTION"
   }
 }
