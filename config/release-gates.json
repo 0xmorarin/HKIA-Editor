@@ -11,7 +11,7 @@
   },
   "distribution": {
     "githubPages": "OFF",
-    "nativeSaveWriter": "OFF",
+    "nativeSaveWriter": "OFF_PENDING_FUNCTIONAL_BETA_SAFETY_QA",
     "formalRelease": "OWNER_EXPLICIT_APPROVAL_REQUIRED",
     "gameUiIcons": "INCLUDE_IN_PUBLIC_VALIDATION_AND_FORMAL_RELEASE",
     "iconsBeforeFormalRelease": "PUBLIC_VALIDATION_ALLOWED_WITH_VERIFIED_GAME_IMAGES_AFTER_RIGHTS_AND_ARTIFACT_CHECKS",
@@ -89,26 +89,52 @@
       "gameImagesMandatoryForAllVerifiedRelatedAssets": true
     },
     "publicValidation": {
-      "ownerDecision": "2026-11-12_FULL_FIDELITY_PUBLIC_VALIDATION",
-      "authorization": "OWNER_EXPLICIT_IMAGE_PUBLICATION_APPROVAL_2026_11_12_WITH_CREDITS",
+      "ownerDecision": "2026-11-12_FUNCTIONAL_BETA_SAME_RELEASE_IMPLEMENTATION",
+      "authorization": "OWNER_APPROVED_FUNCTIONAL_BETA_SCOPE_AND_IMAGES_WITH_CREDITS",
       "actualDeployment": "NOT_YET_DEPLOYED",
       "sameProductSource": true,
       "sameUi": true,
       "sameAssetPipeline": true,
       "gameImages": "INCLUDE_VERIFIED_LOSSLESS_WEBP_AND_EXACT_IMAGEMAP",
       "unresolvedImages": "NEUTRAL_PLACEHOLDER_WITH_EXPLICIT_UNKNOWN",
-      "nativeWriter": "OFF_UNTIL_OPERATION_SAFETY_QA_AND_OWNER_APPROVAL",
+      "nativeWriter": "REQUIRED_FOR_FUNCTIONAL_BETA_PROVEN_OPERATION_CAPABILITIES_ONLY",
       "requiredBeforeDeploy": [
         "RIGHTS_ATTRIBUTION_NOTICE_RENDERED_AND_VERIFIED",
         "PUBLIC_ARTIFACT_PRIVACY_SCAN",
         "FIXED_SOURCE_BUILD_AND_ASSET_PATH_CHECK",
-        "NATIVE_WRITER_OFF",
+        "REAL_USER_SAVE_INPUT_PLAN_APPLY_ENCODE_INDEPENDENT_REPARSE_VERIFY_EXPORT_BOTH_DOMAINS",
+        "INDEPENDENT_OPERATION_SCOPED_QA",
+        "REAL_BROWSER_HTTP_HTTPS_ESM_WEBCRYPTO_WORKER_E2E",
+        "UNPROVEN_OPERATION_CAPABILITIES_FAIL_CLOSED",
         "ROLLBACK_READY"
       ],
       "privateInputs": "NEVER_PUBLISH",
       "formalPromotion": "SAME_CODE_AND_ASSETS_WITH_ACCEPTED_WRITER_CAPABILITIES_AND_FINAL_QA; OWNER_APPROVAL_REQUIRED",
       "rightsPermission": "NOT_OBTAINED_NO_CLAIM_OF_LICENSE_OR_ENDORSEMENT",
-      "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED_NOT_LEGAL_CLEARANCE"
+      "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED_NOT_LEGAL_CLEARANCE",
+      "betaAcceptance": {
+        "sameProductSource": true,
+        "realNativeInput": true,
+        "realEditedCopyOutput": true,
+        "requiredDomains": [
+          "Achievements",
+          "Collections"
+        ],
+        "versions": [
+          "Switch 3.0.0",
+          "Switch 3.0.1"
+        ],
+        "operationScopedEnablement": true,
+        "individualSavePreapproval": "NOT_A_PRODUCTION_REQUIREMENT; VERSION_AND_OPERATION_CONTRACT_PLUS_RUNTIME_VALIDATION_AND_CAS",
+        "minimumScope": "AT_LEAST_ONE_PROVEN_MEANINGFUL_NATIVE_EDIT_AND_VERIFIED_EDITED_COPY_PER_DOMAIN; HISTORY_ONLY_MUST_NOT_BE_LABELED_ACQUIRED_STATE; ACTUAL_ACQUISITION_AND_COMPLETE_REVOKE_REMAIN_RELEASE_CRITICAL_COVERAGE_TARGETS",
+        "unprovenOperations": "DISABLED_WITH_REASON",
+        "device": "CONDITIONAL_ONLY_IF_STATIC_AND_OFFLINE_EVIDENCE_CANNOT_RESOLVE_RELEASE_CRITICAL_ACCEPTANCE",
+        "originalUnchanged": true,
+        "externalSaveTransmission": "FORBIDDEN",
+        "privateFixtures": "NEVER_PUBLISH",
+        "actualEnablement": "PENDING_SAFETY_AND_INDEPENDENT_QA; DO_NOT_CHANGE_LIVE_FLAGS_YET",
+        "formalRelease": "SEPARATE_OWNER_APPROVAL"
+      }
     },
     "attributionNotice": {
       "required": true,
@@ -152,6 +178,6 @@
     "unobservedGameBehavior": "UNVERIFIED_NEVER_INFER_PASS",
     "unprovenWriteScope": "FAIL_CLOSED_OR_EXCLUDE_FROM_RELEASE_UNTIL_PROVEN",
     "releaseNeedsOwnerApproval": true,
-    "publicValidation": "SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA_BEFORE_FORMAL_PROMOTION"
+    "publicValidation": "FUNCTIONAL_BETA_WITH_REAL_NATIVE_SAVE_EDIT_AND_OUTPUT; SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; ACTUAL_HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA"
   }
 }
