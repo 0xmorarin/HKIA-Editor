@@ -341,7 +341,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL_MANUAL9_REAL_OUTPUT_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_RECIPE4_REAL_FORWARD_RECEIPT_REVERSE_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -357,7 +357,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_MANUAL9_9_PATHS; 05_AFTER_PASS_MANUAL9_UI; 00_V27_SERIAL_INTEGRATION; 04_RECIPE32_AFTER_03_CAUSAL_QA_SAFE_SUBSET; OTHER20_REWARD_WAIT_EVIDENCE; V24_FROZEN",
+      "next": "06_SCOPED_QA_RECIPE4_8_PATHS; 05_AFTER_PASS_RECIPE4_UI; 00_SERIAL_ACCEPTED_INTEGRATION; 04_REMAINING23_AFTER_EXACT4_ACCEPTANCE_AND_SCOPE; 5_CELEBRATION_WAIT_CAUSAL_PROOF; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -919,12 +919,84 @@
       },
       "recipe32Execution": {
         "task": "FORMAL_RECIPE32_EXACT_SAFE_SUBSET_WRITER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseMain": "8bdb323fd8685fe4212139260533870437b70cbc",
         "baseSourceSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
         "owner": "04 SAVE CORE",
         "scope": "Existing row Recipe exact safe subset, trusted receipt/restore and atomic output; no new rows, reward or V24 changes",
-        "dependency": "06 Recipe32 01 + 03 research scoped PASS, V27 scoped PASS; preserve existing receipt authorization"
+        "dependency": "06 Recipe32 01 + 03 research scoped PASS, V27 scoped PASS; preserve existing receipt authorization",
+        "baseCompositeSha256": "dfc975aaceea73d9b48d2d530358a398c0a5639257e92464a1e0626bbf8a401e",
+        "baseCompositeEntries": 490,
+        "baseReconstruction": "V27 exact 479 + independently accepted Manual9 6MOD3ADD + 03 Recipe32 8ADD excluding transport manifest; all pre/postimages verified",
+        "fixedSourceSha256": "364c6cb76747ffebc7439924309e95261042a77b14078200eea81575278f8eca",
+        "deltaSha256": "fbe5f4e94ad00cdbaf9767d8179f47e3ace2ba1405a0fbed4d86189a1bd55464",
+        "manifestSha256": "62cf309b03fd8018482991b086fa178180f441a8ea02530895bc1b0f051bff12",
+        "evidenceSha256": "3ad8673956582ea1f13673af773065f3a67e8dcd1fd10b12a3be08d88249d3fd",
+        "changedPaths": "5_MOD_3_ADD_0_DEL; 485 unchanged of 490; 493 source",
+        "artifacts": {
+          "base": "HKIA_04_FormalRecipe4_20261112_Base.zip",
+          "source": "HKIA_04_FormalRecipe4_20261112_Source.zip",
+          "delta": "HKIA_04_FormalRecipe4_20261112_Delta.zip",
+          "manifest": "HKIA_04_FormalRecipe4_20261112_Manifest.json",
+          "evidence": "HKIA_04_FormalRecipe4_20261112_Evidence.zip",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "targets": [
+          167744018,
+          167310698,
+          297899965,
+          575014896
+        ],
+        "operation": "collection-recipe-expansion-quantity",
+        "verified": {
+          "tests": {
+            "pass": 967,
+            "skip": 36,
+            "fail": 0
+          },
+          "focusedNew": 6,
+          "priorFocused": 20,
+          "build": "PASS_SOURCE_ONLY",
+          "check": "PASS",
+          "tsc": "PASS_STRICT_BUNDLER",
+          "worker": "PASS_NODE_SYNTHETIC_RPC",
+          "genuineVersion": "3.0.1",
+          "collectionVersion": 87,
+          "offPreview": 4,
+          "offDenied": 4,
+          "offNegative": 29,
+          "genuineForward": 4,
+          "genuineReverse": 4,
+          "exactDiff": 8,
+          "accountRaw": 8,
+          "nonTargetRawFrames": 8,
+          "rollback": 3,
+          "onNegative": 52,
+          "originalUnchanged": true,
+          "graph": 55,
+          "newModules": 0,
+          "flags": "ALL_OFF; isolated beta+expansion4 ON only",
+          "libraryReadback": "ALL5_BYTE_EXACT_CRC_493_HASHES_490_PLUS8_REPLAY",
+          "fixedSourceVerification": "493 SHA/CRC + actual full Node suite; genuine harness and all production code exact byte match fixed except isolated 2 switches",
+          "gameAccepted": false,
+          "privateBytesWritten": false
+        },
+        "unverified": [
+          "NEW_06_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_RESAVE_NATIVE_AUTH_AND_GENERIC_RUNTIME_CONSUMERS",
+          "SWITCH_ASSET_DEFINITION_PARITY",
+          "OTHER28_RECIPE_TARGETS_AND_BATCH_AND_POST_RESAVE_RECEIPT",
+          "V300_OR_GENERAL_ACQUISITION_OR_NEW_ROWS",
+          "00_FULL_DISTRIBUTION_REBUILD_AFTER_INTEGRATION",
+          "MAIN_PROTECTION_NOT_AVAILABLE_IN_CONNECTOR"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "Exact 5MOD3ADD on fixed 490 composite, 4 genuine v301 forward + receipt reverse, exact typed preimage/reference scan and raw non-target frames, original 5913958 receipt/gates regression, independent flag, actual Node Worker, low-level final permit, cross item/forged/stale/replay/close/rollback, no prior accepted broad re-QA; no game authorization",
+          "nextAfter": "05 exact4 Recipe UI after 06 scoped PASS; 00 serial integrate current exact preimages and unchanged 55 module closure. 04 remaining 23 lower-observed-reference Recipe candidates only after accepted exact4/explicit scoped extension; 5 celebration reference isolated, no arbitrary acquisition or post-resave restore. V24 frozen."
+        },
+        "rollback": "Restore 5 preimages from fixed 490 composite, remove 3 additions; preserve prior accepted exact20 and Manual9 and 01/03 research"
       }
     },
     "05_WEB": {
