@@ -178,7 +178,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_REAL_OUTPUT_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_V16_DISTINCT_FAMILY_BATCH_REAL_OUTPUT_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -194,15 +194,15 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "04_IN_FLIGHT_DISTINCT_ACCEPTED_FAMILY_BATCH; 05_SINGLE_FAMILY_UI_PARALLEL; 01_RESTORE_REPAIR_PARALLEL",
+      "next": "06_SCOPED_QA_NEW_04_11_PATHS_AND_03_FORMAL49_7_ADD; 05_ACCEPTED_SINGLE_FAMILY_UI_PARALLEL; 04_NEW_20_NO_DEFINED_REWARD_AFTER_03_ACCEPTED; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "06877ba4cd46661a0cd298959b2cf088c0ad4e9c",
         "baseSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
         "scope": "04-only new two/three distinct accepted V301 terminal family revoke composition; shared root CAS, one atomic ZIP; separate OFF flag; no UI/00/03 files; V24 frozen",
         "owner": "04 SAVE CORE",
-        "dependency": "06 exact three single-family SCOPED_PASS; new batch not accepted; target-specific 03 new families still wait",
+        "dependency": "06 SCOPED_PASS prior exact three v301 single-family revokes; batch separate new proof and OFF flag; 03 formal49 delta dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8 QA pending; V24 frozen",
         "previous": {
           "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
           "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -468,7 +468,63 @@
             "handoff": "00/06 preserve original R2 evidence and execute 01/02/03 fixed-scope QA on original R2; after acceptance and serial integration validate affected engine/assembly path; if integrated repeat is required, owner streams add distinct new pin/evidence on integrated SHA only after actual scoped verification; do not silently overwrite old provenance. 02 priority 20 no-defined-reward candidates after 03 target causal and QA; 01 structural only, no product authorization.",
             "remaining": "06 formal in flight; no new 04 permission or code task until independent verdict or new accepted target-specific contract; V24 frozen; real browser WAIT_ENV"
           }
-        }
+        },
+        "fixedSourceSha256": "af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41",
+        "deltaSha256": "e7654f040f0539d0aeabe3a81f2408398ff86cecb6162c4194f62b09236e9230",
+        "manifestSha256": "39c7f66cfc4eddb97693e03452e7ba52d471a428a6bfc54b09c7d38310ca08c1",
+        "changedPaths": "7_MOD_4_ADD_0_DEL",
+        "artifacts": {
+          "source": "HKIA_04_FormalFamilyBatch_R2_20261112_Source.zip",
+          "delta": "HKIA_04_FormalFamilyBatch_R2_20261112_Delta.zip",
+          "manifest": "HKIA_04_FormalFamilyBatch_R2_20261112_Manifest.json"
+        },
+        "verified": {
+          "sourceEntries": 404,
+          "baseUnchanged": 393,
+          "tests": {
+            "pass": 802,
+            "skip": 36,
+            "fail": 0
+          },
+          "focused": 4,
+          "check": "PASS",
+          "build": "PASS_SOURCE_ONLY",
+          "tsc": "PASS_STRICT_BUNDLER",
+          "moduleGraph": 53,
+          "changedModuleHashes": 5,
+          "nodeWorker": "PASS_SYNTHETIC_BATCH_RPC",
+          "realVersion": "3.0.1",
+          "collectionVersion": 87,
+          "realBatchOutputs": 2,
+          "fieldsPerOutput": [
+            18,
+            26
+          ],
+          "sequentialExactEquivalence": 2,
+          "rollback": 6,
+          "negativeAssertions": 14,
+          "defaultOffDenied": 2,
+          "wrongVersionReal300Denied": 1,
+          "originalsUnchanged": true,
+          "fixedReextractTests": "PASS",
+          "fixedReextractGenuineOnOffAggregate": "BYTE_EXACT",
+          "libraryReadback": "ALL_3_SHA_CRC_404_FILE_HASHES_DELTA_REPLAY_PASS",
+          "gameAccepted": false
+        },
+        "unverified": [
+          "NEW_04_INDEPENDENT_QA",
+          "NATIVE_AUTH_LOAD_RESAVE_REBOOT_REWARD_REPLAY",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER_WAIT_ENV",
+          "V300_AND_NEW_FAMILY_TARGETS_UNSUPPORTED",
+          "03_FORMAL49_CAUSAL_NEW_7_ADD_QA_PENDING",
+          "MAIN_PROTECTION_STATE_UNAVAILABLE_IN_CONNECTOR"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "11 exact paths vs accepted single-family source 24f5e704…; 2/3 distinct family atomic output with 16/24 slot+2 shared root, independently verify net plan and sequential equivalence, raw frames, 3 flags, rollback/replay/wrong version and tamper; no prior accepted re-QA. Also independently QA 03 FORMAL49 7 ADD on its exact baseline.",
+          "nextAfter": "05 batch UI only after 06 acceptance; 05 accepted single-family UI and 01 isolated restore fix may proceed now; 04 new 20 reward-free target candidates after 03 scoped acceptance; 00 serial formal integration with evidence-pin compatibility; V24 independent"
+        },
+        "rollback": "Restore 7 MOD from accepted 04 24f5e704… and remove 4 ADD. No beta change."
       },
       "formalTask": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
