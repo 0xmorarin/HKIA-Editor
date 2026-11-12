@@ -3312,10 +3312,10 @@
       "note": "Concurrent reference IDs replaced with verified filenames; historical Git not scrubbed."
     },
     "formalIntegration": {
-      "task": "V26_FORMAL_ACCEPTED_FOLLOWUP_INTEGRATION",
-      "status": "DONE_PRIVATE_INTEGRATION_SCOPED_INPUTS_FINAL_QA_READY",
+      "task": "V27_ACCEPTED_PREFLIGHT_AND_RECIPE32_INTEGRATION",
+      "status": "IN_FLIGHT",
       "owner": "00 CTRL",
-      "baseMain": "737d0c8e32d0b22a833f982f19501e7166d8fa5f",
+      "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
       "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
       "previousTask": "V25_FORMAL_ACCEPTED_R2_SERIAL_INTEGRATION",
       "candidate": {
@@ -3499,7 +3499,8 @@
           "to": "00 CTRL after 06 independent verdict; 06 if accepted aggregate",
           "scope": "Reuse fixed preflight only if each 38 upstream path matches exact independently accepted scope and V26 accepted; verify 00 one-path allowlist and 55-module graph separately. If verdict partial, select only accepted scope, no repeat unchanged scope. 01 Recipe expansion in flight separate."
         }
-      }
+      },
+      "scope": "Reuse accepted 38 upstream preflight paths plus 00 closure and accepted Recipe32 8 ADD; no activation"
     },
     "inFlightStreams": [
       "06 current scoped QA",
