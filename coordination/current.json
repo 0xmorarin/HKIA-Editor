@@ -1853,7 +1853,17 @@
           "scope": "5 paths, exact 23 target allowlist, separate flag/operation, 1 genuine representative and 320 inline PASS; finish all23 controller in bounded batches, 375/1280 and isolated real Download, wrong version, scope isolation, old recipe regression. No V24 changes.",
           "nextAfter": "00 serial integration after scoped PASS; 03 Celebration5 targeted causal independent; 04 waits accepted scope"
         },
-        "next": "06_SCOPED_QA_RECIPE23_UI_5_PATHS_AND_REMAINING_UI_EVIDENCE; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_ACCEPTED_CORE_AFTER_DEP"
+        "next": "06_SCOPED_QA_RECIPE23_UI_5_PATHS_AND_REMAINING_UI_EVIDENCE; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_ACCEPTED_CORE_AFTER_DEP",
+        "integrationPreflight": {
+          "status": "V30_BYTE_EXACT_BASE_COMPATIBLE_QA_PENDING",
+          "baseSourceSha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
+          "baseEntries": 505,
+          "exactBaseEntries": 505,
+          "deltaPaths": 5,
+          "replayEntries": 508,
+          "celebrationDeltaOverlap": 0,
+          "release": "V24_FROZEN_OFF"
+        }
       }
     },
     "06_QA": {
