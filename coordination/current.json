@@ -16,7 +16,7 @@
       "next": "06_FORMAL_01_EXACT_RESTORE_REPAIR_SCOPED_QA; 04 structural research only; no V24 changes",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
-        "status": "PARTIAL_QA_READY",
+        "status": "PARTIAL_REFERENCE_WAIT_DEP",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
@@ -41,7 +41,7 @@
           "baseMain": "31595debd417feee593767ddde0802a7194fd5c5",
           "baseDeltaSha256": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
           "scope": "01 restore verifier trusted donor raw digest; regression only; V24 frozen",
-          "status": "LOCAL_SCOPED_PASS_QA_PENDING",
+          "status": "SCOPED_PASS_06_INTEGRATED_V26",
           "artifact": "HKIA_01_FORMAL_OWNERSHIP_R2_RESTORE_REPAIR_20261112.zip",
           "deltaSha256": "fc7303bc833467a5c6caae04e9c35f16a552851fb4b48baa4e8ba82836e21947",
           "manifestSha256": "5a98e6c46705c6513e6f723f0e26b0921ce7c002ae06198273ce0d8c1cef0c30",
@@ -50,6 +50,14 @@
           "unverified": "Independent scoped repair QA; reference closure; game load/resave; no product authorization",
           "next": "06 QA exact 4 modified + 1 additive evidence path; existing 3 unchanged and 396 R2 base reuse; no V24 change"
         }
+      },
+      "formalFollowup": {
+        "task": "FORMAL_COLLECTION_EXISTING_RECIPE_TARGET_EXPANSION",
+        "status": "IN_FLIGHT",
+        "baseHead": "9f1501e75199a49644e2e3d3577de6011577f826",
+        "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
+        "scope": "New exact existing Recipe targets only; source reference selection, genuine typed quantity inverse, deny unproved targets; no 5913958 receipt redo; no 03 reference overlap; V24 frozen",
+        "dependency": "V26 integrated 01 repair accepted; 06 V26 combined QA independent"
       }
     },
     "02_ACHIEVEMENT": {
