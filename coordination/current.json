@@ -567,7 +567,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_SCOPED_QA_FORMAL_SINGLE_FAMILY_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_FAMILY_BATCH_UI_AFTER_ACCEPTED_CONTRACT",
+      "next": "06_SCOPED_QA_FORMAL_SINGLE_FAMILY_UI_4_PATHS_AND_04_BATCH_11; 00_SERIAL_FORMAL_INTEGRATE_ACCEPTED; 05_BATCH_UI_AFTER_ACCEPTED_CONTRACT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -910,7 +910,25 @@
           "scope": "4 exact paths on accepted 04+05 composite; three pinned v301 terminal single-family revokes; exact 8+2 and proof; OFF release; V24 frozen",
           "nextAfter": "00 serial formal integration; 05 batch UI only after 04 independently accepted family batch contract"
         },
-        "next": "06_SCOPED_QA_FORMAL_SINGLE_FAMILY_UI_4_PATHS; 00_SERIAL_FORMAL_INTEGRATION; 05_FAMILY_BATCH_UI_AFTER_ACCEPTED_CONTRACT"
+        "next": "06_SCOPED_QA_FORMAL_SINGLE_FAMILY_UI_4_PATHS_AND_04_BATCH_11; 00_SERIAL_FORMAL_INTEGRATE_ACCEPTED; 05_BATCH_UI_AFTER_ACCEPTED_CONTRACT",
+        "integrationPreflight": {
+          "status": "V25_BYTE_COMPATIBLE_WAIT_INDEPENDENT_QA",
+          "checkedBaseHead": "a21458bee72206e28143f3e76c0157f3ba1f2381",
+          "baseSourceSha256": "1381e203db0b0b26b69ab4cddaf5bcd5dceba9610a4882e03d510f468ad65265",
+          "baseEntries": 420,
+          "sourceSha256": "1f58d905c34b2f77f7fc1b2044902dc3117f9205c4051ab69dc1f5119c090c0c",
+          "deltaSha256": "5c4b3fe5079acd4313f812edb8b7fa694277a44f066f9451916417b650899985",
+          "changedPaths": "2_MOD_2_ADD",
+          "preimageMatches": 4,
+          "deltaPostimageMatches": 4,
+          "commonUnchangedOutsideDelta": 400,
+          "extraV25ResearchPaths": 18,
+          "overlap": 0,
+          "hypotheticalCombinedEntries": 422,
+          "crc": "PASS_3_ZIPS",
+          "release": "V24_FROZEN_OFF",
+          "note": "No new product source, no integration or activation; new 05 four paths and 04 batch eleven paths still awaiting independent QA."
+        }
       }
     },
     "06_QA": {
