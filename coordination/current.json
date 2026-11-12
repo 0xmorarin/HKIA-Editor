@@ -175,7 +175,7 @@
       }
     },
     "05_WEB": {
-      "status": "V19_ATOMIC_BATCH_UI_LOCAL_SCOPED_DONE_QA_PENDING",
+      "status": "V20_RECIPE_RECEIPT_UI_IN_FLIGHT",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
@@ -231,76 +231,85 @@
         "http": "UNVERIFIED_TIMEOUT"
       },
       "execution": {
-        "task": "V19_ATOMIC_SCALAR_BATCH_UI",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
-        "baseHead": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
-        "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
-        "scope": "src/app.js; src/native-preview-ui.js; tests/05-native-preview-ui.test.mjs; scripts/qa-atomic-batch-ui-chrome.py; no Core/00 changes",
-        "dependency": "06 04 repair and 05 V18 output scoped PASS; nonrecipe six operations offline evidence only; release flags OFF; recipe receipt excluded",
+        "task": "V20_RECIPE_RECEIPT_UI",
+        "status": "IN_FLIGHT",
+        "baseHead": "67c537b1668467bd6b2fb140fb1d7e04e0a2e593",
+        "baseSourceSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+        "dependency": "V20 closure + accepted exact 05 batch delta 892b63ec; 04 receipt same-runtime pre-resave scoped PASS; private local only, flags OFF",
+        "scope": "05 UI/controller/tests only; no core or distribution changes",
         "owner": "05 WEB",
-        "fixedSourceSha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
-        "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
-        "manifestSha256": "aa45b023eddf42dc98303713472e3f3517df8a29011b690c486885a581bed256",
-        "evidenceSha256": "22b9cada77e7482beba356323c5bf6a1c7632ad4de22902746da727cebd9beed",
-        "changedPaths": "3_MOD_1_ADD_0_DEL",
-        "artifacts": {
-          "source": "libfile_94c0b729bf348191842206797bf3c915",
-          "delta": "libfile_c22b0e71a3f08191b78d2ef0c29c09d5",
-          "manifest": "libfile_8c20eabd1bc08191832a03eeecf526d1",
-          "evidence": "libfile_58b3c4f2e4a881918f6177b9db6c378a",
-          "handoff": "libfile_8ca003cfe56481919e6750862fbfc05f"
-        },
-        "verified": {
-          "focused": 17,
-          "nodePass": 743,
-          "skip": 36,
-          "fail": 0,
-          "check": "PASS",
-          "build": "PASS",
-          "exactDeltaReplay": "376/376",
-          "chromeInline": [
-            320,
-            375,
-            1280
-          ],
-          "isolatedActualUiOutput": [
-            "3.0.0",
-            "3.0.1"
-          ],
-          "exactReimportFieldsPerVersion": 2,
-          "originalsUnchanged": true,
-          "externalRequests": 0,
-          "unknownGuidBlocked": true,
-          "uiReleaseEnabled": false,
-          "coreWriterEnabled": false
-        },
-        "unverified": [
-          "NEW_05_INDEPENDENT_QA",
-          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
-          "GAME_LOAD_NATIVE_AUTHENTICATION",
-          "04_NEW_TRUSTED_RECEIPT_QA"
-        ],
-        "handoff": {
-          "to": "06 QA",
-          "scope": "4 exact paths on 00 V19 preflight; reuse accepted V18 output UI and 04 nonrecipe repair; validate atomic plan and 2 genuine versions isolated output; flags OFF",
-          "nextAfter": "00 serial integrate accepted deltas and fixed beta browser QA; no live activation until release gates and Owner approval"
-        },
-        "integrationPreflight": {
-          "status": "BYTE_COMPATIBLE_NOT_INTEGRATED_NOT_ACCEPTED",
-          "checkedBaseHead": "363f21592bb40b95c823ac888bf77949b0c22d57",
+        "previous": {
+          "task": "V19_ATOMIC_SCALAR_BATCH_UI",
+          "status": "PARTIAL_LOCAL_PASS_QA_READY",
+          "baseHead": "1286296b0e8c44b45f06ef59ce3528f80fc9d07b",
           "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
-          "ctrlCandidateSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
-          "ctrlCandidateEntries": 380,
-          "ctrlDeltaPaths": 17,
-          "webDeltaPaths": 4,
-          "overlap": 0,
-          "allWebPreimagesIdentical": true,
-          "deltaExactMatch": true,
-          "zipCrc": "PASS_ALL_4_INPUTS",
-          "hypotheticalCombinedEntries": 381,
-          "releaseFlags": "OFF",
-          "dependency": "06 independent scoped verdict on 05 four paths and 04 trusted receipt; 00 serial integration only",
-          "note": "V20 preflight is not accepted; no combined source created, no product change, no activation"
+          "scope": "src/app.js; src/native-preview-ui.js; tests/05-native-preview-ui.test.mjs; scripts/qa-atomic-batch-ui-chrome.py; no Core/00 changes",
+          "dependency": "06 04 repair and 05 V18 output scoped PASS; nonrecipe six operations offline evidence only; release flags OFF; recipe receipt excluded",
+          "owner": "05 WEB",
+          "fixedSourceSha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
+          "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+          "manifestSha256": "aa45b023eddf42dc98303713472e3f3517df8a29011b690c486885a581bed256",
+          "evidenceSha256": "22b9cada77e7482beba356323c5bf6a1c7632ad4de22902746da727cebd9beed",
+          "changedPaths": "3_MOD_1_ADD_0_DEL",
+          "artifacts": {
+            "source": "libfile_94c0b729bf348191842206797bf3c915",
+            "delta": "libfile_c22b0e71a3f08191b78d2ef0c29c09d5",
+            "manifest": "libfile_8c20eabd1bc08191832a03eeecf526d1",
+            "evidence": "libfile_58b3c4f2e4a881918f6177b9db6c378a",
+            "handoff": "libfile_8ca003cfe56481919e6750862fbfc05f"
+          },
+          "verified": {
+            "focused": 17,
+            "nodePass": 743,
+            "skip": 36,
+            "fail": 0,
+            "check": "PASS",
+            "build": "PASS",
+            "exactDeltaReplay": "376/376",
+            "chromeInline": [
+              320,
+              375,
+              1280
+            ],
+            "isolatedActualUiOutput": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "exactReimportFieldsPerVersion": 2,
+            "originalsUnchanged": true,
+            "externalRequests": 0,
+            "unknownGuidBlocked": true,
+            "uiReleaseEnabled": false,
+            "coreWriterEnabled": false
+          },
+          "unverified": [
+            "NEW_05_INDEPENDENT_QA",
+            "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+            "GAME_LOAD_NATIVE_AUTHENTICATION",
+            "04_NEW_TRUSTED_RECEIPT_QA"
+          ],
+          "handoff": {
+            "to": "06 QA",
+            "scope": "4 exact paths on 00 V19 preflight; reuse accepted V18 output UI and 04 nonrecipe repair; validate atomic plan and 2 genuine versions isolated output; flags OFF",
+            "nextAfter": "00 serial integrate accepted deltas and fixed beta browser QA; no live activation until release gates and Owner approval"
+          },
+          "integrationPreflight": {
+            "status": "BYTE_COMPATIBLE_NOT_INTEGRATED_NOT_ACCEPTED",
+            "checkedBaseHead": "363f21592bb40b95c823ac888bf77949b0c22d57",
+            "baseSourceSha256": "61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631",
+            "ctrlCandidateSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+            "ctrlCandidateEntries": 380,
+            "ctrlDeltaPaths": 17,
+            "webDeltaPaths": 4,
+            "overlap": 0,
+            "allWebPreimagesIdentical": true,
+            "deltaExactMatch": true,
+            "zipCrc": "PASS_ALL_4_INPUTS",
+            "hypotheticalCombinedEntries": 381,
+            "releaseFlags": "OFF",
+            "dependency": "06 independent scoped verdict on 05 four paths and 04 trusted receipt; 00 serial integration only",
+            "note": "V20 preflight is not accepted; no combined source created, no product change, no activation"
+          }
         }
       },
       "atomicBatchUi": {
@@ -313,7 +322,7 @@
           "3.0.1"
         ],
         "releaseActivation": false,
-        "independentQa": "PENDING"
+        "independentQa": "SCOPED_PASS_ORDINARY_SIX_ATOMIC_BATCH"
       }
     },
     "06_QA": {
