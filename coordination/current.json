@@ -636,11 +636,11 @@
         "handoffSha256": "466ebd9c04e833193942705de981c0dfe31f09f7c7679029d9689e810f20ea55",
         "changedPaths": "5_MOD_2_ADD_0_DEL",
         "artifacts": {
-          "source": "libfile_9ba3d03b2c388191af8f8c1d61a73431",
-          "delta": "libfile_82fb28e488fc8191864692bc1cb46f51",
-          "manifest": "libfile_0759f78a53e88191beb87ff02c6eb723",
-          "evidence": "libfile_2e56fd200ae08191ad6ec7858a79c66a",
-          "handoff": "libfile_71f589abd5ec8191b16eccbdaa9c3e51"
+          "source": "HKIA_WEB05_FormalBulkSelection_R2_20261112_Source.zip",
+          "delta": "HKIA_WEB05_FormalBulkSelection_R2_20261112_Delta.zip",
+          "manifest": "HKIA_WEB05_FormalBulkSelection_R2_20261112_Manifest.json",
+          "evidence": "HKIA_WEB05_FormalBulkSelection_R2_20261112_Evidence.zip",
+          "handoff": "HKIA_WEB05_FormalBulkSelection_R2_20261112_HANDOFF.md"
         },
         "verified": {
           "focused": 6,
@@ -1306,7 +1306,7 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW 04 existing V16 private family revoke writer proof on R2 OFF; 06 independently review 02 fixed 8 ADD + 03 fixed 10 ADD and 00 178-file public source closure (13 projection changes); separate scopes, parallel with 01 and 05 already IN_FLIGHT. 02/03 no duplicate restart. V24 frozen.",
+    "NOW 04 existing V16 private family revoke writer proof on R2 OFF; 06 independently review 02 fixed 8 ADD + 03 fixed 10 ADD + 05 bulk selection exact fixed delta and 00 178-file public source closure (13 projection changes); separate scopes, parallel with 01 if already IN_FLIGHT. 02/03/05 no duplicate restart. V24 frozen.",
     "06 actual authorized HTTP/HTTPS native WebCrypto Module Worker genuine 300/301 remains WAIT_ENV. Review closure independently; after required browser and irreducible game evidence, 00 exact public source CI and manual artifact deployment, rollback and explicit Owner approval; no live changes now.",
     "Formal direct handoffs after scoped PASS: 04 new proven operations, 05 UI, 06 scoped QA, 00 serial integration. 07 WAIT_ENV independent.",
     "Current ledger privacy: use filenames and SHA only; no private Library/Drive IDs. Historical Git exposure not removed; no force-push without Owner authorization."
@@ -2123,7 +2123,7 @@
     },
     "nextReadyParallel": [
       "04_FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-      "06_FORMAL_02_8_ADD_AND_03_10_ADD_AND_00_PAGES_CLOSURE_SCOPED_QA"
+      "06_FORMAL_02_8_ADD_03_10_ADD_05_BULK_UI_AND_00_PAGES_CLOSURE_SCOPED_QA"
     ],
     "nextAfterDep": [
       "06_V24_REAL_BROWSER_AUTHORIZED_ENV",
@@ -2199,14 +2199,15 @@
       "rollback": "V23 R2 canonical OFF source; V24 frozen artifact unchanged; closure is private staging projection, not replacement source",
       "handoff": {
         "to": "06 QA",
-        "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately."
+        "scope": "Validate closure manifest 178 files, 13 projected changes, original R2 SHA manifest preservation/explicit rebind, no data loss except provenance, full 794/36, manual workflow OFF and synthetic ON gate rejection; exact 4144 V24 artifact recompose; no product scope re-QA. Parallel with new 02/03 8+10 additive formal scopes; browser WAIT_ENV separately. 05 newly fixed bulk UI delta may be independently reviewed in same activation without repeating accepted UI."
       }
     },
     "ledgerPrivacy": {
       "status": "CURRENT_SNAPSHOT_REFERENCES_REPLACED_WITH_FILENAMES",
-      "count": 26,
+      "count": 31,
       "scope": "Existing current.json only; matched private Library files by actual lookup; preserve status/ownership/SHA/filenames; no new private identifier; historical Git commits and other files not scrubbed",
-      "next": "All streams use filename + SHA in public current.json, private identifiers only in private Library. Audit historical exposure separately; no force push or destructive history rewrite without Owner authorization."
+      "next": "All streams use filename + SHA in public current.json, private identifiers only in private Library. Audit historical exposure separately; no force push or destructive history rewrite without Owner authorization.",
+      "note": "Concurrent new 05/other stream updates can reintroduce private identifiers; re-read latest CAS and replace by verified filename. Other stream statuses/SHA unchanged. History not scrubbed."
     }
   },
   "formalRelease": {
