@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06_FORMAL_01_EXACT_RESTORE_REPAIR_SCOPED_QA; 04 structural research only; no V24 changes",
+      "next": "06_NEW_RECIPE_EXPANSION_SCOPED_QA_AND_03_TARGETED_CAUSAL; 04_AFTER_BOTH_ACCEPTED; NONRECIPE_WAIT_DEP; V24_FROZEN",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -53,11 +53,21 @@
       },
       "formalFollowup": {
         "task": "FORMAL_COLLECTION_EXISTING_RECIPE_TARGET_EXPANSION",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "9f1501e75199a49644e2e3d3577de6011577f826",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "scope": "New exact existing Recipe targets only; source reference selection, genuine typed quantity inverse, deny unproved targets; no 5913958 receipt redo; no 03 reference overlap; V24 frozen",
-        "dependency": "V26 integrated 01 repair accepted; 06 V26 combined QA independent"
+        "dependency": "V26 integrated 01 repair accepted; 06 V26 combined QA independent",
+        "artifact": "HKIA_01_FORMAL_RECIPE_EXPANSION_V26_DELTA_20261112.zip",
+        "deltaSha256": "3c3e6118b91fddb3fdc6d623817cd3f03d85197d3a5672f064c358f589aa7bfa",
+        "manifestSha256": "d584e3eb99d9002a47361c5102269f6e478084de28515d9c37459b78d68482c2",
+        "changes": "8 ADD 0 MOD 0 DEL; 441 V26 base entries exact",
+        "verified": "20 focused PASS; 32 exact Steam v301 source identities and single local food PPtr references; 4 genuine v301 individual forward/inverse pairs + one 32-target batch forward/inverse; 32 changed bytes; 33/34 LZ4 blocks reused; exact non-target preservation; 5 tag8 GUID occurrences, 27 lower observed reference priority; Library readback SHA CRC PASS",
+        "classification": "RESEARCH_ONLY_EXISTING_RECIPE_1_TO_0; RESTORE_TRUSTED_RECEIPT_REQUIRED; NO_NEW_CROSS_STORE_REQUIRED_OR_PRODUCT_AUTHORIZATION",
+        "remaining": "Own RecipeItemDetails managed bodies unconsumed; generic/external consumers, Switch asset/version parity, game auth/load/resave, actual product receipt and independent QA; nonrecipe reference closure remains WAIT_DEP",
+        "next": "06 scoped 8 ADD QA after currently claimed scope; 03 targeted 32 causal review (4 representative first, 5 tag8), independently; 04 only accepted exact subset after both scoped acceptance; no V24 changes",
+        "gameAccepted": false,
+        "productAuthorized": false
       }
     },
     "02_ACHIEVEMENT": {
