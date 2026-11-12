@@ -25,26 +25,27 @@
       "next": "ONLY_NEW_PROVEN_COMPLETION_REVERSAL_FAMILY_OR_DERIVED_PRODUCER_PERSISTENCE; OTHERWISE_HANDOFF_04_03_NO_REDO"
     },
     "03_LINKAGE": {
-      "status": "IN_FLIGHT_NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
+      "status": "V20_ALWAYSRUN_CAUSAL_LOCAL_PASS_QA_PENDING",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_SCOPED_QA_03_DELTA; 04_RECEIPT_SAFE_RECIPE_AND_OTHER_INDEPENDENT_OUTPUT; 05_ADVISORY_IF_CONNECTED; 03_NO_REPEAT_WAIT_NEW_CONCRETE_CAUSAL_TARGET_OR_DEVICE_EVIDENCE",
+      "next": "06_SCOPED_QA_03_V20_10_ADD; 04_ADVISORY_AND_SCOPED_ALWAYSRUN_LOAD_AUTH_IF_NEEDED; 00_SERIAL_INTEGRATE_AFTER_QA; 03_NO_REPEAT_WAIT_NEW_CAUSAL_WITNESS_OR_QA_FAILURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
       "baseMain": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
       "latestDelta": {
-        "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-        "sha256": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb",
-        "artifact": "HKIA_03_LINKAGE_V18_RECIPE_RECOUNT_DELTA_20261112.zip",
-        "scope": "10_ADD_0_MOD_0_DEL; 363 base entries unchanged",
-        "evidence": "36 focused + 30 adjacent tests, 36 scoped and 39 reused native anchors, private in-memory quantity change + independent reparse",
-        "classification": "RELATED_ONLY_NEW_REQUIRED_0",
+        "baseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+        "sha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
+        "manifestSha256": "64372a35e14b06f39266bc2233533cb6e21837021ce7f28335a9430cda94e5f0",
+        "artifact": "HKIA_03_LINKAGE_V20_ALWAYSRUN_CAUSAL_DELTA_20261112.zip",
+        "scope": "10_ADD_0_MOD_0_DEL; 380 base entries unchanged",
+        "evidence": "37 focused, 104 including adjacent; Native 72 instruction anchors, 11 metadata bindings; genuine v301 partial manual 2 + paired 2 + child-only family 3 reparse; completed non-group 2 static; original unchanged",
+        "classification": "CONDITIONAL_EXACT_INCOMPLETE_MANUAL_PAIR_BOTH_DIRECTIONS_IF_MIGRATION_RUNS; existing 04 paired operation satisfies; Group downward native model recount RELATED; no new unconditional required or structural edges",
         "actualGameAccepted": false
       },
-      "remaining": "Final native load/resave/reboot, zero row retention, receipt restore and other counter/reward side effects unverified; exact 23 recount static prediction, no new cross-model writes; independent operations not blocked",
+      "remaining": "Final native scheduling/load/resave/reboot, physical persistence, Account Meta side effects, reward callback/replay, native lookup misses, v300 equivalence and boulder target identity closure unverified; no release permission",
       "priorRecipeAcceptance": "06_SCOPED_PASS_RELATED_ONLY_301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
     },
     "04_SAVE_CORE": {
