@@ -176,281 +176,290 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_FORMAL_R2_SCOPED_QA_IN_FLIGHT; 00_DEPENDENCY_PIN_PREFLIGHT_HANDOFF; 05_FAMILY_REVOKE_UI_AFTER_04_ACCEPTANCE; 04_NEW_02_03_TARGET_CONTRACT_AFTER_QA; 01_STRUCTURAL_ONLY",
+      "next": "04_IN_FLIGHT_DISTINCT_ACCEPTED_FAMILY_BATCH; 05_SINGLE_FAMILY_UI_PARALLEL; 01_RESTORE_REPAIR_PARALLEL",
       "execution": {
-        "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
-        "baseHead": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
-        "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-        "scope": "04 private family revoke writer proof using existing causal contract; R2 OFF; no V24/UI changes",
+        "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
+        "status": "IN_FLIGHT",
+        "baseHead": "06877ba4cd46661a0cd298959b2cf088c0ad4e9c",
+        "baseSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+        "scope": "04-only new two/three distinct accepted V301 terminal family revoke composition; shared root CAS, one atomic ZIP; separate OFF flag; no UI/00/03 files; V24 frozen",
         "owner": "04 SAVE CORE",
+        "dependency": "06 exact three single-family SCOPED_PASS; new batch not accepted; target-specific 03 new families still wait",
         "previous": {
-          "task": "NATIVE_V301_ALWAYSRUN_BODY_EFFECTS",
-          "status": "PARTIAL_STATIC_PASS_QA_READY",
-          "baseHead": "a5cb28a745f8b8036df97c0145f5b5c58b8170b1",
-          "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
-          "scope": "04 evidence only: two Native AlwaysRun bodies, static marker init/consumer and 6 real record markers; 3 ADD 0 MOD; 381 V21 entries unchanged; no product or release change",
+          "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
+          "status": "PARTIAL_LOCAL_PASS_QA_READY",
+          "baseHead": "61ca781b2f3a26f0a1637f68f6295002fc39d00a",
+          "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+          "scope": "04 private family revoke writer proof using existing causal contract; R2 OFF; no V24/UI changes",
           "owner": "04 SAVE CORE",
-          "dependency": "06 receipt exact source SCOPED_PASS; V21 fixed integrated candidate; 03 new AlwaysRun contract QA pending",
           "previous": {
-            "task": "V18_RECIPE_TRUSTED_RECEIPT",
-            "status": "PARTIAL_LOCAL_PASS_QA_READY",
-            "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
-            "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-            "scope": "04 session receipt/Recipe policy and tests; use 03 advisory contract after independent acceptance; no 05 changes",
-            "dependency": "03 fixed delta 301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb SCOPED_PASS_RELATED_ONLY; prior 04 repair SCOPED_PASS",
+            "task": "NATIVE_V301_ALWAYSRUN_BODY_EFFECTS",
+            "status": "PARTIAL_STATIC_PASS_QA_READY",
+            "baseHead": "a5cb28a745f8b8036df97c0145f5b5c58b8170b1",
+            "baseSourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
+            "scope": "04 evidence only: two Native AlwaysRun bodies, static marker init/consumer and 6 real record markers; 3 ADD 0 MOD; 381 V21 entries unchanged; no product or release change",
             "owner": "04 SAVE CORE",
+            "dependency": "06 receipt exact source SCOPED_PASS; V21 fixed integrated candidate; 03 new AlwaysRun contract QA pending",
             "previous": {
-              "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
+              "task": "V18_RECIPE_TRUSTED_RECEIPT",
               "status": "PARTIAL_LOCAL_PASS_QA_READY",
-              "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
-              "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-              "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
-              "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+              "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+              "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+              "scope": "04 session receipt/Recipe policy and tests; use 03 advisory contract after independent acceptance; no 05 changes",
+              "dependency": "03 fixed delta 301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb SCOPED_PASS_RELATED_ONLY; prior 04 repair SCOPED_PASS",
               "owner": "04 SAVE CORE",
-              "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-              "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
-              "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
-              "changedPaths": "8_MOD_2_ADD",
+              "previous": {
+                "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
+                "status": "PARTIAL_LOCAL_PASS_QA_READY",
+                "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+                "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+                "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
+                "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+                "owner": "04 SAVE CORE",
+                "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+                "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
+                "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
+                "changedPaths": "8_MOD_2_ADD",
+                "artifacts": {
+                  "source": "HKIA_04_RecipeContractRepair_V18_20261112_Source.zip",
+                  "delta": "HKIA_04_RecipeContractRepair_V18_20261112_Delta.zip",
+                  "manifest": "HKIA_04_RecipeContractRepair_V18_20261112_Manifest.json"
+                },
+                "verified": {
+                  "unitPass": 701,
+                  "skip": 36,
+                  "fail": 0,
+                  "check": "PASS",
+                  "build": "PASS",
+                  "realIsolatedOutput": 12,
+                  "versions": [
+                    "3.0.0",
+                    "3.0.1"
+                  ],
+                  "recipeForwardPreview": "PASS",
+                  "recipeOutput": "DENIED",
+                  "zeroRowRestore": "DENIED",
+                  "nativeLoadAnchors": 36,
+                  "moduleGraphEntries": 51
+                },
+                "unverified": [
+                  "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
+                  "03_RECIPE_RECOUNT_CAUSAL",
+                  "NATIVE_AUTHENTICATION",
+                  "GAME_LOAD",
+                  "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
+                  "INDEPENDENT_QA"
+                ],
+                "handoff": {
+                  "to": "06 QA",
+                  "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
+                  "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
+                  "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+                }
+              },
+              "fixedSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+              "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
+              "manifestSha256": "e61f9c5385b96b2f7d6644c0dc058f774b99a218a615252317d00e5b66f82688",
+              "changedPaths": "11_MOD_5_ADD_AGAINST_ACCEPTED_04_REPAIR_PLUS_03_DELTA",
               "artifacts": {
-                "source": "HKIA_04_RecipeContractRepair_V18_20261112_Source.zip",
-                "delta": "HKIA_04_RecipeContractRepair_V18_20261112_Delta.zip",
-                "manifest": "HKIA_04_RecipeContractRepair_V18_20261112_Manifest.json"
+                "source": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Source.zip",
+                "delta": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Delta.zip",
+                "manifest": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Manifest.json"
               },
               "verified": {
-                "unitPass": 701,
+                "unitPass": 742,
                 "skip": 36,
                 "fail": 0,
+                "newFocused": 5,
                 "check": "PASS",
                 "build": "PASS",
-                "realIsolatedOutput": 12,
+                "tsc": "PASS",
+                "realIsolatedOutput": 14,
                 "versions": [
                   "3.0.0",
                   "3.0.1"
                 ],
-                "recipeForwardPreview": "PASS",
-                "recipeOutput": "DENIED",
-                "zeroRowRestore": "DENIED",
-                "nativeLoadAnchors": 36,
-                "moduleGraphEntries": 51
+                "nonRecipeOutputs": 12,
+                "recipeForwardFile": "PASS_V301_EXACT_24_MEMBER_WITNESS",
+                "recipeReverseFile": "PASS_EXACT_ZERO_EDITED_COPY_SAME_RUNTIME_RECEIPT",
+                "receiptForgedRejected": true,
+                "rollback": 3,
+                "concurrentReservationRejected": true,
+                "replayRejected": true,
+                "closeRevoked": true,
+                "lowLevelPermitBypassRejected": true,
+                "nodeWorkerRpc": "PASS",
+                "moduleGraphEntries": 53,
+                "alwaysRunMetadataSlots": 3,
+                "librarySourceDeltaReadbackSha": "PASS"
               },
               "unverified": [
-                "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
-                "03_RECIPE_RECOUNT_CAUSAL",
                 "NATIVE_AUTHENTICATION",
-                "GAME_LOAD",
+                "GAME_LOAD_RESAVE_RECOUNT_AND_ZERO_ROW_RETENTION",
+                "RESTORE_AFTER_GAME_RESAVE_OR_RUNTIME_RESTART",
+                "ALWAYSRUN_METHOD_IDENTITIES_EFFECTS",
+                "CHROMIUM_TIMEOUT_200S_NEW_GRAPH",
                 "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
-                "INDEPENDENT_QA"
+                "NEW_04_INDEPENDENT_QA"
               ],
               "handoff": {
                 "to": "06 QA",
-                "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
-                "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
-                "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+                "scope": "Exact 16 changed paths on accepted 04 repair + exact 03 additive delta; no repeat accepted scope; verify scoped receipt and 53 graph",
+                "condition": "Fixed source SHA; both shipped flags OFF; recipe independent activation gate",
+                "nextAfter": "05 receipt-aware capability UI and 00 serial integration; ordinary six operations proceed independently"
               }
             },
-            "fixedSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-            "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
-            "manifestSha256": "e61f9c5385b96b2f7d6644c0dc058f774b99a218a615252317d00e5b66f82688",
-            "changedPaths": "11_MOD_5_ADD_AGAINST_ACCEPTED_04_REPAIR_PLUS_03_DELTA",
+            "fixedSourceSha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
+            "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
+            "manifestSha256": "ef55d4f895a93ac3312be853198683783dcb65e86c3c4c4d0a1a155a7bbaa8ec",
+            "changedPaths": "3_ADD_0_MOD_0_DEL",
             "artifacts": {
-              "source": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Source.zip",
-              "delta": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Delta.zip",
-              "manifest": "HKIA_04_TrustedRecipeReceipt_V18_20261112_Manifest.json"
+              "source": "HKIA_04_NativeLoadBoundary_V21_20261112_Source.zip",
+              "delta": "HKIA_04_NativeLoadBoundary_V21_20261112_Delta.zip",
+              "manifest": "HKIA_04_NativeLoadBoundary_V21_20261112_Manifest.json"
             },
             "verified": {
-              "unitPass": 742,
-              "skip": 36,
-              "fail": 0,
-              "newFocused": 5,
+              "nativeInstructionAnchors": 72,
+              "staticInitializerFields": 2,
+              "realRecordsBothMarkersMatch": 6,
+              "versions": {
+                "2.18.1": 1,
+                "3.0.0": 4,
+                "3.0.1": 1
+              },
+              "duplicateInventory": "IMMEDIATE_RET_V301",
+              "boulder": "MISSION_STATUS3_OR_TASK4_COMPLETE_SKIP; REQ6_9; EIGHT_WORLD_OBJECT_IDS; EXISTING_FLAGS_ACTIVE_BIT_1_ONLY_DIRECT_WRITE",
+              "originalUnchanged": true,
               "check": "PASS",
               "build": "PASS",
-              "tsc": "PASS",
-              "realIsolatedOutput": 14,
-              "versions": [
-                "3.0.0",
-                "3.0.1"
-              ],
-              "nonRecipeOutputs": 12,
-              "recipeForwardFile": "PASS_V301_EXACT_24_MEMBER_WITNESS",
-              "recipeReverseFile": "PASS_EXACT_ZERO_EDITED_COPY_SAME_RUNTIME_RECEIPT",
-              "receiptForgedRejected": true,
-              "rollback": 3,
-              "concurrentReservationRejected": true,
-              "replayRejected": true,
-              "closeRevoked": true,
-              "lowLevelPermitBypassRejected": true,
-              "nodeWorkerRpc": "PASS",
-              "moduleGraphEntries": 53,
-              "alwaysRunMetadataSlots": 3,
-              "librarySourceDeltaReadbackSha": "PASS"
+              "zipCrc": "PASS",
+              "unchangedV21Entries": 381,
+              "libraryReadbackAll3Sha": "PASS",
+              "readbackAuditAggregateIdentical": true,
+              "priorReceiptIndependentQA": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
+              "newFullTests": "NOT_RUN_EVIDENCE_ONLY_NO_PRODUCT_CHANGE"
             },
             "unverified": [
-              "NATIVE_AUTHENTICATION",
-              "GAME_LOAD_RESAVE_RECOUNT_AND_ZERO_ROW_RETENTION",
-              "RESTORE_AFTER_GAME_RESAVE_OR_RUNTIME_RESTART",
-              "ALWAYSRUN_METHOD_IDENTITIES_EFFECTS",
-              "CHROMIUM_TIMEOUT_200S_NEW_GRAPH",
-              "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
-              "NEW_04_INDEPENDENT_QA"
+              "ADDITIONAL_NATIVE_AUTH_OUTSIDE_FIXED_MARKER_CHECKS",
+              "RAW_METADATA_FIELD_HANDLE_TO_INITIALIZER_MAPPING",
+              "BOULDER_REAL_BRANCH_OUTCOMES_INDIRECT_EFFECTS",
+              "GAME_LOAD_RESAVE_REBOOT",
+              "03_ALWAYSRUN_CAUSAL_QA",
+              "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+              "FINAL_INTEGRATED_QA"
             ],
             "handoff": {
               "to": "06 QA",
-              "scope": "Exact 16 changed paths on accepted 04 repair + exact 03 additive delta; no repeat accepted scope; verify scoped receipt and 53 graph",
-              "condition": "Fixed source SHA; both shipped flags OFF; recipe independent activation gate",
-              "nextAfter": "05 receipt-aware capability UI and 00 serial integration; ordinary six operations proceed independently"
-            }
+              "scope": "3 additive evidence paths, pinned NSO/dump, aggregate and no-product-change check; 03 new 10 additive paths and 05 new 4 separately owned",
+              "condition": "No repeat V20 accepted receipt or V21 ordinary batch; source fixed; 03 existing paired operation satisfies local contract, no extra unconditional writes",
+              "nextAfter": "00 serial integrate accepted disjoint evidence/UI; final actual browser and irreducible game acceptance; 04 waits new evidence or scoped QA failure"
+            },
+            "rollback": "Remove exactly 3 additive evidence paths; 381 original V21 entries unchanged"
           },
-          "fixedSourceSha256": "8d0f7f59a85f78a4ce21820d9a89bebca34adba54c7306fdc56bc359ce75c35d",
-          "deltaSha256": "ce92483dfe2c3bb9b369553018583c34bf5d9bfa6f9e8c18a0a350ffe043deeb",
-          "manifestSha256": "ef55d4f895a93ac3312be853198683783dcb65e86c3c4c4d0a1a155a7bbaa8ec",
-          "changedPaths": "3_ADD_0_MOD_0_DEL",
+          "fixedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+          "deltaSha256": "7a73d5ce1779d599dd3dbb70891f01640844c381fc97cac3aad515c0c8e0dd8c",
+          "manifestSha256": "59d66c5cfdc83963093c73cfe8ba7c69462cfd12ab1be2d922fa3b466ffabe7c",
+          "changedPaths": "8_MOD_4_ADD_0_DEL",
           "artifacts": {
-            "source": "HKIA_04_NativeLoadBoundary_V21_20261112_Source.zip",
-            "delta": "HKIA_04_NativeLoadBoundary_V21_20261112_Delta.zip",
-            "manifest": "HKIA_04_NativeLoadBoundary_V21_20261112_Manifest.json"
+            "source": "HKIA_04_FormalFamilyRevoke_R2_20261112_Source.zip",
+            "delta": "HKIA_04_FormalFamilyRevoke_R2_20261112_Delta.zip",
+            "manifest": "HKIA_04_FormalFamilyRevoke_R2_20261112_Manifest.json"
           },
           "verified": {
-            "nativeInstructionAnchors": 72,
-            "staticInitializerFields": 2,
-            "realRecordsBothMarkersMatch": 6,
-            "versions": {
-              "2.18.1": 1,
-              "3.0.0": 4,
-              "3.0.1": 1
+            "baseUnchangedEntries": 388,
+            "sourceEntries": 400,
+            "libraryReadbackAll3ShaAnd400Entries": "PASS",
+            "deltaReplay": "PASS",
+            "tests": {
+              "pass": 798,
+              "skip": 36,
+              "fail": 0
             },
-            "duplicateInventory": "IMMEDIATE_RET_V301",
-            "boulder": "MISSION_STATUS3_OR_TASK4_COMPLETE_SKIP; REQ6_9; EIGHT_WORLD_OBJECT_IDS; EXISTING_FLAGS_ACTIVE_BIT_1_ONLY_DIRECT_WRITE",
-            "originalUnchanged": true,
+            "focused": 5,
             "check": "PASS",
-            "build": "PASS",
-            "zipCrc": "PASS",
-            "unchangedV21Entries": 381,
-            "libraryReadbackAll3Sha": "PASS",
-            "readbackAuditAggregateIdentical": true,
-            "priorReceiptIndependentQA": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
-            "newFullTests": "NOT_RUN_EVIDENCE_ONLY_NO_PRODUCT_CHANGE"
+            "build": "PASS_SOURCE_ONLY",
+            "tsc": "PASS_STRICT_BUNDLER",
+            "graph": "53_MODULES_5_CHANGED_MODULE_HASHES",
+            "nodeWorkerRpc": "PASS_SYNTHETIC",
+            "genuineVersion": "3.0.1",
+            "collectionVersion": 87,
+            "targets": [
+              "achievement_aquariumDisplay",
+              "achievement_beginningBarista",
+              "achievement_betterMetal"
+            ],
+            "realEditedCopies": 3,
+            "verifiedFields": 30,
+            "rawZipPairs": 3,
+            "rollback": 9,
+            "planNegativeAssertions": 17,
+            "unrelatedFamilyDenials": 2,
+            "defaultOffDenials": 5,
+            "wrongVersionReal300Denied": 1,
+            "originalUnchanged": true,
+            "fixedSourceRealAggregateExact": true,
+            "gameAccepted": false,
+            "privateSaveBytesWritten": false
           },
           "unverified": [
-            "ADDITIONAL_NATIVE_AUTH_OUTSIDE_FIXED_MARKER_CHECKS",
-            "RAW_METADATA_FIELD_HANDLE_TO_INITIALIZER_MAPPING",
-            "BOULDER_REAL_BRANCH_OUTCOMES_INDIRECT_EFFECTS",
-            "GAME_LOAD_RESAVE_REBOOT",
-            "03_ALWAYSRUN_CAUSAL_QA",
-            "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
-            "FINAL_INTEGRATED_QA"
+            "INDEPENDENT_QA_NEW_12_PATHS",
+            "NATIVE_AUTHENTICATION_LOAD_RESAVE_REBOOT_REWARD_REPLAY",
+            "V300_FAMILY_REVOKE_CONTRACT",
+            "GENERAL_COMPLETION_REVOCATION_AND_BULK_FAMILY",
+            "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER_WAIT_AUTHORIZED_ENV",
+            "NODE_NEXT_DECLARATION_EXTENSION_RESOLUTION_PREEXISTING"
           ],
+          "dependency": "R2 OFF fixed baseline; 03 V16 terminal family persistence contract and V20 AlwaysRun accepted static conditional pair; no new 02/03 proof required for isolated 3-target scope; V24 private beta frozen; no release flag changes",
           "handoff": {
             "to": "06 QA",
-            "scope": "3 additive evidence paths, pinned NSO/dump, aggregate and no-product-change check; 03 new 10 additive paths and 05 new 4 separately owned",
-            "condition": "No repeat V20 accepted receipt or V21 ordinary batch; source fixed; 03 existing paired operation satisfies local contract, no extra unconditional writes",
-            "nextAfter": "00 serial integrate accepted disjoint evidence/UI; final actual browser and irreducible game acceptance; 04 waits new evidence or scoped QA failure"
+            "scope": "12 exact changed paths vs R2 OFF; 3 genuine v301 8+2 outputs, independent slot/account/raw ZIP verification, OFF/beta-only/formal flags and wrong-version/other-family negatives, 9 rollback, Node Worker RPC; no redo prior beta",
+            "condition": "Fixed source 24f5e704…; no activation or V24 merge; formal candidate only",
+            "nextAfter": "05 family revoke capability UI only after scoped acceptance; 00 serialize later formal integration; 04 new 01/02/03 proven scope after deps"
           },
-          "rollback": "Remove exactly 3 additive evidence paths; 381 original V21 entries unchanged"
-        },
-        "fixedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
-        "deltaSha256": "7a73d5ce1779d599dd3dbb70891f01640844c381fc97cac3aad515c0c8e0dd8c",
-        "manifestSha256": "59d66c5cfdc83963093c73cfe8ba7c69462cfd12ab1be2d922fa3b466ffabe7c",
-        "changedPaths": "8_MOD_4_ADD_0_DEL",
-        "artifacts": {
-          "source": "HKIA_04_FormalFamilyRevoke_R2_20261112_Source.zip",
-          "delta": "HKIA_04_FormalFamilyRevoke_R2_20261112_Delta.zip",
-          "manifest": "HKIA_04_FormalFamilyRevoke_R2_20261112_Manifest.json"
-        },
-        "verified": {
-          "baseUnchangedEntries": 388,
-          "sourceEntries": 400,
-          "libraryReadbackAll3ShaAnd400Entries": "PASS",
-          "deltaReplay": "PASS",
-          "tests": {
-            "pass": 798,
-            "skip": 36,
-            "fail": 0
-          },
-          "focused": 5,
-          "check": "PASS",
-          "build": "PASS_SOURCE_ONLY",
-          "tsc": "PASS_STRICT_BUNDLER",
-          "graph": "53_MODULES_5_CHANGED_MODULE_HASHES",
-          "nodeWorkerRpc": "PASS_SYNTHETIC",
-          "genuineVersion": "3.0.1",
-          "collectionVersion": 87,
-          "targets": [
-            "achievement_aquariumDisplay",
-            "achievement_beginningBarista",
-            "achievement_betterMetal"
-          ],
-          "realEditedCopies": 3,
-          "verifiedFields": 30,
-          "rawZipPairs": 3,
-          "rollback": 9,
-          "planNegativeAssertions": 17,
-          "unrelatedFamilyDenials": 2,
-          "defaultOffDenials": 5,
-          "wrongVersionReal300Denied": 1,
-          "originalUnchanged": true,
-          "fixedSourceRealAggregateExact": true,
-          "gameAccepted": false,
-          "privateSaveBytesWritten": false
-        },
-        "unverified": [
-          "INDEPENDENT_QA_NEW_12_PATHS",
-          "NATIVE_AUTHENTICATION_LOAD_RESAVE_REBOOT_REWARD_REPLAY",
-          "V300_FAMILY_REVOKE_CONTRACT",
-          "GENERAL_COMPLETION_REVOCATION_AND_BULK_FAMILY",
-          "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER_WAIT_AUTHORIZED_ENV",
-          "NODE_NEXT_DECLARATION_EXTENSION_RESOLUTION_PREEXISTING"
-        ],
-        "dependency": "R2 OFF fixed baseline; 03 V16 terminal family persistence contract and V20 AlwaysRun accepted static conditional pair; no new 02/03 proof required for isolated 3-target scope; V24 private beta frozen; no release flag changes",
-        "handoff": {
-          "to": "06 QA",
-          "scope": "12 exact changed paths vs R2 OFF; 3 genuine v301 8+2 outputs, independent slot/account/raw ZIP verification, OFF/beta-only/formal flags and wrong-version/other-family negatives, 9 rollback, Node Worker RPC; no redo prior beta",
-          "condition": "Fixed source 24f5e704…; no activation or V24 merge; formal candidate only",
-          "nextAfter": "05 family revoke capability UI only after scoped acceptance; 00 serialize later formal integration; 04 new 01/02/03 proven scope after deps"
-        },
-        "rollback": "Restore 8 MOD from R2 73a2b9e7…; remove 4 ADD; V24 frozen untouched",
-        "followup": {
-          "task": "FORMAL_R2_DEPENDENCY_PREFLIGHT",
-          "status": "DONE",
-          "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
-          "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-          "checkedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
-          "inputs": {
-            "collection01": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
-            "achievement02": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
-            "linkage03": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
-            "web05": "9dc85c47e05806157b37d9b1dee99be9e75ce13f077855187f9b527d3faba81c"
-          },
-          "verified": {
-            "pathCounts": {
-              "collection01": 7,
-              "achievement02": 8,
-              "linkage03": 10,
-              "core04": 12,
-              "web05": 7
+          "rollback": "Restore 8 MOD from R2 73a2b9e7…; remove 4 ADD; V24 frozen untouched",
+          "followup": {
+            "task": "FORMAL_R2_DEPENDENCY_PREFLIGHT",
+            "status": "DONE",
+            "baseHead": "8f2e1e0372e0314cfa77e797f9db4d29dbac6505",
+            "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
+            "checkedSourceSha256": "24f5e704201ab77bf120ab1bfed5656431981b6554d9f0e9477d022126304572",
+            "inputs": {
+              "collection01": "e507de2410829a31f06ae1553a08e6a9475efc302672c439fc62cdcbf22fa14a",
+              "achievement02": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+              "linkage03": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+              "web05": "9dc85c47e05806157b37d9b1dee99be9e75ce13f077855187f9b527d3faba81c"
             },
-            "pairwiseOverlap": 0,
-            "totalPaths": 44,
-            "sourceDeltaCRC": "PASS",
-            "r2EngineSha256": "7e0bbdc352860e180ddf11721e3ad372b85eb2df4917803a6cc9654d092682c2",
-            "formal04EngineSha256": "7d5655a9f9e0146c848b9ce8df45ebe1aa9b0d1146974195d6fe6524773a9864",
-            "nodeVersion": "22.16.0",
-            "pinMismatchProbes": "01 and 03 exit 1 at exact engine SHA assertion before private Save input; 02 manifest pins R2",
-            "engineChangedScope": "Only dryRunSchemaGeneralAchievementPairResearch adds cloned devOutput and passes it to assembly; do not infer full equivalence"
-          },
-          "classification": "EVIDENCE_REPRODUCTION_DEPENDENCY_NOT_PRODUCT_TRUE_RED; NO_PRODUCT_OR_OTHER_STREAM_SOURCE_CHANGES",
-          "handoff": "00/06 preserve original R2 evidence and execute 01/02/03 fixed-scope QA on original R2; after acceptance and serial integration validate affected engine/assembly path; if integrated repeat is required, owner streams add distinct new pin/evidence on integrated SHA only after actual scoped verification; do not silently overwrite old provenance. 02 priority 20 no-defined-reward candidates after 03 target causal and QA; 01 structural only, no product authorization.",
-          "remaining": "06 formal in flight; no new 04 permission or code task until independent verdict or new accepted target-specific contract; V24 frozen; real browser WAIT_ENV"
+            "verified": {
+              "pathCounts": {
+                "collection01": 7,
+                "achievement02": 8,
+                "linkage03": 10,
+                "core04": 12,
+                "web05": 7
+              },
+              "pairwiseOverlap": 0,
+              "totalPaths": 44,
+              "sourceDeltaCRC": "PASS",
+              "r2EngineSha256": "7e0bbdc352860e180ddf11721e3ad372b85eb2df4917803a6cc9654d092682c2",
+              "formal04EngineSha256": "7d5655a9f9e0146c848b9ce8df45ebe1aa9b0d1146974195d6fe6524773a9864",
+              "nodeVersion": "22.16.0",
+              "pinMismatchProbes": "01 and 03 exit 1 at exact engine SHA assertion before private Save input; 02 manifest pins R2",
+              "engineChangedScope": "Only dryRunSchemaGeneralAchievementPairResearch adds cloned devOutput and passes it to assembly; do not infer full equivalence"
+            },
+            "classification": "EVIDENCE_REPRODUCTION_DEPENDENCY_NOT_PRODUCT_TRUE_RED; NO_PRODUCT_OR_OTHER_STREAM_SOURCE_CHANGES",
+            "handoff": "00/06 preserve original R2 evidence and execute 01/02/03 fixed-scope QA on original R2; after acceptance and serial integration validate affected engine/assembly path; if integrated repeat is required, owner streams add distinct new pin/evidence on integrated SHA only after actual scoped verification; do not silently overwrite old provenance. 02 priority 20 no-defined-reward candidates after 03 target causal and QA; 01 structural only, no product authorization.",
+            "remaining": "06 formal in flight; no new 04 permission or code task until independent verdict or new accepted target-specific contract; V24 frozen; real browser WAIT_ENV"
+          }
         }
       },
       "formalTask": {
         "task": "FORMAL_V16_FAMILY_REVOKE_PRIVATE_WRITER_PROOF",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Independent existing V16 terminal-revoke three families and api.mjs family planner/dryRunSchemaGeneralAchievementPairResearch. Bind 8 Slot + 2 Account changes in immutable Session/revision; private gated atomic ZIP candidate output, independent reparse, rollback negatives on genuine 300/301 as proven. No V24 activation or reward mutation; separate OFF source.",
         "acceptance": "Private edited-copy proof for existing family revoke; non-target bytes, CAS, no partial output, same archive Account pairing, no fabricated reward. Block unresolved native/reward scope only. New 01/02/03 families are later deltas.",
-        "next": "06 formal scoped QA in flight; 05 after 04 acceptance; next 04 after accepted target-specific 01/02/03 contracts"
+        "next": "05 accepted exact single-family UI; 04 separate batch composition proof"
       }
     },
     "05_WEB": {
