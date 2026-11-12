@@ -651,7 +651,7 @@
     "betaWriterActuallyEnabled": false
   },
   "nextSerial": [
-    "NOW parallel 05 Recipe receipt UI on fixed V21, 04 targeted Native AlwaysRun actual bodies/conditions and 03 only concrete causal evidence, separate ownership. 06 combined V21 scoped checks only where useful without duplicate final QA; no repeat accepted 04/05 scopes.",
+    "NOW parallel 05 Recipe receipt UI on fixed V21; 04 Native auth/load and exact FixBrokenBouldersFromMp_ENG_4777 / LogDuplicateInventoryItems bodies; 03 exact MigrateAchievementCounters causal effects only. No overlap/repeat. 06 final combined QA after new UI/fixed source; do not duplicate already accepted scopes.",
     "After 05 new fixed receipt UI and targeted native findings, 06 independent scoped QA; 00 serial integrate accepted deltas. Final fixed Beta actual HTTP/HTTPS ESM WebCrypto Module Worker E2E in authorized environment, no inline substitute.",
     "07 WAIT_ENV Rust local kit; independent JS Beta path.",
     "Owner explicit approval for actual deploy/live flags, rollback ready. Svelte migration separate after JS Beta UI fixed."
@@ -1438,14 +1438,14 @@
         "06 QA"
       ],
       "web": "V21 base; recipe-aware UI issuer worker stays alive; exact zero edited File and volatile token only; two confirmations; no token persistence; revoke close/restart/resave; no ordinary batch redo; flags OFF",
-      "core": "Targeted actual bodies/conditions of three resolved AlwaysRun slots FixBrokenBouldersFromMp_ENG_4777, LogDuplicateInventoryItems, MigrateAchievementCounters; distinguish authentication/load and game behavior, no speculative writes; 03 only new concrete causal target",
-      "qa": "Final combined V21 4 paths plus affected interaction and exact dist, reuse matching fixed scoped evidence; real HTTP/HTTPS native WebCrypto Module Worker on authorized environment; if environment unchanged wait, do not rerun inline as browser acceptance; receipt UI new source independent QA after 05"
+      "core": "04: actual body/conditions of FixBrokenBouldersFromMp_ENG_4777 and LogDuplicateInventoryItems, native envelope authentication and load/persistence boundary. Do not duplicate MigrateAchievementCounters body owned by 03; consume its causal contract. No speculative writes.",
+      "qa": "Final combined V21 4 paths plus affected interaction and exact dist, reuse matching fixed scoped evidence; real HTTP/HTTPS native WebCrypto Module Worker on authorized environment; if environment unchanged wait, do not rerun inline as browser acceptance; receipt UI new source independent QA after 05",
+      "linkage": "03: exact resolved MigrateAchievementCounters AlwaysRun body/condition, only impact on already-supported Achievement progress/timestamp and Collection/Recipe derived counters; prove REQUIRED/RELATED/INDEPENDENT/UNKNOWN, no blanket graph or 04 product edits. Direct to 04 with static anchors and scoped contract."
     },
     "nextReadyParallel": [
-      "05_RECIPE_RECEIPT_UI",
-      "04_NATIVE_ALWAYSRUN_TARGETED",
-      "03_NEW_CAUSAL_TARGET_FROM_NATIVE_ALWAYSRUN_ONLY",
-      "06_V21_COMBINED_SCOPE_ONLY_IF_NOT_DUPLICATE_FINAL_QA"
+      "05_RECIPE_RECEIPT_UI_V21",
+      "04_NATIVE_AUTH_LOAD_TWO_ALWAYSRUN_METHODS",
+      "03_MIGRATE_ACHIEVEMENT_COUNTERS_CAUSAL_ONLY"
     ],
     "nextAfterDep": [
       "06_REAL_BROWSER_FINAL_FIXED_SOURCE_AFTER_UI_AND_AUTHORIZED_ENV",
