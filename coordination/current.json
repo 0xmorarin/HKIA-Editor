@@ -1033,5 +1033,18 @@
       "handover": "HKIA Editor【STREAM】会話引継ぎ。最新正本から担当状態を再構成し、自律実行を再開。既受入範囲再調査禁止。次READYを実行し直接HANDOFF。"
     },
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
+  },
+  "ctrlExecution": {
+    "task": "V18_SUCCESSOR_CANDIDATE_PREFLIGHT_AND_BROWSER_ENV",
+    "status": "IN_FLIGHT",
+    "owner": "00 CTRL",
+    "baseMain": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+    "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+    "scope": "private candidate assembly only; compare 03/04/05 exact deltas, resolve integration dependencies, real browser environment check, no product source edits outside 00, no deployment or accepted merge",
+    "dependency": "06 independent scoped QA required for accepted integration; pending QA does not prevent private preflight",
+    "sourceInputs": {
+      "web": "68507cc685200843ef8be0686f2918aa56111db3ebe1b7e087bd7ba4ec5b0b4f",
+      "linkage": "301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
+    }
   }
 }
