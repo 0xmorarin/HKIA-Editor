@@ -85,7 +85,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "FORMAL_READY_FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL; BASE_R2_OFF; V24_FROZEN; 04 SAVE CORE / 06 scoped QA",
+      "next": "FORMAL_03_REWARD_REPLAY_DELTA_QA_PENDING; 04_AND_06_PARALLEL; 03_WAIT_NEW_WITNESS_NO_REPEAT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -117,13 +117,26 @@
       },
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reward replay persisted claim/receipt producer consumer and exact terminal family consequences; reuse accepted 03; no changes to frozen V24",
         "acceptance": "Persisted claim/receipt proof or explicit UNKNOWN/irreducible device witness; classify new writes and safe subset for 04. Preserve AlwaysRun and V16 ten-field snapshot contract.",
-        "next": "04 SAVE CORE / 06 scoped QA",
-        "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431"
+        "next": "04 consume advisory and prior V16 8+2 exact research/Writer proof; 06 scoped QA new 10 ADD; 00 serial formal integration after QA; V24 frozen; 03 WAIT new specific causal witness or QA failure",
+        "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL_REWARD_REPLAY_DELTA_20261112.zip",
+          "sha256": "5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844",
+          "manifestSha256": "b8f907f34110e8b75a80b1af11a465239efd5f6db686189d4330d1f25e932ec3",
+          "entries": 10,
+          "scope": "10_ADD_0_MOD_0_DEL; 396 R2 base entries unchanged",
+          "libraryId": "libfile_ef620bc2ac808191882a610bc74c1ba5",
+          "evidence": "17 focused; 85 including V16/V20 adjacent; 56 Native anchors/6 slots/17 method bindings; 3 genuine forward and exact inverse expanded reparse, reward rows preserved, Account clone inverse",
+          "classification": "RELATED_REWARD_DISPATCH_TO_INVENTORY_AND_SAVE_REQUEST; NO_NEW_REQUIRED; PERSISTED_CLAIM_IDEMPOTENCY_UNKNOWN",
+          "gameAccepted": false
+        },
+        "priorAcceptance": "06 V21 scoped PASS on V20 AlwaysRun 10 ADD; integrated V22/R2; do not repeat",
+        "remaining": "Game actual load/re-save/reboot; reward claim and replay on legitimate re-completion; RPC delivery and joint physical commit; Account root reward effects. Representative private device witness only; no online or speculative inventory writes."
       }
     },
     "04_SAVE_CORE": {
