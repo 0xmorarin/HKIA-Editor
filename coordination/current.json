@@ -82,12 +82,13 @@
       },
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_REWARD_REPLAY_AND_PARENT_CAUSAL",
-        "status": "READY",
+        "status": "IN_FLIGHT",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
-        "scope": "Reuse V16 three terminal-revoke families and prior reward service queue/Native Load. Target COMPLETE/REVOKE reward claim/replay, parent/root and derived effects; no 02 definition redo or speculative reward/inventory writes.",
+        "scope": "Reward replay persisted claim/receipt producer consumer and exact terminal family consequences; reuse accepted 03; no changes to frozen V24",
         "acceptance": "Persisted claim/receipt proof or explicit UNKNOWN/irreducible device witness; classify new writes and safe subset for 04. Preserve AlwaysRun and V16 ten-field snapshot contract.",
-        "next": "04 SAVE CORE / 06 scoped QA"
+        "next": "04 SAVE CORE / 06 scoped QA",
+        "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431"
       }
     },
     "04_SAVE_CORE": {
