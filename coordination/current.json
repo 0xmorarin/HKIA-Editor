@@ -34,7 +34,7 @@
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
-      "baseMain": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+      "baseMain": "67c537b1668467bd6b2fb140fb1d7e04e0a2e593",
       "latestDelta": {
         "baseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
         "sha256": "cc6ce5a52fbf0a399a6ba41c8435992cf7461abe48cc847651a4889b5bb28c6b",
