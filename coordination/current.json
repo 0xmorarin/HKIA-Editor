@@ -330,7 +330,7 @@
       }
     },
     "04_SAVE_CORE": {
-      "status": "FORMAL49_EXACT20_REAL_OUTPUT_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_MANUAL9_REAL_OUTPUT_LOCAL_PASS_QA_READY",
       "sourceSha256": "688fc18fda0f61014a9508fb88c68972589654d4ea0f27f38dca3cb3bd94f4ed",
       "upstreamSha256": "fab348bda6c23f1ff18887bd11b3bfff65ea598272af77f0a487220ad9c980c6",
       "candidateOperations": [
@@ -346,7 +346,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_SCOPED_QA_EXACT20_AND_NEW02_03; 04_EXACT9_ABSENCE_REVOKE_AFTER_02_03_PASS; 20_REWARD_DEFINED_WAIT_EVIDENCE; 00_EXACT20_V26_COMPAT_PASS_AFTER_QA; V24_FROZEN",
+      "next": "06_SCOPED_QA_MANUAL9_9_PATHS; 05_AFTER_PASS_MANUAL9_UI; 00_V27_SERIAL_INTEGRATION; 04_RECIPE32_AFTER_03_CAUSAL_QA_SAFE_SUBSET; OTHER20_REWARD_WAIT_EVIDENCE; V24_FROZEN",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -779,18 +779,18 @@
       },
       "formalNextTask": {
         "task": "FORMAL49_EXACT20_NO_DEFINED_REWARD_PRIVATE_WRITER",
-        "status": "IMPLEMENTED_LOCAL_PASS_QA_PENDING",
+        "status": "DONE_SCOPED_PASS",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "dependency": "06 accepted 03 FORMAL49 dbd53d207a51858f20682401f56c92d90a9251521ac9cf2f721a5aed7f0cadb8 and 02 exact49 research; 04 batch af7a25881bceee8e8f59abe6bc4575e23a9737f634c8f2833355056caaf09b41; V26 integrated exact paths. No wait for new 02/03.",
         "scope": "Exact 20 no-defined-leaf/group-reward v301 candidates only where typed fields and conditional invariants proven; reuse single ProductSession, existing family/pair planner and atomic ZIP CAS, separate OFF gate. No reward/Inventory mutation, unverified v300, structural creation or V24 changes. Full archive preimage, parent/root snapshot, isolate unresolved targets and continue safe subset.",
         "acceptance": "Exact candidate inventory; genuine edited-copy and independent semantic reparse/non-target raw frames; stale/forged/replay/rollback/wrong version/unsupported rejection. Fixed scoped delta/source/manifest and 06 QA. No blanket permission or game acceptance.",
-        "next": "06 exact20 QA; no reimplementation on V26; exact 9 path preimage compatibility PASS",
+        "next": "05 exact20 UI in flight; 00 V27 integrated accepted exact20; no repeat",
         "fixedSourceSha256": "79ca9fee91b0c7847afd24f5d8c5764627f730be0c648c844574fc413f061eef"
       },
       "formal29Preflight": {
         "task": "FORMAL29_ABSENCE_WRITER_PREFLIGHT_AND_V26_COMPATIBILITY",
-        "status": "DONE_READ_ONLY_WAIT_DEP",
+        "status": "DONE_CONSUMED_EXACT9",
         "baseMain": "d7524ac3d1fffc4809d191a38e4af7d794f52a7b",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "scope": "Read-only exact20 V26 preimage and next29 authorization/reward/absence preflight; no product source change or QA promotion",
@@ -824,12 +824,87 @@
       },
       "formal9Execution": {
         "task": "FORMAL_MANUAL_EXACT9_ABSENCE_REVOKE",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "04 SAVE CORE",
         "baseMain": "6461dc572758c00255c0ae58d90a666494223ab6",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "dependency": "06 accepted exact20, V26, 02 missing Manual 9ADD and 03 conditional 8ADD; use V26+exact20 byte compatible composite",
-        "scope": "04 only; 9 no-defined-reward v301 existing nonterminal revokes with full archive absence CAS; dedicated OFF flag, six Slot fields, no Account/creation, no V24 change"
+        "scope": "04 only; 9 no-defined-reward v301 existing nonterminal revokes with full archive absence CAS; dedicated OFF flag, six Slot fields, no Account/creation, no V24 change",
+        "baseCompositeSha256": "7504393ea638545cc1a113326abd400770500a380a8fd112f50df674f7cd5bd7",
+        "baseCompositeEntries": 461,
+        "baseReconstruction": "V26 + exact20 accepted 9 paths + 02 missing Manual 9 ADD + 03 conditional 8 ADD (transport manifest excluded); all exact pre/postimage",
+        "fixedSourceSha256": "9ebbe94f7d5a241f62ccacd8cb4ec07b200c8c78fb96368497428b1a06da64fb",
+        "deltaSha256": "9ac19cfbb0122bc96a1b1aee18d63f6d8b1ea3c85129692f0548027f09c4f1e0",
+        "manifestSha256": "6846c5c5bd88d5fdc4de553ea52d41f23c783f69356d8658a00c5e8667bceb1a",
+        "evidenceSha256": "df401d50f7f6f8e20f50e9d7db1e6c006ccee81eb7bf9d9977068d99ed73aab3",
+        "changedPaths": "6_MOD_3_ADD_0_DEL; 455 unchanged of 461; 464 source",
+        "artifacts": {
+          "base": "HKIA_04_FormalManual9_20261112_Base.zip",
+          "source": "HKIA_04_FormalManual9_20261112_Source.zip",
+          "delta": "HKIA_04_FormalManual9_20261112_Delta.zip",
+          "manifest": "HKIA_04_FormalManual9_20261112_Manifest.json",
+          "evidence": "HKIA_04_FormalManual9_20261112_Evidence.zip",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "verified": {
+          "tests": {
+            "pass": 910,
+            "skip": 36,
+            "fail": 0
+          },
+          "focusedNew": 4,
+          "fixedFocusedIncludingExact20": 9,
+          "build": "PASS_SOURCE_ONLY",
+          "check": "PASS",
+          "tsc": "PASS_STRICT_BUNDLER_TYPED_CONSUMER",
+          "nodeWorker": "PASS_SYNTHETIC_RPC",
+          "realVersion": "3.0.1",
+          "collectionVersion": 87,
+          "offPreview": 9,
+          "offDenied": 9,
+          "realOutput": 9,
+          "slotFields": 54,
+          "accountFields": 0,
+          "rawFrames": 9,
+          "accountRaw": 9,
+          "modelKeySets": 9,
+          "rollback": 9,
+          "negative": 57,
+          "wrongVersion300Denied": 1,
+          "parityToAccepted02And03": 9,
+          "absencePairsAggregated": 281,
+          "rewardDefinedExcluded": 20,
+          "derivedExcluded": 10,
+          "fixedSourceReextract": "464_FILE_SHA_CRC_PASS; ALL9 GENUINE_ON_REPEATED",
+          "graph": 55,
+          "newModules": 0,
+          "flags": "ALL_OFF; isolated beta+formal9 ON only",
+          "libraryReadback": "ALL5_BYTE_EXACT_CRC_464_HASHES_461_PLUS9_REPLAY",
+          "gameAccepted": false,
+          "privateBytesWritten": false
+        },
+        "compatibility": {
+          "sourceSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
+          "entries": 479,
+          "preimages": 6,
+          "additionsAbsent": 3,
+          "conflicts": 0,
+          "classification": "V27_COMPATIBILITY_ONLY_NOT_INTEGRATED_NOT_QA"
+        },
+        "unverified": [
+          "NEW_06_INDEPENDENT_QA",
+          "ACTUAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "GAME_LOAD_RESAVE_NATIVE_AUTH_REWARD_SIDE_EFFECT",
+          "V300_REVERSE_BULK_OTHER20_REWARD_DEFINED_DERIVED_OR_STRUCTURAL_CREATION",
+          "00_FULL_DISTRIBUTION_REBUILD_AFTER_INTEGRATION",
+          "MAIN_PROTECTION_NOT_AVAILABLE_IN_CONNECTOR"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "Exact 9 paths on 461 composite; source 9ebbe94f...64fb; independently verify 9 genuine v301 six-field output, full archive CAS and exact absence set/partial or appeared member denial, model-key set/raw Account/non-target frames, 02/03 parity, separate OFF flag, rollback/replay, excluded 20+10 and v300, no generic guard bypass or repeated accepted exact20 QA",
+          "nextAfter": "05 exact9 UI after scoped PASS; 00 integrate 9 paths on V27 (preimage confirmed) or successor with current CAS, same 55 modules, full distribution/privacy/rollback; 04 Recipe32 only after accepted 03 causal safe subset and exact restore/receipt/side-effect contract; other20 WAIT_REWARD_EVIDENCE; V24 frozen"
+        },
+        "rollback": "Restore 6 preimage files from 461 composite and remove 3 additions; preserve exact20 and V24"
       }
     },
     "05_WEB": {
