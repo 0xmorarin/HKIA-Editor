@@ -1787,15 +1787,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V29_COMBINED_SCOPED_PASS_RECIPE23_RECIPE4_UI_IN_FLIGHT",
+      "status": "FORMAL_V29_RECIPE23_RECIPE4_UI_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
       "targetScope": "3_MOD_5_SETTINGS_PRIVATE_ACTIVATION",
-      "next": "00_SERIAL_V28_SUCCESSOR; 04_RECIPE_REMAINING23_SCOPED_WRITER; 05_RECIPE4_RECEIPT_UI; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
+      "next": "00_SERIAL_V29_SUCCESSOR; 05_RECIPE23_RECEIPT_UI; 03_CELEBRATION5_TARGETED_CAUSAL; 04_WAIT_ACCEPTED_CAUSAL_SCOPE; 06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER",
       "execution": {
         "task": "FORMAL_RECIPE23_RECIPE4_UI_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "f253932657464e9120dd7f1b6c7831eb124b9c6b",
         "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
         "scope": "04 Recipe23 8 paths and 05 Recipe4 UI 5 paths; independent genuine outputs and receipt proof; V24 frozen",
@@ -2994,7 +2994,102 @@
             "game load/re-save unknown",
             "04 Recipe23 and 05 Recipe4 UI new independent QA"
           ]
-        }
+        },
+        "verdict": "SCOPED_PASS_RECIPE23_AND_RECIPE4_UI",
+        "fixedSources": {
+          "v29": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
+          "core04": "8b5c7bc261bcc63f20ac4a17906d313e88dfec7e1db9dd9b72e58a4f8587218a",
+          "ui05": "39f741f0e923752b920381827d19cf6a378a4e0dc3de5366467257728d5836bd"
+        },
+        "verified": {
+          "focused": 37,
+          "core04": {
+            "verdict": "SCOPED_PASS_V301_EXISTING_RECIPE23_SAME_RUNTIME_RECEIPT",
+            "scope": "5MOD3ADD",
+            "baseEntries": 496,
+            "sourceEntries": 499,
+            "genuineForward": 23,
+            "genuineReverse": 23,
+            "exactDiff": 46,
+            "accountRaw": 46,
+            "offPlans": 23,
+            "offPlanDenied": 23,
+            "representativeOffPreview": 2,
+            "onNegatives": 277,
+            "rollback": 3,
+            "independentPythonRawZip": 2,
+            "nonTargetRawFrames": 20,
+            "old4Separate": true,
+            "excludedCelebration": 5,
+            "wrongVersion300Denied": true,
+            "originalUnchanged": true
+          },
+          "ui05": {
+            "verdict": "SCOPED_PASS_RECIPE4_UI_INLINE",
+            "scope": "2MOD3ADD",
+            "baseEntries": 499,
+            "sourceEntries": 502,
+            "genuineForward": 4,
+            "genuineReverse": 4,
+            "exactDiff": 8,
+            "accountRaw": 8,
+            "offPreview": 4,
+            "inlineChromiumCases": 5,
+            "viewports": [
+              320,
+              375,
+              1280
+            ],
+            "isolatedActualForwardRestoreDownloadReimport": 1,
+            "wrongVersion300Denied": true,
+            "originalUnchanged": true
+          },
+          "scratchCombined": {
+            "classification": "QA_COMPATIBILITY_ONLY_NOT_00_FIXED_ARTIFACT",
+            "disjointPaths": 13,
+            "sourceEntries": 505,
+            "focused": 13,
+            "distEntries": 4146,
+            "modules": 55,
+            "modifiedDistPaths": 6,
+            "build": "PASS",
+            "check": "PASS"
+          },
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_V29_RECIPE23_RECIPE4UI_20261112_REPORT.md",
+            "sha256": "68c81f273ee8d4791c5cc503d80f4e6a97279da90739c7e5d407409c411b7e6b"
+          },
+          "zip": {
+            "file": "HKIA_06_V29_RECIPE23_RECIPE4UI_20261112_EVIDENCE.zip",
+            "sha256": "05b5534ae44ea3f740d1453b29a28f8bfdc3f35ab390f6bfc26d4888b0b948a5",
+            "entries": 30
+          },
+          "result": {
+            "file": "HKIA_06_V29_RECIPE23_RECIPE4UI_20261112_RESULT.json",
+            "sha256": "61c4f40d9c5445df3c4a9c9ee3529805e11b2b504292957045763165f9d554a0"
+          },
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT_CRC_PASS",
+          "v29PreviousReadback": "ALL_2_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "V24 actual HTTP/HTTPS native WebCrypto Module Worker WAIT_ENV; OFF preview deployed per 00 ledger",
+          "Native auth/game load/resave/reboot/runtime effects UNKNOWN; Switch asset parity UNKNOWN",
+          "5 Celebration references targeted causal proof, no generic acquisition/new rows/batch/post-resave restore",
+          "00 fixed successor; 05 Recipe23 UI; 04 wait new causal scope"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "05 WEB",
+            "03 LINKAGE"
+          ],
+          "condition": "00 serial integrate exact 04 Recipe23 8 paths + 05 Recipe4 UI 5 paths on V29, no conflicts, fixed artifact and QA. 05 Recipe23 UI now READY on accepted 04 fixed contract. 03 targeted 5 Celebration references causal/side-effect witness using accepted 01/03 exact facts. 04 WAIT accepted new causal scope; V24 frozen.",
+          "nextAfter": "06_NEW_FIXED_SOURCE_OR_AUTHORIZED_BROWSER"
+        },
+        "rollback": "V29 accepted OFF; restore 5+2 preimages and remove 3+3 additions; V24 unchanged"
       },
       "handoffRecheck": {
         "date": "2026-11-12",
