@@ -59,7 +59,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "FORMAL_02_NEW_49_WITNESSES_QA_READY; 03 TARGETED_ADJUDICATION + 04 EXISTING_V16_PROOF + 06_02_SCOPED_QA; V24_FROZEN",
+      "next": "02_MISSING_MANUAL_29_DRAFTS_QA_READY; 03_CAUSAL_AFTER_CURRENT_SCOPE; 06_SCOPED_QA; CREATION_WAIT_EXACT_WITNESS; V24_FROZEN",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -106,14 +106,67 @@
       },
       "formalNextTask": {
         "task": "FORMAL_MANUAL_UNPERSISTED_MEMBER_PRODUCER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "priority": "P0_FORMAL_RELEASE",
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "dependency": "02 49-target research scoped PASS; 39 GROUP_MEMBER_NOT_PERSISTED in formal COVERAGE.json; independent of existing 49 and 04 writer",
-        "scope": "New exact Manual missing persisted group-member class only; reuse V14/V15 and 02 formal catalog. Locate native member/Counter creation, ID allocation, Load/Migration and missing/ambiguous state; derive exact typed row/field preconditions only for concrete witnesses. No arbitrary record synthesis, DLC/event or reward writes, no redo of 49.",
+        "scope": "9_ADD_0_MOD_0_DEL; 396 R2 + 8 prior02 paths byte-identical; V24 frozen",
         "acceptance": "Pinned Native producer/consumer + exact typed missing-row/creation evidence (or specific WAIT_DEP witness); contract and tests, no product authorization; direct 03/04 only proven scope; 06 scoped QA.",
         "baseHead": "238080910f56392744c9a9a75c99cf7c3e89896b",
-        "executionScope": "Missing persisted Manual group members: native creation, document identity allocation, exact observed missing witnesses; no product changes"
+        "executionScope": "Missing persisted Manual group members: native creation, document identity allocation, exact observed missing witnesses; no product changes",
+        "deltaSha256": "564fd22df7711e7ce0cccde693e7c5fcd226514f536e3a417ae0c1fcd38e9b66",
+        "manifestSha256": "4024bf8a46cc99e2c1e685030a7289c8b2cfe95abd3019d94c5268af405d0dca",
+        "artifact": "HKIA_02_Missing_Manual_Member_R2_Delta_20261112.zip",
+        "libraryFileId": "libfile_8980fa8d5c0881918a3d77430d27c5b3",
+        "prior02DeltaSha256": "54c040bc4b0023292b19740e20c2d0d23256d5486739bef2acfd2c4ee9a473b1",
+        "verified": {
+          "blocked39PerVersion": 39,
+          "missingDefinitions": 110,
+          "missingManual": 87,
+          "missingVisitorRating": 22,
+          "missingMission": 1,
+          "absentPairBoth": 110,
+          "existing29NewDraftTargets": 29,
+          "groups": 8,
+          "completePerVersion": 6,
+          "revokePerVersion": 23,
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "slotReparse": 58,
+          "staleCas": 58,
+          "partialPairRejected": 58,
+          "reverseRequestRejected": 58,
+          "derivedRejected": 20,
+          "structuralWrites": 0,
+          "accountWrites": 0,
+          "backupsReadable": 5,
+          "backupsUnsupported": 1,
+          "backupNewManualPairs": 0,
+          "observedNonManualPair": "V300 collection_welcomehome gated Group",
+          "nativeInstructionAnchors": 46,
+          "nativeDirectBranches": 9,
+          "nativeTypeChecks": 12,
+          "focusedPass": 13,
+          "check": "PASS",
+          "libraryReadback": "BYTE_EXACT",
+          "originalUnchanged": 2
+        },
+        "unverified": [
+          "03 missing Manual initial-zero vs runtime scheduling causal classification",
+          "exact generic provider dispatch binding",
+          "Manual first-progress native row creation witness",
+          "V300 Native equivalence",
+          "actual game authentication/load/resave/reward"
+        ],
+        "creationTask": {
+          "status": "WAIT_DEP",
+          "exactTarget": "achievement_hatsOffToYou",
+          "group": "collection_nuls",
+          "condition": "genuine same-version before/after legitimate first progress; both absent -> both present, exact producer trigger, all-document Id/NextId, reload/resave/parent/root consistency; no synthetic rows"
+        },
+        "next": "06 scoped QA 9 ADD + 03 missing Manual conditional causal review after its current task; 04 existing exact20 private writer independent; new29 after both accepted; no new row creation; 00 serial integration"
       }
     },
     "03_LINKAGE": {
