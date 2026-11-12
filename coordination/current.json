@@ -25,15 +25,15 @@
       "next": "ONLY_NEW_PROVEN_COMPLETION_REVERSAL_FAMILY_OR_DERIVED_PRODUCER_PERSISTENCE; OTHERWISE_HANDOFF_04_03_NO_REDO"
     },
     "03_LINKAGE": {
-      "status": "V18_RECIPE_CAUSAL_DELTA_LOCAL_PASS_QA_PENDING",
+      "status": "IN_FLIGHT_NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
       "next": "06_SCOPED_QA_03_DELTA; 04_RECEIPT_SAFE_RECIPE_AND_OTHER_INDEPENDENT_OUTPUT; 05_ADVISORY_IF_CONNECTED; 03_NO_REPEAT_WAIT_NEW_CONCRETE_CAUSAL_TARGET_OR_DEVICE_EVIDENCE",
-      "task": "RECIPE_TARGETED_CAUSAL",
-      "taskBaseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-      "scope": "Exact 5913958 RecipeItemDetails zero quantity exclusion; 24 member real witness, conditional recount and SaveCounter",
+      "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
+      "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+      "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
       "baseMain": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
       "latestDelta": {
         "baseSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -44,7 +44,8 @@
         "classification": "RELATED_ONLY_NEW_REQUIRED_0",
         "actualGameAccepted": false
       },
-      "remaining": "Final native load/resave/reboot, zero row retention, receipt restore and other counter/reward side effects unverified; exact 23 recount static prediction, no new cross-model writes; independent operations not blocked"
+      "remaining": "Final native load/resave/reboot, zero row retention, receipt restore and other counter/reward side effects unverified; exact 23 recount static prediction, no new cross-model writes; independent operations not blocked",
+      "priorRecipeAcceptance": "06_SCOPED_PASS_RELATED_ONLY_301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb"
     },
     "04_SAVE_CORE": {
       "status": "TRUSTED_RECIPE_RECEIPT_LOCAL_PASS_QA_PENDING",
