@@ -919,7 +919,7 @@
       },
       "recipe32Execution": {
         "task": "FORMAL_RECIPE32_EXACT_SAFE_SUBSET_WRITER",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS",
         "baseMain": "8bdb323fd8685fe4212139260533870437b70cbc",
         "baseSourceSha256": "afe1ff724db8a7286806ff974eadea2d86ed38245ed8b1be182ec7b883fade67",
         "owner": "04 SAVE CORE",
@@ -997,6 +997,15 @@
           "nextAfter": "05 exact4 Recipe UI after 06 scoped PASS; 00 serial integrate current exact preimages and unchanged 55 module closure. 04 remaining 23 lower-observed-reference Recipe candidates only after accepted exact4/explicit scoped extension; 5 celebration reference isolated, no arbitrary acquisition or post-resave restore. V24 frozen."
         },
         "rollback": "Restore 5 preimages from fixed 490 composite, remove 3 additions; preserve prior accepted exact20 and Manual9 and 01/03 research"
+      },
+      "recipe23Execution": {
+        "task": "FORMAL_RECIPE_REMAINING23_SCOPED_WRITER",
+        "status": "IN_FLIGHT",
+        "owner": "04 SAVE CORE",
+        "baseMain": "269545cc796b9de91c1cfcfb6916d2cdfab7a4c9",
+        "baseSourceSha256": "dbeb8637602ea0ac84fb82905fdc53d43fbc16fabf86614a2766ab8fbd265f00",
+        "scope": "23 lower-observed-reference existing Recipe rows; reuse accepted Recipe4 same-runtime receipt, no celebration 5, no new rows or V24",
+        "dependency": "06 exact Recipe4 and V28 scoped PASS; 01/03 Recipe32 research accepted"
       }
     },
     "05_WEB": {
