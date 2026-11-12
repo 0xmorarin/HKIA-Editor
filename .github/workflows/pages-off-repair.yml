@@ -41,6 +41,10 @@ jobs:
           set -euo pipefail
           [[ "$ARTIFACT_REF" =~ ^[0-9a-f]{40}$ ]]
           [[ "$TARGET" == V30 || "$TARGET" == V29 ]]
+          case "$TARGET" in
+            V30) test "$ARTIFACT_REF" = b7e91df1e456ded1b50b4649797bf1b7df216717 ;;
+            V29) test "$ARTIFACT_REF" = 15cacf59a0c24a1124edb3741816d300794b4cdb ;;
+          esac
           test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
           node --input-type=module -e 'import fs from "node:fs";const d=JSON.parse(fs.readFileSync("config/release-gates.json")).distribution;if(d.githubPages!=="OFF"||d.nativeSaveWriter!=="OFF_PENDING_FUNCTIONAL_BETA_SAFETY_QA")throw Error("OFF repair only; functional beta uses separate gate")'
           test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
