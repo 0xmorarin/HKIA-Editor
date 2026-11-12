@@ -65,112 +65,121 @@
       "specificBlocker": "RECIPE_EXACT_SAME_RUNTIME_RESTORE_LOCAL_PASS; GAME_RESAVE_LINEAGE_AND_NEW_SCOPED_QA_UNVERIFIED; OTHER_SIX_OPERATIONS_NOT_BLOCKED",
       "next": "06_SCOPED_QA_NEW_04_16_PATHS; 05_RECEIPT_UI_AFTER_QA; 00_SERIAL_INTEGRATION_GRAPH; GAME_RESAVE_LINEAGE_ONLY_IF_NEW_EVIDENCE",
       "execution": {
-        "task": "V18_RECIPE_TRUSTED_RECEIPT",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
-        "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
-        "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-        "scope": "04 session receipt/Recipe policy and tests; use 03 advisory contract after independent acceptance; no 05 changes",
-        "dependency": "03 fixed delta 301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb SCOPED_PASS_RELATED_ONLY; prior 04 repair SCOPED_PASS",
+        "task": "NATIVE_V301_ALWAYSRUN_BODY_EFFECTS",
+        "status": "IN_FLIGHT",
+        "baseHead": "a5cb28a745f8b8036df97c0145f5b5c58b8170b1",
+        "baseSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+        "scope": "04 static load audit; pinned NSO/dump; 03 semantic contract advisory only; no shared product files",
         "owner": "04 SAVE CORE",
+        "dependency": "06 receipt SCOPED_PASS; V20/V21 integration in 00",
         "previous": {
-          "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
+          "task": "V18_RECIPE_TRUSTED_RECEIPT",
           "status": "PARTIAL_LOCAL_PASS_QA_READY",
-          "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
-          "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-          "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
-          "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+          "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+          "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+          "scope": "04 session receipt/Recipe policy and tests; use 03 advisory contract after independent acceptance; no 05 changes",
+          "dependency": "03 fixed delta 301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb SCOPED_PASS_RELATED_ONLY; prior 04 repair SCOPED_PASS",
           "owner": "04 SAVE CORE",
-          "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-          "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
-          "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
-          "changedPaths": "8_MOD_2_ADD",
+          "previous": {
+            "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
+            "status": "PARTIAL_LOCAL_PASS_QA_READY",
+            "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+            "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+            "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
+            "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+            "owner": "04 SAVE CORE",
+            "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+            "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
+            "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
+            "changedPaths": "8_MOD_2_ADD",
+            "artifacts": {
+              "source": "libfile_90d193c19fbc81918cc70762c45a0667",
+              "delta": "libfile_c0699fb1510881919649d28c16dbbb28",
+              "manifest": "libfile_2d465011fd3081918d70809a14f23dd7"
+            },
+            "verified": {
+              "unitPass": 701,
+              "skip": 36,
+              "fail": 0,
+              "check": "PASS",
+              "build": "PASS",
+              "realIsolatedOutput": 12,
+              "versions": [
+                "3.0.0",
+                "3.0.1"
+              ],
+              "recipeForwardPreview": "PASS",
+              "recipeOutput": "DENIED",
+              "zeroRowRestore": "DENIED",
+              "nativeLoadAnchors": 36,
+              "moduleGraphEntries": 51
+            },
+            "unverified": [
+              "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
+              "03_RECIPE_RECOUNT_CAUSAL",
+              "NATIVE_AUTHENTICATION",
+              "GAME_LOAD",
+              "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
+              "INDEPENDENT_QA"
+            ],
+            "handoff": {
+              "to": "06 QA",
+              "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
+              "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
+              "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+            }
+          },
+          "fixedSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+          "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
+          "manifestSha256": "e61f9c5385b96b2f7d6644c0dc058f774b99a218a615252317d00e5b66f82688",
+          "changedPaths": "11_MOD_5_ADD_AGAINST_ACCEPTED_04_REPAIR_PLUS_03_DELTA",
           "artifacts": {
-            "source": "libfile_90d193c19fbc81918cc70762c45a0667",
-            "delta": "libfile_c0699fb1510881919649d28c16dbbb28",
-            "manifest": "libfile_2d465011fd3081918d70809a14f23dd7"
+            "source": "libfile_3730f8fe88d88191b4547e5dc8591623",
+            "delta": "libfile_59cf06cab5d88191b4dbdf7fa52cff87",
+            "manifest": "libfile_4858a81c56e48191bcc21aa132f9a8e5"
           },
           "verified": {
-            "unitPass": 701,
+            "unitPass": 742,
             "skip": 36,
             "fail": 0,
+            "newFocused": 5,
             "check": "PASS",
             "build": "PASS",
-            "realIsolatedOutput": 12,
+            "tsc": "PASS",
+            "realIsolatedOutput": 14,
             "versions": [
               "3.0.0",
               "3.0.1"
             ],
-            "recipeForwardPreview": "PASS",
-            "recipeOutput": "DENIED",
-            "zeroRowRestore": "DENIED",
-            "nativeLoadAnchors": 36,
-            "moduleGraphEntries": 51
+            "nonRecipeOutputs": 12,
+            "recipeForwardFile": "PASS_V301_EXACT_24_MEMBER_WITNESS",
+            "recipeReverseFile": "PASS_EXACT_ZERO_EDITED_COPY_SAME_RUNTIME_RECEIPT",
+            "receiptForgedRejected": true,
+            "rollback": 3,
+            "concurrentReservationRejected": true,
+            "replayRejected": true,
+            "closeRevoked": true,
+            "lowLevelPermitBypassRejected": true,
+            "nodeWorkerRpc": "PASS",
+            "moduleGraphEntries": 53,
+            "alwaysRunMetadataSlots": 3,
+            "librarySourceDeltaReadbackSha": "PASS"
           },
           "unverified": [
-            "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
-            "03_RECIPE_RECOUNT_CAUSAL",
             "NATIVE_AUTHENTICATION",
-            "GAME_LOAD",
+            "GAME_LOAD_RESAVE_RECOUNT_AND_ZERO_ROW_RETENTION",
+            "RESTORE_AFTER_GAME_RESAVE_OR_RUNTIME_RESTART",
+            "ALWAYSRUN_METHOD_IDENTITIES_EFFECTS",
+            "CHROMIUM_TIMEOUT_200S_NEW_GRAPH",
             "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
-            "INDEPENDENT_QA"
+            "NEW_04_INDEPENDENT_QA"
           ],
           "handoff": {
             "to": "06 QA",
-            "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
-            "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
-            "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+            "scope": "Exact 16 changed paths on accepted 04 repair + exact 03 additive delta; no repeat accepted scope; verify scoped receipt and 53 graph",
+            "condition": "Fixed source SHA; both shipped flags OFF; recipe independent activation gate",
+            "nextAfter": "05 receipt-aware capability UI and 00 serial integration; ordinary six operations proceed independently"
           }
-        },
-        "fixedSourceSha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-        "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
-        "manifestSha256": "e61f9c5385b96b2f7d6644c0dc058f774b99a218a615252317d00e5b66f82688",
-        "changedPaths": "11_MOD_5_ADD_AGAINST_ACCEPTED_04_REPAIR_PLUS_03_DELTA",
-        "artifacts": {
-          "source": "libfile_3730f8fe88d88191b4547e5dc8591623",
-          "delta": "libfile_59cf06cab5d88191b4dbdf7fa52cff87",
-          "manifest": "libfile_4858a81c56e48191bcc21aa132f9a8e5"
-        },
-        "verified": {
-          "unitPass": 742,
-          "skip": 36,
-          "fail": 0,
-          "newFocused": 5,
-          "check": "PASS",
-          "build": "PASS",
-          "tsc": "PASS",
-          "realIsolatedOutput": 14,
-          "versions": [
-            "3.0.0",
-            "3.0.1"
-          ],
-          "nonRecipeOutputs": 12,
-          "recipeForwardFile": "PASS_V301_EXACT_24_MEMBER_WITNESS",
-          "recipeReverseFile": "PASS_EXACT_ZERO_EDITED_COPY_SAME_RUNTIME_RECEIPT",
-          "receiptForgedRejected": true,
-          "rollback": 3,
-          "concurrentReservationRejected": true,
-          "replayRejected": true,
-          "closeRevoked": true,
-          "lowLevelPermitBypassRejected": true,
-          "nodeWorkerRpc": "PASS",
-          "moduleGraphEntries": 53,
-          "alwaysRunMetadataSlots": 3,
-          "librarySourceDeltaReadbackSha": "PASS"
-        },
-        "unverified": [
-          "NATIVE_AUTHENTICATION",
-          "GAME_LOAD_RESAVE_RECOUNT_AND_ZERO_ROW_RETENTION",
-          "RESTORE_AFTER_GAME_RESAVE_OR_RUNTIME_RESTART",
-          "ALWAYSRUN_METHOD_IDENTITIES_EFFECTS",
-          "CHROMIUM_TIMEOUT_200S_NEW_GRAPH",
-          "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
-          "NEW_04_INDEPENDENT_QA"
-        ],
-        "handoff": {
-          "to": "06 QA",
-          "scope": "Exact 16 changed paths on accepted 04 repair + exact 03 additive delta; no repeat accepted scope; verify scoped receipt and 53 graph",
-          "condition": "Fixed source SHA; both shipped flags OFF; recipe independent activation gate",
-          "nextAfter": "05 receipt-aware capability UI and 00 serial integration; ordinary six operations proceed independently"
         }
       }
     },
