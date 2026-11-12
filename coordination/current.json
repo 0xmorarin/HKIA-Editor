@@ -317,20 +317,62 @@
       }
     },
     "06_QA": {
-      "status": "IN_FLIGHT_04_RECEIPT_05_BATCH_SCOPED_QA",
+      "status": "V20_CLOSURE_04_RECEIPT_05_BATCH_SCOPED_PASS",
       "acceptedSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "acceptedScope": "RESEARCH_PREVIEW_SYNTHETIC_ONLY",
       "targetSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
       "targetScope": "16_MOD_26_ADD",
-      "next": "00_SERIAL_INTEGRATION_04_05_03; 05_ATOMIC_BATCH_ACCEPTED_CAPABILITIES; 04_TRUSTED_RECIPE_RECEIPT_AND_NATIVE_LOAD; 06_FINAL_FIXED_BETA_BROWSER_QA_AFTER_DEP; 07_QA_AFTER_COMPILED_PARITY",
+      "next": "00_SERIAL_INTEGRATE_05_ATOMIC_BATCH_ON_V20; 05_RECEIPT_UI_AFTER_QA; 04_03_NATIVE_ALWAYSRUN_TARGETED; 06_FINAL_FIXED_BETA_BROWSER_AFTER_DEP; 07_WAIT_ENV",
       "execution": {
         "task": "V18_TRUSTED_RECIPE_RECEIPT_AND_V19_ATOMIC_BATCH_UI",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "baseHead": "13cbd467920f795ee477f5238bea02bb6a47967c",
         "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
         "fixedSources": {
-          "core04": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
-          "ui05": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421"
+          "core04": {
+            "sha256": "ea2339c8171c3231526fb63047b178bb4c47ebf7ff562f4d2e03d3f1d1544dc7",
+            "deltaSha256": "b8eb3577e0aa3f9600bb48556dacc5f82f753216a12b7b3367c4977d26d078eb",
+            "scope": "11_MOD_5_ADD",
+            "verdict": "SCOPED_PASS_SAME_RUNTIME_PRE_RESAVE_ONLY",
+            "focused": 8,
+            "realRecipeOutput": 2,
+            "independentPythonExactDiff": 2,
+            "ordinaryRealOutput": 12,
+            "ordinaryPythonExactDiff": 12,
+            "rollback": 3,
+            "workerNode": "PASS",
+            "alwaysRunSlotsResolved": 3
+          },
+          "ui05": {
+            "sha256": "c13601afee6cd7fee660b2aba85a474b9fcebdb365e2e419fc5f5ce6f5e0f421",
+            "deltaSha256": "892b63ece6c8543002257e07cedbd8f4002df2ea0a7ba0ffd910e1f8b343a3d3",
+            "scope": "3_MOD_1_ADD",
+            "verdict": "SCOPED_PASS_ORDINARY_SIX_ATOMIC_BATCH",
+            "focused": 17,
+            "isolatedActualUiOutput": 2,
+            "versions": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "fieldsPerVersion": 2,
+            "chromeInline": [
+              320,
+              375,
+              1280
+            ],
+            "fixedOffPreview": 1
+          },
+          "v20": {
+            "sha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
+            "deltaSha256": "003f123e67c399b8726b4e2a2e3d0643d683bf6a5d64e7a10a32812c56d61db6",
+            "scope": "12_MOD_5_ADD",
+            "verdict": "SCOPED_PASS_MODULE_CLOSURE_DISTRIBUTION_ONLY",
+            "sourceGraph": 53,
+            "distEntries": 4144,
+            "webp": 4076,
+            "distManifestSha256": "54f723108c5b0706c131e9639918db20da9083ebd44cdcee52276820e8a32110",
+            "disjointUiDelta": 4
+          }
         },
         "scope": "04 16 paths against accepted repair + 03; 05 4 paths against V19 preflight; isolated tests only",
         "dependency": "04 prior repair and 03 accepted; 05 prior UI accepted; 00 final merged artifact pending",
@@ -416,7 +458,40 @@
             "rust": "WAIT_DEP_07_COMPILE_AND_GENUINE_PARITY_NO_JS_BETA_GATE"
           },
           "rollback": "V17 2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0"
-        }
+        },
+        "evidence": {
+          "report": {
+            "file": "HKIA_06_QA_V20_RECEIPT_BATCH_SCOPED_REPORT_20261112.md",
+            "sha256": "b3d6d8858266836fb57aa984c1ed0ac2b3e7455acee8d8c26eb04c81ff215ebb"
+          },
+          "zip": {
+            "file": "HKIA_06_QA_V20_RECEIPT_BATCH_INDEPENDENT_EVIDENCE_20261112.zip",
+            "sha256": "ec4957faafce10854e73cd5db26d3881d5e2ea97af791aab5be91678f0c56753",
+            "entries": 26
+          },
+          "handoff": {
+            "file": "HKIA_06_HANDOFF_00_V20_RECEIPT_BATCH_20261112.md",
+            "sha256": "d912d404150bd3fe63db304148c39d7b4720e279dfeaa46bb98f3fbed4523c8b"
+          },
+          "privateLibraryReadback": "ALL_SHA_MATCH"
+        },
+        "remaining": [
+          "00 serial integrate exact 05 four paths onto V20; fix final source and dist",
+          "05 receipt-aware UI for Recipe if enabled",
+          "04/03 targeted Native AlwaysRun method bodies, including MigrateAchievementCounters; no speculative writes",
+          "actual HTTP/HTTPS native WebCrypto browser Module Worker and final UI E2E",
+          "game authentication/load/resave/reboot and zero-row retention unobserved"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "05 WEB",
+            "04 SAVE CORE"
+          ],
+          "condition": "V20 + exact 05 delta; no source conflict; fixed integrated artifact and browser QA before activation",
+          "rust": "WAIT_ENV_NO_JS_BETA_GATE"
+        },
+        "rollback": "V19 recipe-denied preflight 61b0c25ead9f4596a4706328633a806b540806654097d02ab624dfe47fbaf631; or V17 whole accepted research"
       }
     },
     "00_MEDIA": {
