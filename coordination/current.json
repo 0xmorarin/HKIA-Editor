@@ -65,52 +65,61 @@
       "specificBlocker": "RECIPE_ONLY_OUTPUT_BLOCKED_03_RECOUNT_AND_TRUSTED_RESTORE_RECEIPT; OTHER_SIX_OPERATIONS_LOCAL_PASS",
       "next": "06_SCOPED_QA_04_REPAIR; 05_TYPED_CAPABILITY_UPDATE_AFTER_QA; WAIT_03_RECIPE_CAUSAL_AND_TRUSTED_RECEIPT; 00_SERIAL_INTEGRATION",
       "execution": {
-        "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
-        "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
-        "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
-        "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
-        "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+        "task": "V18_RECIPE_TRUSTED_RECEIPT",
+        "status": "IN_FLIGHT",
+        "baseHead": "c09691437084f0bb1d63ebc798fac19ec58843d6",
+        "baseSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+        "scope": "04 session receipt/Recipe policy and tests; use 03 advisory contract after independent acceptance; no 05 changes",
+        "dependency": "03 fixed delta 301bcf583155f7ebae9626de9b1ea9c5d52239437c194fd476f65c9f24c891bb, RELATED only; QA pending",
         "owner": "04 SAVE CORE",
-        "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
-        "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
-        "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
-        "changedPaths": "8_MOD_2_ADD",
-        "artifacts": {
-          "source": "libfile_90d193c19fbc81918cc70762c45a0667",
-          "delta": "libfile_c0699fb1510881919649d28c16dbbb28",
-          "manifest": "libfile_2d465011fd3081918d70809a14f23dd7"
-        },
-        "verified": {
-          "unitPass": 701,
-          "skip": 36,
-          "fail": 0,
-          "check": "PASS",
-          "build": "PASS",
-          "realIsolatedOutput": 12,
-          "versions": [
-            "3.0.0",
-            "3.0.1"
+        "previous": {
+          "task": "V18_RECIPE_RESTORE_CONTRACT_REPAIR",
+          "status": "PARTIAL_LOCAL_PASS_QA_READY",
+          "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+          "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
+          "scope": "04 native-product policy, API, contracts, focused tests only; 05/03/07 disjoint",
+          "dependency": "01 V17 receipt contract; 03 causal unknown remains isolated",
+          "owner": "04 SAVE CORE",
+          "fixedSourceSha256": "02dc65f777b55a0bff731eb3127aec393cbe11eda4b1a995a40e2a3cdd5d053a",
+          "deltaSha256": "45982a4a8e54f6c98d37a94c29d4491daa7da7bf23714dd4adaf2aa0f3f6a551",
+          "manifestSha256": "e9c588f46ac5435a8183d05d03a44cd1592ac7f27e77f888dc33a66eec166200",
+          "changedPaths": "8_MOD_2_ADD",
+          "artifacts": {
+            "source": "libfile_90d193c19fbc81918cc70762c45a0667",
+            "delta": "libfile_c0699fb1510881919649d28c16dbbb28",
+            "manifest": "libfile_2d465011fd3081918d70809a14f23dd7"
+          },
+          "verified": {
+            "unitPass": 701,
+            "skip": 36,
+            "fail": 0,
+            "check": "PASS",
+            "build": "PASS",
+            "realIsolatedOutput": 12,
+            "versions": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "recipeForwardPreview": "PASS",
+            "recipeOutput": "DENIED",
+            "zeroRowRestore": "DENIED",
+            "nativeLoadAnchors": 36,
+            "moduleGraphEntries": 51
+          },
+          "unverified": [
+            "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
+            "03_RECIPE_RECOUNT_CAUSAL",
+            "NATIVE_AUTHENTICATION",
+            "GAME_LOAD",
+            "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
+            "INDEPENDENT_QA"
           ],
-          "recipeForwardPreview": "PASS",
-          "recipeOutput": "DENIED",
-          "zeroRowRestore": "DENIED",
-          "nativeLoadAnchors": 36,
-          "moduleGraphEntries": 51
-        },
-        "unverified": [
-          "TRUSTED_SAME_ROW_RESTORE_RECEIPT",
-          "03_RECIPE_RECOUNT_CAUSAL",
-          "NATIVE_AUTHENTICATION",
-          "GAME_LOAD",
-          "ACTUAL_HTTP_WEBCRYPTO_MODULE_WORKER",
-          "INDEPENDENT_QA"
-        ],
-        "handoff": {
-          "to": "06 QA",
-          "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
-          "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
-          "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+          "handoff": {
+            "to": "06 QA",
+            "scope": "V18 base plus 04 exact 10 changed paths; no repeat accepted scope",
+            "condition": "QA target fixed SHA; coordinate if V18 QA still in flight",
+            "nextAfter": "05 capability UI and 00 serial integration; recipe remains blocked pending 03 and trusted receipt"
+          }
         }
       }
     },
