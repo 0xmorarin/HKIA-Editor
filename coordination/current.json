@@ -127,7 +127,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "START_NOW_BOOTSTRAP_SOURCE_UNCOMPILED",
+      "status": "IN_FLIGHT_BOOTSTRAP_ENVELOPE_INDEX",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -144,7 +144,10 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "COMPILE_FOCUSED_TESTS; PORT_SAVEGAMEV2_ENVELOPE_AND_LZ4_BLOCK_SPANS; TYPED_NATIVE_SCHEMA_AND_BYTE_RANGE_INDEX; PRIVATE_REAL_JS_RUST_PARITY; NO_JS_PRODUCT_FILES"
+      "next": "COMPILE_FOCUSED_TESTS; PORT_SAVEGAMEV2_ENVELOPE_AND_LZ4_BLOCK_SPANS; TYPED_NATIVE_SCHEMA_AND_BYTE_RANGE_INDEX; PRIVATE_REAL_JS_RUST_PARITY; NO_JS_PRODUCT_FILES",
+      "task": "HKIA-RUST-001",
+      "baseHead": "7ef20837cebdd9c934010a3e26cd0c34b697bf53",
+      "scope": "Existing bootstrap compile; V18 envelope/LZ4 and bounded structural index; isolated Rust only"
     }
   },
   "p0FixCandidate": {
