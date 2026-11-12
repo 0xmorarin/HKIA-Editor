@@ -2831,13 +2831,16 @@
     "gameImagePublicationApproved": true,
     "functionalBetaScopeApproved": true,
     "betaWriterRequired": true,
-    "betaWriterActuallyEnabled": false
+    "betaWriterActuallyEnabled": false,
+    "actualPagesDeploymentObserved": true,
+    "actualPagesPreviewOnly": true
   },
   "nextSerial": [
     "NOW 06 V27 combined scoped QA: reuse 46 exact independently accepted upstream paths, verify 00 1 MOD two-module allowlist and affected product/55 graph/4146 artifact only; 04 exact9, 05 exact20 UI, 03 Recipe32 causal already in flight if still claimed; no duplicate restart. New fixed outputs -> 06 scoped QA directly.",
     "After 03 Recipe32 causal independent acceptance, 04 existing-row receipt Writer for only proven subset; no arbitrary acquisition or new rows. After exact9 04 QA -> 05 UI. 00 integrate new accepted scopes preserving exact preimages; reward-defined targets and missing rows wait concrete witnesses.",
     "V24 frozen; authorized actual HTTP/HTTPS Chrome with WebCrypto/Module Worker and genuine both versions WAIT_ENV. Existing Windows kit; no unchanged retry. Required game evidence, real GitHub source/CI/Pages admin/rollback and explicit Owner approval remain. No flags or deployment.",
-    "07 independent WAIT_ENV."
+    "07 independent WAIT_ENV.",
+    "Pages actual: PR2 merged, GitHub source CI success, built-in branch-root Pages deploy success. Public OFF source preview (25 images) only. Do not claim V24 full artifact or live Writer. Correct actual Pages settings to GitHub Actions, stage full exact distribution and required Browser acceptance; owner requests earliest public, no duplicate approval for fixed scope. Formal dev independent."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -3540,7 +3543,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "V24_CLOSURE_ACCEPTED_BROWSER_QA_LAUNCHER_READY_WAIT_ENV",
+    "status": "PAGES_ACTUAL_BRANCH_SOURCE_DEPLOY_SUCCESS_OFF_PREVIEW_FUNCTIONAL_BETA_PENDING",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -3650,7 +3653,8 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V27_COMBINED_CTRL_ALLOWLIST_SCOPED_QA"
+      "06_V27_COMBINED_CTRL_ALLOWLIST_SCOPED_QA",
+      "00_PAGES_ARTIFACT_ONLY_DEPLOYMENT_CORRECTION_AND_FULL_MEDIA_STAGING"
     ],
     "nextAfterDep": [
       "06_NEW_04_05_03_FIXED_SCOPES",
@@ -3883,7 +3887,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
     "pages": {
-      "status": "CLOSURE_ACCEPTED_GIT_REHEARSAL_DONE_BROWSER_QA_LAUNCHER_READY_WAIT_ENV",
+      "status": "ACTUAL_PAGES_DEPLOY_SUCCESS_OFF_SOURCE_PREVIEW_FULL_ARTIFACT_PENDING",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -3921,7 +3925,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "Actual GitHub source staging; real Browser acceptance required; Owner explicitly requests immediate deploy, no repeat approval for same fixed scope after gates; formal release separate.",
+      "next": "Actual Pages source preview deployed; full 4076-image allowlisted artifact and functional V24 acceptance pending. Correct branch-root Pages source to manual GitHub Actions, exact artifact upload and actual authorized Browser. Owner immediate publication request recorded.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -4041,11 +4045,38 @@
       },
       "remoteStaging": {
         "task": "V24_ACTUAL_GITHUB_SOURCE_STAGING",
-        "status": "IN_FLIGHT",
+        "status": "DONE_ACTUAL_GITHUB_MAIN_SOURCE_CI_PASS",
         "owner": "00 CTRL",
         "baseMain": "eedac927548a4a83c429b3ab166eb545e2da5657",
         "sourceSha256": "c70c10cde0870883c89902288aa89130521e1be1dc0b106d134bb05cd90c9aa6",
-        "scope": "Accepted 178-file public-safe OFF closure only; no live flags, deploy workflow or private inputs. Actual GitHub branch/PR and CI preparation."
+        "scope": "Accepted 178-file public-safe OFF closure only; no live flags, deploy workflow or private inputs. Actual GitHub branch/PR and CI preparation.",
+        "branch": "ctrl/v24-pages-source-staging",
+        "tree": "5df6752d325b17ac73f562c8bf29df3a9cd791bf",
+        "sourceCommit": "d3744615231e60f7b7bcb596d0fe0cbcb0421a7f",
+        "pr": {
+          "number": 2,
+          "head": "311f6b3d20943d721f5a692ab080deec53c57ed3",
+          "merge": "1b441369d0378a44592ca6c9095f6eb670939ac7",
+          "changed": 178,
+          "sourceBlobsVerified": 178,
+          "ciRun": 43223069705,
+          "ciJob": 131199275670,
+          "ci": "SUCCESS_NPM_TEST_BUILD_CHECK"
+        },
+        "note": "Public-safe source projection independently accepted; nondeploying CI only. Source archive is not full distribution."
+      },
+      "actualPages": {
+        "status": "DEPLOY_SUCCESS_BRANCH_SOURCE_OFF_PREVIEW_NOT_FUNCTIONAL_BETA",
+        "observedMain": "1b441369d0378a44592ca6c9095f6eb670939ac7",
+        "runId": 43223287803,
+        "buildJob": 131199989881,
+        "deployJob": 131200093038,
+        "url": "https://0xmorarin.github.io/HKIA-Editor/",
+        "verified": "GitHub built-in pages build and deployment build/deploy/report SUCCESS; deployment log URL and SHA; index.html in archive, 25 WebP source icons, no raw Save/game binary/archive path; public ledger known private patterns absent",
+        "limitations": "Public HTTP response and actual rendering not independently observed; full V24 4076-image 4144-file artifact not deployed; Writer remains OFF; branch-root deployment publishes source tree, not fixed allowlisted release artifact.",
+        "rootCause": "GitHub metadata has_pages=true; built-in dynamic deployments existed even when project gate OFF. Main previously lacked index.html; successful branch build therefore did not establish usable page. Actual source settings admin API unavailable; merge triggered existing branch-based Pages automatically.",
+        "risk": "Unexpected automatic branch-root Pages configuration conflicts with approved manual artifact-only release workflow. Owner explicitly requested immediate public view; do not label preview functional Beta. Switch Pages source to GitHub Actions via authorized Settings before fixed full distribution publication; no automatic activation. Do not add private or raw inputs to main.",
+        "next": "Confirm user-visible HTTPS rendering; stage full verified distribution artifact and use manual fixed artifact workflow after real Browser acceptance. For immediate full-image visual-only preview distinct from Beta, Owner must explicitly authorize that scope and use allowlisted OFF artifact, not branch-root source. Do not repeat local build/kit."
       }
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
