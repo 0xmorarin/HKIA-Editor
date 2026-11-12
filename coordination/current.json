@@ -192,7 +192,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_CELEBRATION5_CAUSAL",
+      "next": "CELEBRATION5_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_CAUSAL_ACCEPTANCE; 03_NO_REPEAT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -341,11 +341,23 @@
       },
       "celebration5Review": {
         "task": "FORMAL_RECIPE_CELEBRATION5_TARGETED_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "LOCAL_SCOPED_PASS_QA_PENDING",
         "baseMain": "e447ad758cda5074c1ebbaaa5cf371ae44a040e7",
         "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
         "dependency": "06 Recipe32 advisory and Recipe23 offline writer accepted; prior 5 targets excluded",
-        "scope": "Exact five tag8 membership; Native celebration manager producer/consumer, save/load, exact preserved bytes and no authority; V24 frozen"
+        "scope": "Exact five tag8 membership; Native celebration manager producer/consumer, save/load, exact preserved bytes and no authority; V24 frozen",
+        "delta": {
+          "file": "HKIA_03_LINKAGE_FORMAL_CELEBRATION5_CAUSAL_DELTA_20261113.zip",
+          "sha256": "dfa4fb8172d9423e7750dda6cd8f9136a91f6681a9ee3b3647a801cfca607d4a",
+          "manifestSha256": "ec408da25c916a2c167ec4e7b90a7b4d2879b5145dd2521a5332cfac894f26a1",
+          "scope": "8 ADD 0 MOD 0 DEL + transport manifest; 499 V29 entries and accepted 01/03 Recipe32 evidence unchanged",
+          "verified": "62 scoped Native anchors/23 branches/9 metadata slots/18 method bindings; 5 genuine v301 forward + 5 strict inverse memory-only reparses, exact one-byte Quantity change each, full ordered tag8 raw bytes preserved 10/10, 33/34 LZ4 blocks reused each, full expanded inverse 5/5, original unchanged; 26 focused/95 including adjacent PASS; strict tsc PASS; Library readback SHA/CRC PASS",
+          "classification": "RELATED_PRESERVE_EXACT_TAG8; Always predicate independent of prior celebration conditional on matching runtime definition; no new cross-model REQUIRED; advisory only",
+          "gameAccepted": false,
+          "productAuthorized": false
+        },
+        "remaining": "Switch/Steam runtime definition parity, other consumers, physical save/load/reboot and actual trusted product receipt remain UNKNOWN; no general acquisition or batch authorization",
+        "next": "06 independent scoped 8 ADD on exact V29; 04 exact five private Writer proof after acceptance, maintain separate allowlist, archive CAS, tag8 raw preservation, same-runtime exact receipt; 00 serial integration; 03 wait new concrete witness or QA failure"
       }
     },
     "04_SAVE_CORE": {
