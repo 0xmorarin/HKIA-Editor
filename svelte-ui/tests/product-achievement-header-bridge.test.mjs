@@ -15,7 +15,7 @@ class E {
 }
 function make(){
  const doc={createElement(t){return new E(t,this);},querySelectorAll(){return this.panels;},getElementById(){return this.panels[0]??null;}};
- const panel=doc.createElement('div');panel.id='editorPanel';doc.panels=[panel];
+ const panel=doc.createElement('aside');panel.id='editorPanel';doc.panels=[panel];
  return {doc,panel};
 }
 function paint(host,h){
@@ -48,4 +48,5 @@ scenario('cleanup failure retains original',()=>{const s=setup(sample(),(stage,h
 scenario('draw failure retains original',()=>{const s=setup(sample(),()=>{throw Error('draw');});eq(render(s),'LEGACY_RETAINED');});
 scenario('repeated controller render has no retained component state',()=>{const s=setup();eq(render(s),'MOUNTED');s.panel.removeAttribute('data-hkia-svelte-achievement-header');s.panel.replaceChildren();paint(s.panel,s.h);eq(render(s),'MOUNTED');eq(s.disposed(),2);});
 
+scenario('wrong host element rejected; actual V33 is ASIDE',()=>{const s=setup();s.panel.tagName='DIV';eq(render(s),'LEGACY_RETAINED');eq(s.disposed(),0);});
 for(const [name,fn] of cases)test(name,fn);

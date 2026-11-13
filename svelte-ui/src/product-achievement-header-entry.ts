@@ -8,7 +8,7 @@ export function createProductAchievementHeader(doc:Document){
   const dispose=()=>{void unmount(instance).catch(()=>{});};
   try{flushSync();}catch(e){dispose();throw e;}return dispose;
  });
- return {render(panel:HTMLDivElement,record:DetailRecord|null,readSelected:()=>string|null){
+ return {render(panel:HTMLElement,record:DetailRecord|null,readSelected:()=>string|null){
   const header:Header=record===null?{guid:null,title:'達成記録の詳細',empty:EMPTY_DETAIL,lines:[]}:{guid:record.guid,title:record.title,empty:null,lines:detailPresentation(record)};
   return bridge.render(panel,header,readSelected);
  }};

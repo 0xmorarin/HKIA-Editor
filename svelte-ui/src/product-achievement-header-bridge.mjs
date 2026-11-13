@@ -17,7 +17,7 @@ function projection(nodes,h){
 }
 export function createProductAchievementHeaderBridge(doc,draw){
  let busy=false;
- const owns=p=>p?.tagName==='DIV'&&p.id==='editorPanel'&&doc.querySelectorAll('[id="editorPanel"]').length===1&&doc.getElementById('editorPanel')===p;
+ const owns=p=>p?.tagName==='ASIDE'&&p.id==='editorPanel'&&doc.querySelectorAll('[id="editorPanel"]').length===1&&doc.getElementById('editorPanel')===p;
  return {render(panel,input,readSelected){
   if(busy||!owns(panel)||panel.hasAttribute(MARK))return 'LEGACY_RETAINED';
   busy=true;let cleanup,started=false,old=[];
