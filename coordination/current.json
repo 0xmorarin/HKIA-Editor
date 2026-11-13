@@ -2329,7 +2329,17 @@
           "compiled browser 320/375/1280",
           "actual legacy app port binding",
           "full UI parity"
-        ]
+        ],
+        "followup": {
+          "task": "SVELTE_R1_LOCK_A11Y_LEGACY_PORT",
+          "status": "IN_FLIGHT",
+          "owner": "05 WEB",
+          "baseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
+          "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
+          "ciRun": 43353782026,
+          "scope": "svelte-ui/** only: adopt exact CI lock; neutral tabpanel element a11y fix; controlled legacy navigation port with exact V33 setTab VM evidence and fail-closed state/ownership tests. No live JS, workflow, Writer, Pages or V24/V33 changes.",
+          "acceptance": "Lock SHA exact; actual legacy setTab routing and same-tab rerender; no duplicate state/DOM ownership; focused tests; compiled check/build/Chromium on updated pinned CI; 06 after compiled scope"
+        }
       }
     },
     "06_QA": {
