@@ -5762,13 +5762,21 @@
         "scope": "Nondeploy branch-only CI PR6 and exact code-only Rust R2 binary artifact PR5; no product source or live flags",
         "pr6": {
           "base": "fa18063330558e188e947c44843f7a3c6870559e",
-          "status": "IN_FLIGHT"
+          "status": "CI_IN_FLIGHT",
+          "head": "6a414cebe51467df7bb26700ee21a61aa5226057",
+          "run": 43353686294,
+          "job": 131650520076,
+          "changes": "1 ADD workflow only"
         },
         "pr5": {
           "base": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
-          "status": "IN_FLIGHT"
+          "status": "CI_IN_FLIGHT",
+          "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+          "run": 43353690282,
+          "job": 131650533560,
+          "changes": "1 MOD workflow only; fixed 07 runner and source unchanged"
         },
-        "next": "Verify exact branch CI and artifact; handoff 05 and 07 directly; 06 independent QA; no main product merge"
+        "next": "Observe actual CI results; capture code-only artifact and lockfile; 05/07 direct handoff; 06 independent QA"
       }
     }
   },
