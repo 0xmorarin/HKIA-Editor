@@ -1,0 +1,50 @@
+name: HKIA Svelte R2 fixed search filter compile and browser
+on:
+  push:
+    branches:
+      - web05/svelte-filters-r2
+permissions:
+  contents: read
+concurrency:
+  group: hkia-svelte-r2-isolated
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-filters-r2'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed R2 source and lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 4888d776bc3e73af763a0941980b8d5fa700dc28 HEAD
+          test "$(git diff --name-only 4888d776bc3e73af763a0941980b8d5fa700dc28 HEAD)" = .github/workflows/svelte05-r2-isolated.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          sha256sum package-lock.json
+      - name: Unit compile and actual legacy reference parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check -- --fail-on-warnings
+          node --experimental-strip-types scripts/verify-legacy-port.mjs ..
+          node --experimental-strip-types scripts/verify-filter-reference.mjs ..
+          npm run build
+      - name: Actual built Vite Chromium navigation and filter parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-parity.py dist
+          python3 scripts/browser-filter-parity.py dist
