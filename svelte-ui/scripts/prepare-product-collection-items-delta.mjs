@@ -26,11 +26,11 @@ export const anchors=Object.freeze([
   ],
   [
     "      frag.append(row);\n    }\n    if(!matches.length)rows.append",
-    "      projection.push({id:item.id,key:item.key||'',guid:item.guid,history:typed?{kind:'known',status:typed.status,recorded:typed.historyRecorded,rawTicks:stamp?.recorded?stamp.rawTicks??null:null,calendar:stamp?.recorded?stamp.calendar??null:null,showTicks:!!stamp?.recorded}:{kind:'unknown'},parent:parent?{id:parent.parent_id,cross:parent.relation==='cross-collection'}:undefined,imageEnabled:!!media,image:icon});\n      frag.append(row);\n    }\n    if(!matches.length)rows.append"
+    "      if(productCollectionItems&&limit<=1200)projection.push({id:item.id,key:item.key||'',guid:item.guid,history:typed?{kind:'known',status:typed.status,recorded:typed.historyRecorded,rawTicks:stamp?.recorded?stamp.rawTicks??null:null,calendar:stamp?.recorded?stamp.calendar??null:null,showTicks:!!stamp?.recorded}:{kind:'unknown'},parent:parent?{id:parent.parent_id,cross:parent.relation==='cross-collection'}:undefined,imageEnabled:!!media,image:icon});\n      frag.append(row);\n    }\n    if(!matches.length)rows.append"
   ],
   [
     "    if(state.selectedItemId!==null&&selected.items.some(x=>x.id===state.selectedItemId))renderCollectionItemInspector(state.selectedItemId,itemInspector);\n  };",
-    "    if(state.selectedItemId!==null&&selected.items.some(x=>x.id===state.selectedItemId))renderCollectionItemInspector(state.selectedItemId,itemInspector);\n    if(productCollectionItems)try{productCollectionItems.render(rows,{rows:projection,total:matches.length,limit},()=>state.selectedCollection===category.key&&state.selectedCollectionDefinition===rule.key&&panel.contains(rows));}catch{}\n  };"
+    "    if(state.selectedItemId!==null&&selected.items.some(x=>x.id===state.selectedItemId))renderCollectionItemInspector(state.selectedItemId,itemInspector);\n    if(productCollectionItems)try{productCollectionItems.render(rows,{rows:projection,total:matches.length,limit},()=>state.selectedCollection===category.key&&state.selectedCollectionDefinition===rule.key&&panel.contains(section));}catch{}\n  };"
   ],
   [
     "sortItems.addEventListener('change',()=>{limit=100;renderRows();});renderRows();\n  panel.append(section);",

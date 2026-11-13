@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createProductCollectionItemsBridge} from '../src/product-collection-items-bridge.mjs';
+import {make,paint,row} from './product-collection-items-dom-fixture.mjs';
+const cases=[];const scenario=(n,f)=>cases.push([n,f]);
+const snap=(rows=[row(1),row(2)],total=rows.length,limit=100)=>({rows,total,limit});
+function setup(s=snap(),draw){const {doc,section,host}=make();let calls=[],valid=true,disposed=0;paint(host,s,id=>calls.push(id));const bridge=createProductCollectionItemsBridge(doc,draw??((h,s,dispatch)=>{paint(h,s,dispatch,true);return()=>disposed++;}));const current=()=>valid&&doc.root.contains(section);return {doc,section,host,s,bridge,current,render:()=>bridge.render(host,s,current),calls,dispose:()=>disposed,invalidate:()=>valid=false,live:()=>section.children[0]};}
+scenario('actual DIV row host; click delegates once and same section owns replaced host',()=>{const x=setup();assert.equal(x.render(),'MOUNTED');assert.notEqual(x.live(),x.host);x.live().querySelectorAll('.item-inspect-button')[1].click();assert.deepEqual(x.calls,[2]);x.bridge.restore();assert.equal(x.live(),x.host);assert.equal(x.dispose(),1);});
+scenario('empty list',()=>{const x=setup(snap([]));assert.equal(x.render(),'MOUNTED');assert.equal(x.live().children[0].textContent,'該当するアイテムはありません。');});
+scenario('exact ticks and parent, missing and unknown distinct',()=>{const x=setup(snap([row(1,{history:{kind:'known',status:'KNOWN',recorded:true,showTicks:true,rawTicks:'9223372036854775807',calendar:null},parent:{id:9,cross:true}}),row(2,{history:{kind:'known',status:'KNOWN',recorded:false,showTicks:false,rawTicks:null,calendar:null}}),row(3)]));assert.equal(x.render(),'MOUNTED');assert.ok(x.live().textContent.includes('9223372036854775807'));assert.ok(x.live().textContent.includes('親ID 9（他カテゴリ）'));assert.ok(x.live().textContent.includes('未照合'));});
+scenario('page delegation once, restore before rerender',()=>{const x=setup(snap(Array.from({length:100},(_,i)=>row(i)),101));assert.equal(x.render(),'MOUNTED');x.live().querySelectorAll('.show-more')[0].click();assert.deepEqual(x.calls,[null]);x.bridge.restore();assert.equal(x.render(),'MOUNTED');});
+scenario('stale candidate cannot inspect after restore',()=>{const x=setup();x.render();const b=x.live().querySelectorAll('.item-inspect-button')[0];x.bridge.restore();b.click();assert.deepEqual(x.calls,[]);});
+scenario('scope change denies action',()=>{const x=setup();x.render();x.invalidate();x.live().querySelectorAll('.item-inspect-button')[0].click();assert.deepEqual(x.calls,[]);});
+scenario('detached panel denies action and disposes',()=>{const x=setup();x.render();const b=x.live().querySelectorAll('.item-inspect-button')[0];x.doc.root.replaceChildren();b.click();x.bridge.restore();assert.deepEqual(x.calls,[]);assert.equal(x.dispose(),1);});
+scenario('duplicate id rejected',()=>{const x=setup(snap([row(1),row(1)]));assert.equal(x.render(),'LEGACY_RETAINED');});
+scenario('over bound keeps production legacy list',()=>{const x=setup(snap(Array.from({length:1200},(_,i)=>row(i)),1201,1200));assert.equal(x.render(),'LEGACY_RETAINED');assert.equal(x.live(),x.host);});
+scenario('wrong candidate identity retains legacy',()=>{const x=setup(snap(),(h,s,d)=>{paint(h,s,d,true);h.children[0].setAttribute('data-item-id','9');return()=>{};});assert.equal(x.render(),'LEGACY_RETAINED');});
+scenario('wrong text retains legacy',()=>{const x=setup(snap(),(h,s,d)=>{paint(h,s,d,true);h.children[0].children[1].textContent='other';return()=>{};});assert.equal(x.render(),'LEGACY_RETAINED');});
+scenario('newer render during draw not overwritten',()=>{let x;let n;x=setup(snap(),(h,s,d)=>{paint(h,s,d,true);x.host.replaceChildren();paint(x.host,s,id=>x.calls.push(id));n=x.host.children[0];return()=>{};});assert.equal(x.render(),'LEGACY_RETAINED');assert.equal(x.host.children[0],n);});
+scenario('signed int64 overflow denied',()=>{const x=setup(snap([row(1,{history:{kind:'known',status:'KNOWN',recorded:true,showTicks:true,rawTicks:'9223372036854775808',calendar:null}})]));assert.equal(x.render(),'LEGACY_RETAINED');});
+scenario('draw error retains original',()=>{const x=setup(snap(),()=>{throw Error('draw');});assert.equal(x.render(),'LEGACY_RETAINED');assert.equal(x.live(),x.host);});
+scenario('reentrant draw denied',()=>{let x;x=setup(snap(),(h,s,d)=>{assert.equal(x.render(),'LEGACY_RETAINED');paint(h,s,d,true);return()=>{};});assert.equal(x.render(),'MOUNTED');});
+for(const [name,fn] of cases)test(name,fn);

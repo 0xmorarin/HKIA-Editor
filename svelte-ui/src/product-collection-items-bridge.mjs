@@ -35,7 +35,7 @@ export function createProductCollectionItemsBridge(doc,draw){
   if(s.limit===1200&&s.total>s.limit)return 'LEGACY_RETAINED';
   const stage=host.cloneNode(false),parent=host.parentElement,token={};stage.setAttribute(MARK,'1');
   let cleanup,committed=false;
-  const dispatch=(id)=>{if(busy||live?.token!==token||!owns(stage)||!current())return;const b=id===null?old.next:old.buttons.get(id);if(!b)return;busy=true;try{b.click();}finally{busy=false;}};
+  const dispatch=(id)=>{if(busy||live?.token!==token||!owns(stage))return;busy=true;try{if(!current()||live?.token!==token||!owns(stage))return;const b=id===null?old.next:old.buttons.get(id);if(!b)return;b.click();}finally{busy=false;}};
   drawing=true;try{
    cleanup=draw(stage,s,dispatch);need(typeof cleanup==='function');const next=read(stage,s,true);need(eq(next.sig,old.sig));
    const before=read(host,s);need(owns(host)&&current()&&host.parentElement===parent&&eq(before.sig,old.sig)&&before.next===old.next&&[...old.buttons].every(([k,b])=>before.buttons.get(k)===b));
