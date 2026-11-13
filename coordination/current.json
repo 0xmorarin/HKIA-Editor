@@ -3789,6 +3789,17 @@
             }
           }
         }
+      },
+      "productBinding": {
+        "task": "SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "baseHead": "9e788363a8275180e5d0c2c7df1f49122eb9f7ef",
+        "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "scope": "Incremental actual V30 read-only product binding baseline using accepted Svelte R1-R4; keep legacy DOM and all data/media/Writer controls; R5/R7 excluded. No root deployment. Isolated code/test only.",
+        "dependency": "00 singleRootProductBinding READY; R5/R7 independent QA disjoint",
+        "next": "Inspect exact V30 DOM and controller, implement scoped bridge and self QA, 06B independent before 00 root composition"
       }
     },
     "06_QA": {
