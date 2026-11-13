@@ -1906,7 +1906,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "R2 accepted exact scope; R3 fixed CI SUCCESS -> 06B scoped independent QA; 05 autonomously select next disjoint owned READY scope or accepted locale data preparation; no production binding before prerequisites.",
+      "next": "06B_R3_INDEPENDENT_QA_PARALLEL_00_R4_ISOLATED_CI; 05_AFTER_R4_RESULT_OR_ACCEPTED_LOCALE_OR_CORE_DEP; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2666,7 +2666,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R2_COMPILED_PASS_06B_READY_R3_FIXED_BRANCH_WAIT_CI",
+        "status": "R2_ACCEPTED_R3_COMPILED_06B_READY_R4_FIXED_BRANCH_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -2912,13 +2912,38 @@
         },
         "r4": {
           "task": "SVELTE_R4_ACHIEVEMENT_BOUNDED_LIST",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
           "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
           "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
           "scope": "svelte-ui only; bounded achievement row/selection/show-more component, existing legacy statuses and 120-row paging, synthetic read-only fixture, actual V33 row rendering oracle; no Writer, session, production binding, R3 frozen snapshot or locale runtime changes",
-          "next": "05 local focused QA and fixed branch; 06B R3 independent parallel; 00 isolated R4 CI then 06B"
+          "next": "00 R4 isolated nondeploy CI on fixed branch, lock npm ci/test/check --fail-on-warnings/build, verify-achievement-reference + R1/R2/R3 reference regression and browser-achievement-parity + prior browser scripts 320/375/1280. 06B R3 parallel independent QA; R4 high-risk independent scope after compiled fixed evidence. 05 repair if new failure or next owned scope.",
+          "sourceSha256": "c6289fa836912dc101ed19b9ed50979cad4b778c9773fb041fe4e429ea8e3371",
+          "deltaSha256": "cf5f69527273633121bf4efd0dcdd22166f9169c9f6f1b8375efd63b165026ea",
+          "manifestSha256": "a6235507132935e0288cbd89ef451b23715262096edd452abd5a1124f074a177",
+          "transportSha256": "3606a8f70a5909722868ccf0f096fc6095a03501461639ba50e8ffe22f52fa96",
+          "evidenceSha256": "8f65b191779c6748e2aee9633bbdb51f66a12570696234dd4cc2d309284d1c02",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteAchievementList_R4_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteAchievementList_R4_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteAchievementList_R4_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteAchievementList_R4_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteAchievementList_R4_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-achievement-list-r4",
+            "head": "a6a0d8732f73b0e13817b943f294832c61d769dd",
+            "parent": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+            "tree": "0b1357b8a566f308c05e61a4d61992e4e225a109",
+            "changed": "1 MOD 7 ADD 0 DEL; 216 unchanged; 8 exact blobs"
+          },
+          "verified": "71 Node tests (13 new) 0 fail; strict TS pure model/fixture; actual V33 renderAchievements/completedLabel/filterSortAchievements VM synthetic DOM: 601 row comparisons, 2 selection/reselection/focus, 2 paging, 3 empty reason comparisons; R1 6/R2 25/R3 9+5+2 reference regressions PASS; browser script syntax; source38/delta8 CRC, exact replay and 5 Private readbacks; fixed lock unchanged",
+          "unverified": [
+            "R4 Svelte compile/check/build and actual Chromium 320/375/1280",
+            "actual live product controller/catalog/media binding, mapped image load failure, full parity and Rust adapter"
+          ],
+          "decisions": "Read-only synthetic fixture; 120-row increments with isolated 1200 display cap not a production contract or save limit; exact progress strings no arithmetic; local WebP only; no R3 accepted snapshot changes"
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
