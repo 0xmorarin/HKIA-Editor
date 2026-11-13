@@ -13972,7 +13972,7 @@
     "organizationTransferPreflight": {
       "task": "HKIA_ORGANIZATION_TRANSFER_PREFLIGHT_20261113",
       "owner": "00 CTRL",
-      "status": "BLOCKED_PENDING_TARGET_ACCESS_AND_CUTOVER_PREPARATION",
+      "status": "BLOCKED_TARGET_CONNECTOR_VISIBILITY_AND_CUTOVER_PREPARATION",
       "risk": "RELEASE",
       "sourceRepository": "0xmorarin/HKIA-Editor",
       "targetRepository": "Yumekiraboshi/HKIA-Editor",
@@ -14023,7 +14023,33 @@
         "Keep pinned V30 base and R4 delta independently recoverable; Pages current direct HTTPS probe unavailable in this environment; target Pages setup and HTTPS/postdeploy checks required."
       ],
       "decision": "NO_GO_NOW; transfer is separate Owner-authorized operation, not approved by preflight. No deploy, Writer activation, repository transfer, org policy/DNS changes, or blanket stream freeze performed.",
-      "next": "Owner connect Yumekiraboshi GitHub app; 00 recheck target authorization and prepare exact migration delta/cutover/rollback before Owner authorizes transfer. Existing development may proceed until explicit cutover freeze."
+      "next": "Owner connect Yumekiraboshi GitHub app; 00 recheck target authorization and prepare exact migration delta/cutover/rollback before Owner authorizes transfer. Existing development may proceed until explicit cutover freeze.",
+      "recheckAfterOwnerInstallation": {
+        "status": "OWNER_REPORTED_INSTALLED_CONNECTOR_VISIBILITY_UNVERIFIED",
+        "observedBlob": "c00a624fa2f7d0320999fe969f9383d64a38354e",
+        "observedAccounts": [
+          "0xmorarin",
+          "DreamwishWand"
+        ],
+        "targetInstallationVisible": false,
+        "targetRepoLookup": "404; not name availability proof",
+        "targetMembership": "not verified",
+        "next": "Verify same app as existing working integration and repository access in target organization; recheck connector visibility before transfer. No transfer."
+      },
+      "rootPreviewProposal": {
+        "status": "OWNER_PREFERENCE_RECORDED_PENDING_POLICY_ADOPTION",
+        "ownerStatement": "GitHub Pages itself serves as test page; separate /dev/ appears unnecessary; yumekiraboshi.com already purchased",
+        "proposed": "Single root development preview; preserve last good V30 and existing real display/media; R4 synthetic nested candidate is not a drop-in replacement. Reuse scoped UI evidence, rebase paths and build a product-equivalent root artifact, verify actual browser, privacy, rights, rollback and 06C scoped distribution acceptance; existing V24 and Writer/deploy gates unchanged. No /dev/ deployment pending decision.",
+        "domainProposal": "editor.yumekiraboshi.com; apex reserved for future Yumekiraboshi; no DNS/custom domain authorization or modification",
+        "migrationPins": {
+          "mainWorkflows": [
+            ".github/workflows/pages-off-repair.yml",
+            ".github/workflows/source-closure-ci.yml"
+          ],
+          "confirmedRepositoryGuard": ".github/workflows/svelte05-r6-combined.yml at 1997c6716342f4c18c036510968a52de014ca570; github.repository exact old owner",
+          "historicalRefs": "immutable; create successor branch/workflow only when used; avoid wholesale rewrite of old evidence"
+        }
+      }
     }
   },
   "formalRelease": {
