@@ -11,6 +11,7 @@ on:
         required: true
         type: choice
         options:
+          - V33
           - V30
           - V29
 permissions:
@@ -40,8 +41,9 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$ARTIFACT_REF" =~ ^[0-9a-f]{40}$ ]]
-          [[ "$TARGET" == V30 || "$TARGET" == V29 ]]
+          [[ "$TARGET" == V33 || "$TARGET" == V30 || "$TARGET" == V29 ]]
           case "$TARGET" in
+            V33) test "$ARTIFACT_REF" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d ;;
             V30) test "$ARTIFACT_REF" = b7e91df1e456ded1b50b4649797bf1b7df216717 ;;
             V29) test "$ARTIFACT_REF" = 15cacf59a0c24a1124edb3741816d300794b4cdb ;;
           esac
@@ -65,6 +67,7 @@ jobs:
           set -euo pipefail
           test "$(git -C approved-artifact rev-parse HEAD)" = "$ARTIFACT_REF"
           case "$TARGET" in
+            V33) expected=137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db; source=78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7 ;;
             V30) expected=564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6; source=a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a ;;
             V29) expected=859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d; source=aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0 ;;
             *) exit 1 ;;
