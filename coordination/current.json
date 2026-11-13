@@ -293,12 +293,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "FORMAL_V33_GROUP_WITNESS_REPAIR_LOCAL_PASS_QA_PENDING",
+      "status": "V300_DERIVED_NATIVE_PARITY_LOCAL_PASS_QA_PENDING_REWARD_IN_FLIGHT",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_GROUP_WITNESS_REPAIR_AND_INDEPENDENT_HISTORICAL_DERIVED_QA; 00_AFTER_ACCEPTANCE_SERIAL_SUCCESSOR; 03_WAIT_NEW_WITNESS_OR_QA_FAILURE",
+      "next": "06_GROUP_WITNESS_REPAIR_HISTORICAL_DERIVED_AND_V300_PARITY_QA; 03_V300_REWARD_DISPATCH_IN_FLIGHT; 00_SERIAL_AFTER_ACCEPTANCE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -537,12 +537,33 @@
       },
       "v300DerivedParity": {
         "task": "FORMAL_V300_VISITOR_MISSION_NATIVE_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_NATIVE_PASS_QA_PENDING",
         "owner": "03 LINKAGE",
         "baseHead": "69e1e3ffb0f719bf48ae815cf84529ce592dd837",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "New Switch v300 Native Visitor Init/GetCurrentValue/event and Mission registration/load/status conditional parity vs fixed 03 v301 derived advisory; exclude 01 inventory/02 manual scalar/group/meta; no game acceptance or product authorization; additive private evidence",
-        "dependency": "03 derived v301 fixed delta c3c96df439363167780c72e537b882d40f654f1a7f62c6e53ec07b5dd24a962f; v300 NSO/dump newly available; 06 scoped QA independently pending"
+        "dependency": "03 derived v301 fixed delta c3c96df439363167780c72e537b882d40f654f1a7f62c6e53ec07b5dd24a962f; v300 NSO/dump newly available; 06 scoped QA independently pending",
+        "delta": {
+          "file": "HKIA_03_V300_DERIVED_NATIVE_PARITY_V33_DELTA_20261113.zip",
+          "sha256": "de368b1cf1a45c99ff39e708381c3cc79f5b96cd8c768f9ce177aa9b1105e4c6",
+          "manifestSha256": "6fa5bea9e90908edf4718e309fdd4cfa6231284be1e94684c9fee405b713f87a",
+          "scope": "4 ADD 0 MOD 0 DEL + transport manifest; V33 521 manifest paths unchanged",
+          "verified": "v300 original NSO/dump SHA, Module ID, 45 instruction anchors, 14 calls, 9 branches, 17 method + 7 field/enum bindings; 12 synthetic verifier tests PASS; prior v301 delta ZIP SHA/CRC; private Library byte-exact readback and CRC"
+        },
+        "classification": "BOUNDED_V300_V301_NATIVE_VISITOR_RECOUNT_AND_MISSION_CONDITIONAL_INIT_RESTORE_SEMANTIC_PARITY; NO_NEW_REQUIRED; NO_PRODUCT_AUTHORITY",
+        "remaining": "Exact runtime definition registration, scheduler, actual save/load/resave, reward replay and independent QA; prior v301 advisory still QA pending",
+        "next": "06 independent 4 ADD + existing derived v301 QA; 02 reuse after acceptance; 04 WAIT reward/game and accepted contract; no activation",
+        "gameAccepted": false,
+        "productAuthorized": false
+      },
+      "v300RewardParity": {
+        "task": "FORMAL_V300_REWARD_DISPATCH_NATIVE_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseHead": "33aee370272c41263512a5180b08f3f8f7d55543",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "New v300 achievement reward dispatch and callback/Inventory/save-request path only; compare prior 03 reward replay advisory, no 01 inventory producer or 02 scalar/group/meta; no persisted claim inference or writer authorization",
+        "dependency": "03 formal reward replay scoped PASS 5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844; v300 source fingerprints obtained"
       }
     },
     "04_SAVE_CORE": {
