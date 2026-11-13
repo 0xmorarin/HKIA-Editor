@@ -4869,7 +4869,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "R5_WASM_WORKER_SOURCE_FROZEN_TS_PASS_WAIT_CI_06A_STATIC_READY",
+      "status": "IN_FLIGHT_R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5817,6 +5817,15 @@
           "artifact": "Static code WASM/JS/HTML and build-report only; no fixtures or saves"
         },
         "limits": "Native R4 unchanged; private development bridge only; existing semantic scope history and progress pair; no production adapter/flag, resource limits unchanged 512MiB WASM hard memory cap, decoded 64/128MiB and 2M targets unverified. Browser genuine and 06A acceptance pending."
+      },
+      "repairClaim": {
+        "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+        "status": "IN_FLIGHT",
+        "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
+        "fixedSource": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+        "risk": "HIGH",
+        "scope": "07 writer-abi client response binding, focused tests and pins; preserve R4 native and bridge, no deployment",
+        "dependency": "06A TRUE_RED three counterexamples; old CI synthetic PASS diagnostic only"
       }
     },
     "08_LOCALIZATION": {
