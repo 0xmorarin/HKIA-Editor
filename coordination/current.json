@@ -2576,7 +2576,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V33_PRODUCT_CATEGORIES_FIXED_CI_READY; 06B_CATEGORY_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; 00_V33_TAB_REBIND_IN_FLIGHT_NO_REPEAT; 05_NEXT_R4_ACTUAL_ACHIEVEMENT_LIST_DISJOINT; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
+      "next": "00_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_CI_READY; 06B_ACH_LIST_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; CATEGORY_TAB_REBIND_EXISTING_QUEUE_NO_REPEAT; 05_NEXT_DISJOINT_DETAIL_OR_REPAIR; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4556,14 +4556,77 @@
       "productAchievementList": {
         "task": "SVELTE_PRODUCT_ACHIEVEMENT_LIST_BINDING",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "baseHead": "fe4b548965248219be1ea900f545a00489ee246e",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
-        "scope": "New svelte-ui paths only; actual V33 achievement list R4 projection/selection/paging, exact legacy controller retains ownership; fallback on unsupported or >1200 visible bound, no writer/session/detail change, no deploy.",
+        "scope": "10 ADD svelte-ui only. Actual V33 bounded R4 achievement row projection with existing controller selection, paging, filters, actual image resolver and detail callback. Exact detached DOM signature and callback identity, legacy fallback including >1200 bound. No Writer/session/detail source change or deploy.",
         "dependency": "R4 independently accepted; category/tab/filter separate fixed scopes; shared app composition 00",
-        "next": "Implement and focused self QA; fixed source and handoff."
+        "next": "00 isolated fixed nondeploy CI; 06B static preflight in parallel then compiled actual browser scoped acceptance; 00 shared app composition only accepted scopes and 06C; 05 next disjoint detail binding or repair after new results.",
+        "sourceHead": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+        "branch": "web05/product-achievement-list-v33",
+        "tree": "0bfe05b6ba19cf93655db0fab56ea1b97b02e7a7",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "manifestSha256": "90a24410fc702e9d04704592aa1037cc6ca11cd635b079fe467722cb33dfad88",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductAchievementList_20261113_Evidence.zip",
+          "sha256": "6186079a723139c5017d69a0ee447767c05014fc4ddb9528271bfc7e6dcc4c92",
+          "transport": "HKIA_WEB05_ProductAchievementList_20261113_Transport.json",
+          "transportSha256": "49e1dd6f9f52cd16abf7ad479c9a53e4a2c255958b10a39f77b3992162b372f0",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_CRC_PASS_12_ENTRIES_10_SOURCE_SHA"
+        },
+        "verified": {
+          "unit": 12,
+          "fail": 0,
+          "strictTS": "PASS",
+          "baseFiles": 4146,
+          "webp": 4076,
+          "actualAccountDefinitions": 31,
+          "actualSlotDefinitions": 820,
+          "actualControllerVMComparisons": 27,
+          "rowComparisons": 2655,
+          "disposals": 26,
+          "actualImageResolver": true,
+          "syntheticAccountAndSlot": true,
+          "detailRendererStub": true,
+          "selectionFocusAndPaging": true,
+          "unknownAndZeroAndExactDecimalDisplay": true,
+          "capFallback": true,
+          "deltaNegatives": 7,
+          "patchReversible": true,
+          "patchedESMSyntax": "PASS",
+          "browserScriptSyntax": "PASS",
+          "newExactRemoteBlobs": 10,
+          "acceptedModelBlob": "4efe97d19fa87e65075a7337e7924a23efcf89c6",
+          "acceptedImageBlob": "e442fa50bd31df8e5b069451e266b0a6f8b30720"
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "after": "4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be",
+          "bytes": 109709,
+          "delta": "Four exact reversible anchors, 1 MOD + 1 ADD compiled src/product-achievement-list.mjs; 4145 unchanged; bundle not built"
+        },
+        "unverified": [
+          "Actual Svelte compile/check/build and full expected135 tests; actual compiled V33 browser 320/375/1280, actual mapped images and list mount/fallback",
+          "VM uses synthetic Account/Slot state and detail/native/batch stubs; no actual genuine Save or game persistence; browser script synthetic Account only",
+          "06B independent HIGH scope, shared app composition and exact combined browser/rights/license/privacy/rollback before release",
+          "Legacy host intentionally swapped per bounded render; combined observers/selection and filter/tab/category integration require regression; arbitrary injected callback side effects not rolled back"
+        ],
+        "decision": "Exact bounded snapshot from existing controller, same legacy row markup with stable annotation; detached render validates all DOM signatures and old handler identity, delegates original click/more once. Retains legacy host on failure, >1200 paging uses original list without imposing product limit. R4 accepted model/image reuse, no separate state/session or writer. V33 fixed app anchors only, 00 must compose shared app hooks without overwrite.",
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "10 ADD exact, isolated nondeploy CI, no merge/deploy, reuse accepted R1-R7 compile evidence where exact, no tab/filter/category repeat",
+          "acceptance": "Pinned npm ci, npm test expected135, svelte check --fail-on-warnings, ordinary Vite build + vite build --config vite.product-achievement-list.config.ts. Checkout exact V33 site+manifest. node --experimental-strip-types scripts/verify-product-achievement-list-reference.mjs <site> <manifest>; node --experimental-strip-types scripts/verify-product-achievement-list-delta.mjs same; prepare-product-achievement-list-delta.mjs <site> <manifest> dist-product-achievement-list/product-achievement-list.mjs <fresh-delta>. Overlay only src/app.js+product-achievement-list.mjs, full 4145 unchanged/4076 WebP. Actual browser-product-achievement-list-parity.py <base> <candidate> 320/375/1280, synthetic Account 161 records/13 actual image load, 120 paging and selection/detail focus/hidden search, unknown and sort, exact projection, unique list/unchanged panels, module abort fallback, Writer OFF/no external/errors/download/overflow. Retain module SHA/delta/logs, license/allowlist. 06B independent scope after green; actual Slot/true save separate.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "Exact 10 new paths + compiled module; independent DOM identity/negative/stale/paging >1200 fallback, actual V33 account/slot read projection and image parity, no prior R4/other binding repeat"
+        }
       }
     },
     "06_QA": {
