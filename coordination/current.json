@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06_NEW_RECIPE_EXPANSION_SCOPED_QA_AND_03_TARGETED_CAUSAL; 04_AFTER_BOTH_ACCEPTED; NONRECIPE_WAIT_DEP; V24_FROZEN",
+      "next": "03_HISTORICAL_RECIPE6_CAUSAL_AND_06_NEW_ABSENCE_SCOPED_QA; 04_AFTER_EXACT_ACCEPTED_CONTRACT; NONRECIPE_WAIT_DEP; PAGES_INDEPENDENT",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -21,7 +21,7 @@
         "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
         "scope": "Reuse V17 NONRECIPE_DELETE_REINSERT_RESEARCH ItemId 1687397134 and V16 inventory model. Verify real typed row delete/reinsert, collection predicate, restoration, references/NextId/all-document CAS. Then normal nonrecipe possession and absent recipe row only as proven. No Key1 or 5913958 receipt redo.",
         "acceptance": "Native producer/consumer, genuine offline exact diff, no invented IDs/unique data, REQUIRED/RELATED/UNKNOWN and denied cases; typed contract/tests; no activation.",
-        "next": "06 QA exact 4 modified + 1 additive evidence path; existing 3 unchanged and 396 R2 base reuse; no V24 change",
+        "next": "WAIT exact target producer/active reference closure or new witness; 03 reference advisory independently accepted; no Non-Recipe product authorization",
         "baseMain": "5c85c2e5220acf9b98095483589d1e42cd367431",
         "executionScope": "Targeted Non-Recipe reference closure and exact native persistence; additive 01 contract/tests only; V24 frozen",
         "latestEvidence": {
@@ -68,14 +68,32 @@
         "next": "06 scoped 8 ADD QA after currently claimed scope; 03 targeted 32 causal review (4 representative first, 5 tag8), independently; 04 only accepted exact subset after both scoped acceptance; no V24 changes",
         "gameAccepted": false,
         "productAuthorized": false,
-        "acceptance": "06 SCOPED_PASS_RECIPE32_EXISTING_ROW_RESEARCH_ONLY; 03 causal advisory accepted; 04 exact4 Writer independently accepted"
+        "acceptance": "06 Recipe32 research PASS and 03 advisory PASS; 04 exact4 + exact23 + Celebration5 all independently scoped accepted in formal successor; V33 combined PASS; no repeat"
       },
       "absenceWitness": {
         "task": "FORMAL_COLLECTION_HISTORICAL_RECIPE_ABSENCE_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "95093e653156ea416881079a16130f8a0be392c0",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "scope": "Audit existing private historical backups for actual absent/zero Recipe rows and same-version positive donor; no new row authorization or 32 target repeat; read-only typed audit and exact candidate eligibility; V24/Pages untouched"
+        "scope": "Audit existing private historical backups for actual absent/zero Recipe rows and same-version positive donor; no new row authorization or 32 target repeat; read-only typed audit and exact candidate eligibility; V24/Pages untouched",
+        "artifact": "HKIA_01_HISTORICAL_RECIPE_ABSENCE_V33_DELTA_20261113.zip",
+        "deltaSha256": "1550cd6929e15634288567d84ae3d3f077b07fba3367b29eebb6d154d3657bbd",
+        "manifestSha256": "a576ff61efe4bd6d5f857ffc139492f3c3b5be65f5d0af81df5049ac745b2152",
+        "changes": "6 ADD 0 MOD 0 DEL; 521 V33 base entries exact; transport manifest excluded",
+        "verified": "2 private archives, 6 backups + 2 current entries; 4 distinct typed known-version records, 3 duplicates, 1 unsupported; earlier v300 18 absent+5 zero vs later same version 282 positive; 6 exact assigned Recipe targets individual + batch structural append PASS; 19 focused PASS; NextId and Documents count, donor raw except ID, non-target all bytes, Key0/1 unchanged; Library readback exact CRC",
+        "targets": [
+          345259921,
+          469825950,
+          1278770545,
+          1444261060,
+          1991788586,
+          2101238998
+        ],
+        "classification": "RESEARCH_ONLY_GENUINE_V300_ABSENT_TO_POSITIVE_STRUCTURAL; V301_NATIVE_ALLOCATOR_REUSED_NOT_V300_PARITY; NO_PRODUCT_AUTHORITY_OR_NEW_CROSS_MODEL_REQUIRED",
+        "remaining": "v300 executable allocator/producer parity and Switch definition identity; exact six target Quest/Reward/Counter/Unlock/food reference closure and history backfill; game load/resave/auth; independent QA. 12 absent+5 zero unassigned excluded; no arbitrary donor imports.",
+        "next": "03 exact six causal review + 06 new 6 paths independent QA in parallel; 04 only after exact accepted v300 producer/consumer contract; 00 Pages recovery independent; V24 frozen",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
