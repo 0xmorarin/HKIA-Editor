@@ -2682,7 +2682,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V33_PRODUCT_COLLECTION_ITEMS_FIXED_CI_READY; 06B_ITEMS_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; EXISTING_HEADER_CATEGORY_LIST_TAB_FILTER_QUEUES_UNCHANGED; 05_NEXT_ACCEPTED_R3_LOCALE_CONSUMER_OR_DISJOINT_BINDING; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
+      "next": "00_V33_COLLECTION_ITEMS_REPAIR_FIXED_CI_READY; 06B_REPAIR_AFTER_FIXED_CI; 05_ACCEPTED_LOCALE_CATALOG_CONSUMER_READY; EXISTING_OTHER_UI_QUEUES_UNCHANGED",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4807,14 +4807,14 @@
       "productCollectionItems": {
         "task": "SVELTE_PRODUCT_COLLECTION_ITEM_LIST_BINDING",
         "owner": "05 WEB",
-        "status": "TRUE_RED_REPAIR_IN_FLIGHT",
+        "status": "REPAIR_SELF_PASS_FIXED_READY_CTRL_CI",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "baseHead": "c12fe0b000129c61706015f26a980083df75e440",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "scope": "11 ADD only svelte-ui. Actual V33 collection item row list bounded projection, existing R5 itemPresentation and exact legacy image markup, search/filter/sort/page, original controller click and inspector; no edit/Writer/Session authority, no shared app source or distribution change.",
         "dependency": "R5 fixed reselect repair accepted; V33 artifact; independent tab/filter/category/list/header scopes",
-        "next": "00 fixed nondeploy CI; 06B static preflight parallel then compiled changed-scope QA; 05 next accepted R3 locale consumer or remaining independent product binding; existing other queues unchanged; 00 shared app composition after acceptance",
+        "next": "00 repin fixed CI from fe2a4c2c to 1cbd350e; 06B independent repair+pending compiled item scope; old TRUE_RED source remains quarantined; other accepted scopes unchanged",
         "sourceHead": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
         "branch": "web05/product-collection-items-v33",
         "tree": "a54387c74ed9fe28d6f0f03577558d18e19d603e",
@@ -4864,24 +4864,80 @@
         "handoff": {
           "to": "00 CTRL",
           "task": "SVELTE_V33_PRODUCT_COLLECTION_ITEMS_FIXED_NONDEPLOY_CI",
-          "status": "READY",
+          "status": "SUPERSEDED_BY_REPAIR",
           "sourceHead": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
           "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
           "scope": "11 exact ADD, isolated CI, no deploy or existing tab/filter/category/list/header rerun",
           "acceptance": "Pinned npm ci; npm test expected140 (123+17); svelte check --fail-on-warnings; ordinary Vite build + vite build --config vite.product-collection-items.config.ts. Exact V33 site+manifest; node --experimental-strip-types scripts/verify-product-collection-items-reference.mjs <site> <manifest>; node scripts/prepare-product-collection-items-delta.mjs <site> <manifest> dist-product-collection-items/product-collection-items.mjs <fresh-delta>. Overlay only app and module, 4145 unchanged/4076 WebP. Actual browser-product-collection-items-parity.py <base> <candidate> 320/375/1280: actual 103-item mapped definition, paging, search/sort, disabled history filter unloaded, inspect, same panel, stale list, module abort and mapped image LOAD_FAILED, no external/errors/download/overflow, Writer OFF. Record module SHA/manifest/delta/log/license. Independent matched history and real Save scope only as required, no false game pass.",
           "consumer": "06B QA-WEB-LOCALE",
-          "consumerScope": "11 fixed paths; exact R5 display reuse, lifecycle restore/duplicate/stale/reentry, actual controller and compiled browser; genuine history/inspector if needed; no prior scopes repeat."
+          "consumerScope": "11 fixed paths; exact R5 display reuse, lifecycle restore/duplicate/stale/reentry, actual controller and compiled browser; genuine history/inspector if needed; no prior scopes repeat.",
+          "supersededBy": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8"
         },
         "repair": {
           "task": "COLLECTION_ITEMS_POSTCOMMIT_DUPLICATE_HOST_ROLLBACK",
-          "status": "IN_FLIGHT",
+          "status": "SELF_PASS_FIXED_READY_CTRL_CI",
           "owner": "05 WEB",
           "risk": "HIGH",
           "baseHead": "7808ef6bfbc60124a216268229a654fabbbe4500",
           "baseSource": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
           "scope": "bridge postcommit rollback plus focused regression; exact 06B counterexample; no unrelated changes",
           "dependency": "06B TRUE_RED_MODEL_ROLLBACK",
-          "next": "reproduce, minimal repair, regression, fixed CI/06B"
+          "next": "reproduce, minimal repair, regression, fixed CI/06B",
+          "sourceHead": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8",
+          "tree": "69e0b587a717033bbdb5fba2289e9c353a72952f",
+          "branch": "web05/product-collection-items-v33",
+          "changes": "1 MOD 1 ADD; 3 source line replacements; original 10 candidate paths unchanged",
+          "blobs": {
+            "svelte-ui/src/product-collection-items-bridge.mjs": "b1b68f20d2ca187d9a4959d0c77a941dbf58bf3a",
+            "svelte-ui/tests/product-collection-items-rollback.test.mjs": "311b3e6a7ccd7f690fffa970e836ee9b1d94c62c"
+          },
+          "manifestSha256": "9481af5b77469dd06e603a3a931be9a87e7cc7ee021d679dd850e610e27178b7",
+          "evidence": {
+            "file": "HKIA_WEB05_CollectionItemsRollbackRepair_20261114_Evidence.zip",
+            "sha256": "8740c3d6e9702164107f13e33e0dbfebbd29b5df932e89f70b54014d362a518d",
+            "evidenceSha256": "244b450f4100278368490f4c51b1870e1ccf5187ae70b9ddac9aa1c4fa780781",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BYTE_EXACT_SHA_CRC_PASS_8_ENTRIES"
+          },
+          "verified": {
+            "node": "22.16.0",
+            "original06B": {
+              "pass": 2,
+              "fail": 1
+            },
+            "developerRerun06B": {
+              "pass": 3,
+              "fail": 0
+            },
+            "newRegression": 5,
+            "focused": 22,
+            "fullSuite": 145,
+            "fail": 0,
+            "actualV33RenderRowsCases": 10,
+            "actualV33Rows": 1306,
+            "mounts": 9,
+            "disposals": 9,
+            "exact9Anchors": true,
+            "remote2BlobsExact": true,
+            "qaInputArchiveShaCrc": "PASS",
+            "originalProducerArchiveShaCrc": "PASS"
+          },
+          "decision": "Record replacement attempt before DOM operation; rollback only if candidate still belongs to captured parent and original has no parent, even if global uniqueness fails. Preserve unrelated duplicates, newer host, moved candidate, already reattached legacy. No general rollback of arbitrary injected mutations claimed.",
+          "unverified": [
+            "Actual Svelte compile/check/build/HTTP Chromium 320/375/1280",
+            "Independent 06B repair acceptance, genuine matched Save/inspector, integrated root/release"
+          ],
+          "handoff": {
+            "to": "00 CTRL",
+            "task": "SVELTE_V33_PRODUCT_COLLECTION_ITEMS_ROLLBACK_REPAIR_FIXED_CI",
+            "status": "READY",
+            "sourceHead": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8",
+            "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+            "scope": "Supersede old fe2a4c2c CI pin; exact repair 2 paths plus previously not-compiled collection list; no other scopes rerun or deployment.",
+            "acceptance": "Pinned npm ci, npm test 145, svelte check --fail-on-warnings, ordinary build and product-collection-items build; V33 exact manifest + reference/prepare + actual Chromium parity 320/375/1280 per original handoff; include 5 rollback negatives, original 06B counterexample, exact module/delta/logs. 06B independent changed-scope and pending compiled item-list acceptance. No deployment or Writer changes.",
+            "consumer": "06B QA-WEB-LOCALE",
+            "consumerScope": "Exact 2 repair paths and pending original compiled product item-list scope; reproduce original red and independent counterexamples; no accepted tabs/categories/list/header repeat."
+          }
         }
       }
     },
