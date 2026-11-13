@@ -103,7 +103,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_MISSING_MANUAL_29_DRAFTS_QA_READY; 03_CAUSAL_AFTER_CURRENT_SCOPE; 06_SCOPED_QA; CREATION_WAIT_EXACT_WITNESS; V24_FROZEN",
+      "next": "02_DERIVED_MISSING_1_RESEARCH_DRAFT_QA_READY; 03_EXACT_VISITOR_CAUSAL_AND_MISSION_WITNESS; 06_SCOPED_QA; 04_WAIT_REWARD_AND_CAUSAL; NO_REDO",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -213,12 +213,54 @@
       },
       "derivedMissingReview": {
         "task": "FORMAL_MISSING_DERIVED_MEMBER_SOURCE_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "95093e653156ea416881079a16130f8a0be392c0",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "scope": "Exact previously rejected 10 Manual targets: 9 fixerUpper missing sharingHomes Mission and 1 hospitality missing 22 VisitorRating; source identity and typed producer preconditions, no reward/Quest writes, no structural creation, V24/V33 immutable",
-        "dependency": "V33 accepted formal9, prior missing29/03 causal evidence; no reuse as permission for derived absence"
+        "scope": "11 ADD including manifest; all 521 V33 paths byte-identical; exact readyForGuests research-only revoke; 9 fixerUpper remain denied; V24/V33 OFF immutable",
+        "dependency": "V33 accepted formal9, prior missing29/03 causal evidence; no reuse as permission for derived absence",
+        "deltaSha256": "54a56a4419303ff70de5028f02702aae545132f666256e3849d4f500b764330b",
+        "manifestSha256": "e5931a0d0c5cdbae7606ba6302cab4db9cde5437e5422d7e15769f28022a6ac3",
+        "artifact": "HKIA_02_Missing_Derived_Member_V33_Delta_20261113.zip",
+        "libraryFileId": "libfile_a2b2f8de69d48191b338b36c93da9062",
+        "verified": {
+          "sourcePPtrs": 23,
+          "visitorDistinct": 22,
+          "visitorThreshold": 1,
+          "missionExistingCrosswalk": true,
+          "genuineVersions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "exactVisitorRowsPerVersion": 22,
+          "visitorPredicateTruePerVersion": 0,
+          "missionDirectRowsPerVersion": 509,
+          "missionExactTypedMatchesPerVersion": 0,
+          "newResearchTargets": 1,
+          "sixFieldReparse": 2,
+          "staleCAS": 2,
+          "realNegatives": 12,
+          "focused": 10,
+          "nativeAnchors": 32,
+          "branchTargets": 8,
+          "directCalls": 2,
+          "structuralWrites": 0,
+          "accountWrites": 0,
+          "check": "PASS",
+          "originalsUnchanged": 2,
+          "sourcePathsUnchanged": 521,
+          "libraryReadback": "BYTE_EXACT_CRC_ALL10_MANIFEST_HASHES"
+        },
+        "classification": "RELATED_STATIC_ZERO_VISITOR_WITNESS; exact six-field draft only; reward defined/replay UNKNOWN; no new REQUIRED edges or product permission",
+        "unverified": [
+          "Switch runtime definition parity",
+          "03 conditional initial-state and runtime scheduling",
+          "Mission runtime definition availability/initialization; persisted absence not runtime lookup miss",
+          "reward replay/game acceptance/native authentication",
+          "v300 Native RVA equivalence",
+          "Manual first-progress structural producer still WAIT_DEP"
+        ],
+        "next": "06 independent new 11 ADD scoped QA; 03 exact Visitor/Mission causal advisory; 04 WAIT on reward/game and causal acceptance, no product permission; 02 WAIT exact first-progress or target-specific Mission/reward witness after QA; V24/V33 untouched"
       }
     },
     "03_LINKAGE": {
