@@ -19263,8 +19263,8 @@
       "next": "Repair CI result, actual combined browser and 06C independent distribution. No deploy.",
       "head": "dea263044f0bc5bf12134b51202ae88afbb6298a",
       "workflowBlob": "4a94b5e8e09860b8c41ba639484b979907bbf3dc",
-      "run": 43505783509,
-      "ciStatus": "REPAIR_SUBMITTED_RUN_PENDING",
+      "run": 43505994342,
+      "ciStatus": "IN_PROGRESS_OBSERVED",
       "verified": "Exact five independent accepted inputs and one isolated workflow ADD; branch/readback/run exact. No combined execution PASS yet.",
       "plannedArtifact": "4152 entries, 4145 unchanged, app 1 MOD, 5 modules + 1 license JSON ADD, 4076 WebP exact; code-only delta and full manifest; no public distribution yet.",
       "handoff": {
@@ -19272,7 +19272,7 @@
         "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
         "status": "READY_AFTER_REPAIR_CI",
         "source": "dea263044f0bc5bf12134b51202ae88afbb6298a",
-        "run": 43505783509,
+        "run": 43505994342,
         "scope": "Exact accepted five modules/app composition, source provenance, full map and rollback, MIT notice, actual combined browser/interaction and per-module abort; independent integration oracle, privacy/allowlist and no Writer. Collection items excluded. Owner approval for fixed artifact only after acceptance. Generated modules have distribution-only comment normalization; verify original accepted input hashes, normalized output hashes, exact AST/tokens and actual browser; no automatic inheritance of transformed module PASS."
       },
       "firstRun": {
