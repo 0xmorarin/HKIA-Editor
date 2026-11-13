@@ -3320,7 +3320,7 @@
         },
         "r5": {
           "task": "SVELTE_R5_COLLECTION_DEFINITION_ITEM_VIEW",
-          "status": "COMPILED_BROWSER_PASS_06B_READY",
+          "status": "TRUE_RED_REPAIR_IN_FLIGHT",
           "owner": "05 WEB",
           "baseHead": "a4ded599c12a2208c0e154a9b745814655a55e0e",
           "basePrHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
@@ -3353,7 +3353,15 @@
             "actual inspector full dependency/preview/Writer UI, production session and Rust adapter",
             "full locale integration"
           ],
-          "decisions": "Read-only isolated fixture, 100-row increments and isolated 1200 bound not production limit; no game-derived IDs/text/media bytes in new files; unknown history disables history filter; exact int64 strings; category reselect resets local detail fixture; no production state changes; item image local WebP only; R4/Locale fixed branches unchanged."
+          "decisions": "Read-only isolated fixture, 100-row increments and isolated 1200 bound not production limit; no game-derived IDs/text/media bytes in new files; unknown history disables history filter; exact int64 strings; category reselect resets local detail fixture; no production state changes; item image local WebP only; R4/Locale fixed branches unchanged.",
+          "repair": {
+            "task": "SVELTE_R5_COLLECTION_DETAIL_POSTCONDITION_REPAIR",
+            "status": "IN_FLIGHT",
+            "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+            "baseHead": "a0da33507da597f22d30da15dbf28f2b2fc4c7df",
+            "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+            "scope": "collection-detail.ts plus focused tests; immutable pre-operation selected identity, filter and visible prefix; inspect visible row exact; no R6 or locale changes"
+          }
         },
         "r6": {
           "task": "SVELTE_R6_ACHIEVEMENT_READONLY_INSPECTOR",
