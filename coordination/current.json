@@ -5714,7 +5714,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5881,6 +5881,16 @@
             "task": "Full editor UI inventory and remaining 36 seed keys per 13 locales; coordinate 05 fixed UI and linguistic validation; no game text inferred"
           }
         }
+      },
+      "r3": {
+        "task": "EDITOR_CATALOG_SEED_COMPLETION_AND_FIXED_UI_INVENTORY",
+        "claim": "20261113_08_R3_CATALOG",
+        "status": "IN_FLIGHT",
+        "baseHead": "4fabdeab457a837caa7fc0f84ac439f3094288a3",
+        "risk": "HIGH_NEW_TRANSLATION_COVERAGE_AND_UI_KEY_CONTRACT",
+        "scope": "Complete 80 existing editor-owned keys across 15 locales; audit fixed Svelte R3 and legacy source UI text; no shared UI/runtime or game text changes",
+        "dependency": "R1 accepted catalog schema; R2 QA disjoint; fixed Svelte R3 CI",
+        "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945"
       }
     },
     "06A_QA_DATA_CORE": {
