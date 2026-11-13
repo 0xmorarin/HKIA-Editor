@@ -4426,7 +4426,7 @@
     },
     "formalIntegration": {
       "task": "V32_FORMAL_CELEBRATION5_CORE_SERIAL_INTEGRATION",
-      "status": "LOCAL_PASS_COMBINED_QA_PENDING",
+      "status": "IN_FLIGHT_V33_EXACT_UI_INTEGRATION",
       "owner": "00 CTRL",
       "baseMain": "bebf58e439c9500c7d0b522942958908db5924bc",
       "baseSourceSha256": "609c9680e79df7c109246687f4f8c991648880e83463e05b43d96543dbc723d2",
@@ -4858,7 +4858,16 @@
         "GAME_LOAD_RESAVE"
       ],
       "rollback": "V31 exact accepted OFF; restore five preimages/remove two additions. V24 frozen.",
-      "handoff": "06 fixed V32 7 paths/4 dist/55 modules/4146 hashes; parallel independent 05 Celebration5 UI delta 2MOD3ADD based on identical V31+04 518 paths; reuse accepted 04 exact five and V31. 00 next integrate only accepted UI."
+      "handoff": "06 fixed V32 7 paths/4 dist/55 modules/4146 hashes; parallel independent 05 Celebration5 UI delta 2MOD3ADD based on identical V31+04 518 paths; reuse accepted 04 exact five and V31. 00 next integrate only accepted UI.",
+      "v33Claim": {
+        "task": "SERIAL_V32_PLUS_05_CELEBRATION5_UI",
+        "status": "IN_FLIGHT",
+        "baseHead": "10bac74d26791326f28cb07daf32ca826fa2e46c",
+        "baseSourceSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
+        "uiSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "qaSha256": "6231c587ad8ef777f05db649e474c103ceaadea41bec67c7a9413f50a67ba0e8",
+        "scope": "2 MOD 3 ADD; exact preimages; private OFF candidate only; V24 frozen; no deployment"
+      }
     },
     "inFlightStreams": []
   },
