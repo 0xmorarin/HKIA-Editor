@@ -12646,8 +12646,8 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_V33_LIVE_AND_V41_SCOPED_PASS_WAIT_NEW_FIXED_OR_V24_ENV",
-      "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA_AND_V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "status": "IN_FLIGHT_V33_FIVE_SCOPE_FIXED_DISTRIBUTION",
+      "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
       "scope": "Live V33 six changed paths and actual HTTPS boundary; V41 18 ADD research only",
       "next": "00 record V33 live and V41 research acceptance; 06C wait next fixed root distribution or research, authorized V24 genuine Browser",
       "dependency": "00_RECORD_V33_LIVE_AND_V41; NEXT_FIXED_ROOT_OR_RESEARCH_WAIT_DEP; V24_WAIT_ENV",
@@ -13926,6 +13926,21 @@
           "additional": "Exclude unaccepted Collection Items scope from next root; preserve current V33 OFF and exact rollback. Existing 05 repair handoff remains authoritative."
         },
         "limitations": "No new fixed 06C artifact or authorized genuine Browser environment; prior V33 Worker onerror cause UNKNOWN not reproduced; V41 private evidence reused from prior verified record, not rerun. No deployment, product change, new Writer authority or Owner approval."
+      },
+      "fiveScopeClaim": {
+        "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
+        "status": "IN_FLIGHT",
+        "baseHead": "7808ef6bfbc60124a216268229a654fabbbe4500",
+        "baseLedgerBlob": "6aa6f0edb6b842221fc8c117646fad84f9b3e9aa",
+        "source": "dea263044f0bc5bf12134b51202ae88afbb6298a",
+        "artifact": {
+          "id": 14075649096,
+          "sha256": "1ec235f9253aa5b09a69623b75f39660259a31190aa78b931ab51080a0f2a2aa"
+        },
+        "run": 43505994342,
+        "scope": "Exact accepted five modules/app composition, source provenance, full map and rollback, MIT notice, actual combined browser/interaction and per-module abort; independent integration oracle, privacy/allowlist and no Writer. Collection items excluded. Owner approval for fixed artifact only after acceptance. Generated modules have distribution-only comment normalization; verify original accepted input hashes, normalized output hashes, exact AST/tokens and actual browser; no automatic inheritance of transformed module PASS.",
+        "risk": "RELEASE",
+        "owner": "06C QA-RELEASE"
       }
     }
   },
