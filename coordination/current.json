@@ -17715,14 +17715,15 @@
       "liveVerification": {
         "owner": "00 CTRL",
         "task": "V33_PUBLIC_HTTPS_CHANGED_SCOPE_SELF_QA",
-        "status": "CI_SUBMITTED_RUN_DISCOVERY_PENDING",
+        "status": "CI_IN_PROGRESS_OBSERVED",
         "branch": "ctrl/pages-v33-live-verify-20261113",
         "scope": "Live V33 six changed runtime files plus root, sampled media/denials and actual Chromium; reuse prior V30 accepted oracle; 06C independent review after evidence. No deployment.",
         "baseHead": "306d6c2119babb1839b2a3f436ba89124cf1171b",
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "head": "f66fda1e4292328f5207aa09734d0e37e332e30a",
         "workflowBlob": "7c43727e3596fe959abdbb0ad8a5a19eb5ec4b44",
-        "verified": "Exact one workflow ADD on isolated branch; readback SHA and compare; no deploy permission; container DNS unavailable, actual HTTPS CI pending."
+        "verified": "Exact one workflow ADD on isolated branch; readback SHA and compare; no deploy permission; container DNS unavailable, actual HTTPS CI pending.",
+        "run": 43432726052
       },
       "postDeployHandoff": {
         "to": "06C QA-RELEASE",
@@ -17731,7 +17732,8 @@
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "deploymentRun": 43432381119,
-        "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save."
+        "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save.",
+        "ctrlLiveRun": 43432726052
       }
     },
     "productTabsCI": {
