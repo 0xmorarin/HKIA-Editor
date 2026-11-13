@@ -16252,6 +16252,30 @@
         "to": "02/04/07 reference consumers",
         "scope": "Hats Off static exact producer research only; no first-progress creation/Writer authority"
       }
+    },
+    "r61Integration": {
+      "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
+      "owner": "00 CTRL",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "62f674ba69639e6e1765406b5af8c195187a838c",
+      "baseBlob": "ec9a9c554747876fe3aadac126a3ada923730f36",
+      "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+      "scope": "Advance isolated PR10 by exact accepted seven-path R6.1 fast-forward only; verify PR9 frozen, CI artifact/QA evidence, no main merge, no Writer/limits/Development Switch.",
+      "expectedPr10": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
+      "expectedPr9": "cb40c1c67aa666b57dbdf20e94ff49b59546527f"
+    },
+    "productFiltersCI": {
+      "task": "SVELTE_V30_V33_PRODUCT_FILTERS_FIXED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "62f674ba69639e6e1765406b5af8c195187a838c",
+      "baseBlob": "ec9a9c554747876fe3aadac126a3ada923730f36",
+      "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+      "scope": "Standalone exact 10 ADD; one isolated CI workflow; V30/V33 actual product filters separately, no duplicate tab CI, no combined app composition/deploy.",
+      "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "v33Artifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d"
     }
   },
   "formalRelease": {
