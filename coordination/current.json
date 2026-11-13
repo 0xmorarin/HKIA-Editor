@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_R4_TEST_ORACLE_FIXED_CI_AND_LOCALE_CONSUMER_ISOLATED_CI_PARALLEL; 06B_R4_AND_LOCALE_AFTER_COMPILED; 05_NEXT_DISJOINT_OR_REPAIR; NO_REPEAT",
+      "next": "00_R5_ISOLATED_CI_PARALLEL_06B_R4_AND_LOCALE_CONSUMER; 05_AFTER_R5_RESULT_OR_NEW_ACCEPTED_DEP; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R3_ACCEPTED_R4_TEST_REPAIR_READY_CI",
+        "status": "R4_COMPILED_PASS_06B_READY_R5_FIXED_BRANCH_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3320,13 +3320,40 @@
         },
         "r5": {
           "task": "SVELTE_R5_COLLECTION_DEFINITION_ITEM_VIEW",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "baseHead": "a4ded599c12a2208c0e154a9b745814655a55e0e",
           "basePrHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
           "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
           "scope": "svelte-ui only; collection definition selection, item list filter/search/sort/page and read-only inspection; exact V33 display semantics, no writer permission, no raw save, no production binding; R4 and locale frozen scope unchanged",
-          "next": "05 local QA, fixed branch, 00 isolated R5 CI then 06B; R4 and locale QA parallel"
+          "next": "00 isolated fixed R5 nondeploy CI: pinned lock npm ci/test/check --fail-on-warnings/build, verify-collection-detail-reference and R1-R4 reference regressions, browser-collection-detail-parity and R1-R4 actual browser 320/375/1280. 06B R4 and Locale independently in parallel; R5 HIGH scoped QA after CI.",
+          "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
+          "deltaSha256": "7ac84e6442b8385c0cbc0ee944bc047e76755ecb4b938fb597312bc2a4354038",
+          "manifestSha256": "3d836153753ac48273913988494b5f12f121f517edfb2a4bab736c830cf5c8fd",
+          "transportSha256": "bd8bfbcf725bc27e64320b5a6660531aff28e497672e4a3d69e1b5778dbbe4dd",
+          "evidenceSha256": "4278123266665fc5aff8a1ee85dc749522f696dabcdedfc652b927f5cc2592b4",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteCollectionDetail_R5_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteCollectionDetail_R5_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteCollectionDetail_R5_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteCollectionDetail_R5_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteCollectionDetail_R5_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-collection-detail-r5",
+            "head": "7efe8f07e3999abccc19e6415630e6e76df02887",
+            "parent": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+            "tree": "f3b062735665a82d3684b35e76ba4ebda5a3aec4",
+            "changed": "1 MOD 7 ADD 0 DEL; 224 unchanged; 8 exact blobs"
+          },
+          "verified": "86 Node tests (15 new), strict TS model/fixture, actual V33 renderCollectionDetail VM 902 row observations (repeated synthetic 201 rows), 1 definition selection, 1 inspect, 2 paging, 6 filter/sort/search, 1 unloaded hint; R1-R4 reference regressions; browser script syntax; source45/delta8 CRC and replay; private 5 readbacks byte exact; exact lock",
+          "unverified": [
+            "Svelte compile/check/build and actual R5 Chromium 320/375/1280",
+            "actual live product Controller, catalog, image assets and matched history browser",
+            "actual inspector full dependency/preview/Writer UI, production session and Rust adapter",
+            "full locale integration"
+          ],
+          "decisions": "Read-only isolated fixture, 100-row increments and isolated 1200 bound not production limit; no game-derived IDs/text/media bytes in new files; unknown history disables history filter; exact int64 strings; category reselect resets local detail fixture; no production state changes; item image local WebP only; R4/Locale fixed branches unchanged."
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
