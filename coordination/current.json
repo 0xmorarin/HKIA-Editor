@@ -8934,6 +8934,20 @@
       "status": "WAIT_ENV_ADMINISTRATOR_BLOCK",
       "verified": "Chromium executable and Playwright installed; browser launch succeeds; ordinary localhost HTTP navigation denied net::ERR_BLOCKED_BY_ADMINISTRATOR; no genuine Save opened; no policy bypass",
       "next": "06C needs authorized private browser with normal HTTP/HTTPS and actual Module Worker/WebCrypto; public CI synthetic only; no upload of genuine Save"
+    },
+    "v36Research": {
+      "task": "V35_PLUS_ACCEPTED_V301_DEFINITIONS_RESEARCH_REFERENCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "baseHead": "6154c91dba606e5a89d7b9322d2de3c528344f8d",
+      "baseSourceSha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+      "scope": "Exact accepted 01 and 02 v301 definition research deltas only; verify manifests, additive nonoverlap, fixed V35 unchanged, no product/distribution changes; no V24/Pages/Writer changes",
+      "inputs": [
+        "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
+        "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849"
+      ],
+      "acceptance": "ec444d4e795e696214c6754aa3512bb71326179e07d294188bd05e5594f44e40",
+      "risk": "RELEASE_INTEGRATION_REFERENCE_ONLY"
     }
   },
   "formalRelease": {
