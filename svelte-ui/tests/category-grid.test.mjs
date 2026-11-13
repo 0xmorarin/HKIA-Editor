@@ -1,0 +1,14 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {categoryDescription,categoryImagePresentation,createCategoryPort,assertCategorySnapshot} from '../src/category-grid.ts';
+const row={key:'a',title:'A',description:'未照合 / 2件の定義',image:{kind:'unknown'}};
+const counts={matched:false,definitionCount:2,recorded:0,total:5,parentMatched:false,familyRecorded:1,familyTotal:3};
+for(const [name,input,expected] of [['unknown',counts,'未照合 / 2件の定義'],['zero',{...counts,matched:true},'収集ID照合 0 / 5 ID'],['parent',{...counts,matched:true,recorded:3,parentMatched:true},'収集ID照合 3 / 5 ID ／ 親単位・参考 1 / 3']])test('description '+name,()=>assert.equal(categoryDescription(input),expected));
+test('negative counts rejected',()=>assert.throws(()=>categoryDescription({...counts,total:-1}),/CATEGORY_COUNT_INVALID/));
+test('exact local asset',()=>assert.equal(categoryImagePresentation({kind:'mapped',status:'EXACT',image:'assets/icons/test.webp',spritePathId:'123'}).src,'./assets/icons/test.webp'));
+for(const image of ['https://example.com/x.webp','assets/icons/../x.webp','assets/icons/test.png','assets/icons/x.webp?x=1'])test('reject unsafe '+image,()=>assert.equal(categoryImagePresentation({kind:'mapped',status:'EXACT',image,spritePathId:'123'}).src,null));
+test('unresolved status never loads',()=>assert.equal(categoryImagePresentation({kind:'mapped',status:'SOURCE_NULL',image:'assets/icons/test.webp'}).src,null));
+test('legacy local path',()=>assert.equal(categoryImagePresentation({kind:'legacy',image:'./assets/icons/test.webp'}).src,'./assets/icons/test.webp'));
+test('duplicate rows reject',()=>assert.throws(()=>assertCategorySnapshot({rows:[row,row],selectedKey:null,totalCategories:2}),/CATEGORY_ROW_INVALID/));
+test('filter can hide current selection',()=>assert.equal(assertCategorySnapshot({rows:[],selectedKey:'a',totalCategories:1}).selectedKey,'a'));
+test('selection routed, repeated select forwarded',()=>{let selected=null,calls=0,invalidations=0;const p=createCategoryPort({read:()=>({rows:[row],selectedKey:selected,totalCategories:1}),selectCategory:key=>{selected=key;calls++},invalidate:()=>invalidations++});p.select('a');p.select('a');assert.equal(calls,2);assert.equal(invalidations,2);assert.equal(p.read().selectedKey,'a');assert.throws(()=>p.select('hidden'),/CATEGORY_NOT_VISIBLE/);assert.equal(calls,2)});
+test('selection postcondition and exception invalidate',()=>{let invalidations=0;const p=createCategoryPort({read:()=>({rows:[row],selectedKey:null,totalCategories:1}),selectCategory:()=>{},invalidate:()=>invalidations++});assert.throws(()=>p.select('a'),/CATEGORY_SELECTION_POSTCONDITION/);assert.equal(invalidations,1)});
