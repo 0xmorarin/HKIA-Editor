@@ -268,7 +268,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "DONE_NO_READY_03; 00_CONTINUE_FIXED_OFF_PAGES; 06_AFTER_FIXED_LIVE_ARTIFACT_OR_AUTHORIZED_BROWSER; 03_ONLY_NEW_CONCRETE_CAUSAL_WITNESS_OR_QA_FAILURE",
+      "next": "IN_FLIGHT_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_MISSION",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -447,6 +447,22 @@
           "scope": "Recipe32 exact existing v301 row cancellation and same-runtime receipt restore, isolated offline/inline QA; OFF source; no actual game or release authorization",
           "remaining": "Runtime reference/claim/new row and v300 parity witnesses; actual game load/resave/reboot; no new 03 task"
         }
+      },
+      "historicalRecipeReview": {
+        "task": "FORMAL_HISTORICAL_RECIPE6_CAUSAL",
+        "status": "IN_FLIGHT",
+        "baseMain": "3d7422393e6ba06ffeb53578b7394f57ad15ca73",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "dependency": "1550cd6929e15634288567d84ae3d3f077b07fba3367b29eebb6d154d3657bbd",
+        "scope": "Exact six historical v300 absent rows; bounded source reference and typed historical evidence; no v300 parity inference, no writer permission"
+      },
+      "derivedVisitorReview": {
+        "task": "FORMAL_DERIVED_VISITOR_MISSION_CAUSAL",
+        "status": "IN_FLIGHT",
+        "baseMain": "3d7422393e6ba06ffeb53578b7394f57ad15ca73",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "dependency": "54a56a4419303ff70de5028f02702aae545132f666256e3849d4f500b764330b",
+        "scope": "readyForGuests exact 22 zero Visitor members and one missing Mission, conditional initial/recount vs runtime; reward UNKNOWN, no structural creation"
       }
     },
     "04_SAVE_CORE": {
