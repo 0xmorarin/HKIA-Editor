@@ -4238,6 +4238,18 @@
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "10 added paths and actual fixed filter bundle; independent lifecycle/real callback/DOM state/negatives, synthetic Account reset; no accepted R2 or tab preflight repeat"
         }
+      },
+      "productTabsV33": {
+        "task": "SVELTE_PRODUCT_TABS_V33_FIXED_REBIND",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "baseHead": "3a8cf611484ef444a9f04df6d175210d17f64a81",
+        "baseSource": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "risk": "HIGH",
+        "scope": "V33 exact tab delta generator and reference/negative tests, preserve V30 in-flight CI and product filter candidate; no existing source changes or deploy.",
+        "dependency": "V33 fixed 06C predeploy PASS; tab V30 CI in progress; exact V33 artifact and immutable source",
+        "next": "Reconstruct V33 full artifact and verify, implement rebind and self QA."
       }
     },
     "06_QA": {
