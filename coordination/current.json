@@ -7702,11 +7702,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_V37_SCOPED_PASS_WAIT_ENV_V24",
       "task": "V37_FIXED_630_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
       "scope": "5 ADD only; 625 exact V36; verify accepted 03 Exact29 causal delta and 06A evidence; 30 focused tests, independent integration negatives, rollback/reconstruct, 55 source-build exact and 4146 prior map exact; no external media rehash, no Writer/deploy authority",
-      "next": "00 accept fixed V36 private reference; 06C wait authorized V24 genuine browser or new fixed integration",
-      "dependency": "V36_ACCEPTED_BY_00; V37_FIXED_READY",
+      "next": "00 accept fixed V37 private reference; 06C wait authorized V24 genuine browser or new fixed integration",
+      "dependency": "V37_SCOPED_ACCEPTED; 00_REFERENCE_RECORD; V24_WAIT_ENV_ADMINISTRATOR_BLOCK; NEXT_FIXED_INTEGRATION_WAIT_DEP",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
       "legacyEvidence": {
@@ -7857,7 +7857,8 @@
         "baseHead": "748dc61d908916294007feee4da017a3ed7affcd",
         "baseLedgerBlob": "5764617aa89120b30f153eaeb8217bb82406e25e",
         "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
-        "scope": "5 ADD only; 625 exact; upstream 03 accepted delta; build/map/rollback"
+        "scope": "5 ADD only; 625 exact; upstream 03 accepted delta; build/map/rollback",
+        "status": "COMPLETED"
       },
       "v35Completed": {
         "claim": {
@@ -8066,6 +8067,65 @@
           "readback": "6_OF_6_BYTE_EXACT_SHA_3_ZIP_CRC_PASS",
           "acceptance": "SELF_PASS_06C_READY"
         }
+      },
+      "result": {
+        "verdict": "SCOPED_PASS_V37_PRIVATE_RESEARCH_REFERENCE",
+        "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "manifest": "7f9b5928b0593bf98789e820253be2e36f7814b413b998d8e053125d0e8d24c7",
+        "delta": "b18711a11e6204c5f57cb8ae98425514bc1918674ce26a3498088a5fd3196a07",
+        "artifactManifest": "b8c6cf6610efcfcf7e40067ed2a32aa1501d48ebef9d970210c49366a41c60a0",
+        "upstreamDelta": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+        "upstreamAcceptance": "2ecca51984542f71023ea9dc033aad6413e90ec5976127dfb2a4841c735faf57",
+        "verified": {
+          "pins": 14,
+          "sourceEntries": 630,
+          "unchanged": 625,
+          "add": 5,
+          "mod": 0,
+          "del": 0,
+          "upstreamDeltas": 1,
+          "upstreamPaths": 5,
+          "crc": "PASS",
+          "focused": 30,
+          "fail": 0,
+          "independentNegativeControls": 6,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "sourceDerivedBuildExact": 55,
+          "fullManifestDirectMatch": 54,
+          "indexProjectionExact": true,
+          "fullDistributionMapExact": 4146,
+          "rollbackSourceExact": 625,
+          "reconstructionExact": 630,
+          "writer": "OFF",
+          "newResearchPathsInDistribution": 0
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06C_V37_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "aa057aa0074b2d346586771e0703b7a3e50fe917e18de1a7667316606705e555"
+          },
+          "zip": {
+            "file": "HKIA_06C_V37_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "57c155f9c1efaaccab8e590accb5c33cec45851016337333b726fb2ae380a30f"
+          },
+          "readback": "BOTH_BYTE_EXACT_SHA_CRC_5_MANIFEST_ENTRIES_PASS",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "trueRed": [],
+        "unverified": [
+          "External media bytes not rehashed; prior accepted V36 map reused",
+          "V24 genuine real Browser administrator block; game persistence unverified",
+          "No live deploy/rollback or Writer enablement"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V37_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record fixed V37 scoped PASS; no Writer/deploy permission; V24/V30 unchanged; no repeated QA",
+          "nextAfterDep": "06C authorized V24 browser or new fixed integration"
+        },
+        "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
       }
     }
   },
