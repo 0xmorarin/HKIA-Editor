@@ -5723,7 +5723,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R6_1_WAIT_CI_BROWSER_KIT_REPAIR_SELF_PASS_06A_READY_GENUINE_WAIT_ENV",
+      "status": "PARTIAL_R6_1_SELF_PASS_06A_READY_R5_1_BROWSER_KIT_ACCEPTED_GENUINE_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5740,7 +5740,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06A browser kit strict evidence repair READY (test-only, new fixed kit); 00 R6.1 fixed nondeploy CI under transferred repo READY/00 owns; 07 after R6.1 artifact measured capacity and private genuine parity; genuine Chrome WAIT_ENV separate. No duplicate or Development Switch.",
+      "next": "06A R6.1 independent scoped capacity/genuine/lifecycle READY then 00 integration. Browser kit strict repair independently accepted; 07 R5.1 actual Chrome WAIT_ENV authorized sandbox-capable browser only, no duplicate offline QA. No Development Switch or capacity grant.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -6016,7 +6016,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "R6.1 actual compile, 15 same-condition paired WASM, 5 byte exact, private genuine six, repeated edits/lifecycle, independent QA; R5.1 authorized genuine Chrome and independent acceptance; formal capacity targets and production cutover separate.",
+      "remaining": "06A R6.1 scoped independent acceptance, 00 integration decision; R5.1 actual genuine Chrome with accepted strict kit and independent execution evidence; formal capacity goals, browser JS/Rust comparison and game persistence separate.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -6998,7 +6998,7 @@
       "r6Followup": {
         "task": "HKIA-RUST-014_R6_MEASURED_CAPACITY_FOLLOWUP",
         "owner": "07 RUST CORE",
-        "status": "PARTIAL_FIXED_R6_1_DIAGNOSTIC_MEASURED_WAIT_CI",
+        "status": "SELF_PASS_COMPILED_MEASURED_FIXED_GENUINE_06A_READY",
         "risk": "HIGH",
         "baseHead": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
         "claimBase": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
@@ -7086,12 +7086,13 @@
           "sha256": "c35eb7abc545b763345fab6454e24015eee214fb480c6f011661838c4f6b61e5",
           "condition": "00 exact candidate 76ab71edf507cdcec13a6faf0db8ebcd56d4b672, base PR10 3f659c06f5f77fddd36f2b5415ffc082226afd40, 7 MOD scope. Update isolated workflow guard/report pin only, lease PR10, same R4 ref/Rust1.85.1, native+bridge tests, WASM, paired15 exact baseline Artifact14019348055, per-RPC memory, actual synthetic Chrome6; code-only artifact. No deploy, genuine CI, R5.1/PR9 changes. 07 rebind new artifact and genuine6/lifecycle self-QA, then 06A HIGH independent."
         },
-        "next": "00 R6.1 exact CI READY; 07 WAIT_CI then actual candidate memory improvement and genuine private parity; 06A after self-QA. R5.1 genuine Chrome WAIT_ENV separate."
+        "next": "00 R6.1 exact CI READY; 07 WAIT_CI then actual candidate memory improvement and genuine private parity; 06A after self-QA. R5.1 genuine Chrome WAIT_ENV separate.",
+        "completion": "SELF_PASS_FIXED_R6_1_GENUINE_LIFECYCLE_CAPACITY_06A_READY"
       },
       "browserKitRepair": {
         "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
         "owner": "07 RUST CORE",
-        "status": "SELF_PASS_FIXED_06A_READY_GENUINE_WAIT_ENV",
+        "status": "DONE_SCOPED_INDEPENDENT_PASS_OFFLINE_HARNESS_GENUINE_WAIT_ENV",
         "risk": "HIGH",
         "baseKit": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
         "scope": "Private test-only wrapper and browser-runner derivative with shared strict browser context; original exact runner/wrapper retained, product WASM/JS and reference kit byte-identical; no core/limits/flag/deploy changes.",
@@ -7134,11 +7135,16 @@
           "file": "HKIA_Rust07_R5_1_BrowserKitStrictRepair_20261113_HANDOFF_06A.md",
           "sha256": "94a1315fcfceb3b762ccf1c590fc8eda14f76b2f790a385de0a5ae365bbf39bd",
           "condition": "Independent exact kit SHA/11 manifest hashes, nine counterexamples, strict JSON/type/count/unknown-field negatives, cross-check and same-context pre-input gate; no genuine browser claim. After independent scoped acceptance and authorized sandbox-capable actual Chrome, 07 genuine six then 06A execution acceptance."
+        },
+        "independentAcceptance": {
+          "status": "DONE_SCOPED_PASS_OFFLINE_TEST_HARNESS_REPAIR",
+          "source": "a2d2bd1fb110f0bd3a593882472ebecb43a011facaa073b01a035cad403d0efe",
+          "evidenceSha256": "4ece4995bec0047db75d6e113b5ff09e6834f7f2fa22506e9591eaedae59f31e"
         }
       },
       "r61Execution": {
         "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_R6_1_GENUINE_LIFECYCLE_CAPACITY_06A_READY",
         "owner": "07 RUST CORE",
         "risk": "HIGH",
         "baseHead": "2f1c91dc9387b864147c7e87ff9c041bb0fade4e",
@@ -7146,7 +7152,76 @@
         "ciHead": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
         "artifactSha256": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
         "wasmSha256": "2f91736baf1ee71c7ba111758ea7e24eea985d375b54e90e305c645817fde4b7",
-        "scope": "download code-only exact artifact via authorized connector; check SHA/manifest, all measured phase data, genuine private v300/v301 parity and lifecycle retained scratch/close/reopen/failed open; no real Save CI; then 06A independent HIGH QA"
+        "scope": "download code-only exact artifact via authorized connector; check SHA/manifest, all measured phase data, genuine private v300/v301 parity and lifecycle retained scratch/close/reopen/failed open; no real Save CI; then 06A independent HIGH QA",
+        "verified": {
+          "artifactEntries": 9,
+          "artifactCodeHashes": 8,
+          "unchangedNonWasmVsR51": 7,
+          "reportSha256": "8ab015b097c1642a89fca5634290ab687c647636a2ceb9b5a5e95f85f9460b78",
+          "fixedCiReused": {
+            "core": 103,
+            "bridge": 4,
+            "pairedSynthetic": 15,
+            "exactSyntheticEdits": 5,
+            "syntheticChrome": 6
+          },
+          "capacity45MiB": {
+            "baseline": 190971904,
+            "candidate": 97058816,
+            "reduction": 93913088
+          },
+          "actualNodeGenuine": 6,
+          "nativeExact": 6,
+          "v33ExactDiff": 6,
+          "exactFields": 12,
+          "nonTargetRawFrames": 60,
+          "unchangedLz4Blocks": 192,
+          "accountRawUnchanged": 6,
+          "genuineOriginalsUnchanged": 2,
+          "additionalSequentialEdits": 2,
+          "additionalSecondOutputNativeExact": 2,
+          "additionalSecondOutputV33Exact": 2,
+          "additionalGateCalls": 90,
+          "additionalRawCalls": 18,
+          "lifecycle": [
+            "repeat Preview/Verify",
+            "failed Open preserved pending Plan and stamp",
+            "stale old-value",
+            "sequential edits",
+            "Undo/Redo/Reset/reset-Undo",
+            "A/B",
+            "close/reopen",
+            "raw replay/stale/foreign/close"
+          ],
+          "genuineTransientOutputsRemoved": 8
+        },
+        "evidence": {
+          "file": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_Evidence.zip",
+          "sha256": "1b76568eb883e1a2485c7853efaae2ae146fb7ee5e6475c6204a686623306aed",
+          "manifest": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_Manifest.json",
+          "manifestSha256": "da5f74489010bdbe2bc6abec928bbc2159df58fe84eb701c7367f770da507fbc",
+          "result": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_RESULT.json",
+          "resultSha256": "581f8a50265e2ef6122038d1ac17fad352a3c494db01e4134cb145df9ff656f4",
+          "codeArtifact": "HKIA_Rust_R6_1_CodeOnly_43418211809.zip",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "5/5 byte exact, evidence 9 entries/8 hashes and code artifact 9 entries/8 hashes CRC PASS"
+        },
+        "unverified": [
+          "06A independent R6.1 scratch/capacity/true parity",
+          "actual genuine Chrome Module Worker",
+          "64/128MiB and 2M documents target",
+          "same-case real browser JS/Rust performance",
+          "game persistence/auth",
+          "Development Switch/production cutover"
+        ],
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+          "status": "READY",
+          "file": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_HANDOFF_06A.md",
+          "sha256": "f4ccc0a80c3b04785e23450d7f570d42d6f36d39f5c78c40fc6eda18c1f53739",
+          "condition": "Fixed 7 MOD and exact CI artifact, independent scratch lifetime/all errors and length variations, paired resource and exact genuine output/lifecycle, reuse accepted base. 06A then 00 scoped integration; no limits, PR9/PR10 or deployment change."
+        }
       }
     },
     "08_LOCALIZATION": {
