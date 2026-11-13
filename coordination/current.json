@@ -1207,12 +1207,12 @@
       }
     },
     "05_WEB": {
-      "status": "FORMAL_CELEBRATION5_UI_LOCAL_PASS_QA_READY",
+      "status": "FORMAL_CELEBRATION5_UI_SCOPED_PASS_INTEGRATED_V33",
       "ownerFocusedPass": 15,
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_CELEBRATION5_UI_SCOPED_QA; 00_AFTER_ACCEPTANCE",
+      "next": "WAIT_NEW_ACCEPTED_CORE_CONTRACT_OR_SCOPED_QA_FAILURE; NO_REPEAT; 00_PAGES_V30_V29_OFF_FIRST; 06_LIVE_AFTER_DEPLOY",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -1427,7 +1427,7 @@
       },
       "formalTask": {
         "task": "FORMAL_RECIPE23_RECEIPT_UI",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS_INTEGRATED_V31",
         "owner": "05 WEB",
         "baseHead": "e447ad758cda5074c1ebbaaa5cf371ae44a040e7",
         "baseSourceSha256": "aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0",
@@ -1935,7 +1935,7 @@
           "scope": "5 paths, exact 23 target allowlist, separate flag/operation, 1 genuine representative and 320 inline PASS; finish all23 controller in bounded batches, 375/1280 and isolated real Download, wrong version, scope isolation, old recipe regression. No V24 changes.",
           "nextAfter": "00 serial integration after scoped PASS; 03 Celebration5 targeted causal independent; 04 waits accepted scope"
         },
-        "next": "06_SCOPED_QA_RECIPE23_UI_5_PATHS_AND_REMAINING_UI_EVIDENCE; 00_SERIAL_FORMAL_INTEGRATION; 05_NEW_ACCEPTED_CORE_AFTER_DEP",
+        "next": "DONE; superseded by accepted V33 Celebration5 UI; no repeat",
         "integrationPreflight": {
           "status": "V30_BYTE_EXACT_BASE_COMPATIBLE_QA_PENDING",
           "baseSourceSha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
@@ -1949,13 +1949,26 @@
       },
       "celebration5Ui": {
         "task": "FORMAL_CELEBRATION5_RECEIPT_UI",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "DONE_SCOPED_PASS_INTEGRATED_V33",
         "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "deltaSha256": "b048af393965098cbe54c10cbc5ab0e162e0acf4def2a1fee19e878b82a9b4f1",
         "manifestSha256": "15c020855db952eadba621697addf6795a7825547a0f26727d36dfea5802700f",
         "artifact": "HKIA_WEB05_FormalCelebration5UI_V31_20261113_Source.zip",
         "scope": "2 MOD 3 ADD; 521 total from V31+04; 1034 PASS 36 SKIP; private inline only; flags OFF",
-        "next": "06 independent scoped UI QA; 00 integrate after acceptance; 05 no repeat"
+        "next": "DONE; 00 V33 already integrated; 00 Pages V30/V29 OFF first; 06 live verification after deploy; 05 wait new accepted core scope or scoped failure",
+        "acceptance": {
+          "verdict": "SCOPED_PASS_CELEBRATION5_UI_INLINE",
+          "qaFile": "HKIA_06_V32_CELEBRATION5_UI_QA_20261113_RESULT.json",
+          "qaSha256": "6231c587ad8ef777f05db649e474c103ceaadea41bec67c7a9413f50a67ba0e8",
+          "combinedVerdict": "SCOPED_PASS_FORMAL_V33_OFF_COMBINED",
+          "combinedQaFile": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
+          "combinedQaSha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0",
+          "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "artifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "verified": "5+5 genuine cancel/restore; 70 controller negatives; 100 non-target raw frames; 330 reused blocks; 320/375/1280 inline Chrome; 375 isolated download/reimport; V33 521 source/4146 dist/4076 WebP/55 modules; rollback exact; 18 flags OFF; no new TRUE_RED",
+          "unverified": "REAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER; GAME_LOAD_RESAVE; LIVE_PAGES",
+          "next": "WAIT_NEW_ACCEPTED_CORE_OR_SCOPED_FAILURE"
+        }
       }
     },
     "06_QA": {
