@@ -14670,6 +14670,15 @@
         "task": "SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
         "acceptance": "Actual product data+image parity, capability boundaries, no regression existing UI, 320/375/1280 real browser, privacy; no deploy. 06B independent HIGH QA before root distribution 06C."
       }
+    },
+    "resumeReconciliation20261113": {
+      "task": "CTRL_CANONICAL_V39_REFERENCE_POINTER_AND_LIVE_QUEUE_RECONCILIATION",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "risk": "LOW_LEDGER_ONLY",
+      "baseHead": "cebfad15d9f2f6eba53123bb18f37442be18b116",
+      "baseBlob": "155175987f77b372c7f0c9c1493280e4d665c182",
+      "scope": "Reconcile formalRelease research reference pointer to already accepted V39 exact source; retain V38 previous; verify post-transfer CI and PR metadata; no product, gate, deployment or other stream mutation."
     }
   },
   "formalRelease": {
