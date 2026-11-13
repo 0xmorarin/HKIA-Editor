@@ -1,0 +1,54 @@
+name: HKIA V30 OFF public boundary retest (no deploy)
+on:
+  push:
+    branches:
+      - ctrl/pages-off-transport-20261113
+    paths:
+      - .github/workflows/verify-live-off-v30-boundary.yml
+permissions:
+  contents: read
+jobs:
+  boundary:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/ctrl/pages-off-transport-20261113' && github.event.before == 'cf6877892d8093a2babd8d1a5ac456e69e3ec7e4' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retest all seven denied paths without interpreting 5xx as denial
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, urllib.request, urllib.error, time, concurrent.futures
+          root="https://0xmorarin.github.io/HKIA-Editor/"
+          expected="51e08577d212f9d8f90095ada1d2acd2e6a373d3f9d8e875e8833e107c06dea4"
+          headers={"Accept-Encoding":"identity","User-Agent":"Mozilla/5.0 (compatible; HKIA-public-boundary-check)","Cache-Control":"no-cache"}
+          with urllib.request.urlopen(urllib.request.Request(root,headers=headers),timeout=20) as r:
+              assert r.status==200 and r.geturl()==root and hashlib.sha256(r.read()).hexdigest()==expected
+          print("PASS exact public root")
+          paths=["coordination/current.json","tests/save.test.mjs",".github/workflows/pages-off-repair.yml","site-manifest.json","README.md","HKIA_Pages_OFF_V30_V29_20261113.bundle","parts/0000.bin"]
+          def probe(path):
+              codes=[]
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(urllib.request.Request(root+path,headers=headers),timeout=20) as r:
+                          codes.append(r.status)
+                          return path,codes,"EXPOSED_OR_UNEXPECTED_SUCCESS"
+                  except urllib.error.HTTPError as e:
+                      codes.append(e.code)
+                      if e.code in (403,404): return path,codes,"DENIED"
+                      if e.code<500: return path,codes,"UNEXPECTED_STATUS"
+                  except urllib.error.URLError:
+                      codes.append("NETWORK_ERROR")
+                  if attempt<2: time.sleep(2)
+              return path,codes,"UNKNOWN"
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              result=list(pool.map(probe,paths))
+          for path,codes,status in result: print(status,path,codes)
+          try:
+              with urllib.request.urlopen(urllib.request.Request("http://0xmorarin.github.io/HKIA-Editor/",headers=headers),timeout=20) as r:
+                  assert r.geturl()==root and hashlib.sha256(r.read()).hexdigest()==expected
+              print("PASS HTTP to HTTPS redirect")
+          except Exception as e:
+              print("HTTP_REDIRECT_UNVERIFIED",type(e).__name__)
+          assert all(x[2]=="DENIED" for x in result),"Public-path denial not fully established"
+          PY
