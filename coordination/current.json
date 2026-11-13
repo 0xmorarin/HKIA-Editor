@@ -4869,7 +4869,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+      "status": "PARTIAL_R5_1_SELF_PASS_FIXED_06A_READY_00_CI_READY_GENUINE_CHROME_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4886,54 +4886,49 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 R5 isolated nondeploy CI PR9 fixed code, 06A new R5 static scope parallel. 07 actual compiled WASM code-only browser artifact and six private genuine local outputs after CI, focused repair if needed. 06A new execution acceptance; 00 Development Switch only after all ADR conditions. No R4 full re-QA or JS formal duplication.",
-      "task": "HKIA-RUST-010",
-      "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
-      "scope": "R5 isolated WASM bridge + typed HKE1 and actual Module Worker/browser harness source, R4 accepted unchanged, preflight and TS24 pass",
-      "sourceSha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
+      "next": "06A R5.1 independent scoped repair QA and 00 R5.1 nondeploy fixed CI in parallel. 07 genuine Chrome WAIT_ENV and WAIT_CI; then 06A execution acceptance, 00 Development Switch only after ADR conditions. R4 independent acceptance reused; JS Beta unaffected.",
+      "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+      "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
+      "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
+      "sourceSha256": "958094c81f9a40349de178e1e1e3ab98b221d2b1452edf1cdf076f74d1245622",
       "source": {
-        "file": "HKIA_Rust07_R5_WasmWorker_20261113_Source.zip",
-        "sha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
-        "entries": 106,
-        "bytes": 156534
+        "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Source.zip",
+        "sha256": "958094c81f9a40349de178e1e1e3ab98b221d2b1452edf1cdf076f74d1245622",
+        "entries": 106
       },
       "manifest": {
-        "file": "HKIA_Rust07_R5_WasmWorker_20261113_Manifest.json",
-        "sha256": "7b6aac176593e116a6cd0e9d07ba6b6f8f438d91a92b20238edb8bf10416e6e9"
+        "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Manifest.json",
+        "sha256": "70c60ba94e551d7a9b4ce09e0718ec76b6b74e5f2ff3477dd0ceda97c86faaf5"
       },
       "handoff": {
-        "to": "06A QA-DATA-CORE",
-        "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
-        "status": "STATIC_READY_EXECUTION_WAIT_CI",
-        "file": "HKIA_Rust07_R5_WasmWorker_20261113_HANDOFF_06A.md",
-        "sha256": "60b9e61ee55a72546c9c4441ce59d6757fee9645a9f55e1144fe2aba15a2585e",
-        "fixedSource": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
-        "scope": "HIGH new R5 bridge HKE1/WASM/Module Worker/client, lifecycle and actual genuine output; R4 accepted native 93 exact unchanged, no static R4 repeat; runtime after 00 code-only CI and 07 private self-QA"
+        "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_HANDOFF_06A_00.md",
+        "sha256": "289b2cd5157b6f12fa776bbb75a366f19f83cd2a1faa732f8068bf5bc7e3bb83",
+        "to": [
+          "06A QA-DATA-CORE",
+          "00 CTRL"
+        ],
+        "status": "READY_PARALLEL",
+        "conditions": "06A independent scoped counterexamples and Node genuine proof now; 00 append fixed-source CI workflow pin update then advance PR9 via lease and run synthetic real Chromium; 07 private actual Chrome six only after fixed repaired Artifact and authorized browser; 06A final execution acceptance then 00 Development Switch. No deploy or Writer grant."
       },
       "verification": {
-        "sourceReadback": "PASS_106_SHA_CRC_5_ARTIFACTS",
-        "delta": "PASS_13_SHA_CRC",
-        "baseR4": "93_OF_93_EXACT",
-        "gitBlobs": "13_OF_13_PASS",
-        "publicCrate": "74_OF_74_EXACT_PLUS_2_BRIDGE_FILES",
-        "typescriptNew": 10,
-        "typescriptRegression": 14,
-        "typescript": "PASS_24_OF_24_TSC_5_8_3_NODE22_16",
-        "workerClientHarnessTypecheck": "PASS",
-        "publicRunnerPreflight": "PASS",
-        "rustBridgePlanned": 4,
-        "rustBridgeExecuted": 0,
-        "wasm": "NOT_RUN_WAIT_00_CI",
-        "chrome": "NOT_RUN_WAIT_WASM",
-        "genuine": "NOT_RUN_0_OF_6",
-        "resources": "UNVERIFIED",
-        "gameAuth": "UNKNOWN",
-        "production": "OFF"
+        "oldCounterexamplesReproduced": 3,
+        "newCounterexamplesRejected": 3,
+        "writerTsPassed": 18,
+        "sessionTsPassed": 14,
+        "strictTsc": "DOM+WebWorker PASS",
+        "genuineDirectWasm": "6/6 Node direct actual WASM + repaired gate, both versions and both domains; byte-exact accepted R4 native; fixed V33 oracle exact Diff and Account raw preservation 6/6; rollback and negatives PASS; originals2 unchanged",
+        "wasmSha256": "e9a4caf35236ad20e57c360654b61e36e18066b76e3cc1307fa0ffabccd15ee9",
+        "oldCiRun": 43386307818,
+        "oldCiScope": "Original R5 synthetic real Chromium only; not repaired CI",
+        "genuineBrowser": "0/6 WAIT_ENV ERR_BLOCKED_BY_ADMINISTRATOR loopback policy",
+        "newCi": "NOT_RUN; exact R4 generator refs differ from V33 oracle two files, do not substitute",
+        "independentAcceptance": "PENDING_06A",
+        "developmentSwitch": "NOT_AUTHORIZED"
       },
       "implementation": "R5_WASM_BRIDGE_WORKER_SOURCE_IMPLEMENTED_UNCOMPILED",
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
-      "handoffTo": "06A_DIRECT_NEW_SCOPE_STATIC_NOW; 00_CI_DEPENDENCY_ONLY; 07_PRIVATE_GENUINE_CHROME; 06A_EXECUTION_ACCEPTANCE; 06B_ADAPTER_AFTER_FOUNDATION",
-      "dependency": "00_R5_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_GENUINE_BROWSER; 06A_NEW_SCOPE_STATIC_READY; JS_BETA_INDEPENDENT",
+      "handoffTo": "06A QA-DATA-CORE; 00 CTRL (CI only)",
+      "dependency": "R5.1 actual Chrome repaired CI artifact + authorized local browser, then independent scoped acceptance",
       "resumeBaseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
       "resumeScope": "R4 accepted; isolated WASM bridge and Module Worker, typed writer ABI, no JS writer, no product enablement; public synthetic and private genuine browser execution as environment permits",
       "executionKit": {
@@ -5167,7 +5162,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Compile bridge4 and wasm32, actual Chrome synthetic six, private genuine browser six + exact independent reparse and lifecycle/rollback, budgets, 06A independent scoped execution, 00 Development Switch after ADR gates only",
+      "remaining": "R5.1 CI and independent QA, genuine Chrome six, resource stress 64/128MiB/2M, development switch, formal Rust features and cutover",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -5820,12 +5815,69 @@
       },
       "repairClaim": {
         "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_HANDOFF",
         "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
         "fixedSource": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
         "risk": "HIGH",
         "scope": "07 writer-abi client response binding, focused tests and pins; preserve R4 native and bridge, no deployment",
-        "dependency": "06A TRUE_RED three counterexamples; old CI synthetic PASS diagnostic only"
+        "dependency": "06A TRUE_RED three counterexamples; old CI synthetic PASS diagnostic only",
+        "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd"
+      },
+      "r5Repair": {
+        "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+        "status": "PARTIAL_R5_1_SELF_PASS_FIXED_06A_READY_00_CI_READY_GENUINE_CHROME_WAIT_ENV",
+        "owner": "07 RUST CORE",
+        "risk": "HIGH",
+        "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
+        "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "branch": "rust07/r5-client-reply-repair",
+        "source": {
+          "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Source.zip",
+          "sha256": "958094c81f9a40349de178e1e1e3ab98b221d2b1452edf1cdf076f74d1245622",
+          "entries": 106
+        },
+        "delta": {
+          "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Delta.zip",
+          "sha256": "de8cd3ccc3da4718730d3d0034992629c8c1c24831b1138e27373354dbcb63ea",
+          "modified": 5
+        },
+        "manifest": {
+          "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Manifest.json",
+          "sha256": "70c60ba94e551d7a9b4ce09e0718ec76b6b74e5f2ff3477dd0ceda97c86faaf5"
+        },
+        "evidence": {
+          "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_Evidence.zip",
+          "sha256": "4536ec5be244f1d93c30e6f1e4153970352aa6c47069bc2514e829a0403c5087",
+          "result": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_RESULT.json",
+          "resultSha256": "08ccb8a95d1b46ef2825a66d37048b87747d543ec1b642e0859bfbefd6bd7332",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "6/6 byte-exact, source106/delta5 hashes and CRC PASS"
+        },
+        "verification": {
+          "oldCounterexamplesReproduced": 3,
+          "newCounterexamplesRejected": 3,
+          "writerTsPassed": 18,
+          "sessionTsPassed": 14,
+          "strictTsc": "DOM+WebWorker PASS",
+          "genuineDirectWasm": "6/6 Node direct actual WASM + repaired gate, both versions and both domains; byte-exact accepted R4 native; fixed V33 oracle exact Diff and Account raw preservation 6/6; rollback and negatives PASS; originals2 unchanged",
+          "wasmSha256": "e9a4caf35236ad20e57c360654b61e36e18066b76e3cc1307fa0ffabccd15ee9",
+          "oldCiRun": 43386307818,
+          "oldCiScope": "Original R5 synthetic real Chromium only; not repaired CI",
+          "genuineBrowser": "0/6 WAIT_ENV ERR_BLOCKED_BY_ADMINISTRATOR loopback policy",
+          "newCi": "NOT_RUN; exact R4 generator refs differ from V33 oracle two files, do not substitute",
+          "independentAcceptance": "PENDING_06A",
+          "developmentSwitch": "NOT_AUTHORIZED"
+        },
+        "handoff": {
+          "file": "HKIA_Rust07_R5_1_ClientReplyIntegrity_20261113_HANDOFF_06A_00.md",
+          "sha256": "289b2cd5157b6f12fa776bbb75a366f19f83cd2a1faa732f8068bf5bc7e3bb83",
+          "to": [
+            "06A QA-DATA-CORE",
+            "00 CTRL"
+          ],
+          "status": "READY_PARALLEL",
+          "conditions": "06A independent scoped counterexamples and Node genuine proof now; 00 append fixed-source CI workflow pin update then advance PR9 via lease and run synthetic real Chromium; 07 private actual Chrome six only after fixed repaired Artifact and authorized browser; 06A final execution acceptance then 00 Development Switch. No deploy or Writer grant."
+        }
       }
     },
     "08_LOCALIZATION": {
