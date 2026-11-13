@@ -4869,7 +4869,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R5_WASM_MODULE_WORKER",
+      "status": "R5_WASM_WORKER_SOURCE_FROZEN_TS_PASS_WAIT_CI_06A_STATIC_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4886,69 +4886,54 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06A independent R4 execution READY using fixed local binary and genuine six regenerated candidates; static scope already done, research originals separate. 07 after scoped acceptance actual WASM Module Worker Chrome minimum edit foundation; focused repair only if TRUE_RED. No JS Beta gate, main merge, deployment or Development Switch until Owner ADR conditions.",
-      "task": "HKIA-RUST-009",
-      "baseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
-      "scope": "Native minimum R4 genuine six candidates both versions/domains exact independent V33 comparison and Python block check, no product source change",
-      "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
+      "next": "00 R5 isolated nondeploy CI PR9 fixed code, 06A new R5 static scope parallel. 07 actual compiled WASM code-only browser artifact and six private genuine local outputs after CI, focused repair if needed. 06A new execution acceptance; 00 Development Switch only after all ADR conditions. No R4 full re-QA or JS formal duplication.",
+      "task": "HKIA-RUST-010",
+      "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
+      "scope": "R5 isolated WASM bridge + typed HKE1 and actual Module Worker/browser harness source, R4 accepted unchanged, preflight and TS24 pass",
+      "sourceSha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
       "source": {
-        "file": "HKIA_Rust07_R4_MinimumWriter_20261113_Source.zip",
-        "sha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
-        "entries": 93,
-        "bytes": 133165
+        "file": "HKIA_Rust07_R5_WasmWorker_20261113_Source.zip",
+        "sha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
+        "entries": 106,
+        "bytes": 156534
       },
       "manifest": {
-        "file": "HKIA_Rust07_R4_MinimumWriter_20261113_Manifest.json",
-        "sha256": "25788344c4a8bfdb75108d822bfc7e061fa6234f7317c1d3a0aa589b46fcbcff"
+        "file": "HKIA_Rust07_R5_WasmWorker_20261113_Manifest.json",
+        "sha256": "7b6aac176593e116a6cd0e9d07ba6b6f8f438d91a92b20238edb8bf10416e6e9"
       },
       "handoff": {
         "to": "06A QA-DATA-CORE",
-        "task": "HKIA-RUST-009_R4_INDEPENDENT_EXECUTION",
-        "status": "READY_NOW_STATIC_ALREADY_DONE_NO_REPEAT",
-        "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_HANDOFF_06A.md",
-        "sha256": "8c4449fbf22b9bbeab76b46459ccf2f7c0cd171d65f33175d54c7130ddf94de7",
-        "fixedSource": "d6401ccea03d67ad312ca1b052455974498ebe1e",
-        "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
-        "scope": "R4 HIGH execution scope only: actual six private candidates, exact independent Python decoded/raw witness, 12 fields, 60 ZIP frames, 192 LZ4 tokens, negatives and runtime rollback/CAS/replay/close/File A-B as needed; reuse existing 06A static and R2/R3 acceptance. No raw save in CI, no product changes by QA.",
-        "dependency": "NONE_FOR_R4_LOCAL_EXECUTION; V301_RESEARCH_ORIGINALS_SEPARATE"
+        "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
+        "status": "STATIC_READY_EXECUTION_WAIT_CI",
+        "file": "HKIA_Rust07_R5_WasmWorker_20261113_HANDOFF_06A.md",
+        "sha256": "60b9e61ee55a72546c9c4441ce59d6757fee9645a9f55e1144fe2aba15a2585e",
+        "fixedSource": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+        "scope": "HIGH new R5 bridge HKE1/WASM/Module Worker/client, lifecycle and actual genuine output; R4 accepted native 93 exact unchanged, no static R4 repeat; runtime after 00 code-only CI and 07 private self-QA"
       },
       "verification": {
-        "sourceReadback": "PASS_93_SHA_CRC_ALL_5_ARTIFACTS",
-        "delta": "PASS_26_SHA_CRC",
-        "gitBlobs": "PASS_11_OF_11",
-        "publicCrate": "PASS_74_OF_74_54_GENERATED",
-        "syntheticFixtureRead": "PASS_14_OF_14_EXISTING_R3_READER_NOT_WRITER",
-        "typescript": "PASS_14_OF_14_FIXED_CI",
-        "v33ReferencePreview": 8,
-        "v33ReferenceReject": 14,
-        "rustCompile": "PASS_FIXED_CI_1_85_1",
-        "rustNewTestsPlanned": 14,
-        "rustRegressionPlanned": 81,
-        "rustExecutedTests": 95,
-        "genuineRustWriter": "SELF_PASS_6_OF_6_EXACT_V33_ORACLE",
-        "writer": "PRIVATE_NATIVE_SCOPED_SELF_PASS",
-        "wasm": "NOT_CONNECTED",
-        "browser": "UNVERIFIED",
+        "sourceReadback": "PASS_106_SHA_CRC_5_ARTIFACTS",
+        "delta": "PASS_13_SHA_CRC",
+        "baseR4": "93_OF_93_EXACT",
+        "gitBlobs": "13_OF_13_PASS",
+        "publicCrate": "74_OF_74_EXACT_PLUS_2_BRIDGE_FILES",
+        "typescriptNew": 10,
+        "typescriptRegression": 14,
+        "typescript": "PASS_24_OF_24_TSC_5_8_3_NODE22_16",
+        "workerClientHarnessTypecheck": "PASS",
+        "publicRunnerPreflight": "PASS",
+        "rustBridgePlanned": 4,
+        "rustBridgeExecuted": 0,
+        "wasm": "NOT_RUN_WAIT_00_CI",
+        "chrome": "NOT_RUN_WAIT_WASM",
+        "genuine": "NOT_RUN_0_OF_6",
+        "resources": "UNVERIFIED",
         "gameAuth": "UNKNOWN",
-        "rustNewTestsExecuted": 14,
-        "rustRegressionExecuted": 81,
-        "rustTestsPassed": 95,
-        "rustTestsFailed": 0,
-        "rustTestsSkipped": 0,
-        "releaseBuild": "PASS",
-        "originalsUnchanged": 2,
-        "exactFields": 12,
-        "nonTargetRawZipFrames": 60,
-        "unchangedRawLz4Tokens": 192,
-        "changedLz4Blocks": 12,
-        "rustCliNegatives": "PASS_8_OF_8_ZERO_STDOUT",
-        "oracleNegative": "PASS_2_OF_2_ZERO_STDOUT",
-        "independentQA": "06A_STATIC_REUSED_EXECUTION_READY"
+        "production": "OFF"
       },
-      "implementation": "R4_PRIVATE_NATIVE_WRITER_COMPILED_AND_GENUINE_SCOPED_SELF_PASS",
+      "implementation": "R5_WASM_BRIDGE_WORKER_SOURCE_IMPLEMENTED_UNCOMPILED",
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
-      "handoffTo": "06A_DIRECT_EXECUTION_ONLY_NO_REPEAT_STATIC; 07_WASM_WORKER_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
-      "dependency": "06A_INDEPENDENT_R4_EXECUTION_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
+      "handoffTo": "06A_DIRECT_NEW_SCOPE_STATIC_NOW; 00_CI_DEPENDENCY_ONLY; 07_PRIVATE_GENUINE_CHROME; 06A_EXECUTION_ACCEPTANCE; 06B_ADAPTER_AFTER_FOUNDATION",
+      "dependency": "00_R5_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_GENUINE_BROWSER; 06A_NEW_SCOPE_STATIC_READY; JS_BETA_INDEPENDENT",
       "resumeBaseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
       "resumeScope": "R4 accepted; isolated WASM bridge and Module Worker, typed writer ABI, no JS writer, no product enablement; public synthetic and private genuine browser execution as environment permits",
       "executionKit": {
@@ -4965,7 +4950,7 @@
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
       "resumeTask": "HKIA-RUST-010",
-      "previousTask": "HKIA-RUST-008",
+      "previousTask": "HKIA-RUST-009",
       "r2": {
         "source": {
           "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -5182,7 +5167,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "06A independent R4 runtime/rollback scoped acceptance; actual WASM Module Worker Chrome both versions/domains; resource budgets and Development Switch gate; full formal scope and game persistence/production release",
+      "remaining": "Compile bridge4 and wasm32, actual Chrome synthetic six, private genuine browser six + exact independent reparse and lifecycle/rollback, budgets, 06A independent scoped execution, 00 Development Switch after ADR gates only",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -5756,6 +5741,82 @@
             "scope": "Fixed native R4 scoped independent acceptance; Rust Worker typed ABI/session integration and real Chrome local both versions/domain exact edits, lifecycle negatives/rollback and budgets; no development switch until ADR gates and 00 record."
           }
         }
+      },
+      "r5": {
+        "source": {
+          "file": "HKIA_Rust07_R5_WasmWorker_20261113_Source.zip",
+          "sha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
+          "entries": 106,
+          "bytes": 156534
+        },
+        "delta": {
+          "file": "HKIA_Rust07_R5_WasmWorker_20261113_Delta.zip",
+          "sha256": "acff34ac7d3df66db5bb28d7294d68cc152dfa0662d72e26fd245a1f29a95f9f",
+          "entries": 13,
+          "bytes": 23391,
+          "added": 13,
+          "modified": 0,
+          "unchanged": 93
+        },
+        "manifest": {
+          "file": "HKIA_Rust07_R5_WasmWorker_20261113_Manifest.json",
+          "sha256": "7b6aac176593e116a6cd0e9d07ba6b6f8f438d91a92b20238edb8bf10416e6e9"
+        },
+        "handoff": {
+          "to": "06A QA-DATA-CORE",
+          "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
+          "status": "STATIC_READY_EXECUTION_WAIT_CI",
+          "file": "HKIA_Rust07_R5_WasmWorker_20261113_HANDOFF_06A.md",
+          "sha256": "60b9e61ee55a72546c9c4441ce59d6757fee9645a9f55e1144fe2aba15a2585e",
+          "fixedSource": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+          "scope": "HIGH new R5 bridge HKE1/WASM/Module Worker/client, lifecycle and actual genuine output; R4 accepted native 93 exact unchanged, no static R4 repeat; runtime after 00 code-only CI and 07 private self-QA"
+        },
+        "verification": {
+          "sourceReadback": "PASS_106_SHA_CRC_5_ARTIFACTS",
+          "delta": "PASS_13_SHA_CRC",
+          "baseR4": "93_OF_93_EXACT",
+          "gitBlobs": "13_OF_13_PASS",
+          "publicCrate": "74_OF_74_EXACT_PLUS_2_BRIDGE_FILES",
+          "typescriptNew": 10,
+          "typescriptRegression": 14,
+          "typescript": "PASS_24_OF_24_TSC_5_8_3_NODE22_16",
+          "workerClientHarnessTypecheck": "PASS",
+          "publicRunnerPreflight": "PASS",
+          "rustBridgePlanned": 4,
+          "rustBridgeExecuted": 0,
+          "wasm": "NOT_RUN_WAIT_00_CI",
+          "chrome": "NOT_RUN_WAIT_WASM",
+          "genuine": "NOT_RUN_0_OF_6",
+          "resources": "UNVERIFIED",
+          "gameAuth": "UNKNOWN",
+          "production": "OFF"
+        },
+        "publicTransport": {
+          "file": "HKIA_Rust07_R5_WasmWorker_20261113_PublicCodeTransport.json",
+          "sha256": "3e6d0bae1e488bf086731aa4eddf059ac576eb39c79c40bd1d00340ce0fb13d4"
+        },
+        "pr": {
+          "number": 9,
+          "head": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+          "tree": "4ec2c3929dd4938c1b20c1213451755a2db1f230",
+          "branch": "rust07/r5-wasm-worker",
+          "basePr": 8,
+          "base": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+          "draft": true,
+          "paths": 13,
+          "blobReadback": "13_OF_13"
+        },
+        "ci": {
+          "owner": "00 CTRL",
+          "status": "WAIT_WORKFLOW",
+          "runner": "RUSTUP_TOOLCHAIN=1.85.1 python3 tests/rust/run-wasm-ci.py --chrome <actual-chrome> --code-only-artifact <fresh-dir>",
+          "toolchain": "Rust1.85.1 wasm32-unknown-unknown Node22.16 tsc5.8.3 Python Playwright actual Chrome",
+          "expectedBridgeTests": 4,
+          "expectedTS": 24,
+          "expectedSyntheticBrowserCandidates": 6,
+          "artifact": "Static code WASM/JS/HTML and build-report only; no fixtures or saves"
+        },
+        "limits": "Native R4 unchanged; private development bridge only; existing semantic scope history and progress pair; no production adapter/flag, resource limits unchanged 512MiB WASM hard memory cap, decoded 64/128MiB and 2M targets unverified. Browser genuine and 06A acceptance pending."
       }
     },
     "08_LOCALIZATION": {
