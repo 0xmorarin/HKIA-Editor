@@ -11,7 +11,7 @@ concurrency:
 jobs:
   isolated:
     if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-navigation-r1'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
