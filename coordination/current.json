@@ -11841,7 +11841,8 @@
       "07_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
       "06A_BROWSER_KIT_STRICT_REPORT_REPAIR_FIXED_QA",
       "05_SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
-      "06C_V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA"
+      "06C_V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "06C_PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA"
     ],
     "nextAfterDep": [
       "06C_NEW_HOST_QA_IN_FLIGHT_NO_DUPLICATE",
@@ -15135,7 +15136,7 @@
       "owner": "00 CTRL",
       "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
       "risk": "RELEASE",
-      "status": "REMOTE_ARTIFACT_FIXED_SELF_QA_CI_IN_FLIGHT",
+      "status": "SELF_PASS_REMOTE_FIXED_06C_READY",
       "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
       "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
       "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -15157,24 +15158,51 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "00 nondeploy fixed artifact verifyDist/actual local HTTP Chromium, then 06C fixed delta predeployment scoped independent QA; manual fixed deployment with exact ref/manifest and Owner approval. Separate 05 Svelte root claim unchanged.",
+      "next": "06C fixed V33 root independent QA now READY; 00 prepare pin-only workflow candidate no deployment; 05 root Svelte independent IN_FLIGHT; publish V33 after scoped acceptance and Owner fixed approval.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
         "workflowBlob": "81b83393de18148a8e95de1cddbf2b7895996b7f",
         "run": 43421992728,
-        "status": "IN_PROGRESS",
-        "scope": "No deploy, exact 4146 SHA+policy, actual loopback HTTP Chromium 320/375/1280, credits/tabs/search/disabled writer/WebCrypto Worker negative, 8 path denials; no real save."
+        "status": "SUCCESS",
+        "scope": "No deploy, exact 4146 SHA+policy, actual loopback HTTP Chromium 320/375/1280, credits/tabs/search/disabled writer/WebCrypto Worker negative, 8 path denials; no real save.",
+        "job": 131873980949,
+        "verified": {
+          "artifactHashes": 4146,
+          "webp": 4076,
+          "policy": "PASS",
+          "source": "EXACT",
+          "writer": "OFF",
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "nativeWebCrypto": true,
+          "actualModuleWorker": "NO_SESSION_EXPORT_APPLY_REPLAY_DENIED",
+          "localPathDenials": 8,
+          "externalRequests": 0,
+          "pageErrors": 0,
+          "downloads": 0
+        }
       },
       "handoff": {
         "to": "06C QA-RELEASE",
         "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
-        "status": "READY_AFTER_CTRL_CI",
+        "status": "READY",
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "base": "b7e91df1e456ded1b50b4649797bf1b7df216717",
         "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment.",
-        "dependency": "CTRL CI 43421992728 success; explicit Owner exact candidate deploy authorization and 06C predeploy acceptance before 00 whitelist/manual deploy."
+        "dependency": "CTRL CI SUCCESS; 06C independent predeploy acceptance and Owner exact fixed artifact approval before manual deploy"
+      },
+      "workflowPinPreparation": {
+        "task": "V33_MANUAL_OFF_WORKFLOW_PIN_ONLY",
+        "status": "IN_FLIGHT",
+        "baseHead": "7df956fa51284dc34fa8a5e7ca50629b046a4c82",
+        "baseBlob": "8b8bd314589572743b93d133632ebc6dc8395c85",
+        "scope": "One existing manual-only Pages workflow: add exact V33 commit+manifest+source as third permitted OFF target. Preserve V30/V29, all policy checks and workflow_dispatch/main-only. Draft PR, no merge or dispatch until independent acceptance and Owner approval.",
+        "risk": "RELEASE"
       }
     }
   },
@@ -15618,10 +15646,10 @@
         "instructionsBlob": "302b26a040cf4611b815118a9d566f19173667d0",
         "characters": 7991,
         "ownerDecisionDate": "2026-11-13",
-        "latestEligible": "V33_FORMAL_OFF_ACCEPTED_ROOT_CANDIDATE_SELF_QA_AND_06C_PENDING",
+        "latestEligible": "V33_FIXED_ROOT_SELF_PASS_06C_READY",
         "lastActualDeployment": 43342655323,
         "latestCandidate": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-        "pending": "V33 fixed nondeploy artifact QA and manual exact release approval; Svelte product binding parallel"
+        "pending": "06C V33 fixed distribution acceptance; pinned manual workflow review and Owner approval; 05 Svelte parallel"
       },
       "targetLive": {
         "status": "SELF_PASS_NEW_HOST_FIXED_V30_NO_DEPLOY",
