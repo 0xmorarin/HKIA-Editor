@@ -10442,20 +10442,19 @@
     "nextReadyParallel": [
       "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
       "06B_LOCALE_R1_FIXED_REPAIR_SCOPED_QA",
+      "06B_SVELTE_R5_POSTCONDITION_REPAIR_AND_R6_INSPECTOR_DISJOINT_FIXED_QA",
       "07_R6_MEASURED_CAPACITY_FOLLOWUP",
-      "05_R5_POSTCONDITION_REPAIR_EXISTING",
-      "06A_NEW_HIGH_OR_AUTHORIZED_ENV_ONLY"
+      "06C_V39_FIXED_647_RESEARCH_REFERENCE_SCOPED_QA"
     ],
     "nextAfterDep": [
       "00_MANUAL_FIXED_PREVIEW_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
       "05_LOCALE_CONSUMER_INTEGRATION_AFTER_06B",
-      "00_R5_FIXED_REPAIR_CI_AFTER_05",
-      "06B_R5_FOCUSED_REPAIR_AFTER_CI",
+      "05_R5_R6_AFTER_06B",
+      "00_V39_ACCEPTANCE_AFTER_06C",
       "06A_R6_AFTER_07_FIXED_SELF_QA",
       "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
-      "07_R6_PRIVATE_GENUINE_AND_MEASURED_SELF_QA_ON_SURVIVING_CANDIDATE"
+      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -12916,7 +12915,7 @@
     "svelteR6CombinedCI": {
       "task": "SVELTE_R6_R5_REPAIR_FIXED_COMBINED_CI",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT_FIXED_CI_RUNNING",
+      "status": "DONE_FIXED_COMBINED_CI_PASS_06B_READY",
       "risk": "HIGH",
       "baseHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
       "sourceHead": "2924eaa2b51968e50f22a97524b2f8d308ad1931",
@@ -12926,19 +12925,101 @@
       "head": "1997c6716342f4c18c036510968a52de014ca570",
       "workflowBlob": "a3f92843de89be9c87524734efe7660131bbc628",
       "run": 43407459659,
-      "ci": "IN_PROGRESS",
-      "verified": "Exact fixed branch HEAD, only 1 workflow ADD, 9 prior source paths, readback workflow blob; actual run observed in_progress",
-      "next": "00 check fixed CI result; 06B two disjoint scopes after green; no deployment."
+      "ci": "SUCCESS",
+      "verified": {
+        "unit": 104,
+        "fail": 0,
+        "skip": 0,
+        "svelteCheck": "0 errors 0 warnings",
+        "build": "PASS",
+        "sourceGuard": "PASS",
+        "lock": "PASS",
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r1r2r3r4r5Regression": "PASS",
+        "r6": "missing distinct, selection retained, precision 7 digits, unknown identity, no Writer controls",
+        "overflow": 0,
+        "external": 0,
+        "pageErrors": 0
+      },
+      "next": "06B disjoint fixed scopes; no merge/deploy until independent acceptance",
+      "job": 131825202775,
+      "handoff": [
+        {
+          "to": "06B QA-WEB-LOCALE",
+          "task": "SVELTE_R5_FIXED_POSTCONDITION_REPAIR_INDEPENDENT_QA",
+          "sourceHead": "1997c6716342f4c18c036510968a52de014ca570",
+          "sourceSha256": "32263f4b55eed99fe2e3bf6288baef39e8c09b609f02dc94b61ed681dff1f86d",
+          "scope": "Exact R5 2-path repair, original 06B counterexamples and independent new negatives; no R6 scope or product authority",
+          "status": "READY"
+        },
+        {
+          "to": "06B QA-WEB-LOCALE",
+          "task": "SVELTE_R6_FIXED_ACHIEVEMENT_INSPECTOR_INDEPENDENT_QA",
+          "sourceHead": "1997c6716342f4c18c036510968a52de014ca570",
+          "sourceSha256": "32263f4b55eed99fe2e3bf6288baef39e8c09b609f02dc94b61ed681dff1f86d",
+          "scope": "Exact R6 7 paths, independent read-only field/identity/time/linkage projection and actual browser evidence, disjoint from R5 repair and locale",
+          "status": "READY"
+        }
+      ]
     },
     "v39Research": {
       "task": "V38_PLUS_RECIPE6_SAVED_CONDITIONS_RESEARCH_REFERENCE",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "SELF_PASS_06C_READY",
       "risk": "RELEASE",
       "baseSourceSha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
       "sourceDelta": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
       "upstreamAcceptance": "SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
-      "scope": "6 ADD research only; verify original V36 source pins/manifest, V38 overlap, focused tests and unchanged build/manifest, rollback, private evidence. No writer, game permission, deploy."
+      "scope": "6 ADD research only; verify original V36 source pins/manifest, V38 overlap, focused tests and unchanged build/manifest, rollback, private evidence. No writer, game permission, deploy.",
+      "candidate": {
+        "label": "V39_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V39_ResearchReference_20261113_Source.zip",
+        "sha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "entries": 647,
+        "bytes": 3694571,
+        "manifest": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Manifest.json",
+          "sha256": "66e9abf7217a72365137c3febe40462b89b3199bc9aef0aa536e0eafa21993c4"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Delta.zip",
+          "sha256": "1b92a91ac7f95da8976fe3a70e33f478407b3f1bf313099e9176a1223d30a667",
+          "added": 6,
+          "modified": 0,
+          "deleted": 0
+        },
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "8b9eaf51047b39b67f88410adb33c22e57fc9309140160f921de436eda179f7a",
+          "entries": 4146,
+          "unchanged": 4146
+        },
+        "result": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_RESULT.json",
+          "sha256": "eb0011e15b0330dd7993bf7680a9d6b3cb24b702b7494eec4a2bfd8058afabd1"
+        },
+        "evidence": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Evidence.zip",
+          "sha256": "2017db7c85867bd3b7b33ce7501087c49648119b67469da9581e26049e5d7e87"
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS"
+      },
+      "verified": "641 base exact; 6 ADD; 16 focused PASS, check/build both PASS; 55 source-derived distribution exact; 4146 map unchanged; rollback/reconstruction exact. Initial test missing STATION_WITNESS env, corrected using exact integrated 03 witness; no source change. Prior V36 625 exact continuity reused from 06C V38 acceptance.",
+      "unverified": "No genuine rerun; no external media rehash; runtime eligibility/game persistence unknown; no Writer/deploy.",
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "task": "V39_FIXED_647_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+        "status": "READY",
+        "fixedSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "scope": "6 ADD only, 641 V38 exact, 06A accepted read-only saved conditions; exact source pins, 16 focused incl env witness, independent integration negatives, rollback, build and 4146 map; no repeated 06A genuine scope; no deployment.",
+        "dependency": "V38 accepted; 06A stationSavedResult scoped PASS"
+      },
+      "next": "06C after or disjoint from P0 Pages R4 distribution QA; 00 record acceptance then."
     }
   },
   "formalRelease": {
