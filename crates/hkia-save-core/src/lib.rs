@@ -1,4 +1,4 @@
-//! HKIA bounded read-only slot core. No writer or authentication.
+//! HKIA bounded slot core and explicit private minimum Writer. No authentication or live activation.
 #![forbid(unsafe_code)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Error { Budget, Truncated, InvalidDistance, LengthMismatch, Overflow, InvalidToken, Schema, Version, Marker, Duplicate, Trailing }
@@ -95,3 +95,5 @@ pub mod account;
 pub mod session;
 pub mod abi;
 pub mod projection;
+pub mod writer;
+mod writer_catalog;
