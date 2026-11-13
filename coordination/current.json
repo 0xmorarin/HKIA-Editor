@@ -2420,15 +2420,15 @@
       }
     },
     "06_QA": {
-      "status": "V30_LIVE_ARTIFACT_AND_NEW_RESEARCH_QA_IN_FLIGHT",
+      "status": "V30_LIVE_OFF_RESEARCH_RUST_R2_SCOPED_PASS_V24_WAIT_ENV",
       "acceptedSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-      "acceptedScope": "V33 fixed OFF combined, 521 logical source and 4146 distribution files, 55-module closure; exact accepted 05 source and V32 unchanged core. Recipe32 limited existing-row cancellation and same-runtime receipt UI accepted; no live HTTP/HTTPS or game acceptance",
+      "acceptedScope": "V33 prior fixed OFF reference unchanged; V30 actual live OFF no-save scoped PASS, 11 research deltas + 04 evidence-only accepted within explicit bounds; fixed Rust R2 reader synthetic and genuine slot parity scoped PASS",
       "targetSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
       "targetScope": "V33 accepted; new fixed deployment or authorized real browser or new source required",
-      "next": "06_IN_FLIGHT_THEN_00_DIRECT_HANDOFF",
+      "next": "00_RECORD_LIVE_V30_AND_SERIAL_RESEARCH_REFERENCE; 07_R2_BOUNDED_SESSION_ABI; 01_02_03_TARGETED_SWITCH_SOURCE_WITNESS; 06_AFTER_FIXED_SUCCESSOR_OR_AUTHORIZED_V24_BROWSER_OR_RUST_SESSION_OR_SVELTE",
       "execution": {
         "task": "V30_FIXED_LIVE_ARTIFACT_AND_V33_NEW_RESEARCH_SCOPED_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "owner": "06 QA",
         "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3860,6 +3860,101 @@
             "artifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
             "scope": "V33 complete exact OFF combined accepted; record candidate acceptance; continue existing approved Pages V30/V29 staging or separately pinned authorized successor, no deployment/flag expansion by QA. Rollback V32 source/artifact exact; actual live rollback unverified."
           }
+        },
+        "verdict": "SCOPED_PASS_LIVE_V30_OFF_RESEARCH_AND_RUST_R2_READER",
+        "verified": {
+          "pages": {
+            "artifact": 14000317355,
+            "deployRun": 43342655323,
+            "independentRun": 43354965221,
+            "files": 4146,
+            "webp": 4076,
+            "bytes": 146346689,
+            "httpsSampleHashes": 15,
+            "deniedPaths": 7,
+            "realChromiumWidths": [
+              320,
+              375,
+              1280
+            ],
+            "nativeWebCrypto": true,
+            "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+            "noSave": true,
+            "writer": "OFF",
+            "rollback": "V29_READY_NOT_LIVE_EXECUTED",
+            "historicalExposure": "NOT_ERASED"
+          },
+          "research": {
+            "deltas": 11,
+            "evidenceOnly": 1,
+            "add": 61,
+            "mod": 1,
+            "logicalPaths": 582,
+            "initialFocused": 56,
+            "v300Focused": 52,
+            "denseNewFocused": 21,
+            "affectedRegression": 77,
+            "check": "PASS",
+            "build": "PASS",
+            "oldDenseTrueRed": "8_FAIL_FIXED_DELTA_50d41ea8_NOT_YET_INTEGRATED",
+            "switch300Recipe6SourceRowsExact": 6,
+            "v300Exact29ReadOnly": 29,
+            "productDenied": 29,
+            "causalGroupMatch": 29,
+            "productAuthorized": false
+          },
+          "rust": {
+            "sourceSha256": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
+            "pr": 5,
+            "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+            "run": 43353690282,
+            "artifact": 14004802204,
+            "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+            "synthetic": 36,
+            "valid": 8,
+            "rejected": 28,
+            "genuineVersions": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "exactPayloadAndTargetSpans": 2,
+            "originalUnchanged": true,
+            "scope": "READER_SLOT_ONLY_NO_WRITER_OR_WASM"
+          }
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+            "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+          },
+          "report": {
+            "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_REPORT.md",
+            "sha256": "b55c6d25bb97616d5b36b877c1b2392634b0a599d7c9c8d37d72ca4375676b88"
+          },
+          "zip": {
+            "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_EVIDENCE.zip",
+            "sha256": "c155573f9438f17f4fdecb0bb9315a9c9cf526ebd7ae8737a5fc091a00f6eac7",
+            "entries": 36
+          },
+          "readback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "V24_FROZEN_GENUINE_ACTUAL_BROWSER_WAIT_ENV",
+          "GAME_AUTH_LOAD_RESAVE_REBOOT_EFFECTS",
+          "HISTORICAL_PAGES_EXPOSURE_NOT_ERASED_LIVE_ROLLBACK_NOT_EXECUTED",
+          "EXACT29_SWITCH_DEFINITION_RUNTIME_IDENTITY_AND_RECIPE_TARGET_PRODUCER",
+          "RUST_ZIP_ACCOUNT_INDEX_SESSION_ABI_WRITER_WASM",
+          "SVELTE_FIXED_SCOPE_INDEPENDENT_QA"
+        ],
+        "handoff": {
+          "to": [
+            "00 CTRL",
+            "07 RUST CORE",
+            "01 COLLECTION",
+            "02 ACHIEVEMENT",
+            "03 LINKAGE"
+          ],
+          "scope": "00 record live V30 OFF replacement scoped PASS and serial integrate 11 fixed research deltas with dense repair before dependent causal tests; 07 proceed bounded read-only Session/ABI and remaining projections after accepted R2; 01/02/03 exact Switch v300 source witness and native producer/consumer/reward closure; no new Writer permission, no deployment or flags."
         }
       },
       "handoffRecheck": {
