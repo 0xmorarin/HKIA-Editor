@@ -17489,7 +17489,7 @@
       "owner": "00 CTRL",
       "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
       "risk": "RELEASE",
-      "status": "OWNER_APPROVED_IN_FLIGHT_MANUAL_FIXED_OFF_DEPLOY",
+      "status": "MERGED_WAIT_ENV_MANUAL_DISPATCH",
       "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
       "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
       "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -17511,7 +17511,7 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "00 merge exact PR12 then manual workflow_dispatch V33 fixed ref; 06C postdeploy HTTPS independent.",
+      "next": "WAIT_ENV manual GitHub Actions dispatch; exact V33 Owner-approved and merged; after run 06C postdeploy QA.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
@@ -17551,7 +17551,7 @@
       },
       "workflowPinPreparation": {
         "task": "V33_MANUAL_OFF_WORKFLOW_PIN_ONLY",
-        "status": "OWNER_APPROVED_MERGE_IN_FLIGHT",
+        "status": "DONE_MERGED_OWNER_APPROVED",
         "baseHead": "7df956fa51284dc34fa8a5e7ca50629b046a4c82",
         "baseBlob": "8b8bd314589572743b93d133632ebc6dc8395c85",
         "scope": "One existing manual-only Pages workflow: add exact V33 commit+manifest+source as third permitted OFF target. Preserve V30/V29, all policy checks and workflow_dispatch/main-only. Draft PR, no merge or dispatch until independent acceptance and Owner approval.",
@@ -17567,7 +17567,9 @@
           "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
           "observedMain": "b0880b9f0810019f4e1393b94abf595dc40517d1",
           "scope": "Raw REST mergeable true, normalized draft false; no merge before approval; recheck at merge"
-        }
+        },
+        "mergeCommit": "a280b65989fb9808bc339b3462ca6ccee998cef7",
+        "mergeReadback": "PR12 merged true; main workflow Blob exact accepted 75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5"
       },
       "acceptance": {
         "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_V33_OFF_ROOT",
@@ -17629,6 +17631,18 @@
         "quote": "依然としてgithub pagesは最終更新が12時間以上前である。この問題を解決して。",
         "scope": "V33 exact fixed OFF artifact 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d only, PR12 merge and manual deploy, 06C postdeploy; no Writer/Beta/formal activation",
         "interpretation": "Contextual explicit direction to execute the immediately proposed fixed OFF update, not standing auto-deploy authority."
+      },
+      "manualDispatch": {
+        "status": "WAIT_ENV",
+        "workflow": ".github/workflows/pages-off-repair.yml",
+        "ref": "main",
+        "inputs": {
+          "target": "V33",
+          "artifact_ref": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d"
+        },
+        "reason": "Available GitHub connector exposes no workflow_dispatch write action; manual GitHub Actions UI required. No push-trigger workaround, no deployment observed.",
+        "ownerAction": "Run workflow once with exact inputs; no further approval required for this fixed scope.",
+        "next": "Observe exact dispatch run and verify deploy job success; 06C postdeploy independent actual HTTPS, hash, subpath, privacy, credits, Writer OFF, rollback."
       }
     },
     "productTabsCI": {
