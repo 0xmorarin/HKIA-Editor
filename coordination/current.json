@@ -5760,7 +5760,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5773,7 +5773,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B R3 catalog scoped QA (disjoint from R2 runtime/native and Web R3); 05 after relevant acceptance, independent R4 continues. 08 next full legacy UI render-site inventory and R4 fixed source key mapping when available; Switch300 exact core source WAIT_DEP; no R1 data re-QA.",
+      "next": "06B R3 and R4 catalog changed-scope QA; disjoint linguistic review, sequential overlay acceptance R2->R3->R4; 05 consumes accepted scope directly and continues independent Web work. 08 remaining full legacy UI render-site inventory, account platform titles, Switch300 exact core WAIT_DEP. No R1 data re-QA.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -5819,15 +5819,21 @@
         "r3CatalogKeysEach": 89,
         "r3NewTranslationCells": 603,
         "r3PriorCellsUnchanged": 732,
-        "r3CombinedTests": "31 PASS / 0 FAIL"
+        "r3CombinedTests": "31 PASS / 0 FAIL",
+        "r4Catalogs": 15,
+        "r4CatalogKeysEach": 106,
+        "r4NewTranslationCells": 255,
+        "r4PriorCellsUnchanged": 1335,
+        "r4CombinedTests": "47 PASS / 0 FAIL"
       },
       "unverified": [
         "Switch300 full typed definition key mapping: original exact all-deps archive/core unavailable in this run; no substitution from Switch301",
         "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
         "Account platform-specific runtime titles",
         "06B R2 scoped independent acceptance; 05 integration and 00 distribution allowlist",
-        "Full product UI key inventory (302 legacy candidate lines only), future R4 keys, linguistic/actual browser/session QA",
-        "06B R3 catalog scoped acceptance"
+        "06B R3 catalog scoped acceptance",
+        "Full legacy product UI render-site inventory (302 candidate lines only), future UI beyond R4, linguistic/actual Browser/session QA",
+        "06B R4 catalog scoped acceptance"
       ],
       "handoff": {
         "to05": {
@@ -5839,6 +5845,11 @@
             "status": "READY_AFTER_DEP",
             "dependency": "06B R3 catalog scoped PASS; R2 runtime separately accepted before actual integration",
             "scope": "Use 89-key contract, Intl formatting, safe text; R3 category keys mapped; existing R1 data preparation and disjoint R4 continue"
+          },
+          "catalogR4": {
+            "status": "READY_AFTER_DEP",
+            "scope": "Bind 17 R4 keys, 106 total catalog keys; preserve exact IDs/progress, unreadable/missing status, Intl counts and generation/session/selection",
+            "dependency": "06B R3 and R4 catalog scoped acceptance, R2 Runtime accepted and R4 UI relevant acceptance; no new product authority"
           }
         },
         "to00": {
@@ -5886,6 +5897,19 @@
             "scope": "15x89 editor-owned catalogs; 468 seed additions, 135 new R3 strings, 732 existing cells unchanged; 17 MOD 9 ADD (incl manifest) on R1+R2 runtime, 46 composite unchanged; exact 4 R3 source blobs and partial 302 legacy candidate-line inventory",
             "dependency": "R1 accepted data and R2 fixed runtime test postimage; 06B may review translations disjoint now, apply combined overlay only after R2 runtime scoped acceptance",
             "acceptance": "Verify new 603 translations/key source mapping, placeholder multiplicity, semantic distinctions, regional variants and safe text; reproduce 18 focused and combined 31 tests; no R1 data re-QA. Direct 05 after scoped PASS, actual browser/session binding separate.",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+            "readbackVerified": true
+          },
+          "r4Catalog": {
+            "task": "LOCALIZATION_R4_ACHIEVEMENT_CATALOG_SCOPED_QA",
+            "status": "READY",
+            "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+            "artifact": "HKIA_08_LOCALIZATION_R4_ACHIEVEMENT_CATALOG_20261113.zip",
+            "sha256": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
+            "manifestSha256": "fbffae86948d0c9392d7811410c588eb171984d2205caee19af64b73c6d3e0f5",
+            "scope": "R4 fixed Svelte Achievement list 17 keys x15 languages, 255 new cells; 1335 prior R3 cells unchanged; 17 MOD 7 ADD 0 DEL, 55 composite paths unchanged, all 30 game packs unchanged; 5 exact Svelte R4 source blobs",
+            "dependency": "R3 fixed catalog postimage; R4 source fixed, actual R4 compiled QA separate. New translation review may proceed disjoint; integrate only after R2/R3 catalog and R4 UI acceptance",
+            "acceptance": "Independent review 255 new translations and 17 key sources; exact placeholders, regional variants, unreadable/no-match/unloaded, slot missing vs incomplete, GUID/Document ID/u64 string preservation, preview limit not save limit; focused 16 and combined 47 self-QA, no repeat prior accepted data; direct 05 after scoped PASS",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
             "readbackVerified": true
           }
@@ -5946,10 +5970,10 @@
             "condition": "Locate exact original Switch300 all-deps/core via 02/00 private source evidence; validate pins; compare actual typed rows; do not substitute Switch301."
           },
           "ui": {
-            "status": "PARTIAL_SEED_AND_R3_DONE",
+            "status": "PARTIAL_SEED_R3_R4_DONE",
             "owner": "08 LOCALIZATION",
-            "task": "R3 catalog fixed; full legacy render-site inventory + R4 source key mapping, not yet full formal coverage",
-            "dependency": "05 fixed source and accepted catalog contract; no shared product source edits"
+            "task": "106 keys all 15 locales fixed; full legacy UI render-site inventory and future Svelte surfaces",
+            "dependency": "05 fixed source and accepted catalog contract; no shared product writes"
           }
         }
       },
@@ -6013,12 +6037,55 @@
       "r4": {
         "task": "R4_ACHIEVEMENT_LIST_LOCALE_KEYS",
         "claim": "20261113_08_R4_ACH_LIST_LOCALE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
         "baseHead": "6d4970dee93a1f2ea8312a006ce665104dcb98ba",
         "sourceHead": "a6a0d8732f73b0e13817b943f294832c61d769dd",
         "risk": "HIGH_NEW_UI_KEY_CONTRACT",
         "scope": "Fixed Svelte R4 added UI strings and dynamic labels only; separate delta on R3, no shared source writes",
-        "dependency": "R3 catalog fixed; R4 Source fixed; integration after R3 and R4 relevant acceptance"
+        "dependency": "R3 catalog fixed; R4 Source fixed; integration after R3 and R4 relevant acceptance",
+        "fixed": {
+          "task": "LOCALIZATION_R4_ACHIEVEMENT_CATALOG_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_R4_ACHIEVEMENT_CATALOG_20261113.zip",
+          "sha256": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
+          "manifestSha256": "fbffae86948d0c9392d7811410c588eb171984d2205caee19af64b73c6d3e0f5",
+          "scope": "R4 fixed Svelte Achievement list 17 keys x15 languages, 255 new cells; 1335 prior R3 cells unchanged; 17 MOD 7 ADD 0 DEL, 55 composite paths unchanged, all 30 game packs unchanged; 5 exact Svelte R4 source blobs",
+          "dependency": "R3 fixed catalog postimage; R4 source fixed, actual R4 compiled QA separate. New translation review may proceed disjoint; integrate only after R2/R3 catalog and R4 UI acceptance",
+          "acceptance": "Independent review 255 new translations and 17 key sources; exact placeholders, regional variants, unreadable/no-match/unloaded, slot missing vs incomplete, GUID/Document ID/u64 string preservation, preview limit not save limit; focused 16 and combined 47 self-QA, no repeat prior accepted data; direct 05 after scoped PASS",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        },
+        "verified": {
+          "catalogs": 15,
+          "keysPerCatalog": 106,
+          "newCells": 255,
+          "priorCellsUnchanged": 1335,
+          "focused": 16,
+          "combined": 47,
+          "fail": 0,
+          "reproducedFiles": 17,
+          "unchangedCompositePaths": 55,
+          "gamePacksUnchanged": 30
+        },
+        "unverified": [
+          "06B scoped linguistic/semantic review",
+          "actual R4 compiled and independent UI acceptance; production binding, actual Browser/a11y and Save/session invariant",
+          "full legacy UI key inventory; Switch300 exact typed identity"
+        ],
+        "handoff": {
+          "task": "LOCALIZATION_R4_ACHIEVEMENT_CATALOG_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_R4_ACHIEVEMENT_CATALOG_20261113.zip",
+          "sha256": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
+          "manifestSha256": "fbffae86948d0c9392d7811410c588eb171984d2205caee19af64b73c6d3e0f5",
+          "scope": "R4 fixed Svelte Achievement list 17 keys x15 languages, 255 new cells; 1335 prior R3 cells unchanged; 17 MOD 7 ADD 0 DEL, 55 composite paths unchanged, all 30 game packs unchanged; 5 exact Svelte R4 source blobs",
+          "dependency": "R3 fixed catalog postimage; R4 source fixed, actual R4 compiled QA separate. New translation review may proceed disjoint; integrate only after R2/R3 catalog and R4 UI acceptance",
+          "acceptance": "Independent review 255 new translations and 17 key sources; exact placeholders, regional variants, unreadable/no-match/unloaded, slot missing vs incomplete, GUID/Document ID/u64 string preservation, preview limit not save limit; focused 16 and combined 47 self-QA, no repeat prior accepted data; direct 05 after scoped PASS",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        }
       }
     },
     "06A_QA_DATA_CORE": {
