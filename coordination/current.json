@@ -1363,7 +1363,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "WAIT_NEW_ACCEPTED_CORE_CONTRACT_OR_SCOPED_QA_FAILURE; NO_REPEAT; 00_PAGES_V30_V29_OFF_FIRST; 06_LIVE_AFTER_DEPLOY",
+      "next": "00_ISOLATED_SVELTE_R1_CI_PR6; 05_AFTER_COMPILE_RESULT_OR_NEW_ACCEPTED_CORE_OR_LIVE_UI_FAILURE; 06_LIVE_V30_QA_IN_FLIGHT; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2123,7 +2123,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_TYPED_PASS_REMOTE_DRAFT_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -2131,7 +2131,34 @@
         "scope": "Isolated svelte-ui/**: primary Achievements/Collections tabs, exact presentational classes/ARIA/keyboard, typed controlled port and synthetic harness. No live JS, Writer, shared config, workflow, or Pages changes. No Beta gate.",
         "dependency": "Approved ADR; V24 UI frozen, V33 accepted, V30 OFF UI delivered; independent of new Writer contracts and Rust.",
         "acceptance": "Typed tests and exact legacy navigation semantics; actual Svelte compile/build and browser parity separately before integration; no session duplication.",
-        "next": "05 implement; 00 isolated CI support if dependency runtime unavailable; 06 after compiled fixed source"
+        "next": "00 isolated nondeploy CI on PR6 (lockfile/check/build/browser); 05 focused repair or extend only after result; 06 independent parity after fixed compiled source. No JS Beta gate; V24 frozen, V33 unchanged.",
+        "sourceSha256": "bf722aa58c07479aeeaad0015adc494284ffb4d95e75005f289d22bf4438f49e",
+        "manifestSha256": "06ca60f5e29330556bc565e206d76736bb86eeb93da3bb2e492e4ef0b1aba273",
+        "transportSha256": "6e553a9c574e5d2cf84866187c07f100ee2356d0dbba4284b4622a663902dafc",
+        "evidenceSha256": "7d808d19700f557414837f699b449b3f67d0491829106c4fe43a256185e926e9",
+        "artifacts": {
+          "source": "HKIA_WEB05_SvelteNavigation_R1_20261113_Source.zip",
+          "manifest": "HKIA_WEB05_SvelteNavigation_R1_20261113_Manifest.json",
+          "transport": "HKIA_WEB05_SvelteNavigation_R1_20261113_PublicCodeTransport.json",
+          "evidence": "HKIA_WEB05_SvelteNavigation_R1_20261113_Evidence.json"
+        },
+        "remote": {
+          "pr": 6,
+          "head": "fa18063330558e188e947c44843f7a3c6870559e",
+          "base": "69e1e3ffb0f719bf48ae815cf84529ce592dd837",
+          "branch": "web05/svelte-navigation-r1",
+          "tree": "357cfc2be064ced1b0d3469f723164e934657f89",
+          "changed": "13 ADD 0 MOD 0 DEL; 183 base blobs unchanged; exact 13 remote blobs",
+          "draft": true
+        },
+        "verified": "20 Node tests, pure model tsc 5.8.3, 18 actual V33 legacy JS VM comparisons, CSS exact V33 SHA, browser kit syntax, all 4 private readbacks exact, ZIP 13 SHA CRC, PR head exact",
+        "unverified": [
+          "Svelte compiler/check/build (npm DNS EAI_AGAIN)",
+          "transitive lock",
+          "compiled browser 320/375/1280",
+          "actual legacy app port binding",
+          "full UI parity"
+        ]
       }
     },
     "06_QA": {
