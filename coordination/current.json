@@ -2844,7 +2844,7 @@
         },
         "r3": {
           "task": "SVELTE_R3_COLLECTION_CATEGORY_GRID",
-          "status": "COMPILED_BROWSER_PASS_06B_READY",
+          "status": "DONE_06B_SCOPED_PASS",
           "owner": "05 WEB",
           "baseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
           "basePrHead": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
@@ -2943,10 +2943,28 @@
             "R4 Svelte compile/check/build and actual Chromium 320/375/1280",
             "actual live product controller/catalog/media binding, mapped image load failure, full parity and Rust adapter"
           ],
-          "decisions": "Read-only synthetic fixture; 120-row increments with isolated 1200 display cap not a production contract or save limit; exact progress strings no arithmetic; local WebP only; no R3 accepted snapshot changes"
+          "decisions": "Read-only synthetic fixture; 120-row increments with isolated 1200 display cap not a production contract or save limit; exact progress strings no arithmetic; local WebP only; no R3 accepted snapshot changes",
+          "repair": {
+            "task": "SVELTE_R4_CLASS_TOKEN_ORACLE_MINIMAL_REPAIR",
+            "status": "IN_FLIGHT",
+            "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
+            "basePrHead": "9fffbb07d6877b8c34997e9d07506cd2be7a9d9b",
+            "scope": "svelte-ui/scripts/browser-achievement-parity.py only, exact class token checks plus controls; no component/CSS/workflow changes",
+            "risk": "LOW_TEST_ORACLE_ONLY",
+            "run": 43386305291
+          }
         }
       },
-      "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
+      "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
+      "localeIntegration": {
+        "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
+        "status": "IN_FLIGHT",
+        "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
+        "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+        "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
+        "risk": "HIGH_LOCALE_UI_ADAPTER",
+        "dependency": "06B runtime repair b14c906f... and R1 data scoped pass; catalog R3/R4 pending separately"
+      }
     },
     "06_QA": {
       "status": "DONE_LEGACY_DRAIN_HISTORY_ONLY",
