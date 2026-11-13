@@ -5207,7 +5207,7 @@
         }
       },
       "distributionRepair": {
-        "status": "ACTIONS_SOURCE_VERIFIED_WAIT_AUTHENTICATED_ARTIFACT_PUSH",
+        "status": "IN_FLIGHT_CONNECTOR_BINARY_SEGMENT_TRANSFER",
         "incidentRun": 43307905181,
         "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
         "sourceProbe": {
@@ -5245,13 +5245,14 @@
         "next": "Run existing private kit check/stage on authorized authenticated git host; verify both exact refs; then 00 serial PR3 integration/manual OFF deployment and 06 live QA. No further unchanged binary-chunk retries.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "BLOCKED_AUTHENTICATED_GIT_TRANSFER",
-          "baseMain": "67e84d0daedcc7d3ca270970f05dd44768669f38",
+          "status": "IN_FLIGHT_CONNECTOR_BINARY_SEGMENT_TRANSFER",
+          "baseMain": "51da83b1b01a914c0bbd677a5c6e3cf4b2882291",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "Initial three chunk objects readable by GitHub (binary decode rejected); missing later objects; refs absent",
-          "next": "Run existing private kit check/stage on authorized authenticated git host; verify both exact refs; then 00 serial PR3 integration/manual OFF deployment and 06 live QA. No further unchanged binary-chunk retries.",
-          "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy"
+          "observed": "Two bounded segments returned exact expected Git blob SHA; large request h2 failure; continue bounded transfer",
+          "next": "Verify every segment, reconstruct full pinned bundle in CI; PR3 only after both exact artifact refs exist.",
+          "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
+          "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required"
         }
       },
       "ownerRecoveryPriority": {
