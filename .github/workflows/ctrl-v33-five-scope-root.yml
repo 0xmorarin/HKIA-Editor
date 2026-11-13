@@ -42,15 +42,32 @@ jobs:
           printf '%s  %s\n' 3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921 "$RUNNER_TEMP/accepted/achievement-list.zip" | sha256sum -c -
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/14041045919/zip" > "$RUNNER_TEMP/accepted/achievement-header.zip"
           printf '%s  %s\n' 143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663 "$RUNNER_TEMP/accepted/achievement-header.zip" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/locked"
+          git show 767decd9c7cf4efa0259c391b3cf776a0e6ca2d3:svelte-ui/package.json > "$RUNNER_TEMP/locked/package.json"
+          git show 767decd9c7cf4efa0259c391b3cf776a0e6ca2d3:svelte-ui/package-lock.json > "$RUNNER_TEMP/locked/package-lock.json"
+          printf '%s  %s\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd "$RUNNER_TEMP/locked/package-lock.json" | sha256sum -c -
+          (cd "$RUNNER_TEMP/locked" && npm ci --ignore-scripts --no-audit --no-fund)
+          cat > "$RUNNER_TEMP/strip.cjs" <<'JS'
+          const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+          const acorn=require(process.env.RUNNER_TEMP+'/locked/node_modules/acorn');
+          assert.equal(acorn.version,'8.19.0');
+          const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+          const file=process.argv[2],src=fs.readFileSync(file,'utf8');
+          function parse(s){const comments=[],tokens=[];const ast=acorn.parse(s,{ecmaVersion:'latest',sourceType:'module',onComment:comments,onToken:tokens});return {comments,tokens:tokens.map(t=>[t.type.label,s.slice(t.start,t.end)]),ast:JSON.stringify(ast,(k,v)=>['start','end','loc','range'].includes(k)?undefined:typeof v==='bigint'?{bigint:String(v)}:v)}}
+          const before=parse(src);let clean=src;
+          for(const c of [...before.comments].reverse())clean=clean.slice(0,c.start)+clean.slice(c.start,c.end).replace(/[^\r\n]/g,' ')+clean.slice(c.end);
+          const after=parse(clean);assert.equal(after.comments.length,0);assert.deepEqual(after.tokens,before.tokens);assert.equal(after.ast,before.ast);
+          fs.writeFileSync(file,clean);console.log(JSON.stringify({file:file.split('/').pop(),inputSha256:sha(src),outputSha256:sha(clean),comments:before.comments.length,tokens:before.tokens.length,astAndTokens:'EXACT'}));
+          JS
           python3 - <<'PY'
-          import pathlib,os,json,hashlib,zipfile,difflib,shutil
+          import pathlib,os,json,hashlib,zipfile,difflib,shutil,subprocess
           root=pathlib.Path(os.environ['RUNNER_TEMP']); base=pathlib.Path('fixed-V33/site'); candidate=root/'combined-site'; out=root/'combined-evidence'
           inputs=json.loads(r'''[{"name":"tabs","source":"f320ef06f0d8732ee1ec1c96c1d1163e15e821f7","compiled":"ca639a1b742fb0cfa80a1286550c57884f34af4c","run":43428472417,"id":14037284400,"zip":"4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7","module":"856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245","app":"b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47"},{"name":"filters","source":"a94cb913122df7cd63ab00fafea0428b2e7f4bac","compiled":"21624edfab9a4a1f5ae92689843fe4f31b54c4d3","run":43426763281,"id":14037742173,"zip":"6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb","module":"586297ee82e193ccec800c10558acd723feeb8652268f7656551d550fa8079af","app":"2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"},{"name":"categories","source":"fd893041d47051016fbc4797d9e8d67dc7865389","compiled":"4b87b341d95c4f23e33a59384ffea740738ef656","run":43429463962,"id":14038264996,"zip":"3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d","module":"2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72","app":"e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce"},{"name":"achievement-list","source":"b9be0e94b0ab5454f0827be935c93203fca68df8","compiled":"ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926","run":43430603821,"id":14038992117,"zip":"3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921","module":"a8a756e7790c83a2deca44cf4387e388e348ff1f41f5b9296b8e1cf1a1065c95","app":"4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be"},{"name":"achievement-header","source":"b7061525fd00e68b6505b334a1a061903cd71014","compiled":"2381c7641a4bec039b9ea84d72fa2203dff70122","run":43433563639,"id":14041045919,"zip":"143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663","module":"98746c2e0c828e7d4ce9b2a6a0f1555295a071bc8cd6ff66eb3eec256387d843","app":"7601ea1c99265a96862ef9ca035b1a61ad7ffe17dc94fa04c4d7d6250bfee60c"}]''')
           sha=lambda b:hashlib.sha256(b).hexdigest()
           base_raw=(base/'src/app.js').read_bytes(); base_lines=base_raw.decode().splitlines(keepends=True)
           assert sha(base_raw)=='6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5'
           shutil.copytree(base,candidate)
-          edits=[]; license_raw=None
+          edits=[]; license_raw=None; normalization=[]
           for i,x in enumerate(inputs):
               with zipfile.ZipFile(root/'accepted'/ (x['name']+'.zip')) as z:
                   assert z.testzip() is None
@@ -73,6 +90,8 @@ jobs:
                   assert delta['changes']['src/product-'+x['name']+'.mjs']['after']==x['module']
                   assert b'sourceMappingURL=' not in module
                   dest=candidate/'src'/('product-'+x['name']+'.mjs'); assert not dest.exists(); dest.write_bytes(module)
+                  norm=json.loads(subprocess.check_output(['node',str(root/'strip.cjs'),str(dest)],text=True));assert norm['inputSha256']==x['module'] and norm['outputSha256']==sha(dest.read_bytes())
+                  normalization.append(norm); print('COMMENT_NORMALIZATION',json.dumps(norm),flush=True)
                   lines=app.decode().splitlines(keepends=True)
                   scope=[(a,b,lines[c:d],i) for tag,a,b,c,d in difflib.SequenceMatcher(None,base_lines,lines,autojunk=False).get_opcodes() if tag!='equal']
                   check=base_lines[:]
@@ -100,12 +119,13 @@ jobs:
           assert len(actual)==4152 and sum(p.endswith('.webp') for p in actual)==4076
           # Reverse composition must restore the exact original map.
           restored={p:e for p,e in actual.items() if p not in added};restored['src/app.js']=old['src/app.js'];assert restored==old
-          provenance={'schema':'HKIA.V33FiveScopeComposition.1','baseArtifact':'8e2d8c790212fdcc1d3ab4ef96878e570f085b3d','baseManifest':'137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db','inputs':inputs,'excluded':['collection-items'],'appSha256':sha(app),'licenseSha256':sha(license_raw),'edits':[{ 'start':a,'end':b,'scope':inputs[i]['name'],'replacementSha256':sha(''.join(repl).encode())} for a,b,repl,i in edits]}
+          provenance={'schema':'HKIA.V33FiveScopeComposition.1','baseArtifact':'8e2d8c790212fdcc1d3ab4ef96878e570f085b3d','baseManifest':'137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db','inputs':inputs,'excluded':['collection-items'],'appSha256':sha(app),'licenseSha256':sha(license_raw),'normalization':normalization,'edits':[{ 'start':a,'end':b,'scope':inputs[i]['name'],'replacementSha256':sha(''.join(repl).encode())} for a,b,repl,i in edits]}
           prov=(json.dumps(provenance,sort_keys=True,indent=2)+'\n').encode();(out/'composition.json').write_bytes(prov)
           m.update(state='V33_FIVE_SCOPE_COMBINED_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED',sourceSha256=sha(prov),sourceKind='COMPOSITION_PROVENANCE_JSON',baseArtifactManifestSha256=provenance['baseManifest'],entries=len(actual),bytes=sum(e['bytes'] for e in actual.values()),modules=60,modifiedPaths=sorted(changed),addedPaths=sorted(added),files=actual)
           raw=(json.dumps(m,ensure_ascii=False,indent=2)+'\n').encode();(out/'site-manifest.json').write_bytes(raw)
           for p in sorted(added|changed):
               dest=out/'delta'/p;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(candidate/p,dest)
+          (out/'normalization.json').write_text(json.dumps(normalization,indent=2)+'\n')
           print(json.dumps({'manifestSha256':sha(raw),'sourceSha256':sha(prov),'appSha256':sha(app),'entries':len(actual),'unchanged':4145,'modified':1,'added':6,'rollback':'EXACT_MAP','writer':'OFF'}))
           PY
           node --check "$RUNNER_TEMP/combined-site/src/app.js"
