@@ -7972,7 +7972,7 @@
       "status": "PARTIAL_WEB_R5_AND_LOCALE_CONSUMER_TRUE_RED",
       "task": "WEB_R5_COLLECTION_DETAIL_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 disjoint repair R5 collection detail and Locale Consumer R1 reentrant close; 08 new fixed HIGH scope only; 00 fixed repair CI as available; 06B focused re-QA or next fixed HIGH; no repeat accepted scopes",
+      "next": "05 READY R5 postcondition repair; 00 READY fixed Locale Consumer successor CI; 06B after locale CI or R5 fixed repair CI/new HIGH scope; 08 new fixed HIGH only; accepted scopes unchanged",
       "dependency": "Two isolated TRUE_RED: R5 Collection adapter postcondition, Locale Consumer R1 reentrant close; JS Beta/accepted R4 and Locale unaffected",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -8245,7 +8245,11 @@
         },
         "localeConsumer": {
           "status": "WAIT_DEP",
-          "condition": "05 fixed reentrant commit repair, 00 scope-pinned CI, then 06B independent focused re-test"
+          "repairHead": "6ebabfe7ebb29e06ff13edd9b5a45d7131f14995",
+          "repairSourceSha256": "6c4e9208eadf484469f9d8be3076987b67a8af428382fbcee0fe2e094b967fe0",
+          "repairDeltaSha256": "a4f423c968cb13a2321ee1a4264972f579a20449c82804475c836c02244b96f9",
+          "repairStatus": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "condition": "00 fixed isolated successor CI 69 tests/check/both builds/320-375-1280 browser + R1-R3 regressions; then 06B focused repair acceptance; no earlier accepted runtime change"
         },
         "accountNative": {
           "status": "DONE_STATIC_SCOPED_PASS",
