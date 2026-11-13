@@ -1,0 +1,81 @@
+name: HKIA V33 actual product achievement-header fixed CI (no deploy)
+on:
+  push:
+    branches: [ctrl/svelte-v33-achievement-header-fixed-20261113]
+    paths: ['.github/workflows/svelte05-product-achievement-header-fixed.yml']
+permissions:
+  contents: read
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Exact source and locked compile
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor b7061525fd00e68b6505b334a1a061903cd71014 HEAD
+          test "$(git diff --name-only b7061525fd00e68b6505b334a1a061903cd71014 HEAD)" = .github/workflows/svelte05-product-achievement-header-fixed.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          npm test
+          npm run check -- --fail-on-warnings
+          npm run build
+          npx --no-install vite build --config vite.product-achievement-header.config.ts
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: fixed-V33
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Exact V33 reference, candidate and actual browser
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          test "$(git -C ../fixed-V33 rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          base="../fixed-V33/site"
+          manifest="../fixed-V33/site-manifest.json"
+          delta="$RUNNER_TEMP/achievement-header-v33-delta"
+          candidate="$RUNNER_TEMP/achievement-header-v33-candidate"
+          node --experimental-strip-types scripts/verify-product-achievement-header-reference.mjs "$base" "$manifest"
+          node scripts/prepare-product-achievement-header-delta.mjs "$base" "$manifest" dist-product-achievement-header/product-achievement-header.mjs "$delta"
+          cp -a "$base" "$candidate"
+          cp "$delta/src/"* "$candidate/src/"
+          python3 - "$base" "$manifest" "$delta" "$candidate" <<'PY'
+          import hashlib,json,pathlib,sys
+          base,manifest,delta,candidate=map(pathlib.Path,sys.argv[1:])
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          m=json.loads(manifest.read_bytes())
+          d=json.loads((delta/'delta-manifest.json').read_bytes())
+          assert {p.relative_to(candidate).as_posix() for p in candidate.rglob('*') if p.is_file()}==set(m['files'])|{'src/product-achievement-header.mjs'}
+          assert set(d['changes'])=={'src/app.js','src/product-achievement-header.mjs'}
+          for p,e in m['files'].items():
+              assert sha(base/p)==e['sha256'],p
+              assert sha(candidate/p)==(d['changes'][p]['after'] if p=='src/app.js' else e['sha256']),p
+          assert d['changes']['src/app.js']['before']==m['files']['src/app.js']['sha256'] and sha(candidate/'src/app.js')==d['changes']['src/app.js']['after']
+          assert sha(candidate/'src/product-achievement-header.mjs')==d['changes']['src/product-achievement-header.mjs']['after']
+          assert 'sourceMappingURL=' not in (candidate/'src/product-achievement-header.mjs').read_text()
+          print('ACHIEVEMENT HEADER DELTA 4145 unchanged 1 MOD 1 ADD; 4076 WebP exact')
+          PY
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-product-achievement-header-parity.py "$base" "$candidate"
+          mkdir "$RUNNER_TEMP/achievement-header-evidence"
+          cp "$delta/delta-manifest.json" "$RUNNER_TEMP/achievement-header-evidence/"
+          cp "$delta/src/"* "$RUNNER_TEMP/achievement-header-evidence/"
+          cp node_modules/svelte/LICENSE.md "$RUNNER_TEMP/achievement-header-evidence/Svelte-LICENSE.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_ProductAchievementHeader_V33_CodeOnly
+          path: ${{ runner.temp }}/achievement-header-evidence
+          if-no-files-found: error
+          retention-days: 7
