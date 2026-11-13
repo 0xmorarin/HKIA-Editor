@@ -421,12 +421,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "V300_DERIVED_REWARD_EXACT29_PROVIDER_LOCAL_PASS_QA_PENDING_WAIT_NEW_WITNESS",
+      "status": "RECIPE6_SWITCH300_CAUSAL_LOCAL_PASS_QA_READY_WAIT_EXACT_STATION_CONSUMER_WITNESS",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_QA_INDEPENDENT_FOUR_NEW_DELTAS_PLUS_PRIOR_GROUP_HISTORICAL_DERIVED; 01_EXACT_SWITCH_DEFINITION_SOURCE_IF_AVAILABLE; 04_AFTER_ACCEPTED_02_03_EXACT29_AND_DEFINITION_PRECONDITIONS; 03_WAIT_NEW_CONCRETE_WITNESS_OR_QA_FAILURE; 00_SERIAL_AFTER_QA",
+      "next": "06_SCOPED_01_RECIPE6_PRODUCER_AND_03_CAUSAL_NEW_DELTAS; 03_WAIT_EXACT_STATION_MISSION_COUNTER_ASSET_WITNESS_OR_QA_COUNTEREXAMPLE; 04_WAIT_ACCEPTED_EXACT_COLLECTION_ONLY_CONTRACT; 00_SERIAL_AFTER_QA; NO_WRITER_OR_DEPLOY",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -749,12 +749,31 @@
       },
       "recipe6Switch300Causal": {
         "task": "RECIPE6_SWITCH300_PROVIDER_TO_PERSISTENCE_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_STATIC_AND_READONLY_PASS_QA_READY",
         "owner": "03 LINKAGE",
         "baseHead": "1b77761cb736869486adae0453e03b8534aef926",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Exact six Switch300 Recipe/Food identities; cooking completion -> recipe inventory/history/counters/achievement/reward; reuse accepted allocator/provider, no 01 acquisition overlap; research contract only",
-        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3; exact Switch300 serial 673938d0517178f330931f5d1b1d5fc26cbe7c8ca526798b65529817038bc77d"
+        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3; exact Switch300 serial 673938d0517178f330931f5d1b1d5fc26cbe7c8ca526798b65529817038bc77d",
+        "artifact": "HKIA_03_RECIPE6_SWITCH300_CAUSAL_V33_DELTA_20261113.zip",
+        "deltaSha256": "a3286804459d4372ca60eb5312e133a0c0139cc31f070dd89e2cfd997c3ad3a5",
+        "manifestSha256": "6955b0cb8c419dcd84ee90c4bf77e8b7685435203155bf8bd6eab09988ee8521",
+        "privateLibrary": "HKIA Editor Private",
+        "changes": "8 ADD + transport manifest; 0 MOD/DEL; V33/V34/01 new paths disjoint",
+        "verified": "261 fixed Native words / 15 direct call-tail branches / 18 conditional branches / 18 metadata slots / 14 method bindings / 8 dump fields / 6 interface slots; 30 focused PASS; 6 exact normalized Switch300 Recipe/Food pairs; 2 genuine typed v300 read-only slots, original unchanged; 67 overlapping 01 anchors excluded; Library readback byte exact CRC",
+        "parallel01": {
+          "deltaSha256": "fe97cce85187f15c7d5545a753ea4f7c92c4f22520f933ccfc890cf9a551f4d6",
+          "manifestSha256": "f30079aaa30aefe5e2f7d14536577027f445172abf009c6671060f4f1adb4901",
+          "acceptance": "PENDING_06_SEPARATE",
+          "sourceRows": "6/6 exact equality"
+        },
+        "classification": "EXACT_6_CONDITIONAL_COOKING_TO_INVENTORY_HISTORY_ITEMCOUNTER_AND_POSTCOOK_MISSION_MANUAL_COUNTER; OWNERSHIP_ONLY_NOT_COOK_EMULATION; NO_NEW_UNCONDITIONAL_REQUIRED_WRITE; NO_WRITER_AUTHORITY",
+        "observation": "6 Recipe absent/history absent -> simple positive/history present; corresponding Food absent and history absent in both; 0 direct Recipe/Food Counter CountedGuids/tag8 matches in both; not a controlled cook; no causal attribution",
+        "required": "Existing conditional structural candidate InventoryItem/DbRoot.NextId/DocumentsCount only (01 accepted structural witness); native first collection event conditional active registered non-disposed not-collected history sink and callback/readiness; physical Key1/backfill not proven",
+        "remaining": "Exact four station runtime script/lock/upgrade/registration and postprocess bindings, active Mission and Manual/ItemCounter definitions, exact history backfill vs required ownership-edit history, actual event delivery and physical save/load/resave, reward claim/replay; independent 06. Preserve UNKNOWN and do not authorize product.",
+        "next": "06 scoped 8 new paths + separate 01 producer 6 paths; no repeated allocator/Provider/accepted scope. 03 only new exact station/mission/counter evidence or QA counterexample. 04 WAIT accepted exact collection-only contract and physical history/reload preconditions; formal implementation owner by architecture switch. 00 serial research reference after QA.",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "04_SAVE_CORE": {
