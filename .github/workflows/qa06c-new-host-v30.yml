@@ -5,6 +5,7 @@ on:
     paths: ['.github/workflows/qa06c-new-host-v30.yml']
 permissions:
   contents: read
+  pages: read
 jobs:
   independent:
     if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
@@ -19,9 +20,11 @@ jobs:
           python3 -m pip install playwright==1.55.0
           python3 -m playwright install chromium
       - name: Independent manifest, HTTPS and browser oracle
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
-          import hashlib,json,pathlib,urllib.request,urllib.error,concurrent.futures,ssl
+          import hashlib,json,pathlib,urllib.request,urllib.error,concurrent.futures,ssl,time,os
           from playwright.sync_api import sync_playwright
           root='https://yumekiraboshi.github.io/HKIA-Editor/'
           sha=lambda b:hashlib.sha256(b).hexdigest()
@@ -34,13 +37,20 @@ jobs:
           for p,e in files.items():
               data=(base/p).read_bytes(); assert len(data)==e['bytes'] and sha(data)==e['sha256'],p
           print('QA LOCAL all 4146 exact, writer OFF',flush=True)
+          meta_req=urllib.request.Request('https://api.github.com/repos/Yumekiraboshi/HKIA-Editor/pages',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'HKIA-06C-independent-QA'})
+          with urllib.request.urlopen(meta_req,timeout=30) as r: meta=json.load(r)
+          assert meta['html_url']==root and meta['build_type']=='workflow' and meta['https_enforced'] is True and meta['cname'] is None,(meta.get('html_url'),meta.get('build_type'),meta.get('https_enforced'),meta.get('cname'))
+          print('QA PAGES metadata workflow HTTPS enforced no CNAME',flush=True)
           def fetch(path,base=root):
-              try:
-                  req=urllib.request.Request(base+path,headers={'User-Agent':'HKIA-06C-independent-QA','Accept-Encoding':'identity'})
-                  with urllib.request.urlopen(req,timeout=30,context=ssl.create_default_context()) as r:
-                      return r.status,r.geturl(),r.read()
-              except urllib.error.HTTPError as e:
-                  return e.code,e.url,b''
+              for attempt in range(4):
+                  try:
+                      req=urllib.request.Request(base+path,headers={'User-Agent':'HKIA-06C-independent-QA','Accept-Encoding':'identity','Cache-Control':'no-cache'})
+                      with urllib.request.urlopen(req,timeout=30,context=ssl.create_default_context()) as r:
+                          return r.status,r.geturl(),r.read()
+                  except urllib.error.HTTPError as e:
+                      if e.code not in (429,502,503,504) or attempt==3: return e.code,e.url,b''
+                      print('QA transient retry',path,e.code,attempt+1,flush=True);time.sleep(2**attempt)
+              raise AssertionError('unreachable')
           # independently choose all non-image runtime files except .nojekyll (GitHub may hide dotfiles), and dispersed WebP by content hash
           images=sorted((p for p in files if p.endswith('.webp')),key=lambda p:files[p]['sha256'])
           paths=sorted(p for p in files if not p.endswith('.webp') and p!='.nojekyll')+[images[i] for i in [0,101,509,1023,2047,3071,4000,4075]]
@@ -50,6 +60,7 @@ jobs:
               return p
           with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
               checked=list(ex.map(verify,paths))
+          print('QA HTTPS sample exact',len(checked),flush=True)
           assert fetch('')==(200,root,(base/'index.html').read_bytes())
           assert fetch('',root.replace('https:','http:'))==(200,root,(base/'index.html').read_bytes())
           denied=['coordination/current.json','config/release-gates.json','site-manifest.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','README.md','parts/0000.bin','HKIA_Pages_OFF_V30_V29_20261113.bundle','dev/index.html','src/app.js.map']
