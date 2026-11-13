@@ -7296,8 +7296,8 @@
       "status": "DONE_SCOPED_LOCALE_R3_R4_WAIT_WEB_R4",
       "task": "LOCALIZATION_R3_R4_CATALOG_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 consume R3 fixed catalog and continue existing R4 browser oracle repair; 08 continue new fixed UI key/linguistic/Switch300 work only if actual READY; 00 rerun fixed R4 after repair; 06B after full fixed R4 CI or new HIGH locale scope; LOW legacy render inventory direct 05",
-      "dependency": "Web R4 oracle failure in run 43386305291; repair by 05 then 00 scope-pinned full CI. Catalog R4 acceptance separate; integration after relevant UI PASS",
+      "next": "00 execute fixed R4 successor CI; 06B independent R4 after green or other new fixed HIGH scope; accepted locale R3/R4 and web R3 not repeated",
+      "dependency": "R4 test oracle repair self-QA complete; 00 fixed full CI pending; no product defect established by original class order failure",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -7419,18 +7419,12 @@
         }
       },
       "resumeCheck": {
-        "baseHead": "e3e316d538e4fcbd87255a4ef8bd3187a4f88919",
-        "locale": {
-          "status": "IN_FLIGHT",
-          "claim": "20261113_08_R2_RUNTIME_NATIVE"
-        },
-        "web": {
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
-          "head": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
-          "observedPrWorkflowRuns": 0
-        },
+        "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
+        "repairHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
+        "sourceHead": "a6a0d8732f73b0e13817b943f294832c61d769dd",
+        "ciStatus": "PARTIAL_COMPILE_PASS_BROWSER_TEST_ORACLE_RED_READY_05",
         "ready": [],
-        "productSourceWrite": false
+        "reason": "05 LOW test-only repair fixed; no new 06B HIGH source acceptance before complete R4 CI; locale scopes already accepted"
       },
       "webR3Ready": {
         "sourceHead": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
@@ -7567,9 +7561,11 @@
         "webR4": {
           "status": "WAIT_DEP",
           "head": "a6a0d8732f73b0e13817b943f294832c61d769dd",
-          "condition": "05 test-only class token repair + 00 scope-pinned full compile/build and actual Chromium R4 widths; no unmodified rerun",
-          "repairStatus": "IN_FLIGHT",
-          "failedRun": 43386305291
+          "repairHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
+          "repairDeltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
+          "repairStatus": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "failedRun": 43386305291,
+          "condition": "00 pin test-only successor; full isolated compile/check/build and actual Chromium R4 320/375/1280 plus R1-R3 regression; 06B claims fixed HIGH R4 only after green evidence"
         },
         "locale": {
           "status": "WAIT_NEW_FIXED_HIGH_SCOPE",
