@@ -12781,11 +12781,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_V33_FIVE_SCOPE_FIXED_DISTRIBUTION",
+      "status": "DONE_FIVE_SCOPE_PREDEPLOY_SCOPED_PASS_WAIT_FIXED_ROOT_STAGE_OWNER",
       "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
-      "scope": "Live V33 six changed paths and actual HTTPS boundary; V41 18 ADD research only",
-      "next": "00 record V33 live and V41 research acceptance; 06C wait next fixed root distribution or research, authorized V24 genuine Browser",
-      "dependency": "00_RECORD_V33_LIVE_AND_V41; NEXT_FIXED_ROOT_OR_RESEARCH_WAIT_DEP; V24_WAIT_ENV",
+      "scope": "V33 fixed five accepted modules, one app modification + six additions; independent static, rollback bytes and Chromium cross-scope/abort; no deployment",
+      "next": "00 stage exact accepted fixed root and record acceptance; Owner exact fixed artifact approval; manual deploy only; 06C postdeploy HTTPS. V24 genuine private Browser WAIT_ENV.",
+      "dependency": "00_FIXED_REMOTE_ROOT_AND_OWNER_APPROVAL_THEN_MANUAL_DEPLOY; V24_WAIT_ENV",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -13573,11 +13573,11 @@
         }
       },
       "nextReadyParallel": [
-        "00_V33_LIVE_AND_V41_ACCEPTANCE"
+        "00_V33_FIVE_SCOPE_FIXED_ROOT_STAGE_AND_OWNER_GATE"
       ],
       "nextAfterDep": [
-        "06C_FIXED_SINGLE_ROOT_DISTRIBUTION_AFTER_00_AND_06B",
-        "06C_NEW_FIXED_RESEARCH_REFERENCE",
+        "06C_FIVE_SCOPE_ACTUAL_HTTPS_POSTDEPLOY_AFTER_00_OWNER_MANUAL_DEPLOY",
+        "06C_NEXT_FIXED_RESEARCH_REFERENCE",
         "06C_V24_AUTHORIZED_GENUINE_BROWSER"
       ],
       "handoff": {
@@ -13585,13 +13585,9 @@
         "tasks": [
           {
             "to": "00 CTRL",
-            "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
-            "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
-          },
-          {
-            "to": "00 CTRL",
-            "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-            "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
+            "task": "V33_FIVE_SCOPE_FIXED_ROOT_STAGE_AND_OWNER_GATE",
+            "status": "READY",
+            "acceptance": "Stage exact 4152-file root and manifest from pinned artifact/base without changing bytes; verify full remote map and rollback to exact V33. Record 06C acceptance. Existing Owner exact fixed artifact approval before manual deployment; 06C actual HTTPS postdeploy QA. Do not deploy or activate Writer without approval."
           }
         ],
         "noDeploy": true,
@@ -14064,7 +14060,7 @@
       },
       "fiveScopeClaim": {
         "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
-        "status": "IN_FLIGHT",
+        "status": "COMPLETED",
         "baseHead": "7808ef6bfbc60124a216268229a654fabbbe4500",
         "baseLedgerBlob": "6aa6f0edb6b842221fc8c117646fad84f9b3e9aa",
         "source": "dea263044f0bc5bf12134b51202ae88afbb6298a",
@@ -14081,10 +14077,97 @@
           "head": "9c698b711be1428d4cb8f8a56675119e5f7be41e",
           "workflowBlob": "a54fcd9f16ac505acc7f49b1e0d95c353a870a9f",
           "run": 43506613333,
-          "status": "IN_PROGRESS_OBSERVED",
+          "status": "SUCCESS",
           "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
           "provenance": "ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352",
           "scope": "Six pinned archives, exact comment masks/tokenization, reverse patch composition, actual rollback bytes, full policy, synthetic cross-scope Chromium and all five individual module aborts; no deploy."
+        }
+      },
+      "fiveScopeResult": {
+        "schema": "HKIA.06C.FiveScope.1",
+        "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
+        "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_FIVE_SCOPE_ROOT",
+        "base": {
+          "ref": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db"
+        },
+        "candidate": {
+          "ciHead": "dea263044f0bc5bf12134b51202ae88afbb6298a",
+          "run": 43505994342,
+          "artifact": 14075649096,
+          "artifactSha256": "1ec235f9253aa5b09a69623b75f39660259a31190aa78b931ab51080a0f2a2aa",
+          "source": "ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352",
+          "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
+          "app": "adaf88bec2db44bd9b3babfa11519f052ccaf5b76a27d750ccf49913bbe3c663"
+        },
+        "independent": {
+          "head": "9c698b711be1428d4cb8f8a56675119e5f7be41e",
+          "workflowBlob": "a54fcd9f16ac505acc7f49b1e0d95c353a870a9f",
+          "run": 43506613333,
+          "job": 132165839130,
+          "conclusion": "success",
+          "artifact": {
+            "id": 14077300909,
+            "sha256": "2182f3f58981201956722d61218dbe430a7f9e9940a274f709b6a0ba07db405d",
+            "bytes": 649
+          },
+          "observed": {
+            "archives": 6,
+            "entries": 4152,
+            "unchanged": 4145,
+            "modified": 1,
+            "added": 6,
+            "webp": 4076,
+            "commentCounts": [
+              256,
+              293,
+              288,
+              292,
+              264
+            ],
+            "exactCommentMasksAndTokens": 5,
+            "reverseAppComposition": true,
+            "licenseExact": true,
+            "rollbackActualFiles": 4146,
+            "policy": true,
+            "browserWidths": [
+              320,
+              375,
+              1280
+            ],
+            "individualAbort": [
+              "tabs",
+              "filters",
+              "categories",
+              "achievement-list",
+              "achievement-header"
+            ],
+            "comparisons": 8,
+            "syntheticOnly": true,
+            "writer": "OFF"
+          }
+        },
+        "excluded": [
+          "Collection Items unaccepted scope fe2a4c2ceb26758bcf768a129008a5b06c5174b8"
+        ],
+        "limitations": [
+          "No genuine Save, native edit/export/game or Writer grant",
+          "Loopback Chromium only; live HTTPS/postdeploy QA not executed for this candidate",
+          "Candidate is CI delta artifact; no retained full remote fixed root ref or manual dispatch authorized yet",
+          "CI artifact retention 7 days; 00 must stage exact retained root before expiry and bind all hashes",
+          "Prior V33 live initial Worker error remains cause unknown/not reproduced"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V33_FIVE_SCOPE_FIXED_ROOT_STAGE_AND_OWNER_GATE",
+          "status": "READY",
+          "acceptance": "Stage exact 4152-file root and manifest from pinned artifact/base without changing bytes; verify full remote map and rollback to exact V33. Record 06C acceptance. Existing Owner exact fixed artifact approval before manual deployment; 06C actual HTTPS postdeploy QA. Do not deploy or activate Writer without approval."
+        },
+        "evidence": {
+          "commit": "70556cda023d4aa84823a58d878037ef1de2fcfb",
+          "blob": "d5fc5be283a3c6a27d5a9d4c283f358e91b3e882",
+          "path": "qa/06c/v33-five-scope-20261114-result.json",
+          "readback": "EXACT"
         }
       }
     }
