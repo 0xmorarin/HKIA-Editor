@@ -9107,13 +9107,13 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_V38_SCOPED_PASS_WAIT_ENV_V24",
-      "task": "V38_FIXED_641_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+      "status": "IN_FLIGHT_PAGES_R4_PREVIEW_AND_V39",
+      "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
       "scope": "11 ADD only, 630 exact V37; verify both upstream accepted V36 deltas and absence of collision with V37, 22 focused tests + 27 mutation subtests, independent integration negatives, rollback/reconstruct, 55 source-build exact and 4146 prior map exact; no external media rehash, no Writer/deploy authority",
       "next": "00 accept fixed V38 private reference; 06C wait authorized V24 genuine browser or new fixed integration",
       "dependency": "V38_SCOPED_ACCEPTED; 00_REFERENCE_RECORD; V24_WAIT_ENV_ADMINISTRATOR_BLOCK; NEXT_FIXED_INTEGRATION_WAIT_DEP",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -9653,7 +9653,144 @@
           "nextAfterDep": "06C authorized V24 browser or new fixed integration"
         },
         "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
-      }
+      },
+      "v38Completed": {
+        "claim": {
+          "task": "V38_FIXED_641_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+          "baseHead": "6072b323ec6a400aa278b3a5c0b3ee7e9d476317",
+          "baseLedgerBlob": "120b84502ee87aec67c162726d0df72cebbffdfd",
+          "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+          "scope": "11 ADD only; 630 exact; two accepted upstream deltas; independent build/map/rollback",
+          "status": "COMPLETED"
+        },
+        "result": {
+          "verdict": "SCOPED_PASS_V38_PRIVATE_RESEARCH_REFERENCE",
+          "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+          "baseSourceSha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+          "manifest": "76ccd458f1b1e5d4f7369dafa34a37182248cba4e6a1e1724245b08a194702d2",
+          "delta": "fe036aba722d7a05b6088c6551021795070e2b6093ace9f659a044f96b4e6a93",
+          "artifactManifest": "afb8b20b50a37fec700998399316cf3b513c6f1aaee953bc38d682f6a6b77735",
+          "upstreamDeltas": [
+            "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+            "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62"
+          ],
+          "upstreamAcceptance": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+          "verified": {
+            "pins": 14,
+            "sourceEntries": 641,
+            "unchanged": 630,
+            "add": 11,
+            "mod": 0,
+            "del": 0,
+            "upstreamPaths": [
+              6,
+              5
+            ],
+            "transportManifestExcluded": 1,
+            "upstreamBase625Exact": true,
+            "crc": "PASS",
+            "focused": 22,
+            "recipe6MutationSubtests": 27,
+            "fail": 0,
+            "independentNegativeControls": 6,
+            "check": "PASS_BOTH",
+            "build": "PASS_BOTH",
+            "sourceDerivedBuildExact": 55,
+            "fullManifestDirectMatch": 54,
+            "indexProjectionExact": true,
+            "fullDistributionMapExact": 4146,
+            "rollbackSourceExact": 630,
+            "reconstructionExact": 641,
+            "writer": "OFF",
+            "newResearchPathsInDistribution": 0
+          },
+          "evidence": {
+            "result": {
+              "file": "HKIA_06C_V38_SCOPED_QA_20261113_RESULT.json",
+              "sha256": "85ec2e74322d7fd0738c65faa3fbd99f6a7aea8d3a6bcda6a6e612e443878290"
+            },
+            "zip": {
+              "file": "HKIA_06C_V38_SCOPED_QA_20261113_EVIDENCE.zip",
+              "sha256": "0944eeebe00038959299d1aed32835120d807e3a6fac8072ddeaa4d14c3bc316"
+            },
+            "readback": "BOTH_BYTE_EXACT_SHA_CRC_10_MANIFEST_ENTRIES_PASS",
+            "privateLibrary": "HKIA Editor Private"
+          },
+          "trueRed": [],
+          "unverified": [
+            "External media bytes not rehashed; prior accepted V37 map reused",
+            "V24 genuine real Browser administrator block; game persistence unverified",
+            "No live deploy/rollback or Writer enablement"
+          ],
+          "handoff": {
+            "to": "00 CTRL",
+            "task": "V38_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+            "condition": "Record fixed V38 scoped PASS; no Writer/deploy permission; V24/V30 unchanged; no repeated QA",
+            "nextAfterDep": "06C authorized V24 browser or new fixed integration"
+          },
+          "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
+        },
+        "fixedCandidate": {
+          "label": "V38_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+          "file": "HKIA_CTRL_V38_ResearchReference_20261113_Source.zip",
+          "sha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+          "entries": 641,
+          "bytes": 3637413,
+          "baseSha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+          "manifest": {
+            "file": "HKIA_CTRL_V38_ResearchReference_20261113_Manifest.json",
+            "sha256": "76ccd458f1b1e5d4f7369dafa34a37182248cba4e6a1e1724245b08a194702d2"
+          },
+          "delta": {
+            "file": "HKIA_CTRL_V38_ResearchReference_20261113_Delta.zip",
+            "sha256": "fe036aba722d7a05b6088c6551021795070e2b6093ace9f659a044f96b4e6a93",
+            "added": 11,
+            "modified": 0,
+            "deleted": 0
+          },
+          "distribution": {
+            "artifactManifest": {
+              "file": "HKIA_CTRL_V38_ResearchReference_20261113_ArtifactManifest.json",
+              "sha256": "afb8b20b50a37fec700998399316cf3b513c6f1aaee953bc38d682f6a6b77735"
+            },
+            "baseArtifactManifestSha256": "b8c6cf6610efcfcf7e40067ed2a32aa1501d48ebef9d970210c49366a41c60a0",
+            "entries": 4146,
+            "unchanged": 4146,
+            "modified": 0,
+            "added": 0,
+            "flags": "OFF",
+            "externalMediaRehashed": false
+          },
+          "evidence": {
+            "result": {
+              "file": "HKIA_CTRL_V38_ResearchReference_20261113_RESULT.json",
+              "sha256": "cf5a9499850c3c7987887d5a3d42fccdd72e5b460df76626423adad7d8db8f16"
+            },
+            "zip": {
+              "file": "HKIA_CTRL_V38_ResearchReference_20261113_Evidence.zip",
+              "sha256": "de0c96a4bc8f0314a815a7c3c95079eb2b3d98fa227a6622dea7e5f557e7e693"
+            }
+          },
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS",
+          "acceptance": "SELF_PASS_06C_READY"
+        }
+      },
+      "activeClaims": [
+        {
+          "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
+          "source": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+          "status": "IN_FLIGHT",
+          "risk": "RELEASE",
+          "priority": "P0"
+        },
+        {
+          "task": "V39_FIXED_647_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+          "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "status": "IN_FLIGHT",
+          "risk": "RELEASE"
+        }
+      ]
     }
   },
   "p0FixCandidate": {
