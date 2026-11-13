@@ -4812,7 +4812,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "R4_GENUINE_WRITER_SELF_PASS_06A_EXECUTION_READY",
+      "status": "IN_FLIGHT_R5_WASM_MODULE_WORKER",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4892,8 +4892,8 @@
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
       "handoffTo": "06A_DIRECT_EXECUTION_ONLY_NO_REPEAT_STATIC; 07_WASM_WORKER_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
       "dependency": "06A_INDEPENDENT_R4_EXECUTION_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
-      "resumeBaseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
-      "resumeScope": "Fixed R4 binary 43378029329, six genuine private candidates, V33 oracle and original preservation; no static QA repeat, no source edits except scoped repair if needed",
+      "resumeBaseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
+      "resumeScope": "R4 accepted; isolated WASM bridge and Module Worker, typed writer ABI, no JS writer, no product enablement; public synthetic and private genuine browser execution as environment permits",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -4907,7 +4907,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-009",
+      "resumeTask": "HKIA-RUST-010",
       "previousTask": "HKIA-RUST-008",
       "r2": {
         "source": {
@@ -5639,6 +5639,64 @@
               "sha256": "8c4449fbf22b9bbeab76b46459ccf2f7c0cd171d65f33175d54c7130ddf94de7"
             },
             "readback": "ALL_4_BYTE_EXACT_4_ZIP_ENTRY_SHA_CRC_PASS"
+          }
+        },
+        "acceptance": {
+          "status": "SCOPED_PASS_NATIVE_EXECUTION",
+          "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
+          "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+          "run": 43378029329,
+          "job": 131729013270,
+          "binarySha256": "eb371bb329a8db8b2c77a3e111596c5c6cd461fcbb3c868cfd888c077c698b77",
+          "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
+          "deltaSha256": "ccdbd317cb214fd9fcc08ec93b498376447b07302d0b8c6a7b1c5661215c5750",
+          "verified": {
+            "genuineNativeEditedCopies": 6,
+            "versions": [
+              "3.0.0",
+              "3.0.1"
+            ],
+            "operations": [
+              "history",
+              "progress",
+              "batch"
+            ],
+            "exactFields": 12,
+            "nonTargetZipFrames": 60,
+            "unchangedLz4Tokens": 192,
+            "changedLz4Blocks": 12,
+            "accountUnchanged": 6,
+            "originalsUnchanged": 2,
+            "independentRuntimeNegativesZeroOutput": 10,
+            "independentSyntheticCliOutputs": 2,
+            "independentSyntheticCliNegatives": 12,
+            "ciRust": 95,
+            "ciTs": 14,
+            "ciReused": "UPSTREAM_CI_ONLY",
+            "oracle": "independent Python schema walk, MessagePack/LZ4/ZIP exact decoded-byte splice and archive oracle"
+          },
+          "limits": [
+            "EXISTING_HISTORY_NOT_ACQUISITION",
+            "INCOMPLETE_100FWISHES_DECREASE_AND_EXACT_COUNTER_PAIR_ONLY",
+            "GENUINE_CLI_NOT_SESSION_UNDO_REDO_CLOSE_STALE_REPLAY_FILE_AB",
+            "WASM_WORKER_BROWSER_RESOURCE_GAME_PERSISTENCE_AUTH_UNVERIFIED"
+          ],
+          "trueRed": "NONE_REPRODUCED",
+          "evidence": {
+            "file": "HKIA_06A_R4_V301_INDEPENDENT_QA_20261113_EVIDENCE.zip",
+            "sha256": "d165b132fa32133cf4bd4fd4a6b5130cabef6b80d7c142c51ab54b6b553e75ac",
+            "manifestSha256": "28d5cd39e93af649d881451e316844a50b0a6ee0c99bf8622bc57c0ee1273dde",
+            "handoffSha256": "7d02ca534076e2c383d71a24672f457680076bf5262e73e32ae01311dac0f708",
+            "privateLibrary": "HKIA Editor Private",
+            "bytes": 15338,
+            "readback": "BYTE_EXACT_SHA_CRC_8_ENTRIES_7_MANIFEST_HASHES_PASS"
+          },
+          "resultSha256": "283ccc0e60ff099fcb0bcafeaa77dea1586582463b66b948546d790795225930",
+          "handoff": {
+            "to": "07_RUST_CORE",
+            "status": "READY",
+            "task": "R4_WASM_MODULE_WORKER_REAL_CHROME_GENUINE_MINIMUM",
+            "scope": "Fixed native R4 scoped independent acceptance; Rust Worker typed ABI/session integration and real Chrome local both versions/domain exact edits, lifecycle negatives/rollback and budgets; no development switch until ADR gates and 00 record."
           }
         }
       }
