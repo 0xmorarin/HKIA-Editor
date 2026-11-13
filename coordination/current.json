@@ -8586,6 +8586,27 @@
         "characters": 7965
       },
       "scope": "Policy only; task claims, queues, evidence and release settings unchanged"
+    },
+    "svelteR3CI": {
+      "task": "SVELTE_R3_FIXED_ISOLATED_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "sourceHead": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
+      "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
+      "branch": "web05/svelte-category-grid-r3",
+      "scope": "Workflow only; fixed lock, 58 Node tests, compile/check/build, three reference and Chromium scripts; no deployment",
+      "next": "06B high-risk R3 scoped QA after fixed CI"
+    },
+    "v35Acceptance": {
+      "task": "V35_FIXED_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+      "qaResult": {
+        "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
+        "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+      },
+      "scope": "Accept exact 615 private research reference only, no product or distribution change"
     }
   },
   "formalRelease": {
