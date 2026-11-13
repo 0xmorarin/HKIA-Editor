@@ -124,7 +124,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_DERIVED_MISSING_1_RESEARCH_DRAFT_QA_READY; 03_EXACT_VISITOR_CAUSAL_AND_MISSION_WITNESS; 06_SCOPED_QA; 04_WAIT_REWARD_AND_CAUSAL; NO_REDO",
+      "next": "02_V300_NATIVE_PARITY_QA_READY; 03_V300_CAUSAL_AND_06_SCOPED_QA_PARALLEL; 04_AFTER_DEP; DERIVED_CREATION_WAIT_EXISTING_WITNESSES",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -284,12 +284,48 @@
       },
       "v300NativeParity": {
         "task": "FORMAL_V300_MANUAL_NATIVE_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "scope": "Switch 300 exact NSO/dump versus accepted v301 Manual scalar/group/Meta evidence; read-only static parity, no Writer authorization, no existing proof redo; V33 unchanged",
-        "dependency": "V33 scoped PASS, exact20/9 v301 Writer accepted; v300 original source newly located"
+        "scope": "8 ADD incl manifest; 521 V33 paths byte-identical; v300/83 exact20+absence9 research preflight; no product authorization",
+        "dependency": "V33 scoped PASS, exact20/9 v301 Writer accepted; v300 original source newly located",
+        "deltaSha256": "510198c3c7a86afb58716215578c42679db0f7c3f5d8a14aad4e8e4380d0131d",
+        "manifestSha256": "cdde7e64f7dbb586db872756abacf82e24d9bacf6a39b6b450e2370293799521",
+        "artifact": "HKIA_02_V300_Manual_Native_Parity_V33_Delta_20261113.zip",
+        "libraryFileId": "libfile_45469904636c8191aa09c98b68f65236",
+        "verified": {
+          "v300NativeSha256": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a",
+          "v301NativeSha256": "64bd5fb69239f57eb0578a1897a45a3c6f5e187480903f83df503b46bf827bfb",
+          "pinnedNativeInputs": 6,
+          "anchorOccurrences": 154,
+          "uniqueRvas": 138,
+          "wordIdentical": 146,
+          "directTargetIdentity": 8,
+          "explicitEdges": 6,
+          "metadataBindings": 9,
+          "metadataReferences": 18,
+          "typeAssertions": 20,
+          "focused": 16,
+          "v300CollectionVersion": 83,
+          "v301CollectionVersion": 87,
+          "exact20Drafts": 20,
+          "absence9Drafts": 9,
+          "productVersionDenied": 29,
+          "sourceOriginalUnchanged": true,
+          "newOutput": 0,
+          "check": "PASS",
+          "libraryReadback": "BYTE_EXACT_CRC_7_MANIFEST_HASHES"
+        },
+        "classification": "SCOPED_NATIVE_ANCHOR_AND_TYPED_METADATA_PARITY_CANDIDATE_ONLY; v300 new REQUIRED=0; no permission expansion",
+        "unverified": [
+          "full CFG/helper/dispatch/registration parity",
+          "03 v300 causal acceptance and runtime definition constraints",
+          "06 independent scoped QA",
+          "04 v300 actual exact29 output and acceptance",
+          "game authentication/load/resave/reward replay; first-progress creation and derived missing remain WAIT"
+        ],
+        "next": "03 scoped v300 exact20+9 causal transfer adjudication and 06 independent 8 ADD QA parallel; 04 after both accepted exact v300/83 gated Writer proof; V24/V33/live OFF unchanged"
       }
     },
     "03_LINKAGE": {
