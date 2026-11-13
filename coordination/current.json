@@ -2576,7 +2576,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06B_V30_PRODUCT_TABS_FIXED_CI_ACCEPTANCE_READY; 00_V33_TABS_REBIND_CI_READY; FILTERS_FIXED_CI_IN_FLIGHT; 05_NEXT_DISJOINT_PRODUCT_LIST_BINDING",
+      "next": "00_V33_PRODUCT_CATEGORIES_FIXED_CI_READY; 06B_CATEGORY_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; 00_V33_TAB_REBIND_IN_FLIGHT_NO_REPEAT; 05_NEXT_R4_ACTUAL_ACHIEVEMENT_LIST_DISJOINT; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4174,7 +4174,7 @@
       "productBinding": {
         "task": "SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
         "owner": "05 WEB",
-        "status": "SELF_PASS_FIXED_ACCEPTED_R7_COMBINED_READY_CTRL_CI",
+        "status": "DONE_06B_SCOPED_PASS_FIXED_COMPILED_V30",
         "baseHead": "9e788363a8275180e5d0c2c7df1f49122eb9f7ef",
         "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
@@ -4252,12 +4252,31 @@
           "status": "SUCCESS",
           "head": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
           "scope": "V30 fixed CI; 06B independent final pending"
+        },
+        "acceptance": {
+          "sourceHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
+          "compiledHead": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
+          "run": 43426396053,
+          "artifact": {
+            "id": 14037746671,
+            "sha256": "22ad990d379c0f23b396c50a24f68dc608da74bf959ff403e64eac6fb669537d",
+            "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+            "appSha256": "089758e40a67df2def07b2da8818d6a5637c9798c4c339639d6e713095740c8d",
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "evidence": {
+            "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+            "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+          },
+          "scope": "V30 tab only; V33 separate"
         }
       },
       "productFilterBinding": {
         "task": "SVELTE_PRODUCT_FILTER_BINDING_BASELINE",
         "owner": "05 WEB",
-        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
+        "status": "DONE_06B_SCOPED_PASS_FIXED_COMPILED_V30_V33",
         "baseHead": "eb0ceac9968a25543a91157f38dc38566b9b7cc2",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -4365,6 +4384,28 @@
             "readback": "BOTH_BYTE_EXACT_CRC_PASS_5_ENTRIES_3_SOURCE_SHA"
           },
           "unverified": "Actual compiled V33 Browser CI active; no repeat producer VM."
+        },
+        "acceptance": {
+          "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+          "compiledHead": "21624edfab9a4a1f5ae92689843fe4f31b54c4d3",
+          "run": 43426763281,
+          "artifact": {
+            "id": 14037742173,
+            "sha256": "6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb",
+            "moduleSha256": "586297ee82e193ccec800c10558acd723feeb8652268f7656551d550fa8079af",
+            "appSha256": {
+              "V30": "12f1ee46365d54605c196b9480dfa82c8e6bd65f1b4c9835c0ac22e968d0dde7",
+              "V33": "2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"
+            },
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "evidence": {
+            "file": "HKIA_06B_PRODUCT_FILTERS_FIXED_QA_20261113.zip",
+            "sha256": "2ca401b0a98d6c9772ce0e4a4dd9f1d52711aa88334ac664d868d29240f5138b",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BYTE_EXACT_SHA_CRC_PASS_5_ENTRIES"
+          },
+          "scope": "V30/V33 filters only; combined app separate"
         }
       },
       "productTabsV33": {
@@ -4440,14 +4481,77 @@
       "productCategoryBinding": {
         "task": "SVELTE_PRODUCT_CATEGORY_GRID_BINDING_BASELINE",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "baseHead": "6b6ef369c8db37d0c74221304e256abad9609e54",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
-        "scope": "New svelte-ui paths only, actual V33 collection category grid projection from exact existing controller/card DOM and stable category keys, bounded 25 actual categories; reuse accepted R3 model and CategoryImage. No R4 list, detail, filter/tab candidate source edits, no deployment/Writer. Preserve legacy fallback.",
+        "scope": "10 ADD only svelte-ui paths. Actual V33 bounded category-grid projection, accepted R3 CategoryImage/model unchanged, exact legacy card DOM + keys, legacy click owns selection/detail. Stale/reentry/invalid snapshots denied, fallback original nodes. No game data/Save/Session/Writer edits or deploy.",
         "dependency": "R3 independently accepted, exact V33 reconstructed; tab/filter separate CI and shared app composition owned 00",
-        "next": "Build actual controller read-only card projection/selection binding and lifecycle tests; fixed source and direct QA handoff."
+        "next": "00 fixed isolated category CI; 06B independent preflight parallel, final after CI; accepted tabs/filters no repeat; 05 next R4 actual Achievement list; 00 compose chosen accepted V33 scopes then 06C.",
+        "sourceHead": "fd893041d47051016fbc4797d9e8d67dc7865389",
+        "branch": "web05/product-categories-v33-baseline",
+        "tree": "7524dddc7ee3e11342fb1ca4cefc9c6be0c98c42",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "manifestSha256": "9959a6e498f6194169fd35c2e6336e19cb85829bea8238fce403804d9a7c15bc",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductCategoryBinding_20261113_Evidence.zip",
+          "sha256": "97cf73785526756ee9738e58eb14b6284abdef0dd40a6f70ebe07e496968bd43",
+          "transport": "HKIA_WEB05_ProductCategoryBinding_20261113_Transport.json",
+          "transportSha256": "6806d73419bf229004ce12ec3ab0a6becf9149308b40caa6144c4375312f92bf",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_CRC_PASS_12_ENTRIES_10_SOURCE_SHA"
+        },
+        "verified": {
+          "unit": 12,
+          "fail": 0,
+          "strictTS": "PASS",
+          "baseFiles": 4146,
+          "webp": 4076,
+          "actualCategories": 25,
+          "actualDefinitions": 181,
+          "actualV33ControllerVMComparisons": 22,
+          "rowComparisons": 429,
+          "actualImageResolver": "EXACT_V33",
+          "disposals": 21,
+          "selectionAndFocus": true,
+          "hiddenSelection": true,
+          "unknownAndParentCounts": true,
+          "legacyImageFallback": true,
+          "deltaNegatives": 7,
+          "patchReversible": true,
+          "patchedESMSyntax": "PASS",
+          "browserScriptSyntax": "PASS",
+          "newExactRemoteBlobs": 10,
+          "acceptedModelBlob": "b0ba10705fc2cbf77cc6120f6e8f3271ea6a3d62",
+          "acceptedImageBlob": "7178a25e20bb27fc63be507c3543e13e9c542116"
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "after": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce",
+          "bytes": 108887,
+          "delta": "Four exact reversible anchors, 1 MOD + 1 ADD compiled src/product-categories.mjs; 4145 unchanged; bundle not built"
+        },
+        "unverified": [
+          "Actual Svelte compile/check/build and full expected135 unit; local npm/Chromium policy unchanged",
+          "Actual V33 compiled Svelte mount, real Chromium 320/375/1280, all25 images, mapped image abort, repeated render/disposal performance",
+          "Matched history synthetic; actual renderCollectionDetail stub in VM, genuine Save and actual detail parity separate",
+          "06B HIGH scope, shared app and release/license/privacy/rollback 00/06C",
+          "Grid host intentionally swapped per bounded render; combined tab/filter grid-node/count assumptions need regression; arbitrary injected callback side effects not rolled back"
+        ],
+        "decision": "Actual controller card DOM + stable keys, not duplicate joins/counts. Detached Svelte render then verified grid swap; restore old host before rerender; click delegates exactly once to legacy button, require new revision and selected key. Failure retains current legacy grid; no second state/Session. 00 exact shared app composition; no overwrite of accepted tab/filter hooks.",
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "fd893041d47051016fbc4797d9e8d67dc7865389",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "10 ADD; isolated nondeploy workflow; V33 tab rebind separate, accepted filters independent; no merge or deploy",
+          "acceptance": "Pinned npm ci, npm test expected135, svelte check --fail-on-warnings, ordinary Vite build + vite build --config vite.product-categories.config.ts. Checkout exact V33 site+manifest; node --experimental-strip-types scripts/verify-product-category-reference.mjs <site> <manifest>; node scripts/verify-product-category-delta.mjs same; prepare-product-categories-delta.mjs <site> <manifest> dist-product-categories/product-categories.mjs <fresh-delta>. Overlay only src/app.js+product-categories.mjs, full 4145 unchanged/4076 WebP. Actual browser-product-categories-parity.py <base> <candidate> 320/375/1280, 25 actual images, exact keys/order/title/count/detail/selection/focus, empty/back, unique grid, bundle abort and mapped image LOAD_FAILED, no page/external/overflow, Writer OFF. Module SHA/license/delta/logs; 06B changed scope after green; combined app separate 00/06C.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "10 exact paths, compiled actual V33, independent lifecycle/DOM-key identity/stale/reentry/repeated selection/image/fallback/real projection. No accepted R1-R7/tab/filter repeat"
+        }
       }
     },
     "06_QA": {
