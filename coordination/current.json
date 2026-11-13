@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_LOCALE_REPAIR_FIXED_CI_PARALLEL_06B_R5_INDEPENDENT_QA; 05_NEXT_DISJOINT_UI_OR_ACCEPTED_DEP; NO_REPEAT",
+      "next": "00_LOCALE_REPAIR_AND_R6_ISOLATED_CI_PARALLEL_06B_EXISTING_R5_QA; 06B_AFTER_NEW_FIXED_COMPILED; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R4_ACCEPTED_R5_COMPILED_06B_READY",
+        "status": "R4_ACCEPTED_R5_COMPILED_06B_IN_FLIGHT_R6_FIXED_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3357,13 +3357,39 @@
         },
         "r6": {
           "task": "SVELTE_R6_ACHIEVEMENT_READONLY_INSPECTOR",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
           "baseHead": "7b0d6dc983b3ae272ea68e9b433a28f210c0cdb0",
           "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
           "scope": "svelte-ui only; selected Achievement read-only detail header, exact source/status/time/progress, missing record warning and typed display-only linkage summary; selected GUID from existing fixture; no writer, preview or new game semantics; no R5 or locale fixed head change",
-          "next": "05 local reference QA, fixed branch; 00 isolated CI and 06B after; R5 QA and locale repair CI parallel"
+          "next": "00 fixed isolated R6 CI: npm ci/test 96/check --fail-on-warnings/build, verify-achievement-detail-reference + prior reference regressions; browser-achievement-detail-parity + R1-R5 actual browser at 320/375/1280, no deployment. 06B scoped independent after fixed compile. Parallel locale repair CI and existing R5 QA.",
+          "sourceSha256": "ec02e2716ba3202c984b0dcd3eb5a5274fbc41aa4a53c99c760c36c50aeaf1b1",
+          "deltaSha256": "833e7ef2e622fb4efe354a321326ed1383b63fb1d482a5cb401db305d53655be",
+          "manifestSha256": "e4edca4365d93c0af5ae08d8a6bac46dcc6d8dabaa8a197641d470bd928e1ed3",
+          "transportSha256": "a7691bf33072442545ba84932cb69871227cb17f726384ed9adbafc3f26b7b9a",
+          "evidenceSha256": "97b874139d9a571a8b65955ee8858c5f43a07ebfe399e8e59de23425e011a17b",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteAchievementDetail_R6_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteAchievementDetail_R6_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteAchievementDetail_R6_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteAchievementDetail_R6_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteAchievementDetail_R6_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-achievement-detail-r6",
+            "head": "3b6322c51b0d2ab9670401d213ec5f731f1581e3",
+            "parent": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+            "tree": "1f00d99521a753602404a1af2c10c36f1219aeb3",
+            "changed": "2 MOD 5 ADD 0 DEL; 231 untouched; 7 exact changed blobs; 50 source blobs exact"
+          },
+          "verified": "96 Node incl 10 new, strict TS model/fixture; actual V33 renderEditor read-only prefix + appendDependencies + ui-state actual helpers: 20 header field comparisons, 5 dependency comparisons, empty state and missing warning; R1-R5 reference regressions; browser script syntax; CRC/source replay, all 5 Library readbacks byte exact",
+          "unverified": [
+            "Svelte check/build and actual R6 Chromium 320/375/1280",
+            "full detailed counter/group/reward/media UI and edit preview/Writer",
+            "production controller/catalog/session binding and integrated locale/Rust"
+          ],
+          "decisions": "Read-only first, exact selected GUID and state projection, no arithmetic on progress/time, zero confirmed REQUIRED, conditional candidates display-only; synthetic fixture, not full V33 editor replacement; R5 and locale repair snapshots unchanged."
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
