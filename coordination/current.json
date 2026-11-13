@@ -271,7 +271,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_RECOVERY_DONE; 06A_SWITCH301_EXACT29_DEFINITION_INDEPENDENT_REPRODUCTION_READY; V300_REUSE; 02_WAIT_QA_OR_NEW_WITNESS",
+      "next": "02_DERIVED23_SWITCH_SOURCE_SELF_PASS_06A_READY; EXACT29_ACCEPTED_REUSE; 02_WAIT_NEW_WITNESS_OR_QA_COUNTEREXAMPLE",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -602,13 +602,56 @@
       },
       "derivedSwitchDefinitionReview": {
         "task": "SWITCH300_301_MISSING_DERIVED23_DEFINITION_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "456b22da76af204163027f56ad8c690c0c894d2c",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "risk": "HIGH",
         "scope": "Exact 22 missing Visitor and 1 Mission definitions: Switch 300/301 typed producer PPtr and registration intent, relevant parent membership and reward facts; no repeat Exact29 or Native causal analysis; no writer",
-        "dependency": "V36 accepted; 02/03 derived source + Native evidence and accepted Switch exact29 reader/config reuse; actual source assets now available"
+        "dependency": "V36 accepted; 02/03 derived source + Native evidence and accepted Switch exact29 reader/config reuse; actual source assets now available",
+        "deltaSha256": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+        "manifestSha256": "ffd6f9ba54404b0e5e617565933f9666ad5945dd99e6f5cc416813695b41549b",
+        "witnessSha256": "012cee892ed29009457333941702ca2eb6b0068302b595615714f7e2631c4068",
+        "artifact": "HKIA_02_SWITCH_DERIVED23_V36_DELTA_20261113.zip",
+        "privateLibrary": "HKIA Editor Private",
+        "changes": "6 ADD 0 MOD 0 DEL; V36 625 paths byte-identical",
+        "verified": {
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "producerBindingsPerVersion": 23,
+          "visitorPerVersion": 22,
+          "missionPerVersion": 1,
+          "definitionRowsPerVersion": 35,
+          "masterReferencesPerVersion": 24107,
+          "masterCounterAndProducerMembershipPerVersion": 23,
+          "groupMembers": [
+            76,
+            11
+          ],
+          "affectedManualRewardPositive": 10,
+          "parentRewardsZero": 2,
+          "focusedPass": 17,
+          "sourceReproduction": "BYTE_EXACT",
+          "libraryReadback": "BYTE_EXACT_CRC_6_SHA_5",
+          "sourcePathsUnchanged": 625
+        },
+        "classification": "STATIC_SWITCH_SOURCE_IDENTITY_AND_SERIALIZED_REGISTRATION_INTENT_ONLY; NO_NEW_REQUIRED_OR_WRITER_PERMISSION",
+        "unverified": [
+          "runtime registration and scheduler",
+          "Mission runtime lookup/status restoration",
+          "reward claim/replay and physical game load/resave/authentication",
+          "Manual first-progress structural producer",
+          "06A independent source acceptance"
+        ],
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "SWITCH300_301_MISSING_DERIVED23_INDEPENDENT_QA",
+          "scope": "6 ADD only, exact V36 base, 23 producer PPtr/class/GUID and Master references each version; 35 rows, groups 76/11, positive 10 leaf rewards and zero 2 parent rewards; independent source oracle and negative cases. Reuse prior Exact29/Native/true save evidence, no unrelated re-QA. Disjoint from R5.1.",
+          "condition": "READY_FIXED_PRIVATE_DELTA_READBACK"
+        },
+        "next": "06A independent research QA -> 03/04/07 direct source-only reference. 02 WAIT concrete runtime/first-progress/reward witness or QA counterexample. No deploy."
       }
     },
     "03_LINKAGE": {
