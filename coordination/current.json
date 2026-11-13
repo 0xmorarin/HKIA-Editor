@@ -118,7 +118,7 @@
       },
       "switch300Definition": {
         "task": "FORMAL_RECIPE6_SWITCH300_EXACT_DEFINITION",
-        "status": "WAIT_DEP_EXACT_ORIGINAL_BUNDLE",
+        "status": "SCOPED_PASS_06_NORMALIZED_SIX",
         "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Resolve MasterDefinition catalog dependencies and exact six Switch300 Recipe/Food definitions; no 03 provider or existing native repeats; additive research only",
@@ -146,6 +146,14 @@
         "next": "06 new 4 paths scoped QA after current claim; 03/04 consume v301 only after acceptance; 01 WAIT exact v300 original or QA counterexample",
         "productAuthorized": false,
         "gameAccepted": false
+      },
+      "exactProducer": {
+        "task": "RECIPE6_SWITCH300_EXACT_PRODUCER_WITNESS",
+        "status": "IN_FLIGHT",
+        "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Exact six trigger conditions and target producer from cooking paths; reuse accepted normalized definitions and allocator; no product changes",
+        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
       }
     },
     "02_ACHIEVEMENT": {
