@@ -7944,7 +7944,7 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_WEB_R4_SWITCH300_ACCOUNT_NATIVE_PASS_LOCALE_CONSUMER_TRUE_RED",
+      "status": "IN_FLIGHT_WEB_R5",
       "task": "WEB_R4_LOCALE_CONSUMER_SWITCH300_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
       "next": "05 direct consume isolated Web R4 + Switch300 identity + account native boundary; 05 repair Locale Consumer R1 TRUE_RED; 08 continue new fixed HIGH native locale or catalog gaps only; 00 fixed repair CI after 05; 06B focused re-QA after repair/new fixed HIGH scope",
@@ -8508,6 +8508,13 @@
           "location": "Private Library /HKIA Editor Private/",
           "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
         }
+      },
+      "webR5Claim": {
+        "claim": "20261113_06B_WEB_R5",
+        "status": "IN_FLIGHT",
+        "source": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+        "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
+        "scope": "R5 changed model and behavior, exact fixed evidence"
       }
     },
     "06C_QA_RELEASE": {
