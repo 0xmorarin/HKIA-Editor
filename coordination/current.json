@@ -521,6 +521,15 @@
         },
         "remaining": "06 independent scoped QA; normal build only, not full media distribution; actual product sparse producer not observed; no genuine or browser rerun; historical evidence pins intentionally unchanged; arbitrary hostile Proxy sandbox not claimed",
         "next": "06 reproduce old/new and exact 04 caller regressions; 00 serial integrate after scoped acceptance, rebuild existing allowlisted module, exact artifact/rollback; no V24 change or Writer activation. Historical/derived QA independent."
+      },
+      "v300DerivedParity": {
+        "task": "FORMAL_V300_VISITOR_MISSION_NATIVE_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseHead": "69e1e3ffb0f719bf48ae815cf84529ce592dd837",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "New Switch v300 Native Visitor Init/GetCurrentValue/event and Mission registration/load/status conditional parity vs fixed 03 v301 derived advisory; exclude 01 inventory/02 manual scalar/group/meta; no game acceptance or product authorization; additive private evidence",
+        "dependency": "03 derived v301 fixed delta c3c96df439363167780c72e537b882d40f654f1a7f62c6e53ec07b5dd24a962f; v300 NSO/dump newly available; 06 scoped QA independently pending"
       }
     },
     "04_SAVE_CORE": {
