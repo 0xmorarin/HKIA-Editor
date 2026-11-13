@@ -3878,6 +3878,19 @@
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "Exact new 10 paths and compiled product module/actual V30 bridge; independent lifecycle/negative/DOM ownership/parity, no R1-R7 repeat; then 00/06C."
         }
+      },
+      "productFilterBinding": {
+        "task": "SVELTE_PRODUCT_FILTER_BINDING_BASELINE",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "baseHead": "eb0ceac9968a25543a91157f38dc38566b9b7cc2",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "v33Artifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "scope": "Disjoint R2 actual product filter bridge and tests, new svelte-ui paths only; existing tab source/CI unchanged; no app/controller mutation in Git; V30 and V33 exact reference; no Writer or deploy.",
+        "dependency": "Accepted R2 model; tab bridge independent WAIT_CTRL_CI; V33 OFF fixed candidate not live",
+        "next": "Implement read/write actual control binding, focused positive/negative/legacy reference QA, fixed branch and handoff."
       }
     },
     "06_QA": {
