@@ -1808,7 +1808,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_R2_ISOLATED_CI; 05_AFTER_RESULT_OR_06B_LOCALE_ACCEPTED_CONTRACT; R1_ACCEPTED_REUSE",
+      "next": "R2 fixed CI SUCCESS; 06B independent changed scope READY; 05 next disjoint UI scope or localization after accepted registry",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2711,7 +2711,38 @@
             "R2 actual Svelte compiler/check/build and built Chromium 320/375/1280",
             "actual live JS controller/collection content binding, full product parity",
             "06B independent R2 compiled/browser scope; R1 accepted exact scope"
-          ]
+          ],
+          "compiledCI": {
+            "status": "PASS_FIXED_COMPILE_CHECK_BUILD_CHROMIUM",
+            "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
+            "run": 43378037110,
+            "verified": {
+              "tests": 43,
+              "fail": 0,
+              "checkErrors": 0,
+              "checkWarnings": 0,
+              "build": "PASS",
+              "lock": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+              "controls": 7,
+              "legacyTransitions": 25,
+              "achievementRenders": 16,
+              "collectionRenders": 9,
+              "actualChromiumWidths": [
+                320,
+                375,
+                1280
+              ],
+              "filterEventsPerWidth": {
+                "achievement": 4,
+                "collection": 3
+              },
+              "retainedAcrossTabs": true,
+              "hiddenImage": true,
+              "externalRequests": 0,
+              "pageErrors": 0,
+              "scope": "Fixed isolated R2; actual legacy event registration with synthetic sinks; full production binding not verified"
+            }
+          }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
@@ -4654,7 +4685,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 R4 PR8 fixed CI; 06A existing static claim continues independently. 07 compile repair if needed and six private genuine candidates using fixed oracle; 06A scoped execution acceptance then WASM/Worker. No R2/R3 repeat, JS Beta independent.",
+      "next": "R4 fixed CI SUCCESS and private code-only executable ready; 07 genuine local only 6 candidates; 06A existing static then independent execution; no production enablement",
       "task": "HKIA-RUST-008",
       "baseHead": "7da4c3956b2eab799db9f06215430dac3400225e",
       "scope": "R4 private native minimum transactional Writer, existing history+exact incomplete progress pair/batch, bounded reparse/export, one-step history",
@@ -4700,7 +4731,7 @@
       "implementation": "R4_PRIVATE_NATIVE_WRITER_SOURCE_IMPLEMENTED_UNCOMPILED",
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
       "handoffTo": "06A_EXISTING_R4_STATIC; 00_CI_DEPENDENCY_ONLY; 07_GENUINE_AFTER_CI; 06A_SCOPED_EXECUTION",
-      "dependency": "00_R4_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_GENUINE_WRITER; 06A_STATIC_IN_FLIGHT; JS_BETA_INDEPENDENT",
+      "dependency": "R4_CI_DONE; 07_PRIVATE_GENUINE_AND_06A_STATIC_PARALLEL",
       "resumeBaseHead": "7da4c3956b2eab799db9f06215430dac3400225e",
       "resumeScope": "R3 accepted; minimal Rust transactional writer existing Key1 ticks and exact 100Fwishes incomplete progress pair, batch, typed CAS/revision/plan/reparse/ZIP raw preservation/undo redo reset; native only before WASM; no JS product changes",
       "executionKit": {
@@ -5339,11 +5370,25 @@
         },
         "ci": {
           "owner": "00 CTRL",
-          "status": "WAIT_WORKFLOW",
+          "status": "COMPILED_SYNTHETIC_PASS_CODE_ONLY_READY",
           "runner": "RUSTUP_TOOLCHAIN=1.85.1 python3 tests/rust/run-writer-ci.py --abi-ts --code-only-artifact <fresh-dir>",
           "expectedTests": 95,
-          "artifact": "hkia-writer-private + build-report.json; code only",
-          "toolchain": "Rust1.85.1 Node22.16 Python3 tsc5.8.3"
+          "artifact": {
+            "id": 14015705223,
+            "file": "HKIA_Rust_R4_CodeOnly_43378029329.zip",
+            "sha256": "73b7cda1a5b53bd516795ff918c047d2388e15f2718eea39415b043ee80941d2",
+            "bytes": 344143,
+            "binarySha256": "eb371bb329a8db8b2c77a3e111596c5c6cd461fcbb3c868cfd888c077c698b77",
+            "binaryBytes": 784440,
+            "reportSha256": "7a652b034ebe56e9b46614739cb43f573f303ccdb04ce0f2f0179f7611c4f10b",
+            "readback": "ZIP_BYTE_EXACT_CRC_2_ENTRIES",
+            "localCompatibility": "ELF_X86_64_LDD_RESOLVED_NO_ARGS_RC1",
+            "privateLibrary": "HKIA Editor Private",
+            "realParity": "NOT_RUN"
+          },
+          "toolchain": "Rust1.85.1 Node22.16 Python3 tsc5.8.3",
+          "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+          "run": 43378029329
         },
         "reference": {
           "v33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -6706,18 +6751,17 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "00_R4_PR8_ISOLATED_CI",
-      "00_SVELTE_R2_ISOLATED_CI",
       "00_V34_ACCEPTANCE_615_RESEARCH_SERIAL_INTEGRATION",
+      "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
       "06A_R4_STATIC_EXISTING_IN_FLIGHT",
       "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
+      "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+      "05_NEXT_DISJOINT_SVELTE_SCOPE",
       "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
       "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
     ],
     "nextAfterDep": [
-      "07_R4_COMPILE_REPAIR_OR_PRIVATE_GENUINE_PARITY_AFTER_FIXED_CI",
       "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-      "06B_SVELTE_R2_AFTER_COMPILED_FIXED_CI",
       "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
       "06C_615_FIXED_SUCCESSOR_SCOPE_AFTER_00",
       "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
@@ -7432,18 +7476,17 @@
       "developmentSwitch": "PENDING",
       "productionCutover": "PENDING",
       "nextReadyParallel": [
-        "00_R4_PR8_ISOLATED_CI",
-        "00_SVELTE_R2_ISOLATED_CI",
         "00_V34_ACCEPTANCE_615_RESEARCH_SERIAL_INTEGRATION",
+        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
         "06A_R4_STATIC_EXISTING_IN_FLIGHT",
         "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "05_NEXT_DISJOINT_SVELTE_SCOPE",
         "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
         "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
       ],
       "nextAfterDep": [
-        "07_R4_COMPILE_REPAIR_OR_PRIVATE_GENUINE_PARITY_AFTER_FIXED_CI",
         "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "06B_SVELTE_R2_AFTER_COMPILED_FIXED_CI",
         "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
         "06C_615_FIXED_SUCCESSOR_SCOPE_AFTER_00",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
@@ -7801,18 +7844,17 @@
         "five research deltas"
       ],
       "ready": [
-        "00_R4_PR8_ISOLATED_CI",
-        "00_SVELTE_R2_ISOLATED_CI",
         "00_V34_ACCEPTANCE_615_RESEARCH_SERIAL_INTEGRATION",
+        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
         "06A_R4_STATIC_EXISTING_IN_FLIGHT",
         "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "05_NEXT_DISJOINT_SVELTE_SCOPE",
         "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
         "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
       ],
       "wait": [
-        "07_R4_COMPILE_REPAIR_OR_PRIVATE_GENUINE_PARITY_AFTER_FIXED_CI",
         "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "06B_SVELTE_R2_AFTER_COMPILED_FIXED_CI",
         "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
         "06C_615_FIXED_SUCCESSOR_SCOPE_AFTER_00",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
@@ -7910,18 +7952,17 @@
         }
       },
       "ready": [
-        "00_R4_PR8_ISOLATED_CI",
-        "00_SVELTE_R2_ISOLATED_CI",
         "00_V34_ACCEPTANCE_615_RESEARCH_SERIAL_INTEGRATION",
+        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
         "06A_R4_STATIC_EXISTING_IN_FLIGHT",
         "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "05_NEXT_DISJOINT_SVELTE_SCOPE",
         "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
         "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
       ],
       "after": [
-        "07_R4_COMPILE_REPAIR_OR_PRIVATE_GENUINE_PARITY_AFTER_FIXED_CI",
         "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "06B_SVELTE_R2_AFTER_COMPILED_FIXED_CI",
         "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
         "06C_615_FIXED_SUCCESSOR_SCOPE_AFTER_00",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
@@ -7945,7 +7986,7 @@
     },
     "r4CI": {
       "task": "R4_FIXED_PUBLIC_CI_CODE_ONLY",
-      "status": "CI_IN_FLIGHT",
+      "status": "DONE_FIXED_R4_PUBLIC_CI_CODE_ONLY_EXECUTABLE_READY",
       "owner": "00 CTRL",
       "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
       "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
@@ -7954,11 +7995,45 @@
       "next": "06A existing independent static claim continues; 07 genuine local after binary",
       "head": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
       "run": 43378029329,
-      "verified": "Only one workflow ADD; fixed R4 source unchanged"
+      "verified": {
+        "rustTests": 95,
+        "newTests": 14,
+        "r3Regression": 81,
+        "abiTests": 14,
+        "fail": 0,
+        "releaseBuild": "PASS",
+        "rustc": "1.85.1",
+        "node": "22.16.0",
+        "typescript": "5.8.3",
+        "crateFiles": 74,
+        "generatedFiles": 54,
+        "artifact": {
+          "id": 14015705223,
+          "file": "HKIA_Rust_R4_CodeOnly_43378029329.zip",
+          "sha256": "73b7cda1a5b53bd516795ff918c047d2388e15f2718eea39415b043ee80941d2",
+          "bytes": 344143,
+          "binarySha256": "eb371bb329a8db8b2c77a3e111596c5c6cd461fcbb3c868cfd888c077c698b77",
+          "binaryBytes": 784440,
+          "reportSha256": "7a652b034ebe56e9b46614739cb43f573f303ccdb04ce0f2f0179f7611c4f10b",
+          "readback": "ZIP_BYTE_EXACT_CRC_2_ENTRIES",
+          "localCompatibility": "ELF_X86_64_LDD_RESOLVED_NO_ARGS_RC1",
+          "privateLibrary": "HKIA Editor Private",
+          "realParity": "NOT_RUN"
+        }
+      },
+      "job": 131729013270,
+      "ci": "SUCCESS",
+      "handoff": {
+        "to": [
+          "07 RUST CORE",
+          "06A QA-DATA-CORE"
+        ],
+        "condition": "07 actual six private genuine candidates with fixed oracle and local-only binary; 06A existing static claim, independent scoped execution after 07 fixed evidence; no new Writer capability"
+      }
     },
     "svelteR2CI": {
       "task": "SVELTE_R2_FIXED_ISOLATED_CI",
-      "status": "CI_IN_FLIGHT",
+      "status": "DONE_FIXED_R2_COMPILE_CHECK_BUILD_CHROMIUM_PASS",
       "owner": "00 CTRL",
       "sourceHead": "4888d776bc3e73af763a0941980b8d5fa700dc28",
       "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
@@ -7967,7 +8042,41 @@
       "next": "06B independent changed scope after fixed CI; 05 focused repairs",
       "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
       "run": 43378037110,
-      "verified": "Only one workflow ADD; PR6 R1 snapshot unchanged"
+      "verified": {
+        "tests": 43,
+        "fail": 0,
+        "checkErrors": 0,
+        "checkWarnings": 0,
+        "build": "PASS",
+        "lock": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+        "controls": 7,
+        "legacyTransitions": 25,
+        "achievementRenders": 16,
+        "collectionRenders": 9,
+        "actualChromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "filterEventsPerWidth": {
+          "achievement": 4,
+          "collection": 3
+        },
+        "retainedAcrossTabs": true,
+        "hiddenImage": true,
+        "externalRequests": 0,
+        "pageErrors": 0,
+        "scope": "Fixed isolated R2; actual legacy event registration with synthetic sinks; full production binding not verified"
+      },
+      "job": 131729036418,
+      "ci": "SUCCESS",
+      "handoff": {
+        "to": [
+          "05 WEB",
+          "06B QA-WEB-LOCALE"
+        ],
+        "condition": "06B R2 fixed compiled/browser independent changed scope may claim separately from existing Localization R1; 05 next disjoint component scope; no R1 repeat; no main merge/deploy"
+      }
     }
   },
   "formalRelease": {
