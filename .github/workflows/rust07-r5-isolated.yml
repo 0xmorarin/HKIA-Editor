@@ -1,0 +1,64 @@
+name: HKIA Rust R5 isolated WASM Module Worker
+on:
+  pull_request:
+    branches:
+      - rust07/r4-minimum-writer
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+concurrency:
+  group: hkia-rust-r5-isolated
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'rust07/r5-wasm-worker'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify exact R5 scope
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 9797367c6a227fccf8ce5620c1f8ad4710ab4031 HEAD
+          test "$(git diff --name-only 9797367c6a227fccf8ce5620c1f8ad4710ab4031 HEAD)" = .github/workflows/rust07-r5-isolated.yml
+      - name: Prepare fixed toolchains and real Chromium
+        run: |
+          set -euo pipefail
+          rustup toolchain install 1.85.1 --profile minimal --target wasm32-unknown-unknown
+          npm install -g typescript@5.8.3
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+      - name: Compile WASM and verify synthetic browser edits
+        env:
+          RUSTUP_TOOLCHAIN: 1.85.1
+        run: |
+          set -euo pipefail
+          CHROME="$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          test -x "$CHROME"
+          python3 tests/rust/run-wasm-ci.py --chrome "$CHROME" --code-only-artifact "$RUNNER_TEMP/hkia-r5-code"
+      - name: Verify code-only artifact closure
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, os, json, hashlib
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])/'hkia-r5-code'
+          report=json.loads((root/'build-report.json').read_text())
+          assert report['status']=='COMPILE_SYNTHETIC_REAL_CHROME_PASS'
+          files={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file() and p.name!='build-report.json'}
+          assert files==report['artifactFiles']
+          assert all(p.startswith(('rust-worker/','tests/rust/wasm-browser/')) and pathlib.Path(p).suffix in ('.js','.html','.wasm') for p in files)
+          assert report['realSave']=='NOT_RUN'
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_Rust_R5_CodeOnly_${{ github.run_id }}
+          path: ${{ runner.temp }}/hkia-r5-code
+          if-no-files-found: error
+          retention-days: 7
