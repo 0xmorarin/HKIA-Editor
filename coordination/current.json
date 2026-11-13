@@ -8582,7 +8582,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B READY new one-key R8 catalog scoped QA; 05 READY accepted 189 keys + list/header locale advisory (24 keys), new status key after 06B; 08 next fixed collection item display source audit without rollback overlap. No release/Writer/Pages change.",
+      "next": "05 READY accepted 189 keys + product tab/filter/category/list/header/collection-item locale advisories; 06B READY one-key R8 independent QA then 05 direct; 08 WAIT next fixed product locale consumer/new key scope or QA counterexample. Existing collection repair QA and 00 composition independent. No Writer/deploy/Pages changes.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -8744,6 +8744,12 @@
             "status": "READY_DIRECT_LOW_ADVISORY",
             "scope": "Exact 9 fixed list/header and inherited R4/R6 source blobs; 24 accepted UI keys ×15 locales (360 cells), title/status/ARIA/subtitle/image/empty/more/header field and value mapping; existing accepted 189 keys reused. New status field key separately HIGH/06B.",
             "condition": "Keep controller and candidate DOM signature in same locale generation; use stable GUID/field identifiers, not translated label keys; raw decimal/timestamps and unknown/null/missing/zero distinct, image machine status invariant; exact versioned game names and Account absent refs, no guessed joins. Actual locale behavior HIGH, separate 06B scope; no Writer/Pages authority."
+          },
+          "productCollectionItemsLocale": {
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "scope": "Exact fixed collection item display and producer paths (8 blobs), 14 accepted editor keys ×15 locales. No changes to rollback bridge; no R8 dependency or product acceptance.",
+            "condition": "Keep versioned stable item ID/GUID/key, machine membership/status, separate history-recorded flag, exact raw int64 ticks and unknown UTC/Kind; same locale generation for producer and candidate projection. Actual product locale behavior HIGH ->06B; independent collection item repair/compiled Browser acceptance remains separate."
           }
         },
         "to00": {
@@ -9591,12 +9597,37 @@
       "productCollectionItemLocaleAudit": {
         "task": "PRODUCT_COLLECTION_ITEMS_LOCALE_DISPLAY_PREFLIGHT",
         "claim": "20261114_08_PRODUCT_COLLECTION_ITEMS_LOCALE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_ADVISORY",
         "baseLedgerBlob": "03886b82b7c6f7273506260b52d07e481a4812f6",
         "sourceHead": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8",
         "risk": "LOW_ADVISORY_EXISTING_CONTRACT",
         "scope": "Only unchanged fixed ProductCollectionItems.svelte/ProductCollectionItemImage.svelte and existing R5 producer/display mapping; exclude bridge rollback and all behavior QA. Map accepted 189 keys and explicit new candidates; no 05 code writes or runtime acceptance.",
-        "dependency": "05 fixed successor with unchanged display sources; existing R5 catalog acceptance. Independent collection rollback QA separate; no use of candidate for release."
+        "dependency": "05 fixed successor with unchanged display sources; existing R5 catalog acceptance. Independent collection rollback QA separate; no use of candidate for release.",
+        "artifact": "HKIA_08_PRODUCT_COLLECTION_ITEMS_LOCALE_ADVISORY_20261114.json",
+        "sha256": "7c03c96bd4c28386d466196706b41f5fe51cb282d463e37237eb0388cc03a574",
+        "evidenceLocation": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA256_PASS",
+        "verified": {
+          "sourceBlobs": 8,
+          "repairCompare": "2 paths bridge+rollback test only; display paths unchanged",
+          "reusedKeys": 14,
+          "reusedCells": 210,
+          "jaExactTemplates": 14,
+          "placeholderParityCells": 210,
+          "syntheticTemplateCases": 16,
+          "fail": 0,
+          "newKeys": 0
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "scope": "Exact fixed collection item display and producer paths (8 blobs), 14 accepted editor keys ×15 locales. No changes to rollback bridge; no R8 dependency or product acceptance.",
+          "condition": "Keep versioned stable item ID/GUID/key, machine membership/status, separate history-recorded flag, exact raw int64 ticks and unknown UTC/Kind; same locale generation for producer and candidate projection. Actual product locale behavior HIGH ->06B; independent collection item repair/compiled Browser acceptance remains separate."
+        },
+        "unverified": [
+          "Actual localized row/producer and browser/session behavior, full inspector and remaining dynamic producer text; collection rollback/compiled acceptance separately owned"
+        ],
+        "next": "WAIT next fixed product locale consumer/new key scope or QA counterexample; no repeat."
       }
     },
     "06A_QA_DATA_CORE": {
