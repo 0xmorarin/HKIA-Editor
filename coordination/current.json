@@ -5201,7 +5201,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "P0_PAGES_RESTORED_CTRL_HTTP_PASS_06_LIVE_QA_READY",
+    "status": "V30_LIVE_SCOPED_PASS_V34_RESEARCH_REFERENCE_06_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -5311,18 +5311,18 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "07_R2_PRIVATE_GENUINE_PARITY_LOCAL_ONLY",
-      "05_SVELTE_R1_LOCK_ADOPTION_A11Y_AND_COMPILED_SCOPE_PARITY",
-      "06_EXISTING_CLAIMS_CONTINUE_THEN_R2_SYNTHETIC_AND_SVELTE_SCOPED_QA"
+      "06_V34_FIXED_RESEARCH_REFERENCE_SCOPED_QA",
+      "07_R3_BOUNDED_SESSION_ABI_EXISTING_IN_FLIGHT",
+      "00_SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI"
     ],
     "nextAfterDep": [
-      "00_SERIAL_FORMAL_RESEARCH_INTEGRATION_AFTER_06_ACCEPTANCE",
-      "06_R2_REAL_PARITY_AFTER_07",
-      "06_SVELTE_ADAPTER_PARITY_AFTER_05_FIXED_SCOPE",
+      "06_R3_SCOPE_AFTER_07_FIXED",
+      "06_SVELTE_FOLLOWUP_AFTER_FIXED_CI",
+      "00_V34_FORMAL_RESEARCH_REFERENCE_ACCEPTANCE_AFTER_06",
+      "06_V24_AUTHORIZED_PRIVATE_BROWSER",
       "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
       "00_DEVELOPMENT_SWITCH_AFTER_06",
-      "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL",
-      "06_V24_AUTHORIZED_PRIVATE_BROWSER"
+      "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -5982,16 +5982,17 @@
     "inFlightStreams": [],
     "currentHandoff": {
       "date": "2026-11-13",
-      "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-      "status": "DONE_CTRL_HTTP_PASS_INDEPENDENT_QA_READY",
-      "source": "b7e91df1e456ded1b50b4649797bf1b7df216717",
-      "artifactManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+      "task": "LIVE_V30_ACCEPTANCE_AND_RESEARCH_SERIAL_INTEGRATION",
+      "status": "DONE_V30_LIVE_ACCEPTED_V34_FIXED_QA_READY",
+      "source": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+      "artifactManifestSha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c",
       "next": [
-        "06 live exact artifact and 01/02 new scoped QA",
-        "03 new exact 01 historical Recipe6 and 02 Visitor/Mission causal review",
-        "07 pinned public Rust CI PASS -> private parity preparation"
+        "06 V34 fixed successor scoped integration QA",
+        "07 R3 bounded read-only Session/ABI existing IN_FLIGHT",
+        "00 Svelte PR6 fixed followup nondeploy CI",
+        "01/02/03 only concrete exact Switch definitions/causal tasks"
       ],
-      "privacy": "No raw Save or private research inputs in transport or CI; historical legacy exposure not erased"
+      "privacy": "V30 current public path repaired, historical exposure not erased; private research reference only"
     },
     "resumeCheckpoint20261113": {
       "task": "CTRL_POST_TIMEOUT_LIVE_RECONCILIATION",
@@ -6134,7 +6135,7 @@
     },
     "researchIntegration": {
       "task": "LIVE_V30_ACCEPTANCE_AND_RESEARCH_SERIAL_INTEGRATION",
-      "status": "IN_FLIGHT",
+      "status": "DONE_FIXED_V34_RESEARCH_REFERENCE_06_QA_READY",
       "owner": "00 CTRL",
       "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
       "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -6143,7 +6144,87 @@
         "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
       },
       "scope": "11 accepted private research deltas, 61 ADD 1 MOD; Dense repair before dependent tests; evidence-only 04 separate. No product Writer or deployment.",
-      "dependency": "06 exact scoped PASS; V33 fixed reference"
+      "dependency": "06 exact scoped PASS; V33 fixed reference",
+      "candidate": {
+        "label": "V34_PRIVATE_RESEARCH_REFERENCE_OFF_QA_PENDING",
+        "file": "HKIA_CTRL_V34_ResearchReference_20261113_Source.zip",
+        "sha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+        "entries": 582,
+        "bytes": 3377184,
+        "baseSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "classification": "RESEARCH_REFERENCE_ONLY_NO_NEW_WRITER_OR_DEPLOY_PERMISSION",
+        "manifest": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_Manifest.json",
+          "sha256": "9fc89036d3d427e1266633ccfe691b04c3edd3a8c5b4fc9985c73a412c4b4ccc"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_Delta.zip",
+          "sha256": "8ceb6d5c7281eefdb06dfa170e8bb5d3206737c1f29338f3f623e8508a1dc043",
+          "added": 61,
+          "modified": 1,
+          "deleted": 0
+        },
+        "distribution": {
+          "artifactManifest": {
+            "file": "HKIA_CTRL_V34_ResearchReference_20261113_ArtifactManifest.json",
+            "sha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c"
+          },
+          "delta": {
+            "file": "HKIA_CTRL_V34_ResearchReference_20261113_DistributionDelta.zip",
+            "sha256": "4a16764fa59f25913c53ce8f033e7e397cb5e17e474aed5a5e67cdc57674cedc",
+            "entries": 1
+          },
+          "baseArtifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "entries": 4146,
+          "bytes": 146355796,
+          "webp": 4076,
+          "modules": 55,
+          "modified": 1,
+          "added": 0,
+          "unchanged": 4145,
+          "flags": "OFF",
+          "reconstruct": "V33 exact OFF + one-path distribution delta"
+        },
+        "acceptance": "06_INDEPENDENT_FIXED_SUCCESSOR_QA_READY",
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "ALL_5_BYTE_EXACT_SHA_CRC_PASS"
+      },
+      "verified": {
+        "source521BaseExact": true,
+        "source582": 582,
+        "add": 61,
+        "mod": 1,
+        "unchanged": 520,
+        "deltas": 11,
+        "allInputSHAAndManifest": true,
+        "denseFirst": true,
+        "js": 152,
+        "python": 52,
+        "fail": 0,
+        "check": "PASS",
+        "build": "PASS",
+        "distribution4146": 4146,
+        "webp4076": 4076,
+        "modules55": 55,
+        "distributionModified": 1,
+        "rollbackV33Exact": 4146,
+        "rebuildV34Exact": 4146,
+        "privateReadback": "5_OF_5_EXACT_SHA_CRC",
+        "allocatorEvidenceOnly": "SEPARATE"
+      },
+      "rollback": "V33 source/manifest fixed and all 4146 dist restored exactly; deployed V30 unchanged.",
+      "unverified": [
+        "06 fixed successor independent integration QA",
+        "Exact29 runtime definitions and Recipe6 producer",
+        "V24 genuine actual browser/game persistence",
+        "No new product write permission"
+      ],
+      "handoff": {
+        "to": "06 QA",
+        "task": "V34_FIXED_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+        "sourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+        "scope": "62 changed source paths; dense correction prior causal tests; one changed distribution contract; 4145 unchanged, 55 modules, rollback V33, no duplicate accepted independent research; no activation"
+      }
     }
   },
   "formalRelease": {
@@ -6153,7 +6234,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional Beta first, no Rust/Svelte Beta gate. Formal release requires Svelte+TypeScript+Rust/WASM single Worker ProductSession. No full formal JS implementation prerequisite. Existing feature/safety/Owner gates unchanged.",
     "pages": {
-      "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
+      "status": "V30_FIXED_OFF_LIVE_INDEPENDENT_SCOPED_PASS",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -6332,17 +6413,17 @@
         "note": "Public-safe source projection independently accepted; nondeploying CI only. Source archive is not full distribution."
       },
       "actualPages": {
-        "status": "FIXED_V30_OFF_DEPLOY_SUCCESS_CTRL_HTTPS_BOUNDARY_PASS_INDEPENDENT_QA_READY",
+        "status": "FIXED_V30_OFF_LIVE_INDEPENDENT_SCOPED_PASS",
         "observedMain": "b57341f52c0bbf357ea4e26f3aa95d34a4b36baa",
         "runId": 43342655323,
         "buildJob": 131199989881,
         "deployJob": 131614601722,
         "url": "https://0xmorarin.github.io/HKIA-Editor/",
-        "verified": "GitHub Actions fixed V30 site-only deployment SUCCESS; actual public root and 8 sample SHA exact, 7 excluded paths 404, HTTP to HTTPS PASS; 4076 WebP in fixed artifact; Writer OFF.",
-        "limitations": "Public HTTP response and actual rendering not independently observed; full V24 4076-image 4144-file artifact not deployed; Writer remains OFF; branch-root deployment publishes source tree, not fixed allowlisted release artifact.",
+        "verified": "Fixed V30 deploy 43342655323 artifact 14000317355; 06 independent run 43354965221: artifact 4146/4076 WebP, HTTPS 15 exact sample hashes, 7 internal paths denied, HTTP->HTTPS, actual Chromium 320/375/1280, native WebCrypto and Module Worker start/RPC no-session denial, no-save; Writer OFF.",
+        "limitations": "No-save OFF preview only; V24 genuine actual edited-copy browser and game persistence unverified. V29 rollback readiness verified, live rollback not executed. Historical exposure not erased.",
         "rootCause": "GitHub metadata has_pages=true; built-in dynamic deployments existed even when project gate OFF. Main previously lacked index.html; successful branch build therefore did not establish usable page. Actual source settings admin API unavailable; merge triggered existing branch-based Pages automatically.",
         "risk": "Unexpected automatic branch-root Pages configuration conflicts with approved manual artifact-only release workflow. Owner explicitly requested immediate public view; do not label preview functional Beta. Switch Pages source to GitHub Actions via authorized Settings before fixed full distribution publication; no automatic activation. Do not add private or raw inputs to main.",
-        "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
+        "next": "No redeploy without separate approved fixed artifact. V24 genuine actual browser remains separate.",
         "lastReachabilityCheck": {
           "date": "2026-11-12",
           "status": "UNVERIFIED_TOOL_ACCESS",
@@ -6351,12 +6432,38 @@
           "interpretation": "No proof of HTTP 404 or live rendering; existing deployment success remains only GitHub evidence. Owner can open recorded URL; no changed environment for private browser."
         },
         "verifyJob": 131614448873,
-        "artifactId": 14000317355
+        "artifactId": 14000317355,
+        "independentAcceptance": {
+          "artifact": 14000317355,
+          "deployRun": 43342655323,
+          "independentRun": 43354965221,
+          "files": 4146,
+          "webp": 4076,
+          "bytes": 146346689,
+          "httpsSampleHashes": 15,
+          "deniedPaths": 7,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "nativeWebCrypto": true,
+          "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+          "noSave": true,
+          "writer": "OFF",
+          "rollback": "V29_READY_NOT_LIVE_EXECUTED",
+          "historicalExposure": "NOT_ERASED",
+          "qaResult": {
+            "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+            "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+          },
+          "scope": "V30 OFF no-save live only"
+        }
       },
       "distributionRepair": {
-        "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
+        "status": "V30_FIXED_OFF_LIVE_INDEPENDENT_SCOPED_PASS",
         "incidentRun": 43307905181,
-        "verdict": "LEGACY_EXPOSURE_HISTORICAL_NOT_ERASED; V30_FIXED_OFF_REPLACEMENT_DEPLOYED_CTRL_HTTPS_PASS_INDEPENDENT_QA_PENDING",
+        "verdict": "CURRENT_FIXED_OFF_REPLACEMENT_SCOPED_PASS_HISTORICAL_EXPOSURE_NOT_ERASED",
         "sourceProbe": {
           "pr": 4,
           "head": "8076133b37ca84cb859b039135ab494247d02d7a",
@@ -6394,7 +6501,7 @@
         "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "DONE_REMOTE_STAGE_DEPLOY_AND_CTRL_HTTPS_SMOKE",
+          "status": "DONE_DEPLOY_CTRL_AND_06_LIVE_SCOPED_PASS",
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
@@ -6421,6 +6528,31 @@
             "method": "All 57 Git blob SHA exact; isolated branch, no deploy",
             "workflow": ".github/workflows/stage-off-bundle.yml",
             "firstRun": 43342189200
+          },
+          "independentQA": {
+            "artifact": 14000317355,
+            "deployRun": 43342655323,
+            "independentRun": 43354965221,
+            "files": 4146,
+            "webp": 4076,
+            "bytes": 146346689,
+            "httpsSampleHashes": 15,
+            "deniedPaths": 7,
+            "realChromiumWidths": [
+              320,
+              375,
+              1280
+            ],
+            "nativeWebCrypto": true,
+            "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+            "noSave": true,
+            "writer": "OFF",
+            "rollback": "V29_READY_NOT_LIVE_EXECUTED",
+            "historicalExposure": "NOT_ERASED",
+            "qaResult": {
+              "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+              "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+            }
           }
         },
         "stagingCI": {
@@ -6626,6 +6758,50 @@
       },
       "noNewBetaGate": true,
       "noDeployAuthorization": true
+    },
+    "researchReference": {
+      "label": "V34_PRIVATE_RESEARCH_REFERENCE_OFF_QA_PENDING",
+      "file": "HKIA_CTRL_V34_ResearchReference_20261113_Source.zip",
+      "sha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+      "entries": 582,
+      "bytes": 3377184,
+      "baseSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+      "classification": "RESEARCH_REFERENCE_ONLY_NO_NEW_WRITER_OR_DEPLOY_PERMISSION",
+      "manifest": {
+        "file": "HKIA_CTRL_V34_ResearchReference_20261113_Manifest.json",
+        "sha256": "9fc89036d3d427e1266633ccfe691b04c3edd3a8c5b4fc9985c73a412c4b4ccc"
+      },
+      "delta": {
+        "file": "HKIA_CTRL_V34_ResearchReference_20261113_Delta.zip",
+        "sha256": "8ceb6d5c7281eefdb06dfa170e8bb5d3206737c1f29338f3f623e8508a1dc043",
+        "added": 61,
+        "modified": 1,
+        "deleted": 0
+      },
+      "distribution": {
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_DistributionDelta.zip",
+          "sha256": "4a16764fa59f25913c53ce8f033e7e397cb5e17e474aed5a5e67cdc57674cedc",
+          "entries": 1
+        },
+        "baseArtifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "entries": 4146,
+        "bytes": 146355796,
+        "webp": 4076,
+        "modules": 55,
+        "modified": 1,
+        "added": 0,
+        "unchanged": 4145,
+        "flags": "OFF",
+        "reconstruct": "V33 exact OFF + one-path distribution delta"
+      },
+      "acceptance": "06_INDEPENDENT_FIXED_SUCCESSOR_QA_READY",
+      "privateLibrary": "HKIA Editor Private",
+      "readback": "ALL_5_BYTE_EXACT_SHA_CRC_PASS"
     }
   }
 }
