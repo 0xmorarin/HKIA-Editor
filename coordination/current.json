@@ -4372,7 +4372,7 @@
     "nextAfterDep": [
       "00_PAGES_PR3_AFTER_REMOTE_FIXED_REFS",
       "06_LIVE_ARTIFACT_HTTPS_AFTER_DEPLOY",
-      "00_FORMAL_NEXT_SCOPE_AFTER_V33_QA"
+      "06_V24_AUTHORIZED_BROWSER"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -5002,20 +5002,8 @@
         "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "artifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "evidence": {
-          "result": {
-            "file": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
-            "sha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0"
-          },
-          "report": {
-            "file": "HKIA_06_V33_COMBINED_QA_20261113_REPORT.md",
-            "sha256": "b3baf159c01151e7eedf2589e1b98df6c8404695855c15d326386029ba63ed17"
-          },
-          "zip": {
-            "file": "HKIA_06_V33_COMBINED_QA_20261113_EVIDENCE.zip",
-            "sha256": "4b9aff5a735a04aa670838d42f060d3f1be36dadf7d088638e4509b26a2e2202",
-            "entries": 14
-          },
-          "readback": "ALL_3_BYTE_EXACT_CRC_PASS"
+          "file": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
+          "sha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0"
         },
         "verified": {
           "sourceEntries": 521,
