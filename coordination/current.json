@@ -1060,7 +1060,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "V300_LOAD_BOUNDARY_LEGACY_SCOPED_PASS_REUSE; 04_WAIT_BETA_ENV_OR_NEW_CAUSAL_CONTRACT_OR_06A_COUNTEREXAMPLE_OR_00_DISJOINT_RUST_ASSIGNMENT",
+      "next": "04_V301_MARKER_METADATA_CHAIN_IN_FLIGHT; 04_WAIT_BETA_ENV_OR_NEW_CONTRACT_OR_00_DISJOINT_ASSIGNMENT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1982,7 +1982,21 @@
           "scope": "STATIC_LOAD_BOUNDARY_AND_HEADER_ONLY; NO WRITER/GAME AUTHORITY"
         }
       },
-      "qaRouting": "SELF_QA; HIGH -> 06A -> 05/07/00"
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 05/07/00",
+      "v301MarkerMetadataReview": {
+        "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
+        "status": "IN_FLIGHT",
+        "owner": "04 SAVE CORE",
+        "baseMain": "1894448ddd77ff05239650eeec3a5126efa2ce03",
+        "scope": "HIGH evidence-only: exact Switch301 NSO + metadata FieldRef -> default arrays -> genuine headers; reuse v301 existing static and v300 accepted chain. No Writer or version expansion.",
+        "dependency": "V301 original metadata recovered in authorized Drive; legacy V300 static acceptance; new HIGH -> 06A",
+        "sourcePins": {
+          "nso": "64bd5fb69239f57eb0578a1897a45a3c6f5e187480903f83df503b46bf827bfb",
+          "dump": "4b4eb6a543722e1dfaf8aad5593e9e1300723aff55e9e750d489744960feb738",
+          "metadata": "e4300e0e4235c99bf791392c2a2b50ae3d693edc328a68ce2f5a20571de1f7bb"
+        },
+        "risk": "HIGH"
+      }
     },
     "05_WEB": {
       "status": "FORMAL_CELEBRATION5_UI_SCOPED_PASS_INTEGRATED_V33",
