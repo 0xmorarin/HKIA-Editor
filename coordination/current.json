@@ -123,6 +123,14 @@
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Resolve MasterDefinition catalog dependencies and exact six Switch300 Recipe/Food definitions; no 03 provider or existing native repeats; additive research only",
         "dependency": "03 v300 closed provider static evidence pending QA"
+      },
+      "switch301Definition": {
+        "task": "FORMAL_SWITCH301_RECIPE_DEFINITION_PARITY",
+        "status": "IN_FLIGHT",
+        "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Switch301 MasterDefinition original vs Steam301 exact 282 Recipe object byte/path identity; targeted local references 39 and collection groups, no game/producer authority; v300 catalog differs and remains separate",
+        "dependency": "No dependency on pending v300 source access; reuse accepted 32+5913958 writer and 03 source facts"
       }
     },
     "02_ACHIEVEMENT": {
