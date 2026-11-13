@@ -1,4 +1,7 @@
 <script lang="ts">
+  import CollectionDetail from './CollectionDetail.svelte';
+  import {createDetailPort} from './collection-detail.ts';
+  import {createCollectionDetailFixture} from './legacy-collection-detail-fixture.ts';
   import AchievementList from './AchievementList.svelte';
   import {createAchievementPort} from './achievement-list.ts';
   import {createLegacyAchievementFixture} from './legacy-achievement-fixture.ts';
@@ -26,7 +29,10 @@
   const filterMetrics=$derived.by(()=>{void filterRevision;return filterFixture.metrics();});
   const categoryFixture=createLegacyCategoryFixture(()=>filterPort.read());
   let categoryRevision=$state(0);
-  const categoryPort=createCategoryPort({read(){void categoryRevision;return categoryFixture.read();},selectCategory:categoryFixture.selectCategory,invalidate(){categoryRevision++;}});
+  const categoryPort=createCategoryPort({read(){void categoryRevision;return categoryFixture.read();},selectCategory(key){categoryFixture.selectCategory(key);detailFixture.resetCategory();detailRevision++;},invalidate(){categoryRevision++;}});
+  const detailFixture=createCollectionDetailFixture(()=>categoryPort.read().selectedKey);
+  let detailRevision=$state(0);
+  const detailPort=createDetailPort({read(){void detailRevision;return detailFixture.read();},selectDefinition:detailFixture.selectDefinition,changeFilter:detailFixture.changeFilter,inspect:detailFixture.inspect,showMore:detailFixture.showMore,invalidate(){detailRevision++;}});
   const categoryMetrics=$derived.by(()=>{void categoryRevision;return categoryFixture.metrics();});
   const collectionRenders=$derived.by(()=>{void revision;return fixture.collectionRenders();});
 </script>
@@ -42,7 +48,7 @@
     <div class="panel-header"><div><h3>コレクション</h3><p>ゲーム定義のアイテムIDと収集履歴を直接照合します。ゲーム内の達成率とは異なります。</p></div><span class="count-pill">{categoryPort.read().totalCategories}カテゴリ</span></div>
     <FilterToolbar port={filterPort} domain="collections"/>
     <CollectionCategoryGrid port={categoryPort} afterSelect={()=>document.getElementById('collectionDetail')?.scrollIntoView({block:'nearest',behavior:'smooth'})}/>
-    <div id="collectionDetail" class="collection-detail" hidden={categoryMetrics.selectedKey===null}><h4>検証用カテゴリ詳細</h4><p>{categoryMetrics.selectedKey}</p></div>
+    <CollectionDetail port={detailPort}/>
   {/snippet}
   <WorkspaceNavigation {port} {achievements} {collections}/>
 </main>
