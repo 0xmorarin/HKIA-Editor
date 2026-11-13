@@ -163,7 +163,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_V300_NATIVE_PARITY_QA_READY; 03_V300_CAUSAL_AND_06_SCOPED_QA_PARALLEL; 04_AFTER_DEP; DERIVED_CREATION_WAIT_EXISTING_WITNESSES",
+      "next": "02_SWITCH300_EXACT29_DEFINITION_QA_READY; 03_SOURCE_ADJUDICATION_AND_06_SCOPED_QA_PARALLEL; 04_AFTER_DEP; NO_REDO",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -367,13 +367,45 @@
         "next": "03 scoped v300 exact20+9 causal transfer adjudication and 06 independent 8 ADD QA parallel; 04 after both accepted exact v300/83 gated Writer proof; V24/V33/live OFF unchanged"
       },
       "v300DefinitionReview": {
-        "task": "FORMAL_V300_EXACT29_SWITCH_DEFINITION_PARITY",
-        "status": "IN_FLIGHT",
+        "task": "SWITCH300_EXACT29_DEFINITION_WITNESS",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "scope": "exact20+absence9 Switch v300 asset identity, threshold, group membership, counter and rewards; no Inventory definition edits, no product changes",
-        "dependency": "02 native parity and 03 v300 exact29 causal pending QA; original Switch v300 bundle evidence from HKIARE"
+        "scope": "6 ADD including manifest; no V33 path changes; exact29 and 118 local closure plus all 63 root Group identities/ordered references; Switch300/83 serialized source only",
+        "dependency": "06 live/research result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3 SCOPED_PASS for 02 510198c3...131d and 03 ca8c9a39...d06e; new source witness independent QA pending",
+        "deltaSha256": "e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f",
+        "manifestSha256": "90fa1cd61dd51bb1d8093fd084d8bdaf0d55e8652a8e9e8bd03d0e5c065b5bb3",
+        "artifact": "HKIA_02_SWITCH300_EXACT29_DEFINITION_V33_DELTA_20261113.zip",
+        "libraryFileId": "libfile_2b67f3b975e481919307df1659c24846",
+        "verified": {
+          "archiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
+          "serialSha256": "673938d0517178f330931f5d1b1d5fc26cbe7c8ca526798b65529817038bc77d",
+          "typedObjects": 41729,
+          "localDefinitions": 820,
+          "accountDefinitions": 31,
+          "localRewards": 820,
+          "localAndAccountValuesRids": 851,
+          "valuesRids": 3855,
+          "registryEntries": 5933,
+          "exactTargets": 29,
+          "closureRows": 118,
+          "parentGroups": 8,
+          "rootGroups": 63,
+          "rootOrderedMemberReferences": 757,
+          "focusedTests": 16,
+          "collectionVersion": 83,
+          "basePathsChanged": 0,
+          "libraryReadback": "BYTE_EXACT_CRC_5_MANIFEST_HASHES"
+        },
+        "classification": "EXACT29_SWITCH300_SERIALIZED_DEFINITION_PARITY; NO_NEW_UNCONDITIONAL_REQUIRED; NO_PRODUCT_AUTHORITY",
+        "unverified": [
+          "actual runtime registration/scheduler",
+          "actual game auth/load/resave/reward replay",
+          "new independent QA and 03 adjudication",
+          "04 exact29 private Writer output"
+        ],
+        "next": "03 and 06 parallel scoped source adjudication/reproduction only; 04 exact29/83 gated private Writer proof after accepted source+causal; 02 WAIT QA/new witness; V33/live OFF unchanged"
       }
     },
     "03_LINKAGE": {
