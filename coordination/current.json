@@ -5821,7 +5821,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5834,7 +5834,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B R3 and R4 catalog changed-scope QA; disjoint linguistic review, sequential overlay acceptance R2->R3->R4; 05 consumes accepted scope directly and continues independent Web work. 08 remaining full legacy UI render-site inventory, account platform titles, Switch300 exact core WAIT_DEP. No R1 data re-QA.",
+      "next": "06B R3/R4 new catalog scope (disjoint review, ordered overlays), 05 direct LOW legacy inventory for actual binding/next UI scope. 08 next new fixed UI keys or exact Switch300 original/core and account native title witness; no repeated R1 extraction or legacy inventory scan. V24/Writer/Pages unchanged.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -5885,7 +5885,10 @@
         "r4CatalogKeysEach": 106,
         "r4NewTranslationCells": 255,
         "r4PriorCellsUnchanged": 1335,
-        "r4CombinedTests": "47 PASS / 0 FAIL"
+        "r4CombinedTests": "47 PASS / 0 FAIL",
+        "legacyRenderInventorySites": 827,
+        "legacyRenderInventorySources": 20,
+        "legacyRenderInventoryTests": "4 PASS / 0 FAIL"
       },
       "unverified": [
         "Switch300 full typed definition key mapping: original exact all-deps archive/core unavailable in this run; no substitution from Switch301",
@@ -5893,8 +5896,9 @@
         "Account platform-specific runtime titles",
         "06B R2 scoped independent acceptance; 05 integration and 00 distribution allowlist",
         "06B R3 catalog scoped acceptance",
-        "Full legacy product UI render-site inventory (302 candidate lines only), future UI beyond R4, linguistic/actual Browser/session QA",
-        "06B R4 catalog scoped acceptance"
+        "06B R4 catalog scoped acceptance",
+        "Legacy static render-site inventory fixed (827 candidate sites), actual visibility/dynamic dataflow and semantic key binding not complete; future UI beyond R4",
+        "Linguistic/actual Browser/session QA and R3/R4 acceptance"
       ],
       "handoff": {
         "to05": {
@@ -5911,6 +5915,19 @@
             "status": "READY_AFTER_DEP",
             "scope": "Bind 17 R4 keys, 106 total catalog keys; preserve exact IDs/progress, unreadable/missing status, Intl counts and generation/session/selection",
             "dependency": "06B R3 and R4 catalog scoped acceptance, R2 Runtime accepted and R4 UI relevant acceptance; no new product authority"
+          },
+          "legacyInventory": {
+            "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "risk": "LOW_ADVISORY_NO_PRODUCT_CONTRACT",
+            "artifact": "HKIA_08_LOCALIZATION_LEGACY_RENDER_INVENTORY_20261113.zip",
+            "sha256": "cbba326a376a4dd624b9e41471e4dc573e5cbd736aeb84271c18f1ae1c3c66f4",
+            "manifestSha256": "0a7c6327044cd46f5bd6ea8f3c8a2b1b9b7621efe915a8aa7c869b95453ad6cf",
+            "scope": "20 fixed V34 HTML/JS/CSS files; 827 static sites incl 109 HTML, 414 JS render-related, 304 error trace, 151 dynamic JS, 96 alternatives, 918 additional literal candidates; 46 exact JA text matches incl 4 ambiguous; not complete UI key count or verified rendered text",
+            "acceptance": "05 consumes advisory source-location inventory directly; review actual UI dataflow and map accepted keys or request new key/translation from 08; no auto translation of machine codes/game text; no independent QA for advisory itself; new contract/important UI HIGH ->06B",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+            "readbackVerified": true
           }
         },
         "to00": {
@@ -6031,10 +6048,10 @@
             "condition": "Locate exact original Switch300 all-deps/core via 02/00 private source evidence; validate pins; compare actual typed rows; do not substitute Switch301."
           },
           "ui": {
-            "status": "PARTIAL_SEED_R3_R4_DONE",
+            "status": "PARTIAL_106_KEYS_AND_LEGACY_INVENTORY_FIXED",
             "owner": "08 LOCALIZATION",
-            "task": "106 keys all 15 locales fixed; full legacy UI render-site inventory and future Svelte surfaces",
-            "dependency": "05 fixed source and accepted catalog contract; no shared product writes"
+            "task": "Complete actual render-site mapping and future Svelte keys based on 05 fixed UI, language quality and exact 06B acceptance",
+            "dependency": "05 actual source mapping or new fixed UI scope; new keys HIGH, existing accepted nonbehavior LOW direct"
           }
         }
       },
@@ -6150,12 +6167,59 @@
       },
       "uiInventory": {
         "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_HANDOFF_READY",
         "claim": "20261113_08_UI_RENDER_INVENTORY",
         "baseHead": "fa09c9c5a66a4800c13847b066c4a286c4421eb7",
         "risk": "LOW_ADVISORY_INVENTORY_ONLY_NO_NEW_PRODUCT_CONTRACT",
         "scope": "Structural static audit V34 fixed legacy HTML and JS DOM rendering/visible attributes/dialogs/error propagation; map exact existing JA keys where unambiguous; candidate inventory only, no game text or product edits",
-        "dependency": "R3/R4 fixed catalogs, V34 fixed reference; no R2 QA dependency"
+        "dependency": "R3/R4 fixed catalogs, V34 fixed reference; no R2 QA dependency",
+        "fixed": {
+          "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "risk": "LOW_ADVISORY_NO_PRODUCT_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_LEGACY_RENDER_INVENTORY_20261113.zip",
+          "sha256": "cbba326a376a4dd624b9e41471e4dc573e5cbd736aeb84271c18f1ae1c3c66f4",
+          "manifestSha256": "0a7c6327044cd46f5bd6ea8f3c8a2b1b9b7621efe915a8aa7c869b95453ad6cf",
+          "scope": "20 fixed V34 HTML/JS/CSS files; 827 static sites incl 109 HTML, 414 JS render-related, 304 error trace, 151 dynamic JS, 96 alternatives, 918 additional literal candidates; 46 exact JA text matches incl 4 ambiguous; not complete UI key count or verified rendered text",
+          "acceptance": "05 consumes advisory source-location inventory directly; review actual UI dataflow and map accepted keys or request new key/translation from 08; no auto translation of machine codes/game text; no independent QA for advisory itself; new contract/important UI HIGH ->06B",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        },
+        "verified": {
+          "sources": 20,
+          "sites": 827,
+          "html": 109,
+          "jsRender": 414,
+          "errorTrace": 304,
+          "dynamic": 151,
+          "alternatives": 96,
+          "literalCandidates": 918,
+          "exactJa": 46,
+          "ambiguous": 4,
+          "tests": 4,
+          "fail": 0,
+          "reproduction": "BYTE_EXACT",
+          "changes": "8 ADD 0 MOD 0 DEL"
+        },
+        "unverified": [
+          "actual rendering and complete dynamic dataflow",
+          "semantic key mapping and full product catalog",
+          "production Browser and session invariance"
+        ],
+        "handoff": {
+          "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "risk": "LOW_ADVISORY_NO_PRODUCT_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_LEGACY_RENDER_INVENTORY_20261113.zip",
+          "sha256": "cbba326a376a4dd624b9e41471e4dc573e5cbd736aeb84271c18f1ae1c3c66f4",
+          "manifestSha256": "0a7c6327044cd46f5bd6ea8f3c8a2b1b9b7621efe915a8aa7c869b95453ad6cf",
+          "scope": "20 fixed V34 HTML/JS/CSS files; 827 static sites incl 109 HTML, 414 JS render-related, 304 error trace, 151 dynamic JS, 96 alternatives, 918 additional literal candidates; 46 exact JA text matches incl 4 ambiguous; not complete UI key count or verified rendered text",
+          "acceptance": "05 consumes advisory source-location inventory directly; review actual UI dataflow and map accepted keys or request new key/translation from 08; no auto translation of machine codes/game text; no independent QA for advisory itself; new contract/important UI HIGH ->06B",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        }
       }
     },
     "06A_QA_DATA_CORE": {
