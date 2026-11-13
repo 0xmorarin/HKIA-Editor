@@ -1,0 +1,56 @@
+name: HKIA organization cutover verification (no deploy)
+on:
+  push:
+    branches: [ctrl/organization-cutover-check-20261113]
+    paths:
+      - '.github/workflows/organization-cutover-check.yml'
+permissions:
+  contents: read
+  pages: read
+jobs:
+  verify:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753' && github.ref == 'refs/heads/ctrl/organization-cutover-check-20261113'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify canonical repository and unchanged safety gates
+        run: |
+          node --input-type=module -e 'import fs from "node:fs"; const g=JSON.parse(fs.readFileSync("config/release-gates.json")); if(g.repository!=="Yumekiraboshi/HKIA-Editor"||g.distribution.githubPages!=="OFF"||g.distribution.nativeSaveWriter!=="OFF_PENDING_FUNCTIONAL_BETA_SAFETY_QA"||g.distribution.developmentPreview.path!=="/HKIA-Editor/"||g.distribution.developmentPreview.automaticDeploy!==false||g.distribution.developmentPreview.writerAuthorization!==false)throw Error("gate mismatch"); const s=fs.readFileSync("coordination/project-instructions.md","utf8");if(!s.includes("REPO=Yumekiraboshi/HKIA-Editor")||[...s].length>8000)throw Error("instruction mismatch");console.log("Canonical repository and OFF/single-root gates PASS")'
+          test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(git hash-object scripts/pages-artifact-policy.mjs)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(git hash-object scripts/lossless-webp.mjs)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+      - name: Observe Pages configuration without modification
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh api "repos/$GITHUB_REPOSITORY/pages" --jq '{build_type,status,html_url,https_enforced,cname}' > "$RUNNER_TEMP/pages.json"; then
+            cat "$RUNNER_TEMP/pages.json"
+          else
+            echo "Pages metadata unavailable (disabled or insufficient permission); not a PASS"
+          fi
+          echo "No Pages settings changes or deploy performed"
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: approved-artifact
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Verify retained V30 exact OFF site and media
+        run: |
+          set -euo pipefail
+          test "$(git -C approved-artifact rev-parse HEAD)" = b7e91df1e456ded1b50b4649797bf1b7df216717
+          node scripts/00-verify-beta-artifact.mjs approved-artifact/site approved-artifact/site-manifest.json 564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6
+          node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("approved-artifact/site-manifest.json"));if(m.writer!=="OFF"||m.sourceSha256!=="a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a"||m.entries!==4146||m.webp!==4076||m.modules!==55)throw Error("unexpected V30 scope"); console.log("V30 OFF 4146 files / 4076 WebP / 55 modules verified")'
+      - name: Public source regression
+        run: |
+          npm test
+          npm run build
+          npm run check
