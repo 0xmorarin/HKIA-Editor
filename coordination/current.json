@@ -17742,7 +17742,8 @@
           "actual": "Page.evaluate Worker onerror; test aborted before 1280",
           "diagnosticHead": "e830910bd849efda4a403c5cc14686c4e37109b6",
           "diagnosticBlob": "66d240cbfdb1277beac36f502131e0ad7cf966a6",
-          "change": "Full nonimage closure hash + response/requestfailure/console and Worker event details; unchanged assertions, no deployment."
+          "change": "Full nonimage closure hash + response/requestfailure/console and Worker event details; unchanged assertions, no deployment.",
+          "diagnosticRun": 43432865398
         }
       },
       "postDeployHandoff": {
@@ -17753,7 +17754,8 @@
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "deploymentRun": 43432381119,
         "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save. First CTRL live run 43432726052 exact HTTPS PASS, 320 PASS, 375 Worker generic onerror; diagnostic e830910b pending. Do not mark full PASS; isolate transient transport vs runtime regression, verify 375/1280 and independent acceptance.",
-        "ctrlLiveRun": 43432726052
+        "ctrlLiveRun": 43432726052,
+        "diagnosticRun": 43432865398
       }
     },
     "productTabsCI": {
