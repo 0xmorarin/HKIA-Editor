@@ -5018,6 +5018,18 @@
             "consumerScope": "Exact 2 repair paths and pending original compiled product item-list scope; reproduce original red and independent counterexamples; no accepted tabs/categories/list/header repeat."
           }
         }
+      },
+      "productLocaleChrome": {
+        "task": "SVELTE_PRODUCT_LOCALE_CHROME_BINDING",
+        "status": "IN_FLIGHT",
+        "owner": "05 WEB",
+        "risk": "HIGH_LOCALE_UI_ADAPTER",
+        "baseHead": "efadb660930b34ac72ced1dda2754040255891eb",
+        "baseSource": "5a7b404fdc72604e0fb2cd9611f732d24fa59ade",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "scope": "32 exact legacy V33 tab/filter labels from accepted 08 advisory, explicit search placeholder exclusion, accepted R1 repaired consumer/selector, 15x189 pinned catalogs, private staging; no full product/game text/localized search or shared app composition",
+        "dependency": "06B R1 repaired consumer and 08 R3/R4/R5-R7 catalog scoped PASS; V33 tabs/filters actual accepted scopes, combined localized producer separately 00",
+        "next": "05 self-QA exact catalog and DOM transaction; 00 fixed nondeploy compile/browser; 06B independent behavior"
       }
     },
     "06_QA": {
