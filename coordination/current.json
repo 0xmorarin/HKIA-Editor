@@ -2748,7 +2748,7 @@
         },
         "r2": {
           "task": "SVELTE_R2_SEARCH_FILTER_CONTROLS",
-          "status": "COMPILED_BROWSER_PASS_06B_READY",
+          "status": "DONE_06B_SCOPED_PASS",
           "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
           "basePrHead": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
           "scope": "Additive isolated svelte-ui R2 toolbar controls and typed legacy event port; preserve R1 frozen snapshot, existing product/V24/V33, lock, Writer, Pages. Exact V33 control metadata and event routing; test synthetic UI and legacy callbacks; no second session.",
@@ -2812,7 +2812,7 @@
         },
         "r3": {
           "task": "SVELTE_R3_COLLECTION_CATEGORY_GRID",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "COMPILED_BROWSER_PASS_06B_READY",
           "owner": "05 WEB",
           "baseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
           "basePrHead": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
@@ -2877,6 +2877,16 @@
               "scope": "Fixed isolated R3 synthetic fixture; legacy renderCollections VM synthetic sinks; actual built Vite HTTP Chromium; no production binding or Save; mapped image load failure not tested"
             }
           }
+        },
+        "r4": {
+          "task": "SVELTE_R4_ACHIEVEMENT_BOUNDED_LIST",
+          "status": "IN_FLIGHT",
+          "owner": "05 WEB",
+          "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
+          "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+          "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+          "scope": "svelte-ui only; bounded achievement row/selection/show-more component, existing legacy statuses and 120-row paging, synthetic read-only fixture, actual V33 row rendering oracle; no Writer, session, production binding, R3 frozen snapshot or locale runtime changes",
+          "next": "05 local focused QA and fixed branch; 06B R3 independent parallel; 00 isolated R4 CI then 06B"
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
