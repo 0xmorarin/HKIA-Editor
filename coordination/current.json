@@ -748,7 +748,7 @@
       }
     },
     "03_LINKAGE": {
-      "status": "RECIPE6_STATION_SOURCE_SELF_PASS_06A_READY_V301_EXACT29_ACCEPTED",
+      "status": "CANDY_CLOUD_NULL_NATIVE_CAUSAL_IN_FLIGHT",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
@@ -1175,13 +1175,13 @@
       },
       "recipe6StationSource": {
         "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_CLOSURE",
-        "status": "PARTIAL_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseLedgerBlob": "5022a27e4a7a3b0ae489caa0fabf3a4418bbcf2c",
         "scope": "New Stage54 original archive recovery; exact four stations, script/lock/upgrade/postprocess references; no repeated Recipe6 native or allocator or provider analysis; no product authority",
         "dependency": "Stage54 archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; accepted prior 03 a3286804459d4372ca60eb5312e133a0c0139cc31f070dd89e2cfd997c3ad3a5",
-        "next": "06A READY new disjoint HIGH scope; 03 WAIT independent counterexample or concrete Candy script/runtime or controlled persistence evidence; no repeat",
+        "next": "Accepted source; 01 saved conditions accepted; concrete Candy null branch analysis only",
         "claimCommit": "1fe86f70ff9c91c4e9aa471b11f0e29bec575dff",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "artifact": "HKIA_03_SWITCH300_RECIPE6_STATION_SOURCE_V36_DELTA_20261113.zip",
@@ -1197,12 +1197,93 @@
         "gameAccepted": false,
         "handoff": {
           "to": "06A_QA_DATA_CORE",
-          "status": "READY",
+          "status": "DONE_SCOPED_STATIC_ACCEPTED",
           "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_INDEPENDENT_QA",
           "fixedSourceSha256": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
           "scope": "New 5 research paths only; alternate original typed PPtr/RID oracle, exact station/prototype/script, Manual/Account/reward, mission tag and Candy null, limited ItemCounter negatives, new Native anchors and negative tests. Reuse accepted Recipe6 provider/producer/history and prior v300 causal scope. No product writes.",
           "condition": "06A scoped static acceptance -> 01/04/07 direct conditional reference; 00 serial research integration only"
+        },
+        "acceptance": {
+          "status": "SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC",
+          "sourceSha256": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+          "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+          "manifestSha256": "99c298ca41c0417b782ed8361d2a86c50e3bc2926d15a91bf40fdde565999d1c",
+          "witnessSha256": "64f93cb0aac91ec28af0721acf2537b8a902fc020970d2987868c51e0bb30751",
+          "verified": {
+            "sourceReproduction": "BYTE_EXACT",
+            "addedPaths": 5,
+            "transportManifest": 1,
+            "unchangedBasePaths": 625,
+            "stations": 4,
+            "prototypes": 13,
+            "scripts": 9,
+            "manualCounters": 9,
+            "consumers": 9,
+            "local": 8,
+            "account": 1,
+            "missions": 809,
+            "affectedMissions": 31,
+            "stationRefs": 65,
+            "itemCounterClassPopulation": 130,
+            "nativeRanges": 3,
+            "nativeWords": 1616,
+            "llvmAarch64Mnemonics": 14,
+            "independentRawNegatives": 3,
+            "typedReproduction": {
+              "managedFullyConsumed": 9,
+              "cookRequirements": 58,
+              "directTargetItemRequirements": 0,
+              "exactTagCandidates": 1,
+              "postQuests": 7,
+              "nullRequiredItem": 1,
+              "emptyPrimaryFilters": 3
+            },
+            "upstreamTestsReexecuted": 5,
+            "upstreamMutationSubtests": 27,
+            "originalInputRehash": "PASS"
+          },
+          "limits": "Conditional successful cook event only; ownership != cook. Candy null/item interaction script behavior, active registration/mission, reward replay, persistence/game UNKNOWN. ItemCounter typed filter negative not global runtime absence.",
+          "newUnconditionalRequired": 0,
+          "productAuthorized": false,
+          "gameAccepted": false,
+          "evidence": {
+            "file": "HKIA_06A_DERIVED23_RECIPE6_MARKER_20261113_EVIDENCE.zip",
+            "sha256": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+            "manifestSha256": "3ddf7358c6fc85f6fe0056886957559205fb61f410728ca699115de4c33784a2",
+            "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+            "handoffSha256": "0e358ad635410cd4531f0a664a619de093cec15aba06f23d22167baf354adb4a",
+            "bytes": 15572,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_10_ENTRIES_9_MANIFEST_HASHES_PASS"
+          },
+          "handoff": {
+            "to": [
+              "01_COLLECTION",
+              "04_SAVE_CORE",
+              "07_RUST_CORE",
+              "00_CTRL"
+            ],
+            "task": "RECIPE6_STATION_CONDITIONAL_REFERENCE_AND_SERIAL_RESEARCH_INTEGRATION",
+            "status": "READY",
+            "scope": "No ownership cook emulation, no new writes; 00 additive research only. 03 wait concrete Candy/runtime/persistence witness."
+          }
         }
+      },
+      "candyCloudNullCausal": {
+        "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_CAUSAL",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "risk": "HIGH",
+        "baseLedgerBlob": "9a0756dac9cc43007422c1c4f3066cb75c48261f",
+        "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
+        "scope": "Resolve exact Candy Cloud null requiredItemAsset branch and active quest / interaction invocation conditions using fixed v300 Native and accepted station source; no repeated mission/counter/producer/source extraction; optional exact interaction asset only if resolved; no Writer or game authority",
+        "dependency": {
+          "station": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+          "saved": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+          "archive": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
+          "nso": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a"
+        },
+        "next": "Native null path, exact call/branch and known source join; selfQA then 06A"
       }
     },
     "04_SAVE_CORE": {
