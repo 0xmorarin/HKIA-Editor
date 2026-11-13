@@ -5455,11 +5455,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT",
+      "status": "WAIT_DEP_R4_COMPILED_GENUINE_AND_RESEARCH_ORIGINALS",
       "task": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_STATIC_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "No duplicate legacy scope; consume legacy result; v301 after exact originals; R4 Writer after fixed",
-      "dependency": "R4 static READY; compiled execution requires fixed 00 CI artifact; 01/02 remaining exact originals",
+      "next": "00 fixed nondeploy Rust CI -> 07 private self-QA six genuine outputs -> 06A independent executable QA; 01/02 only after remaining exact originals; no duplicate legacy or R3",
+      "dependency": "00 R4 code-only binary and 07 fixed self-QA; remaining 01 catalogs/Steam301 serial; 02 scripts/config/Stage54",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -5480,13 +5480,15 @@
           "name": "01_SWITCH301_DEFINITION",
           "delta": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
           "tests": 12,
-          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION"
+          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION",
+          "recovery": "V33 exact source SHA/CRC and own delta recovered; catalogs v300/v301 and Steam301 exact original serial remain"
         },
         {
           "name": "02_SWITCH301_EXACT29",
           "delta": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
           "tests": 19,
-          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION"
+          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION",
+          "recovery": "V33 exact source and prior02 v300 exact delta SHA/CRC recovered; scripts/config originals and Stage54 remain"
         }
       ],
       "reused": {
@@ -5547,12 +5549,59 @@
         "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
         "deltaSha256": "ccdbd317cb214fd9fcc08ec93b498376447b07302d0b8c6a7b1c5661215c5750",
         "risk": "HIGH",
-        "status": "IN_FLIGHT"
+        "status": "DONE_STATIC_SCOPE_EXECUTION_WAIT_DEP"
       },
       "legacyV300": {
         "verdict": "SCOPED_PASS_STATIC_LOAD_BOUNDARY_AND_HEADER_ONLY",
         "evidence": "713f3320a4bc2ae183c6a904dcf8dd3a9d641245931de12ccba4a53d72c20e34",
         "scope": "static load boundary and headers only"
+      },
+      "r4StaticResult": {
+        "status": "PARTIAL_STATIC_ORACLE_PASS",
+        "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
+        "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
+        "deltaSha256": "ccdbd317cb214fd9fcc08ec93b498376447b07302d0b8c6a7b1c5661215c5750",
+        "manifestSha256": "25788344c4a8bfdb75108d822bfc7e061fa6234f7317c1d3a0aa589b46fcbcff",
+        "verified": {
+          "manifestEntries": 93,
+          "gitBlobs": 11,
+          "add": 23,
+          "modified": 3,
+          "deleted": 0,
+          "unchanged": 67,
+          "deltaReconstruction": "BYTE_EXACT",
+          "zipCRC": "PASS",
+          "independentSyntheticRead": 14,
+          "independentExpectedDecodedOutputs": 8,
+          "negativeInputMismatches": 12,
+          "oracle": "Python zipfile/lz4/msgpack streaming; flattened Hash128; no Writer execution",
+          "staticReview": "typed CAS/raw digest, request monotonicity, candidate before swap, archive frame preservation, verification/backup/snapshots"
+        },
+        "unverified": [
+          "Rust compile and runtime Writer",
+          "genuine outputs 0/6",
+          "independent runtime negatives/rollback",
+          "WASM Module Worker Chrome",
+          "resource budgets",
+          "game load/resave/auth"
+        ],
+        "trueRed": "NONE_REPRODUCED_RUNTIME_UNVERIFIED",
+        "evidence": {
+          "file": "HKIA_06A_R4_STATIC_QA_20261113_EVIDENCE.zip",
+          "sha256": "8c1a6f73e5bcc73c4abfe2f71e8e0d33bc5a9979534ee1e86ebd8a9af6e45303",
+          "storage": "LOCAL_CONVERSATION_ARTIFACT; PRIVATE_LIBRARY_UPLOAD_FAILED_CONTAINER_SESSION_UNAVAILABLE; aggregate and handoff persisted here"
+        },
+        "handoff": {
+          "to": "07 RUST CORE",
+          "scope": "R4 fixed delta only; no acceptance yet",
+          "dependency": "00 fixed nondeploy code-only CI (95 planned tests), then 07 six genuine private outputs and self-QA evidence",
+          "acceptance": "independent exact decoded reparse/diff, non-target ZIP/raw/64-bit/unknown preservation, rollback CAS stale close replay File A-B, verify/export backup undo redo reset, no-op; then WASM Worker gates; no development switch or enablement"
+        }
+      },
+      "recoveredInputs": {
+        "v33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "prior02": "e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f",
+        "sharedCore": "legacy exact pin reused, no new original reproduction"
       }
     },
     "06B_QA_WEB_LOCALE": {
