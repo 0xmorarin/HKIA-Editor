@@ -5632,6 +5632,55 @@
           },
           "scope": "V30 OFF no-save live only"
         }
+      },
+      "startupReconciliation20261113": {
+        "task": "06C_RELEASE_QUEUE_RECONCILIATION",
+        "status": "DONE_NO_NEW_RELEASE_ARTIFACT_WAIT_DEP_WAIT_ENV",
+        "baseHead": "6870f86ef5d6e9005da1137ab743b8fac7518229",
+        "baseLedgerBlob": "0d410c8e5d187a0d615a7f5de1a1326546ad2360",
+        "releaseGateBlob": "1843e8f2a285883ecaf49268e950670170422541",
+        "verified": {
+          "legacyResults": "PRIVATE_LIBRARY_RAW_SHA256_BOTH_MATCH",
+          "v30": {
+            "sourceSha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
+            "artifactDigest": "dd91d2d717213425ef74f4444b111d088cff952e54e6e75a8a5916d429aa9ac3",
+            "manifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+            "deployRun": 43342655323,
+            "qaRun": 43354965221,
+            "runConclusions": "SUCCESS_BOTH_LIVE_API",
+            "scope": "REUSE_OFF_NO_SAVE_ONLY"
+          },
+          "v34": {
+            "sourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+            "manifestSha256": "9fc89036d3d427e1266633ccfe691b04c3edd3a8c5b4fc9985c73a412c4b4ccc",
+            "artifactManifestSha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c",
+            "scope": "REUSE_RESEARCH_ONLY_582"
+          },
+          "v24": {
+            "sourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+            "artifactManifestSha256": "8b48ddb59bf5c7a9bbddfa8dea697d1d148fefe5497a26be20f93d778209c77b",
+            "scope": "PRIOR_OFFLINE_ACTIVATION_SCOPED_PASS_ONLY"
+          }
+        },
+        "dependencies": {
+          "reference615": "WAIT_DEP_00_FIXED_SOURCE_MANIFEST_DELTA_BUILD_AND_HANDOFF",
+          "v24": "WAIT_ENV_AUTHORIZED_PRIVATE_LOCAL_REAL_HTTP_HTTPS_BROWSER_GENUINE_BOTH_VERSIONS_DOMAINS",
+          "formal": "WAIT_DEP_FIXED_INTEGRATED_RELEASE_CANDIDATE_REQUIRED_06A_06B_ACCEPTANCE",
+          "legacy": "DONE_LEGACY_DRAIN_HISTORY_ONLY"
+        },
+        "risks": [
+          "main branch endpoint protected=false; detailed protection endpoint 403; no protection claim",
+          "Historical exposure NOT_ERASED; V29 rollback ready not live executed",
+          "V24 real browser and native game acceptance unverified; no new TRUE_RED reproduced"
+        ],
+        "nextReadyParallel": [],
+        "handoff": {
+          "to": "00 CTRL",
+          "condition": "No fresh 06C candidate; submit fixed 615 successor (33 additive logical paths) and/or authorized local V24 Browser environment; use existing QA pins, no duplicate specialist QA",
+          "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_AND_LIVE_ROLLBACK"
+        },
+        "noProductSourceChange": true,
+        "noDeployment": true
       }
     }
   },
