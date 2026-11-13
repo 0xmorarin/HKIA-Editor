@@ -5313,7 +5313,7 @@
     "nextReadyParallel": [
       "06_V34_FIXED_RESEARCH_REFERENCE_SCOPED_QA",
       "07_R3_BOUNDED_SESSION_ABI_EXISTING_IN_FLIGHT",
-      "00_SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI"
+      "00_SVELTE_PR6_FIXED_CI_EXISTING_IN_FLIGHT"
     ],
     "nextAfterDep": [
       "06_R3_SCOPE_AFTER_07_FIXED",
@@ -6228,13 +6228,18 @@
     },
     "svelteFollowupCI": {
       "task": "SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI",
-      "status": "IN_FLIGHT",
+      "status": "CI_IN_FLIGHT",
       "owner": "00 CTRL",
       "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
       "sourceHead": "bb563adb29046fb83f0360a303b9119487bb43dd",
       "sourceSha256": "8da9c065f522906dc11656a4ff1d91b109758eeaaef348bd0f1a424ba5ad310a",
       "scope": "Only existing 05 followup 8 paths plus CI workflow, no main merge, no deploy",
-      "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd"
+      "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+      "head": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+      "workflowBlob": "f1e4352021553e74d96ed87b1e4bf7387213e7e5",
+      "run": 43361999625,
+      "verified": "PR6 fast-forward from 7fe5a83d to exact 05 followup + one workflow change; pinned lock/no regeneration; no deployment",
+      "next": "Actual CI result; 05 focused repair/continuation and 06 scoped independent QA after fixed compile; no duplicate activation."
     }
   },
   "formalRelease": {
