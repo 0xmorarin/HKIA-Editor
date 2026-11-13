@@ -1,16 +1,16 @@
-name: HKIA Svelte isolated locale consumer R1
+name: HKIA Svelte isolated locale consumer R1 repair
 on:
   push:
     branches:
-      - web05/svelte-locale-consumer-r1
+      - web05/svelte-locale-consumer-r1-repair
 permissions:
   contents: read
 concurrency:
-  group: hkia-svelte-locale-r1-isolated
+  group: hkia-svelte-locale-r1-repair-isolated
   cancel-in-progress: false
 jobs:
   isolated:
-    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-locale-consumer-r1'
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-locale-consumer-r1-repair'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -24,8 +24,8 @@ jobs:
       - name: Verify fixed locale scope and lock
         run: |
           set -euo pipefail
-          git merge-base --is-ancestor 9863dd6b38ebcbf4ce25611812dd78ea8dd7e887 HEAD
-          test "$(git diff --name-only 9863dd6b38ebcbf4ce25611812dd78ea8dd7e887 HEAD)" = .github/workflows/svelte05-locale-r1-isolated.yml
+          git merge-base --is-ancestor 6ebabfe7ebb29e06ff13edd9b5a45d7131f14995 HEAD
+          test "$(git diff --name-only 6ebabfe7ebb29e06ff13edd9b5a45d7131f14995 HEAD)" = .github/workflows/svelte05-locale-r1-isolated.yml
           cd svelte-ui
           printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
           npm ci --no-audit --no-fund
