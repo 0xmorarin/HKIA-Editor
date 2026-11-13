@@ -490,7 +490,17 @@
         ],
         "next": "03 versioned source/config adjudication and 06 independent 6 ADD scoped reproduction; 04 existing v301/87 Writer unchanged; v300/83 private proof after prior accepted 02/03/06 gates; 02 WAIT QA/new witness; no deploy"
       },
-      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07"
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07",
+      "v301OriginalRecovery": {
+        "task": "SWITCH301_EXACT29_REMAINING_ORIGINAL_RECOVERY",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "ce823591b30c5b40fdd33e0da7fccbdb9b02c17b",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Recover exact scripts/config/Stage54 originals; pin original locators in private handoff; existing fixed delta and recovered core/V33/prior02 reused; no new product changes",
+        "risk": "HIGH_SOURCE_REPRODUCTION_FOR_EXISTING_CONTRACT",
+        "dependency": "06A recovered V33/prior02; legacy core exact; QA decision 20261113"
+      }
     },
     "03_LINKAGE": {
       "status": "EXACT29_SOURCE_CAUSAL_JOIN_LOCAL_PASS_QA_READY_RECIPE6_WAIT_STATION_WITNESS",
