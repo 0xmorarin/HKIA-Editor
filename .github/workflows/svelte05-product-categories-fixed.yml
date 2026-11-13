@@ -1,0 +1,82 @@
+name: HKIA V33 actual product categories fixed CI (no deploy)
+on:
+  push:
+    branches: [ctrl/svelte-v33-categories-fixed-20261113]
+    paths: ['.github/workflows/svelte05-product-categories-fixed.yml']
+permissions:
+  contents: read
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Exact source and locked compile
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor fd893041d47051016fbc4797d9e8d67dc7865389 HEAD
+          test "$(git diff --name-only fd893041d47051016fbc4797d9e8d67dc7865389 HEAD)" = .github/workflows/svelte05-product-categories-fixed.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          npm test
+          npm run check -- --fail-on-warnings
+          npm run build
+          npx --no-install vite build --config vite.product-categories.config.ts
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: fixed-V33
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Exact V33 reference, candidate and actual browser
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          test "$(git -C ../fixed-V33 rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          base="../fixed-V33/site"
+          manifest="../fixed-V33/site-manifest.json"
+          delta="$RUNNER_TEMP/categories-v33-delta"
+          candidate="$RUNNER_TEMP/categories-v33-candidate"
+          node --experimental-strip-types scripts/verify-product-category-reference.mjs "$base" "$manifest"
+          node --experimental-strip-types scripts/verify-product-category-delta.mjs "$base" "$manifest"
+          node scripts/prepare-product-categories-delta.mjs "$base" "$manifest" dist-product-categories/product-categories.mjs "$delta"
+          cp -a "$base" "$candidate"
+          cp "$delta/src/"* "$candidate/src/"
+          python3 - "$base" "$manifest" "$delta" "$candidate" <<'PY'
+          import hashlib,json,pathlib,sys
+          base,manifest,delta,candidate=map(pathlib.Path,sys.argv[1:])
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          m=json.loads(manifest.read_bytes())
+          d=json.loads((delta/'delta-manifest.json').read_bytes())
+          assert {p.relative_to(candidate).as_posix() for p in candidate.rglob('*') if p.is_file()}==set(m['files'])|{'src/product-categories.mjs'}
+          assert set(d['changes'])=={'src/app.js','src/product-categories.mjs'}
+          for p,e in m['files'].items():
+              assert sha(base/p)==e['sha256'],p
+              assert sha(candidate/p)==(d['changes'][p]['after'] if p=='src/app.js' else e['sha256']),p
+          assert sha(candidate/'src/app.js')=='e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce'
+          assert sha(candidate/'src/product-categories.mjs')==d['changes']['src/product-categories.mjs']['after']
+          assert 'sourceMappingURL=' not in (candidate/'src/product-categories.mjs').read_text()
+          print('CATEGORIES DELTA 4145 unchanged 1 MOD 1 ADD; 4076 WebP exact')
+          PY
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-product-categories-parity.py "$base" "$candidate"
+          mkdir "$RUNNER_TEMP/category-evidence"
+          cp "$delta/delta-manifest.json" "$RUNNER_TEMP/category-evidence/"
+          cp "$delta/src/"* "$RUNNER_TEMP/category-evidence/"
+          cp node_modules/svelte/LICENSE.md "$RUNNER_TEMP/category-evidence/Svelte-LICENSE.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_ProductCategories_V33_CodeOnly
+          path: ${{ runner.temp }}/category-evidence
+          if-no-files-found: error
+          retention-days: 7
