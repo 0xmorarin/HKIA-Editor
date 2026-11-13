@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "01_SWITCH300_ORIGINAL_RECIPE_OBJECT_PARITY_IN_FLIGHT; SAVED_CONDITIONS_V39_ACCEPTED; 03/04/07_READONLY_REFERENCE; NO_REPEAT",
+      "next": "06A_SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA_READY; 03/04/07/05_AFTER_ACCEPTANCE; 01_WAIT_NEW_CAUSAL_WITNESS_OR_QA_COUNTEREXAMPLE; V39_SAVED_CONDITIONS_ACCEPTED",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -314,16 +314,34 @@
       },
       "switch300OriginalParity": {
         "task": "FORMAL_SWITCH300_ORIGINAL_RECIPE_OBJECT_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_06A_READY",
         "owner": "01 COLLECTION",
         "risk": "HIGH",
         "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
         "baseLedgerBlob": "df728c2070d53430d98c06021664195fcd477efd",
         "scope": "New exact Switch300 original MasterDefinition from 08 recovered Stage54 archive; compare original 282 Recipe object identity/raw bytes/typed prefix and targeted local pointers against accepted v301 Steam/Switch parity. No repeat 08 localized IDs/key mapping or 03 station/producer; no Writer authority; private additive evidence only.",
         "dependency": "08 fixed original archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; 06B accepted typed version scope 9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83; 01 v301 accepted parity; V39 fixed",
-        "next": "Read fixed original bytes; compare exact typed object and local reference parity; self-QA then 06A; if bytes unavailable WAIT_ENV",
+        "next": "06A READY exact new four-path HIGH scope; 01 WAIT new causal witness or independent counterexample; 03/04/07/05 conditional after acceptance; no V24/Pages change",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "claimCommit": "fc0da8fa4b375b08bc3eec8836fa812ffb9cf7b7",
+        "artifact": "HKIA_01_SWITCH300_RECIPE_VERSION_DELTA_V39_20261113.zip",
+        "deltaSha256": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+        "manifestSha256": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
+        "resultSha256": "ea4d11505debaa1ee6088c43e10d3a19381ac69594f1ad2729236c6d0c435bf5",
+        "privateLibrary": "HKIA Editor Private",
+        "changes": "4 ADD 0 MOD 0 DEL + transport manifest; all 647 V39 entries byte identical",
+        "verified": "Original Switch300 archive SHA/CRC 17 entries, exact catalog/bundle/serial and Switch301 bundle/serial; accepted v301 witness/projections match; 12163 ItemId/GUID/PathId/category identity; 1686 raw changed (1637 managed tail only, 49 typed); 282 Recipe IDs and managed tails equal, 263 raw equal, 19 membership pair only changes (13 exact-to-empty, six food-to-recipe); 183 local pointer occurrences across 39 targets, six result Food raw change membership only; 29 membership pairs; 25 groups/181 nested and 130 counters raw equal; 18 focused PASS, result byte-exact repeat, original SHA unchanged, Library byte-exact SHA CRC 5 entries/4 hashes",
+        "classification": "STATIC_VERSIONED_COLLECTION_MEMBERSHIP_DELTA; 300/301 MUST NOT SUBSTITUTE GROUP/KEY/GUID; NO NEW REQUIRED WRITE OR PRODUCT AUTHORITY; 1637 OPAQUE TAIL DIFFERENCES NOT SEMANTICALLY DECODED",
+        "remaining": "06A independent static/typed original oracle, actual versioned collection predicate/history/migration/Key0/Key1, runtime and physical persistence unknown; no product/game authority. Non-Recipe active producer/reference closure unchanged.",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA",
+          "status": "READY",
+          "fixedSourceSha256": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+          "scope": "New four ADD paths; exact original typed object/field oracle, 282 Recipe and 29 membership pairs (13 exact-to-empty, 6 Recipe6 food-to-recipe, 6 result Food), all 183 references and tails, 25 groups/181 nested/130 counters; version substitution, key/GUID mismatch, partial/extra field, duplicate ID, empty vs unknown negatives. No repeat 08 localization or 03 station; reuse accepted v301 witness. 647 V39 unchanged, independent source/projection hashes.",
+          "consumer": "03 versioned membership/history/migration causal contract; 04/07 stable version-specific mapping and fail-closed boundary; 05 display only, material UI changes via 06B; 00 additive research integration only after 06A; no new writer authority"
+        }
       }
     },
     "02_ACHIEVEMENT": {
