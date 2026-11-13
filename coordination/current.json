@@ -803,12 +803,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "CANDY_CLOUD_NULL_NATIVE_CAUSAL_IN_FLIGHT",
+      "status": "CANDY_CLOUD_NULL_NATIVE_SELF_PASS_06A_READY",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06A_SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_INDEPENDENT_QA; 03_WAIT_QA_OR_CONCRETE_CANDY_SCRIPT_RUNTIME_PERSISTENCE; 00_SERIAL_AFTER_QA; 01_04_07_DIRECT_CONDITIONAL_REFERENCE_AFTER_QA",
+      "next": "06A_SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA; 03_WAIT_EXACT_INTERACTION_BUNDLE_OR_CONTROLLED_RUNTIME_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -1236,7 +1236,7 @@
         "baseLedgerBlob": "5022a27e4a7a3b0ae489caa0fabf3a4418bbcf2c",
         "scope": "New Stage54 original archive recovery; exact four stations, script/lock/upgrade/postprocess references; no repeated Recipe6 native or allocator or provider analysis; no product authority",
         "dependency": "Stage54 archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; accepted prior 03 a3286804459d4372ca60eb5312e133a0c0139cc31f070dd89e2cfd997c3ad3a5",
-        "next": "Accepted source; 01 saved conditions accepted; concrete Candy null branch analysis only",
+        "next": "DONE scoped static source acceptance; 01 station saved conditions independently accepted; Candy null targeted successor self PASS 06A READY",
         "claimCommit": "1fe86f70ff9c91c4e9aa471b11f0e29bec575dff",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "artifact": "HKIA_03_SWITCH300_RECIPE6_STATION_SOURCE_V36_DELTA_20261113.zip",
@@ -1322,11 +1322,16 @@
             "status": "READY",
             "scope": "No ownership cook emulation, no new writes; 00 additive research only. 03 wait concrete Candy/runtime/persistence witness."
           }
+        },
+        "savedConditionsAcceptance": {
+          "status": "SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
+          "sourceSha256": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+          "scope": "read-only saved conditions; separate Candy mission observation; no game/product authority"
         }
       },
       "candyCloudNullCausal": {
         "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseLedgerBlob": "9a0756dac9cc43007422c1c4f3066cb75c48261f",
@@ -1338,7 +1343,28 @@
           "archive": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
           "nso": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a"
         },
-        "next": "Native null path, exact call/branch and known source join; selfQA then 06A"
+        "next": "06A new fixed HIGH scope READY; 03 WAIT exact script body/controlled runtime/persistence or concrete QA counterexample",
+        "baseSourceSha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "claimCommit": "d722ac2c38a6179a421cb96aea671c425e82a379",
+        "artifact": "HKIA_03_SWITCH300_CANDY_CLOUD_NULL_V40_DELTA_20261113.zip",
+        "deltaSha256": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
+        "manifestSha256": "914b07a5dd6451c49286a25f29d37a7975c9c96e161e325ed2e143ff1c00ebea",
+        "witnessSha256": "86411afa8b676f0ed746933692eed8dc035e2602f4ef913483571f42b6bfd5a7",
+        "savedSha256": "3792ec37f08a6bcb61a44e061d479191f03d79ab364bcef70b02a92ccad6f032",
+        "changes": "8 ADD + transport manifest; 0 MOD/DEL; 653 V40 paths unchanged; private Library byte exact readback CRC + 8 manifest hashes",
+        "verified": "3 Native ranges/2684 words/43 anchors/14 branches/10 metadata bindings; exact null Item bypass, Active task=1, CompleteRequirement id3 false updateTaskImmediately, false error path; task IDs [0,1,3,4] exact position2; Requirement3 PlayMaker2 amount1; null tracker; exact Cinnamoroll tag reservation and conditional AssetLoader/runner; 15 ordered dependencies, 1 missing; 2 distinct genuine v300 slots both mission3/task3 true/requirement3 union2 true amount1; 1 duplicate/1 other version excluded, original unchanged; 3 Python +4 Node tests PASS (16 mutation +6 type negatives); native/saved byte-exact reproduction",
+        "classification": "CONDITIONAL_COOK_POSTPROCESS_STATIC_AND_SAVED_OBSERVATION; OWNERSHIP_NOT_COOK; NO_NEW_UNCONDITIONAL_REQUIRED; NO_WRITER_AUTHORITY",
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "remaining": "Catalog missing b0e161af18716064200582f7e4c02ebd.bundle (first of 15; exact script body location not proven). Exact script body effects, scheduler/registration/reservation and actual game invocation, durable Save/load/resave/reward/replay UNKNOWN. No controlled before/after. No new unconditional write. Independent 06A required.",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "status": "READY",
+          "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA",
+          "fixedSourceSha256": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
+          "scope": "8 additive research paths only; independent Native branch/slot and exact source task ID/PPtr/PlayMaker oracle; 2 genuine read-only slots independently check union2, absent/ambiguous/type negatives, catalog missing dependency and authority fail closed. Reuse accepted station/provider/producer/saved conditions; no prior whole-scope redo.",
+          "condition": "06A static/read-only scoped acceptance -> 01/04/07 conditional reference, 00 serial research-only integration; no product permission"
+        }
       }
     },
     "04_SAVE_CORE": {
