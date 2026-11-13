@@ -298,7 +298,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_DERIVED23_SWITCH_SOURCE_SELF_PASS_06A_READY; EXACT29_ACCEPTED_REUSE; 02_WAIT_NEW_WITNESS_OR_QA_COUNTEREXAMPLE",
+      "next": "02_HATS_OFF_PRODUCER_SELF_PASS_06A_READY; DERIVED23_EXISTING_QA; CREATION_WAIT_GENUINE_BEFORE_AFTER; NO_REDO",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -402,7 +402,14 @@
           "status": "WAIT_DEP",
           "exactTarget": "achievement_hatsOffToYou",
           "group": "collection_nuls",
-          "condition": "genuine same-version before/after legitimate first progress; both absent -> both present, exact producer trigger, all-document Id/NextId, reload/resave/parent/root consistency; no synthetic rows"
+          "condition": "genuine same-version before/after legitimate first progress; both absent -> both present, exact producer trigger, all-document Id/NextId, reload/resave/parent/root consistency; no synthetic rows",
+          "staticProducer": {
+            "status": "SELF_PASS_06A_READY",
+            "version": "3.0.1",
+            "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER",
+            "deltaSha256": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+            "condition": "Exact legitimate ordinary Nul already wearing removable hat -> no hat, then normal save/reopen/resave; absent pair before, both present after, Id/NextId and parent/root/reward verification. Actual game witness not observed. No synthetic rows."
+          }
         },
         "next": "06 scoped QA 9 ADD + 03 missing Manual conditional causal review after its current task; 04 existing exact20 private writer independent; new29 after both accepted; no new row creation; 00 serial integration"
       },
@@ -682,13 +689,54 @@
       },
       "hatsOffProducerReview": {
         "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "risk": "HIGH",
         "scope": "Static exact missing Manual target HatsOffToYouAchievementCounter binding and native legitimate hat-removal producer branch; source-only, no row allocation or game persistence assertion",
-        "dependency": "02 existing missing Manual WAIT real before/after; exact class field now located in v301 dump, original Switch core available; independent of Derived23 QA"
+        "dependency": "02 existing missing Manual WAIT real before/after; exact class field now located in v301 dump, original Switch core available; independent of Derived23 QA",
+        "deltaSha256": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+        "manifestSha256": "b7ab3dc0231c8f656e507d7106797c3db58dbef0d2074b25e97e627e01a47d4e",
+        "witnessSha256": "eb127a01fac26b188fc6b5608528507c28eeba128e1902125099037365aa009f",
+        "artifact": "HKIA_02_HATS_OFF_PRODUCER_V36_DELTA_20261113.zip",
+        "privateLibrary": "HKIA Editor Private",
+        "changes": "6 ADD 0 MOD 0 DEL; V36 625 paths unchanged",
+        "verified": {
+          "version": "3.0.1",
+          "collectionVersion": 87,
+          "originalPins": 9,
+          "serializedPins": 4,
+          "nativeAnchors": 43,
+          "branches": 8,
+          "metadataSlots": 4,
+          "focusedPass": 23,
+          "witnessRepeat": "BYTE_EXACT",
+          "prototypeFactoryWrapperPickCounter": "EXACT_TYPED_GUID_PPTR_CAB",
+          "parentMembers": 3,
+          "rewardQuantity": 1,
+          "increment": 1,
+          "predicate": "startedWithAHat && !endedWithAHat",
+          "priorMissingPairReuse": true,
+          "readback": "BYTE_EXACT_CRC_5_MANIFEST_HASHES"
+        },
+        "classification": "RELATED_STATIC_EXACT_FIRST_PROGRESS_PRODUCER; NO_NEW_UNCONDITIONAL_REQUIRED; NO_WRITER_PERMISSION",
+        "unverified": [
+          "actual interaction eligibility/runtime dispatch",
+          "physical absent-to-present Save pair and Id/NextId",
+          "reload/resave and reward claim/replay",
+          "Switch300 exact script/Native parity",
+          "06A independent acceptance"
+        ],
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER_INDEPENDENT_QA",
+          "scope": "6 ADD fixed V36; exact v301 prototype/factory/wrapper/pick PPtr and CAB, native 43/8/4, exact target/parent/reward, independent oracle and negatives; no prior accepted repeat, no game or writer authority",
+          "privateLocator": "HKIA_02_HATS_OFF_PRODUCER_PRIVATE_HANDOFF_20261113.md",
+          "privateLocatorSha256": "d8375e8aee630ee6fdc9bfcba80e6df175603d25d71f9f08f7147b877101bef0",
+          "condition": "READY_FIXED_DELTA_AND_ORIGINAL_LOCATORS_READBACK"
+        },
+        "next": "06A independent QA -> 03/04/07 source-only reference; physical first-progress WAIT_DEP; Derived23 separate existing claim"
       }
     },
     "03_LINKAGE": {
