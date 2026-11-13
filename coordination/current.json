@@ -5322,7 +5322,7 @@
         }
       },
       "distributionRepair": {
-        "status": "IN_FLIGHT_CONNECTOR_BINARY_SEGMENT_TRANSFER",
+        "status": "ALL_PARTS_REMOTE_STAGED_ACTIONS_RECONSTRUCT_IN_FLIGHT",
         "incidentRun": 43307905181,
         "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
         "sourceProbe": {
@@ -5348,7 +5348,7 @@
           "commit": "15cacf59a0c24a1124edb3741816d300794b4cdb",
           "manifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d"
         },
-        "remoteRefs": "BOTH_HTTP422_NO_COMMIT_FOUND_20261113",
+        "remoteRefs": "ORIGINAL_PINNED_REFS_PENDING_ACTIONS_RECONSTRUCTION",
         "repairKit": {
           "file": "HKIA_CTRL_Pages_PrivacyRepair_20261113.zip",
           "sha256": "a0fc3157af6affe2a4e3174b9a2d9eccdc82a8f07e270c682aaf8f3b9ce94d76"
@@ -5357,15 +5357,15 @@
         "deployment": "UNVERIFIED",
         "https": "UNVERIFIED",
         "historicalExposure": "NOT_ERASED",
-        "next": "Run existing private kit check/stage on authorized authenticated git host; verify both exact refs; then 00 serial PR3 integration/manual OFF deployment and 06 live QA. No further unchanged binary-chunk retries.",
+        "next": "Observe second staging Actions run; verify both exact V30/V29 remote refs and manifest blobs; PR3 independent scope and serial merge; manual OFF deploy.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "IN_FLIGHT_CHECKPOINTED_BINARY_TRANSPORT",
+          "status": "ALL_PARTS_REMOTE_STAGED_ACTIONS_RECONSTRUCT_IN_FLIGHT",
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "7/57 parts exact Git blob SHA, durable transport ref; original pinned V30/V29 commits not yet reconstructed.",
-          "next": "Continue parts 7-56 from pinned 2MiB manifest; append verified blobs to transport branch in bounded checkpoints; reconstruct bundle and verify refs before PR3.",
+          "observed": "57/57 blobs verified and committed; exact 118292395 bytes; first push run observed in progress; corrected shallow checkout assertion to pin parts subtree, second run pending.",
+          "next": "Observe second staging Actions run; verify both exact V30/V29 remote refs and manifest blobs; PR3 independent scope and serial merge; manual OFF deploy.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
@@ -5376,13 +5376,17 @@
           "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
           "transport": {
             "branch": "ctrl/pages-off-transport-20261113",
-            "head": "32838d3d86ceac10fc56d09392e0b8acef702087",
-            "verifiedParts": 7,
+            "head": "b248505aad41ad765470c2d4d90a4afa64cedec4",
+            "dataCommit": "464a92472823e401983309465799063b1541f04a",
+            "partsTree": "db38cf6b47772253ec5daf463ebf0c7f0cb88004",
+            "verifiedParts": 57,
             "totalParts": 57,
-            "contiguousThrough": 6,
-            "bytes": 13631488,
+            "contiguousThrough": 56,
+            "bytes": 118292395,
             "manifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
-            "method": "2 MiB bounded blobs; exact expected Git SHA; checkpoint only transport tree; no deploy"
+            "method": "All 57 Git blob SHA exact; isolated branch, no deploy",
+            "workflow": ".github/workflows/stage-off-bundle.yml",
+            "firstRun": 43342189200
           }
         }
       },
