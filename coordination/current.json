@@ -1014,7 +1014,7 @@
       }
     },
     "03_LINKAGE": {
-      "status": "CANDY_CLOUD_NULL_NATIVE_SELF_PASS_06A_READY",
+      "status": "VERSIONED_RECIPE_MEMBERSHIP_CAUSAL_IN_FLIGHT",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
@@ -1542,7 +1542,7 @@
       },
       "candyCloudNullCausal": {
         "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_CAUSAL",
-        "status": "PARTIAL_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_STATIC_AND_READONLY_GENUINE",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseLedgerBlob": "9a0756dac9cc43007422c1c4f3066cb75c48261f",
@@ -1554,7 +1554,7 @@
           "archive": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
           "nso": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a"
         },
-        "next": "06A new fixed HIGH scope READY; 03 WAIT exact script body/controlled runtime/persistence or concrete QA counterexample",
+        "next": "WAIT exact interaction body or controlled runtime evidence; accepted V41 reuse",
         "baseSourceSha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
         "claimCommit": "d722ac2c38a6179a421cb96aea671c425e82a379",
         "artifact": "HKIA_03_SWITCH300_CANDY_CLOUD_NULL_V40_DELTA_20261113.zip",
@@ -1570,12 +1570,41 @@
         "remaining": "Catalog missing b0e161af18716064200582f7e4c02ebd.bundle (first of 15; exact script body location not proven). Exact script body effects, scheduler/registration/reservation and actual game invocation, durable Save/load/resave/reward/replay UNKNOWN. No controlled before/after. No new unconditional write. Independent 06A required.",
         "handoff": {
           "to": "06A_QA_DATA_CORE",
-          "status": "READY",
+          "status": "DONE_SCOPED_ACCEPTED",
           "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA",
           "fixedSourceSha256": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
           "scope": "8 additive research paths only; independent Native branch/slot and exact source task ID/PPtr/PlayMaker oracle; 2 genuine read-only slots independently check union2, absent/ambiguous/type negatives, catalog missing dependency and authority fail closed. Reuse accepted station/provider/producer/saved conditions; no prior whole-scope redo.",
           "condition": "06A static/read-only scoped acceptance -> 01/04/07 conditional reference, 00 serial research-only integration; no product permission"
+        },
+        "acceptance": {
+          "status": "DONE_SCOPED_PASS_STATIC_AND_READONLY_GENUINE",
+          "evidence": {
+            "file": "HKIA_06A_RECIPE_VERSION_HATS_V300_CANDY_20261113_EVIDENCE.zip",
+            "sha256": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166",
+            "manifestSha256": "a6bd876722259def7a926d9c122c1292cb7f1c11782c0e320ac4f646ae40a34e",
+            "resultSha256": "4b0fcf31ee2316c5329e095ba09455aac00cbbfc13c1cff640d115c342841b4f",
+            "handoffSha256": "7f62c3c2bb1a7e4a877e13cd287f5746c3ac7aa37f15d60944f1957d46e902f9",
+            "bytes": 19662,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_9_ENTRIES_8_MANIFEST_HASHES_PASS"
+          },
+          "scope": "static and read-only genuine only; no Writer/game authority"
         }
+      },
+      "versionedRecipeMembershipCausal": {
+        "task": "SWITCH300_301_RECIPE_VERSIONED_MEMBERSHIP_HISTORY_CAUSAL",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "risk": "HIGH",
+        "baseLedgerBlob": "fe857a5f599058d5f0dd203b5754711a95e7e80d",
+        "baseSourceSha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "scope": "New exact membership deltas: 19 Recipe, 6 food counterparts, other 4 membership changes; Key0/Key1/history/migration targeted native and existing genuine read-only evidence; no new writer, no repeat 01 source extraction or station/producer",
+        "dependency": {
+          "source": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+          "manifest": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
+          "evidence": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166"
+        },
+        "next": "Typed mapping and targeted native migration closure, selfQA then 06A"
       }
     },
     "04_SAVE_CORE": {
