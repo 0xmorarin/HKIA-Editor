@@ -7646,7 +7646,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -8320,6 +8320,15 @@
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
           "readbackVerified": true
         }
+      },
+      "nativeLiteral": {
+        "task": "NATIVE_LOCALE_CODE_AND_MISSING_SENTINEL_EXACT_WITNESS",
+        "status": "IN_FLIGHT",
+        "claim": "20261113_08_NATIVE_LITERAL",
+        "baseHead": "c1e18666ca67696d504930c2da2d533d2ff6a1df",
+        "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
+        "scope": "Switch300/301 exact Native AsLocaleCode/AsNativeName, TryGetFromLocaleCode and missing-sentinel literal via metadata usage addresses; no game/runtime guarantee or product modifications",
+        "dependency": "R2 fixed Native pins; original per-version stringliteral metadata"
       }
     },
     "06A_QA_DATA_CORE": {
