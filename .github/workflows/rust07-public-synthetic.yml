@@ -1,0 +1,39 @@
+name: HKIA Rust07 R2 public synthetic compile
+on:
+  push:
+    branches:
+      - rust07/r2-public-synthetic-compile
+permissions:
+  contents: read
+concurrency:
+  group: hkia-rust07-public-synthetic
+  cancel-in-progress: false
+jobs:
+  public-synthetic:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/rust07/r2-public-synthetic-compile'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Validate fixed public input and provision pinned Rust
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = 7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd
+          test "$(git diff --name-only HEAD^ HEAD)" = .github/workflows/rust07-public-synthetic.yml
+          python3 tests/rust/run-public-ci.py --preflight-only
+          rustup toolchain install 1.85.1 --profile minimal
+          rustup override set 1.85.1
+          rustc --version
+          cargo --version
+      - name: Offline public-synthetic tests and release build
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/rust/run-public-ci.py
