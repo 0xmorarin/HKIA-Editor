@@ -31,11 +31,24 @@ export function validateDetail(s:DetailSnapshot):DetailSnapshot{
 }
 export function createDetailPort(b:DetailBinding){
  const read=()=>validateDetail(b.read());
- const invoke=(fn:()=>void,check:(s:DetailSnapshot)=>boolean)=>{try{fn();if(!check(read()))throw Error('COLLECTION_DETAIL_POSTCONDITION');}finally{b.invalidate?.();}};
+ // One validation witness, not a second selection owner. V33 retains the inspected
+ // ID across definitions; the binding alone decides which definition contains it.
+ let witness:{category:string;definition:string;matched:boolean;id:number;row:string}|null=null;
+ const observe=(s:DetailSnapshot)=>{if(s.categoryKey===null||s.definitionKey===null||witness&&(witness.category!==s.categoryKey||witness.matched!==s.matched))witness=null;if(s.categoryKey!==null&&s.definitionKey!==null&&s.selectedItem!==null)witness={category:s.categoryKey,definition:s.definitionKey,matched:s.matched,id:s.selectedItem.id,row:rowKey(s.selectedItem)};return s;};
+ const invoke=(fn:()=>void,check:(s:DetailSnapshot)=>boolean)=>{try{fn();const after=read();if(!check(after))throw Error('COLLECTION_DETAIL_POSTCONDITION');return after;}finally{b.invalidate?.();}};
  const anchor=(s:DetailSnapshot)=>({categoryKey:s.categoryKey,definitionKey:s.definitionKey,matched:s.matched,filter:filterKey(s.filter),selected:selectedKey(s),total:s.total,limit:s.limit});
  const sameScope=(a:DetailSnapshot,s:ReturnType<typeof anchor>)=>a.categoryKey===s.categoryKey&&a.definitionKey===s.definitionKey&&a.matched===s.matched;
- return {read,
-  selectDefinition(key:string){const s=read();if(!s.definitions.some(d=>d.key===key))throw Error('COLLECTION_DEFINITION_NOT_VISIBLE');const before=anchor(s);invoke(()=>b.selectDefinition(key),a=>a.categoryKey===before.categoryKey&&a.matched===before.matched&&a.definitionKey===key&&a.limit===ITEM_PAGE&&a.selectedItem===null&&a.filter.query===''&&a.filter.history==='all'&&a.filter.sort==='source');},
+ return {read:()=>observe(read()),
+  selectDefinition(key:string){const s=observe(read());if(!s.definitions.some(d=>d.key===key))throw Error('COLLECTION_DEFINITION_NOT_VISIBLE');const before=anchor(s),prior=witness;observe(invoke(()=>b.selectDefinition(key),a=>{
+   if(a.categoryKey!==before.categoryKey||a.matched!==before.matched||a.definitionKey!==key||a.limit!==ITEM_PAGE||a.filter.query!==''||a.filter.history!=='all'||a.filter.sort!=='source')return false;
+   if(key===before.definitionKey)return selectedKey(a)===before.selected&&(before.selected===null||a.total>0);
+   // A different definition may retain the exact old identity only if membership
+   // is visible or was observed for that same definition. No arbitrary new selection.
+   const visible=prior&&a.rows.find(r=>r.id===prior.id);
+   if(visible&&rowKey(visible)!==prior!.row)return false;
+   const expected=prior&&a.total>0&&(visible||prior.definition===key)?prior.row:null;
+   return selectedKey(a)===expected;
+  }));},
   filter(f:ItemFilter){const s=read();if(!s.definitionKey||!validFilter(f)||!s.matched&&f.history!=='all')throw Error('COLLECTION_FILTER_DENIED');const before=anchor(s),desired={...f},expected=filterKey(desired);invoke(()=>b.changeFilter(desired),a=>sameScope(a,before)&&a.limit===ITEM_PAGE&&filterKey(a.filter)===expected&&selectedKey(a)===before.selected);},
   inspect(id:number){const s=read(),row=s.rows.find(r=>r.id===id);if(!row)throw Error('COLLECTION_ITEM_NOT_VISIBLE');const before=anchor(s),target=rowKey(row),prefix=prefixKeys(s);invoke(()=>b.inspect(id),a=>sameScope(a,before)&&a.total===before.total&&a.limit===before.limit&&filterKey(a.filter)===before.filter&&samePrefix(prefix,a)&&selectedKey(a)===target);},
   more(){const s=read();if(s.total<=s.limit||s.limit+ITEM_PAGE>ITEM_VIEW_LIMIT)throw Error('COLLECTION_PAGE_DENIED');const before=anchor(s),prefix=prefixKeys(s);invoke(b.showMore,a=>sameScope(a,before)&&a.total===before.total&&a.limit===before.limit+ITEM_PAGE&&filterKey(a.filter)===before.filter&&selectedKey(a)===before.selected&&samePrefix(prefix,a));}
