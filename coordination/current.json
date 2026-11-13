@@ -11153,7 +11153,7 @@
       "status": "PARTIAL_V33_FOUR_SCOPES_PASS_COLLECTION_ITEMS_TRUE_RED",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "00 READY compose accepted V33 Tab+Filter+Category+Achievement list+Header without Collection items; 05 READY Collection items rollback fix; 06B after fixed CI; 06C integrated artifact separately; no accepted scope repeat",
+      "next": "05 repair IN_FLIGHT observed fixed successor 1cbd350e; 06B WAIT_DEP self-QA handoff then independent changed-scope QA; fixed CI/browser before final acceptance. 00/06C five-scope composition IN_FLIGHT independently; Collection Items excluded; no accepted scope repeat.",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -12765,6 +12765,18 @@
           "scope": "bridge rollback only plus regression",
           "acceptance": "Exact original reproduction fails; fixed passes all 3 independent + existing 17 focused and full suite/compiled real Browser. Preserve other accepted scopes. 00 fixed CI then 06B."
         }
+      },
+      "collectionItemsRepairReadiness": {
+        "task": "V33_COLLECTION_ITEMS_ROLLBACK_REPAIR_INDEPENDENT_QA",
+        "status": "WAIT_DEP_05_SELF_QA_HANDOFF_AND_FIXED_CI",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "observedRepairHead": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8",
+        "priorRedSource": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+        "observedBaseLedgerBlob": "9b0b24924c2e6f4634b5a515fdbc06ed1e44b45b",
+        "scope": "Exact one bridge MOD + one rollback test ADD, static diff only; producer claim IN_FLIGHT. No independent PASS or test execution yet.",
+        "bridgeBlob": "b1b68f20d2ca187d9a4959d0c77a941dbf58bf3a",
+        "regressionBlob": "311b3e6a7ccd7f690fffa970e836ee9b1d94c62c",
+        "next": "05 fixed self-QA handoff -> 06B independent old-red reproduction and changed-scope lifecycle/ownership negatives; 00 fixed CI then actual browser acceptance. Preserve other accepted scopes. Existing 06C composition separate."
       }
     },
     "06C_QA_RELEASE": {
