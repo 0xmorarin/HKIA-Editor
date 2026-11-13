@@ -328,7 +328,13 @@ function appendDependencies(host,deps){
   panel.append(node('p','editor-hint','連動更新は0件です。UNKNOWNをゼロまたは未取得とは解釈しません。'));host.append(panel);
 }
 
+let productAchievementListBridge=null;
+function renderProductAchievementList(list,all,acc,save){
+  if(!productAchievementListBridge||state.achLimit>1200)return;
+  try{const media=imageUi();productAchievementListBridge.render(list,{rows:all.slice(0,state.achLimit).map(r=>({guid:r.guid,title:achievementTitle(r),kind:r.kind,sourceKnown:r.kind==='account'?state.achievementDefinitions.has(r.guid.toLowerCase()):state.localAchievementDefinitions.has(r.guid.toLowerCase()),complete:r.complete,current:r.current===null?null:String(r.current),id:r.id===null?null:String(r.id),imageEnabled:!!media,image:media?achievementArt(r)??null:null,externalUnknown:r.kind==='account'&&!!media?.externalAccount(r.guid)})),selectedGuid:state.selectedAchievement,total:all.length,limit:state.achLimit,empty:state.source==='slot'&&state.slotEvidence?.readable.achievement===false?'unreadable':acc||save?'no-match':'unloaded'});}catch{}
+}
 function renderAchievements(){
+  productAchievementListBridge?.restore();
   const acc=!!state.account,save=!!state.save;
   el('sourceSwitch').hidden=!(acc&&save);
   el('accountSource').disabled=!acc;el('slotSource').disabled=!save;
@@ -354,7 +360,7 @@ function renderAchievements(){
   renderNativeBatch(all,allTargets);renderNativeSession();
   renderAccountChangeBar();
   const list=el('achievementsList');list.replaceChildren();
-  if(all.length===0){list.append(node('p','placeholder',state.source==='slot'&&state.slotEvidence?.readable.achievement===false?'Achievement Domain UNKNOWN：保存済みモデルを認識できません。ゼロ件・未達成とは解釈しません。':acc||save?'条件に一致する記録がありません。':'セーブを読み込むと記録が表示されます。'));renderEditor();return;}
+  if(all.length===0){list.append(node('p','placeholder',state.source==='slot'&&state.slotEvidence?.readable.achievement===false?'Achievement Domain UNKNOWN：保存済みモデルを認識できません。ゼロ件・未達成とは解釈しません。':acc||save?'条件に一致する記録がありません。':'セーブを読み込むと記録が表示されます。'));renderEditor();renderProductAchievementList(list,all,acc,save);return;}
   const fragment=document.createDocumentFragment();
   for(const r of all.slice(0,state.achLimit)){
     const row=node('button','achievement-row');row.type='button';row.classList.toggle('selected',r.guid===state.selectedAchievement);row.setAttribute('aria-label',`${achievementTitle(r)}、${completedLabel(r)}、進捗 ${r.current===null?'UNKNOWN':r.current}`);
@@ -371,16 +377,22 @@ function renderAchievements(){
     const more=node('button','btn-secondary show-more',`さらに表示（残り ${all.length-state.achLimit}件）`);more.type='button';
     more.addEventListener('click',()=>{state.achLimit+=120;renderAchievements();});list.append(more);
   }
-  renderEditor();
+  renderEditor();renderProductAchievementList(list,all,acc,save);
 }
 function detailLine(name,value){return withChildren('div','detail-line',node('b','',name),node('span','',value));}
+let productAchievementHeader=null;
+function renderProductAchievementHeader(panel,record,mapped){
+  if(!productAchievementHeader)return;
+  try{const r=record?{guid:record.guid,title:achievementTitle(record),kind:record.kind,mapped,complete:typeof record.complete==='boolean'?record.complete:null,current:record.current===null?null:String(record.current),completed:typeof record.completed==='string'||record.completed===null?record.completed:undefined,documentId:record.id==null?null:String(record.id)}:null;productAchievementHeader.render(panel,r,()=>state.selectedAchievement??null);}catch{}
+}
 function renderEditor(){
-  const panel=el('editorPanel');panel.replaceChildren();
+  const panel=el('editorPanel');panel.removeAttribute('data-hkia-svelte-achievement-header');panel.replaceChildren();
   const record=achievements().find(r=>r.guid===state.selectedAchievement);
-  if(!record){panel.append(node('h4','','達成記録の詳細'),node('p','','一覧から実績を選択してください。'));return;}
+  if(!record){panel.append(node('h4','','達成記録の詳細'),node('p','','一覧から実績を選択してください。'));renderProductAchievementHeader(panel,null,false);return;}
   const mapped=record.kind==='account'?state.achievementDefinitions.has(record.guid.toLowerCase()):state.localAchievementDefinitions.has(record.guid.toLowerCase());
   const readStatus=achievementReadStatus(record,mapped);
   panel.append(node('h4','',achievementTitle(record)),detailLine('GUID',record.guid),detailLine('定義照合',mapped?'照合済み':'UNKNOWN（名称未照合）'),detailLine('状態',readStatus.status),detailLine('進捗',record.current===null?'UNKNOWN（保存値なし）':record.current),detailLine('達成日時',readStatus.timeStatus));
+  renderProductAchievementHeader(panel,record,mapped);
   if(imageUi()){const art=node('div','media-detail-strip');art.append(imageElement(achievementArt(record),{kind:'achievement',size:64,label:'実績画像'}),node('span','media-caption',`実績画像：${achievementArt(record)?.status??'NOT_IN_SOURCE_MAP'}`));const reward=record.kind==='account'?null:imageUi().reward(achievementImageGuid(record));if(reward?.rewardItemId!=null&&reward.quantity>0)art.append(imageElement(reward.rewardIcon,{kind:'reward',size:64,label:'定義上の報酬画像'}),node('span','media-caption',`報酬アイテム ${reward.rewardItemId} × ${reward.quantity}（受取未判定）`));panel.append(art);if(record.kind==='account'){if(imageUi().externalAccount(record.guid))panel.append(node('p','media-caption media-external-unknown','外部プラットフォーム画像：UNKNOWN_EXTERNAL_ICON（原画像未確認）'));}else appendRelatedImage(panel,imageUi().relatedAchievement(achievementImageGuid(record)));}
   if(record.kind==='slot-missing'){
     panel.append(node('p','editor-hint','この定義の実績レコードは今回のSave slotに保存されていません。未達成・進捗0・未解放の証拠ではありません。新規レコード生成と保存出力は禁止です。'));
@@ -575,7 +587,9 @@ function sourceCollectionStats(key){
   const m=state.collectionMatch;return m?.byKey.get(key)||null;
 }
 function sourceParentStats(key){return state.parentMatch?.byKey.get(key)||null;}
+let productCategoryBridge=null;
 function renderCollections(){
+  productCategoryBridge?.restore();
   const query=el('collectionSearch').value.trim().toLowerCase();
   const grid=el('collectionGrid');grid.replaceChildren();
   let all=state.collections.filter(c=>[titleForCategory(c.key),c.key,c.sprite,c.guid].join(' ').toLowerCase().includes(query));
@@ -597,7 +611,7 @@ function renderCollections(){
 
   }
   renderUnknownCollectionIds();
-  if(!all.length){grid.append(node('p','placeholder','該当するカテゴリがありません。'));return;}
+  if(!all.length){grid.append(node('p','placeholder','該当するカテゴリがありません。'));productCategoryBridge?.render(grid,[],state.selectedCollection,state.collections.length);return;}
   const frag=document.createDocumentFragment();
   for(const cat of all){
     const button=node('button','collection-card');button.type='button';button.classList.toggle('selected',state.selectedCollection===cat.key);
@@ -609,7 +623,7 @@ function renderCollections(){
     button.append(img,node('span','collection-title',titleForCategory(cat.key)),node('small','collection-meta',description));
     button.addEventListener('click',()=>{state.selectedCollection=cat.key;state.selectedCollectionDefinition=null;renderCollections();el('collectionGrid').querySelector('.collection-card.selected')?.focus();el('collectionDetail').scrollIntoView({block:'nearest',behavior:'smooth'});});frag.append(button);
   }
-  grid.append(frag);renderCollectionDetail();
+  grid.append(frag);renderCollectionDetail();productCategoryBridge?.render(grid,all.map(c=>c.key),state.selectedCollection,state.collections.length);
 }
 function renderCollectionDetail(){
   const panel=el('collectionDetail');
@@ -743,6 +757,9 @@ async function bootstrap(){
     for(const r of d.achievement_references){
       const old=state.slotGroupMembers.get(r.group_counter_guid)||[];old.push(r);state.slotGroupMembers.set(r.group_counter_guid,old);
     }
+    try{const {createProductCategoryBridge}=await import('./product-categories.mjs');productCategoryBridge=createProductCategoryBridge(document);}catch{}
+    try{const {createProductAchievementListBridge}=await import('./product-achievement-list.mjs');productAchievementListBridge=createProductAchievementListBridge(document);}catch{}
+    try{const {createProductAchievementHeader}=await import('./product-achievement-header.mjs');productAchievementHeader=createProductAchievementHeader(document);}catch{}
     renderAchievements();renderCollections();
   }catch(e){error(`同梱アセット読み込み失敗：${e.message}。ローカル表示はHTTPサーバー経由で開いてください。`);}
   el('openNativePreview').addEventListener('click',async()=>{nativeNotice='';const epoch=state.sourceLoadEpoch,attempt=++nativeOpenAttempt;if(!nativeModuleStaged())return;const pending=nativePreview.connect();renderNativeSession();try{await pending;if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;adoptNativeDisplay();nativeNotice='';}catch(e){if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;closeNativePreviewSession();nativeNotice=e.message;}renderNativeSession();renderAchievements();renderCollections();});
@@ -784,6 +801,8 @@ async function bootstrap(){
   const drop=el('dropArea');
   drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('drag');});drop.addEventListener('dragleave',()=>drop.classList.remove('drag'));
   drop.addEventListener('drop',async e=>{e.preventDefault();drop.classList.remove('drag');await loadFile(e.dataTransfer?.files?.[0]);});
+  try{const {mountProductFilters}=await import('./product-filters.mjs');mountProductFilters(document,{achievement:onAchievementsFilter,collection:renderCollections});}catch{}
   renderAchievements();
+  try{const {mountProductTabs}=await import('./product-tabs.mjs');mountProductTabs(document,setTab);}catch{}
 }
 bootstrap();
