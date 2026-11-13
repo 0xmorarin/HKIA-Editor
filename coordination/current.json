@@ -4170,7 +4170,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "R3_SESSION_ABI_SOURCE_FROZEN_TS_PASS_WAIT_RUST_CI_06_SCOPED_READY",
+      "status": "IN_FLIGHT_R3_COMPILED_GENUINE_SESSION_PARITY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4231,8 +4231,8 @@
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
       "handoffTo": "06_DIRECT_R3_SCOPE_STATIC_NOW; 00_CI_DEPENDENCY_ONLY; 07_EXECUTION_REPAIR_AND_PRIVATE_PARITY; 06_SCOPED_ACCEPTANCE",
       "dependency": "00_R3_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_PARITY; 06_STATIC_SCOPE_READY_NOW; V24_BETA_INDEPENDENT",
-      "resumeBaseHead": "e332e30c2203fbf72598901811a08039812bbe85",
-      "resumeScope": "Add Rust-owned bounded ZIP/account/index projection, single read-only session/typed ABI, CAS/replay/generation/close/file switching and explicit disabled writer; preserve R2 reader bytes; new synthetic tests and scoped independent QA",
+      "resumeBaseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
+      "resumeScope": "Pin R3 CI 43373753393, workflow-only successor; obtain code-only binary; genuine private local R3 additional projection and ABI parity; evidence and direct 06 handoff; no R2 full re-QA",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -4246,7 +4246,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-005",
+      "resumeTask": "HKIA-RUST-006",
       "previousTask": "HKIA-RUST-004",
       "r2": {
         "source": {
