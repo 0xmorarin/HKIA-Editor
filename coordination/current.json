@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_R7_R5_RESELECT_COMBINED_FIXED_CI_READY; 06B_AFTER_GREEN_R5_AND_R7_DISJOINT; 05_AFTER_NEW_RESULT_OR_PRODUCT_BINDING_READY; NO_REPEAT",
+      "next": "00_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI_READY; 06B_NEW_BINDING_AFTER_GREEN; 05_ACTUAL_PRODUCT_BINDING_NEXT_AFTER_RESULT; R5_R7_ACCEPTED_NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R5_RESELECT_REPAIR_SELF_PASS_R7_COMBINED_READY_CTRL_CI",
+        "status": "R1_R7_ACCEPTED_SCOPED_PRODUCT_TABS_BINDING_SELF_PASS_READY_CTRL_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3442,7 +3442,7 @@
           },
           "reselectRepair": {
             "task": "SVELTE_R5_DEFINITION_RESELECT_REGRESSION_REPAIR",
-            "status": "SELF_PASS_FIXED_R7_COMBINED_READY_CTRL_CI",
+            "status": "DONE_06B_SCOPED_PASS_FIXED_COMPILED",
             "owner": "05 WEB",
             "baseHead": "53bddc64bfd6152e770bec6cb31da32dc6029f37",
             "basePrHead": "1997c6716342f4c18c036510968a52de014ca570",
@@ -3496,12 +3496,19 @@
               "scope": "Nondeploy isolated CI only; 10 exact paths versus 1997c671 (R7 seven plus R5 three); no product main merge, Pages or flags",
               "acceptance": "npm ci fixed lock, 123 tests expected, svelte check zero warnings/errors, Vite build and all R1-R7 references/browser, actual Chromium widths 320/375/1280, new same-definition focus/filter/selection and empty/back; 06B disjoint scopes after green",
               "consumer": "06B QA-WEB-LOCALE"
+            },
+            "acceptance": {
+              "sourceHead": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
+              "compiledHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+              "run": 43418206708,
+              "evidenceSha256": "b28000223c5d88790396bba68cb4394cdd576461f6a5100bcbefc4d37a792b50",
+              "scope": "Exact three-path repair; 54 transition matrix, old guards PASS; actual product membership separate"
             }
           }
         },
         "r6": {
           "task": "SVELTE_R6_ACHIEVEMENT_READONLY_INSPECTOR",
-          "status": "COMPILED_BROWSER_PASS_06B_READY",
+          "status": "DONE_06B_SCOPED_PASS_ISOLATED",
           "owner": "05 WEB",
           "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
           "baseHead": "7b0d6dc983b3ae272ea68e9b433a28f210c0cdb0",
@@ -3606,7 +3613,7 @@
         },
         "r7": {
           "task": "SVELTE_R7_ACHIEVEMENT_COUNTER_GROUP_REWARD_READONLY",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "DONE_06B_SCOPED_PASS_FIXED_COMPILED",
           "owner": "05 WEB",
           "baseHead": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
           "basePrHead": "1997c6716342f4c18c036510968a52de014ca570",
@@ -3640,20 +3647,26 @@
           ],
           "decisions": "Slot read-only facts, source v3.0.1 labels, condition child list separate from parent group aggregate, bounded 128 children (not production limit); no inferred progress/receipt or game-derived asset/Save; no changes to R5/R6/Locale fixed branches.",
           "composedReselect": {
-            "status": "READY_CTRL_FIXED_CI",
+            "status": "DONE_FIXED_CI_AND_06B_BOTH_SCOPED_PASS",
             "head": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
             "branch": "web05/svelte-r7-r5-reselect-combined",
             "base": "af261fd12385a3209aca458dfc2c394862d2e504",
             "repairHead": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
             "changes": "R7 exact 7 paths unchanged; R5 exact 3 paths added to fixed R7",
             "next": "00 fixed combined CI; 06B R5 and R7 independent scopes after green"
+          },
+          "acceptance": {
+            "sourceHead": "af261fd12385a3209aca458dfc2c394862d2e504",
+            "compiledHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+            "run": 43418206708,
+            "scope": "Exact seven R7 paths independently accepted; actual product binding separate"
           }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
       "localeIntegration": {
         "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
-        "status": "REPAIR_COMPILED_PASS_06B_READY",
+        "status": "DONE_06B_SCOPED_PASS_ISOLATED_REPAIR",
         "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
         "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
@@ -3793,13 +3806,78 @@
       "productBinding": {
         "task": "SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_ACCEPTED_R7_COMBINED_READY_CTRL_CI",
         "baseHead": "9e788363a8275180e5d0c2c7df1f49122eb9f7ef",
         "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
-        "scope": "Incremental actual V30 read-only product binding baseline using accepted Svelte R1-R4; keep legacy DOM and all data/media/Writer controls; R5/R7 excluded. No root deployment. Isolated code/test only.",
+        "scope": "First actual-product Svelte primary tabbar bridge; V30 JS setTab owns visibility/render; original panels/catalog/filters/Save/Writer exact. 10 ADD svelte-ui only, no R7/R5 overlap; not complete product migration.",
         "dependency": "00 singleRootProductBinding READY; R5/R7 independent QA disjoint",
-        "next": "Inspect exact V30 DOM and controller, implement scoped bridge and self QA, 06B independent before 00 root composition"
+        "next": "00 fixed nondeploy CI on combined head; 06B exact new HIGH binding QA after actual compiled browser; 00 root composition and 06C after acceptance; 05 next product binding after result. No accepted R1-R7 re-QA.",
+        "sourceHead": "b69bab53c10eef93fff0b0cde8c6469788f3fddc",
+        "sourceBranch": "web05/product-tabs-v30-baseline",
+        "sourceParent": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+        "combinedHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "combinedBranch": "web05/product-tabs-v30-r7-accepted",
+        "combinedParent": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "combinedTree": "c885bfe57a6214aa86212b1a0f8e55b26ae6615d",
+        "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+        "baseArtifactZipSha256": "dd91d2d717213425ef74f4444b111d088cff952e54e6e75a8a5916d429aa9ac3",
+        "manifestSha256": "fbcc42fe04e31c77a2f79406c510f3b98a3c284410ebe7e69fe7055e5eb5ac6e",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductTabBinding_V30_20261113_Evidence.zip",
+          "sha256": "433562f868416306da90621dd1e5ddac5c80100b7ed302c7b76752363379e222",
+          "transport": "HKIA_WEB05_ProductTabBinding_V30_20261113_Transport.json",
+          "transportSha256": "4f5e95bc55bdd431eb128ec6561a463c2c10c25f49564e775006ca1a6a18b2b9",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_ZIP_CRC_13_ENTRIES_10_SOURCE_HASHES_PASS"
+        },
+        "verified": {
+          "artifactZipShaCrc": "PASS",
+          "baseFiles": 4146,
+          "webp": 4076,
+          "baseManifestReconstructedExactGitBlob": "3fd8cb36f1ec21b46ba1a9ece80ef8276beb1b11",
+          "newUnit": 9,
+          "fail": 0,
+          "actualV30SetTabVM": 7,
+          "actualV30BridgeVM": 5,
+          "deltaNegative": 7,
+          "strictTS": "PASS",
+          "patchedESMSyntax": "PASS",
+          "browserScriptSyntax": "PASS",
+          "standaloneRemoteBlobs": 10,
+          "combinedRemoteBlobs": 10,
+          "overlapR7": 0,
+          "baseBytesUnchanged": true
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "b736e11af8c527f497a1c975e1479aa3f6c5b7204fd8b6c44cc098921060d56d",
+          "after": "089758e40a67df2def07b2da8818d6a5637c9798c4c339639d6e713095740c8d",
+          "bytes": 106737,
+          "delta": "1 MOD app hook + 1 ADD compiled product-tabs.mjs; bundle not built",
+          "unchangedBase": 4145
+        },
+        "unverified": [
+          "Svelte compiler/check/build and 132 expected combined Node tests not run locally (npm DNS)",
+          "Actual V30 local HTTP Chromium blocked ERR_BLOCKED_BY_ADMINISTRATOR; no bypass/retry in unchanged environment",
+          "Actual compiled Svelte mount/product-image-keyboard-filter parity 320/375/1280",
+          "06B independent bridge acceptance, R2-R7 actual controller/locale/Rust binding separate",
+          "Bundled runtime license notices, distribution allowlist/privacy/rollback before 00/06C"
+        ],
+        "decision": "Incremental R1 tabbar only, detached render validated then swaps only original tablist; failure retains legacy nodes/listeners. JS owns state/Session/Writer. R5/R7 accepted during execution; exact 10 disjoint ADD composed for single CI.",
+        "rollback": "Original V30 immutable; omit candidate delta. Failed mount keeps legacy tabs; no deploy.",
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
+          "sourceParent": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+          "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "scope": "10 ADD fixed bridge; one isolated workflow, no deploy/flags/main product merge",
+          "acceptance": "Checkout fixed V30 site/ + site-manifest.json; verify all4146 hashes/4076 WebP. In svelte-ui pinned npm ci, npm test expected132, check --fail-on-warnings, ordinary Vite build and vite build --config vite.product-tabs.config.ts, existing R1-R7 reference/browser regression. Run node --experimental-strip-types scripts/verify-product-tab-reference.mjs <V30/site> <manifest> and verify-product-tab-delta.mjs same args. prepare-product-tabs-delta.mjs <V30/site> <manifest> dist-product-tabs/product-tabs.mjs <fresh-delta>. Copy exact V30 site to fresh candidate; overlay only delta/src/app.js and product-tabs.mjs. Verify 4145 unchanged, 1 MOD 1 ADD, no maps/tests/private data. Actual Python Playwright browser-product-tabs-parity.py <V30/site> <candidate> at 320/375/1280: all25 actual category images load, exact projections/filter/selection/keyboard, old panel identity, repeat Collections render once, module abort legacy fallback, no external/errors/overflow, Writer OFF. Retain code-only module/delta and logs; license/allowlist review before distribution.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "Exact new 10 paths and compiled product module/actual V30 bridge; independent lifecycle/negative/DOM ownership/parity, no R1-R7 repeat; then 00/06C."
+        }
       }
     },
     "06_QA": {
