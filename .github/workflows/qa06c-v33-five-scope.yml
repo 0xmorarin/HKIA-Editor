@@ -1,0 +1,162 @@
+name: QA 06C five-scope fixed root independent (no deploy)
+on:
+  push:
+    branches: [qa06c/v33-five-scope-20261114]
+    paths: ['.github/workflows/qa06c-v33-five-scope.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  independent:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dea263044f0bc5bf12134b51202ae88afbb6298a
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: base
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Independent exact archive, composition, normalization and rollback
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/qa" "$RUNNER_TEMP/locked"
+          cd "$RUNNER_TEMP/qa"
+          for id in 14075649096 14037284400 14037742173 14038264996 14038992117 14041045919; do
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > "$id.zip"
+          done
+          cd "$GITHUB_WORKSPACE"
+          git show 767decd9c7cf4efa0259c391b3cf776a0e6ca2d3:svelte-ui/package.json > "$RUNNER_TEMP/locked/package.json"
+          git show 767decd9c7cf4efa0259c391b3cf776a0e6ca2d3:svelte-ui/package-lock.json > "$RUNNER_TEMP/locked/package-lock.json"
+          (cd "$RUNNER_TEMP/locked" && npm ci --ignore-scripts --no-audit --no-fund)
+          cat > "$RUNNER_TEMP/qa/normalize.cjs" <<'JS'
+          const fs=require('fs'),assert=require('assert/strict'),acorn=require(process.env.RUNNER_TEMP+'/locked/node_modules/acorn');
+          const [a,b]=process.argv.slice(2).map(x=>fs.readFileSync(x,'utf8'));
+          const comments=[]; acorn.parse(a,{ecmaVersion:'latest',sourceType:'module',onComment:comments});
+          let offset=0, parts=[];
+          for(const c of comments){parts.push(a.slice(offset,c.start));const x=a.slice(c.start,c.end);parts.push(Array.from(x).map(ch=>ch==='\n'||ch==='\r'?ch:' '.repeat(ch.length)).join(''));offset=c.end}
+          parts.push(a.slice(offset));assert.equal(parts.join(''),b);
+          const after=[];acorn.parse(b,{ecmaVersion:'latest',sourceType:'module',onComment:after});assert.equal(after.length,0);
+          const tok=s=>Array.from(acorn.tokenizer(s,{ecmaVersion:'latest',sourceType:'module'})).map(t=>[t.type.label,s.slice(t.start,t.end)]);
+          assert.deepEqual(tok(a),tok(b));console.log('INDEPENDENT_MASK_TOKEN_PASS',comments.length);
+          JS
+          python3 - <<'PY'
+          import os,pathlib as P,hashlib as H,json,zipfile,shutil,difflib,subprocess
+          q=P.Path(os.environ['RUNNER_TEMP'])/'qa'; base=P.Path('base/site'); c=q/'site'; out=q/'out';out.mkdir()
+          sha=lambda x:H.sha256(x).hexdigest()
+          pins={14075649096:'1ec235f9253aa5b09a69623b75f39660259a31190aa78b931ab51080a0f2a2aa',14037284400:'4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7',14037742173:'6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb',14038264996:'3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d',14038992117:'3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921',14041045919:'143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663'}
+          def archive(i):
+           p=q/f'{i}.zip';assert sha(p.read_bytes())==pins[i];z=zipfile.ZipFile(p);assert z.testzip() is None
+           n=z.namelist();assert len(n)==len(set(n)) and all(not P.PurePosixPath(x).is_absolute() and '..' not in P.PurePosixPath(x).parts and '\\' not in x for x in n);return z
+          z=archive(14075649096)
+          manifest=z.read('site-manifest.json');prov=z.read('composition.json')
+          assert sha(manifest)=='d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b'
+          assert sha(prov)=='ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352'
+          m=json.loads(manifest);p=json.loads(prov);old=json.loads(P.Path('base/site-manifest.json').read_bytes())['files']
+          names=['tabs','filters','categories','achievement-list','achievement-header']
+          assert [x['name'] for x in p['inputs']]==names and p['excluded']==['collection-items']
+          delta={'src/app.js','data/svelte-license.json'}|{'src/product-'+n+'.mjs' for n in names}
+          assert {n[6:] for n in z.namelist() if n.startswith('delta/') and not n.endswith('/')}==delta
+          shutil.copytree(base,c)
+          for n in delta:
+           dest=c/n;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(z.read('delta/'+n))
+          def fmap(root):return {x.relative_to(root).as_posix():{'bytes':x.stat().st_size,'sha256':sha(x.read_bytes())} for x in root.rglob('*') if x.is_file()}
+          assert fmap(base)==old and fmap(c)==m['files'];assert len(old)==4146 and len(m['files'])==4152
+          assert {n for n in old if old[n]!=m['files'][n]}=={'src/app.js'} and set(m['files'])-set(old)==delta-{'src/app.js'}
+          assert sum(n.endswith('.webp') for n in old)==4076
+          baseline=(base/'src/app.js').read_bytes().decode().splitlines(keepends=True);edits=[];license=None
+          for i,x in enumerate(p['inputs']):
+           a=archive(x['id']);prefix='V33/' if x['name']=='filters' else ''
+           def get(n):
+            matches=[v for v in a.namelist() if v in (prefix+n,prefix+'src/'+n)];assert len(matches)==1;return a.read(matches[0])
+           name='product-'+x['name']+'.mjs';original=get(name);app=get('app.js');lic=a.read('Svelte-LICENSE.md')
+           assert sha(original)==x['module'] and sha(app)==x['app'];assert license is None or license==lic;license=lic
+           tmp=q/name;tmp.write_bytes(original);subprocess.run(['node',str(q/'normalize.cjs'),str(tmp),str(c/'src'/name)],check=True)
+           lines=app.decode().splitlines(keepends=True);scope=[]
+           for tag,s,e,u,v in difflib.SequenceMatcher(None,baseline,lines,autojunk=False).get_opcodes():
+            if tag!='equal':scope.append((s,e,i,lines[u:v]))
+           assert [{'start':s,'end':e,'scope':x['name'],'replacementSha256':sha(''.join(t).encode())} for s,e,_,t in scope]==[e for e in p['edits'] if e['scope']==x['name']]
+           edits+=scope
+          assert json.loads((c/'data/svelte-license.json').read_bytes())['text'].encode()==license
+          assert sha(license)=='06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3'
+          # Apply reverse-position patches to a copy, independent of forward cursor composition.
+          result=baseline[:];last=len(baseline)
+          for s,e,i,t in sorted(edits,key=lambda x:(x[0],x[1],x[2]),reverse=True):
+           assert e<=last;result[s:e]=t;last=s
+          assert ''.join(result).encode()==(c/'src/app.js').read_bytes()
+          assert b'product-collection-items.mjs' not in (c/'src/app.js').read_bytes()
+          assert sha((c/'src/app.js').read_bytes())=='adaf88bec2db44bd9b3babfa11519f052ccaf5b76a27d750ccf49913bbe3c663'
+          # Real rollback bytes, not merely replacement of map metadata.
+          rollback=q/'rollback';shutil.copytree(c,rollback)
+          for n in delta-{'src/app.js'}:(rollback/n).unlink()
+          shutil.copyfile(base/'src/app.js',rollback/'src/app.js');assert fmap(rollback)==old
+          (q/'manifest.json').write_bytes(manifest)
+          (out/'static.json').write_text(json.dumps({'verdict':'PASS','entries':4152,'unchanged':4145,'webp':4076,'archives':6,'maskToken':5,'rollbackBytes':4146,'app':p['appSha256'],'manifest':sha(manifest),'source':sha(prov)}))
+          print((out/'static.json').read_text())
+          PY
+          node scripts/00-verify-beta-artifact.mjs "$RUNNER_TEMP/qa/site" "$RUNNER_TEMP/qa/manifest.json" d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b
+      - name: Independent cross-scope Chromium and individual abort
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 - <<'PY'
+          import os,json,threading,pathlib as P
+          from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
+          from functools import partial
+          from playwright.sync_api import sync_playwright,expect
+          q=P.Path(os.environ['RUNNER_TEMP'])/'qa';servers=[]
+          class Quiet(SimpleHTTPRequestHandler):
+           def log_message(self,*a):pass
+          def serve(root):
+           s=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(root)));threading.Thread(target=s.serve_forever,daemon=True).start();servers.append(s);return f'http://127.0.0.1:{s.server_port}/'
+          base=serve(P.Path('base/site').resolve());candidate=serve((q/'site').resolve())
+          images=json.loads(P.Path('base/site/media/image-map.json').read_text())['accountAchievements'];g=[x['guid'] for x in images if x['icon']['status']=='EXACT'][:2]
+          fixture={'Achievements':{x:{'IsComplete':i==0,'CurrentValue':i,'CompletedTime':'2026-01-01T00:00:00.1234567Z' if i==0 else None} for i,x in enumerate(g)},'Counters':{}}
+          names=['tabs','filters','categories','achievement-list','achievement-header'];marks=['tabs','filters','categories','achievements','achievement-header']
+          def probe(b,url,w,abort=None):
+           page=b.new_page(viewport={'width':w,'height':900});err=[];external=[];bad=[];downloads=[]
+           page.on('pageerror',lambda e:err.append(str(e)));page.on('request',lambda r:external.append(r.url) if not r.url.startswith(url) else None);page.on('response',lambda r:bad.append(r.status) if r.status>=400 and not r.url.endswith('/favicon.ico') else None);page.on('download',lambda d:downloads.append(d.suggested_filename))
+           if abort:page.route('**/src/product-'+abort+'.mjs',lambda r:r.abort())
+           try:
+            assert page.goto(url,wait_until='domcontentloaded').ok
+            L=lambda x:page.locator('#'+x);cards=page.locator('#collectionGrid .collection-card');rows=page.locator('#achievementsList .achievement-row')
+            expect(cards).to_have_count(25,timeout=30000)
+            for n,mark in zip(names,marks):expect(page.locator('[data-hkia-svelte-'+mark+'="1"]')).to_have_count((3 if n=='filters' else 1) if url==candidate and n!=abort else 0,timeout=20000)
+            L('saveInput').set_input_files({'name':'synthetic-settings.json','mimeType':'application/json','buffer':json.dumps(fixture).encode()});expect(L('fileStatus')).to_have_text('Account JSON');expect(rows).to_have_count(2)
+            L('achievementFilter').select_option('complete');expect(rows).to_have_count(1);rows.first.click();expect(L('editorPanel')).to_contain_text(g[0]);detail=L('editorPanel').inner_text()
+            L('colTab').click();expect(L('colPanel')).to_be_visible();L('collectionStatusFilter').select_option('unknown');expect(cards).to_have_count(25);cards.first.click();expect(L('collectionDetail')).to_be_visible();col=L('collectionDetail').inner_text()
+            L('achTab').click();expect(L('achPanel')).to_be_visible();expect(rows).to_have_count(1);assert L('editorPanel').inner_text()==detail
+            L('achievementFilter').select_option('all');L('achievementSearch').fill(g[1]);expect(rows).to_have_count(1);rows.first.click();expect(L('editorPanel')).to_contain_text(g[1])
+            L('colTab').click();assert L('collectionDetail').inner_text()==col;L('achTab').click();expect(L('achievementSearch')).to_have_value(g[1]);expect(L('editorPanel')).to_contain_text(g[1])
+            assert L('nativeDownload').is_disabled() and L('downloadEdited').is_disabled()
+            assert page.evaluate("document.documentElement.dataset.nativePreview==='off' && document.documentElement.scrollWidth<=innerWidth")
+            assert not err and not external and not bad and not downloads,(err,external,bad,downloads)
+            return [detail,col,L('editorPanel').inner_text(),L('attributionNotice').inner_text()]
+           finally:page.close()
+          with sync_playwright() as p:
+           b=p.chromium.launch();count=0
+           for w in (320,375,1280):
+            assert probe(b,base,w)==probe(b,candidate,w);count+=1
+           oracle=probe(b,base,375)
+           for n in names:assert probe(b,candidate,375,n)==oracle;n=n;count+=1
+           b.close()
+          for s in servers:s.shutdown();s.server_close()
+          result={'verdict':'PASS','widths':[320,375,1280],'individualAbort':names,'comparisons':count,'syntheticOnly':True,'writer':'OFF'}
+          (q/'out/browser.json').write_text(json.dumps(result));print(json.dumps(result))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_06C_FiveScope_Independent_Evidence
+          path: ${{ runner.temp }}/qa/out
+          if-no-files-found: error
+          retention-days: 7
