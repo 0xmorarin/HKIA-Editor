@@ -6205,7 +6205,12 @@
           "sha256": "24584dae72f3b6df315f40beba9a490fad3251e950763026412739e9b4744f98",
           "condition": "Independently reproduce synthetic boundary/byte-oracle scope; no accepted resource target or new writer permission. Genuine Chrome unchanged WAIT_ENV/CI."
         },
-        "next": "06A independent synthetic capacity evidence; 07 real browser same-case JS/Rust comparison after authorized environment and R5.1 fixed CI; no limits changes"
+        "next": "06A independent synthetic capacity evidence; 07 real browser same-case JS/Rust comparison after authorized environment and R5.1 fixed CI; no limits changes",
+        "independentAcceptance": {
+          "status": "SCOPED_PASS_EXISTING_DEFENSIVE_BOUNDS_NOT_TARGET_ACCEPTANCE",
+          "evidenceSha256": "b64f819c6abccce5b68b7e04a04410f925e8c9f199405fe4fc614fd66b1eec5b",
+          "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838"
+        }
       },
       "fixedArtifactExecution": {
         "task": "HKIA-RUST-012_R5_1_FIXED_CI_ARTIFACT_PRIVATE_REBIND",
@@ -6270,6 +6275,17 @@
           "sha256": "efbd3cd52d179b57e363d064a5191c7b38bde12ef55aae4a67aa636f5165e0ba",
           "condition": "06A resource preflight active claim consume exact new CI artifact 13 deterministic cases; previous Node genuine independently accepted, no duplicate. 00 genuine browser authorized private environment only then 07 actual Chrome six and 06A independent acceptance; no development switch before ADR."
         }
+      },
+      "browserExecutionKit": {
+        "task": "HKIA-RUST-013_PRIVATE_BROWSER_EXECUTION_READINESS",
+        "status": "IN_FLIGHT",
+        "owner": "07 RUST CORE",
+        "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
+        "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+        "risk": "HIGH",
+        "scope": "Private test-only exact artifact preflight/runner, environment probe before private input, reuse existing browser witness and independent oracle; no product source/limits changes, no administrator policy bypass",
+        "dependency": "Authorized actual Chrome needed for genuine execution; offline readiness independent"
       }
     },
     "08_LOCALIZATION": {
