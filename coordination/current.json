@@ -5344,13 +5344,14 @@
     },
     "nextReadyParallel": [
       "06_V34_FIXED_RESEARCH_REFERENCE_SCOPED_QA",
-      "07_R3_BOUNDED_SESSION_ABI_EXISTING_IN_FLIGHT",
-      "00_SVELTE_PR6_FIXED_CI_EXISTING_IN_FLIGHT"
+      "06_SVELTE_PR6_FIXED_FOLLOWUP_SCOPED_QA",
+      "05_SVELTE_NEXT_ISOLATED_SCOPE",
+      "07_R3_BOUNDED_SESSION_ABI_EXISTING_IN_FLIGHT"
     ],
     "nextAfterDep": [
-      "06_R3_SCOPE_AFTER_07_FIXED",
-      "06_SVELTE_FOLLOWUP_AFTER_FIXED_CI",
       "00_V34_FORMAL_RESEARCH_REFERENCE_ACCEPTANCE_AFTER_06",
+      "06_R3_SCOPE_AFTER_07_FIXED",
+      "00_SVELTE_SERIAL_INTEGRATION_AFTER_06",
       "06_V24_AUTHORIZED_PRIVATE_BROWSER",
       "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
       "00_DEVELOPMENT_SWITCH_AFTER_06",
@@ -6019,9 +6020,9 @@
       "source": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
       "artifactManifestSha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c",
       "next": [
-        "06 V34 fixed successor scoped integration QA",
+        "06 V34 fixed successor scoped integration QA and PR6 fixed Svelte followup independent QA",
+        "05 next isolated Svelte scope after fixed followup (do not repeat CI)",
         "07 R3 bounded read-only Session/ABI existing IN_FLIGHT",
-        "00 Svelte PR6 fixed followup nondeploy CI",
         "01/02/03 only concrete exact Switch definitions/causal tasks"
       ],
       "privacy": "V30 current public path repaired, historical exposure not erased; private research reference only"
@@ -6256,11 +6257,22 @@
         "task": "V34_FIXED_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
         "sourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
         "scope": "62 changed source paths; dense correction prior causal tests; one changed distribution contract; 4145 unchanged, 55 modules, rollback V33, no duplicate accepted independent research; no activation"
+      },
+      "evidence": {
+        "result": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_RESULT.json",
+          "sha256": "01f4cfd87758374b5c443eeb669e673b6261e2567ba438ec1cf01edbe9843cde"
+        },
+        "zip": {
+          "file": "HKIA_CTRL_V34_ResearchReference_20261113_Evidence.zip",
+          "sha256": "1ea1282271dbd30479055fc30485ce0cffc8f48d74e4b54477358ae14e1e36a4"
+        },
+        "readback": "BOTH_BYTE_EXACT_SHA_CRC_PASS"
       }
     },
     "svelteFollowupCI": {
       "task": "SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI",
-      "status": "CI_IN_FLIGHT",
+      "status": "DONE_FIXED_LOCK_A11Y_LEGACY_PORT_COMPILED_CHROMIUM_PASS",
       "owner": "00 CTRL",
       "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
       "sourceHead": "bb563adb29046fb83f0360a303b9119487bb43dd",
@@ -6270,8 +6282,50 @@
       "head": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
       "workflowBlob": "f1e4352021553e74d96ed87b1e4bf7387213e7e5",
       "run": 43361999625,
-      "verified": "PR6 fast-forward from 7fe5a83d to exact 05 followup + one workflow change; pinned lock/no regeneration; no deployment",
-      "next": "Actual CI result; 05 focused repair/continuation and 06 scoped independent QA after fixed compile; no duplicate activation."
+      "verified": {
+        "scope": "05 exact 8 paths + 00 workflow only",
+        "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+        "lockCheck": "PASS_NO_REGEN",
+        "tests": 31,
+        "fail": 0,
+        "checkErrors": 0,
+        "checkWarnings": 0,
+        "build": "PASS",
+        "actualLegacySha256": "71bd1573da6be32a489bce0bf9823d49cc64d979f94a9f829ce5f2709892070d",
+        "fixtureExact": true,
+        "legacyTransitions": 6,
+        "externalTransition": 1,
+        "malformedStateDenied": 1,
+        "actualChromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "collectionRendersPerWidth": 4,
+        "overflow": 0,
+        "externalRequests": 0,
+        "pageErrors": 0,
+        "artifactId": 14007874929
+      },
+      "next": "06 independent followup scoped QA; 05 next isolated UI scope, no duplicate R1 work.",
+      "ci": "SUCCESS",
+      "job": 131677440537,
+      "unverified": [
+        "06 independent acceptance of exact followup",
+        "Production legacy controller binding and full UI parity",
+        "Rust adapter"
+      ],
+      "handoff": {
+        "to": [
+          "05 WEB",
+          "06 QA"
+        ],
+        "task": "SVELTE_R1_FOLLOWUP_FIXED_SCOPE",
+        "sourceHead": "bb563adb29046fb83f0360a303b9119487bb43dd",
+        "ciHead": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+        "run": 43361999625,
+        "condition": "05 continue independent next UI scope without changing accepted snapshot; 06 verify exact 8 paths and compiled evidence; no main merge/deploy."
+      }
     }
   },
   "formalRelease": {
