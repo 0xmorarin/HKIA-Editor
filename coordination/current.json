@@ -979,7 +979,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06A -> 04/07",
       "v301Exact29Causal": {
         "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
-        "status": "PARTIAL_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_STATIC_CAUSAL_JOIN",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
@@ -1007,7 +1007,30 @@
           "scope": "5 new research paths; alternate GUID/order/field/config oracle; negative version, RID reuse, root/absence/threshold, null/shared counter, gate/reward/authority. Reuse accepted 02 and v300 sources, no native or whole QA redo.",
           "condition": "06A scoped acceptance -> 04/07 contract reference only; 00 serial research integration; no product permission"
         },
-        "next": "06A new fixed HIGH join READY; 07 R4 WASM/Chrome independent parallel (existing claim); 03 WAIT new station/consumer original or 06A counterexample; 00 serial research after QA"
+        "next": "06A new fixed HIGH join READY; 07 R4 WASM/Chrome independent parallel (existing claim); 03 WAIT new station/consumer original or 06A counterexample; 00 serial research after QA",
+        "acceptance": {
+          "status": "SCOPED_PASS_STATIC_CAUSAL_JOIN",
+          "evidence": {
+            "file": "HKIA_06A_R5_V301_CAUSAL_QA_20261113_EVIDENCE.zip",
+            "sha256": "9cc0f393f85efba1b37b4921a0c71446406e253d85ecd707c53853d75b50948d",
+            "manifestSha256": "a6c2b937415a4620827d9a8b7f9a186fb271e08032fbce7bc27a29dd04af1039",
+            "handoffSha256": "8a10220a5de3901397ec60385b41068e6524923554e5576d6e0b27c9bddc17ec",
+            "bytes": 8348,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
+          },
+          "scope": "static causal join only; no product/game authority"
+        }
+      },
+      "recipe6StationSource": {
+        "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_CLOSURE",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "risk": "HIGH",
+        "baseLedgerBlob": "5022a27e4a7a3b0ae489caa0fabf3a4418bbcf2c",
+        "scope": "New Stage54 original archive recovery; exact four stations, script/lock/upgrade/postprocess references; no repeated Recipe6 native or allocator or provider analysis; no product authority",
+        "dependency": "Stage54 archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; accepted prior 03 a3286804459d4372ca60eb5312e133a0c0139cc31f070dd89e2cfd997c3ad3a5",
+        "next": "Verify original bytes, typed local/external reference closure, fail closed unknowns; self-QA and 06A direct"
       }
     },
     "04_SAVE_CORE": {
