@@ -6217,7 +6217,8 @@
       "HIGH_06A_OR_06B_PARALLEL",
       "00_SERIAL_INTEGRATION",
       "06C_RELEASE_SCOPE_ONLY"
-    ]
+    ],
+    "activationDecision": "OWNER_MINIMAL_ACTIVATION_DECISION_20261113"
   },
   "ownerCheckpoint20261112": {
     "status": "V18_LOCAL_INTEGRATED_AND_ARCHITECTURE_OWNER_APPROVED",
@@ -6581,7 +6582,8 @@
       "noRepeat": "EXACT_ACCEPTED_SCOPE_REUSE; DO_NOT_RESTART_WITHOUT_NEW_TASK",
       "blocked": "ISOLATE_ONLY_AFFECTED_SCOPE; CONTINUE_OTHER_READY_WORK",
       "handoff": "SELF_QA_ALWAYS; LOW_DIRECT; HIGH_06A_OR_06B_DIRECT; 06C_INTEGRATION_RELEASE_ONLY",
-      "ctrl": "RETURN_TO_00_ONLY_FOR_SERIAL_INTEGRATION_SHARED_API_CONFLICT_CROSS_STREAM_DECISION_RELEASE_OR_OWNER_BOUNDARY"
+      "ctrl": "RETURN_TO_00_ONLY_FOR_SERIAL_INTEGRATION_SHARED_API_CONFLICT_CROSS_STREAM_DECISION_RELEASE_OR_OWNER_BOUNDARY",
+      "ownerActivation": "MINIMAL_STREAM_ID_ONLY; READY_STREAM_IDS_AND_PARALLEL_ORDER_ONLY; DETAILS_IN_SSOT_HANDOFF; OWNER_EXPLICIT_SCOPE_ONLY"
     },
     "coordination": {
       "canonical": "coordination/current.json",
@@ -6593,7 +6595,8 @@
       "conversationVisibility": "NO_ASSUMPTION_OF_COMPLETE_CROSS_CHAT_SYNC; MISSING_OR_UNVERIFIED_EVIDENCE_REMAINS_UNKNOWN",
       "localization": "coordination/localization-decision-20261113.md",
       "qaOperation": "coordination/qa-operation-decision-20261113.md",
-      "projectInstructions": "coordination/project-instructions.md"
+      "projectInstructions": "coordination/project-instructions.md",
+      "activationDecision": "coordination/activation-decision-20261113.md"
     },
     "endReport": [
       "STREAM",
@@ -6652,8 +6655,21 @@
       "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
       "projectInstructions": {
         "path": "coordination/project-instructions.md",
-        "characters": 7927
+        "characters": 7965
       }
+    },
+    "activation": {
+      "decision": "OWNER_MINIMAL_ACTIVATION_DECISION_20261113",
+      "status": "OWNER_APPROVED_ACTIVE",
+      "record": "coordination/activation-decision-20261113.md",
+      "activation": "HKIA Editor【STREAM】START_NOW",
+      "continuation": "続けて / HKIA Editor【STREAM】CONTINUE",
+      "handoff": "HKIA Editor【STREAM】会話引継ぎ。最新SSOTから自律実行再開。",
+      "ownerFacing": "Only actual actionable Stream IDs and necessary parallel/order grouping; blocked streams with release condition; no task-specific launch text unless explicitly requested by Owner",
+      "execution": "Fetch latest main/current.json/Owner ADRs/gates every start/resume; reconstruct live claims/evidence/accepted scopes/dependencies; autonomously select highest-priority READY and execute maximum safe scope; stale task hints do not narrow work; no duplicate claim",
+      "detailLocation": "Task/SHA/Scope/dependencies/acceptance/evidence in SSOT and fixed HANDOFF only",
+      "exception": "Explicit Owner scope/authorization remains binding; existing safety/ownership/release gates unchanged",
+      "noChatAutomation": true
     }
   },
   "ctrlExecution": {
@@ -7845,7 +7861,7 @@
       "record": "coordination/qa-operation-decision-20261113.md",
       "projectInstructions": {
         "path": "coordination/project-instructions.md",
-        "characters": 7927
+        "characters": 7965
       },
       "legacyResult": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
@@ -7885,7 +7901,7 @@
       "baseHead": "853a8b54fc2f30f8f0e84517e84068945279b65b",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "promptBlob": "52165eb13a95720296b80582dd9fb471733974c6",
-      "promptCharacters": 7927,
+      "promptCharacters": 7965,
       "qaAdrBlob": "4dd5dfbe4721f8a2baa1671ffe563ac4aa9713d2",
       "legacyResult": {
         "file": "HKIA_06_V300_LOAD_BOUNDARY_RESULT.json",
@@ -8179,6 +8195,18 @@
         "scope": "33 additive research paths only; 582 unchanged; prior V34 distribution exact map reused; no deployment/Writer/new authority. 106 focused self PASS; check/build/source-derived 55 exact; rollback 582 and rebuild 615. No repeat V34 accepted specialist QA.",
         "acceptance": "Independent changed scope/dependency closure and artifact manifest check; return 00 for reference acceptance; keep V24/V30 OFF."
       }
+    },
+    "activationPolicyUpdate": {
+      "task": "MINIMAL_OWNER_ACTIVATION_POLICY",
+      "status": "DONE_OWNER_POLICY_RECORDED",
+      "decision": "OWNER_MINIMAL_ACTIVATION_DECISION_20261113",
+      "baseHead": "742b9ff4f4cb87d3011deb6130c2a2764154b76c",
+      "record": "coordination/activation-decision-20261113.md",
+      "projectInstructions": {
+        "path": "coordination/project-instructions.md",
+        "characters": 7965
+      },
+      "scope": "Policy only; task claims, queues, evidence and release settings unchanged"
     }
   },
   "formalRelease": {
@@ -8917,7 +8945,20 @@
     "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
     "projectInstructions": {
       "path": "coordination/project-instructions.md",
-      "characters": 7927
+      "characters": 7965
     }
+  },
+  "activationPolicy": {
+    "decision": "OWNER_MINIMAL_ACTIVATION_DECISION_20261113",
+    "status": "OWNER_APPROVED_ACTIVE",
+    "record": "coordination/activation-decision-20261113.md",
+    "activation": "HKIA Editor【STREAM】START_NOW",
+    "continuation": "続けて / HKIA Editor【STREAM】CONTINUE",
+    "handoff": "HKIA Editor【STREAM】会話引継ぎ。最新SSOTから自律実行再開。",
+    "ownerFacing": "Only actual actionable Stream IDs and necessary parallel/order grouping; blocked streams with release condition; no task-specific launch text unless explicitly requested by Owner",
+    "execution": "Fetch latest main/current.json/Owner ADRs/gates every start/resume; reconstruct live claims/evidence/accepted scopes/dependencies; autonomously select highest-priority READY and execute maximum safe scope; stale task hints do not narrow work; no duplicate claim",
+    "detailLocation": "Task/SHA/Scope/dependencies/acceptance/evidence in SSOT and fixed HANDOFF only",
+    "exception": "Explicit Owner scope/authorization remains binding; existing safety/ownership/release gates unchanged",
+    "noChatAutomation": true
   }
 }

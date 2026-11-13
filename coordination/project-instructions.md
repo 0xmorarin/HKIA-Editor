@@ -7,7 +7,7 @@ GOAL=JS機能付きBeta最短公開＋Svelte/TS/Rust/WASM正式版＋夢綺羅�
 
 ## EXECUTION
 START_NOW/CONTINUE/続けて/引継:最新Owner/main/保護/PR/台帳取得→担当Task/固定Source/既受入/未完/未記録成果/依存/競合再構成→SHA/Blob/Scope照合→最高優先READY実行→自己QA→保存→直接HANDOFF。DONE/READY/IN_FLIGHT/WAIT_DEP/WAIT_ENV/TRUE_RED/UNKNOWN区別。
-Owner入力=Stream ID＋起動/継続のみ。詳細指示待ち禁止。1会話最大安全作業量、独立READY全並列、過剰分割/無変更再試行/形式終了禁止。失敗=再現→原因→最小修正→回帰。依存未達/TRUE_RED該当Scopeのみ隔離。他READY継続。Beta P0＋Rust/Svelte/Localization P0_FORMAL独立並列。正式版GateでJS Beta停止禁止。v0.2.11以降成果再利用。実Taskなし=DONE、完了済無条件再起動禁止。WAIT解除条件/担当記録。会話上限時同一ID引継。非同期/別会話自動起動/将来納品主張禁止。
+Owner入力=Stream ID＋起動/継続のみ。Task限定起動文禁止（Owner明示例外）。最新正本から自律選択。1会話最大安全作業量、独立READY全並列、過剰分割/無変更再試行/形式終了禁止。失敗=再現→原因→最小修正→回帰。依存未達/TRUE_RED該当Scopeのみ隔離。他READY継続。Beta P0＋Rust/Svelte/Localization P0_FORMAL独立並列。正式版GateでJS Beta停止禁止。v0.2.11以降成果再利用。実Taskなし=DONE、完了済無条件再起動禁止。WAIT解除条件/担当記録。会話上限時同一ID引継。非同期/別会話自動起動/将来納品主張禁止。
 
 ## STREAMS
 00 CTRL=統括/依存/競合/共有API/直列統合/Build/Pages/公開/移行。
@@ -36,7 +36,7 @@ PASS=実行観測済みSTATIC/UNIT/INTEGRATION/BROWSER/REAL_SAVE/REAL_DEVICEの�
 ## COORDINATION
 正本=current.jsonのみ。開始前最新Blob→Task/Base/Scope/IN_FLIGHT/依存/所有権記録、二重claim禁止。終了時status/固定SHA/Manifest/Delta/実測/受入/残条件/NEXT更新。最新Blob CAS、競合再取得し担当のみ再適用、他Stream上書き禁止。
 HANDOFF=受取側/Task/固定Source/Scope/依存/受入条件/証拠所在/未解決。実在/読戻し確認、Tool失敗≠成功。上流→必要QA→下流直接。00戻り=統合/共有API競合/複数依存判断/公開/Owner権限のみ。
-報告=STREAM/TASK/BASE_HEAD/SOURCE_HEAD_OR_SHA/STATUS=DONE|PARTIAL|BLOCKED|READY_AFTER_DEP/CHANGES/VERIFIED/UNVERIFIED/RISKS/DEPENDENCIES/NEXT_READY_PARALLEL/NEXT_AFTER_DEP/HANDOFF。NEXT_READY_PARALLEL=実Taskのみ、投入順/並列可否/起動文。NEXT_AFTER_DEP=解除条件/Stream。起動=HKIA Editor【STREAM】START_NOW、継続=CONTINUE、引継=会話引継ぎ。最新SSOTから自律実行再開。00追加=CRITICAL_PATH/SERIAL_MERGE_ORDER/TRUE_BLOCKERS/OWNER_APPROVAL_REQUIRED。
+報告=STREAM/TASK/BASE_HEAD/SOURCE_HEAD_OR_SHA/STATUS=DONE|PARTIAL|BLOCKED|READY_AFTER_DEP/CHANGES/VERIFIED/UNVERIFIED/RISKS/DEPENDENCIES/NEXT_READY_PARALLEL/NEXT_AFTER_DEP/HANDOFF。NEXT_READY_PARALLEL=実TaskあるStream名/投入順/並列可否のみ。NEXT_AFTER_DEP=解除条件/Stream。起動=HKIA Editor【STREAM】START_NOW、継続=続けて、引継=会話引継ぎ。Task/SHA/Scopeは正本/HANDOFFのみ。00追加=CRITICAL_PATH/SERIAL_MERGE_ORDER/TRUE_BLOCKERS/OWNER_APPROVAL_REQUIRED。
 
 ## PRODUCT/ARCH
 JS Beta=V24固定、Switch3.0.0/3.0.1真正Save両Domain代表実編集/別名出力/必須連動/再読込、読取専用不可、V30 OFF≠Beta。正式版=Svelte+TypeScript/Rust/WASM/Module Worker/Single ProductSession/Vite/GitHub Pages必須。JS全正式機能完成待ち禁止、Rust/Svelte独立並列、既存JS参照。正式編集=Achievements達成/取消/進捗/日時、Collections履歴/日時/実取得/取消、個別一括、必須連動、真正出力/永続性。原本SHA事前登録恒久要件禁止。
