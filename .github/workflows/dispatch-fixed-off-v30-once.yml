@@ -1,0 +1,38 @@
+name: One-shot authorized V30 OFF workflow dispatch
+on:
+  push:
+    branches:
+      - ctrl/pages-off-transport-20261113
+    paths:
+      - .github/workflows/dispatch-fixed-off-v30-once.yml
+permissions:
+  actions: write
+  contents: read
+  pages: read
+concurrency:
+  group: hkia-off-v30-dispatch-once
+  cancel-in-progress: false
+jobs:
+  request:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/ctrl/pages-off-transport-20261113' && github.event.before == 'b248505aad41ad765470c2d4d90a4afa64cedec4' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Request approved manual V30 OFF workflow exactly once
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo="$GITHUB_REPOSITORY"
+          test "$(gh api "repos/$repo/pages" --jq .build_type)" = workflow
+          test "$(gh api "repos/$repo/pulls/3" --jq .merge_commit_sha)" = 846092d07d9bb43e113d6fc15caa176245c217fe
+          test "$(gh api "repos/$repo/contents/.github/workflows/pages-off-repair.yml?ref=main" --jq .sha)" = ea3b177631999431e856967f8e45a214be0442ba
+          test "$(gh api "repos/$repo/contents/config/release-gates.json?ref=main" --jq .sha)" = 024eef305941486e87d806643fb54c1e9b627a7c
+          test "$(gh api "repos/$repo/contents/scripts/00-verify-beta-artifact.mjs?ref=main" --jq .sha)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(gh api "repos/$repo/contents/scripts/pages-artifact-policy.mjs?ref=main" --jq .sha)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(gh api "repos/$repo/contents/scripts/lossless-webp.mjs?ref=main" --jq .sha)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+          test "$(gh api "repos/$repo/git/ref/heads/pages-artifacts/off-v30-20261113" --jq .object.sha)" = b7e91df1e456ded1b50b4649797bf1b7df216717
+          test "$(gh api "repos/$repo/git/ref/heads/pages-artifacts/off-v29-20261113" --jq .object.sha)" = 15cacf59a0c24a1124edb3741816d300794b4cdb
+          test "$(gh api "repos/$repo/actions/workflows/pages-off-repair.yml/runs?event=workflow_dispatch&per_page=1" --jq .total_count)" = 0
+          gh workflow run pages-off-repair.yml --repo "$repo" --ref main -f target=V30 -f artifact_ref=b7e91df1e456ded1b50b4649797bf1b7df216717
+          echo "Submitted the explicit V30 OFF manual workflow dispatch; no Writer activation."
