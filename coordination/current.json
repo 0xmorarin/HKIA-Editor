@@ -5166,7 +5166,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "WAIT_ENV_GENUINE_CHROME_R5_1_FIXED_NODE_INDEPENDENT_ACCEPTED_RESOURCE_QA_IN_FLIGHT",
+      "status": "WAIT_ENV_GENUINE_CHROME_R5_1_NODE_AND_RESOURCE_INDEPENDENT_ACCEPTED_KIT_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5183,7 +5183,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "07 genuine actual Chrome WAIT_ENV only; 06A resource scoped QA consume new exact artifact evidence; independent Node genuine and reply integrity accepted. No new Rust product scope before Development Switch or 00 explicit disjoint assignment; JS Beta and 05/08 independent.",
+      "next": "00 authorized private browser environment; 07 run fixed browser kit after environment, 06A independent harness/browser scope; 00 ADR Development Switch. Existing resource and Node QA accepted; no duplicate claims, no further 07 READY product work without ADR switch or explicit disjoint 00 assignment.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -5459,7 +5459,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Authorized local actual Chrome loopback HTTP or private local HTTPS, fixed artifact genuine six and independent browser evidence; resource targets and same-case browser comparison; ADR Development Switch and formal full features/cutover separate.",
+      "remaining": "Actual empty Worker probe and genuine Chrome six; independent 06A browser/harness acceptance and 00 Development Switch; later formal features, capacity targets and production cutover separate. Existing managed Chrome URLBlocklist=* unchanged.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -6178,7 +6178,7 @@
       },
       "resourcePreflight": {
         "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
-        "status": "SELF_PASS_FIXED_RESOURCE_PREFLIGHT_06A_READY",
+        "status": "DONE_SCOPED_INDEPENDENT_PASS_EXISTING_BOUNDS_NOT_TARGET_ACCEPTANCE",
         "baseHead": "4927c555bcaaf0604de3c5a62b2dee2d6f252bc1",
         "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
         "risk": "HIGH",
@@ -6246,7 +6246,10 @@
         "independentAcceptance": {
           "status": "SCOPED_PASS_EXISTING_DEFENSIVE_BOUNDS_NOT_TARGET_ACCEPTANCE",
           "evidenceSha256": "b64f819c6abccce5b68b7e04a04410f925e8c9f199405fe4fc614fd66b1eec5b",
-          "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838"
+          "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+          "independentCases": 15,
+          "shapeSpecificDocumentBoundary": 333326,
+          "peakWasmLinearMemoryBytes": 192086016
         }
       },
       "fixedArtifactExecution": {
@@ -6315,14 +6318,53 @@
       },
       "browserExecutionKit": {
         "task": "HKIA-RUST-013_PRIVATE_BROWSER_EXECUTION_READINESS",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_PASS_OFFLINE_READINESS_WAIT_ENV_BROWSER",
         "owner": "07 RUST CORE",
         "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
         "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
         "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
         "risk": "HIGH",
-        "scope": "Private test-only exact artifact preflight/runner, environment probe before private input, reuse existing browser witness and independent oracle; no product source/limits changes, no administrator policy bypass",
-        "dependency": "Authorized actual Chrome needed for genuine execution; offline readiness independent"
+        "scope": "Private test-only code-bound runner, exact existing CI artifact and witness, no product code/limits changes; no real browser observed this turn.",
+        "dependency": "Authorized actual Chrome needed for genuine execution; offline readiness independent",
+        "evidence": {
+          "file": "HKIA_Rust07_R5_1_PrivateBrowserReadiness_20261113_Kit.zip",
+          "sha256": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
+          "manifest": "HKIA_Rust07_R5_1_PrivateBrowserReadiness_20261113_Manifest.json",
+          "manifestSha256": "75ca10903911545c594c7a64c4f673fc958c2411bcb9d1d045d77ec530e1d616",
+          "result": "HKIA_Rust07_R5_1_PrivateBrowserReadiness_20261113_RESULT.json",
+          "resultSha256": "f5a9f137c4cbbdb5a9167194331e2161a0a0be78e40944707221fdd2cf62adc9",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "3/3 SHA exact, CRC PASS, 8 entries, 7 manifest hashes"
+        },
+        "verified": {
+          "unitTests": 17,
+          "offlineArtifactCodeHashes": 8,
+          "existingRunnerGitBlob": "039a32a557aec3ccb6ebe03ea124ff39452b4466",
+          "checks": [
+            "exact artifact/report/WASM/reference/witness pins",
+            "synthetic status rejected",
+            "network and lifecycle report shape",
+            "blocked-before-inputs mock",
+            "exclusive atomic result publication"
+          ],
+          "policy": "Managed URLBlocklist=* unchanged; prior loopback ERR_BLOCKED_BY_ADMINISTRATOR; no retry/bypass",
+          "genuineInputsInKit": 0,
+          "actualBrowser": "NOT_RUN"
+        },
+        "unverified": [
+          "actual empty Module Worker probe and genuine 6 browser cases",
+          "independent harness/browser execution acceptance",
+          "compatible authorized local Chrome with Python3.11+/Playwright/Node22 and fixed native Linux oracle; no owner script requirement",
+          "64/128MiB and 2M document targets, same-case JS/Rust browser benchmarks"
+        ],
+        "handoff": {
+          "to": [
+            "06A_QA_DATA_CORE",
+            "00_CTRL"
+          ],
+          "status": "WAIT_ENV_BROWSER_EXECUTION_READY_KIT",
+          "condition": "00 authorized private local environment, 07 run pinned kit no genuine input before empty actual Worker probe, six genuine byte-exact + V33 independent oracle/lifecycle; 06A independent test harness scope and browser evidence; 00 explicit ADR switch record. No new public CI/deploy or flags."
+        }
       }
     },
     "08_LOCALIZATION": {
