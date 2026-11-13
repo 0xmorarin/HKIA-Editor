@@ -9320,10 +9320,10 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "PARTIAL_THREE_RESEARCH_SCOPED_ACCEPTED_R61_ACCEPTED_GENUINE_BROWSER_WAIT_ENV",
+      "status": "WAIT_DEP_NEW_FIXED_HIGH_AND_WAIT_ENV_GENUINE_BROWSER",
       "task": "HKIA_06A_THREE_DISJOINT_RESEARCH_ACCEPTANCE",
       "scope": "01 versioned Recipe membership 4 ADD; 02 v300 HatsOff partial Native 6 ADD; 03 Candy Cloud static/read-only genuine 8 ADD; fixed V39/V40. No product source changes.",
-      "next": "00 research-only 18 ADD integration READY; R6.1 isolated PR10 integration consumed. 06A no new READY; wait new fixed HIGH evidence or authorized private genuine Browser. No repeat.",
+      "next": "V41 research integration and R6.1 isolated PR10 consumed; no new 06A READY. Wait new fixed HIGH source or authorized private genuine Browser; no repeat.",
       "dependency": "NEW_FIXED_HIGH_SOURCE_OR_AUTHORIZED_PRIVATE_BROWSER",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "fd39028dee034c3c85b095a6237e1d18a6b3cde4",
@@ -9653,13 +9653,7 @@
           }
         }
       },
-      "nextReadyParallel": [
-        {
-          "stream": "00_CTRL",
-          "task": "HKIA_THREE_RESEARCH_ADDITIVE_INTEGRATION",
-          "dependency": "three 06A scoped acceptances, 18 disjoint fixed ADD; serial research integration only"
-        }
-      ],
+      "nextReadyParallel": [],
       "nextAfterDep": [
         {
           "stream": "03_LINKAGE",
@@ -11082,7 +11076,7 @@
         "handoff": {
           "to": "00_CTRL",
           "task": "HKIA_THREE_RESEARCH_ADDITIVE_INTEGRATION",
-          "status": "READY",
+          "status": "CONSUMED_00_V41_INTEGRATED_06C_ACCEPTED",
           "sources": [
             {
               "source": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
@@ -11110,6 +11104,15 @@
             "bytes": 19662,
             "privateLibrary": "HKIA Editor Private",
             "readback": "BYTE_EXACT_SHA_CRC_9_ENTRIES_8_MANIFEST_HASHES_PASS"
+          },
+          "integration": {
+            "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+            "manifest": "f557c5b5993c2f2245b6c9daef81be9f8c8e4ed0252fa26f36079bc609adae5d",
+            "delta": "f45e7d68c1c784b8421acb4876371a9ce49011dfee7b0c962ec2fb72c8b44f6e",
+            "acceptance": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+            "entries": 671,
+            "distributionUnchanged": 4146,
+            "scope": "private research only"
           }
         }
       },
@@ -11132,6 +11135,17 @@
           "observation": "Path fetch returned empty content; exact Git blob fetch returned valid JSON (1,048,858 characters). Use current path SHA then fetch_blob and CAS; 00 should coordinate size/readability maintenance, no unilateral reformat.",
           "handoffTo": "00_CTRL"
         }
+      },
+      "resumeQueue20261114": {
+        "status": "RECONCILED_NO_NEW_06A_READY",
+        "observedBlob": "91e973a2be80708591cc9488292f7de7d522b7e5",
+        "verified": {
+          "v41": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+          "v41Acceptance": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+          "r61": "CONSUMED_00_ISOLATED_PR10_INTEGRATED",
+          "activeClaims": 0
+        },
+        "scope": "06A consume downstream V41 integration acceptance and retire completed handoff, no product changes or QA repeat"
       }
     },
     "06B_QA_WEB_LOCALE": {
