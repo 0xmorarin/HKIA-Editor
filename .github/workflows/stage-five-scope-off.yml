@@ -1,0 +1,68 @@
+name: Stage accepted fixed OFF distribution (no deploy)
+on:
+  push:
+    branches: [ctrl/pages-five-scope-stage-20261114]
+    paths: ['.github/workflows/stage-five-scope-off.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  stage:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: fixed
+          persist-credentials: true
+      - name: Verify and retain exact accepted site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git -C fixed rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(git hash-object scripts/pages-artifact-policy.mjs)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(git hash-object scripts/lossless-webp.mjs)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+          node scripts/00-verify-beta-artifact.mjs fixed/site fixed/site-manifest.json 137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/14075649096/zip" > "$RUNNER_TEMP/accepted.zip"
+          printf '%s  %s\n' 1ec235f9253aa5b09a69623b75f39660259a31190aa78b931ab51080a0f2a2aa "$RUNNER_TEMP/accepted.zip" | sha256sum -c -
+          python3 - <<'PY'
+          import pathlib, zipfile, json, hashlib, os
+          sha=lambda b:hashlib.sha256(b).hexdigest()
+          root=pathlib.Path('fixed'); old=json.loads((root/'site-manifest.json').read_bytes())['files']
+          with zipfile.ZipFile(pathlib.Path(os.environ['RUNNER_TEMP'])/'accepted.zip') as z:
+              assert z.testzip() is None
+              names=z.namelist(); assert len(names)==len(set(names))
+              raw=z.read('site-manifest.json'); assert sha(raw)=='d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b'
+              m=json.loads(raw); new=m['files']
+              assert m['writer']=='OFF' and m['sourceSha256']=='ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352'
+              assert len(new)==4152 and len(old)==4146 and set(old)<=set(new)
+              mod={p for p in old if old[p]!=new[p]}; add=set(new)-set(old)
+              assert mod=={'src/app.js'} and add=={'src/product-tabs.mjs','src/product-filters.mjs','src/product-categories.mjs','src/product-achievement-list.mjs','src/product-achievement-header.mjs','data/svelte-license.json'}
+              assert {n[6:] for n in names if n.startswith('delta/') and not n.endswith('/')}==mod|add
+              for p in mod|add:
+                  b=z.read('delta/'+p); assert len(b)==new[p]['bytes'] and sha(b)==new[p]['sha256']
+                  dst=root/'site'/p; dst.parent.mkdir(parents=True,exist_ok=True); dst.write_bytes(b)
+              (root/'site-manifest.json').write_bytes(raw)
+          assert len([p for p in new if p.endswith('.webp')])==4076
+          print(json.dumps({'entries':len(new),'modified':sorted(mod),'added':sorted(add),'unchanged':4145,'manifest':sha(raw),'writer':'OFF'}))
+          PY
+          node scripts/00-verify-beta-artifact.mjs fixed/site fixed/site-manifest.json d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b
+          git -C fixed add -- site site-manifest.json
+          test "$(git -C fixed diff --cached --name-only | wc -l)" -eq 8
+          git -C fixed -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Retain accepted fixed OFF five-scope distribution'
+          test "$(git -C fixed ls-tree --name-only HEAD | sort | tr '\n' ' ')" = 'site site-manifest.json '
+          target=refs/heads/ctrl/pages-v33-five-scope-off-fixed-20261114
+          git -C fixed push origin "HEAD:$target"
+          fixed_sha=$(git -C fixed rev-parse HEAD)
+          test "$(git -C fixed ls-remote origin "$target" | cut -f1)" = "$fixed_sha"
+          printf 'FIXED_ROOT_SHA=%s\n' "$fixed_sha"
