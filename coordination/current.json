@@ -5742,41 +5742,74 @@
       "developmentSwitch": "PENDING",
       "productionCutover": "PENDING",
       "nextReadyParallel": [
-        "00_PR6_ISOLATED_SVELTE_NONDEPLOY_CI",
-        "00_PR5_AUTHORIZED_CODE_ONLY_BINARY_PARITY_UNBLOCK",
-        "06_EXISTING_CLAIMS_CONTINUE",
-        "07_R2_SYNTHETIC_QA_HANDOFF"
+        "07_R2_PRIVATE_GENUINE_PARITY_LOCAL_ONLY",
+        "05_SVELTE_R1_COMPILED_SCOPE_AND_LOCK_ADOPTION",
+        "06_EXISTING_CLAIMS_CONTINUE_THEN_R2_SYNTHETIC"
       ],
       "nextAfterDep": [
-        "05_SVELTE_COMPILED_SCOPE_AFTER_PR6_CI",
-        "07_GENUINE_PARITY_AFTER_AUTHORIZED_ENV",
+        "06_R2_REAL_PARITY_AFTER_07",
+        "06_SVELTE_COMPILED_UI_AFTER_05_FIXED_SCOPE",
         "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
         "00_DEVELOPMENT_SWITCH_AFTER_06",
         "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
       ],
       "dependencyUnblock": {
         "task": "SVELTE_RUST_DEPENDENCY_UNBLOCK",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_RUST_READY_SVELTE_COMPILE_PASS_BROWSER_IN_FLIGHT",
         "owner": "00 CTRL",
         "baseMain": "8ed5f3303e3ead03de03bb08ae4343db77e813f9",
         "scope": "Nondeploy branch-only CI PR6 and exact code-only Rust R2 binary artifact PR5; no product source or live flags",
         "pr6": {
           "base": "fa18063330558e188e947c44843f7a3c6870559e",
-          "status": "CI_IN_FLIGHT",
-          "head": "6a414cebe51467df7bb26700ee21a61aa5226057",
-          "run": 43353686294,
-          "job": 131650520076,
-          "changes": "1 ADD workflow only"
+          "status": "COMPILE_PASS_BROWSER_ENV_REPAIR_IN_FLIGHT",
+          "head": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
+          "run": 43353782026,
+          "job": 131650828219,
+          "changes": "1 ADD workflow only",
+          "initialRun": 43353686294,
+          "initialHead": "6a414cebe51467df7bb26700ee21a61aa5226057",
+          "initialVerdict": "20_PASS_CHECK_0_ERRORS_2_WARNINGS_BUILD_PASS; PLAYWRIGHT_UNSUPPORTED_UBUNTU26_04_X64",
+          "repair": "Only runner label ubuntu-latest -> ubuntu-24.04; no product source",
+          "lock": {
+            "name": "HKIA_Svelte_R1_Lock_43353686294.zip",
+            "id": 14004767751,
+            "sha256": "dc7c8e465bc17c893e59c64157fc9a01ff0e07858b762165fdcaea84b9bcab39",
+            "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_CRC_PASS"
+          },
+          "warnings": "WorkspaceNavigation.svelte 21/22 a11y_no_noninteractive_element_to_interactive_role section role=tabpanel; 05 adjudicate/fix before full UI acceptance",
+          "verified": "Both runs fixed R1 code; 20 tests, typecheck and Vite compile/build PASS; browser rerun in progress"
         },
         "pr5": {
           "base": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
-          "status": "CI_IN_FLIGHT",
+          "status": "DONE_CODE_ONLY_EXECUTABLE_PRIVATE_READBACK_PASS",
           "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
           "run": 43353690282,
           "job": 131650533560,
-          "changes": "1 MOD workflow only; fixed 07 runner and source unchanged"
+          "changes": "1 MOD workflow only; fixed 07 runner and source unchanged",
+          "ci": "SUCCESS",
+          "artifact": {
+            "name": "HKIA_Rust_R2_CodeOnly_43353690282.zip",
+            "id": 14004802204,
+            "sha256": "1f10dba2f7e0e71e2f0e3973f7f36fca7bf57948fa37689562ef398c8b580cdc",
+            "bytes": 251897,
+            "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+            "binaryBytes": 598880,
+            "buildReportSha256": "cbc7db6556e0c26a272017c4f8368eb13e18ba57b0844e161e12caed2bf4953a",
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_ZIP_CRC_2_ENTRIES",
+            "compatibility": "LINUX_X86_64_ELF_LDD_RESOLVED_LOCAL_GLIBC_2_41_CLI_INVOCATION_REQUIRED_EXPECTED_RC1",
+            "samePriorBinary": true
+          },
+          "verified": "39 PASS, 0 FAIL; Rust/Cargo 1.85.1; exact prior binary SHA; code-only archive no real Save",
+          "handoff": {
+            "to": "07 RUST CORE",
+            "task": "R2_PRIVATE_GENUINE_PARITY_THEN_FOUNDATION",
+            "condition": "Use existing private parity kit; verify ZIP/binary hashes, execute local only with two genuine originals; no upload; then 06 independent real parity. Existing 06 synthetic QA on fixed code remains READY."
+          }
         },
-        "next": "Observe actual CI results; capture code-only artifact and lockfile; 05/07 direct handoff; 06 independent QA"
+        "next": "07 READY genuine parity; 05 compiled scope ready after browser result; 06 current QA and independent Rust/Svelte scoped; no deploy"
       }
     }
   },
