@@ -12240,8 +12240,8 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_V33_OFF_ROOT_PREDEPLOY_SCOPED_PASS_WAIT_OWNER_DEPLOY_OR_NEW_FIXED",
-      "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
+      "status": "IN_FLIGHT_V33_LIVE_AND_V41",
+      "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA AND V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
       "next": "00 record V33 fixed OFF root scoped acceptance; recheck PR12 and explicit Owner approval then manual fixed deploy; 06C postdeploy HTTPS checks after actual dispatch. V24 genuine Browser WAIT_ENV; new root product binding separate.",
       "dependency": "V33_FIXED_PREDEPLOY_ACCEPTED; OWNER_EXPLICIT_FIXED_ARTIFACT_DEPLOY_APPROVAL_AND_00_MANUAL_DEPLOY; NEXT_ROOT_BINDING_WAIT_DEP; V24_WAIT_ENV",
@@ -13293,6 +13293,23 @@
           "readback": "EXACT",
           "scope": "PUBLIC_SAFE_NO_RAW_SAVE_QA_BRANCH_ONLY; run logs pinned"
         }
+      },
+      "v33LiveClaim": {
+        "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "baseHead": "22e2aaeb69e285f44a600f4bffc62b53004bec8c",
+        "baseLedgerBlob": "fe9e45dedd380abf9132a931ed62962515aa5ffb",
+        "status": "IN_FLIGHT",
+        "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save. First CTRL live run 43432726052 exact HTTPS PASS, 320 PASS, 375 Worker generic onerror; diagnostic e830910b pending. Do not mark full PASS; isolate transient transport vs runtime regression, verify 375/1280 and independent acceptance. Diagnostic run 43432865398 passed all 77 HTTPS samples, 10 denials and 3 widths; first error not reproduced; independent acceptance must retain failure history and assess recurrence."
+      },
+      "v41Claim": {
+        "task": "V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+        "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "baseHead": "22e2aaeb69e285f44a600f4bffc62b53004bec8c",
+        "baseLedgerBlob": "fe9e45dedd380abf9132a931ed62962515aa5ffb",
+        "status": "IN_FLIGHT",
+        "scope": "18 ADD only (4 Recipe membership V39, 6 Hats Off v300 V39, 8 Candy Cloud V40), 653 exact V40, 42 focused, prior 06A exact scoped evidence reuse; verify full source/map, no distribution change, no new REQUIRED/Writer, rollback; metadata files inside pinned Metadata ZIP. No deploy."
       }
     }
   },
