@@ -418,6 +418,15 @@
           "04 exact29 private Writer output"
         ],
         "next": "03 and 06 parallel scoped source adjudication/reproduction only; 04 exact29/83 gated private Writer proof after accepted source+causal; 02 WAIT QA/new witness; V33/live OFF unchanged"
+      },
+      "v301DefinitionReview": {
+        "task": "SWITCH301_EXACT29_DEFINITION_WITNESS",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Exact29 v301 Switch original definitions, reuse 02 Switch300 comparison contract, verify version/source-specific identity, no product changes",
+        "dependency": "01 Switch301 original bundle pinned, 02 Switch300 exact29 source witness, V33 accepted OFF"
       }
     },
     "03_LINKAGE": {
