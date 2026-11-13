@@ -7963,7 +7963,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "05 direct fixed tab/filter locale mapping READY; 06B R5-R7 catalog and Native literal scoped claims continue independently; 08 WAIT 05 fixed next product list/dynamic UI source or QA counterexample; no repeat. Physical/device-only evidence UNVERIFIED.",
+      "next": "08 IN_FLIGHT exact V33 search audit; 05 accepted R5-R7 catalog and Native literal advisory READY; category source IN_FLIGHT 05; no duplicate claim.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -7972,7 +7972,7 @@
       "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
       "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes",
       "qaRouting": "SELF_QA_ALWAYS; LOW_DIRECT_TO_CONSUMER; HIGH_06B_SCOPED_BEFORE_DEPENDENT_ACCEPTANCE; 06C_RELEASE_ONLY",
-      "result": "R1_DATA_SCOPED_PASS_R2_RUNTIME_REPAIR_SELF_PASS_NATIVE_VERSION_STATIC_SELF_PASS",
+      "result": "R1_R7_DATA_CATALOG_RUNTIME_SCOPED_PASS_NATIVE_STATIC_PASS_PRODUCT_BINDING_PENDING",
       "fixedSource": {
         "artifact": "HKIA_08_LOCALIZATION_R1_PRIVATE_DELTA_20261113.zip",
         "sha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
@@ -8044,15 +8044,14 @@
         "nativeLiteralExactCodes": 16,
         "nativeLiteralVersions": 2,
         "nativeMissingSentinel": "[Error]",
-        "nativeLiteralStaticSelfQA": "PASS; 42 model cases/24 negative hash cases; byte exact reproduction"
+        "nativeLiteralStaticSelfQA": "PASS; 42 model cases/24 negative hash cases; byte exact reproduction",
+        "r5r7Independent": "DONE_SCOPED_PASS",
+        "nativeLiteralIndependent": "DONE_STATIC_SCOPED_PASS"
       },
       "unverified": [
-        "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
-        "05 actual locale adapter integration and 00 distribution allowlist",
-        "Native-speaker linguistic review; actual browser/session invariance; full product UI coverage",
-        "Account runtime factory/other provider/presentation and physical game UNVERIFIED; static boundary independent PASS",
-        "R5-R7 new catalog independent QA and actual product UI binding; dynamic producer text and complete product coverage unresolved",
-        "Native literal new scoped independent QA; CultureInfo runtime native names, physical selector, other runtime callsites and official platform language discrepancy remain UNVERIFIED"
+        "Native speaker linguistic review, actual product locale switching/binding, remaining dynamic controller strings, full product coverage; no game text change",
+        "Physical selector and game runtime, CultureInfo native names except 3 literal branches, Arabic shipped support; static does not authorize runtime policy",
+        "Actual product runtime integration and distribution allowlist; complete product coverage not claimed"
       ],
       "handoff": {
         "to05": {
@@ -8094,13 +8093,13 @@
             "scope": "Preserve explicit 13 title refs / 18 absent refs / 31 absent description refs. No inferred game names; other platform names UNVERIFIED; no sync capability."
           },
           "catalogR5R7": {
-            "status": "READY_AFTER_DEP",
-            "dependency": "06B fixed R5-R7 catalog scoped PASS; product binding separate",
+            "status": "READY",
+            "dependency": "DONE_SCOPED_PASS; exact 0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02; Consume exact 83 new editor keys/15 locales; existing accepted 106 preserved; no game text inference, no session mutation; product locale behavior separate QA",
             "scope": "189 keys incl 83 additions; exact Svelte R5/R6/R7 accepted; preserve controller identity/session/decimal and dynamic producer text semantics"
           },
           "nativeLiteral": {
-            "status": "READY_AFTER_DEP",
-            "dependency": "06B exact Native literal scoped PASS",
+            "status": "READY",
+            "dependency": "DONE_STATIC_SCOPED_PASS; exact 1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34; Consume exact native witness only; retain Editor BCP47/script/region policy; Arabic enum not shipped language proof; game [Error] not Editor ABSENT_REF/MISSING_ID; no new game/Writer claim",
             "scope": "Static provenance only; preserve accepted Editor BCP47 policy, locale inventory and explicit missing status"
           },
           "productTabsFilters": {
@@ -8208,7 +8207,7 @@
           },
           "r5r7Catalog": {
             "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
-            "status": "READY",
+            "status": "DONE_SCOPED_PASS",
             "risk": "HIGH_NEW_UI_KEY_CONTRACT",
             "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
             "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
@@ -8217,11 +8216,12 @@
             "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
             "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-            "readbackVerified": true
+            "readbackVerified": true,
+            "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
           },
           "nativeLiteral": {
             "task": "LOCALIZATION_NATIVE_LITERAL_SCOPED_QA",
-            "status": "READY",
+            "status": "DONE_STATIC_SCOPED_PASS",
             "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
             "artifact": "HKIA_08_LOCALIZATION_NATIVE_LITERAL_WITNESS_20261113.zip",
             "sha256": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
@@ -8231,7 +8231,8 @@
             "dependency": "R2 accepted native pins and private original metadata",
             "acceptance": "Independent branch/ordinal comparison/return store/GOT-usage slot decode for both versions; full map parity, negative/collision checks, reproducibility; do not equate Arabic enum with shipped locale, do not import generic Native primary fallback or [Error] as Editor status. Static only; direct 05/08 after PASS.",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-            "readbackVerified": true
+            "readbackVerified": true,
+            "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
           }
         },
         "sourceRecovery": {
@@ -8604,7 +8605,7 @@
       "r5r7": {
         "task": "EDITOR_CATALOG_R5_R6_R7_READONLY_SURFACES",
         "claim": "20261113_08_R5_R7_CATALOG",
-        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
+        "status": "DONE_SCOPED_PASS",
         "baseHead": "fc0da8fa4b375b08bc3eec8836fa812ffb9cf7b7",
         "risk": "HIGH_NEW_UI_KEY_CONTRACT",
         "scope": "Exact accepted R5/R6/R7 compiled source 767decd9; new editor strings only, preserve 106 keys and all game text; private additive catalog delta",
@@ -8612,7 +8613,7 @@
         "sourceHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "fixed": {
           "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_SCOPED_PASS",
           "risk": "HIGH_NEW_UI_KEY_CONTRACT",
           "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
           "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
@@ -8621,7 +8622,8 @@
           "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
           "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
         },
         "verified": {
           "locales": 15,
@@ -8638,12 +8640,11 @@
           "gamePacksUnchanged": 30
         },
         "unverified": [
-          "06B semantic/source/linguistic acceptance",
-          "controller dynamic producer text, context-specific image SOURCE_NULL and other legacy UI binding, actual product browser and native speaker QA"
+          "Native speaker linguistic review, actual product locale switching/binding, remaining dynamic controller strings, full product coverage; no game text change"
         ],
         "handoff": {
           "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_SCOPED_PASS",
           "risk": "HIGH_NEW_UI_KEY_CONTRACT",
           "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
           "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
@@ -8652,12 +8653,25 @@
           "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
           "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
+        },
+        "acceptance": {
+          "status": "DONE_SCOPED_PASS",
+          "sourceSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+          "manifestSha256": "4f57e01af4464c95be3edf913a75381a744865cc36c0d6eb873b7b3010a8aa2e",
+          "evidence": {
+            "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+            "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+          },
+          "scope": "Consume exact 83 new editor keys/15 locales; existing accepted 106 preserved; no game text inference, no session mutation; product locale behavior separate QA"
         }
       },
       "nativeLiteral": {
         "task": "NATIVE_LOCALE_CODE_AND_MISSING_SENTINEL_EXACT_WITNESS",
-        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
+        "status": "DONE_STATIC_SCOPED_PASS",
         "claim": "20261113_08_NATIVE_LITERAL",
         "baseHead": "c1e18666ca67696d504930c2da2d533d2ff6a1df",
         "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
@@ -8665,7 +8679,7 @@
         "dependency": "R2 fixed Native pins; original per-version stringliteral metadata",
         "fixed": {
           "task": "LOCALIZATION_NATIVE_LITERAL_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_STATIC_SCOPED_PASS",
           "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
           "artifact": "HKIA_08_LOCALIZATION_NATIVE_LITERAL_WITNESS_20261113.zip",
           "sha256": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
@@ -8675,7 +8689,8 @@
           "dependency": "R2 accepted native pins and private original metadata",
           "acceptance": "Independent branch/ordinal comparison/return store/GOT-usage slot decode for both versions; full map parity, negative/collision checks, reproducibility; do not equate Arabic enum with shipped locale, do not import generic Native primary fallback or [Error] as Editor status. Static only; direct 05/08 after PASS.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
         },
         "verified": {
           "versions": 2,
@@ -8695,14 +8710,11 @@
           "unchangedCompositePaths": 117
         },
         "unverified": [
-          "independent QA",
-          "CultureInfo runtime native names (except three literal branches)",
-          "physical selector and other runtime callsites",
-          "actual game/device behavior"
+          "Physical selector and game runtime, CultureInfo native names except 3 literal branches, Arabic shipped support; static does not authorize runtime policy"
         ],
         "handoff": {
           "task": "LOCALIZATION_NATIVE_LITERAL_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_STATIC_SCOPED_PASS",
           "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
           "artifact": "HKIA_08_LOCALIZATION_NATIVE_LITERAL_WITNESS_20261113.zip",
           "sha256": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
@@ -8712,7 +8724,20 @@
           "dependency": "R2 accepted native pins and private original metadata",
           "acceptance": "Independent branch/ordinal comparison/return store/GOT-usage slot decode for both versions; full map parity, negative/collision checks, reproducibility; do not equate Arabic enum with shipped locale, do not import generic Native primary fallback or [Error] as Editor status. Static only; direct 05/08 after PASS.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
+        },
+        "acceptance": {
+          "status": "DONE_STATIC_SCOPED_PASS",
+          "sourceSha256": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
+          "manifestSha256": "f1bc7fa67cd511a766f77f3eae6b36a62281174a280985369942cc01f140709e",
+          "evidence": {
+            "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+            "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+          },
+          "scope": "Consume exact native witness only; retain Editor BCP47/script/region policy; Arabic enum not shipped language proof; game [Error] not Editor ABSENT_REF/MISSING_ID; no new game/Writer claim"
         }
       },
       "productUiMapping": {
@@ -8754,6 +8779,18 @@
           "condition": "Keep initial legacy JA checks and structural/state guards; mounted locale-aware text expectations from coherent accepted generation; preserve machine IDs/option values/order/focus/caret/filter/active tab/Save/Session/Revision/Undo. Do not claim multilingual search until query evidence; 05 actual change HIGH -> 06B scoped browser/negative QA; 00 distribution separate."
         },
         "next": "WAIT 05 actual locale-aware product binding or explicit new capability keys; no repeat."
+      },
+      "productSearchAudit": {
+        "task": "V33_PRODUCT_LOCALE_SEARCH_SOURCE_AUDIT",
+        "claim": "20261113_08_V33_SEARCH_AUDIT",
+        "status": "IN_FLIGHT",
+        "baseLedgerBlob": "1a7e898680cf8f892e1f1f09e9bbe375ff7bfe7d",
+        "risk": "LOW_ADVISORY_READ_ONLY_SOURCE_MAPPING_NO_NEW_BEHAVIOR",
+        "scope": "Recover fixed V33 app blob via exact SHA, inspect actual search/sort producers for Achievement, Collection categories/items; map language authority and exact legacy terms, identify missing localized query/display semantics; advisory only. No 05 source edits or 06B repeated QA.",
+        "dependency": "V33 fixed predeploy accepted, prior 08 tab/filter advisory unresolved query semantics; R1-R7 accepted catalog",
+        "artifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "appBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
+        "appSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5"
       }
     },
     "06A_QA_DATA_CORE": {
