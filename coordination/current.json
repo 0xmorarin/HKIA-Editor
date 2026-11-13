@@ -8077,6 +8077,18 @@
         ],
         "condition": "06B R2 fixed compiled/browser independent changed scope may claim separately from existing Localization R1; 05 next disjoint component scope; no R1 repeat; no main merge/deploy"
       }
+    },
+    "research615": {
+      "task": "V34_ACCEPTANCE_AND_615_RESEARCH_REFERENCE",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "baseMain": "4d88998d5e1e3d868235cb904b9961ee2f554899",
+      "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+      "scope": "Accept prior fixed V34 independent QA; exact five accepted additive research deltas (33 ADD); preserve product/distribution; no v301 pending, no Writer permission or deploy",
+      "qaResult": {
+        "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+        "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+      }
     }
   },
   "formalRelease": {
