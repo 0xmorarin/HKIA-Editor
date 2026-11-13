@@ -334,7 +334,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_SCOPED_PENDING; 03_EXACT_SIX_PRODUCER_DEFINITION_REVIEW; 04_WAIT_ACCEPTED_EXACT_CONTRACT; 00_SERIAL_AFTER_ACCEPTANCE",
+      "next": "06_PENDING; 03_EXACT_SIX_PROVIDER_DISPATCH_IN_FLIGHT; 04_WAIT",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -633,6 +633,15 @@
         "gameAccepted": false,
         "productAuthorized": false,
         "next": "06 independent scoped; 04 only after accepted 02/03 + exact definition evidence; 05 after 04; 00 serial"
+      },
+      "v300RecipeProvider": {
+        "task": "FORMAL_V300_EXACT_SIX_PROVIDER_DISPATCH",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseHead": "4558c23447a6e89cd3eb4d2cd2eb8a3212973470",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Resolve closed InventoryItem interface dispatch and concrete provider initialization, not repeat generic allocator/Inventory predicate or assume six asset parity",
+        "dependency": "01 V300 Recipe Native delta and 04 v300 allocator evidence; exact Switch definitions not located"
       }
     },
     "04_SAVE_CORE": {
