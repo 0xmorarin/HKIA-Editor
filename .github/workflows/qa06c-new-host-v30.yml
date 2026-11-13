@@ -1,0 +1,95 @@
+name: QA 06C new host V30 independent (no deploy)
+on:
+  push:
+    branches: [qa06c/new-host-v30-20261113]
+    paths: ['.github/workflows/qa06c-new-host-v30.yml']
+permissions:
+  contents: read
+jobs:
+  independent:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          persist-credentials: false
+      - run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+      - name: Independent manifest, HTTPS and browser oracle
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,urllib.request,urllib.error,concurrent.futures,ssl
+          from playwright.sync_api import sync_playwright
+          root='https://yumekiraboshi.github.io/HKIA-Editor/'
+          sha=lambda b:hashlib.sha256(b).hexdigest()
+          raw=pathlib.Path('site-manifest.json').read_bytes()
+          assert sha(raw)=='564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6'
+          m=json.loads(raw); files=m['files']; assert m['writer']=='OFF' and len(files)==4146
+          base=pathlib.Path('site')
+          actual={p.relative_to(base).as_posix() for p in base.rglob('*') if p.is_file()}
+          assert actual==set(files)
+          for p,e in files.items():
+              data=(base/p).read_bytes(); assert len(data)==e['bytes'] and sha(data)==e['sha256'],p
+          print('QA LOCAL all 4146 exact, writer OFF',flush=True)
+          def fetch(path,base=root):
+              try:
+                  req=urllib.request.Request(base+path,headers={'User-Agent':'HKIA-06C-independent-QA','Accept-Encoding':'identity'})
+                  with urllib.request.urlopen(req,timeout=30,context=ssl.create_default_context()) as r:
+                      return r.status,r.geturl(),r.read()
+              except urllib.error.HTTPError as e:
+                  return e.code,e.url,b''
+          # independently choose all non-image runtime files except .nojekyll (GitHub may hide dotfiles), and dispersed WebP by content hash
+          images=sorted((p for p in files if p.endswith('.webp')),key=lambda p:files[p]['sha256'])
+          paths=sorted(p for p in files if not p.endswith('.webp') and p!='.nojekyll')+[images[i] for i in [0,101,509,1023,2047,3071,4000,4075]]
+          def verify(p):
+              status,url,data=fetch(p)
+              assert status==200 and url==root+p and len(data)==files[p]['bytes'] and sha(data)==files[p]['sha256'],(p,status,url,sha(data))
+              return p
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
+              checked=list(ex.map(verify,paths))
+          assert fetch('')==(200,root,(base/'index.html').read_bytes())
+          assert fetch('',root.replace('https:','http:'))==(200,root,(base/'index.html').read_bytes())
+          denied=['coordination/current.json','config/release-gates.json','site-manifest.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','README.md','parts/0000.bin','HKIA_Pages_OFF_V30_V29_20261113.bundle','dev/index.html','src/app.js.map']
+          for p in denied:
+              st,url,_=fetch(p); assert st in (403,404),(p,st,url)
+          print('QA HTTPS exact',len(checked),'denied',len(denied),'redirect PASS',flush=True)
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(headless=True)
+              for width in (320,375,1280):
+                  page=browser.new_page(viewport={'width':width,'height':900})
+                  foreign=[];errors=[];downloads=[]
+                  page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(root) else None)
+                  page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.on('download',lambda d:downloads.append(d.suggested_filename))
+                  page.goto(root,wait_until='networkidle',timeout=90000)
+                  assert page.url==root
+                  assert page.locator('#fileStatus').inner_text().strip()=='未読み込み'
+                  for sel in ['#nativeDownload','#openNativePreview','#closeNativePreview','#nativeDiscard','#downloadEdited']:
+                      assert page.locator(sel).is_disabled(),sel
+                  page.locator('#colTab').click()
+                  page.wait_for_function("document.querySelector('#collectionGrid').children.length > 0")
+                  assert page.locator('#colTab').get_attribute('aria-selected')=='true'
+                  page.locator('#collectionSearch').fill('zzzzzz-no-match-06c')
+                  page.locator('#collectionSearch').fill('')
+                  page.locator('#achTab').click()
+                  assert page.locator('#achTab').get_attribute('aria-selected')=='true'
+                  credit=page.locator('#attributionNotice'); assert credit.is_visible()
+                  assert 'Sunblink' in credit.inner_text() and 'SANRIO' in credit.inner_text() and '非公式' in credit.inner_text()
+                  result=page.evaluate("""async () => {
+                    const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('abc'));
+                    const hex=Array.from(new Uint8Array(d),n=>n.toString(16).padStart(2,'0')).join('');
+                    const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
+                    const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(e.message))};w.postMessage(m)});
+                    try {const a=await call({id:1,kind:'export'});const b=await call({id:1,kind:'noop'});const c=await call({id:2,kind:'apply'});return {secure:isSecureContext,hex,a,b,c,width:document.documentElement.scrollWidth,viewport:innerWidth};}finally{w.terminate()}
+                  }""")
+                  assert result['secure'] and result['hex']=='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
+                  assert result['a']=={'id':1,'error':'Native worker session missing'} and result['b']=={'id':1,'error':'Native worker replay'} and result['c']=={'id':2,'error':'Native worker session missing'},result
+                  assert result['width']<=width and not foreign and not errors and not downloads,(result,foreign,errors,downloads)
+                  print('QA REAL_BROWSER',width,'secure WebCrypto known-answer, worker export/apply/replay denied, UI tabs/credits, zero errors/foreign/downloads',flush=True)
+                  page.close()
+              browser.close()
+          print('QA06C SCOPED_PASS_NEW_HOST_V30_NO_SAVE_NO_DEPLOY',flush=True)
+          PY
