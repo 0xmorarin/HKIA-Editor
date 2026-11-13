@@ -925,7 +925,18 @@
         "gameAccepted": false,
         "next": "06 existing V34_SVELTE_R1_R3_AND_NEW_RESEARCH_SCOPED_QA in flight: add exact new 03 6 paths after fixed current scope; compare 02 definition independently, reproduce 18 focused + genuine ordered absence audit. 04 after both scoped accepted only; 00 serial research; 03 WAIT new concrete Recipe6 station/consumer original or QA counterexample."
       },
-      "qaRouting": "SELF_QA; HIGH -> 06A -> 04/07"
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 04/07",
+      "v301Exact29Causal": {
+        "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "risk": "HIGH",
+        "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
+        "baseLedgerBlob": "b246404cbc56e56efa7af87032faba624a54804c",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "New Switch301/87 serialized Exact29 identity/config to accepted versioned causal contracts; exact target/ordered group/root/field constraints, source witness vs existing JS contract and v300 accepted join; no new Writer or re-QA prior source",
+        "dependency": "06A accepted 02 4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849 / witness e5c4a06cf8c71bd3cec793013d501cab1b87fd5e2a0e391756f8d01f56f17e55; prior 03 v300 join 643f4bfc64946fcd6f4cc0290ca0f7563121aef608b671a0d4c399aa6f21de9b"
+      }
     },
     "04_SAVE_CORE": {
       "status": "FORMAL_CELEBRATION5_EXACT_WRITER_SCOPED_PASS_INTEGRATED_V32",
