@@ -3,6 +3,8 @@
   import {createDetailPort} from './collection-detail.ts';
   import {createCollectionDetailFixture} from './legacy-collection-detail-fixture.ts';
   import AchievementList from './AchievementList.svelte';
+  import AchievementDetail from './AchievementDetail.svelte';
+  import {createAchievementDetailPort} from './achievement-detail.ts';
   import {createAchievementPort} from './achievement-list.ts';
   import {createLegacyAchievementFixture} from './legacy-achievement-fixture.ts';
   import CollectionCategoryGrid from './CollectionCategoryGrid.svelte';
@@ -25,6 +27,7 @@
   const achievementFixture=createLegacyAchievementFixture(()=>filterPort.read());
   let achievementRevision=$state(0);
   const achievementPort=createAchievementPort({read(){void achievementRevision;return achievementFixture.read();},selectGuid:achievementFixture.selectGuid,showMore:achievementFixture.showMore,invalidate(){achievementRevision++;}});
+  const achievementDetailPort=createAchievementDetailPort({selectedGuid(){return achievementPort.read().selectedGuid;},read(){void achievementRevision;return achievementFixture.readDetail();}});
   const achievementMetrics=$derived.by(()=>{void achievementRevision;return achievementFixture.metrics();});
   const filterMetrics=$derived.by(()=>{void filterRevision;return filterFixture.metrics();});
   const categoryFixture=createLegacyCategoryFixture(()=>filterPort.read());
@@ -42,7 +45,7 @@
     <div class="panel-header"><div><h3>アチーブメント</h3><p>合成データによる実績一覧の表示検証です。</p></div><span class="count-pill">{achievementPort.read().total}件</span></div>
     <FilterToolbar port={filterPort} domain="achievements"/>
     <AchievementList port={achievementPort}/>
-    <div id="editorPanel" aria-live="polite"><p>検証用選択：{achievementMetrics.selectedGuid??'未選択'}</p></div>
+    <AchievementDetail port={achievementDetailPort}/>
   {/snippet}
   {#snippet collections()}
     <div class="panel-header"><div><h3>コレクション</h3><p>ゲーム定義のアイテムIDと収集履歴を直接照合します。ゲーム内の達成率とは異なります。</p></div><span class="count-pill">{categoryPort.read().totalCategories}カテゴリ</span></div>
