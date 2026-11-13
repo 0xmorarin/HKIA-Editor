@@ -4338,6 +4338,18 @@
           "acceptance": "Checkout V33 site+manifest exact; run verify-product-tab-v33-reference.mjs (Node strip-types) and verify-product-tab-v33-delta.mjs; reuse fixed compiled tab bundle SHA from V30 CI (or reproducible rebuild with pinned lock and compare hash); prepare-product-tabs-v33-delta.mjs <site> <manifest> <bundle> <fresh-delta>; overlay only src/app.js and product-tabs.mjs in fresh V33 copy; 4145 base paths exact, 4076 WebP unchanged, 1 MOD 1 ADD, browser-product-tabs-parity.py V33 base vs candidate actual Chromium 320/375/1280, exact 25 images/keyboard/filter/selection/fallback/off/no external. No deploy. 06B changed scope independently then 00 shared app composition only after both accepted.",
           "consumer": "06B QA-WEB-LOCALE"
         }
+      },
+      "productCategoryBinding": {
+        "task": "SVELTE_PRODUCT_CATEGORY_GRID_BINDING_BASELINE",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "baseHead": "6b6ef369c8db37d0c74221304e256abad9609e54",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "scope": "New svelte-ui paths only, actual V33 collection category grid projection from exact existing controller/card DOM and stable category keys, bounded 25 actual categories; reuse accepted R3 model and CategoryImage. No R4 list, detail, filter/tab candidate source edits, no deployment/Writer. Preserve legacy fallback.",
+        "dependency": "R3 independently accepted, exact V33 reconstructed; tab/filter separate CI and shared app composition owned 00",
+        "next": "Build actual controller read-only card projection/selection binding and lifecycle tests; fixed source and direct QA handoff."
       }
     },
     "06_QA": {
