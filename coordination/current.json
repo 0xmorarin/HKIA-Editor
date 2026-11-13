@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_LOCALE_REPAIR_AND_R6_R5_REPAIRED_COMBINED_CI_PARALLEL; 06B_FOCUSED_R5_AND_R6_AND_LOCALE_AFTER_FIXED_GREEN; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
+      "next": "00_R7_ISOLATED_CI_PARALLEL_06B_R5_REPAIR_R6_LOCALE_REPAIR_QA; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R4_ACCEPTED_R5_REPAIR_R6_COMPOSED_WAIT_CI",
+        "status": "R5_REPAIR_R6_COMPILED_06B_READY_R7_FIXED_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3548,13 +3548,39 @@
         },
         "r7": {
           "task": "SVELTE_R7_ACHIEVEMENT_COUNTER_GROUP_REWARD_READONLY",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "baseHead": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
           "basePrHead": "1997c6716342f4c18c036510968a52de014ca570",
           "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
           "scope": "svelte-ui additive read-only Achievement Counter/Group/Reward projection and synthetic component integration; explicit unknown/missing/zero and definition vs receipt; bounded members, exact numeric strings, selected GUID guard; actual V33 read-only reference subset; no writer/preview/new native facts; existing R5/R6/Locale fixed candidates unchanged",
-          "next": "05 local QA and fixed branch; 00 isolated CI; 06B distinct scope after compiled; existing R5/R6/Locale QA parallel"
+          "next": "00 nondeploy fixed R7 CI: pinned lock npm ci/test 115/check --fail-on-warnings/build, verify-achievement-facts-reference plus R1-R6 reference and browser regressions; browser-achievement-facts-parity.py at 320/375/1280. 06B R7 independent after compiled; R5/R6/Locale independent claims parallel, no full product authority.",
+          "sourceSha256": "ef7652a7ad3e6934adf253378f7b7fd0783341943f6e0ceee096ac18d269b474",
+          "deltaSha256": "1700157631e9d67c5abd12dc68567c94e4de06237c401cf5f39ce9cce7846fc3",
+          "manifestSha256": "5decc74520fde541a373b62e3a35bc799cec4d4c9abb7cd47a272493d3a6f00e",
+          "transportSha256": "d7d1550ea26e895013bdc0b9a1b3dfcecb988b72c3800739266d614c1ce9b849",
+          "evidenceSha256": "e8971323719d9573577f064789774870196da4553e072cda58d5c99b7ee1baa6",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteAchievementFacts_R7_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteAchievementFacts_R7_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteAchievementFacts_R7_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteAchievementFacts_R7_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteAchievementFacts_R7_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-achievement-facts-r7",
+            "head": "af261fd12385a3209aca458dfc2c394862d2e504",
+            "parent": "1997c6716342f4c18c036510968a52de014ca570",
+            "tree": "0ca07d8ac2e82c2ed5fe2bc797700a5b8ee7107e",
+            "changed": "1 MOD 6 ADD 0 DEL; 239 untouched; 7 exact changed blobs; 57 source blobs exact"
+          },
+          "verified": "115 Node incl 11 new, strict TS model/fixture; actual V33 read-only renderEditor counter/reward/condition members/parent group statements and inspectCounterDraft: 60 field comparisons, 12 child rows, 4 synthetic cases; R1-R6 reference regressions; browser script syntax; Source57/Delta7 CRC and replay; 5 Library readbacks exact",
+          "unverified": [
+            "R7 actual Svelte compile/check/build/Chromium 320/375/1280; offline npm ENOTCACHED zimmerframe 1.1.5",
+            "actual product controller/catalog/media, account counter, full locale and Writer binding",
+            "06B independent R7 acceptance"
+          ],
+          "decisions": "Slot read-only facts, source v3.0.1 labels, condition child list separate from parent group aggregate, bounded 128 children (not production limit); no inferred progress/receipt or game-derived asset/Save; no changes to R5/R6/Locale fixed branches."
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
