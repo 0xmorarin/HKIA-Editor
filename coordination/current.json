@@ -6230,11 +6230,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL_R5_SCOPED_TRUE_RED_V301_CAUSAL_DONE_WAIT_REPAIR",
       "task": "R5_STATIC_AND_V301_CAUSAL_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "07 R4 WASM Module Worker and real Chrome local genuine execution; 03 v301 Exact29 source/config causal adjudication; parallel, direct handoffs. 06A wait new fixed HIGH result; do not rerun accepted scopes.",
-      "dependency": "NONE_FOR_ACCEPTED_SCOPES; NEXT_06A_AFTER_07_WASM_FIXED_SELF_QA_OR_03_CAUSAL_FIXED_SELF_QA",
+      "next": "07 scoped client reply integrity repair; 00 existing R5 CI can finish independently, then new fixed repair CI; 00 serial v301 research integration. 06A wait fixed repair or independent new HIGH scope.",
+      "dependency": "07_R5_FIXED_REPAIR_SELF_QA; then compiled WASM/Chrome genuine evidence",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "13d33d1dbe2056054b1d6598dc2426feaf157e94",
       "legacyEvidence": {
@@ -6384,13 +6384,13 @@
         {
           "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
           "source": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
-          "status": "IN_FLIGHT",
+          "status": "TRUE_RED_SCOPED_CLIENT_REPLY_INTEGRITY",
           "risk": "HIGH"
         },
         {
           "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_INDEPENDENT_QA",
           "source": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_STATIC",
           "risk": "HIGH"
         }
       ],
@@ -6521,20 +6521,127 @@
       "nextReadyParallel": [
         {
           "stream": "07_RUST_CORE",
-          "task": "R4_WASM_MODULE_WORKER_REAL_CHROME_GENUINE_MINIMUM",
-          "dependency": "Native R4 scoped accepted; no development switch yet"
+          "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+          "dependency": "06A counterexamples ready"
         },
         {
-          "stream": "03_LINKAGE",
-          "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
-          "dependency": "01/02 scoped static definitions accepted"
+          "stream": "00_CTRL",
+          "task": "V301_EXACT29_CAUSAL_RESEARCH_SERIAL_INTEGRATION_REFERENCE_ONLY",
+          "dependency": "06A static causal accepted; existing R5 CI independent"
         }
       ],
       "nextAfterDep": [
-        "06A after 07 fixed self-QA WASM execution evidence",
-        "06A after 03 fixed new HIGH causal contract",
-        "00 development switch only after complete ADR gate"
-      ]
+        "06A focused regression of fixed R5 repair",
+        "07 compiled WASM/Chrome genuine self-QA",
+        "06A independent execution on fixed R5",
+        "00 DEVELOPMENT_SWITCH only after complete ADR gates"
+      ],
+      "r5Result": {
+        "status": "TRUE_RED_SCOPED_CLIENT_REPLY_INTEGRITY",
+        "sourceHead": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+        "sourceSha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
+        "deltaSha256": "acff34ac7d3df66db5bb28d7294d68cc152dfa0662d72e26fd245a1f29a95f9f",
+        "manifestSha256": "7b6aac176593e116a6cd0e9d07ba6b6f8f438d91a92b20238edb8bf10416e6e9",
+        "verified": {
+          "manifest": 106,
+          "unchangedR4": 93,
+          "added": 13,
+          "deltaExact": true,
+          "tsNew": 10,
+          "tsRegression": 14,
+          "strictTsc": 2,
+          "independentPositive": 2,
+          "independentNegativesRejected": 8
+        },
+        "trueRed": {
+          "path": "rust-worker/writer-abi.ts",
+          "method": "RpcGate.finish",
+          "input": "Synthetic HKS1/HKE1 responses with correct id and stamp but wrong Open kind, initial Plan base SHA, or requested field/old/new",
+          "expected": "reject malformed semantic response, terminate gate",
+          "actual": "3 invalid responses accepted, gate state advanced or pending cleared",
+          "cases": [
+            "OPEN_KIND_MISMATCH",
+            "PLAN_BASE_MISMATCH_AT_OPEN",
+            "PLAN_UNREQUESTED_FIELD"
+          ],
+          "cause": "Reply identity/tag checked without corresponding Open kind/working digest/exact requested edit semantics",
+          "impact": "Client ABI trust boundary only; no observed Rust misreply or real save corruption; R4 Native accepted scope unchanged",
+          "repair": "Bind Open kind; track current working digest across lifecycle, validate Plan base and exact field multiset/old/new/IDs incl progress pair; check Preview consistency and fail closed; regress 3 injections and retained positives/negatives."
+        },
+        "unverified": [
+          "actual Rust bridge compile/WASM/Chrome",
+          "six genuine outputs on R5",
+          "resources",
+          "game persistence/auth"
+        ],
+        "ciObserved": {
+          "head": "29426b0df7c009325b662c178998d78cdf77400b",
+          "run": 43386307818,
+          "status": "IN_FLIGHT_AT_OBSERVATION",
+          "diff": "ONE_WORKFLOW_ADD_ONLY"
+        },
+        "evidence": {
+          "file": "HKIA_06A_R5_V301_CAUSAL_QA_20261113_EVIDENCE.zip",
+          "sha256": "9cc0f393f85efba1b37b4921a0c71446406e253d85ecd707c53853d75b50948d",
+          "manifestSha256": "a6c2b937415a4620827d9a8b7f9a186fb271e08032fbce7bc27a29dd04af1039",
+          "handoffSha256": "8a10220a5de3901397ec60385b41068e6524923554e5576d6e0b27c9bddc17ec",
+          "bytes": 8348,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": "07_RUST_CORE",
+          "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
+          "status": "READY_TRUE_RED",
+          "condition": "Fixed new source, 3 independent counterexamples rejected, scoped self-QA and new CI; existing R4 native acceptance reuse. Old fixed CI can complete for diagnosis, not repair acceptance."
+        }
+      },
+      "v301CausalResult": {
+        "status": "SCOPED_PASS_STATIC_CAUSAL_JOIN",
+        "deltaSha256": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "manifestSha256": "14e80e1c5cd37624171ad828463bef654bca1388fcbeba14e720163d93b8baa1",
+        "resultSha256": "2ecca51984542f71023ea9dc033aad6413e90ec5976127dfb2a4841c735faf57",
+        "verified": {
+          "baseUnchanged": 625,
+          "added": 5,
+          "targets": 29,
+          "closure": 118,
+          "parents": 8,
+          "rootGroups": 63,
+          "orderedRefs": 757,
+          "absenceOccurrences": 281,
+          "distinctAbsence": 67,
+          "ridChanges": 118,
+          "complete": 10,
+          "revoke": 19,
+          "terminal": 6,
+          "absence": 9,
+          "independentMutationsRejected": 12
+        },
+        "newUnconditionalRequired": 0,
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "evidence": {
+          "file": "HKIA_06A_R5_V301_CAUSAL_QA_20261113_EVIDENCE.zip",
+          "sha256": "9cc0f393f85efba1b37b4921a0c71446406e253d85ecd707c53853d75b50948d",
+          "manifestSha256": "a6c2b937415a4620827d9a8b7f9a186fb271e08032fbce7bc27a29dd04af1039",
+          "handoffSha256": "8a10220a5de3901397ec60385b41068e6524923554e5576d6e0b27c9bddc17ec",
+          "bytes": 8348,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "00_CTRL",
+            "04_SAVE_CORE",
+            "07_RUST_CORE"
+          ],
+          "task": "V301_EXACT29_CAUSAL_RESEARCH_SERIAL_INTEGRATION_REFERENCE_ONLY",
+          "status": "READY",
+          "scope": "Five research paths only; 00 serial integration, 04/07 contract reference; no new writer permission. 03 wait concrete station/consumer witness."
+        }
+      }
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
