@@ -183,7 +183,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_SWITCH300_EXACT29_DEFINITION_QA_READY; 03_SOURCE_ADJUDICATION_AND_06_SCOPED_QA_PARALLEL; 04_AFTER_DEP; NO_REDO",
+      "next": "02_SWITCH301_EXACT29_DEFINITION_QA_READY; 03_AND_06_SCOPED_HANDOFF; 04_V300_AFTER_ACCEPTED_PRIOR_SWITCH300_CONTRACT; NO_REDO",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -429,12 +429,47 @@
       },
       "v301DefinitionReview": {
         "task": "SWITCH301_EXACT29_DEFINITION_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "scope": "Exact29 v301 Switch original definitions, reuse 02 Switch300 comparison contract, verify version/source-specific identity, no product changes",
-        "dependency": "01 Switch301 original bundle pinned, 02 Switch300 exact29 source witness, V33 accepted OFF"
+        "scope": "6 ADD, 0 MOD, 0 DEL; V33 521 paths unchanged; Switch301/87 exact29, closure118, parents8, root63/757; typed payloads and serialized Switch config only",
+        "dependency": "01 Switch301 original bundle pinned, 02 Switch300 exact29 source witness, V33 accepted OFF",
+        "deltaSha256": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
+        "manifestSha256": "ee00faa731b78ecbb2a853ec613f55b45441d82a81f4ee7ee184c45d9606ebf1",
+        "witnessSha256": "e5c4a06cf8c71bd3cec793013d501cab1b87fd5e2a0e391756f8d01f56f17e55",
+        "artifact": "HKIA_02_SWITCH301_EXACT29_DEFINITION_V33_DELTA_20261113.zip",
+        "verified": {
+          "originalCoreSha256": "660aba36ab6da5964180fe0d474696fc22dd806b2f5b19ce601222cb5a631afa",
+          "originalScriptSha256": "21f5223ddc167d7f2387e2acd58a81ceb660a096d04256135fcca7a7cdb036d2",
+          "originalConfigSha256": "26f5ff5cdc10bea5134737109cc4c029edee5d4439e8e4bd6471029183e97d3e",
+          "serializedCoreSha256": "e9203df760ada4918e17909ea9b4fe1d886b93246219b7a4662aa0b4b88236bd",
+          "local": 820,
+          "account": 31,
+          "rewards": 820,
+          "coreObjects": 41731,
+          "masterDefinitionReferences": 24107,
+          "localRegistry": 2078,
+          "accountRegistry": 0,
+          "exact29": 29,
+          "closure": 118,
+          "groups": 8,
+          "rootGroups": 63,
+          "orderedRefs": 757,
+          "focused": 19,
+          "sourceOriginalsUnchanged": 3,
+          "witnessRepeat": "BYTE_EXACT",
+          "libraryReadback": "BYTE_EXACT_CRC_5_MANIFEST_HASHES",
+          "switchConfig": "PLATFORM9_FACTORY_STORAGE_BACKEND_COUNTER_MASTER_ROOT_BINDINGS"
+        },
+        "classification": "EXACT29_SWITCH301_SERIALIZED_DEFINITION_AND_CONFIG_PARITY_ONLY; NO_NEW_REQUIRED; NO_PRODUCT_AUTHORITY",
+        "unverified": [
+          "runtime payload load/registration/scheduler and actual factory invocation",
+          "actual game authentication/load/resave/reward replay",
+          "new independent scoped QA and 03 adjudication",
+          "unrelated derived producers"
+        ],
+        "next": "03 versioned source/config adjudication and 06 independent 6 ADD scoped reproduction; 04 existing v301/87 Writer unchanged; v300/83 private proof after prior accepted 02/03/06 gates; 02 WAIT QA/new witness; no deploy"
       }
     },
     "03_LINKAGE": {
