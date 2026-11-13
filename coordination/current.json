@@ -4697,6 +4697,18 @@
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "10 fixed paths; actual ASIDE identity and Svelte static header; exact R6 model reuse, empty/stale/reentry/same GUID newer render, form identity and module fallback; no prior scope repeat."
         }
+      },
+      "productCollectionItems": {
+        "task": "SVELTE_PRODUCT_COLLECTION_ITEM_LIST_BINDING",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "baseHead": "c12fe0b000129c61706015f26a980083df75e440",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "scope": "05 additive bounded collection item rows with R5 presentation; existing detail toolbar, definition list, bulk, inspector and writer remain controller-owned",
+        "dependency": "R5 fixed reselect repair accepted; V33 artifact; independent tab/filter/category/list/header scopes",
+        "next": "Self-QA, fixed CI 00, independent 06B"
       }
     },
     "06_QA": {
