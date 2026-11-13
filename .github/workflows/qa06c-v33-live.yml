@@ -1,0 +1,94 @@
+name: QA 06C V33 postdeploy HTTPS independent (no deploy)
+on:
+  push:
+    branches: [qa06c/v33-live-20261113]
+    paths: ['.github/workflows/qa06c-v33-live.yml']
+permissions:
+  contents: read
+jobs:
+  independent:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          persist-credentials: false
+      - run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+      - name: Independent live boundary and Worker recurrence probe
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,urllib.request,urllib.error,concurrent.futures,ssl,time
+          from playwright.sync_api import sync_playwright
+          root='https://yumekiraboshi.github.io/HKIA-Editor/'
+          sha=lambda b:hashlib.sha256(b).hexdigest()
+          raw=pathlib.Path('site-manifest.json').read_bytes()
+          assert sha(raw)=='137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db'
+          m=json.loads(raw);files=m['files'];assert m['writer']=='OFF' and len(files)==4146
+          base=pathlib.Path('site')
+          assert {p.relative_to(base).as_posix() for p in base.rglob('*') if p.is_file()}==set(files)
+          for p,e in files.items():
+              b=(base/p).read_bytes();assert len(b)==e['bytes'] and sha(b)==e['sha256'],p
+          print('QA FIXED 4146 exact',flush=True)
+          def fetch(path,origin=root):
+              for n in range(4):
+                  try:
+                      req=urllib.request.Request(origin+path,headers={'User-Agent':'HKIA-06C-V33-QA','Accept-Encoding':'identity','Cache-Control':'no-cache'})
+                      with urllib.request.urlopen(req,timeout=30,context=ssl.create_default_context()) as r:return r.status,r.geturl(),r.read()
+                  except urllib.error.HTTPError as e:
+                      if e.code not in (429,502,503,504) or n==3:return e.code,e.url,b''
+                      print('QA HTTP transient',path,e.code,n+1,flush=True);time.sleep(2**n)
+          images=sorted((p for p in files if p.endswith('.webp')),key=lambda p:files[p]['sha256'])
+          paths=sorted(p for p in files if not p.endswith('.webp') and p!='.nojekyll')+[images[i] for i in (12,333,777,1399,2200,2999,3800,4074)]
+          def check(p):
+              status,url,b=fetch(p);assert status==200 and url==root+p and len(b)==files[p]['bytes'] and sha(b)==files[p]['sha256'],(p,status,url,sha(b))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:list(pool.map(check,paths))
+          assert fetch('')==(200,root,(base/'index.html').read_bytes())
+          assert fetch('',root.replace('https:','http:'))==(200,root,(base/'index.html').read_bytes())
+          denied=['coordination/current.json','config/release-gates.json','site-manifest.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','README.md','parts/0000.bin','HKIA_Pages_OFF_V30_V29_20261113.bundle','dev/index.html','src/app.js.map']
+          for p in denied:
+              status,_,_=fetch(p);assert status in (403,404),(p,status)
+          print('QA HTTPS',len(paths),'exact; all six changed paths included; 10 denials; redirect PASS',flush=True)
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(headless=True)
+              for i,width in enumerate((375,320,1280,375,375,1280)):
+                  page=browser.new_page(viewport={'width':width,'height':900})
+                  errors=[];foreign=[];failures=[];downloads=[];bad=[]
+                  page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(root) else None)
+                  page.on('requestfailed',lambda r:failures.append((r.url,r.failure)))
+                  page.on('response',lambda r:bad.append((r.url,r.status)) if r.status>=400 else None)
+                  page.on('download',lambda d:downloads.append(d.suggested_filename))
+                  try:
+                      page.goto(root,wait_until='networkidle',timeout=90000)
+                      assert page.url==root and page.locator('#fileStatus').inner_text().strip()=='未読み込み'
+                      for sel in ['#nativeDownload','#openNativePreview','#closeNativePreview','#nativeDiscard','#downloadEdited']:assert page.locator(sel).is_disabled(),sel
+                      page.locator('#colTab').click()
+                      page.wait_for_function("document.querySelector('#collectionGrid').children.length > 0")
+                      assert page.locator('#colTab').get_attribute('aria-selected')=='true'
+                      page.locator('#achTab').click()
+                      assert page.locator('#achTab').get_attribute('aria-selected')=='true'
+                      assert page.locator('#attributionNotice').is_visible()
+                      result=page.evaluate("""async () => {
+                        const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('abc'));
+                        const hex=Array.from(new Uint8Array(d),n=>n.toString(16).padStart(2,'0')).join('');
+                        const core=await import(new URL('native-product/dev-output-policy.mjs',location.href));
+                        const c=core.devOutputCapability('3.0.1',87,true,true,true,true,true,true,true,true);
+                        const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
+                        const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('Worker timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(JSON.stringify({message:e.message,filename:e.filename,lineno:e.lineno,colno:e.colno}))) };w.postMessage(m)});
+                        try {const a=await call({id:1,kind:'export'});const b=await call({id:1,kind:'noop'});const c1=await call({id:2,kind:'apply'});return {secure:isSecureContext,hex,a,b,c1,off:!core.betaWriterEnabled()&&c.authorizedOperations.length===0&&c.operations.every(x=>!x.canExport),width:document.documentElement.scrollWidth};}finally{w.terminate()}
+                      }""")
+                      assert result['secure'] and result['off'] and result['hex']=='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',result
+                      assert result['a']=={'id':1,'error':'Native worker session missing'} and result['b']=={'id':1,'error':'Native worker replay'} and result['c1']=={'id':2,'error':'Native worker session missing'},result
+                      assert result['width']<=width and not errors and not foreign and not downloads and not failures and not bad,(result,errors,foreign,downloads,failures,bad)
+                      print('QA BROWSER',i+1,width,'OFF Worker/WebCrypto tabs credits no errors/external/downloads',flush=True)
+                  except Exception:
+                      print('QA DIAGNOSTIC',i+1,width,'errors',errors,'foreign',foreign,'failed',failures,'http',bad,flush=True)
+                      raise
+                  finally: page.close()
+              browser.close()
+          print('QA06C V33 LIVE SCOPED PASS 6 browser contexts 3 at 375px NO SAVE NO DEPLOY',flush=True)
+          PY
