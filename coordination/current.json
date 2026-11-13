@@ -9265,6 +9265,14 @@
         "sha256": "1a0e9ff97290185cb62d0a59a8941330e750e9665aa2a5c2837c53bb9925896d",
         "location": "Private Library /HKIA Editor Private/",
         "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
+      },
+      "webR7Claim": {
+        "claim": "20261113_06B_WEB_R7_STATIC",
+        "status": "IN_FLIGHT",
+        "source": "af261fd12385a3209aca458dfc2c394862d2e504",
+        "sourceSha256": "ef7652a7ad3e6934adf253378f7b7fd0783341943f6e0ceee096ac18d269b474",
+        "baseHead": "53bddc64bfd6152e770bec6cb31da32dc6029f37",
+        "scope": "R7 seven exact paths independent static/typed negative preflight; compiled/browser acceptance waits 00 fixed CI; R5 isolated"
       }
     },
     "06C_QA_RELEASE": {
