@@ -3510,7 +3510,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "BLOCKED_R1_TOOLCHAIN_LOCAL_EXECUTION_KIT_READY",
+      "status": "IN_FLIGHT_R2_V33_TAG8_SCOPED_COMPATIBILITY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -3568,8 +3568,8 @@
       "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
       "handoffTo": "00_CTRL: arrange authorized private execution environment if available; 07 then 06 QA",
       "dependency": "VERIFIED_LOCAL_RUST_TOOLCHAIN_AND_NATIVE_LINKER; GENUINE_SWITCH_300_301_LOCAL_INPUT_PROVENANCE; NO_BETA_DEPENDENCY",
-      "resumeBaseHead": "511ec1c28f6d1d7311a7eafce172f73f82a39914",
-      "resumeScope": "R1 unchanged; toolchain availability and offline execution/evidence runner; no product or CI changes",
+      "resumeBaseHead": "95093e653156ea416881079a16130f8a0be392c0",
+      "resumeScope": "V33 fixed reader tag8 structural strictness and raw union span; R1 baseline unchanged; new synthetic oracle and private parity bridge; no writer or JS product changes",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -3582,7 +3582,8 @@
         "modifiedSourceRejected": true,
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
-      }
+      },
+      "resumeTask": "HKIA-RUST-002"
     }
   },
   "p0FixCandidate": {
