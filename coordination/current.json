@@ -3862,7 +3862,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "R2_COMPILED_SYNTHETIC_PASS_06_READY_REAL_PARITY_WAIT_ENV",
+      "status": "IN_FLIGHT_R2_GENUINE_LOCAL_PARITY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -3925,8 +3925,8 @@
       "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
       "handoffTo": "06_QA_DIRECT_SYNTHETIC_NOW; 07_PRIVATE_REAL_ONLY_AFTER_EXECUTABLE; 06_REAL_AFTER_PARITY",
       "dependency": "SYNTHETIC_QA_READY_NO_DEP; PRIVATE_EXECUTABLE_ENV_FOR_REAL_PARITY_ONLY; NO_BETA_DEP",
-      "resumeBaseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
-      "resumeScope": "Pin CI 43343089052 exact R2; verify 12 code blobs and generated crate; private parity R2 runner and evidence; 06 independent synthetic handoff; no workflow or product changes",
+      "resumeBaseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
+      "resumeScope": "Execute existing R2 private kit using identical CI binary, genuine Switch300/301 and V33 fixed reference; aggregate only; no upload or product changes",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -3940,7 +3940,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-003",
+      "resumeTask": "HKIA-RUST-004",
       "previousTask": "HKIA-RUST-002",
       "r2": {
         "source": {
