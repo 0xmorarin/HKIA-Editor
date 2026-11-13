@@ -18062,6 +18062,19 @@
         "run": 43429463962,
         "scope": "10 exact new category bridge paths, 25 actual category images, unique grid lifecycle/selection/focus/filters, mapped image LOAD_FAILED and bundle abort fallback, 320/375/1280; reuse accepted R3, no other re-QA."
       }
+    },
+    "productAchievementListCI": {
+      "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "4dbda258a1f58dfe755c64c9547597446809b355",
+      "baseBlob": "b4b5670c7e41150f9beb6c1a6c072ccc10104a69",
+      "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+      "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+      "scope": "10 exact ADD, one isolated fixed workflow; real V33 browser and code-only artifact; no deploy, no shared app composition.",
+      "branch": "ctrl/svelte-v33-achievement-list-fixed-20261113",
+      "next": "06B independent scoped acceptance after CI; static preflight parallel."
     }
   },
   "formalRelease": {
