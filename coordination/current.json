@@ -11048,17 +11048,32 @@
     },
     "svelteR4RepairCI": {
       "task": "SVELTE_R4_FIXED_ORACLE_REPAIR_CI",
-      "status": "IN_FLIGHT",
+      "status": "IN_FLIGHT_CI_RUNNING",
       "owner": "00 CTRL",
       "sourceHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
-      "scope": "1 test-only MOD; repin existing workflow, fast-forward fixed R4 branch, full regression"
+      "scope": "1 test-only MOD; repin existing workflow, fast-forward fixed R4 branch, full regression",
+      "head": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+      "run": 43391376268,
+      "job": 131771848994,
+      "verified": "repair 1 MOD only, workflow 1 MOD; exact fixed pin, fast-forward success"
     },
     "svelteLocaleCI": {
       "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_CI",
-      "status": "IN_FLIGHT",
+      "status": "IN_FLIGHT_CI_RUNNING",
       "owner": "00 CTRL",
       "sourceHead": "9863dd6b38ebcbf4ce25611812dd78ea8dd7e887",
-      "scope": "8 ADD isolated synthetic consumer; nondeploy CI only; no game packs or live binding"
+      "scope": "8 ADD isolated synthetic consumer; nondeploy CI only; no game packs or live binding",
+      "head": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+      "run": 43391367596,
+      "job": 131771821207,
+      "verified": "8 ADD only, isolated workflow 1 ADD; exact fixed pin"
+    },
+    "v37Acceptance": {
+      "task": "V37_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+      "scope": "Record 06C independent fixed reference scoped PASS only; no deploy or Writer grant"
     }
   },
   "formalRelease": {
