@@ -8296,7 +8296,7 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_WEB_R5_AND_LOCALE_CONSUMER_TRUE_RED",
+      "status": "IN_FLIGHT_LOCALE_R5_REPAIR_R6",
       "task": "WEB_R5_COLLECTION_DETAIL_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
       "next": "05 READY R5 postcondition repair; 00 READY fixed Locale Consumer successor CI; 06B after locale CI or R5 fixed repair CI/new HIGH scope; 08 new fixed HIGH only; accepted scopes unchanged",
@@ -8930,6 +8930,23 @@
           "sha256": "29c1318a1035d2008c2cea351fb3d78e7e09af5b64d6d3a4c1adb7dc462e84e4",
           "location": "Private Library /HKIA Editor Private/",
           "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
+        }
+      },
+      "repairClaims": {
+        "locale": {
+          "claim": "20261113_06B_LOCALE_REPAIR",
+          "status": "IN_FLIGHT",
+          "source": "5a7b404fdc72604e0fb2cd9611f732d24fa59ade"
+        },
+        "r5": {
+          "claim": "20261113_06B_R5_REPAIR",
+          "status": "IN_FLIGHT",
+          "source": "1997c6716342f4c18c036510968a52de014ca570"
+        },
+        "r6": {
+          "claim": "20261113_06B_R6",
+          "status": "IN_FLIGHT",
+          "source": "1997c6716342f4c18c036510968a52de014ca570"
         }
       }
     },
