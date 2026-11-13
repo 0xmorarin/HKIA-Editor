@@ -6889,11 +6889,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT_THREE_RESEARCH_SCOPES",
+      "status": "DONE_THREE_SCOPED_STATIC_RESEARCH_WAIT_NEW_HIGH_OR_BROWSER",
       "task": "DERIVED23_RECIPE6_STATION_V301_MARKER_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "R5.1 repair, fixed new WASM Node genuine, and existing defensive resource bounds all independently accepted scoped. 07 genuine Chrome WAIT_ENV only; 06A wait authorized actual Browser self-QA or new fixed HIGH scope. No duplicate Node or resource QA.",
-      "dependency": "AUTHORIZED_PRIVATE_REAL_CHROME_ENVIRONMENT; 07_FIXED_BROWSER_GENUINE_SELF_QA",
+      "next": "Three new research scopes independently accepted. 00 serial additive Derived23/Recipe6 research integration, 04/07 marker reference; 07 R6 explicit disjoint capacity remains independent; 06A wait new fixed HIGH result or authorized genuine browser self-QA. No duplicate accepted scope.",
+      "dependency": "NEW_FIXED_HIGH_SCOPE_OR_07_GENUINE_BROWSER_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
       "legacyEvidence": {
@@ -7043,19 +7043,19 @@
         {
           "task": "SWITCH300_301_MISSING_DERIVED23_INDEPENDENT_QA",
           "source": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_STATIC",
           "risk": "HIGH"
         },
         {
           "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_INDEPENDENT_QA",
           "source": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_STATIC",
           "risk": "HIGH"
         },
         {
           "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
           "source": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_STATIC",
           "risk": "HIGH"
         }
       ],
@@ -7183,27 +7183,33 @@
           }
         }
       },
-      "nextReadyParallel": [],
+      "nextReadyParallel": [
+        {
+          "stream": "00_CTRL",
+          "task": "DERIVED23_AND_RECIPE6_STATION_ADDITIVE_RESEARCH_SERIAL_INTEGRATION",
+          "dependency": "02/03 scoped independent static PASS; latest integrated reference compatibility"
+        }
+      ],
       "nextAfterDep": [
         {
+          "stream": "06A_QA_DATA_CORE",
+          "task": "NEW_FIXED_HIGH_QA",
+          "condition": "07 R6 fixed self-QA or other genuinely new fixed HIGH evidence"
+        },
+        {
           "stream": "07_RUST_CORE",
-          "task": "R5_1_FIXED_REPAIRED_REAL_CHROME_GENUINE_EXECUTION",
-          "condition": "authorized private real Chrome environment; fixed CI artifact already available; no administrator restriction bypass"
+          "task": "R5_1_FIXED_REAL_CHROME_GENUINE",
+          "condition": "authorized private real Chrome environment"
         },
         {
           "stream": "06A_QA_DATA_CORE",
-          "task": "R5_1_FIXED_REAL_CHROME_INDEPENDENT_EXECUTION_QA",
-          "condition": "07 fixed actual Browser self-QA evidence"
+          "task": "R5_1_BROWSER_INDEPENDENT_EXECUTION",
+          "condition": "07 fixed actual browser self-QA"
         },
         {
           "stream": "00_CTRL",
-          "task": "DEVELOPMENT_SWITCH_ADR_GATE_RECORD",
-          "condition": "all applicable ADR criteria and independent execution acceptance"
-        },
-        {
-          "stream": "07_RUST_CORE",
-          "task": "CAPACITY_TARGET_IMPLEMENTATION_AND_JS_RUST_BROWSER_COMPARISON",
-          "condition": "00 explicit disjoint assignment or architecture development switch; authorized browser; separate fixed HIGH scope"
+          "task": "DEVELOPMENT_SWITCH",
+          "condition": "complete applicable ADR gates and independent acceptance"
         }
       ],
       "r5Result": {
@@ -7494,6 +7500,173 @@
           ],
           "status": "SCOPED_ACCEPTANCE_READY",
           "condition": "Use measured current bounds as baseline, not target PASS; separate capacity implementation only with risk-based independent QA and 00 scope. No unconditional limit increase. Actual repaired genuine Chrome remains WAIT_ENV."
+        }
+      },
+      "derived23Result": {
+        "status": "SCOPED_PASS_STATIC_SOURCE_IDENTITY",
+        "sourceSha256": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "manifestSha256": "ffd6f9ba54404b0e5e617565933f9666ad5945dd99e6f5cc416813695b41549b",
+        "witnessSha256": "012cee892ed29009457333941702ca2eb6b0068302b595615714f7e2631c4068",
+        "verified": {
+          "sourceReproduction": "BYTE_EXACT",
+          "addedPaths": 6,
+          "unchangedBasePaths": 625,
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "rowsPerVersion": 35,
+          "producersPerVersion": 23,
+          "visitorPerVersion": 22,
+          "missionPerVersion": 1,
+          "masterReferencesPerVersion": 24107,
+          "groupOrderedMembers": [
+            76,
+            11
+          ],
+          "affectedManualPositiveRewards": 10,
+          "parentZeroRewards": 2,
+          "independentRawOracleNegatives": 12,
+          "upstreamTestsReexecuted": 17,
+          "originalInputRehash": "PASS"
+        },
+        "limits": "Serialized identity, exact PPtr/class/registration intent only; no runtime lookup/scheduler, Mission absence inference, structural row creation, reward replay, game persistence; no new REQUIRED or Writer",
+        "evidence": {
+          "file": "HKIA_06A_DERIVED23_RECIPE6_MARKER_20261113_EVIDENCE.zip",
+          "sha256": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+          "manifestSha256": "3ddf7358c6fc85f6fe0056886957559205fb61f410728ca699115de4c33784a2",
+          "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+          "handoffSha256": "0e358ad635410cd4531f0a664a619de093cec15aba06f23d22167baf354adb4a",
+          "bytes": 15572,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_10_ENTRIES_9_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "03_LINKAGE",
+            "04_SAVE_CORE",
+            "07_RUST_CORE",
+            "00_CTRL"
+          ],
+          "task": "DERIVED23_STATIC_REFERENCE_AND_SERIAL_RESEARCH_INTEGRATION",
+          "status": "READY",
+          "scope": "Source reference only; 00 integrate additive private research paths; 03 only concrete new causal witness, no speculative writer expansion."
+        }
+      },
+      "recipe6StationResult": {
+        "status": "SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC",
+        "sourceSha256": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "manifestSha256": "99c298ca41c0417b782ed8361d2a86c50e3bc2926d15a91bf40fdde565999d1c",
+        "witnessSha256": "64f93cb0aac91ec28af0721acf2537b8a902fc020970d2987868c51e0bb30751",
+        "verified": {
+          "sourceReproduction": "BYTE_EXACT",
+          "addedPaths": 5,
+          "transportManifest": 1,
+          "unchangedBasePaths": 625,
+          "stations": 4,
+          "prototypes": 13,
+          "scripts": 9,
+          "manualCounters": 9,
+          "consumers": 9,
+          "local": 8,
+          "account": 1,
+          "missions": 809,
+          "affectedMissions": 31,
+          "stationRefs": 65,
+          "itemCounterClassPopulation": 130,
+          "nativeRanges": 3,
+          "nativeWords": 1616,
+          "llvmAarch64Mnemonics": 14,
+          "independentRawNegatives": 3,
+          "typedReproduction": {
+            "managedFullyConsumed": 9,
+            "cookRequirements": 58,
+            "directTargetItemRequirements": 0,
+            "exactTagCandidates": 1,
+            "postQuests": 7,
+            "nullRequiredItem": 1,
+            "emptyPrimaryFilters": 3
+          },
+          "upstreamTestsReexecuted": 5,
+          "upstreamMutationSubtests": 27,
+          "originalInputRehash": "PASS"
+        },
+        "limits": "Conditional successful cook event only; ownership != cook. Candy null/item interaction script behavior, active registration/mission, reward replay, persistence/game UNKNOWN. ItemCounter typed filter negative not global runtime absence.",
+        "newUnconditionalRequired": 0,
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "evidence": {
+          "file": "HKIA_06A_DERIVED23_RECIPE6_MARKER_20261113_EVIDENCE.zip",
+          "sha256": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+          "manifestSha256": "3ddf7358c6fc85f6fe0056886957559205fb61f410728ca699115de4c33784a2",
+          "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+          "handoffSha256": "0e358ad635410cd4531f0a664a619de093cec15aba06f23d22167baf354adb4a",
+          "bytes": 15572,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_10_ENTRIES_9_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "01_COLLECTION",
+            "04_SAVE_CORE",
+            "07_RUST_CORE",
+            "00_CTRL"
+          ],
+          "task": "RECIPE6_STATION_CONDITIONAL_REFERENCE_AND_SERIAL_RESEARCH_INTEGRATION",
+          "status": "READY",
+          "scope": "No ownership cook emulation, no new writes; 00 additive research only. 03 wait concrete Candy/runtime/persistence witness."
+        }
+      },
+      "v301MarkerResult": {
+        "status": "SCOPED_PASS_STATIC_MARKER_METADATA_AND_HEADER_ONLY",
+        "sourceSha256": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
+        "manifestSha256": "3df7649d2179d9d01d6df158f64accd0ad54b2732905c3aabab029397470dc49",
+        "resultSha256": "6de5c8880b73e630716195c70b6892bae5c622f5dade93269a632028ff7afd45",
+        "verified": {
+          "sourceReproduction": "BYTE_EXACT",
+          "sourcePins": {
+            "nso": "64bd5fb69239f57eb0578a1897a45a3c6f5e187480903f83df503b46bf827bfb",
+            "dump": "4b4eb6a543722e1dfaf8aad5593e9e1300723aff55e9e750d489744960feb738",
+            "metadata": "e4300e0e4235c99bf791392c2a2b50ae3d693edc328a68ce2f5a20571de1f7bb"
+          },
+          "buildId": "5B05C9862BC39061",
+          "anchors": 43,
+          "branches": 8,
+          "methodBindings": 5,
+          "classLinks": 2,
+          "fieldChains": 2,
+          "priorV300ArrayDigestParity": 2,
+          "genuineHeaders": {
+            "3.0.0": 4,
+            "3.0.1": 1,
+            "2.18.1": 1
+          },
+          "metadataNegatives": 6,
+          "headerNegatives": 12,
+          "originalsUnchanged": true
+        },
+        "limits": "FieldRef/default marker arrays and header boundary only; not authentication, full codec/migration, arbitrary legacy or game acceptance; V24 genuine Browser still WAIT_ENV.",
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "evidence": {
+          "file": "HKIA_06A_DERIVED23_RECIPE6_MARKER_20261113_EVIDENCE.zip",
+          "sha256": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+          "manifestSha256": "3ddf7358c6fc85f6fe0056886957559205fb61f410728ca699115de4c33784a2",
+          "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+          "handoffSha256": "0e358ad635410cd4531f0a664a619de093cec15aba06f23d22167baf354adb4a",
+          "bytes": 15572,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_10_ENTRIES_9_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "04_SAVE_CORE",
+            "07_RUST_CORE"
+          ],
+          "status": "READY_STATIC_REFERENCE",
+          "scope": "Use exact v301 marker evidence only, no Writer grant or Development Switch."
         }
       }
     },
