@@ -9778,7 +9778,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_V38_FIXED_06C_READY_RESEARCH_RECONCILED",
+    "status": "DONE_V38_FIXED_AND_SVELTE_R5_CI_PASS_NEW_QA_RECONCILED",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -9889,18 +9889,18 @@
     },
     "nextReadyParallel": [
       "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT_HKIA_RUST_014",
-      "06A_RECIPE6_SAVED_CONDITIONS_AND_HATS_OFF_PRODUCER_SCOPED_QA",
-      "06A_R5_1_BROWSER_KIT_OFFLINE_HARNESS_INDEPENDENT_SCOPE",
-      "06B_EXISTING_R4_LOCALE_CONSUMER_SWITCH300_IN_FLIGHT_AND_NEW_ACCOUNT_NATIVE",
-      "05_NEXT_DISJOINT_UI_OR_ACCEPTED_R3_CATALOG_PREPARATION",
+      "05_LOCALE_R1_REENTRANT_CLOSE_REPAIR_AND_ACCEPTED_R4_SWITCH300_ACCOUNT_PREPARATION",
+      "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
+      "06B_R5_COLLECTION_DETAIL_NEW_SCOPE",
       "06C_V38_FIXED_641_SCOPED_QA"
     ],
     "nextAfterDep": [
       "00_ACCEPT_V38_AFTER_06C",
+      "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
+      "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
+      "05_R5_COLLECTION_UI_INTEGRATION_AFTER_06B",
       "03_RECIPE6_CONDITIONAL_REFERENCE_AFTER_06A_SAVED_CONDITION_ACCEPTANCE",
       "04_07_HATS_OFF_REFERENCE_AFTER_06A_ACCEPTANCE",
-      "05_R4_LOCALE_PRODUCT_INTEGRATION_AFTER_06B",
-      "05_SWITCH300_ACCOUNT_NATIVE_AFTER_06B",
       "06A_R6_CAPACITY_AFTER_07_FIXED_SELF_QA",
       "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
@@ -10564,24 +10564,24 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "V38_FIXED_REFERENCE_RESEARCH_QUEUE_RECONCILIATION",
+      "task": "V38_FIXED_SVELTE_R5_CI_AND_QA_RECONCILIATION",
       "status": "DONE_SCOPED_HANDOFF",
       "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
-      "scope": "V38 self-QA fixed, 06C ready; 3 research independent results retained, marker direct reference; R6 READY disjoint; new saved-state/HatsOff/account native QA; existing 06B claims preserved",
+      "scope": "V38 fixed and 06C READY; Svelte R5 CI PASS and 06B READY; R4/Switch300/Account native independent scoped PASS, locale consumer TRUE_RED direct 05; R6 assigned; genuine browser WAIT_ENV",
       "next": [
         "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT_HKIA_RUST_014",
-        "06A_RECIPE6_SAVED_CONDITIONS_AND_HATS_OFF_PRODUCER_SCOPED_QA",
-        "06A_R5_1_BROWSER_KIT_OFFLINE_HARNESS_INDEPENDENT_SCOPE",
-        "06B_EXISTING_R4_LOCALE_CONSUMER_SWITCH300_IN_FLIGHT_AND_NEW_ACCOUNT_NATIVE",
-        "05_NEXT_DISJOINT_UI_OR_ACCEPTED_R3_CATALOG_PREPARATION",
+        "05_LOCALE_R1_REENTRANT_CLOSE_REPAIR_AND_ACCEPTED_R4_SWITCH300_ACCOUNT_PREPARATION",
+        "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
+        "06B_R5_COLLECTION_DETAIL_NEW_SCOPE",
         "06C_V38_FIXED_641_SCOPED_QA"
       ],
       "after": [
         "00_ACCEPT_V38_AFTER_06C",
+        "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
+        "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
+        "05_R5_COLLECTION_UI_INTEGRATION_AFTER_06B",
         "03_RECIPE6_CONDITIONAL_REFERENCE_AFTER_06A_SAVED_CONDITION_ACCEPTANCE",
         "04_07_HATS_OFF_REFERENCE_AFTER_06A_ACCEPTANCE",
-        "05_R4_LOCALE_PRODUCT_INTEGRATION_AFTER_06B",
-        "05_SWITCH300_ACCOUNT_NATIVE_AFTER_06B",
         "06A_R6_CAPACITY_AFTER_07_FIXED_SELF_QA",
         "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
         "06C_V24_GENUINE_BROWSER_WAIT_ENV",
@@ -12078,15 +12078,88 @@
         "04 SAVE CORE",
         "07 RUST CORE"
       ],
-      "noWriterAuthority": true
+      "noWriterAuthority": true,
+      "readback": "SOURCE_ZIP_SHA_CRC_MATCH_MANIFEST_PIN_MATCH"
     },
     "svelteR5CI": {
       "task": "SVELTE_R5_COLLECTION_DETAIL_FIXED_ISOLATED_CI",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "DONE_FIXED_R5_CI_PASS_06B_READY",
       "sourceHead": "7efe8f07e3999abccc19e6415630e6e76df02887",
       "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
-      "scope": "Fixed R5 source; one isolated workflow ADD, no product changes, no deploy; R1-R4 regression and R5 actual Chromium"
+      "scope": "Fixed R5 source; one isolated workflow ADD, no product changes, no deploy; R1-R4 regression and R5 actual Chromium",
+      "head": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+      "run": 43393283523,
+      "job": 131778074614,
+      "ci": "SUCCESS",
+      "verified": {
+        "sourceGuard": "PASS",
+        "lock": "PASS",
+        "workflowAdd": 1,
+        "unit": 86,
+        "fail": 0,
+        "skip": 0,
+        "svelteCheck": "0 errors 0 warnings",
+        "build": "PASS",
+        "legacyReference": "PASS",
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r1r2r3r4Regression": "PASS",
+        "paging": [
+          100,
+          200,
+          201
+        ],
+        "searchSortReset": true,
+        "unknownFilterDisabled": true,
+        "selectionRetention": true,
+        "categoryReset": true,
+        "overflow": 0,
+        "pageErrors": 0,
+        "externalRequests": 0
+      },
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "task": "SVELTE_R5_FIXED_COLLECTION_DETAIL_SCOPED_QA",
+        "sourceHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+        "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
+        "deltaSha256": "7ac84e6442b8385c0cbc0ee944bc047e76755ecb4b938fb597312bc2a4354038",
+        "run": 43393283523,
+        "scope": "New R5 collection definition/item list/filter/paging/inspect and local image semantics; independent model/behavior counterexamples and fixed actual Chromium evidence; reuse R1-R4 exact acceptance. No product/Writer/actual asset binding claim."
+      }
+    },
+    "browserKitReconciliation": {
+      "status": "OFFLINE_HARNESS_INDEPENDENT_CLAIM_IN_FLIGHT_BROWSER_WAIT_ENV",
+      "source": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
+      "manifest": "75ca10903911545c594c7a64c4f673fc958c2411bcb9d1d045d77ec530e1d616",
+      "readback": "KIT_SHA_CRC_MANIFEST_PIN_MATCH",
+      "scope": "06A independent test-only harness readiness; no genuine browser PASS"
+    },
+    "svelteLocaleR1IndependentReconciliation": {
+      "status": "TRUE_RED_SCOPED_REENTRANT_CLOSE_REPAIR_05_READY",
+      "source": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+      "evidence": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
+      "trueRed": {
+        "id": "LOCALE_CONSUMER_R1_REENTRANT_CLOSE_COMMIT",
+        "path": "svelte-ui/src/locale-consumer.ts",
+        "input": "Injected documentLanguage or storage.setItem synchronously calls consumer.close() during current verified request",
+        "expected": "STALE, CLOSED, active null; no old READY state resurrection",
+        "actual": "READY, READY, active ja/en; CLOSED notification occurred before resurrection; storage case writes=1",
+        "cause": "generation check after loader but absent after external callback(s) before final READY publish",
+        "impact": "Injected consumer close/state contract violation; no actual browser native callback reentry, live session/save mutation or game corruption observed",
+        "repair": "05 check generation/closed after each external call and before READY commit; define guarded side-effect contract for storage/document callback reentry, prevent stale preference/state commits; test Close/newer request during document/storage callbacks, stale success/reject, ordinary reentrant subscriber, metadata mismatch, storage denial and all 15 locales; preserve accepted runtime and other UI scopes",
+        "regression": "Independent repro red-repro.mjs and independent-locale.mjs in fixed evidence; fixed successor + 00 isolated CI + 06B focused acceptance"
+      },
+      "handoff": {
+        "recipient": "05 WEB",
+        "task": "SVELTE_LOCALE_R1_REENTRANT_CLOSE_COMMIT_REPAIR",
+        "status": "READY",
+        "condition": "Repair only Locale Consumer state/callback boundary; no R4 or accepted runtime change; 00 fixed CI then 06B focused independent acceptance"
+      },
+      "scope": "Do not consume unsafe locale consumer; fixed 08 runtime/catalog and accepted Web R4/Switch300 remain valid. 00 fixed repair CI after 05."
     }
   },
   "formalRelease": {
