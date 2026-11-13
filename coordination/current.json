@@ -13953,8 +13953,8 @@
     "actualPagesDeploymentObserved": true,
     "actualPagesPreviewOnly": true,
     "targetPagesLiveVerified": true,
-    "targetPagesStatus": "LIVE_V33_OFF_HTTPS_SELF_PASS_INDEPENDENT_PENDING",
-    "targetPagesIndependentAccepted": false
+    "targetPagesStatus": "LIVE_FIXED_V33_OFF_INDEPENDENT_SCOPED_PASS",
+    "targetPagesIndependentAccepted": true
   },
   "nextSerial": [
     "06 continue V30 live and new research scoped QA; 00 integrate exact accepted research deltas after handoff.",
@@ -18181,7 +18181,7 @@
       "owner": "00 CTRL",
       "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
       "risk": "RELEASE",
-      "status": "DEPLOYED_V33_LIVE_SELF_PASS_06C_READY",
+      "status": "DONE_LIVE_V33_OFF_INDEPENDENT_ACCEPTED",
       "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
       "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
       "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -18203,7 +18203,7 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "06C independent scoped postdeploy acceptance; no redeploy or Writer enable.",
+      "next": "No redeploy; retain V33 as current accepted rollback; new candidate separate.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
@@ -18403,13 +18403,97 @@
       "postDeployHandoff": {
         "to": "06C QA-RELEASE",
         "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA",
-        "status": "READY_INDEPENDENT_POSTDEPLOY_ACCEPTANCE",
+        "status": "DONE_ACCEPTED",
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "deploymentRun": 43432381119,
         "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save. First CTRL live run 43432726052 exact HTTPS PASS, 320 PASS, 375 Worker generic onerror; diagnostic e830910b pending. Do not mark full PASS; isolate transient transport vs runtime regression, verify 375/1280 and independent acceptance. Diagnostic run 43432865398 passed all 77 HTTPS samples, 10 denials and 3 widths; first error not reproduced; independent acceptance must retain failure history and assess recurrence.",
         "ctrlLiveRun": 43432726052,
         "diagnosticRun": 43432865398
+      },
+      "liveAcceptance": {
+        "schema": "HKIA.06C.V33.Live.1",
+        "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA",
+        "verdict": "SCOPED_PASS_LIVE_FIXED_V33_OFF_ROOT",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "host": "https://yumekiraboshi.github.io/HKIA-Editor/",
+        "deployment": {
+          "run": 43432381119,
+          "verifyJob": 131908829815,
+          "deployJob": 131909012030,
+          "event": "workflow_dispatch",
+          "conclusion": "success",
+          "head": "306d6c2119babb1839b2a3f436ba89124cf1171b",
+          "pr12Merge": "a280b65989fb9808bc339b3462ca6ccee998cef7"
+        },
+        "independent": {
+          "run": 43434165900,
+          "job": 131914901040,
+          "head": "c9159db016eea29ee2b43a870047886354cd8440",
+          "workflowBlob": "0d5530a95c4ce34e4b129af315d64c7354997fbf",
+          "conclusion": "success",
+          "verified": {
+            "fixedFiles": 4146,
+            "liveHTTPSHashes": 77,
+            "allChanged6": true,
+            "denials": 10,
+            "rootExact": true,
+            "httpToHttps": true,
+            "browserContexts": 6,
+            "widths": [
+              375,
+              320,
+              1280,
+              375,
+              375,
+              1280
+            ],
+            "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+            "webCryptoKnownAnswer": true,
+            "writer": "OFF",
+            "pageErrors": 0,
+            "externalRequests": 0,
+            "failedRequests": 0,
+            "httpErrors": 0,
+            "downloads": 0,
+            "credits": true
+          }
+        },
+        "initialCtrlFailure": {
+          "run": 43432726052,
+          "width": 375,
+          "error": "Worker onerror empty message",
+          "diagnosticRun": 43432865398,
+          "diagnostic": "PASS all 3 widths",
+          "independentRecurrence": "0/6 contexts; 0/3 at 375px",
+          "cause": "UNKNOWN_NOT_REPRODUCED_NOT_CLAIMED_FIXED"
+        },
+        "rollback": {
+          "ref": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+          "evidence": "V33 predeploy exact rollback map with full base/candidate bytes verified",
+          "actualLiveRollback": false
+        },
+        "limits": [
+          "No genuine Save loaded; V24 genuine browser/game WAIT_ENV",
+          "77 samples live, not all 4076 image bytes individually fetched",
+          "No deploy, DNS, Writer activation or formal promotion by 06C",
+          "First CTRL Worker error cause unknown, no recurrence observed",
+          "Historical exposure NOT_ERASED"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
+          "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
+        },
+        "evidence": {
+          "commit": "1371ba5b0230dcd5c413a9d3470dea0ab79251e5",
+          "blob": "b4ac6bd41e603766e5147b20caac825adf0ebeb9",
+          "path": "qa/06c/v33-live-20261113-result.json",
+          "readback": "EXACT",
+          "scope": "PUBLIC_SAFE_QA_ONLY"
+        }
       }
     },
     "productTabsCI": {
@@ -18669,7 +18753,7 @@
       "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "DONE_FIXED_CI_PASS_06B_READY",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
       "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
       "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
@@ -18683,9 +18767,7 @@
       "ciStatus": "SUCCESS",
       "artifact": {
         "id": 14037284400,
-        "name": "HKIA_ProductTabs_V33_CodeOnly",
         "sha256": "4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7",
-        "bytes": 52463,
         "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
         "appSha256": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
         "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
@@ -18717,7 +18799,7 @@
       },
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_INDEPENDENT_QA",
         "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
         "compiledHead": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
@@ -18732,13 +18814,22 @@
         },
         "scope": "3 ADD exact V33 pin scripts and compiled rebind, reuse V30 independently accepted module/10 paths, actual V33 base and rollback/cross-base negative; no whole V30 or filter QA repeat. Then 00 compose exact V33 tab+filter hooks."
       },
-      "next": "06B V33 rebind scope independent acceptance; then 00 composition with accepted V33 filters; 05 other scope parallel."
+      "next": "00 fixed five-scope composition; no standalone app overwrite.",
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        }
+      }
     },
     "v41Research": {
       "task": "V40_PLUS_18_ACCEPTED_RESEARCH_ADDITIONS",
       "owner": "00 CTRL",
       "risk": "LOW_EXISTING_ACCEPTED_RESEARCH_COMPOSITION",
-      "status": "SELF_PASS_06C_READY",
+      "status": "DONE_06C_SCOPED_PASS_PRIVATE_REFERENCE",
       "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
       "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
       "baseSource": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
@@ -18835,13 +18926,74 @@
         "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
         "scope": "18 ADD only (4 Recipe membership V39, 6 Hats Off v300 V39, 8 Candy Cloud V40), 653 exact V40, 42 focused, prior 06A exact scoped evidence reuse; verify full source/map, no distribution change, no new REQUIRED/Writer, rollback; metadata files inside pinned Metadata ZIP. No deploy."
       },
-      "next": "06C exact V41 private research scoped acceptance then 00 record pointer; independent of Pages V33."
+      "next": "Reference consumers only; no deploy or Writer.",
+      "acceptance": {
+        "verdict": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+        "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "base": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "manifest": "f557c5b5993c2f2245b6c9daef81be9f8c8e4ed0252fa26f36079bc609adae5d",
+        "delta": "f45e7d68c1c784b8421acb4876371a9ce49011dfee7b0c962ec2fb72c8b44f6e",
+        "artifactManifest": "ff08fd010e652ebd42b9df1f5884786838f246ab6ff011fd2cd02b7fcd4945ec",
+        "upstreamEvidence": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166",
+        "verified": {
+          "inputPins": 13,
+          "metadataPins": 3,
+          "v39Unchanged": 647,
+          "v40Unchanged": 653,
+          "entries": 671,
+          "added": [
+            4,
+            6,
+            8
+          ],
+          "modified": 0,
+          "deleted": 0,
+          "focused": 42,
+          "fail": 0,
+          "independentNegatives": 6,
+          "upstreamEvidenceHashes": 8,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "derivedBuildExact": 55,
+          "directMatch": 54,
+          "indexProjectionExact": true,
+          "distributionMapExact": 4146,
+          "rollbackExact": 653,
+          "reconstructExact": 671,
+          "writer": "OFF"
+        },
+        "evidence": {
+          "zip": {
+            "file": "HKIA_06C_V41_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "c66ce8b6d0fecbf7fe26f52b93acecc8430ae01dd4ec52734342fb88b7793435"
+          },
+          "result": {
+            "file": "HKIA_06C_V41_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "e1d86bd301e1dcedefd647120230f10ddc6fdccc8962d01479c1a48078410517",
+            "location": "INSIDE_EVIDENCE_ZIP"
+          },
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_6_MANIFEST_HASHES_PASS"
+        },
+        "trueRed": [],
+        "unverified": [
+          "No genuine Save rerun; reuse upstream read-only saved conditions",
+          "Runtime interaction, game persistence, exact v300 Hats Off script not established",
+          "External media not rehashed; map reused",
+          "No deploy or Writer permission"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
+        }
+      }
     },
     "productCategoriesCI": {
       "owner": "00 CTRL",
       "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_NONDEPLOY_CI",
       "risk": "HIGH",
-      "status": "DONE_FIXED_CI_PASS_06B_READY",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "baseHead": "dd225c417ac427249104f3380f910bc26215454b",
       "baseBlob": "08e1c72e2d2422e1c8d1f2a30399c627f235c391",
       "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
@@ -18852,11 +19004,11 @@
       "workflowBlob": "32b217796630feca659305bcdf6c6472365f7a5e",
       "run": 43429463962,
       "ciStatus": "SUCCESS",
-      "next": "06B independent fixed category acceptance; then 00 shared app composition; no deploy.",
+      "next": "00 fixed five-scope composition; no standalone app overwrite.",
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
         "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_BROWSER_INDEPENDENT_QA",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
         "compiledHead": "4b87b341d95c4f23e33a59384ffea740738ef656",
         "run": 43429463962,
@@ -18874,12 +19026,10 @@
       "job": 131899029168,
       "artifact": {
         "id": 14038264996,
-        "name": "HKIA_ProductCategories_V33_CodeOnly",
         "sha256": "3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d",
-        "bytes": 55068,
         "moduleSha256": "2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72",
-        "moduleBytes": 76112,
-        "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce"
+        "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce",
+        "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
       },
       "verified": {
         "unit": 135,
@@ -18907,20 +19057,29 @@
         "pageErrors": 0,
         "externalRequests": 0,
         "overflow": 0
+      },
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        }
       }
     },
     "productAchievementListCI": {
       "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_NONDEPLOY_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "DONE_FIXED_CI_PASS_06B_READY",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "baseHead": "4dbda258a1f58dfe755c64c9547597446809b355",
       "baseBlob": "b4b5670c7e41150f9beb6c1a6c072ccc10104a69",
       "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
       "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
       "scope": "10 exact ADD, one isolated fixed workflow; real V33 browser and code-only artifact; no deploy, no shared app composition.",
       "branch": "ctrl/svelte-v33-achievement-list-fixed-20261113",
-      "next": "06B independent fixed scope; no shared app overwrite.",
+      "next": "00 fixed five-scope composition; no standalone app overwrite.",
       "head": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
       "workflowBlob": "ad00a639a10ce92b43ba610e5a67ad5d31c74470",
       "run": 43430603821,
@@ -18937,7 +19096,7 @@
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
         "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_BROWSER_INDEPENDENT_QA",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
         "compiledHead": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
         "run": 43430603821,
@@ -18955,18 +19114,25 @@
       "job": 131902833386,
       "artifact": {
         "id": 14038992117,
-        "name": "HKIA_ProductAchievementList_V33_CodeOnly",
         "sha256": "3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921",
-        "bytes": 56248,
         "moduleSha256": "a8a756e7790c83a2deca44cf4387e388e348ff1f41f5b9296b8e1cf1a1065c95",
-        "moduleBytes": 77877,
-        "appSha256": "4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be"
+        "appSha256": "4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be",
+        "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      },
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        }
       }
     },
     "productAchievementHeaderCI": {
       "owner": "00 CTRL",
       "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_HEADER_FIXED_NONDEPLOY_CI",
-      "status": "CI_SUBMITTED",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "risk": "HIGH",
       "baseHead": "e90909420d49f9f118485e951c0f7c35631c5b19",
       "baseBlob": "63748915fc815ecad493cb636f6543c376924c05",
@@ -18974,21 +19140,127 @@
       "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
       "branch": "ctrl/svelte-v33-achievement-header-fixed-20261113",
       "scope": "Exact 10 ADD, one isolated nondeploy CI; actual ASIDE header browser parity; no shared app/Writer/deploy.",
-      "next": "06B static preflight parallel; fixed independent after CI.",
+      "next": "00 fixed five-scope composition; no standalone app overwrite.",
       "head": "2381c7641a4bec039b9ea84d72fa2203dff70122",
       "workflowBlob": "755522ed97da8a49879de73534d2f72c8e72cc23",
       "run": 43433563639,
-      "ciStatus": "QUEUED_OBSERVED",
+      "ciStatus": "SUCCESS",
       "verified": "Exact 10 ADD vs base; single workflow ADD vs source, readback blob and run head exact; no CI result yet.",
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
         "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_HEADER_FIXED_BROWSER_INDEPENDENT_QA",
-        "status": "READY_AFTER_CI_STATIC_PREFLIGHT_PARALLEL",
+        "status": "DONE_ACCEPTED",
         "source": "b7061525fd00e68b6505b334a1a061903cd71014",
         "compiledHead": "2381c7641a4bec039b9ea84d72fa2203dff70122",
         "run": 43433563639,
         "scope": "Exact 10 ADD; actual ASIDE header DOM/legacy tail/form identity, stale/reentry, exact R6 model, 320/375/1280 real browser; no prior scope repeat; fixed artifact SHA after CI."
+      },
+      "job": 131912828220,
+      "artifact": {
+        "id": 14041045919,
+        "sha256": "143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663",
+        "moduleSha256": "98746c2e0c828e7d4ce9b2a6a0f1555295a071bc8cd6ff66eb3eec256387d843",
+        "appSha256": "7601ea1c99265a96862ef9ca035b1a61ad7ffe17dc94fa04c4d7d6250bfee60c",
+        "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      },
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        }
       }
+    },
+    "v33FiveScopeComposition": {
+      "owner": "00 CTRL",
+      "task": "V33_FIVE_ACCEPTED_PRODUCT_UI_SINGLE_ROOT_COMPOSITION",
+      "status": "IN_FLIGHT",
+      "risk": "HIGH_INTEGRATED_UI_AND_RELEASE_CANDIDATE",
+      "baseHead": "41c9b52a2b9d300e6aaaa409a746ebc6553dd167",
+      "baseBlob": "a4369fc2f3e9966ed525cb2141930f67514c1a8d",
+      "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+      "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+      "inputs": [
+        {
+          "scope": "v33Tabs",
+          "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+          "compiled": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
+          "run": 43428472417,
+          "artifact": {
+            "id": 14037284400,
+            "sha256": "4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7",
+            "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+            "appSha256": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "acceptance": "DONE_SCOPED_PASS"
+        },
+        {
+          "scope": "productFiltersCompiled",
+          "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+          "compiled": "21624edfab9a4a1f5ae92689843fe4f31b54c4d3",
+          "run": 43426763281,
+          "artifact": {
+            "id": 14037742173,
+            "sha256": "6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb",
+            "moduleSha256": "586297ee82e193ccec800c10558acd723feeb8652268f7656551d550fa8079af",
+            "appSha256": {
+              "V30": "12f1ee46365d54605c196b9480dfa82c8e6bd65f1b4c9835c0ac22e968d0dde7",
+              "V33": "2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"
+            },
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "acceptance": "DONE_SCOPED_PASS"
+        },
+        {
+          "scope": "productCategories",
+          "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
+          "compiled": "4b87b341d95c4f23e33a59384ffea740738ef656",
+          "run": 43429463962,
+          "artifact": {
+            "id": 14038264996,
+            "sha256": "3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d",
+            "moduleSha256": "2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72",
+            "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce",
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "acceptance": "DONE_SCOPED_PASS"
+        },
+        {
+          "scope": "productAchievementList",
+          "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+          "compiled": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
+          "run": 43430603821,
+          "artifact": {
+            "id": 14038992117,
+            "sha256": "3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921",
+            "moduleSha256": "a8a756e7790c83a2deca44cf4387e388e348ff1f41f5b9296b8e1cf1a1065c95",
+            "appSha256": "4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be",
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "acceptance": "DONE_SCOPED_PASS"
+        },
+        {
+          "scope": "productAchievementHeader",
+          "source": "b7061525fd00e68b6505b334a1a061903cd71014",
+          "compiled": "2381c7641a4bec039b9ea84d72fa2203dff70122",
+          "run": 43433563639,
+          "artifact": {
+            "id": 14041045919,
+            "sha256": "143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663",
+            "moduleSha256": "98746c2e0c828e7d4ce9b2a6a0f1555295a071bc8cd6ff66eb3eec256387d843",
+            "appSha256": "7601ea1c99265a96862ef9ca035b1a61ad7ffe17dc94fa04c4d7d6250bfee60c",
+            "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+          },
+          "acceptance": "DONE_SCOPED_PASS"
+        }
+      ],
+      "excluded": "Collection items TRUE_RED fe2a4c2c; no module or source from this scope; 05 owns repair.",
+      "scope": "Compose exact V33 app from five standalone accepted deltas; reuse compiled module bytes; license and policy, rollback, actual combined browser. No deploy or Writer.",
+      "branch": "ctrl/v33-five-scope-root-20261114",
+      "next": "Fixed combined CI and 06C independent distribution; Owner approval only after accepted."
     }
   },
   "formalRelease": {
@@ -19625,6 +19897,111 @@
       "noDeployAuthorization": true
     },
     "researchReference": {
+      "label": "V41_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
+      "file": "HKIA_CTRL_V41_ResearchReference_20261113_Source.zip",
+      "sha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+      "entries": 671,
+      "bytes": 3705770,
+      "baseSourceSha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+      "manifest": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_Manifest.json",
+        "sha256": "f557c5b5993c2f2245b6c9daef81be9f8c8e4ed0252fa26f36079bc609adae5d",
+        "location": "INSIDE_METADATA_ZIP"
+      },
+      "delta": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_Delta.zip",
+        "sha256": "f45e7d68c1c784b8421acb4876371a9ce49011dfee7b0c962ec2fb72c8b44f6e",
+        "added": 18,
+        "modified": 0,
+        "deleted": 0
+      },
+      "artifactManifest": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_ArtifactManifest.json",
+        "sha256": "ff08fd010e652ebd42b9df1f5884786838f246ab6ff011fd2cd02b7fcd4945ec",
+        "location": "INSIDE_METADATA_ZIP",
+        "entries": 4146,
+        "unchanged": 4146
+      },
+      "metadata": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_Metadata.zip",
+        "sha256": "0e711e53fcf8f50e60162f9fbaa167c5af20f4c2dc4a8999e15366f27e726729",
+        "entries": 3
+      },
+      "result": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_RESULT.json",
+        "sha256": "b47db536d98615ca3b363f4952bc372c35e5923ba1b193fca936e798f4ac8743",
+        "location": "INSIDE_METADATA_ZIP_AND_EVIDENCE"
+      },
+      "evidence": {
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_Evidence.zip",
+        "sha256": "da165f69d693cba83bf7c734fe29ecd93edbfbbe2ed066572ba2e83fb2d434b0",
+        "entries": 5
+      },
+      "privateLibrary": "HKIA Editor Private",
+      "readback": "4_OF_4_ZIP_BYTE_EXACT_CRC_PASS_ALL_3_METADATA_ENTRIES_EXACT",
+      "acceptance": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+      "independentEvidence": {
+        "zip": {
+          "file": "HKIA_06C_V41_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "c66ce8b6d0fecbf7fe26f52b93acecc8430ae01dd4ec52734342fb88b7793435"
+        },
+        "result": {
+          "file": "HKIA_06C_V41_SCOPED_QA_20261113_RESULT.json",
+          "sha256": "e1d86bd301e1dcedefd647120230f10ddc6fdccc8962d01479c1a48078410517",
+          "location": "INSIDE_EVIDENCE_ZIP"
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "BYTE_EXACT_SHA_CRC_6_MANIFEST_HASHES_PASS"
+      }
+    },
+    "localization": {
+      "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "record": "coordination/localization-decision-20261113.md",
+      "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
+      "formalRequired": true,
+      "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
+      "supportedLanguages": {
+        "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
+        "status": "UNVERIFIED_FULL_INVENTORY",
+        "versions": [
+          "3.0.0",
+          "3.0.1"
+        ],
+        "noWandLocaleListReuse": true
+      },
+      "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
+      "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
+      "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
+      "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
+      "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
+      "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
+      "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
+      "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
+      "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
+      "existing": {
+        "file": "data/local-achievement-locales.json",
+        "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
+        "version": "3.0.1",
+        "records": 820,
+        "enTitles": 820,
+        "jaTitles": 820,
+        "enDescriptions": 720,
+        "jaDescriptions": 720,
+        "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
+      },
+      "wandReference": {
+        "repo": "DreamwishWand/web",
+        "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
+        "files": {
+          "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
+          "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
+          "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
+          "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
+        },
+        "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
+      }
+    },
+    "previousResearchReference": {
       "label": "V40_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
       "file": "HKIA_CTRL_V40_ResearchReference_20261113_Source.zip",
       "sha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
@@ -19680,109 +20057,6 @@
         },
         "privateLibrary": "HKIA Editor Private",
         "readback": "BYTE_EXACT_SHA_CRC_4_MANIFEST_HASHES_PASS"
-      }
-    },
-    "localization": {
-      "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
-      "record": "coordination/localization-decision-20261113.md",
-      "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
-      "formalRequired": true,
-      "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
-      "supportedLanguages": {
-        "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
-        "status": "UNVERIFIED_FULL_INVENTORY",
-        "versions": [
-          "3.0.0",
-          "3.0.1"
-        ],
-        "noWandLocaleListReuse": true
-      },
-      "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
-      "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
-      "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
-      "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
-      "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
-      "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
-      "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
-      "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
-      "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
-      "existing": {
-        "file": "data/local-achievement-locales.json",
-        "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
-        "version": "3.0.1",
-        "records": 820,
-        "enTitles": 820,
-        "jaTitles": 820,
-        "enDescriptions": 720,
-        "jaDescriptions": 720,
-        "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
-      },
-      "wandReference": {
-        "repo": "DreamwishWand/web",
-        "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
-        "files": {
-          "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
-          "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
-          "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
-          "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
-        },
-        "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
-      }
-    },
-    "previousResearchReference": {
-      "label": "V39_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
-      "file": "HKIA_CTRL_V39_ResearchReference_20261113_Source.zip",
-      "sha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
-      "entries": 647,
-      "bytes": 3694571,
-      "baseSha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
-      "manifest": {
-        "file": "HKIA_CTRL_V39_ResearchReference_20261113_Manifest.json",
-        "sha256": "66e9abf7217a72365137c3febe40462b89b3199bc9aef0aa536e0eafa21993c4"
-      },
-      "delta": {
-        "file": "HKIA_CTRL_V39_ResearchReference_20261113_Delta.zip",
-        "sha256": "1b92a91ac7f95da8976fe3a70e33f478407b3f1bf313099e9176a1223d30a667",
-        "added": 6,
-        "modified": 0,
-        "deleted": 0
-      },
-      "distribution": {
-        "artifactManifest": {
-          "file": "HKIA_CTRL_V39_ResearchReference_20261113_ArtifactManifest.json",
-          "sha256": "8b9eaf51047b39b67f88410adb33c22e57fc9309140160f921de436eda179f7a"
-        },
-        "baseArtifactManifestSha256": "afb8b20b50a37fec700998399316cf3b513c6f1aaee953bc38d682f6a6b77735",
-        "entries": 4146,
-        "unchanged": 4146,
-        "modified": 0,
-        "added": 0,
-        "flags": "OFF",
-        "externalMediaRehashed": false
-      },
-      "evidence": {
-        "result": {
-          "file": "HKIA_CTRL_V39_ResearchReference_20261113_RESULT.json",
-          "sha256": "eb0011e15b0330dd7993bf7680a9d6b3cb24b702b7494eec4a2bfd8058afabd1"
-        },
-        "zip": {
-          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Evidence.zip",
-          "sha256": "2017db7c85867bd3b7b33ce7501087c49648119b67469da9581e26049e5d7e87"
-        }
-      },
-      "privateLibrary": "HKIA Editor Private",
-      "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS",
-      "acceptance": "SCOPED_PASS_V39_PRIVATE_RESEARCH_REFERENCE",
-      "independentEvidence": {
-        "result": {
-          "sha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5"
-        },
-        "zip": {
-          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
-          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a"
-        },
-        "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS",
-        "privateLibrary": "HKIA Editor Private"
       }
     }
   },
