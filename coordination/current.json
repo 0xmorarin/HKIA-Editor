@@ -12929,6 +12929,16 @@
       "ci": "IN_PROGRESS",
       "verified": "Exact fixed branch HEAD, only 1 workflow ADD, 9 prior source paths, readback workflow blob; actual run observed in_progress",
       "next": "00 check fixed CI result; 06B two disjoint scopes after green; no deployment."
+    },
+    "v39Research": {
+      "task": "V38_PLUS_RECIPE6_SAVED_CONDITIONS_RESEARCH_REFERENCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "risk": "RELEASE",
+      "baseSourceSha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+      "sourceDelta": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+      "upstreamAcceptance": "SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
+      "scope": "6 ADD research only; verify original V36 source pins/manifest, V38 overlap, focused tests and unchanged build/manifest, rollback, private evidence. No writer, game permission, deploy."
     }
   },
   "formalRelease": {
