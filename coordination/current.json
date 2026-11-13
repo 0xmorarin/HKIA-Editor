@@ -6657,11 +6657,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT_RESOURCE_PREFLIGHT_SCOPED_QA",
-      "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
+      "status": "DONE_SCOPED_R5_1_REPAIR_FIXED_NODE_RESOURCE_WAIT_ENV_BROWSER",
+      "task": "R5_1_REPLY_INTEGRITY_FIXED_ARTIFACT_RESOURCE_SCOPED_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "R5.1 repair and new exact artifact Node genuine scoped PASS; new independent synthetic resource preflight claim; 07 genuine Chrome WAIT_ENV; 00 ADR switch only after required gates.",
-      "dependency": "AUTHORIZED_PRIVATE_CHROME; RESOURCE_BOUNDARY_QA",
+      "next": "R5.1 repair, fixed new WASM Node genuine, and existing defensive resource bounds all independently accepted scoped. 07 genuine Chrome WAIT_ENV only; 06A wait authorized actual Browser self-QA or new fixed HIGH scope. No duplicate Node or resource QA.",
+      "dependency": "AUTHORIZED_PRIVATE_REAL_CHROME_ENVIRONMENT; 07_FIXED_BROWSER_GENUINE_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8782b55ad96ff617c2f8af8e79fef041dfaff3bf",
       "legacyEvidence": {
@@ -6818,7 +6818,7 @@
           "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
           "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
           "evidenceSha256": "0c815f3fcaf76790001216587eb241c7d2b111892793548bd0d3e044aa160cd5",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_EXISTING_DEFENSIVE_BOUNDS",
           "risk": "HIGH"
         }
       ],
@@ -6946,23 +6946,28 @@
           }
         }
       },
-      "nextReadyParallel": [
+      "nextReadyParallel": [],
+      "nextAfterDep": [
         {
           "stream": "07_RUST_CORE",
-          "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
-          "dependency": "06A counterexamples ready"
+          "task": "R5_1_FIXED_REPAIRED_REAL_CHROME_GENUINE_EXECUTION",
+          "condition": "authorized private real Chrome environment; fixed CI artifact already available; no administrator restriction bypass"
+        },
+        {
+          "stream": "06A_QA_DATA_CORE",
+          "task": "R5_1_FIXED_REAL_CHROME_INDEPENDENT_EXECUTION_QA",
+          "condition": "07 fixed actual Browser self-QA evidence"
         },
         {
           "stream": "00_CTRL",
-          "task": "V301_EXACT29_CAUSAL_RESEARCH_SERIAL_INTEGRATION_REFERENCE_ONLY",
-          "dependency": "06A static causal accepted; existing R5 CI independent"
+          "task": "DEVELOPMENT_SWITCH_ADR_GATE_RECORD",
+          "condition": "all applicable ADR criteria and independent execution acceptance"
+        },
+        {
+          "stream": "07_RUST_CORE",
+          "task": "CAPACITY_TARGET_IMPLEMENTATION_AND_JS_RUST_BROWSER_COMPARISON",
+          "condition": "00 explicit disjoint assignment or architecture development switch; authorized browser; separate fixed HIGH scope"
         }
-      ],
-      "nextAfterDep": [
-        "06A focused regression of fixed R5 repair",
-        "07 compiled WASM/Chrome genuine self-QA",
-        "06A independent execution on fixed R5",
-        "00 DEVELOPMENT_SWITCH only after complete ADR gates"
       ],
       "r5Result": {
         "status": "TRUE_RED_SCOPED_CLIENT_REPLY_INTEGRITY",
@@ -7178,6 +7183,80 @@
           ],
           "status": "SCOPED_ACCEPTANCE_READY",
           "conditions": "07 fixed repaired code-only artifact in authorized private Chrome, both versions and domains, six exact outputs/lifecycle/budgets; 06A independent fixed browser evidence then 00 ADR switch record. No duplicate Node QA."
+        }
+      },
+      "resourceResult": {
+        "status": "SCOPED_PASS_EXISTING_DEFENSIVE_BOUNDS_NOT_TARGET_ACCEPTANCE",
+        "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+        "wasmSha256": "ecadf4450acf79c6068e81ae3dd2c9f021870d77453ce656e46fcdc4d6940e4c",
+        "ciHead": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+        "run": 43388662397,
+        "upstreamPreflightSha256": "0c815f3fcaf76790001216587eb241c7d2b111892793548bd0d3e044aa160cd5",
+        "upstreamFixedRebindSha256": "72668579063a86f04f9ea70d67a4477c59ea64563b201ab1e5a546d91a568732",
+        "verified": {
+          "upstreamFixedEvidenceManifest": 9,
+          "commonCasesAgreement": 13,
+          "independentCases": 15,
+          "historyEdits": 5,
+          "readOnly": 3,
+          "rejected": 7,
+          "exactDecoded": 5,
+          "nonTargetRawFrames": 15,
+          "unchangedRawLz4Tokens": 2747,
+          "originalsUnchanged": 15,
+          "decodedMiBPass": [
+            1,
+            5,
+            10,
+            25,
+            45
+          ],
+          "decodedReject": [
+            "45MiB+1",
+            "64MiB",
+            "128MiB"
+          ],
+          "documentReadPass": [
+            100000,
+            300000,
+            333326
+          ],
+          "documentReject": [
+            333327,
+            350000,
+            1000000,
+            2000000
+          ],
+          "exactNodeLimit": 2000000,
+          "shapeSpecificDocumentBoundary": 333326,
+          "containerLimit": 1000000,
+          "peakWasmLinearMemoryBytes": 192086016,
+          "oracle": "independent synthetic 32KiB blocks, patterned opaque bytes, reversed ZIP ordering, Python decoded token and raw frame oracle, actual fixed WASM/JS direct Node"
+        },
+        "trueRed": "NONE_REPRODUCED_WITHIN_EXISTING_BOUND_CONTRACT",
+        "unverified": [
+          "64/128MiB decoded and 2M document target NOT_MET",
+          "actual Chrome Module Worker capacity and JS/Rust same-case comparison",
+          "game realism/persistence/auth"
+        ],
+        "evidence": {
+          "file": "HKIA_06A_R5_1_RESOURCE_INDEPENDENT_QA_20261113_EVIDENCE.zip",
+          "sha256": "b64f819c6abccce5b68b7e04a04410f925e8c9f199405fe4fc614fd66b1eec5b",
+          "manifestSha256": "a0e2ad6a0f81d09f0115b80d880038da379c0688ccc8a1dd4a3acc30b2d67398",
+          "handoffSha256": "59926a48bb033b63383bd23c91b72552d6dedd2b72f72f5e442e910b3532f3d9",
+          "resultSha256": "e233d3a07ab0febf9cfec3b26f6d8bf148541fbb3ddeb353c0912e0a569f09ce",
+          "bytes": 7383,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_6_ENTRIES_5_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "07_RUST_CORE",
+            "00_CTRL"
+          ],
+          "status": "SCOPED_ACCEPTANCE_READY",
+          "condition": "Use measured current bounds as baseline, not target PASS; separate capacity implementation only with risk-based independent QA and 00 scope. No unconditional limit increase. Actual repaired genuine Chrome remains WAIT_ENV."
         }
       }
     },
