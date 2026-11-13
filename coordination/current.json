@@ -6291,13 +6291,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "PARTIAL_R5_SCOPED_TRUE_RED_V301_CAUSAL_DONE_WAIT_REPAIR",
-      "task": "R5_STATIC_AND_V301_CAUSAL_INDEPENDENT_QA",
+      "status": "IN_FLIGHT_R5_1_INDEPENDENT_REPAIR",
+      "task": "R5_1_REPLY_INTEGRITY_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
       "next": "07 scoped client reply integrity repair; 00 existing R5 CI can finish independently, then new fixed repair CI; 00 serial v301 research integration. 06A wait fixed repair or independent new HIGH scope.",
       "dependency": "07_R5_FIXED_REPAIR_SELF_QA; then compiled WASM/Chrome genuine evidence",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "13d33d1dbe2056054b1d6598dc2426feaf157e94",
+      "baseHead": "8782b55ad96ff617c2f8af8e79fef041dfaff3bf",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -6443,15 +6443,9 @@
       },
       "activeClaims": [
         {
-          "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
-          "source": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
-          "status": "TRUE_RED_SCOPED_CLIENT_REPLY_INTEGRITY",
-          "risk": "HIGH"
-        },
-        {
-          "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_INDEPENDENT_QA",
-          "source": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
-          "status": "DONE_SCOPED_PASS_STATIC",
+          "task": "R5_1_REPLY_INTEGRITY_INDEPENDENT_QA",
+          "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         }
       ],
