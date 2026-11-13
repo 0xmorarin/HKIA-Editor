@@ -13,7 +13,7 @@ def serve(root):
  s=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(root)));t=threading.Thread(target=s.serve_forever,daemon=True);t.start();servers.append((s,t));return f'http://127.0.0.1:{s.server_port}/'
 roots=[serve(base),serve(candidate)]
 images=json.loads((base/'media/image-map.json').read_text())['accountAchievements'];known=[x['guid'] for x in images if x['icon']['status']=='EXACT'][:2];assert len(known)==2
-unknown='0000000000000000000000000000ffff';assert unknown not in known
+unknown='0000000000000000000000000000ffff';assert unknown not in {r['guid'] for r in json.loads((base/'data/achievement-definitions.json').read_text())}
 fixture={'Achievements':{g:{'IsComplete':i==0,'CurrentValue':i,'CompletedTime':'2026-01-01T00:00:00.1234567Z' if i==0 else None} for i,g in enumerate(known+[unknown])},'Counters':{}}
 mark='[data-hkia-svelte-achievement-header="1"]'
 def probe(browser,url,width,mounted,abort=False):
@@ -34,7 +34,7 @@ def probe(browser,url,width,mounted,abort=False):
    if g in known:
     image=panel.locator('.media-detail-strip img').first;image.scroll_into_view_if_needed();page.wait_for_function('(e)=>e.complete&&e.naturalWidth>0',arg=image.element_handle(),timeout=12000)
    out.append(projection())
-   number=panel.locator('form input[type=number]');expect(number).to_have_count(1);number.fill('5');panel.locator('form button[type=submit]').click();expect(panel).to_contain_text('変更');out.append(projection());panel.get_by_role('button',name='入力を取り消す').click();expect(panel).to_contain_text(g);out.append(projection())
+   number=panel.locator('form input[type=number]');expect(number).to_have_count(1);number.fill('5');panel.locator('form button[type=submit]').click();expect(panel.locator('.review-panel')).to_contain_text('適用前の差分：1件');expect(panel.locator('.review-list')).to_contain_text('→ 5');out.append(projection());panel.get_by_role('button',name='入力を取り消す').click();expect(panel).to_contain_text(g);expect(page.locator(mark)).to_have_count(1 if mounted else 0);expect(panel.locator('.review-panel')).to_have_count(0);out.append(projection())
    page.locator('#achievementSearch').fill('no-such-record');expect(rows).to_have_count(0);expect(panel).to_contain_text(g);out.append(projection())
   assert page.locator('#downloadEdited').is_disabled() and page.locator('#nativeDownload').is_disabled();assert page.evaluate("document.documentElement.dataset.nativePreview==='off'&&document.documentElement.scrollWidth<=innerWidth");assert not errors and not external and not bad and not downloads,(errors,external,bad,downloads)
   return out
