@@ -6718,10 +6718,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "DONE_SCOPED_LOCALE_R2_AND_WEB_R3_WAIT_NEXT",
-      "task": "LOCALE_R2_RUNTIME_NATIVE_AND_WEB_R3_INDEPENDENT_QA",
+      "status": "IN_FLIGHT",
+      "task": "LOCALIZATION_R3_R4_CATALOG_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 direct consume fixed runtime + static Switch301 mapping + isolated R3; 08 unresolved Switch300/selector/UI catalog; 00 R4 fixed nondeploy CI; 06B next R4 compiled or new fixed HIGH locale/integration scope; no repeat",
+      "next": "R3/R4 catalog independent; R4 Web waits fixed green CI; LOW legacy advisory direct 05",
       "dependency": "No remaining blocker within these three scopes. R4 waits 00 compile/browser; Switch300 exact originals + full UI/locale/product evidence pending; independent integration remains separate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -6997,6 +6997,20 @@
         "locale": {
           "status": "WAIT_NEW_FIXED_HIGH_SCOPE",
           "condition": "08 new Switch300 typed evidence/locale contract or 05 fixed live locale integration; source exact; no full-language claim"
+        }
+      },
+      "catalogClaims": {
+        "r3": {
+          "claim": "20261113_06B_LOCALE_R3",
+          "status": "IN_FLIGHT",
+          "source": "82b1ac72b1b67d895fbfe8c241b9a2515686ec4d4fca08ae18e7ffbbad607939",
+          "scope": "603 new cells, source mappings, overlay and negative tests"
+        },
+        "r4": {
+          "claim": "20261113_06B_LOCALE_R4",
+          "status": "IN_FLIGHT",
+          "source": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
+          "scope": "255 new cells, source mappings, overlay and negative tests"
         }
       }
     },
