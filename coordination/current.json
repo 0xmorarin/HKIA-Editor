@@ -10600,7 +10600,13 @@
           "threeResearch": "DONE_THREE_SCOPED_ACCEPTANCES"
         },
         "scope": "06A handoff queue reconciliation only; prior accepted scopes retained; no product/source QA rerun",
-        "next": "00 research 18 ADD integration READY; 07 new capacity assignment or authorized genuine Browser; new 01/02/03/04/07 fixed HIGH source for 06A"
+        "next": "00 research 18 ADD integration READY; 07 new capacity assignment or authorized genuine Browser; new 01/02/03/04/07 fixed HIGH source for 06A",
+        "ledgerReadback": {
+          "status": "PASS_BLOB_FALLBACK",
+          "observedBlob": "ba3ebfaa68642d0b81c696a87ea95d40b90c08c4",
+          "observation": "Path fetch returned empty content; exact Git blob fetch returned valid JSON (1,048,858 characters). Use current path SHA then fetch_blob and CAS; 00 should coordinate size/readability maintenance, no unilateral reformat.",
+          "handoffTo": "00_CTRL"
+        }
       }
     },
     "06B_QA_WEB_LOCALE": {
