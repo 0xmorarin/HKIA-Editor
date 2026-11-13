@@ -3872,7 +3872,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R2_GENUINE_LOCAL_PARITY",
+      "status": "R2_GENUINE_PARITY_LOCAL_PASS_06_INDEPENDENT_QA_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -3889,10 +3889,10 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06 independent synthetic QA now on fixed PR5 HEAD and handoff. 07 true parity only when compatible authorized local binary or pinned Rust toolchain available (both private original inputs already located and V33 JS preflight PASS). Optional 00 code-only binary artifact transfer/rebuild on fixed source; no private inputs in CI. No JS Beta gate or automatic merge/deploy.",
-      "task": "HKIA-RUST-003",
-      "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
-      "scope": "R2 compiled source identity; V33 JS true-original reference preflight; 06 independent synthetic QA ready; no Writer or product changes",
+      "next": "06 independent R2 synthetic and real parity QA now; existing V30/research in-flight retain. After scoped acceptance 07 bounded read-only Session/ABI foundation with remaining ZIP/account/projection scope explicit, or focused repair if counterexample. No merge/deploy or JS Beta gate.",
+      "task": "HKIA-RUST-004",
+      "baseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
+      "scope": "Exact R2 compiled executable and V33 reference; genuine Switch300/301 full slot bytes and ordered target projection; 8 genuine-derived negative tests; local read-only; independent QA pending",
       "sourceSha256": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
       "source": {
         "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -3905,13 +3905,14 @@
       },
       "handoff": {
         "to": "06 QA",
-        "task": "HKIA-RUST-003_INDEPENDENT_SYNTHETIC_R2",
+        "task": "HKIA-RUST-004_INDEPENDENT_R2_SYNTHETIC_AND_REAL_PARITY",
         "status": "READY_NOW",
-        "file": "HKIA_Rust07_R2_Compiled_20261113_HANDOFF_06.md",
-        "sha256": "37c5199cac12128567ee77b3f2ed5d0e5f8c7947a975f939a5c7d9e6a8921e59",
-        "fixedSource": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
-        "scope": "R2 3MOD4ADD; exact compile evidence and public generated input closure; independent synthetic tag8 typed identity/spans/duplicates/unknown/bounds; no true Save in CI; no source edits by QA",
-        "dependency": "NONE_SYNTHETIC; PRIVATE_REAL_SEPARATE_WAIT_ENV"
+        "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
+        "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb",
+        "fixedSource": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+        "codeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
+        "scope": "Reuse 39 synthetic fixed CI + reproduce genuine local exact full slot/target spans 2 versions and independent negatives; no full rereview; no QA product edits; no raw save in CI",
+        "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
       },
       "verification": {
         "rustCompile": "PASS_FIXED_CI",
@@ -3924,17 +3925,20 @@
         "codeBlobs": "12_OF_12",
         "generatedCrate": "40_OF_40",
         "privateJSReference": "2_OF_2_PASS",
-        "privateRealRustParity": "WAIT_ENV_0_OF_2",
+        "privateRealRustParity": "PASS_2_OF_2_LOCAL",
         "independentSyntheticQA": "READY_06",
         "nativeAuthentication": "UNKNOWN",
         "writer": "NOT_IMPLEMENTED",
         "wasm": "UNVERIFIED",
-        "browser": "UNVERIFIED"
+        "browser": "UNVERIFIED",
+        "genuineNegative": "PASS_8_OF_8",
+        "originalsUnchanged": 2,
+        "independentRealQA": "READY_06"
       },
       "implementation": "SAVEGAMEV2_SLOT_ENVELOPE_LZ4_BLOCK_SPANS_TYPED_NATIVE_SCHEMA_AND_TARGET_BYTE_RANGES; NO_ZIP_ACCOUNT_SESSION_WRITER_WASM",
       "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
-      "handoffTo": "06_QA_DIRECT_SYNTHETIC_NOW; 07_PRIVATE_REAL_ONLY_AFTER_EXECUTABLE; 06_REAL_AFTER_PARITY",
-      "dependency": "SYNTHETIC_QA_READY_NO_DEP; PRIVATE_EXECUTABLE_ENV_FOR_REAL_PARITY_ONLY; NO_BETA_DEP",
+      "handoffTo": "06_QA_DIRECT_SYNTHETIC_AND_REAL; 07_SESSION_ABI_OR_REPAIR_AFTER_ACCEPTANCE",
+      "dependency": "R2_INDEPENDENT_06_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
       "resumeBaseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
       "resumeScope": "Execute existing R2 private kit using identical CI binary, genuine Switch300/301 and V33 fixed reference; aggregate only; no upload or product changes",
       "executionKit": {
@@ -3951,7 +3955,7 @@
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
       "resumeTask": "HKIA-RUST-004",
-      "previousTask": "HKIA-RUST-002",
+      "previousTask": "HKIA-RUST-003",
       "r2": {
         "source": {
           "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -3981,7 +3985,7 @@
           "publicCrateReconstruction": "40_OF_40_EXACT",
           "rustPlanned": 39,
           "rustExecuted": 39,
-          "realParity": "NOT_RUN_WAIT_ENV",
+          "realParity": "PASS_2_OF_2_LOCAL_EXACT_DECODED_AND_TARGET_SPANS",
           "rustPassed": 39,
           "rustFailed": 0,
           "rustSkipped": 0,
@@ -3989,7 +3993,9 @@
           "releaseBuild": "PASS",
           "compiledCodeBlobMatch": "12_OF_12",
           "localPublicReconstruction": "40_OF_40_EXACT",
-          "realJSReference": "PASS_2_OF_2_22_CRC_FULL_CONSUMPTION_AND_SPAN_BOUNDS"
+          "realJSReference": "PASS_2_OF_2_22_CRC_FULL_CONSUMPTION_AND_SPAN_BOUNDS",
+          "realNegative": "8_OF_8_REJECT_ZERO_STDOUT",
+          "originalsUnchanged": 2
         },
         "publicCI": {
           "status": "PINNED_COMPILE_AND_39_SYNTHETIC_TESTS_PASS_07_VERIFIED",
@@ -4111,7 +4117,21 @@
         },
         "releaseBuild": "PASS",
         "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
-        "binaryArtifact": "NONE_RUN_HAS_ZERO_ARTIFACTS",
+        "binaryArtifact": {
+          "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+          "run": 43353690282,
+          "job": 131650533560,
+          "id": 14004802204,
+          "file": "HKIA_Rust_R2_CodeOnly_43353690282.zip",
+          "sha256": "1f10dba2f7e0e71e2f0e3973f7f36fca7bf57948fa37689562ef398c8b580cdc",
+          "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+          "binaryBytes": 598880,
+          "buildReportSha256": "cbc7db6556e0c26a272017c4f8368eb13e18ba57b0844e161e12caed2bf4953a",
+          "samePriorBinary": true,
+          "readback": "ZIP_CRC_AND_SHA_AND_BINARY_AND_BUILD_REPORT_PASS",
+          "diff": "ONLY_00_WORKFLOW",
+          "localCompatibility": "LINUX_X86_64_GLIBC_2_41_ACTUALLY_EXECUTED"
+        },
         "codeBlobReadback": "12_OF_12_PASS",
         "source47Hashes": "PASS",
         "generatedCrate40": "PASS",
@@ -4119,14 +4139,14 @@
         "independentQA": "READY_06_NOT_YET_ACCEPTED"
       },
       "privateParity": {
-        "status": "WAIT_ENV_PRIVATE_EXECUTABLE_ONLY",
+        "status": "LOCAL_REAL_PARITY_PASS_06_INDEPENDENT_ACCEPTANCE_PENDING",
         "referenceV33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "originals": "TWO_EXISTING_OWNER_PRIVATE_ORIGINALS_LOCATED_AND_FETCHED_TO_AUTHORIZED_WORKSPACE; NO_RAW_UPLOAD; INTERNAL_SWITCH_300_301_VERIFIED",
         "crcMembers": 22,
         "referenceJs": "PASS_2_OF_2_FULL_LOGICAL_PAYLOAD_AND_TARGET_SPANS",
         "originalsUnchanged": 2,
-        "comparison": "RUST_NOT_RUN_0_OF_2",
-        "blocker": "LOCAL_CARGO_MISSING_AND_COMPILED_CI_BINARY_NOT_AVAILABLE_AS_ARTIFACT",
+        "comparison": "2_OF_2_EXACT_FULL_DECODED_SLOT_AND_ORDERED_TYPED_TARGET_PROJECTION",
+        "blocker": "NONE_FOR_R2_REAL_LOCAL_EXECUTION",
         "kit": {
           "file": "HKIA_Rust07_R2_PrivateParityKit_20261113.zip",
           "sha256": "bb25cc4a8030f09ea9beecc8db84dcecf6378a367175f42d2e2932ae09ba1491",
@@ -4137,7 +4157,61 @@
           "readback": "ALL_3_ARTIFACTS_BYTE_EXACT_8_ENTRY_SHA_CRC_PASS"
         },
         "acceptance": "EXACT_DECODED_BYTES_AND_ORDERED_TYPED_MODEL_COLLECTION_TAG8_RAW_SPANS_BOTH_VERSIONS; ORIGINALS_UNCHANGED; NO_GAME_ACCEPTANCE",
-        "next": "AUTHORIZED_PRIVATE_RUST_1_85_1_OR_EXACT_COMPATIBLE_PINNED_CI_BINARY; IF_NEW_BUILD_REPIN_WITH_FIXED_SOURCE; RUN_R2_KIT_REAL; 06_INDEPENDENT_REAL_PARITY_SEPARATELY"
+        "next": "06_INDEPENDENT_REAL_AND_SYNTHETIC_QA_DIRECT; 07_NEXT_SESSION_ABI_FOUNDATION_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
+        "negative": "8_OF_8_REJECT_ZERO_STDOUT_ORIGINALS_UNCHANGED",
+        "observed": [
+          {
+            "version": "3.0.0",
+            "documents": 19936,
+            "achievements": 570,
+            "counters": 585,
+            "history": 5046,
+            "celebrations": 1,
+            "blocks": 34,
+            "decodedBytes": 1061258
+          },
+          {
+            "version": "3.0.1",
+            "documents": 20207,
+            "achievements": 571,
+            "counters": 586,
+            "history": 5164,
+            "celebrations": 1,
+            "blocks": 34,
+            "decodedBytes": 1068906
+          }
+        ],
+        "scope": "Full decoded slot and framing; typed document count; ordered target IDs/GUID/value/count/span and tag8 full union range. Counter list contents preserved in raw payload; not full typed semantic projection of every field; ZIP/account not Rust; no writer/auth/game acceptance.",
+        "evidence": {
+          "zip": {
+            "file": "HKIA_Rust07_R2_GenuineParity_20261113_Evidence.zip",
+            "sha256": "505b580575737da919c440f24bb95622821754e6af8f509ee4a0e1d09f1b2316",
+            "entries": 5
+          },
+          "manifest": {
+            "file": "HKIA_Rust07_R2_GenuineParity_20261113_Manifest.json",
+            "sha256": "f7edd53b0bc040b3cdd8b3f19e3742251b763055bc8a71a2a7e92e8db6d17e72"
+          },
+          "result": {
+            "file": "HKIA_Rust07_R2_GenuineParity_20261113_RESULT.json",
+            "sha256": "5447f658548d846c61e2c16412cc6e55f777e76ec87b5443f607cc23b6fe3774"
+          },
+          "handoff": {
+            "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
+            "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb"
+          },
+          "readback": "ALL_4_BYTE_EXACT_AND_5_ENTRY_SHA_CRC_PASS"
+        }
+      },
+      "syntheticHandoff": {
+        "to": "06 QA",
+        "task": "HKIA-RUST-003_INDEPENDENT_SYNTHETIC_R2",
+        "status": "READY_NOW",
+        "file": "HKIA_Rust07_R2_Compiled_20261113_HANDOFF_06.md",
+        "sha256": "37c5199cac12128567ee77b3f2ed5d0e5f8c7947a975f939a5c7d9e6a8921e59",
+        "fixedSource": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
+        "scope": "R2 3MOD4ADD; exact compile evidence and public generated input closure; independent synthetic tag8 typed identity/spans/duplicates/unknown/bounds; no true Save in CI; no source edits by QA",
+        "dependency": "NONE_SYNTHETIC; PRIVATE_REAL_SEPARATE_WAIT_ENV"
       }
     }
   },
