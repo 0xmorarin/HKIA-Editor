@@ -28,7 +28,7 @@ export function createProductCollectionItemsBridge(doc,draw){
  let live=null,drawing=false,busy=false;
  const dispose=f=>{try{f();}catch{}};
  const owns=h=>h.isConnected&&doc.querySelectorAll('.collection-items-list').length===1&&doc.querySelectorAll('.collection-items-list')[0]===h;
- function restore(){const x=live;if(!x)return;live=null;if(owns(x.candidate)){try{x.candidate.replaceWith(x.legacy);}catch{}}dispose(x.cleanup);}
+ function restore(){const x=live;if(!x)return;live=null;if(x.candidate.parentElement===x.parent){try{x.candidate.replaceWith(x.legacy);}catch{}}dispose(x.cleanup);}
  function render(host,input,current){
   if(drawing||live||!owns(host)||typeof current!=='function')return 'LEGACY_RETAINED';
   let s,old;try{s=validate(input);need(current());old=read(host,s);}catch{return 'LEGACY_RETAINED';}
@@ -40,7 +40,7 @@ export function createProductCollectionItemsBridge(doc,draw){
    cleanup=draw(stage,s,dispatch);need(typeof cleanup==='function');const next=read(stage,s,true);need(eq(next.sig,old.sig));
    const before=read(host,s);need(owns(host)&&current()&&host.parentElement===parent&&eq(before.sig,old.sig)&&before.next===old.next&&[...old.buttons].every(([k,b])=>before.buttons.get(k)===b));
    host.replaceWith(stage);committed=true;need(owns(stage)&&stage.parentElement===parent&&eq(read(stage,s,true).sig,old.sig));
-   live={legacy:host,candidate:stage,cleanup,token};return 'MOUNTED';
+   live={legacy:host,candidate:stage,cleanup,token,parent};return 'MOUNTED';
   }catch{if(committed&&owns(stage)){try{stage.replaceWith(host);}catch{}}if(cleanup)dispose(cleanup);return 'LEGACY_RETAINED';}finally{drawing=false;}
  }
  return {render,restore};
