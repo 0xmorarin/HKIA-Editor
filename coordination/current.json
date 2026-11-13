@@ -2478,7 +2478,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_PRODUCT_TABS_AND_FILTERS_FIXED_NONDEPLOY_CI_READY_DISJOINT_OR_COALESCED; 06B_FILTERS_PREFLIGHT_AND_FIXED_BROWSER_AFTER_CI; 05_NEXT_DISJOINT_BINDING_OR_REPAIR",
+      "next": "06B_V30_PRODUCT_TABS_FIXED_CI_ACCEPTANCE_READY; 00_V33_TABS_REBIND_CI_READY; FILTERS_FIXED_CI_IN_FLIGHT; 05_NEXT_DISJOINT_PRODUCT_LIST_BINDING",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4147,6 +4147,13 @@
           "acceptance": "Checkout fixed V30 site/ + site-manifest.json; verify all4146 hashes/4076 WebP. In svelte-ui pinned npm ci, npm test expected132, check --fail-on-warnings, ordinary Vite build and vite build --config vite.product-tabs.config.ts, existing R1-R7 reference/browser regression. Run node --experimental-strip-types scripts/verify-product-tab-reference.mjs <V30/site> <manifest> and verify-product-tab-delta.mjs same args. prepare-product-tabs-delta.mjs <V30/site> <manifest> dist-product-tabs/product-tabs.mjs <fresh-delta>. Copy exact V30 site to fresh candidate; overlay only delta/src/app.js and product-tabs.mjs. Verify 4145 unchanged, 1 MOD 1 ADD, no maps/tests/private data. Actual Python Playwright browser-product-tabs-parity.py <V30/site> <candidate> at 320/375/1280: all25 actual category images load, exact projections/filter/selection/keyboard, old panel identity, repeat Collections render once, module abort legacy fallback, no external/errors/overflow, Writer OFF. Retain code-only module/delta and logs; license/allowlist review before distribution.",
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "Exact new 10 paths and compiled product module/actual V30 bridge; independent lifecycle/negative/DOM ownership/parity, no R1-R7 repeat; then 00/06C."
+        },
+        "ciObserved": {
+          "run": 43426396053,
+          "job": 131888739039,
+          "status": "SUCCESS",
+          "head": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
+          "scope": "V30 fixed CI; 06B independent final pending"
         }
       },
       "productFilterBinding": {
@@ -4237,19 +4244,100 @@
           "acceptance": "npm ci fixed lock, npm test, check --fail-on-warnings, Vite build and vite build --config vite.product-filters.config.ts. Checkout exact V30 and V33 site+manifest separately; verify-product-filter-reference.mjs <site> <manifest> <V30|V33> and verify-product-filter-delta.mjs same; prepare-product-filters-delta.mjs <site> <manifest> dist-product-filters/product-filters.mjs <fresh-delta> <version>. Copy exact base and overlay only two delta src files; full hash unchanged4145, no maps/real Save/private inputs. Actual browser-product-filters-parity.py <base> <candidate> 320/375/1280 each version, synthetic Account load/reset, all seven filters, exact render counts, retained details, 25 actual category images, module-abort fallback, Writer OFF, no external/errors/download/overflow. 06B independent changed scope after success; do not apply standalone app delta over tab delta. Retain exact module/manifest/logs; license check before release.",
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "10 added paths and actual fixed filter bundle; independent lifecycle/real callback/DOM state/negatives, synthetic Account reset; no accepted R2 or tab preflight repeat"
+        },
+        "v33ReferenceAdditional": {
+          "status": "SELF_PASS_ACTUAL_V33_ARTIFACT_VM",
+          "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+          "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "verified": {
+            "exactFiles": 4146,
+            "webp": 4076,
+            "actualTransitions": 27,
+            "deltaNegatives": 7,
+            "fail": 0,
+            "patchSha": "2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"
+          },
+          "evidence": {
+            "file": "HKIA_WEB05_ProductTabsV33Rebind_20261113_Evidence.zip",
+            "sha256": "3afd10a603567d9283e4e9a12378ed2f3414b6009ac5027b2a48d736dc2f4a35",
+            "transport": "HKIA_WEB05_ProductTabsV33Rebind_20261113_Transport.json",
+            "transportSha256": "1b0122c4d16be07d586f659b4fe72bae2537d7748733fecfca81ca36d13e1b70",
+            "location": "Private Library /HKIA Editor Private/",
+            "readback": "BOTH_BYTE_EXACT_CRC_PASS_5_ENTRIES_3_SOURCE_SHA"
+          },
+          "unverified": "Actual compiled V33 Browser CI active; no repeat producer VM."
         }
       },
       "productTabsV33": {
         "task": "SVELTE_PRODUCT_TABS_V33_FIXED_REBIND",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "baseHead": "3a8cf611484ef444a9f04df6d175210d17f64a81",
         "baseSource": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "risk": "HIGH",
-        "scope": "V33 exact tab delta generator and reference/negative tests, preserve V30 in-flight CI and product filter candidate; no existing source changes or deploy.",
+        "scope": "3 ADD isolated V33-specific delta/reference/negative scripts. V30 fixed source and compiled tab UI unchanged; exact V33 artifact independently predeploy accepted; no app or Writer product edits. Full V33 filter reference/delta self QA also executed against existing fixed 05 filter code; no source mutation.",
         "dependency": "V33 fixed 06C predeploy PASS; tab V30 CI in progress; exact V33 artifact and immutable source",
-        "next": "Reconstruct V33 full artifact and verify, implement rebind and self QA."
+        "next": "00 V33 rebind fixed nondeploy browser CI after 06B V30 acceptance or parallel disjoint compile verification using exact tab module; 06B V33 rebind scope only; 00 shared root composition after accepted tab+filter scopes and 06C; no deploy until Owner approval.",
+        "sourceHead": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+        "branch": "web05/product-tabs-v33-rebind",
+        "tree": "15c2ca963923feda31447b3ddf41262640324323",
+        "sourceParent": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "manifestSha256": "dfd1196a6b9ff41d72309188ab185703125883a89ecb70b5e011b7af07eba8ed",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductTabsV33Rebind_20261113_Evidence.zip",
+          "sha256": "3afd10a603567d9283e4e9a12378ed2f3414b6009ac5027b2a48d736dc2f4a35",
+          "transport": "HKIA_WEB05_ProductTabsV33Rebind_20261113_Transport.json",
+          "transportSha256": "1b0122c4d16be07d586f659b4fe72bae2537d7748733fecfca81ca36d13e1b70",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_CRC_PASS_5_ENTRIES_3_SOURCE_SHA"
+        },
+        "verified": {
+          "v31v32v33EachFullFiles": 4146,
+          "webp": 4076,
+          "deltaZipShaCrc": 3,
+          "manifestChain": 3,
+          "v33CumulativeChanged": 6,
+          "v33AppGitBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
+          "actualV33TabVM": 12,
+          "actualV33FilterVM": 27,
+          "tabDeltaNegatives": 7,
+          "filterDeltaNegatives": 7,
+          "crossBaseNegative": 3,
+          "combinedFocusedUnit": 19,
+          "fail": 0,
+          "newExactRemoteBlobs": 3,
+          "oldTabSourceUnchanged": true,
+          "setTabBodyV30V33Exact": true,
+          "patchReversible": true
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "after": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
+          "bytes": 108581,
+          "delta": "1 MOD + 1 ADD compiled src/product-tabs.mjs; compiled module reuse requires fixed V30 accepted hash",
+          "unchanged": 4145
+        },
+        "unverified": [
+          "Actual V33 compiled tab mount/browser 320/375/1280; local VM and synthetic test bundle are not Browser PASS",
+          "06B independent V30 and V33 scope acceptance; V30 fixed CI green",
+          "Shared tab+filter app delta composition and actual combined Browser; 00 owner",
+          "V33 release deployment Owner approval, Writer OFF unchanged"
+        ],
+        "decision": "Keep V30 immutable in-flight CI; V33-specific exact-pin additive scripts; same compiled Svelte UI if artifact/module SHA bound, otherwise reproducible nondeploy build. Do not duplicate V30 CI or active filter CI; reuse V33 reconstruct and existing filter source for additional real-controller VM QA. No product deployment.",
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_CI",
+          "status": "READY",
+          "sourceHead": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "3 ADD exact V33 pin scripts, unchanged tab Svelte/module; no rerun entire V30 or active filter CI; fixed V33 actual browser",
+          "acceptance": "Checkout V33 site+manifest exact; run verify-product-tab-v33-reference.mjs (Node strip-types) and verify-product-tab-v33-delta.mjs; reuse fixed compiled tab bundle SHA from V30 CI (or reproducible rebuild with pinned lock and compare hash); prepare-product-tabs-v33-delta.mjs <site> <manifest> <bundle> <fresh-delta>; overlay only src/app.js and product-tabs.mjs in fresh V33 copy; 4145 base paths exact, 4076 WebP unchanged, 1 MOD 1 ADD, browser-product-tabs-parity.py V33 base vs candidate actual Chromium 320/375/1280, exact 25 images/keyboard/filter/selection/fallback/off/no external. No deploy. 06B changed scope independently then 00 shared app composition only after both accepted.",
+          "consumer": "06B QA-WEB-LOCALE"
+        }
       }
     },
     "06_QA": {
