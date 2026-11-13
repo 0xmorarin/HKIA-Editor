@@ -13972,7 +13972,7 @@
     "organizationTransferPreflight": {
       "task": "HKIA_ORGANIZATION_TRANSFER_PREFLIGHT_20261113",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT_00_CUTOVER_PREPARATION",
+      "status": "READY_OWNER_NATIVE_TRANSFER_UI_CONDITIONAL_ORG_POLICY_CHECK",
       "risk": "RELEASE",
       "sourceRepository": "0xmorarin/HKIA-Editor",
       "targetRepository": "Yumekiraboshi/HKIA-Editor",
@@ -14017,13 +14017,12 @@
         "v24GenuineBrowser": "WAIT_ENV"
       },
       "blockers": [
-        "Connect target organization to existing ChatGPT GitHub app and verify target repo-create / transfer permissions, name availability and org Actions/Pages policy; 404 alone insufficient.",
-        "Freeze new stream claims and writes only for actual cutover; final HEAD/refs/PR/CI/claim reconciliation, R7/R5 and R6.1 fixed CI pending not required to complete before transfer.",
-        "Prepare repository-name and Pages URL migration for active workflows, canonical ledger/config/project instructions and consumers; preserve historical immutable refs and logs.",
-        "Keep pinned V30 base and R4 delta independently recoverable; Pages current direct HTTPS probe unavailable in this environment; target Pages setup and HTTPS/postdeploy checks required."
+        "Native transfer UI and target Organization policies not exposed by current connector; Owner must select target in GitHub Transfer dialog and confirm. Current app installation visible all repositories but not proof of owner create permission.",
+        "Post-transfer identity, refs, PR, actual write CAS, Actions/Pages admin policy and actual CI pending. No deployment authority from settings approval.",
+        "Single root candidate requires product-equivalent build and scoped 06C distribution acceptance; keep V30 fixed, no /dev deployment. DNS/custom domain separate."
       ],
-      "decision": "NO_GO_NOW; transfer is separate Owner-authorized operation, not approved by preflight. No deploy, Writer activation, repository transfer, org policy/DNS changes, or blanket stream freeze performed.",
-      "next": "00 prepare exact migration delta and root preview policy decision; verify Owner target transfer permission/name availability and org policies; recheck all refs/claims/CI at cutover; obtain explicit Owner transfer approval. No transfer or deploy yet.",
+      "decision": "OWNER_AUTHORIZED_PREPARATION_COMPLETE; CONDITIONAL_GO_TO_OWNER_NATIVE_TRANSFER_UI; NO_TRANSFER_PERFORMED; NO_DEPLOY_NO_WRITER_NO_DNS",
+      "next": "Owner finish all current stream writes and use native GitHub Transfer; after transfer 00 verify repository ID 1453520753 and exact refs/PR, read new canonical ledger, minimal CAS write/readback, update active repository and Pages policy references, nondeploy CI, then fixed root artifact QA. No new claims during actual cutover.",
       "recheckAfterOwnerInstallation": {
         "status": "OWNER_REPORTED_INSTALLED_CONNECTOR_VISIBILITY_UNVERIFIED",
         "observedBlob": "c00a624fa2f7d0320999fe969f9383d64a38354e",
@@ -14037,7 +14036,7 @@
         "next": "Verify same app as existing working integration and repository access in target organization; recheck connector visibility before transfer. No transfer."
       },
       "rootPreviewProposal": {
-        "status": "OWNER_PREFERENCE_RECORDED_PENDING_POLICY_ADOPTION",
+        "status": "SINGLE_ROOT_PREPARATION_ADOPTED_NO_DEPLOY",
         "ownerStatement": "GitHub Pages itself serves as test page; separate /dev/ appears unnecessary; yumekiraboshi.com already purchased",
         "proposed": "Single root development preview; preserve last good V30 and existing real display/media; R4 synthetic nested candidate is not a drop-in replacement. Reuse scoped UI evidence, rebase paths and build a product-equivalent root artifact, verify actual browser, privacy, rights, rollback and 06C scoped distribution acceptance; existing V24 and Writer/deploy gates unchanged. No /dev/ deployment pending decision.",
         "domainProposal": "editor.yumekiraboshi.com; apex reserved for future Yumekiraboshi; no DNS/custom domain authorization or modification",
@@ -14072,7 +14071,241 @@
         "baseBlob": "db0e245864ae02adca744cb49aff865231776d2e",
         "risk": "RELEASE",
         "scope": "SSOT/ADR/settings preparation, fixed ref inventory, no product source/deployment",
-        "status": "IN_FLIGHT"
+        "status": "DONE_PREPARATION_WAIT_OWNER_UI"
+      },
+      "runbook": {
+        "path": "coordination/organization-transfer-20261113.md",
+        "blob": "1be42a18749caa97dac4095d80129ac0d705db22",
+        "commit": "c5b4f716e511644ffe0ec2e08f201d24936c6cec",
+        "readback": "EXACT"
+      },
+      "cutoverSnapshot": {
+        "repositoryId": "1453520753",
+        "preLedgerHead": "c5b4f716e511644ffe0ec2e08f201d24936c6cec",
+        "preLedgerBlob": "7432902ed996033ea098e97f2786e05fb1eb280c",
+        "branches": [
+          {
+            "ref": "ctrl/pages-isolation-probe-20261113",
+            "sha": "8076133b37ca84cb859b039135ab494247d02d7a"
+          },
+          {
+            "ref": "ctrl/pages-off-bundle-transport-20261113",
+            "sha": "69c53490d4f303572f606ad6472b453b1bdaa20d"
+          },
+          {
+            "ref": "ctrl/pages-off-transfer-20261113",
+            "sha": "9b4ebcccd91831e18dfcdeb7ca16955e143e9b1c"
+          },
+          {
+            "ref": "ctrl/pages-off-transport-20261113",
+            "sha": "463025a3214aa9c70b50885bbe7857eba41b58c7"
+          },
+          {
+            "ref": "ctrl/pages-privacy-repair-20261113",
+            "sha": "be84f8b145bf6f68e2440f0dc6a5a6a7f5e07138"
+          },
+          {
+            "ref": "ctrl/v24-pages-source-staging",
+            "sha": "311f6b3d20943d721f5a692ab080deec53c57ed3"
+          },
+          {
+            "ref": "ctrl/visual-preview-delta-20261113",
+            "sha": "9d48b8261a79c30be983cd3347371f45a7951e2a"
+          },
+          {
+            "ref": "main",
+            "sha": "c5b4f716e511644ffe0ec2e08f201d24936c6cec"
+          },
+          {
+            "ref": "pages-artifacts/off-v29-20261113",
+            "sha": "15cacf59a0c24a1124edb3741816d300794b4cdb"
+          },
+          {
+            "ref": "pages-artifacts/off-v30-20261113",
+            "sha": "b7e91df1e456ded1b50b4649797bf1b7df216717"
+          },
+          {
+            "ref": "qa06c/r4-visual-preview-fixed-20261113",
+            "sha": "8d920611b865add136e4400a7bd60bcee6fa136f"
+          },
+          {
+            "ref": "qa06/v30-live-boundary-20261113",
+            "sha": "13006014ccba553b725c36fbaf83964a737c00e7"
+          },
+          {
+            "ref": "rust07/r2-public-synthetic-compile",
+            "sha": "c629e4d15bf108cf443f92a7824a62a0c851bbc5"
+          },
+          {
+            "ref": "rust07/r3-bounded-session-abi",
+            "sha": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04"
+          },
+          {
+            "ref": "rust07/r4-minimum-writer",
+            "sha": "b0835830ef1b1d3d2e3ecb159866c2883bad7665"
+          },
+          {
+            "ref": "rust07/r5-client-reply-repair",
+            "sha": "cb40c1c67aa666b57dbdf20e94ff49b59546527f"
+          },
+          {
+            "ref": "rust07/r5-wasm-worker",
+            "sha": "cb40c1c67aa666b57dbdf20e94ff49b59546527f"
+          },
+          {
+            "ref": "rust07/r6-bounded-capacity",
+            "sha": "3f659c06f5f77fddd36f2b5415ffc082226afd40"
+          },
+          {
+            "ref": "rust07/r6-scratch-reuse",
+            "sha": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672"
+          },
+          {
+            "ref": "source/v5-code-only",
+            "sha": "7a9bfdaa3a01eedf755e361f511dd95d9cd0ef16"
+          },
+          {
+            "ref": "web05/svelte-achievement-detail-r6-repaired-r5",
+            "sha": "1997c6716342f4c18c036510968a52de014ca570"
+          },
+          {
+            "ref": "web05/svelte-achievement-detail-r6",
+            "sha": "3b6322c51b0d2ab9670401d213ec5f731f1581e3"
+          },
+          {
+            "ref": "web05/svelte-achievement-facts-r7",
+            "sha": "af261fd12385a3209aca458dfc2c394862d2e504"
+          },
+          {
+            "ref": "web05/svelte-achievement-list-r4",
+            "sha": "90d39d24fe7a82e0f77c867091eb18a984ae93d8"
+          },
+          {
+            "ref": "web05/svelte-category-grid-r3",
+            "sha": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be"
+          },
+          {
+            "ref": "web05/svelte-collection-detail-r5-repair",
+            "sha": "ceb4f768191bdbbd83fec202e24ae5b5d9eb76e0"
+          },
+          {
+            "ref": "web05/svelte-collection-detail-r5",
+            "sha": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a"
+          },
+          {
+            "ref": "web05/svelte-filters-r2",
+            "sha": "45946fa10efed9e6065a190b3c4a487c7b7721fe"
+          },
+          {
+            "ref": "web05/svelte-locale-consumer-r1-repair",
+            "sha": "5a7b404fdc72604e0fb2cd9611f732d24fa59ade"
+          },
+          {
+            "ref": "web05/svelte-locale-consumer-r1",
+            "sha": "523cbd8508773042380362e21fcc2ce7d0770c6a"
+          },
+          {
+            "ref": "web05/svelte-navigation-r1-followup",
+            "sha": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e"
+          },
+          {
+            "ref": "web05/svelte-navigation-r1",
+            "sha": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e"
+          },
+          {
+            "ref": "web05/svelte-r4-class-oracle",
+            "sha": "90d39d24fe7a82e0f77c867091eb18a984ae93d8"
+          },
+          {
+            "ref": "web05/svelte-r5-reselect-repair",
+            "sha": "8223586e4ca46eefe98472f83fbb9701c006fa2c"
+          },
+          {
+            "ref": "web05/svelte-r7-r5-reselect-combined",
+            "sha": "a527d33d994423e558a2ac0abbf17beae67f4e9c"
+          }
+        ],
+        "pulls": [
+          {
+            "number": 11,
+            "head": "8d920611b865add136e4400a7bd60bcee6fa136f",
+            "headRef": "qa06c/r4-visual-preview-fixed-20261113",
+            "base": "main",
+            "draft": true
+          },
+          {
+            "number": 10,
+            "head": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
+            "headRef": "rust07/r6-bounded-capacity",
+            "base": "rust07/r5-wasm-worker",
+            "draft": true
+          },
+          {
+            "number": 9,
+            "head": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+            "headRef": "rust07/r5-wasm-worker",
+            "base": "rust07/r4-minimum-writer",
+            "draft": true
+          },
+          {
+            "number": 8,
+            "head": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+            "headRef": "rust07/r4-minimum-writer",
+            "base": "rust07/r3-bounded-session-abi",
+            "draft": true
+          },
+          {
+            "number": 7,
+            "head": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+            "headRef": "rust07/r3-bounded-session-abi",
+            "base": "rust07/r2-public-synthetic-compile",
+            "draft": true
+          },
+          {
+            "number": 6,
+            "head": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+            "headRef": "web05/svelte-navigation-r1",
+            "base": "main",
+            "draft": true
+          },
+          {
+            "number": 5,
+            "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+            "headRef": "rust07/r2-public-synthetic-compile",
+            "base": "main",
+            "draft": true
+          },
+          {
+            "number": 1,
+            "head": "7a9bfdaa3a01eedf755e361f511dd95d9cd0ef16",
+            "headRef": "source/v5-code-only",
+            "base": "main",
+            "draft": true
+          }
+        ],
+        "activeActions": {
+          "in_progress": 0,
+          "queued": 0,
+          "waiting": 0,
+          "requested": 0,
+          "pending": 0
+        },
+        "currentProducerRefs": {
+          "webR7R5": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+          "rustR61": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672"
+        },
+        "independentResults": {
+          "r4": "SCOPED_PASS_PREDEPLOY",
+          "v39": "SCOPED_PASS_PRIVATE_RESEARCH",
+          "switch300": "DONE_STATIC_NODE_SCOPED_PASS",
+          "accountNative": "DONE_STATIC_SCOPED_PASS",
+          "localeRepair": "DONE_SCOPED_PASS",
+          "r5": "TRUE_RED_NEW_REGRESSION",
+          "r6": "DONE_SCOPED_PASS_ISOLATED_7_PATHS",
+          "r7": "PARTIAL_NODE_STATIC_PASS_WAIT_COMPILED_CI",
+          "browserKit": "TRUE_RED_TEST_EVIDENCE_VALIDATION_ONLY_WAIT_ENV_GENUINE"
+        },
+        "limitation": "Main advances by this ledger commit; compare final main HEAD at native transfer. Tags endpoint unsupported; do not infer absence. No evidence of live workflow; old embedded IN_FLIGHT entries are historical/stale or pending scope, not blanket cleared. Owner must confirm other conversations no longer write before transfer."
       }
     }
   },
