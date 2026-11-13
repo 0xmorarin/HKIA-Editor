@@ -175,6 +175,26 @@
       "independentQA": true,
       "betaExcluded": true,
       "noRawAssets": true
+    },
+    "developmentPreview": {
+      "decision": "OWNER_PAGES_ACTIVE_VISUAL_PREVIEW_DECISION_20261113",
+      "record": "coordination/pages-preview-decision-20261113.md",
+      "status": "OWNER_APPROVED_POLICY_ACTIVE",
+      "priority": "VISIBLE_ACCEPTED_MILESTONES_PROMPTLY",
+      "root": "PRESERVE_EXISTING_ACCEPTED_PRODUCT",
+      "path": "/HKIA-Editor/dev/",
+      "initialMode": "SYNTHETIC_NO_SAVE_WRITER_OFF",
+      "updateTrigger": "VISIBLE_UI_UX_IMAGES_LOCALIZATION_OR_ACCEPTED_OPERATION_CHANGE",
+      "skip": "RESEARCH_ONLY_OR_IDENTICAL_DISTRIBUTION",
+      "transport": "REUSE_PINNED_REMOTE_MEDIA_AND_BASE; COMPOSE_IN_ACTIONS; DELTA_INPUT_ONLY",
+      "acceptance": "RISK_BASED_SCOPED_QA_PLUS_06C_FIXED_DISTRIBUTION",
+      "publish": "MANUAL_FIXED_ARTIFACT_ONLY_AFTER_EXISTING_OWNER_APPROVAL",
+      "automaticDeploy": false,
+      "writerAuthorization": false,
+      "formalPromotionAuthorization": false,
+      "privacy": "NO_GENUINE_SAVE_RAW_GAME_DATA_PRIVATE_LOCATORS_SOURCE_MAPS_INTERNAL_PATHS",
+      "rollback": "LAST_ACCEPTED_FIXED_ARTIFACT",
+      "note": "No new Beta gate; do not wait unrelated formal work."
     }
   },
   "compatibility": {
