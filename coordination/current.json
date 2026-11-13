@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_R7_ISOLATED_CI_PARALLEL_06B_R5_REPAIR_R6_LOCALE_REPAIR_QA; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
+      "next": "00_R7_R5_RESELECT_COMBINED_FIXED_CI_READY; 06B_AFTER_GREEN_R5_AND_R7_DISJOINT; 05_AFTER_NEW_RESULT_OR_PRODUCT_BINDING_READY; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R5_REPAIR_R6_COMPILED_06B_READY_R7_FIXED_WAIT_CI",
+        "status": "R5_RESELECT_REPAIR_SELF_PASS_R7_COMBINED_READY_CTRL_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3442,14 +3442,61 @@
           },
           "reselectRepair": {
             "task": "SVELTE_R5_DEFINITION_RESELECT_REGRESSION_REPAIR",
-            "status": "IN_FLIGHT",
+            "status": "SELF_PASS_FIXED_R7_COMBINED_READY_CTRL_CI",
             "owner": "05 WEB",
             "baseHead": "53bddc64bfd6152e770bec6cb31da32dc6029f37",
             "basePrHead": "1997c6716342f4c18c036510968a52de014ca570",
             "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
             "scope": "R5 selectDefinition postcondition and focused model/browser regression only; R6 exact seven blobs and R7 fixed branch unchanged",
             "dependency": "06B webR5Repair TRUE_RED_NEW_REGRESSION; original three guards retained",
-            "next": "05 reproduce then minimal repair and self-QA; 00 isolated CI; 06B independent repair"
+            "next": "00 run one fixed R7+R5 successor nondeploy CI (123 expected tests, pinned lock, check/build, R1-R7 reference/browser incl new definition reselect + empty/back at 320/375/1280); 06B independently verify exact R5 3-path repair and R7 7 paths on green fixed head, no R1-R4/R6/locale repeat. Retain standalone R5 and R7 snapshots for rollback/attribution.",
+            "head": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
+            "branch": "web05/svelte-r5-reselect-repair",
+            "combinedHead": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+            "combinedBranch": "web05/svelte-r7-r5-reselect-combined",
+            "combinedBase": "af261fd12385a3209aca458dfc2c394862d2e504",
+            "changes": "2 MOD 1 ADD; exact three blobs on both branches; R7 seven paths disjoint; R6 seven accepted paths unchanged",
+            "blobs": {
+              "svelte-ui/src/collection-detail.ts": "5dc57889ddfa6812cfa88064d8060e69221d2eb8",
+              "svelte-ui/tests/collection-detail-reselect.test.mjs": "71e52538c4250be3645e81895faf5819a83e9103",
+              "svelte-ui/scripts/browser-collection-detail-parity.py": "f25d5c187d898108be219c5301a2851a80c4c590"
+            },
+            "evidence": {
+              "artifact": "HKIA_WEB05_R5ReselectRepair_20261113_Evidence.zip",
+              "location": "Private Library /HKIA Editor Private/",
+              "sha256": "bfc8a6bf7c70e1c234ced17250f8160f4c73605f6dcead03dacea503fa46d287",
+              "manifestSha256": "afd7815b8ffc89f0fbda721060f6675463c76417ba21d331c0ef03cb185b8067",
+              "readback": "BYTE_EXACT_SHA_CRC_PASS_6_ENTRIES"
+            },
+            "verified": {
+              "before": "exact preimage matched=false,true normal reselect both COLLECTION_DETAIL_POSTCONDITION",
+              "focused": 31,
+              "new": 8,
+              "regression": 23,
+              "fail": 0,
+              "strictTs": "PASS_5.8.3",
+              "browserScriptSyntax": "PASS",
+              "exactRemoteBlobs": 3,
+              "originalR7SevenPaths": "UNCHANGED",
+              "originalR6": "UNCHANGED",
+              "privateReadback": "PASS"
+            },
+            "unverified": [
+              "Combined 123 expected Node tests not run",
+              "Svelte check/build and actual Chromium 320/375/1280 not run on repair",
+              "06B independent repair and R7 acceptance",
+              "Actual product controller/session/catalog membership/locale/Writer"
+            ],
+            "decision": "One bounded validation witness (not selection owner), retain exact same-definition selected row, cross-definition retain only visible exact match or previously observed same-definition membership; empty hides selection; category/reset clears witness; unknown hidden cross-definition membership fail closed. Production session and authoritative membership proof separately required; no product change.",
+            "handoff": {
+              "recipient": "00 CTRL",
+              "task": "SVELTE_R7_R5_RESELECT_COMBINED_FIXED_CI",
+              "status": "READY",
+              "sourceHead": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+              "scope": "Nondeploy isolated CI only; 10 exact paths versus 1997c671 (R7 seven plus R5 three); no product main merge, Pages or flags",
+              "acceptance": "npm ci fixed lock, 123 tests expected, svelte check zero warnings/errors, Vite build and all R1-R7 references/browser, actual Chromium widths 320/375/1280, new same-definition focus/filter/selection and empty/back; 06B disjoint scopes after green",
+              "consumer": "06B QA-WEB-LOCALE"
+            }
           }
         },
         "r6": {
@@ -3591,7 +3638,16 @@
             "actual product controller/catalog/media, account counter, full locale and Writer binding",
             "06B independent R7 acceptance"
           ],
-          "decisions": "Slot read-only facts, source v3.0.1 labels, condition child list separate from parent group aggregate, bounded 128 children (not production limit); no inferred progress/receipt or game-derived asset/Save; no changes to R5/R6/Locale fixed branches."
+          "decisions": "Slot read-only facts, source v3.0.1 labels, condition child list separate from parent group aggregate, bounded 128 children (not production limit); no inferred progress/receipt or game-derived asset/Save; no changes to R5/R6/Locale fixed branches.",
+          "composedReselect": {
+            "status": "READY_CTRL_FIXED_CI",
+            "head": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+            "branch": "web05/svelte-r7-r5-reselect-combined",
+            "base": "af261fd12385a3209aca458dfc2c394862d2e504",
+            "repairHead": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
+            "changes": "R7 exact 7 paths unchanged; R5 exact 3 paths added to fixed R7",
+            "next": "00 fixed combined CI; 06B R5 and R7 independent scopes after green"
+          }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
