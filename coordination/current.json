@@ -7927,7 +7927,7 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_WEB_R4_SWITCH300_PASS_LOCALE_CONSUMER_TRUE_RED",
+      "status": "IN_FLIGHT_ACCOUNT_NATIVE_PRIOR_SCOPES_RECORDED",
       "task": "WEB_R4_LOCALE_CONSUMER_SWITCH300_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
       "next": "05 direct consume isolated Web R4 and Switch300 versioned identity; 05 READY repair Locale Consumer R1 TRUE_RED; 08 account-native in-flight or next fixed HIGH; 00 fixed repair CI after 05; 06B focused re-QA after repair, no repeat accepted scopes",
@@ -8439,6 +8439,12 @@
         "sha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
         "location": "Private Library /HKIA Editor Private/",
         "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
+      },
+      "accountNativeClaim": {
+        "claim": "20261113_06B_ACCOUNT_NATIVE_BOUNDARY",
+        "status": "IN_FLIGHT",
+        "source": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
+        "scope": "2 versions 8 backend method +2 getter ranges, independent native decode and account identity boundary only"
       }
     },
     "06C_QA_RELEASE": {
