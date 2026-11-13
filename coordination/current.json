@@ -4249,7 +4249,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R3_COMPILED_GENUINE_SESSION_PARITY",
+      "status": "R3_COMPILED_GENUINE_NEW_PROJECTION_LOCAL_PASS_06_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4266,10 +4266,10 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 add isolated R3 CI on PR7 exact code HEAD, run 81 tests+release binary; 06 static new scope in parallel; 07 compile repair if necessary and actual local genuine projection parity; 06 independent scoped execution. No R2 full re-QA, no JS feature duplication or Beta gate.",
-      "task": "HKIA-RUST-005",
-      "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
-      "scope": "Bounded read-only ProductSession, ZIP32/DEFLATE, SettingsAccount, residual typed indexes, HKS1 Rust/TS binary ABI, CAS/generation/replay/close, writer witness only",
+      "next": "06 existing in-flight R3 scoped QA: consume new fixed compiled/binary/private genuine evidence now; no duplicate activation. 07 after independent scoped acceptance implement minimum transactional Writer both domains/versions, or focused repair if TRUE_RED. No R2 repeat, no JS formal duplication, no main merge/deploy or Beta gate.",
+      "task": "HKIA-RUST-006",
+      "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
+      "scope": "R3 compiled read-only Session/ABI + ZIP/Account/additional typed projection, genuine 300/301 actual execution, 22 negative cases; no product source changes",
       "sourceSha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
       "source": {
         "file": "HKIA_Rust07_R3_SessionABI_20261113_Source.zip",
@@ -4283,33 +4283,44 @@
       },
       "handoff": {
         "to": "06 QA",
-        "task": "HKIA-RUST-005_R3_SCOPED_SESSION_ABI",
-        "status": "STATIC_READY_EXECUTION_WAIT_CI",
-        "file": "HKIA_Rust07_R3_SessionABI_20261113_HANDOFF_06.md",
-        "sha256": "199bde062915670d36c101f30ea5b4d28ac706b3fb9188b684d63224925fd086",
+        "task": "HKIA-RUST-006_R3_COMPILED_SESSION_ABI_AND_GENUINE_NEW_PROJECTION",
+        "status": "READY_06_ALREADY_IN_FLIGHT_ADD_FIXED_EXECUTION_EVIDENCE",
+        "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_HANDOFF_06.md",
+        "sha256": "01ddd6bd60e8036870983751c4a860430eb1feb6cc46768d79a4533703811e17",
         "fixedSource": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
-        "scope": "R3 delta only; R2 independent accepted scope reuse. Static review now; Rust compile and execution acceptance after 00 CI and private parity; no product edits by QA."
+        "ciHead": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+        "scope": "R3 only; 42 new Rust tests + exact 39 regression, TS14, genuine new typed projections and HKS1 2692 frames, 22 genuine-derived negatives, 2 repack positive; R2 independent acceptance reuse. 06 scoped execution and independent counterexamples, no raw save upload or product edits.",
+        "dependency": "NONE_EXECUTION_ARTIFACT_AVAILABLE; EXISTING_06_IN_FLIGHT_DO_NOT_DUPLICATE"
       },
       "verification": {
         "sourceReadback": "PASS_70_SHA_CRC_ALL_5_ARTIFACTS",
         "gitBlobs": "PASS_18_OF_18",
         "publicCrate": "PASS_56_OF_56_39_GENERATED",
         "typescript": "PASS_14_OF_14_TSC_5_8_3_NODE_22_16",
-        "rustCompile": "UNVERIFIED_WAIT_00_CI",
+        "rustCompile": "PASS_FIXED_CI_RUST_1_85_1",
         "rustNewTestsPlanned": 42,
-        "rustNewTestsExecuted": 0,
+        "rustNewTestsExecuted": 42,
         "rustRegressionTestsPlanned": 39,
         "privateV33Reference": "PASS_2_OF_2_NEW_PROJECTION_REFERENCE_ONLY",
-        "privateRustParity": "UNVERIFIED_0_OF_2",
+        "privateRustParity": "PASS_2_OF_2_EXACT_NEW_PROJECTION_AND_HKS1_FRAMES",
         "writer": "DISABLED_UNIMPLEMENTED",
         "wasm": "UNVERIFIED_NOT_CONNECTED",
         "browser": "UNVERIFIED",
-        "gameAuth": "UNKNOWN"
+        "gameAuth": "UNKNOWN",
+        "rustRegressionTestsExecuted": 39,
+        "rustTestsPassed": 81,
+        "rustTestsFailed": 0,
+        "rustTestsSkipped": 0,
+        "releaseBuild": "PASS",
+        "genuineDerivedNegatives": "PASS_22_OF_22_ZERO_STDOUT_STDERR",
+        "genuinePositiveRepack": "PASS_2_OF_2",
+        "originalsUnchanged": 2,
+        "independentQA": "06_IN_FLIGHT_NEW_SCOPE"
       },
-      "implementation": "R3_READ_ONLY_SESSION_ABI_SOURCE_IMPLEMENTED_RUST_UNCOMPILED",
+      "implementation": "R3_READ_ONLY_SESSION_ABI_COMPILED_LOCAL_SYNTHETIC_AND_GENUINE_SCOPED_PASS",
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
-      "handoffTo": "06_DIRECT_R3_SCOPE_STATIC_NOW; 00_CI_DEPENDENCY_ONLY; 07_EXECUTION_REPAIR_AND_PRIVATE_PARITY; 06_SCOPED_ACCEPTANCE",
-      "dependency": "00_R3_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_PARITY; 06_STATIC_SCOPE_READY_NOW; V24_BETA_INDEPENDENT",
+      "handoffTo": "06_DIRECT_R3_EXISTING_IN_FLIGHT; 07_WRITER_FOUNDATION_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
+      "dependency": "06_INDEPENDENT_R3_SCOPED_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
       "resumeBaseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
       "resumeScope": "Pin R3 CI 43373753393, workflow-only successor; obtain code-only binary; genuine private local R3 additional projection and ABI parity; evidence and direct 06 handoff; no R2 full re-QA",
       "executionKit": {
@@ -4326,7 +4337,7 @@
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
       "resumeTask": "HKIA-RUST-006",
-      "previousTask": "HKIA-RUST-004",
+      "previousTask": "HKIA-RUST-005",
       "r2": {
         "source": {
           "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -4543,7 +4554,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Actual R3 Rust compile/81 tests and 2 genuine new-projection parity; independent 06 scoped execution; transactional Writer; WASM Module Worker; browser and resource budgets; game acceptance",
+      "remaining": "06 R3 independent QA; transactional minimum Writer both domains and versions; WASM Module Worker/real Chrome; performance budgets and game acceptance",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -4631,28 +4642,39 @@
         },
         "handoff": {
           "to": "06 QA",
-          "task": "HKIA-RUST-005_R3_SCOPED_SESSION_ABI",
-          "status": "STATIC_READY_EXECUTION_WAIT_CI",
-          "file": "HKIA_Rust07_R3_SessionABI_20261113_HANDOFF_06.md",
-          "sha256": "199bde062915670d36c101f30ea5b4d28ac706b3fb9188b684d63224925fd086",
+          "task": "HKIA-RUST-006_R3_COMPILED_SESSION_ABI_AND_GENUINE_NEW_PROJECTION",
+          "status": "READY_06_ALREADY_IN_FLIGHT_ADD_FIXED_EXECUTION_EVIDENCE",
+          "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_HANDOFF_06.md",
+          "sha256": "01ddd6bd60e8036870983751c4a860430eb1feb6cc46768d79a4533703811e17",
           "fixedSource": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
-          "scope": "R3 delta only; R2 independent accepted scope reuse. Static review now; Rust compile and execution acceptance after 00 CI and private parity; no product edits by QA."
+          "ciHead": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+          "scope": "R3 only; 42 new Rust tests + exact 39 regression, TS14, genuine new typed projections and HKS1 2692 frames, 22 genuine-derived negatives, 2 repack positive; R2 independent acceptance reuse. 06 scoped execution and independent counterexamples, no raw save upload or product edits.",
+          "dependency": "NONE_EXECUTION_ARTIFACT_AVAILABLE; EXISTING_06_IN_FLIGHT_DO_NOT_DUPLICATE"
         },
         "verification": {
           "sourceReadback": "PASS_70_SHA_CRC_ALL_5_ARTIFACTS",
           "gitBlobs": "PASS_18_OF_18",
           "publicCrate": "PASS_56_OF_56_39_GENERATED",
           "typescript": "PASS_14_OF_14_TSC_5_8_3_NODE_22_16",
-          "rustCompile": "UNVERIFIED_WAIT_00_CI",
+          "rustCompile": "PASS_FIXED_CI_RUST_1_85_1",
           "rustNewTestsPlanned": 42,
-          "rustNewTestsExecuted": 0,
+          "rustNewTestsExecuted": 42,
           "rustRegressionTestsPlanned": 39,
           "privateV33Reference": "PASS_2_OF_2_NEW_PROJECTION_REFERENCE_ONLY",
-          "privateRustParity": "UNVERIFIED_0_OF_2",
+          "privateRustParity": "PASS_2_OF_2_EXACT_NEW_PROJECTION_AND_HKS1_FRAMES",
           "writer": "DISABLED_UNIMPLEMENTED",
           "wasm": "UNVERIFIED_NOT_CONNECTED",
           "browser": "UNVERIFIED",
-          "gameAuth": "UNKNOWN"
+          "gameAuth": "UNKNOWN",
+          "rustRegressionTestsExecuted": 39,
+          "rustTestsPassed": 81,
+          "rustTestsFailed": 0,
+          "rustTestsSkipped": 0,
+          "releaseBuild": "PASS",
+          "genuineDerivedNegatives": "PASS_22_OF_22_ZERO_STDOUT_STDERR",
+          "genuinePositiveRepack": "PASS_2_OF_2",
+          "originalsUnchanged": 2,
+          "independentQA": "06_IN_FLIGHT_NEW_SCOPE"
         },
         "publicTransport": {
           "file": "HKIA_Rust07_R3_SessionABI_20261113_PublicCodeTransport.json",
@@ -4671,11 +4693,36 @@
         },
         "ci": {
           "owner": "00 CTRL",
-          "status": "WAIT_WORKFLOW",
+          "status": "COMPILED_SYNTHETIC_PASS",
           "runner": "RUSTUP_TOOLCHAIN=1.85.1 python3 tests/rust/run-session-ci.py --code-only-artifact <fresh-dir>",
           "expectedTests": 81,
-          "artifact": "hkia-session-private + report only; no private inputs",
-          "toolchain": "Rust 1.85.1 Node 22.16 Python3; optional --abi-ts tsc 5.8.3"
+          "artifact": {
+            "file": "HKIA_Rust_R3_CodeOnly_43373753393.zip",
+            "id": 14013712258,
+            "sha256": "cf5777ef84b07bbc71fd16bcff1f2b98d96462da2d5c53699e6849589e8db199",
+            "bytes": 305340,
+            "binarySha256": "cbbf675843b88f354443d319f3f766be1b8a338ddbad682c10dc13d793c6e47a",
+            "binaryBytes": 690736,
+            "buildReportSha256": "e3c9a250dde9121baeddd45d549d4e86511ab51b5893dac9637203f283317b58",
+            "members": 2,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "CANONICAL_BYTE_EXACT_CRC_AND_BINARY_SHA_PASS"
+          },
+          "toolchain": "Rust 1.85.1 Node 22.16 Python3; optional --abi-ts tsc 5.8.3",
+          "head": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+          "codeHead": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
+          "run": 43373753393,
+          "job": 131715324283,
+          "workflow": ".github/workflows/rust07-r3-session.yml",
+          "diff": "ONLY_00_WORKFLOW_ADD",
+          "rust": "1.85.1",
+          "tests": {
+            "passed": 81,
+            "failed": 0,
+            "skipped": 0
+          },
+          "abiTs": 14,
+          "releaseBuild": "PASS"
         },
         "reference": {
           "v33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -4712,6 +4759,79 @@
             1393
           ],
           "originalsUnchanged": 2
+        },
+        "realParity": {
+          "status": "LOCAL_PASS_06_ACCEPTANCE_PENDING",
+          "reference": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "observed": [
+            {
+              "input": 1,
+              "version": "3.0.0",
+              "zipMembers": 11,
+              "accountAchievements": 31,
+              "accountCounters": 16,
+              "inventoryRows": 13244,
+              "inventoryKnownWitnessOccurrences": 57,
+              "deprecated": 0,
+              "migration": 83,
+              "counterGuidRefs": 1379,
+              "counterTextRefs": 0,
+              "celebrationDocuments": 1,
+              "detailRows": 2208,
+              "frames": 1343,
+              "allNewProjectionsEqual": true,
+              "originalUnchanged": true
+            },
+            {
+              "input": 2,
+              "version": "3.0.1",
+              "zipMembers": 11,
+              "accountAchievements": 31,
+              "accountCounters": 16,
+              "inventoryRows": 13510,
+              "inventoryKnownWitnessOccurrences": 57,
+              "deprecated": 0,
+              "migration": 87,
+              "counterGuidRefs": 1393,
+              "counterTextRefs": 0,
+              "celebrationDocuments": 1,
+              "detailRows": 2223,
+              "frames": 1349,
+              "allNewProjectionsEqual": true,
+              "originalUnchanged": true
+            }
+          ],
+          "frames": 2692,
+          "negatives": 22,
+          "positiveRepack": 2,
+          "originalsUnchanged": 2,
+          "scopeLimits": [
+            "Read-only R3 native Session/ZIP/Account/additional projection/HKS1 codec; new typed values/spans and paged response compared on original 300/301",
+            "Existing R2 slot parity reused; no full all-document semantic comparison",
+            "Genuine CountedValues and Key0 empty in both; nonempty cases covered by synthetic tests, not genuine observations",
+            "Actual Worker/WASM/Chrome not implemented or run; Writer commands disabled; no game auth/load/resave or production/dev switch",
+            "Independent R3 QA pending; no release/merge/flags"
+          ],
+          "evidence": {
+            "zip": {
+              "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_Evidence.zip",
+              "sha256": "62fb42d4c661aeb308783ede9587f3960adeb618d6f39c02d9b5201c2dcf27cd",
+              "entries": 5
+            },
+            "result": {
+              "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_RESULT.json",
+              "sha256": "3fa173e2bca7963c93f2c8c6e0c93ea8756d54e14c160af1a3240f0e8bdfc57d"
+            },
+            "manifest": {
+              "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_Manifest.json",
+              "sha256": "8bf641a806c92d705dadfd56d6ccfa4bf89927e5d8db40f79583260215e6e3b7"
+            },
+            "handoff": {
+              "file": "HKIA_Rust07_R3_Compiled_GenuineParity_20261113_HANDOFF_06.md",
+              "sha256": "01ddd6bd60e8036870983751c4a860430eb1feb6cc46768d79a4533703811e17"
+            },
+            "readback": "ALL_4_NEW_ARTIFACTS_BYTE_EXACT_5_ENTRY_CRC_SHA_PASS"
+          }
         }
       }
     }
