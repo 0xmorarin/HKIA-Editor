@@ -1,0 +1,123 @@
+name: 06C independent fixed R4 preview (no deploy)
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/qa06c-r4-preview-fixed.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  qa:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.head_ref == 'qa06c/r4-visual-preview-fixed-20261113'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: accepted-v30
+          persist-credentials: false
+      - name: Download exact prior staging artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api /repos/0xmorarin/HKIA-Editor/actions/artifacts/14022124789/zip > "$RUNNER_TEMP/preview.zip"
+          echo "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9  $RUNNER_TEMP/preview.zip" | sha256sum -c -
+          echo "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6  accepted-v30/site-manifest.json" | sha256sum -c -
+      - name: Independent exact composition and fail-closed checks
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,re,shutil,zipfile
+          P=pathlib.Path; tmp=P(os.environ['RUNNER_TEMP'])
+          def sha(b): return hashlib.sha256(b).hexdigest()
+          def inventory(root):
+              out={}
+              for f in root.rglob('*'):
+                  assert not f.is_symlink(),f
+                  if f.is_file(): out[f.relative_to(root).as_posix()]=sha(f.read_bytes())
+              return out
+          base=P('accepted-v30/site'); bm=json.loads(P('accepted-v30/site-manifest.json').read_bytes())
+          before=inventory(base); assert len(before)==4146 and before=={k:v['sha256'] for k,v in bm['files'].items()} and bm['writer']=='OFF'
+          names={'dev/index.html','dev/assets/index-CY-DWLoU.js','dev/assets/index-Cnlz5SAB.css'}
+          with zipfile.ZipFile(tmp/'preview.zip') as z:
+              assert z.testzip() is None and len(z.namelist())==4 and set(z.namelist())==names|{'preview-manifest.json'}
+              m=z.read('preview-manifest.json'); assert sha(m)=='fd9a8fbc41bc0bfe43cae6eefdc83fe8425a36d27e127fb5b3c1b6ad279f1ee3'
+              m=json.loads(m); add={k:z.read(k) for k in names}
+          assert m['baseRef']=='b7e91df1e456ded1b50b4649797bf1b7df216717' and m['baseManifestSha256']=='564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6' and m['uiRef']=='90d39d24fe7a82e0f77c867091eb18a984ae93d8' and m['writer']=='OFF' and m['mode']=='SYNTHETIC_NO_SAVE'
+          forbidden=re.compile(r'sourceMappingURL|drive\.google\.com|sediment://|libfile_[a-z0-9]+|/mnt/data/|-----BEGIN .*PRIVATE KEY-----|global-metadata\.dat|https?://[^\s"\']+\.zip',re.I)
+          def check(b,a,combined):
+              assert len(b)==4146 and set(a)==names and not set(b)&set(a)
+              assert all(not forbidden.search(v.decode()) for v in a.values())
+              assert {k:sha(v) for k,v in a.items()}==m['files']
+              assert combined==b|{k:sha(v) for k,v in a.items()}==m['combinedFiles']
+          check(before,add,m['combinedFiles'])
+          h=add['dev/index.html'].decode()
+          assert '<script type="module" crossorigin src="./assets/index-CY-DWLoU.js">' in h and 'href="./assets/index-Cnlz5SAB.css"' in h
+          assert 'href="../"' in h and 'Synthetic data only; no save input, edit or export.' in h and 'No ownership claimed.' in h
+          bad=[(before|{'index.html':'0'*64},add,m['combinedFiles']),(before,{**add,'dev/private.save':b'bad'},m['combinedFiles']),(before,{**add,'dev/index.html':b'https://drive.google.com/file/d/fake'},m['combinedFiles']),(before,add,{k:v for k,v in m['combinedFiles'].items() if k!='index.html'}),(before,{**add,'dev/assets/index-CY-DWLoU.js':b'bad'},m['combinedFiles'])]
+          for args in bad:
+              try: check(*args)
+              except AssertionError: pass
+              else: raise AssertionError('negative accepted')
+          root=tmp/'serve'/'HKIA-Editor'; shutil.copytree(base,root)
+          for k,v in add.items():
+              p=root/k;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(v)
+          assert inventory(root)==m['combinedFiles']
+          shutil.rmtree(root/'dev');assert inventory(root)==before
+          for k,v in add.items():
+              p=root/k;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(v)
+          assert inventory(root)==m['combinedFiles']
+          print('PASS base 4146 exact, 3 additions, 4149 combined, 5 negatives, exact rollback and reconstruction')
+          PY
+      - name: Real Chromium on exact served artifact
+        run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,threading
+          from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
+          from functools import partial
+          from playwright.sync_api import sync_playwright,expect
+          from urllib.parse import urlsplit
+          P=pathlib.Path; tmp=P(os.environ['RUNNER_TEMP']); root=tmp/'serve'
+          class Handler(SimpleHTTPRequestHandler):
+              def list_directory(self,path): self.send_error(404); return None
+          server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root)))
+          threading.Thread(target=server.serve_forever,daemon=True).start()
+          origin=f'http://127.0.0.1:{server.server_port}'; prefix=origin+'/HKIA-Editor/'
+          try:
+              with sync_playwright() as p:
+                  b=p.chromium.launch()
+                  print('Chromium',b.version)
+                  for width in (320,375,1280):
+                      c=b.new_context(viewport={'width':width,'height':900},service_workers='block')
+                      page=c.new_page(); bad=[]; errors=[]; requested=[]
+                      def route(r):
+                          u=r.request.url
+                          if not u.startswith(prefix): bad.append(u);r.abort()
+                          else: r.continue_()
+                      c.route('**/*',route)
+                      page.on('pageerror',lambda e:errors.append(str(e)))
+                      page.on('request',lambda r:requested.append(r.url))
+                      resp=page.goto(prefix+'dev/');assert resp and resp.status==200
+                      assert hashlib.sha256(resp.body()).hexdigest()=='09790c0c5f14c9bd0314b3999999f005ff8bafc9f00249818f512c4ee7b51d81'
+                      expect(page.get_by_role('complementary',name='Development preview')).to_be_visible()
+                      expect(page.get_by_text('Synthetic data only; no save input, edit or export.',exact=False)).to_be_visible()
+                      expect(page.get_by_text('Unofficial fan-made tool;',exact=False)).to_be_visible()
+                      expect(page.locator('main')).to_be_visible()
+                      assert page.locator('input[type=file]').count()==0
+                      assert page.locator('a[href="../"]').evaluate('(a)=>a.href')==prefix
+                      page.locator('#colTab').click();expect(page.locator('#colPanel')).to_be_visible()
+                      page.locator('#achTab').click();expect(page.locator('#achPanel')).to_be_visible()
+                      assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
+                      assert page.evaluate('window.isSecureContext && !!crypto.subtle')
+                      assert not bad and not errors,(bad,errors)
+                      assert all(urlsplit(x).path.startswith('/HKIA-Editor/dev/') for x in requested),requested
+                      for rel in ['dev/preview-manifest.json','dev/src/App.svelte','dev/assets/index-CY-DWLoU.js.map','coordination/current.json','.git/config','dev/assets/']:
+                          assert c.request.get(prefix+rel).status==404,rel
+                      print('PASS width',width,'actual nested modules, tabs, credits, no file input, no external requests, six denied paths')
+                      c.close()
+                  b.close()
+          finally: server.shutdown();server.server_close()
+          PY
