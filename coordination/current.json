@@ -329,12 +329,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "V300_DERIVED_NATIVE_PARITY_LOCAL_PASS_QA_PENDING_REWARD_IN_FLIGHT",
+      "status": "V300_DERIVED_REWARD_NATIVE_LOCAL_PASS_QA_PENDING_MANUAL_CAUSAL_IN_FLIGHT",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_GROUP_WITNESS_REPAIR_HISTORICAL_DERIVED_AND_V300_PARITY_QA; 03_V300_REWARD_DISPATCH_IN_FLIGHT; 00_SERIAL_AFTER_ACCEPTANCE",
+      "next": "06 scoped pending; 03 exact20+9 causal transfer IN_FLIGHT; exact six producer review next; 00 serial after acceptance",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -594,12 +594,32 @@
       },
       "v300RewardParity": {
         "task": "FORMAL_V300_REWARD_DISPATCH_NATIVE_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_NATIVE_PASS_QA_PENDING",
         "owner": "03 LINKAGE",
         "baseHead": "33aee370272c41263512a5180b08f3f8f7d55543",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "New v300 achievement reward dispatch and callback/Inventory/save-request path only; compare prior 03 reward replay advisory, no 01 inventory producer or 02 scalar/group/meta; no persisted claim inference or writer authorization",
-        "dependency": "03 formal reward replay scoped PASS 5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844; v300 source fingerprints obtained"
+        "dependency": "03 formal reward replay scoped PASS 5dfa67d33be0af9fdb234716e61f7fa30dafb082e6acc0c8afad09db62260844; v300 source fingerprints obtained",
+        "delta": {
+          "file": "HKIA_03_V300_REWARD_NATIVE_PARITY_V33_DELTA_20261113.zip",
+          "sha256": "3525e562e59bfe304de41a6c53a7e2c07c56867ea4214863d06a8663caa7b03c",
+          "manifestSha256": "3d33afa5ee4f94fd303b164ab870df1b57ac79c7d560f709a480faa2e8193cca",
+          "scope": "4 ADD 0 MOD 0 DEL plus transport manifest; no V33 path overlap",
+          "verified": "v300 NSO/dump/script metadata SHA, 39 anchors/7 direct branches/4 metadata slots/14 methods/2 interface slots/4 fields; 7 focused verifier PASS; Library byte exact CRC"
+        },
+        "classification": "BOUNDED_QUEUE_ORDINARY_DISPATCH_AND_CONDITIONAL_SAVE_REQUEST_PARITY; NO_NEW_REQUIRED; CLAIM_UNKNOWN",
+        "remaining": "RPC delivery, actual save/resave, durable claim/replay, v300 confirmation timeout, target-specific runtime definition and independent QA",
+        "gameAccepted": false,
+        "productAuthorized": false,
+        "next": "06 independent 4 ADD QA; 04 preserve reward guard; 00 serial after acceptance"
+      },
+      "v300ManualCausal": {
+        "task": "FORMAL_V300_EXACT20_ABSENCE9_CAUSAL_TRANSFER",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "dependency": "02 510198c3c7a86afb58716215578c42679db0f7c3f5d8a14aad4e8e4380d0131d new v300 native parity draft; existing 03 formal49/manual absence accepted",
+        "scope": "Exact20 and absence9 only; typed v300 preflight and causal transfer, no product permission or reward inference; 06 independent QA pending"
       }
     },
     "04_SAVE_CORE": {
