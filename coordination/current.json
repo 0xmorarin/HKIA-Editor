@@ -94,6 +94,14 @@
         "next": "03 exact six causal review + 06 new 6 paths independent QA in parallel; 04 only after exact accepted v300 producer/consumer contract; 00 Pages recovery independent; V24 frozen",
         "productAuthorized": false,
         "gameAccepted": false
+      },
+      "native300Parity": {
+        "task": "FORMAL_RECIPE6_V300_NATIVE_PERSISTENCE_PARITY",
+        "status": "IN_FLIGHT",
+        "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Newly located Switch v300 executable and IL2CPP dump; exact allocator/Inventory producer/load/persistence/predicate paths only; no 03 v301 repeat; additive 01 evidence; V24/Pages unchanged",
+        "dependency": "01 historical Recipe6 + 03 causal advisory pending 06"
       }
     },
     "02_ACHIEVEMENT": {
