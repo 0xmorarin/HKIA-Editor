@@ -17783,15 +17783,15 @@
     "resumeQueue20261113": {
       "status": "RECONCILED",
       "owner": "00 CTRL",
-      "baseHead": "fc87a95e3b8bc672939d2ce1f370fadfab003802",
+      "baseHead": "56fa897ffe44d8039ab5f7128e5ef3db9db2d01c",
       "ready": [
-        "06B_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA"
+        "06B_V33_PRODUCT_TABS_FIXED_REBIND_INDEPENDENT_QA",
+        "06C_V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+        "06B_PRODUCT_CATEGORIES_STATIC_PREFLIGHT"
       ],
       "inFlight": [
-        "06A three disjoint research scopes (existing claims)",
-        "06B product filter static + locale R5R7 (existing claims)",
-        "05 product tabs V33 exact rebind (existing claim)",
-        "00 product filters fixed CI 43426763281"
+        "00 category fixed CI 43429463962",
+        "05 actual achievement list existing claim"
       ],
       "waitOwner": [
         "V33 exact fixed OFF artifact approval"
@@ -17800,7 +17800,7 @@
         "V24 genuine private Browser",
         "Rust genuine Chrome Module Worker"
       ],
-      "notes": "No duplicate start; V40 and R6.1 accepted; R5/R7 specialist already accepted. No new 07 task assigned."
+      "notes": "V30 tabs/V30+V33 filters independently accepted, V33 tab fixed CI green. V41 saved/readback; no new Writer, release or deployment. Ledger now >1 MiB: contents may return empty; fetch exact blob by SHA for CAS; avoid dumping entire ledger."
     },
     "productTabsV33CI": {
       "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_CI",
@@ -17978,12 +17978,27 @@
       "owner": "00 CTRL",
       "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_NONDEPLOY_CI",
       "risk": "HIGH",
-      "status": "IN_FLIGHT",
+      "status": "CI_SUBMITTED",
       "baseHead": "dd225c417ac427249104f3380f910bc26215454b",
       "baseBlob": "08e1c72e2d2422e1c8d1f2a30399c627f235c391",
       "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
       "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-      "scope": "10 exact ADD; separate fixed V33 category grid compile and actual browser; no app composition or deployment."
+      "scope": "10 exact ADD; separate fixed V33 category grid compile and actual browser; no app composition or deployment.",
+      "head": "4b87b341d95c4f23e33a59384ffea740738ef656",
+      "branch": "ctrl/svelte-v33-categories-fixed-20261113",
+      "workflowBlob": "32b217796630feca659305bcdf6c6472365f7a5e",
+      "run": 43429463962,
+      "ciStatus": "IN_PROGRESS",
+      "next": "06B independent exact category bridge after green fixed browser; no delay V33 tab/filter composition once accepted; category integration separate.",
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_BROWSER_INDEPENDENT_QA",
+        "status": "READY_AFTER_CI",
+        "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
+        "compiledHead": "4b87b341d95c4f23e33a59384ffea740738ef656",
+        "run": 43429463962,
+        "scope": "10 exact new category bridge paths, 25 actual category images, unique grid lifecycle/selection/focus/filters, mapped image LOAD_FAILED and bundle abort fallback, 320/375/1280; reuse accepted R3, no other re-QA."
+      }
     }
   },
   "formalRelease": {
