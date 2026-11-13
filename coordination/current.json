@@ -2091,6 +2091,18 @@
           "unverified": "REAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER; GAME_LOAD_RESAVE; LIVE_PAGES",
           "next": "WAIT_NEW_ACCEPTED_CORE_OR_SCOPED_FAILURE"
         }
+      },
+      "svelteMigration": {
+        "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
+        "status": "IN_FLIGHT",
+        "owner": "05 WEB",
+        "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
+        "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "referenceBetaSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+        "scope": "Isolated svelte-ui/**: primary Achievements/Collections tabs, exact presentational classes/ARIA/keyboard, typed controlled port and synthetic harness. No live JS, Writer, shared config, workflow, or Pages changes. No Beta gate.",
+        "dependency": "Approved ADR; V24 UI frozen, V33 accepted, V30 OFF UI delivered; independent of new Writer contracts and Rust.",
+        "acceptance": "Typed tests and exact legacy navigation semantics; actual Svelte compile/build and browser parity separately before integration; no session duplication.",
+        "next": "05 implement; 00 isolated CI support if dependency runtime unavailable; 06 after compiled fixed source"
       }
     },
     "06_QA": {
