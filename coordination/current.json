@@ -1534,7 +1534,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_ISOLATED_SVELTE_R1_CI_PR6; 05_AFTER_COMPILE_RESULT_OR_NEW_ACCEPTED_CORE_OR_LIVE_UI_FAILURE; 06_LIVE_V30_QA_IN_FLIGHT; NO_REPEAT",
+      "next": "00_SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI; 05_AFTER_RESULT_OR_NEW_ACCEPTED_CORE; 06_ACTIVE_LIVE_RESEARCH_QA_AND_LATER_SVELTE; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2294,7 +2294,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "PARTIAL_LOCAL_TYPED_PASS_REMOTE_DRAFT_WAIT_CI",
+        "status": "R1_COMPILED_ISOLATED_BROWSER_PASS_FOLLOWUP_READY_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -2332,13 +2332,50 @@
         ],
         "followup": {
           "task": "SVELTE_R1_LOCK_A11Y_LEGACY_PORT",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "baseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
           "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
           "ciRun": 43353782026,
           "scope": "svelte-ui/** only: adopt exact CI lock; neutral tabpanel element a11y fix; controlled legacy navigation port with exact V33 setTab VM evidence and fail-closed state/ownership tests. No live JS, workflow, Writer, Pages or V24/V33 changes.",
-          "acceptance": "Lock SHA exact; actual legacy setTab routing and same-tab rerender; no duplicate state/DOM ownership; focused tests; compiled check/build/Chromium on updated pinned CI; 06 after compiled scope"
+          "acceptance": "Lock SHA exact; actual legacy setTab routing and same-tab rerender; no duplicate state/DOM ownership; focused tests; compiled check/build/Chromium on updated pinned CI; 06 after compiled scope",
+          "sourceSha256": "8da9c065f522906dc11656a4ff1d91b109758eeaaef348bd0f1a424ba5ad310a",
+          "deltaSha256": "83cce930fdacf90b00019c4a5bff27721e15b3287e3ed43a6e853794e2307a27",
+          "manifestSha256": "a186a6b7c4f07ca6906fc8bf4bc346ba638cd74412a930712c68f6da16ba8078",
+          "transportSha256": "27ddfb12ceaa37924bd3599929097ffc35c945e17dff2684e75925243501461e",
+          "evidenceSha256": "f8e19657c9c80225184e5f569529e226aa2eb094fde92a65776ff114e31b3145",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteNavigation_R1_Followup_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteNavigation_R1_Followup_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteNavigation_R1_Followup_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteNavigation_R1_Followup_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteNavigation_R1_Followup_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-navigation-r1-followup",
+            "head": "bb563adb29046fb83f0360a303b9119487bb43dd",
+            "tree": "5551609c79c852f3fb59abb10b0ad5d5a9f64378",
+            "parent": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
+            "changed": "3 MOD 5 ADD 0 DEL; 194 untouched; 8 exact remote blobs",
+            "pr6Unchanged": true
+          },
+          "verified": "exact retained lock SHA; 31 tests (11 new); 3 strict TS model/fixture checks; 18 prior actual V33 navigation comparisons rerun; 6 new exact legacy setTab adapter transitions, external state and malformed rejection, repeat collection render; browser fixture body exact; 18 source ZIP and 8 delta CRC, replay 18/18; all 5 Private readbacks byte exact",
+          "unverified": [
+            "updated Svelte compile/check/build and a11y zero-warning result",
+            "updated built HTTP Chromium 320/375/1280 and collection side effect count",
+            "actual production JS controller binding, actual collection content rendering, full UI parity"
+          ],
+          "next": "00 adjust branch-only workflow guard to exact followup scope/lock (no npm install regenerating lock); integrate staged commit into PR6 without false CI fail, npm ci/check/build/tests and actual browser plus verify-legacy-port against exact public legacy setTab; 05 minimal fixes on actual failures; 06 independent scope after fixed compiled source. No product merge/deploy, Beta gate or save data."
+        },
+        "r1Acceptance": {
+          "status": "COMPILE_CHECK_BUILD_ISOLATED_BROWSER_PASS_NOT_FULL_PRODUCT_PARITY",
+          "head": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
+          "run": 43353782026,
+          "job": 131650828219,
+          "initialRun": 43353686294,
+          "initialFailure": "Playwright runner unsupported Ubuntu26.04; runner corrected to Ubuntu24.04",
+          "verified": "20 tests; 0 check errors, 2 a11y warnings; build; actual Vite HTTP Chromium 320/375/1280; no overflow/external requests/page errors",
+          "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd"
         }
       }
     },
