@@ -192,6 +192,15 @@
           "condition": "genuine same-version before/after legitimate first progress; both absent -> both present, exact producer trigger, all-document Id/NextId, reload/resave/parent/root consistency; no synthetic rows"
         },
         "next": "06 scoped QA 9 ADD + 03 missing Manual conditional causal review after its current task; 04 existing exact20 private writer independent; new29 after both accepted; no new row creation; 00 serial integration"
+      },
+      "derivedMissingReview": {
+        "task": "FORMAL_MISSING_DERIVED_MEMBER_SOURCE_WITNESS",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "95093e653156ea416881079a16130f8a0be392c0",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Exact previously rejected 10 Manual targets: 9 fixerUpper missing sharingHomes Mission and 1 hospitality missing 22 VisitorRating; source identity and typed producer preconditions, no reward/Quest writes, no structural creation, V24/V33 immutable",
+        "dependency": "V33 accepted formal9, prior missing29/03 causal evidence; no reuse as permission for derived absence"
       }
     },
     "03_LINKAGE": {
