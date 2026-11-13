@@ -11897,6 +11897,14 @@
         "07 RUST CORE"
       ],
       "noWriterAuthority": true
+    },
+    "svelteR5CI": {
+      "task": "SVELTE_R5_COLLECTION_DETAIL_FIXED_ISOLATED_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "sourceHead": "7efe8f07e3999abccc19e6415630e6e76df02887",
+      "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
+      "scope": "Fixed R5 source; one isolated workflow ADD, no product changes, no deploy; R1-R4 regression and R5 actual Chromium"
     }
   },
   "formalRelease": {
