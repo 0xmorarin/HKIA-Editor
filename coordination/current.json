@@ -351,7 +351,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_HATS_OFF_PRODUCER_SELF_PASS_06A_READY; DERIVED23_EXISTING_QA; CREATION_WAIT_GENUINE_BEFORE_AFTER; NO_REDO",
+      "next": "02_HATS_OFF_V300_PARTIAL_SELF_PASS_06A_READY; V300_EXACT_SCRIPT_WAIT_DEP; CREATION_WAIT_GENUINE_BEFORE_AFTER; V301_ACCEPTED_REUSE",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -457,7 +457,7 @@
           "group": "collection_nuls",
           "condition": "genuine same-version before/after legitimate first progress; both absent -> both present, exact producer trigger, all-document Id/NextId, reload/resave/parent/root consistency; no synthetic rows",
           "staticProducer": {
-            "status": "SELF_PASS_06A_READY",
+            "status": "DONE_SCOPED_PASS_STATIC_EXACT_PRODUCER",
             "version": "3.0.1",
             "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER",
             "deltaSha256": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
@@ -689,7 +689,7 @@
       },
       "derivedSwitchDefinitionReview": {
         "task": "SWITCH300_301_MISSING_DERIVED23_DEFINITION_WITNESS",
-        "status": "PARTIAL_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_STATIC_SOURCE",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "456b22da76af204163027f56ad8c690c0c894d2c",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
@@ -738,11 +738,15 @@
           "scope": "6 ADD only, exact V36 base, 23 producer PPtr/class/GUID and Master references each version; 35 rows, groups 76/11, positive 10 leaf rewards and zero 2 parent rewards; independent source oracle and negative cases. Reuse prior Exact29/Native/true save evidence, no unrelated re-QA. Disjoint from R5.1.",
           "condition": "READY_FIXED_PRIVATE_DELTA_READBACK"
         },
-        "next": "06A independent research QA -> 03/04/07 direct source-only reference. 02 WAIT concrete runtime/first-progress/reward witness or QA counterexample. No deploy."
+        "next": "06A independent research QA -> 03/04/07 direct source-only reference. 02 WAIT concrete runtime/first-progress/reward witness or QA counterexample. No deploy.",
+        "independentAcceptance": {
+          "status": "SCOPED_PASS_STATIC_SOURCE_IDENTITY",
+          "scope": "static exact source only"
+        }
       },
       "hatsOffProducerReview": {
         "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER",
-        "status": "PARTIAL_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_STATIC_EXACT_PRODUCER",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
@@ -789,17 +793,81 @@
           "privateLocatorSha256": "d8375e8aee630ee6fdc9bfcba80e6df175603d25d71f9f08f7147b877101bef0",
           "condition": "READY_FIXED_DELTA_AND_ORIGINAL_LOCATORS_READBACK"
         },
-        "next": "06A independent QA -> 03/04/07 source-only reference; physical first-progress WAIT_DEP; Derived23 separate existing claim"
+        "next": "V301 accepted reuse; physical first-progress WAIT_DEP; v300 partial separate",
+        "independentAcceptance": {
+          "resultSha256": "8d2f6e76273a2f94417f8bca282551af493d67345cb1f14aed826968c156d641",
+          "sourceSha256": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+          "scope": "v301 static exact producer; no game/structural authority"
+        }
       },
       "hatsOffV300Review": {
         "task": "SWITCH300_HATS_OFF_EXACT_PRODUCER_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY_WAIT_EXACT_SCRIPT",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
         "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
         "risk": "HIGH",
         "scope": "v300 exact HatsOff static Native branch and typed source/counter/prototype; reuse accepted v301 producer; no structural creation or writer authorization",
-        "dependency": "06A accepted v301 fixed 4b884193...e9b7c; v300 NSO/dump and archive pinned"
+        "dependency": "06A accepted v301 fixed 4b884193...e9b7c; v300 NSO/dump and archive pinned",
+        "deltaSha256": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+        "manifestSha256": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+        "witnessSha256": "31798d6117c314ebdf41323d7fda5e27b5ce81b9cf98dc7eca7f6b6457332770",
+        "artifact": "HKIA_02_HATS_OFF_V300_PARTIAL_PARITY_V39_DELTA_20261113.zip",
+        "privateLibrary": "HKIA Editor Private",
+        "changes": "6 ADD/0 MOD/0 DEL; V39 647 unchanged; disjoint V40 653",
+        "verified": {
+          "version": "3.0.0",
+          "collectionVersion": 83,
+          "inputPins": 8,
+          "serializedPins": 3,
+          "nativeAnchors": 43,
+          "identicalWords": 38,
+          "relocatedWords": 5,
+          "branches": 8,
+          "metadataSlots": 4,
+          "methodIdentities": 3,
+          "dispatchSlotAdrpLdr": 1,
+          "helperEntryBytesEqual": 64,
+          "focusedPass": 17,
+          "witnessMutations": 13,
+          "targetManualThreshold": 1,
+          "parentMembers": 3,
+          "rewardQuantity": 1,
+          "masterReferences": 24107,
+          "localDefinitions": 820,
+          "localRewards": 820,
+          "prototypeFactoryWrapperGuid": "EXACT_TYPED",
+          "catalogAssetKeys": 2,
+          "catalogDependencyCount": 26,
+          "exactScriptPayloadObserved": false,
+          "witnessRepeat": "BYTE_EXACT",
+          "libraryReadback": "BYTE_EXACT_CRC_6_SHA_5",
+          "locatorReadback": "BYTE_EXACT"
+        },
+        "classification": "BOUNDED_NATIVE_AND_TYPED_TARGET_PROTOTYPE_PARITY_SCRIPT_PAYLOAD_UNKNOWN; NO_NEW_REQUIRED_OR_WRITER_AUTHORITY",
+        "unverified": [
+          "exact v300 Hat/Pick script payload and external Counter PPtr",
+          "full helper semantic parity",
+          "runtime interaction eligibility and dispatch",
+          "actual first-progress absent-to-present pair and Id/NextId/reload/resave",
+          "reward claim/replay",
+          "06A independent scoped acceptance"
+        ],
+        "remainingOriginal": {
+          "status": "WAIT_DEP",
+          "version": "3.0.0",
+          "candidateBundle": "cbe9aa2e3085dcc725a98cf12c16dfaa.bundle",
+          "condition": "original Switch300 extraction with version provenance and SHA; catalog both exact GUID keys and first dependency observed, fixed all-deps ZIP excludes payload; v301 same-name cannot substitute"
+        },
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "SWITCH300_HATS_OFF_PARTIAL_NATIVE_SOURCE_INDEPENDENT_QA",
+          "scope": "6 ADD V39, disjoint V40; independently verify exact 43/8/4 scoped Native, 3 methods, actual dispatch metadata, helper entry-only, target/parent/reward/Values/Master and prototype plus two catalog references; 17 focused and independent negatives; preserve script payload UNKNOWN; reuse v301 accepted no repeat",
+          "privateLocator": "HKIA_02_HATS_OFF_V300_PRIVATE_LOCATOR_20261113.md",
+          "privateLocatorSha256": "5d3f280a3bfa379943f18e039f34618b9e6d6ff8ccfcf3f0993d52ecef265b04",
+          "condition": "READY_FIXED_PRIVATE_DELTA_AND_LOCATORS_READBACK"
+        },
+        "next": "06A independent partial static QA -> 03/04/07 direct reference only; exact v300 script and physical first-progress WAIT_DEP; no writer/deploy"
       }
     },
     "03_LINKAGE": {
