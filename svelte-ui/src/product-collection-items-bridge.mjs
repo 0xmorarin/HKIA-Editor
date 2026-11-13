@@ -34,14 +34,14 @@ export function createProductCollectionItemsBridge(doc,draw){
   let s,old;try{s=validate(input);need(current());old=read(host,s);}catch{return 'LEGACY_RETAINED';}
   if(s.limit===1200&&s.total>s.limit)return 'LEGACY_RETAINED';
   const stage=host.cloneNode(false),parent=host.parentElement,token={};stage.setAttribute(MARK,'1');
-  let cleanup,committed=false;
+  let cleanup,replaceAttempted=false;
   const dispatch=(id)=>{if(busy||live?.token!==token||!owns(stage))return;busy=true;try{if(!current()||live?.token!==token||!owns(stage))return;const b=id===null?old.next:old.buttons.get(id);if(!b)return;b.click();}finally{busy=false;}};
   drawing=true;try{
    cleanup=draw(stage,s,dispatch);need(typeof cleanup==='function');const next=read(stage,s,true);need(eq(next.sig,old.sig));
    const before=read(host,s);need(owns(host)&&current()&&host.parentElement===parent&&eq(before.sig,old.sig)&&before.next===old.next&&[...old.buttons].every(([k,b])=>before.buttons.get(k)===b));
-   host.replaceWith(stage);committed=true;need(owns(stage)&&stage.parentElement===parent&&eq(read(stage,s,true).sig,old.sig));
+   replaceAttempted=true;host.replaceWith(stage);need(owns(stage)&&stage.parentElement===parent&&eq(read(stage,s,true).sig,old.sig));
    live={legacy:host,candidate:stage,cleanup,token,parent};return 'MOUNTED';
-  }catch{if(committed&&owns(stage)){try{stage.replaceWith(host);}catch{}}if(cleanup)dispose(cleanup);return 'LEGACY_RETAINED';}finally{drawing=false;}
+  }catch{if(replaceAttempted&&stage.parentElement===parent&&host.parentElement===null){try{stage.replaceWith(host);}catch{}}if(cleanup)dispose(cleanup);return 'LEGACY_RETAINED';}finally{drawing=false;}
  }
  return {render,restore};
 }
