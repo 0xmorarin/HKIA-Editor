@@ -6369,7 +6369,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -6876,6 +6876,15 @@
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
           "readbackVerified": true
         }
+      },
+      "accountNative": {
+        "task": "ACCOUNT_SWITCH_NATIVE_BACKEND_TITLE_BOUNDARY",
+        "status": "IN_FLIGHT",
+        "claim": "20261113_08_ACCOUNT_NATIVE_TITLE_BOUNDARY",
+        "baseHead": "4705cb5613d0e9cc6fc35bce111667905a2e8f16",
+        "risk": "HIGH_NEW_NATIVE_NAME_PROVENANCE",
+        "scope": "Both Switch versions fixed Native IAchievementsBackend/factory implementation, exact title/description absence source boundary; no guessed external titles, no live game or product change",
+        "dependency": "R2 native pins and Switch300/301 typed identity fixed; no external game or network query"
       }
     },
     "06A_QA_DATA_CORE": {
