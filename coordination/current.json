@@ -4357,72 +4357,76 @@
     "imagesReadyForPublic": false
   },
   "ownerPriorities": {
-    "effectiveDate": "2026-11-11",
-    "decision": "OWNER_ARCHITECTURE_APPROVED_BETA_FIRST_PARALLEL_RUST",
+    "effectiveDate": "2026-11-13",
+    "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
     "workOrder": [
       {
-        "priority": "P0",
+        "priority": "P0_BETA",
         "owner": "06_QA",
-        "task": "V18_CHANGED_SCOPE",
-        "status": "READY_NOW"
+        "task": "V24_AUTHORIZED_GENUINE_BROWSER_AND_RELEASE_ACCEPTANCE",
+        "status": "WAIT_ENV"
       },
       {
-        "priority": "P0",
-        "owner": "04_SAVE_CORE",
-        "task": "BETA_SAFE_OUTPUT",
-        "status": "READY_NOW"
-      },
-      {
-        "priority": "P0",
-        "owner": "05_WEB",
-        "task": "REAL_OUTPUT_UI",
-        "status": "READY_NOW"
-      },
-      {
-        "priority": "P0",
-        "owner": "03_LINKAGE",
-        "task": "RECIPE_TARGETED_CAUSAL",
-        "status": "READY_NOW"
-      },
-      {
-        "priority": "P0_ARCHITECTURE",
+        "priority": "P0_FORMAL",
         "owner": "07_RUST_CORE",
-        "task": "BOOTSTRAP_ENVELOPE_PARITY",
-        "status": "READY_NOW"
+        "task": "R2_ACCEPTANCE_AND_MINIMUM_EDIT_FOUNDATION",
+        "status": "CONTINUE_EXISTING_TASKS"
+      },
+      {
+        "priority": "P0_FORMAL",
+        "owner": "05_WEB",
+        "task": "SVELTE_R1_COMPILE_AND_ISOLATED_UI_PARITY",
+        "status": "WAIT_CTRL_CI"
+      },
+      {
+        "priority": "P0_FORMAL",
+        "owner": "00_CTRL",
+        "task": "PR6_NONDEPLOY_CI_AND_RUST_PARITY_ENV_UNBLOCK",
+        "status": "READY"
+      },
+      {
+        "priority": "P0_FORMAL",
+        "owner": "01_02_03",
+        "task": "LANGUAGE_INDEPENDENT_CONTRACTS_AND_WITNESSES",
+        "status": "RESPECT_EXISTING_CLAIMS"
       }
     ],
     "parallelSafeNow": [
-      "06_V18_42_PATHS",
-      "04_BETA_OUTPUT_CONTRACT_AND_NATIVE_LOAD",
-      "05_REAL_OUTPUT_UI",
-      "03_TARGETED_RECIPE_COUNTER_CAUSAL",
-      "07_RUST_CORE_ENVELOPE_READER_PARITY"
+      "06_EXISTING_LIVE_AND_RESEARCH_QA_IN_FLIGHT",
+      "00_PR6_NONDEPLOY_CI",
+      "07_R2_INDEPENDENT_SYNTHETIC_QA_HANDOFF_AND_AUTHORIZED_PARITY_UNBLOCK",
+      "05_SVELTE_AFTER_COMPILE_RESULT"
     ],
     "serialAfter": [
-      "00_ACCEPT_V18_SCOPED",
-      "04_SAFE_OPERATION_OUTPUT_QA",
-      "05_ACCEPTED_OUTPUT_UI",
-      "00_FIXED_BETA_BUILD",
-      "06_FINAL_BROWSER_QA",
-      "00_OWNER_BETA_DEPLOY_GATE"
+      "06_ACCEPT_MINIMUM_RUST_FOUNDATION",
+      "00_RECORD_DEVELOPMENT_SWITCH_AND_DISJOINT_04_07_OWNERSHIP",
+      "RUST_NEW_FORMAL_FEATURES_AND_SVELTE_RUST_ADAPTER",
+      "06_FULL_PRODUCTION_CUTOVER_ACCEPTANCE",
+      "00_OWNER_FORMAL_RELEASE_GATE"
     ],
     "conflictPolicy": "MEDIA_OWNED_ASSETS_MANIFEST_ONLY_NO_05_UI_SRC_CHANGES_UNTIL_COORDINATED",
     "externalMedia": "WAIT_OWNER_LOCAL_BYTES_OR_AUTHORIZED_SOURCE; NO_REPEATED_BLOCKED_FETCH",
     "rustIndependentCriticalPath": [
-      "07_NATIVE_ENVELOPE_AND_TYPED_READER_PARITY",
-      "07_TRANSACTION_WRITER_PARITY",
-      "06_RUST_WASM_BROWSER_AND_BUDGET_QA",
-      "00_RUST_CUTOVER"
+      "07_R2_GENUINE_READER_PARITY",
+      "07_SESSION_ABI_TRANSACTION_WRITER_WASM_WORKER",
+      "06_MINIMUM_EDIT_FOUNDATION",
+      "00_DEVELOPMENT_SWITCH",
+      "07_ALL_FORMAL_CONTRACT_PARITY",
+      "06_RUST_WASM_BROWSER_BUDGETS_FULL_QA",
+      "00_PRODUCTION_CUTOVER"
     ],
     "svelteIndependentCriticalPath": [
-      "05_JS_BETA_UI_FIXED",
-      "05_ISOLATED_SVELTE_TS_ADAPTER_UI_PARITY",
+      "00_PR6_NONDEPLOY_CI",
+      "05_ISOLATED_SVELTE_TS_JS_ADAPTER_UI_PARITY",
       "06_SCOPED_UI_QA",
-      "00_SEPARATE_UI_INTEGRATION"
+      "05_ACCEPTED_RUST_ADAPTER",
+      "06_FINAL_INTEGRATED_UI_QA",
+      "00_PRODUCTION_CUTOVER"
     ],
     "executionMode": "AUTONOMOUS_STREAM_DIRECT_HANDOFF",
-    "currentWorkOrderUnchanged": true,
-    "executionDecision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112"
+    "currentWorkOrderUnchanged": false,
+    "executionDecision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112",
+    "previousDecision": "OWNER_ARCHITECTURE_APPROVED_BETA_FIRST_PARALLEL_RUST"
   },
   "ownerCheckpoint20261112": {
     "status": "V18_LOCAL_INTEGRATED_AND_ARCHITECTURE_OWNER_APPROVED",
@@ -4679,9 +4683,9 @@
     }
   },
   "architecture": {
-    "ownerDecision": "OWNER_ARCHITECTURE_DECISION_20261112",
+    "ownerDecision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
     "status": "OWNER_APPROVED_FINAL",
-    "record": "coordination/architecture-decision-20261112.md",
+    "record": "coordination/architecture-decision-20261113.md",
     "stack": {
       "frontend": "Svelte + TypeScript",
       "saveCore": "Rust",
@@ -4704,7 +4708,40 @@
       "svelteSeparate": true,
       "permanentDualWriter": false,
       "cutover": "PARITY_SCOPED_QA_REAL_BROWSER_BUDGETS",
-      "rawSaveUpload": false
+      "rawSaveUpload": false,
+      "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
+      "betaStack": "EXISTING_JS_FUNCTIONAL_BETA_NO_RUST_OR_SVELTE_GATE",
+      "formalStack": "SVELTE_TYPESCRIPT_RUST_WASM_MODULE_WORKER_SINGLE_PRODUCT_SESSION_REQUIRED",
+      "jsPolicy": "BETA_MAINTENANCE_REFERENCE_AND_JUSTIFIED_UNBLOCKING_ONLY; NO_FULL_FORMAL_JS_COMPLETION_REQUIREMENT",
+      "developmentSwitch": {
+        "status": "PENDING_INDEPENDENT_ACCEPTANCE",
+        "required": [
+          "GENUINE_SWITCH_300_301_READ_INDEX",
+          "MEANINGFUL_PROVEN_EDIT_BOTH_DOMAINS_PER_SUPPORTED_VERSION",
+          "ATOMIC_TYPED_CAS_AND_RAW_UNKNOWN_NON_TARGET_I64_U64_PRESERVATION",
+          "INDEPENDENT_REPARSE_EXACT_DIFF_SEPARATE_EXPORT",
+          "REAL_WASM_MODULE_WORKER_CHROME_LOCAL_ONLY",
+          "NEGATIVES_ROLLBACK_ORIGINAL_UNCHANGED",
+          "06_SCOPED_ACCEPTANCE_00_FIXED_SOURCE_RECORD"
+        ],
+        "after": "NEW_FORMAL_EDIT_FEATURES_RUST_FIRST; JS_BETA_MAINTENANCE_REFERENCE_ONLY; 04_RUST_CAPACITY_AFTER_00_DISJOINT_ASSIGNMENT"
+      },
+      "productionCutover": {
+        "status": "PENDING_FULL_PARITY_AND_RELEASE_ACCEPTANCE",
+        "required": [
+          "ALL_ACCEPTED_FORMAL_CONTRACTS_V33_AND_SUCCESSORS",
+          "JS_RUST_GENUINE_BOTH_VERSIONS_PARITY",
+          "SVELTE_UI_AND_RUST_ADAPTER_INDEPENDENT_QA",
+          "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "RESOURCE_BUDGETS_AND_REQUIRED_NATIVE_GAME_EVIDENCE",
+          "FIXED_ARTIFACT_PRIVACY_ROLLBACK",
+          "OWNER_EXPLICIT_RELEASE_APPROVAL"
+        ],
+        "singleWriter": true,
+        "jsFallback": false
+      },
+      "noNewBetaGate": true,
+      "noDeployAuthorization": true
     },
     "targets": {
       "decodedNormalMiB": 64,
@@ -4726,7 +4763,8 @@
     "repoMainProtection": "API_REPORTED_FALSE_ON_BASE_892eb414",
     "driveHandoffTitle": "HKIA Editor — OWNER_ARCHITECTURE_DECISION_20261112 引継ぎ",
     "driveHandoffStatus": "SAVED_EXISTING_COORDINATION_FOLDER_AND_READBACK_PASS",
-    "bootstrapFile": "HKIA_Rust_Core_Bootstrap_20261112.zip"
+    "bootstrapFile": "HKIA_Rust_Core_Bootstrap_20261112.zip",
+    "previousDecision": "coordination/architecture-decision-20261112.md"
   },
   "executionPolicy": {
     "decision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112",
@@ -4742,7 +4780,7 @@
       "SELECT_HIGHEST_PRIORITY_READY_TASK_AND_EXECUTE_MAX_SAFE_WORK"
     ],
     "scheduling": {
-      "priority": "FUNCTIONAL_BETA_P0_THEN_DEPENDENCY_UNBLOCKING_AND_P1; RUST_P0_ARCH_INDEPENDENT_NOT_BETA_GATE",
+      "priority": "JS_FUNCTIONAL_BETA_P0_WITH_PARALLEL_RUST_SVELTE_FORMAL_P0_ARCH; NO_FULL_JS_FORMAL_COMPLETION_REQUIREMENT; RUST_FIRST_NEW_FEATURES_AFTER_DEVELOPMENT_SWITCH",
       "parallel": "ALL_INDEPENDENT_READY_TASKS",
       "noRepeat": "EXACT_ACCEPTED_SCOPE_REUSE; DO_NOT_RESTART_WITHOUT_NEW_TASK",
       "blocked": "ISOLATE_ONLY_AFFECTED_SCOPE; CONTINUE_OTHER_READY_WORK",
@@ -4751,7 +4789,7 @@
     },
     "coordination": {
       "canonical": "coordination/current.json",
-      "architecture": "coordination/architecture-decision-20261112.md",
+      "architecture": "coordination/architecture-decision-20261113.md",
       "privateEvidence": "EXISTING_DRIVE_AND_LIBRARY",
       "writeRule": "STREAM_UPDATES_OWN_STATUS_AND_TASK_EVIDENCE_ONLY; FETCH_LATEST_BLOB_CAS_BEFORE_WRITE; ON_CONFLICT_REFETCH_AND_RECONCILE_OWN_FIELDS; NEVER_OVERWRITE_OTHER_STREAM_PROGRESS",
       "taskClaim": "CHECK_EXISTING_IN_FLIGHT_SCOPE_AND_FILE_OWNERSHIP_BEFORE_CHANGE; RECORD_TASK_BASE_SCOPE_STATUS; SHARED_FILES_AND_MAIN_MERGE_SERIAL_VIA_00",
@@ -4778,7 +4816,17 @@
       "continue": "HKIA Editor【STREAM】CONTINUE",
       "handover": "HKIA Editor【STREAM】会話引継ぎ。最新正本から担当状態を再構成し、自律実行を再開。既受入範囲再調査禁止。次READYを実行し直接HANDOFF。"
     },
-    "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112"
+    "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112",
+    "architectureRouting": {
+      "01_COLLECTION": "Language-independent acquisition/revoke contracts and genuine witnesses; Rust-first implementation routing after development switch.",
+      "02_ACHIEVEMENT": "Language-independent achievement/progress/reward contracts; Rust-first implementation routing after development switch.",
+      "03_LINKAGE": "Language-independent causal requirements; direct accepted contract handoff to active implementation owner.",
+      "04_SAVE_CORE": "JS Beta safety/maintenance/reference; no full formal JS requirement; after development switch Rust capacity only with 00 disjoint ownership assignment.",
+      "05_WEB": "JS Beta UI maintenance plus isolated Svelte/TS formal migration; PR6 nondeploy compile then JS adapter parity then accepted Rust adapter.",
+      "06_QA": "Preserve active QA; V24 independent Beta gate; minimum Rust foundation development gate and full production cutover separate; Rust/Svelte scoped parity.",
+      "07_RUST_CORE": "P0 formal Rust/WASM foundation; R2 synthetic QA and genuine parity; Session/Writer/Worker; new formal features Rust-first after minimum foundation acceptance.",
+      "00_MEDIA": "Existing image pipeline and authorized missing assets unchanged."
+    }
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
@@ -5595,14 +5643,35 @@
         "rust": "07 pin compiled R2, private parity local-only; 06 independently review synthetic fixed scope; no JS gate."
       },
       "limitations": "No fresh browser rendering or genuine game save execution; no live rollback executed; historical incident not erased; no stream auto-launch."
+    },
+    "architectureDecision": {
+      "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
+      "record": "coordination/architecture-decision-20261113.md",
+      "baseHead": "689b6e1229cb03177a8cc2b2a364b2c940c6c7a3",
+      "scope": "OWNER_POLICY_ONLY; NO_PRODUCT_OR_FLAG_CHANGE",
+      "developmentSwitch": "PENDING",
+      "productionCutover": "PENDING",
+      "nextReadyParallel": [
+        "00_PR6_ISOLATED_SVELTE_NONDEPLOY_CI",
+        "00_PR5_AUTHORIZED_CODE_ONLY_BINARY_PARITY_UNBLOCK",
+        "06_EXISTING_CLAIMS_CONTINUE",
+        "07_R2_SYNTHETIC_QA_HANDOFF"
+      ],
+      "nextAfterDep": [
+        "05_SVELTE_COMPILED_SCOPE_AFTER_PR6_CI",
+        "07_GENUINE_PARITY_AFTER_AUTHORIZED_ENV",
+        "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
+        "00_DEVELOPMENT_SWITCH_AFTER_06",
+        "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
+      ]
     }
   },
   "formalRelease": {
     "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
-    "priority": "PARALLEL_FORMAL_FEATURES_AND_EARLIEST_FUNCTIONAL_PAGES_BETA",
+    "priority": "EARLIEST_JS_FUNCTIONAL_BETA_AND_PARALLEL_RUST_SVELTE_FORMAL_CRITICAL_PATH",
     "sourceBaseline": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
-    "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
+    "releaseScope": "JS functional Beta first, no Rust/Svelte Beta gate. Formal release requires Svelte+TypeScript+Rust/WASM single Worker ProductSession. No full formal JS implementation prerequisite. Existing feature/safety/Owner gates unchanged.",
     "pages": {
       "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
@@ -5948,7 +6017,7 @@
         "kitUse": "Existing private kit check and stage only; accept-v30 obsolete because current formal candidate V33; never run it or reset ledger."
       }
     },
-    "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
+    "executionPolicy": "Accepted JS and language-independent evidence reused; 01/02/03 -> 06 -> implementation owner by development switch -> 05 -> 06 -> 00. V24 frozen; V33 accepted reference. Rust development switch distinct from full production cutover; no duplicate Writer.",
     "integrationCandidate": {
       "label": "V33_FORMAL_OFF_COMBINED_SCOPED_PASS",
       "file": "HKIA_WEB05_FormalCelebration5UI_V31_20261113_Source.zip",
@@ -6042,6 +6111,41 @@
         "file": "HKIA_06_V32_CELEBRATION5_UI_QA_20261113_RESULT.json",
         "sha256": "6231c587ad8ef777f05db649e474c103ceaadea41bec67c7a9413f50a67ba0e8"
       }
+    },
+    "architectureExecution": {
+      "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
+      "betaStack": "EXISTING_JS_FUNCTIONAL_BETA_NO_RUST_OR_SVELTE_GATE",
+      "formalStack": "SVELTE_TYPESCRIPT_RUST_WASM_MODULE_WORKER_SINGLE_PRODUCT_SESSION_REQUIRED",
+      "jsPolicy": "BETA_MAINTENANCE_REFERENCE_AND_JUSTIFIED_UNBLOCKING_ONLY; NO_FULL_FORMAL_JS_COMPLETION_REQUIREMENT",
+      "developmentSwitch": {
+        "status": "PENDING_INDEPENDENT_ACCEPTANCE",
+        "required": [
+          "GENUINE_SWITCH_300_301_READ_INDEX",
+          "MEANINGFUL_PROVEN_EDIT_BOTH_DOMAINS_PER_SUPPORTED_VERSION",
+          "ATOMIC_TYPED_CAS_AND_RAW_UNKNOWN_NON_TARGET_I64_U64_PRESERVATION",
+          "INDEPENDENT_REPARSE_EXACT_DIFF_SEPARATE_EXPORT",
+          "REAL_WASM_MODULE_WORKER_CHROME_LOCAL_ONLY",
+          "NEGATIVES_ROLLBACK_ORIGINAL_UNCHANGED",
+          "06_SCOPED_ACCEPTANCE_00_FIXED_SOURCE_RECORD"
+        ],
+        "after": "NEW_FORMAL_EDIT_FEATURES_RUST_FIRST; JS_BETA_MAINTENANCE_REFERENCE_ONLY; 04_RUST_CAPACITY_AFTER_00_DISJOINT_ASSIGNMENT"
+      },
+      "productionCutover": {
+        "status": "PENDING_FULL_PARITY_AND_RELEASE_ACCEPTANCE",
+        "required": [
+          "ALL_ACCEPTED_FORMAL_CONTRACTS_V33_AND_SUCCESSORS",
+          "JS_RUST_GENUINE_BOTH_VERSIONS_PARITY",
+          "SVELTE_UI_AND_RUST_ADAPTER_INDEPENDENT_QA",
+          "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "RESOURCE_BUDGETS_AND_REQUIRED_NATIVE_GAME_EVIDENCE",
+          "FIXED_ARTIFACT_PRIVACY_ROLLBACK",
+          "OWNER_EXPLICIT_RELEASE_APPROVAL"
+        ],
+        "singleWriter": true,
+        "jsFallback": false
+      },
+      "noNewBetaGate": true,
+      "noDeployAuthorization": true
     }
   }
 }

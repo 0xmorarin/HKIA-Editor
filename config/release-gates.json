@@ -109,7 +109,7 @@
         "ROLLBACK_READY"
       ],
       "privateInputs": "NEVER_PUBLISH",
-      "formalPromotion": "SAME_CODE_AND_ASSETS_WITH_ACCEPTED_WRITER_CAPABILITIES_AND_FINAL_QA; OWNER_APPROVAL_REQUIRED",
+      "formalPromotion": "SAME_ACCEPTED_PRODUCT_LINEAGE_UI_ASSETS_AND_CAPABILITIES; INDEPENDENTLY_ACCEPTED_SVELTE_TYPESCRIPT_RUST_WASM_MIGRATION_REQUIRED_FOR_FORMAL_RELEASE; FIXED_TESTED_DISTRIBUTED_ARTIFACT; OWNER_APPROVAL_REQUIRED",
       "rightsPermission": "NOT_OBTAINED_NO_CLAIM_OF_LICENSE_OR_ENDORSEMENT",
       "rightsReview": "OWNER_RISK_ACCEPTANCE_RECORDED_NOT_LEGAL_CLEARANCE",
       "betaAcceptance": {
@@ -133,7 +133,7 @@
         "externalSaveTransmission": "FORBIDDEN",
         "privateFixtures": "NEVER_PUBLISH",
         "actualEnablement": "PENDING_SAFETY_AND_INDEPENDENT_QA; DO_NOT_CHANGE_LIVE_FLAGS_YET",
-        "formalRelease": "SEPARATE_OWNER_APPROVAL"
+        "formalRelease": "SEPARATE_OWNER_APPROVAL_AND_REQUIRED_FORMAL_ARCHITECTURE"
       }
     },
     "attributionNotice": {
@@ -151,6 +151,17 @@
         "OFFICIAL_OR_ENDORSED",
         "CREDIT_EQUALS_PERMISSION"
       ]
+    },
+    "formalReleaseArchitecture": {
+      "required": true,
+      "frontend": "Svelte + TypeScript",
+      "saveCore": "Rust/WASM",
+      "execution": "Web Worker",
+      "session": "Single ProductSession",
+      "jsWriterFallback": false,
+      "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
+      "record": "coordination/architecture-decision-20261113.md",
+      "betaExcluded": true
     }
   },
   "compatibility": {
@@ -181,19 +192,53 @@
     "publicValidation": "FUNCTIONAL_BETA_WITH_REAL_NATIVE_SAVE_EDIT_AND_OUTPUT; SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; ACTUAL_HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA"
   },
   "architecture": {
-    "ownerDecision": "OWNER_ARCHITECTURE_DECISION_20261112",
+    "ownerDecision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
     "status": "OWNER_APPROVED_FINAL",
-    "record": "coordination/architecture-decision-20261112.md",
+    "record": "coordination/architecture-decision-20261113.md",
     "product": "Yumekiraboshi shared HKIA save foundation",
     "frontend": "Svelte + TypeScript",
     "saveCore": "Rust",
     "runtime": "WebAssembly",
-    "execution": "Web Worker",
+    "execution": {
+      "decision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
+      "betaStack": "EXISTING_JS_FUNCTIONAL_BETA_NO_RUST_OR_SVELTE_GATE",
+      "formalStack": "SVELTE_TYPESCRIPT_RUST_WASM_MODULE_WORKER_SINGLE_PRODUCT_SESSION_REQUIRED",
+      "jsPolicy": "BETA_MAINTENANCE_REFERENCE_AND_JUSTIFIED_UNBLOCKING_ONLY; NO_FULL_FORMAL_JS_COMPLETION_REQUIREMENT",
+      "developmentSwitch": {
+        "status": "PENDING_INDEPENDENT_ACCEPTANCE",
+        "required": [
+          "GENUINE_SWITCH_300_301_READ_INDEX",
+          "MEANINGFUL_PROVEN_EDIT_BOTH_DOMAINS_PER_SUPPORTED_VERSION",
+          "ATOMIC_TYPED_CAS_AND_RAW_UNKNOWN_NON_TARGET_I64_U64_PRESERVATION",
+          "INDEPENDENT_REPARSE_EXACT_DIFF_SEPARATE_EXPORT",
+          "REAL_WASM_MODULE_WORKER_CHROME_LOCAL_ONLY",
+          "NEGATIVES_ROLLBACK_ORIGINAL_UNCHANGED",
+          "06_SCOPED_ACCEPTANCE_00_FIXED_SOURCE_RECORD"
+        ],
+        "after": "NEW_FORMAL_EDIT_FEATURES_RUST_FIRST; JS_BETA_MAINTENANCE_REFERENCE_ONLY; 04_RUST_CAPACITY_AFTER_00_DISJOINT_ASSIGNMENT"
+      },
+      "productionCutover": {
+        "status": "PENDING_FULL_PARITY_AND_RELEASE_ACCEPTANCE",
+        "required": [
+          "ALL_ACCEPTED_FORMAL_CONTRACTS_V33_AND_SUCCESSORS",
+          "JS_RUST_GENUINE_BOTH_VERSIONS_PARITY",
+          "SVELTE_UI_AND_RUST_ADAPTER_INDEPENDENT_QA",
+          "REAL_HTTP_HTTPS_WEBCRYPTO_MODULE_WORKER",
+          "RESOURCE_BUDGETS_AND_REQUIRED_NATIVE_GAME_EVIDENCE",
+          "FIXED_ARTIFACT_PRIVACY_ROLLBACK",
+          "OWNER_EXPLICIT_RELEASE_APPROVAL"
+        ],
+        "singleWriter": true,
+        "jsFallback": false
+      },
+      "noNewBetaGate": true,
+      "noDeployAuthorization": true
+    },
     "architecture": "Single ProductSession",
     "build": "Vite baseline",
     "host": "GitHub Pages current editor",
     "community": "Independent web service, save-free supported, raw save upload forbidden",
-    "migration": "JS functional beta independent P0; Rust and UI migration separate; no dual permanent writers; switch only parity/independent QA/real browser",
+    "migration": "JS functional Beta independent P0; Svelte and Rust parallel formal P0; no full formal JS completion requirement; Rust-first new features after minimum editing foundation acceptance; formal release requires Svelte+TS+Rust/WASM single Worker ProductSession after full parity/independent QA/real browser/budgets; no permanent dual Writer",
     "targets": {
       "decodedNormalMiB": 64,
       "stressMiB": 128,
@@ -206,6 +251,7 @@
       "community backend",
       "release timing",
       "actual game limits"
-    ]
+    ],
+    "previousDecision": "coordination/architecture-decision-20261112.md"
   }
 }

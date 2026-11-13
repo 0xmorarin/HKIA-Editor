@@ -1,5 +1,6 @@
 # OWNER_ARCHITECTURE_DECISION_20261112
 
+> Execution sequence and formal-release stack requirement superseded by [OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113](architecture-decision-20261113.md). All other decisions remain binding.
 Status: OWNER_APPROVED_FINAL. Technology adoption is final; do not reopen selection. This is not approval to deploy, activate live flags, purchase services, build a production community DB, transmit private saves, or change Dreamwish Wand production.
 
 ## Product and migration
