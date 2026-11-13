@@ -19808,7 +19808,7 @@
     "v33FiveScopeComposition": {
       "owner": "00 CTRL",
       "task": "V33_FIVE_ACCEPTED_PRODUCT_UI_SINGLE_ROOT_COMPOSITION",
-      "status": "INDEPENDENT_PASS_FIXED_ROOT_STAGE_IN_FLIGHT",
+      "status": "INDEPENDENT_PASS_FIXED_ROOT_STAGE_SUBMITTED",
       "risk": "HIGH_INTEGRATED_UI_AND_RELEASE_CANDIDATE",
       "baseHead": "41c9b52a2b9d300e6aaaa409a746ebc6553dd167",
       "baseBlob": "a4369fc2f3e9966ed525cb2141930f67514c1a8d",
@@ -19961,7 +19961,7 @@
       "stage": {
         "task": "V33_FIVE_SCOPE_FIXED_ROOT_STAGE_AND_OWNER_GATE",
         "owner": "00 CTRL",
-        "status": "IN_FLIGHT",
+        "status": "STAGING_WORKFLOW_SUBMITTED_REMOTE_REF_NOT_YET_OBSERVED",
         "baseHead": "6163df60bbe8002e807670374a96cd4032f6fabd",
         "baseLedgerBlob": "d9f7beb0703952ae217d9a38a991b3c443b9096f",
         "scope": "Exact accepted site/ + site-manifest.json only; nondeploy staging; Writer OFF",
@@ -19969,7 +19969,10 @@
         "targetBranch": "ctrl/pages-v33-five-scope-off-fixed-20261114",
         "dependency": "06C predeploy scoped PASS",
         "artifact": 14075649096,
-        "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b"
+        "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
+        "workflowHead": "0fe19f5e6d57a77b5124a00e81e7e539366262f1",
+        "workflowBlob": "de9ecbca496bd322fd40babf7367e781eec76af4",
+        "next": "Observe stage workflow result and exact retained target ref, manifest and tree before approval; no deployment."
       }
     }
   },
