@@ -5812,7 +5812,16 @@
         }
       },
       "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
-      "claim": "20261113_06B_LOCALE_R1"
+      "claim": "20261113_06B_LOCALE_R1",
+      "webClaim": {
+        "task": "SVELTE_R2_SEARCH_FILTER_INDEPENDENT_QA",
+        "status": "IN_FLIGHT",
+        "claim": "20261113_06B_WEB_R2",
+        "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
+        "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
+        "run": 43378037110,
+        "scope": "R2 seven changed paths, independent browser/negative cases only; R1 accepted reuse"
+      }
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
