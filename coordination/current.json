@@ -3214,7 +3214,7 @@
         },
         "r4": {
           "task": "SVELTE_R4_ACHIEVEMENT_BOUNDED_LIST",
-          "status": "COMPILED_BROWSER_PASS_06B_READY",
+          "status": "DONE_06B_SCOPED_PASS",
           "owner": "05 WEB",
           "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
           "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
@@ -3320,7 +3320,7 @@
         },
         "r5": {
           "task": "SVELTE_R5_COLLECTION_DEFINITION_ITEM_VIEW",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "COMPILED_BROWSER_PASS_06B_READY",
           "owner": "05 WEB",
           "baseHead": "a4ded599c12a2208c0e154a9b745814655a55e0e",
           "basePrHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
@@ -3359,7 +3359,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
       "localeIntegration": {
         "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
-        "status": "COMPILED_BROWSER_PASS_06B_READY",
+        "status": "TRUE_RED_REPAIR_IN_FLIGHT",
         "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
         "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
@@ -3424,6 +3424,14 @@
             "run": 43391367596,
             "scope": "8 ADD isolated consumer, actual accepted 08 runtime/registry private independent oracle; synthetic selector Chrome and state/storage/stale negatives; no repeat locale R1-R4 catalog QA, no actual product binding claim"
           }
+        },
+        "repair": {
+          "task": "SVELTE_LOCALE_R1_REENTRANT_CLOSE_COMMIT_REPAIR",
+          "status": "IN_FLIGHT",
+          "baseHead": "0fe5c8f60c98b9ce5ad4aafdb8560fcc989614be",
+          "basePrHead": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+          "scope": "locale-consumer.ts and focused regression tests only; guard external callbacks and commit; no accepted 08 changes",
+          "risk": "HIGH"
         }
       }
     },
