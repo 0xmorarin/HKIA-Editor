@@ -10330,7 +10330,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_V38_FIXED_AND_SVELTE_R5_CI_PASS_NEW_QA_RECONCILED",
+    "status": "DONE_OWNER_ACTIVE_PAGES_POLICY_R4_PREVIEW_FIXED_06C_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -10440,14 +10440,13 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT_HKIA_RUST_014",
-      "05_LOCALE_R1_REENTRANT_CLOSE_REPAIR_AND_ACCEPTED_R4_SWITCH300_ACCOUNT_PREPARATION",
+      "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
       "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
-      "06B_R5_COLLECTION_DETAIL_NEW_SCOPE",
-      "06C_V38_FIXED_641_SCOPED_QA"
+      "00_V38_FIXED_ACCEPTANCE",
+      "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI"
     ],
     "nextAfterDep": [
-      "00_ACCEPT_V38_AFTER_06C",
+      "00_MANUAL_FIXED_PREVIEW_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
       "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
       "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
       "05_R5_COLLECTION_UI_INTEGRATION_AFTER_06B",
@@ -11116,19 +11115,18 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "V38_FIXED_SVELTE_R5_CI_AND_QA_RECONCILIATION",
+      "task": "ACTIVE_PAGES_POLICY_AND_FIXED_R4_PREVIEW",
       "status": "DONE_SCOPED_HANDOFF",
-      "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
-      "scope": "V38 fixed and 06C READY; Svelte R5 CI PASS and 06B READY; R4/Switch300/Account native independent scoped PASS, locale consumer TRUE_RED direct 05; R6 assigned; genuine browser WAIT_ENV",
+      "source": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+      "scope": "Owner policy recorded; R4 preview delta fixed PASS, 06C READY; no live deployment or Writer authorization; V38 acceptance and other CI independent",
       "next": [
-        "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT_HKIA_RUST_014",
-        "05_LOCALE_R1_REENTRANT_CLOSE_REPAIR_AND_ACCEPTED_R4_SWITCH300_ACCOUNT_PREPARATION",
+        "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
         "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
-        "06B_R5_COLLECTION_DETAIL_NEW_SCOPE",
-        "06C_V38_FIXED_641_SCOPED_QA"
+        "00_V38_FIXED_ACCEPTANCE",
+        "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI"
       ],
       "after": [
-        "00_ACCEPT_V38_AFTER_06C",
+        "00_MANUAL_FIXED_PREVIEW_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
         "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
         "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
         "05_R5_COLLECTION_UI_INTEGRATION_AFTER_06B",
@@ -12716,20 +12714,69 @@
     "previewRefresh": {
       "task": "PAGES_VISUAL_PREVIEW_DELTA_STAGING",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT_STAGING_CI",
+      "status": "DONE_FIXED_R4_DELTA_SELF_PASS_06C_READY",
       "risk": "RELEASE",
       "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
       "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
       "previewSource": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
       "scope": "Prepare isolated nondeploy candidate: preserve exact V30 root/assets, add /dev/ synthetic Svelte R4 accepted UI, explicit development/no-save and rights notice, no raw data or source maps, all hashes and policy, nested HTTP Chromium, delta-only artifact. R5 after independent acceptance; locale Consumer TRUE_RED excluded. Owner deployment approval separate.",
-      "ownerIntent": "Owner requests evaluation of long Pages gaps and visible progress; staging only, no inference of deployment grant.",
-      "next": "06C fixed artifact independent QA then separate Owner approval before actual manual Pages dispatch. Reuse existing remote media; no recurring full transfer.",
+      "ownerIntent": "Owner approved active Pages visual preview policy 2026-11-13; no separate unverified artifact deployment or automatic deploy approval",
+      "next": "06C fixed scoped integration QA then 00 manual artifact deployment preparation and existing Owner approval; R5/R6/Locale repairs separate.",
       "branch": "ctrl/visual-preview-delta-20261113",
       "head": "9d48b8261a79c30be983cd3347371f45a7951e2a",
       "run": 43396673488,
       "job": 131789159607,
-      "verified": "Exact V30 and R4 source guards, build and additive composition/policy step SUCCESS; actual nested Chromium pending",
-      "proposedUpdatePolicy": "Milestone-based visible preview updates, no research-only redeploy; preserve existing root, separate /dev/ synthetic no-save; reuse remote media, fixed manual artifact and rollback, independent 06C then Owner deployment approval. Not an automatic deploy authorization."
+      "verified": {
+        "baseUnchanged": 4146,
+        "added": 3,
+        "combined": 4149,
+        "artifactScope": "dev/ three files plus manifest outside site",
+        "build": "PASS",
+        "unit": "71 PASS",
+        "nestedChromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "existingR1R4Regression": "PASS",
+        "privacyPolicy": "PASS",
+        "artifactReadback": "BYTE_EXACT_SHA_CRC_ALL_3_MEMBER_HASHES_MATCH"
+      },
+      "proposedUpdatePolicy": "Milestone-based visible preview updates, no research-only redeploy; preserve existing root, separate /dev/ synthetic no-save; reuse remote media, fixed manual artifact and rollback, independent 06C then Owner deployment approval. Not an automatic deploy authorization.",
+      "ci": "SUCCESS",
+      "artifact": {
+        "id": 14022124789,
+        "file": "HKIA_VisualPreview_R4_Delta_43396673488.zip",
+        "sha256": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+        "bytes": 335761,
+        "manifestSha256": "fd9a8fbc41bc0bfe43cae6eefdc83fe8425a36d27e127fb5b3c1b6ad279f1ee3",
+        "entries": 4,
+        "privateLibrary": "HKIA Editor Private"
+      },
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "task": "PAGES_R4_VISUAL_PREVIEW_DELTA_FIXED_INTEGRATION_QA",
+        "status": "READY",
+        "scope": "Exact V30 4146 unchanged plus dev/ 3 ADD; verify manifest, fixed source R4 acceptance, distribution-only notice/back link, synthetic no-save and rights, independent privacy/path/negative/rollback/actual nested browser; no R5/Locale Consumer TRUE_RED; no repeat V30 full feature QA; no deploy",
+        "condition": "Fixed artifact readback and prior V30/R4 acceptances. After independent acceptance 00 prepare manual fixed artifact dispatch, separate Owner approval; actual HTTPS smoke after deployment."
+      }
+    },
+    "pagesActivePreviewPolicy": {
+      "decision": "OWNER_PAGES_ACTIVE_VISUAL_PREVIEW_DECISION_20261113",
+      "status": "DONE_POLICY_RECORDED",
+      "record": "coordination/pages-preview-decision-20261113.md",
+      "priority": "P0_VISIBLE_ACCEPTED_MILESTONE_REFRESH",
+      "root": "PRESERVE_V30",
+      "path": "/HKIA-Editor/dev/",
+      "cadence": "PROMPT_ACCEPTED_VISIBLE_MILESTONES; NO_RESEARCH_ONLY_REDEPLOY; COALESCE_CLOSE_COMPATIBLE_CHANGES",
+      "transport": "PINNED_REMOTE_V30_MEDIA_REUSE_ACTIONS_DELTA_COMPOSITION",
+      "approval": "MANUAL_FIXED_ARTIFACT_06C_AND_EXISTING_OWNER_DEPLOYMENT_APPROVAL",
+      "automaticDeploy": false,
+      "writerAuthorization": false,
+      "formalPromotionAuthorization": false,
+      "task": "OWNER_POLICY_UPDATE_AND_PREVIEW_CANDIDATE_HANDOFF",
+      "owner": "00 CTRL",
+      "projectInstructionsCharacters": 7993
     }
   },
   "formalRelease": {
@@ -13132,6 +13179,20 @@
         "observed": "V30 exact OFF public deployment and CTRL HTTPS smoke PASS; independent QA remains READY. No branch-root fallback or Writer activation.",
         "parallel": "06 live artifact and new formal research scoped QA READY; 07 public synthetic compile PASS, private parity independently READY_AFTER_ENV; no V24/Rust/Svelte wait for OFF Pages.",
         "kitUse": "Existing private kit check and stage only; accept-v30 obsolete because current formal candidate V33; never run it or reset ledger."
+      },
+      "activePreviewPolicy": {
+        "decision": "OWNER_PAGES_ACTIVE_VISUAL_PREVIEW_DECISION_20261113",
+        "status": "OWNER_APPROVED_POLICY_ACTIVE",
+        "record": "coordination/pages-preview-decision-20261113.md",
+        "priority": "P0_VISIBLE_ACCEPTED_MILESTONE_REFRESH",
+        "root": "PRESERVE_V30",
+        "path": "/HKIA-Editor/dev/",
+        "cadence": "PROMPT_ACCEPTED_VISIBLE_MILESTONES; NO_RESEARCH_ONLY_REDEPLOY; COALESCE_CLOSE_COMPATIBLE_CHANGES",
+        "transport": "PINNED_REMOTE_V30_MEDIA_REUSE_ACTIONS_DELTA_COMPOSITION",
+        "approval": "MANUAL_FIXED_ARTIFACT_06C_AND_EXISTING_OWNER_DEPLOYMENT_APPROVAL",
+        "automaticDeploy": false,
+        "writerAuthorization": false,
+        "formalPromotionAuthorization": false
       }
     },
     "executionPolicy": "Self-QA all; LOW direct; HIGH scoped 06A data/core or 06B web/locale then direct; 00 serial integration; 06C changed integration/release only. Existing independent release/operation/cutover gates unchanged; V24 frozen.",
