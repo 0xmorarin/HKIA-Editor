@@ -2384,7 +2384,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI_READY; 06B_NEW_BINDING_AFTER_GREEN; 05_ACTUAL_PRODUCT_BINDING_NEXT_AFTER_RESULT; R5_R7_ACCEPTED_NO_REPEAT",
+      "next": "00_PRODUCT_TABS_AND_FILTERS_FIXED_NONDEPLOY_CI_READY_DISJOINT_OR_COALESCED; 06B_FILTERS_PREFLIGHT_AND_FIXED_BROWSER_AFTER_CI; 05_NEXT_DISJOINT_BINDING_OR_REPAIR",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4058,15 +4058,92 @@
       "productFilterBinding": {
         "task": "SVELTE_PRODUCT_FILTER_BINDING_BASELINE",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "baseHead": "eb0ceac9968a25543a91157f38dc38566b9b7cc2",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
         "v33Artifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
-        "scope": "Disjoint R2 actual product filter bridge and tests, new svelte-ui paths only; existing tab source/CI unchanged; no app/controller mutation in Git; V30 and V33 exact reference; no Writer or deploy.",
+        "scope": "10 ADD svelte-ui only: actual product seven-filter bridge, three detached host replacements, original JS callbacks/DOM state authoritative, no Save/Session/Writer changes. V30/V33 pinned delta generation, tests. No deployed product modifications.",
         "dependency": "Accepted R2 model; tab bridge independent WAIT_CTRL_CI; V33 OFF fixed candidate not live",
-        "next": "Implement read/write actual control binding, focused positive/negative/legacy reference QA, fixed branch and handoff."
+        "next": "00 fixed nondeploy filter CI independently or coalesce source compilation with unclaimed tab CI (optional 142 tests); do not restart ongoing tab CI. 06B independent exact 10 new paths after green, may preflight now; 00 shared app composition only after accepted scopes, 06C integrated distribution. 05 further disjoint binding or repair on result.",
+        "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+        "branch": "web05/product-filters-v30-v33-baseline",
+        "tree": "088e130a20e721834ce40256776956bde2387d66",
+        "manifestSha256": "f485219dad9affb45d0b7f33d6beecfe0f6571340c1cff887dfd4b5a6a6019ce",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductFilterBinding_20261113_Evidence.zip",
+          "sha256": "04d3e55668fbb348a9580c41b7f7cdc61b90c437b1eb1cd63e34a67ab08d42b9",
+          "transport": "HKIA_WEB05_ProductFilterBinding_20261113_Transport.json",
+          "transportSha256": "db56a31ca027240b352fffc4bed03e8277456fb25d51b085e612eb1fe7017292",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_ZIP_CRC_12_ENTRIES_10_SOURCE_SHA_PASS"
+        },
+        "verified": {
+          "unit": 10,
+          "fail": 0,
+          "strictTS": "PASS",
+          "baseV30Files": 4146,
+          "webp": 4076,
+          "actualV30CallbackVMTransitions": 27,
+          "actualReset": true,
+          "achRender": 18,
+          "collectionRender": 10,
+          "batchClear": 18,
+          "deltaNegatives": 7,
+          "browserScriptSyntax": "PASS",
+          "remoteSourceBlobs": 10,
+          "v33Static": "identical index HTML and eight relevant controller lines; exact V33 app and manifest pins verified remotely",
+          "combinedFocusedNode": 19,
+          "combinedFail": 0,
+          "combinedRemoteAddedBlobs": 10
+        },
+        "v30Patch": {
+          "path": "src/app.js",
+          "before": "b736e11af8c527f497a1c975e1479aa3f6c5b7204fd8b6c44cc098921060d56d",
+          "after": "12f1ee46365d54605c196b9480dfa82c8e6bd65f1b4c9835c0ac22e968d0dde7",
+          "bytes": 106803,
+          "delta": "1 MOD app hook + 1 ADD compiled src/product-filters.mjs (not built yet); 4145 base paths unchanged"
+        },
+        "v33Pins": {
+          "artifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "appSha": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "appBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
+          "indexIdentical": true
+        },
+        "optionalCombined": {
+          "head": "1baa8d044fe1b51d723076aefde5e8ac348ec4f3",
+          "branch": "web05/product-tabs-filters-v30-v33",
+          "tree": "a49e5711050a030a8b162b878d9fb86bcb0ba5b8",
+          "parent": "a178d943fd44ea34934aea0738c7e292f1944b27",
+          "scope": "20 ADD versus accepted R7 base; exact tab 10 and filter 10 disjoint; no old branch mutation; optional single compile/test CI if tab CI not already claimed; separate actual artifact and 06B changed-scope QA",
+          "expectedNode": 142,
+          "verifiedFocused": 19,
+          "appComposition": "00 owns shared app.js delta composition; filter hook before final render, tab hook after final render; neither standalone delta overwrites the other. Combined artifact needs separate fixed parity/release QA."
+        },
+        "unverified": [
+          "Actual compiled Svelte check/build and whole combined 142 expected tests; local npm/Chromium limitations unchanged",
+          "Actual product Browser 320/375/1280, synthetic Account load/reset/search/sort/selection, exact image load and fallback; prepared but not executed",
+          "Full V33 artifact 4146 hashes and VM/browser execution; remote static compatibility only",
+          "Integrated tab+filter product app delta and license/privacy/rollback; 00 coordination required",
+          "Postcommit injected arbitrary callback side effects detected but not automatically rolled back; real callbacks pinned",
+          "Genuine Save, Writer or deploy not tested/authorized"
+        ],
+        "decision": "Three detached host swaps, preserve old controls on precommit/partial mount failure and focus/caret; reuse accepted R2 model; current DOM values only, no second filter/session. Callback reentry and unrelated value changes rejected; no arbitrary callback rollback. Exact V30 and V33 separate patch pins; preserve previous tab candidate. New V33 compatible candidate selected only after verified artifact acceptance.",
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V30_V33_PRODUCT_FILTERS_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+          "optionalCombinedHead": "1baa8d044fe1b51d723076aefde5e8ac348ec4f3",
+          "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "v33ArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "10 ADD fixed filter scope; isolated nondeploy workflow; 133 expected standalone or 142 optional combined, preserve old tab CI if in flight; do not merge/deploy",
+          "acceptance": "npm ci fixed lock, npm test, check --fail-on-warnings, Vite build and vite build --config vite.product-filters.config.ts. Checkout exact V30 and V33 site+manifest separately; verify-product-filter-reference.mjs <site> <manifest> <V30|V33> and verify-product-filter-delta.mjs same; prepare-product-filters-delta.mjs <site> <manifest> dist-product-filters/product-filters.mjs <fresh-delta> <version>. Copy exact base and overlay only two delta src files; full hash unchanged4145, no maps/real Save/private inputs. Actual browser-product-filters-parity.py <base> <candidate> 320/375/1280 each version, synthetic Account load/reset, all seven filters, exact render counts, retained details, 25 actual category images, module-abort fallback, Writer OFF, no external/errors/download/overflow. 06B independent changed scope after success; do not apply standalone app delta over tab delta. Retain exact module/manifest/logs; license check before release.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "10 added paths and actual fixed filter bundle; independent lifecycle/real callback/DOM state/negatives, synthetic Account reset; no accepted R2 or tab preflight repeat"
+        }
       }
     },
     "06_QA": {
