@@ -5806,11 +5806,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_SCOPED_R4_NATIVE_V301_DEFINITIONS_WAIT_NEW_FIXED_SCOPE",
       "task": "R4_EXECUTION_AND_V301_DEFINITION_SCOPED_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "R4 static scope done; 00 fixed CI SUCCESS; 07 genuine six private outputs pending; independent 06A executable QA after fixed 07 evidence. Exact v301 remaining originals separately.",
-      "dependency": "07_R4_GENUINE_SELF_QA_FIXED_EVIDENCE; V301_EXACT_ORIGINALS",
+      "next": "07 R4 WASM Module Worker and real Chrome local genuine execution; 03 v301 Exact29 source/config causal adjudication; parallel, direct handoffs. 06A wait new fixed HIGH result; do not rerun accepted scopes.",
+      "dependency": "NONE_FOR_ACCEPTED_SCOPES; NEXT_06A_AFTER_07_WASM_FIXED_SELF_QA_OR_03_CAUSAL_FIXED_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "b73d147aca121a3ad6cf41aef79200e84e1d3aa6",
       "legacyEvidence": {
@@ -5831,15 +5831,17 @@
           "name": "01_SWITCH301_DEFINITION",
           "delta": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
           "tests": 12,
-          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION",
-          "recovery": "V33 exact source SHA/CRC and own delta recovered; catalogs v300/v301 and Steam301 exact original serial remain"
+          "status": "DONE_SCOPED_PASS_STATIC",
+          "recovery": "V33 exact source SHA/CRC and own delta recovered; catalogs v300/v301 and Steam301 exact original serial remain",
+          "acceptance": "06A researchAcceptance"
         },
         {
           "name": "02_SWITCH301_EXACT29",
           "delta": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
           "tests": 19,
-          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION",
-          "recovery": "V33 exact source and prior02 v300 exact delta SHA/CRC recovered; scripts/config originals and Stage54 remain"
+          "status": "DONE_SCOPED_PASS_STATIC",
+          "recovery": "V33 exact source and prior02 v300 exact delta SHA/CRC recovered; scripts/config originals and Stage54 remain",
+          "acceptance": "06A researchAcceptance"
         }
       ],
       "reused": {
@@ -5959,18 +5961,159 @@
           "task": "HKIA-RUST-009_R4_INDEPENDENT_EXECUTION",
           "source": "d6401ccea03d67ad312ca1b052455974498ebe1e",
           "ci": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
-          "status": "IN_FLIGHT"
+          "status": "DONE_SCOPED_PASS"
         },
         {
           "task": "01_SWITCH301_DEFINITION",
           "source": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
-          "status": "IN_FLIGHT"
+          "status": "DONE_SCOPED_PASS"
         },
         {
           "task": "02_SWITCH301_EXACT29",
           "source": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
-          "status": "IN_FLIGHT"
+          "status": "DONE_SCOPED_PASS"
         }
+      ],
+      "executionResult": {
+        "status": "SCOPED_PASS_NATIVE_EXECUTION",
+        "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
+        "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+        "run": 43378029329,
+        "job": 131729013270,
+        "binarySha256": "eb371bb329a8db8b2c77a3e111596c5c6cd461fcbb3c868cfd888c077c698b77",
+        "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
+        "deltaSha256": "ccdbd317cb214fd9fcc08ec93b498376447b07302d0b8c6a7b1c5661215c5750",
+        "verified": {
+          "genuineNativeEditedCopies": 6,
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "operations": [
+            "history",
+            "progress",
+            "batch"
+          ],
+          "exactFields": 12,
+          "nonTargetZipFrames": 60,
+          "unchangedLz4Tokens": 192,
+          "changedLz4Blocks": 12,
+          "accountUnchanged": 6,
+          "originalsUnchanged": 2,
+          "independentRuntimeNegativesZeroOutput": 10,
+          "independentSyntheticCliOutputs": 2,
+          "independentSyntheticCliNegatives": 12,
+          "ciRust": 95,
+          "ciTs": 14,
+          "ciReused": "UPSTREAM_CI_ONLY",
+          "oracle": "independent Python schema walk, MessagePack/LZ4/ZIP exact decoded-byte splice and archive oracle"
+        },
+        "limits": [
+          "EXISTING_HISTORY_NOT_ACQUISITION",
+          "INCOMPLETE_100FWISHES_DECREASE_AND_EXACT_COUNTER_PAIR_ONLY",
+          "GENUINE_CLI_NOT_SESSION_UNDO_REDO_CLOSE_STALE_REPLAY_FILE_AB",
+          "WASM_WORKER_BROWSER_RESOURCE_GAME_PERSISTENCE_AUTH_UNVERIFIED"
+        ],
+        "trueRed": "NONE_REPRODUCED",
+        "evidence": {
+          "file": "HKIA_06A_R4_V301_INDEPENDENT_QA_20261113_EVIDENCE.zip",
+          "sha256": "d165b132fa32133cf4bd4fd4a6b5130cabef6b80d7c142c51ab54b6b553e75ac",
+          "manifestSha256": "28d5cd39e93af649d881451e316844a50b0a6ee0c99bf8622bc57c0ee1273dde",
+          "handoffSha256": "7d02ca534076e2c383d71a24672f457680076bf5262e73e32ae01311dac0f708",
+          "privateLibrary": "HKIA Editor Private",
+          "bytes": 15338,
+          "readback": "BYTE_EXACT_SHA_CRC_8_ENTRIES_7_MANIFEST_HASHES_PASS"
+        },
+        "resultSha256": "283ccc0e60ff099fcb0bcafeaa77dea1586582463b66b948546d790795225930",
+        "handoff": {
+          "to": "07_RUST_CORE",
+          "status": "READY",
+          "task": "R4_WASM_MODULE_WORKER_REAL_CHROME_GENUINE_MINIMUM",
+          "scope": "Fixed native R4 scoped independent acceptance; Rust Worker typed ABI/session integration and real Chrome local both versions/domain exact edits, lifecycle negatives/rollback and budgets; no development switch until ADR gates and 00 record."
+        }
+      },
+      "researchAcceptance": {
+        "sourceBase": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "resultSha256": "ec444d4e795e696214c6754aa3512bb71326179e07d294188bd05e5594f44e40",
+        "evidence": {
+          "file": "HKIA_06A_R4_V301_INDEPENDENT_QA_20261113_EVIDENCE.zip",
+          "sha256": "d165b132fa32133cf4bd4fd4a6b5130cabef6b80d7c142c51ab54b6b553e75ac",
+          "manifestSha256": "28d5cd39e93af649d881451e316844a50b0a6ee0c99bf8622bc57c0ee1273dde",
+          "handoffSha256": "7d02ca534076e2c383d71a24672f457680076bf5262e73e32ae01311dac0f708",
+          "privateLibrary": "HKIA Editor Private",
+          "bytes": 15338,
+          "readback": "BYTE_EXACT_SHA_CRC_8_ENTRIES_7_MANIFEST_HASHES_PASS"
+        },
+        "one": {
+          "task": "01_SWITCH301_DEFINITION",
+          "status": "SCOPED_PASS_STATIC_DEFINITION_PARITY",
+          "deltaSha256": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
+          "witnessSha256": "6c1f880a457441b911d0f6874a5364fe1cb841bec278c998c9302d93a3073458",
+          "verified": {
+            "items": 12163,
+            "recipes": 282,
+            "localReferences": 183,
+            "groups": 25,
+            "nested": 181,
+            "itemCounters": 130,
+            "sourceNegatives": 4,
+            "typedWitnessByteEqual": true
+          },
+          "limits": "STATIC v301 Switch/Steam parity only; v300 catalog distinct; no external closure, acquisition or game authority",
+          "handoff": {
+            "to": [
+              "03_LINKAGE",
+              "04_SAVE_CORE",
+              "07_RUST_CORE"
+            ],
+            "condition": "Consume exact accepted definition identity only for concrete new contracts; no new unconditional required writes."
+          }
+        },
+        "two": {
+          "task": "02_SWITCH301_EXACT29",
+          "status": "SCOPED_PASS_STATIC_EXACT29",
+          "deltaSha256": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
+          "witnessSha256": "e5c4a06cf8c71bd3cec793013d501cab1b87fd5e2a0e391756f8d01f56f17e55",
+          "verified": {
+            "targets": 29,
+            "closure": 118,
+            "groups": 8,
+            "rootGroups": 63,
+            "orderedReferences": 757,
+            "rawCounterRewardAnchors": 118,
+            "configRawAnchors": 5,
+            "independentOracleNegatives": 5,
+            "typedWitnessByteEqual": true
+          },
+          "limits": "STATIC versioned definition/config only; runtime registration/scheduler/reward replay/load/resave unverified; no writer authority",
+          "handoff": {
+            "to": [
+              "03_LINKAGE",
+              "04_SAVE_CORE",
+              "07_RUST_CORE"
+            ],
+            "status": "READY_03_CAUSAL",
+            "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
+            "scope": "Use fixed v301 independently accepted Exact29 data for new causal adjudication; v300 prior acceptance reuse; no blanket re-QA or speculative required writes."
+          }
+        }
+      },
+      "nextReadyParallel": [
+        {
+          "stream": "07_RUST_CORE",
+          "task": "R4_WASM_MODULE_WORKER_REAL_CHROME_GENUINE_MINIMUM",
+          "dependency": "Native R4 scoped accepted; no development switch yet"
+        },
+        {
+          "stream": "03_LINKAGE",
+          "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
+          "dependency": "01/02 scoped static definitions accepted"
+        }
+      ],
+      "nextAfterDep": [
+        "06A after 07 fixed self-QA WASM execution evidence",
+        "06A after 03 fixed new HIGH causal contract",
+        "00 development switch only after complete ADR gate"
       ]
     },
     "06B_QA_WEB_LOCALE": {
