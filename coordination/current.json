@@ -6472,11 +6472,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_SCOPED_LOCALE_R2_AND_WEB_R3_WAIT_NEXT",
       "task": "LOCALE_R2_RUNTIME_NATIVE_AND_WEB_R3_INDEPENDENT_QA",
-      "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
-      "next": "Execute disjoint scoped QA; direct handoff to 05/08; no product changes",
-      "dependency": "R3_FIXED_CI_SUCCESS; LOCALE_R2_WAIT_08_FIXED",
+      "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
+      "next": "05 direct consume fixed runtime + static Switch301 mapping + isolated R3; 08 unresolved Switch300/selector/UI catalog; 00 R4 fixed nondeploy CI; 06B next R4 compiled or new fixed HIGH locale/integration scope; no repeat",
+      "dependency": "No remaining blocker within these three scopes. R4 waits 00 compile/browser; Switch300 exact originals + full UI/locale/product evidence pending; independent integration remains separate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -6553,7 +6553,12 @@
           "impact": "obsolete errors may surface; no live UI corruption observed",
           "repair": "08 catch rejection; return STALE only if obsolete; rethrow active failure; regressions both branches + invalidate/current reject",
           "recipient": "08 LOCALIZATION",
-          "status": "READY_REPAIR"
+          "status": "READY_REPAIR",
+          "resolution": {
+            "status": "FIXED_INDEPENDENT_SCOPED_PASS",
+            "sourceSha256": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
+            "claim": "20261113_06B_LOCALE_R2_RUNTIME"
+          }
         },
         "unverified": [
           "native selector/Turkish discrepancy",
@@ -6616,25 +6621,137 @@
       },
       "r2Claims": {
         "runtime": {
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS",
           "claim": "20261113_06B_LOCALE_R2_RUNTIME",
           "source": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
           "scope": "runtime repair only"
         },
         "native": {
-          "status": "IN_FLIGHT",
+          "status": "DONE_STATIC_SCOPED_PASS",
           "claim": "20261113_06B_LOCALE_R2_NATIVE",
           "source": "391a2ebe51aaa17ed1bd208f8dd87d54d3553a2dff7f4c2a2b9707db826c03bf",
           "scope": "Native version/identity evidence only"
         }
       },
       "webR3Claim": {
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "claim": "20261113_06B_WEB_R3",
         "source": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
         "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "run": 43381925291,
         "scope": "R3 8 changed paths, fixed compile/browser and independent negative cases"
+      },
+      "localeR2": {
+        "runtime": {
+          "status": "DONE_SCOPED_PASS",
+          "sourceSha256": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
+          "manifestSha256": "71ad62400ac532cdeda13317122a61f9358399322e1d9818aea02dbba9632f29",
+          "verified": {
+            "unchanged": 58,
+            "modified": 2,
+            "addedLogs": 2,
+            "producerTests": 13,
+            "independentTests": 8,
+            "fail": 0,
+            "trueRed": "LOCALE-R1-STALE-REJECT_CLOSED_FIXED_RUNTIME_ONLY"
+          },
+          "handoff": {
+            "recipient": "05 WEB",
+            "status": "READY",
+            "condition": "Consume exact repaired runtime, fixed R1 data; real product controller/locale integration separately; preserve save/session/revision/undo and handle storage denial"
+          }
+        },
+        "native": {
+          "status": "DONE_STATIC_SCOPED_PASS",
+          "sourceSha256": "391a2ebe51aaa17ed1bd208f8dd87d54d3553a2dff7f4c2a2b9707db826c03bf",
+          "manifestSha256": "5ada23615fce5f52871458a3177142d466056e967f788b96bc913fcb28382e86",
+          "verified": {
+            "unchangedR1": 60,
+            "nativeMetadataPins": 4,
+            "bundleHelperPins": 3,
+            "methodRanges": 50,
+            "independentBranchDecodes": 36,
+            "manifestHeaders": 30,
+            "validEnumIds": 16,
+            "packagedManifestLocales": 15,
+            "typedRowsSwitch301": 13220,
+            "typedDiffs": 0,
+            "independentTypedOracle": "strict typed field reader, shared UnityFS framing/object table only",
+            "negativeOracleCases": 3,
+            "producerReproduction": "BYTE_EXACT"
+          },
+          "handoff": {
+            "recipients": [
+              "08 LOCALIZATION",
+              "05 WEB"
+            ],
+            "status": "READY_STATIC_SCOPE",
+            "condition": "Use static selector/manifest distinction and Switch301 exact typed mapping; no physical selector or official-language certification; no Switch300 substitution; continue unresolved native/version/UI evidence separately"
+          },
+          "unverified": [
+            "Switch300 full typed source mapping",
+            "physical selector/official listing discrepancy",
+            "native locale-code strings and missing sentinel/other call sites",
+            "account platform-specific runtime names",
+            "full UI catalog and linguistic/browser/session integration"
+          ]
+        },
+        "evidence": {
+          "file": "HKIA_06B_LOCALE_R2_WEB_R3_INDEPENDENT_QA_20261113.zip",
+          "sha256": "2c61475f46d2c1eb0cfd3f96ec7c93b7f8503a04854cc476d224d92f2a33ce59",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_18_ENTRIES"
+        }
+      },
+      "webR3": {
+        "status": "DONE_SCOPED_PASS_ISOLATED_R3",
+        "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
+        "manifestSha256": "5b1c5c931162771f4975aee770ad1c8f1630a9f49004528835df9596e76d0cdf",
+        "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+        "run": 43381925291,
+        "verified": {
+          "sourceFiles": 31,
+          "changedBlobs": 8,
+          "lockBlob": "7ebf888366fb358c687a6a471d969ceb8a594b05",
+          "producerUnitRerun": 58,
+          "independentTests": 5,
+          "fail": 0,
+          "ciBrowser": "ACTUAL_FIXED_VITE_CHROMIUM_320_375_1280_SUCCESS_REVIEWED_NOT_INDEPENDENT_RERUN",
+          "ciJob": 131741430773
+        },
+        "unverified": [
+          "independent compiled browser rerun (CI no artifact; same-lock environment dependency unavailable)",
+          "actual mapped image failure",
+          "production binding and full UI/Save/session/Rust parity"
+        ],
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY",
+          "condition": "Reuse fixed isolated R3 exact accepted scope; R4 existing fixed candidate independently after compile/browser; no product enablement"
+        },
+        "evidence": {
+          "file": "HKIA_06B_LOCALE_R2_WEB_R3_INDEPENDENT_QA_20261113.zip",
+          "sha256": "2c61475f46d2c1eb0cfd3f96ec7c93b7f8503a04854cc476d224d92f2a33ce59",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_18_ENTRIES"
+        }
+      },
+      "evidenceR2R3": {
+        "file": "HKIA_06B_LOCALE_R2_WEB_R3_INDEPENDENT_QA_20261113.zip",
+        "sha256": "2c61475f46d2c1eb0cfd3f96ec7c93b7f8503a04854cc476d224d92f2a33ce59",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_18_ENTRIES"
+      },
+      "nextAfterDep": {
+        "webR4": {
+          "status": "WAIT_DEP",
+          "head": "a6a0d8732f73b0e13817b943f294832c61d769dd",
+          "condition": "00 fixed R4 compile/check/build/actual Chromium evidence"
+        },
+        "locale": {
+          "status": "WAIT_NEW_FIXED_HIGH_SCOPE",
+          "condition": "08 new Switch300 typed evidence/locale contract or 05 fixed live locale integration; source exact; no full-language claim"
+        }
       }
     },
     "06C_QA_RELEASE": {
