@@ -329,12 +329,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "V300_DERIVED_REWARD_NATIVE_LOCAL_PASS_QA_PENDING_MANUAL_CAUSAL_IN_FLIGHT",
+      "status": "V300_DERIVED_REWARD_MANUAL_CAUSAL_LOCAL_PASS_QA_PENDING",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06 scoped pending; 03 exact20+9 causal transfer IN_FLIGHT; exact six producer review next; 00 serial after acceptance",
+      "next": "06_SCOPED_PENDING; 03_EXACT_SIX_PRODUCER_DEFINITION_REVIEW; 04_WAIT_ACCEPTED_EXACT_CONTRACT; 00_SERIAL_AFTER_ACCEPTANCE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -615,11 +615,24 @@
       },
       "v300ManualCausal": {
         "task": "FORMAL_V300_EXACT20_ABSENCE9_CAUSAL_TRANSFER",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_CAUSAL_PASS_QA_PENDING",
         "owner": "03 LINKAGE",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "dependency": "02 510198c3c7a86afb58716215578c42679db0f7c3f5d8a14aad4e8e4380d0131d new v300 native parity draft; existing 03 formal49/manual absence accepted",
-        "scope": "Exact20 and absence9 only; typed v300 preflight and causal transfer, no product permission or reward inference; 06 independent QA pending"
+        "scope": "Exact20 and absence9 only; typed v300 preflight and causal transfer, no product permission or reward inference; 06 independent QA pending",
+        "baseHead": "faa08f48adceac604dc8b365baff6099a1507a19",
+        "delta": {
+          "file": "HKIA_03_V300_EXACT29_CAUSAL_V33_DELTA_20261113.zip",
+          "sha256": "ca8c9a39c6232277f643e4ae3f760548fafff5d8db762e6e452e2a1b4824d06e",
+          "manifestSha256": "3908f822338f957a093553418da864ebec2af96c83544b7e0c2a9b30144aa798",
+          "scope": "4 ADD 0 MOD 0 DEL + transport manifest; 516 V32 paths match V33; two UI mods outside audit closure",
+          "verified": "actual genuine v300/83 read-only 29/29: 10 COMPLETE,19 REVOKE,6 terminal 8+2,9 absence; v301 reference group 29/29, old Counter and old parent omissions 19/19, root omissions 6/6; 10 focused PASS; no output, original unchanged; private Library byte exact CRC"
+        },
+        "classification": "CONDITIONAL_EXACT29_CAUSAL_TRANSFER_CANDIDATE_DEPENDS_02_NATIVE_PARITY; NO_NEW_UNCONDITIONAL_REQUIRED; NO_PRODUCT_AUTHORITY",
+        "remaining": "06 independent 02 and 03; exact runtime definitions/registration, scheduler, actual load/resave/reward replay; 04 version-specific Writer proof",
+        "gameAccepted": false,
+        "productAuthorized": false,
+        "next": "06 independent scoped; 04 only after accepted 02/03 + exact definition evidence; 05 after 04; 00 serial"
       }
     },
     "04_SAVE_CORE": {
