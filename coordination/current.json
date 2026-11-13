@@ -10457,7 +10457,7 @@
     "actualPagesDeploymentObserved": true,
     "actualPagesPreviewOnly": true,
     "targetPagesLiveVerified": false,
-    "targetPagesStatus": "POST_TRANSFER_UNVERIFIED_NO_NEW_DEPLOY"
+    "targetPagesStatus": "SETTINGS_WORKFLOW_BUILT_HTTPS_ENFORCED_LIVE_UNVERIFIED"
   },
   "nextSerial": [
     "06 continue V30 live and new research scoped QA; 00 integrate exact accepted research deltas after handoff.",
@@ -13974,7 +13974,7 @@
     "organizationTransferPreflight": {
       "task": "HKIA_ORGANIZATION_TRANSFER_PREFLIGHT_20261113",
       "owner": "00 CTRL",
-      "status": "PARTIAL_TRANSFER_IDENTITY_WRITE_AND_CANONICAL_REBIND_PASS_CI_IN_PROGRESS",
+      "status": "PARTIAL_TRANSFER_IDENTITY_WRITE_CI_PAGES_CONFIG_PASS_NEW_HOST_LIVE_IN_PROGRESS",
       "risk": "RELEASE",
       "sourceRepository": "0xmorarin/HKIA-Editor",
       "targetRepository": "Yumekiraboshi/HKIA-Editor",
@@ -14024,7 +14024,7 @@
         "R7/R5 and R6.1 successor CI use new repository guard and exact source. Independent QA after fixed CI. Genuine V24/R5.1 browser WAIT_ENV."
       ],
       "decision": "TRANSFER_DONE_IDENTITY_REFS_PR_WRITE_PASS; TARGET_CANONICAL_REBOUND; NO_DEPLOY; REMAINING RELEASE_SCOPE_ONLY",
-      "next": "Await observed nondeploy CI outcome and Pages metadata; verify new-host HTTPS or restore exact approved V30 only within Owner scope; update external ChatGPT Project instructions to repository canonical text; release freeze on ordinary nondeployment work after CI and recheck.",
+      "next": "Observe live new-host fixed V30 result, hand off release scope to 06C. Nonrelease work may resume using target repository after canonical rebind; successor CI guards new owner. No deploy or DNS change.",
       "recheckAfterOwnerInstallation": {
         "status": "OWNER_REPORTED_INSTALLED_CONNECTOR_VISIBILITY_UNVERIFIED",
         "observedBlob": "c00a624fa2f7d0320999fe969f9383d64a38354e",
@@ -14332,8 +14332,34 @@
           "job": 131856695929,
           "head": "b95fa06322a45a6b89b0772ddaccc0bbee2e6fad",
           "workflowBlob": "c8125d57126d8bd79940c34563be3078038660d3",
+          "status": "SUCCESS",
+          "scope": "read-only Pages metadata, exact V30 artifact verification, canonical OFF gates and public tests/build/check; no deploy",
+          "verified": {
+            "tests": 794,
+            "skip": 36,
+            "fail": 0,
+            "build": "PASS",
+            "check": "PASS",
+            "v30Files": 4146,
+            "webp": 4076,
+            "modules": 55,
+            "writer": "OFF",
+            "pages": {
+              "build_type": "workflow",
+              "cname": null,
+              "html_url": "https://yumekiraboshi.github.io/HKIA-Editor/",
+              "https_enforced": true,
+              "status": "built"
+            }
+          }
+        },
+        "liveCheck": {
           "status": "IN_PROGRESS",
-          "scope": "read-only Pages metadata, exact V30 artifact verification, canonical OFF gates and public tests/build/check; no deploy"
+          "branch": "ctrl/organization-cutover-check-20261113",
+          "head": "80516cbf5b23ce0019e631e91b073ef46731ab68",
+          "workflowBlob": "a307307dc5f5f5476e4212d721c3320b6cfa641c",
+          "run": 43417018519,
+          "scope": "00 self QA at new HTTPS URL, exact fixed V30 file sample, denial paths, actual Chromium 320/375/1280, no deploy"
         }
       }
     }
@@ -14345,7 +14371,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional Beta first, no Rust/Svelte Beta gate. Formal release requires Svelte+TypeScript+Rust/WASM single Worker ProductSession. No full formal JS implementation prerequisite. Existing feature/safety/Owner gates unchanged.",
     "pages": {
-      "status": "POST_TRANSFER_TARGET_PAGES_LIVE_UNVERIFIED",
+      "status": "POST_TRANSFER_SETTINGS_VERIFIED_LIVE_PENDING",
       "targetUrl": "https://yumekiraboshi.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
