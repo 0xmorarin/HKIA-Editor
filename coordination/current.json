@@ -8427,13 +8427,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "PARTIAL_R61_SCOPED_ACCEPTED_R51_GENUINE_BROWSER_WAIT_ENV",
+      "status": "IN_FLIGHT_THREE_DISJOINT_RESEARCH_SCOPES",
       "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
       "scope": "7 MOD vs R6, generation-local scratch and retained exact correctness; actual Node WASM only",
       "next": "00 R6.1 scoped integration READY, 07 private genuine Chrome WAIT_ENV (accepted strict kit), future resource targets separate; no repeat accepted scopes.",
       "dependency": "AUTHORIZED_PRIVATE_SANDBOX_CAPABLE_REAL_CHROME; NEW_FIXED_HIGH_SCOPE",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
+      "baseHead": "fd39028dee034c3c85b095a6237e1d18a6b3cde4",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -8607,6 +8607,33 @@
           "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
           "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
           "risk": "HIGH"
+        },
+        {
+          "task": "SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA",
+          "source": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+          "manifest": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
+          "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "New four ADD paths; exact original typed object/field oracle, 282 Recipe and 29 membership pairs (13 exact-to-empty, 6 Recipe6 food-to-recipe, 6 result Food), all 183 references and tails, 25 groups/181 nested/130 counters; version substitution, key/GUID mismatch, partial/extra field, duplicate ID, empty vs unknown negatives. No repeat 08 localization or 03 station; reuse accepted v301 witness. 647 V39 unchanged, independent source/projection hashes."
+        },
+        {
+          "task": "SWITCH300_HATS_OFF_PARTIAL_NATIVE_SOURCE_INDEPENDENT_QA",
+          "source": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+          "manifest": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+          "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "6 ADD V39, disjoint V40; independently verify exact 43/8/4 scoped Native, 3 methods, actual dispatch metadata, helper entry-only, target/parent/reward/Values/Master and prototype plus two catalog references; 17 focused and independent negatives; preserve script payload UNKNOWN; reuse v301 accepted no repeat"
+        },
+        {
+          "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA",
+          "source": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
+          "manifest": "914b07a5dd6451c49286a25f29d37a7975c9c96e161e325ed2e143ff1c00ebea",
+          "baseSource": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "8 additive research paths only; independent Native branch/slot and exact source task ID/PPtr/PlayMaker oracle; 2 genuine read-only slots independently check union2, absent/ambiguous/type negatives, catalog missing dependency and authority fail closed. Reuse accepted station/provider/producer/saved conditions; no prior whole-scope redo."
         }
       ],
       "executionResult": {
@@ -9678,7 +9705,36 @@
             "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
           }
         }
-      }
+      },
+      "researchClaims20261113": [
+        {
+          "task": "SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA",
+          "source": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+          "manifest": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
+          "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "New four ADD paths; exact original typed object/field oracle, 282 Recipe and 29 membership pairs (13 exact-to-empty, 6 Recipe6 food-to-recipe, 6 result Food), all 183 references and tails, 25 groups/181 nested/130 counters; version substitution, key/GUID mismatch, partial/extra field, duplicate ID, empty vs unknown negatives. No repeat 08 localization or 03 station; reuse accepted v301 witness. 647 V39 unchanged, independent source/projection hashes."
+        },
+        {
+          "task": "SWITCH300_HATS_OFF_PARTIAL_NATIVE_SOURCE_INDEPENDENT_QA",
+          "source": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+          "manifest": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+          "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "6 ADD V39, disjoint V40; independently verify exact 43/8/4 scoped Native, 3 methods, actual dispatch metadata, helper entry-only, target/parent/reward/Values/Master and prototype plus two catalog references; 17 focused and independent negatives; preserve script payload UNKNOWN; reuse v301 accepted no repeat"
+        },
+        {
+          "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA",
+          "source": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
+          "manifest": "914b07a5dd6451c49286a25f29d37a7975c9c96e161e325ed2e143ff1c00ebea",
+          "baseSource": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH",
+          "scope": "8 additive research paths only; independent Native branch/slot and exact source task ID/PPtr/PlayMaker oracle; 2 genuine read-only slots independently check union2, absent/ambiguous/type negatives, catalog missing dependency and authority fail closed. Reuse accepted station/provider/producer/saved conditions; no prior whole-scope redo."
+        }
+      ]
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
