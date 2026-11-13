@@ -7124,6 +7124,18 @@
           "sha256": "94a1315fcfceb3b762ccf1c590fc8eda14f76b2f790a385de0a5ae365bbf39bd",
           "condition": "Independent exact kit SHA/11 manifest hashes, nine counterexamples, strict JSON/type/count/unknown-field negatives, cross-check and same-context pre-input gate; no genuine browser claim. After independent scoped acceptance and authorized sandbox-capable actual Chrome, 07 genuine six then 06A execution acceptance."
         }
+      },
+      "r61Execution": {
+        "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
+        "status": "IN_FLIGHT",
+        "owner": "07 RUST CORE",
+        "risk": "HIGH",
+        "baseHead": "2f1c91dc9387b864147c7e87ff9c041bb0fade4e",
+        "fixedSource": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "ciHead": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
+        "artifactSha256": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+        "wasmSha256": "2f91736baf1ee71c7ba111758ea7e24eea985d375b54e90e305c645817fde4b7",
+        "scope": "download code-only exact artifact via authorized connector; check SHA/manifest, all measured phase data, genuine private v300/v301 parity and lifecycle retained scratch/close/reopen/failed open; no real Save CI; then 06A independent HIGH QA"
       }
     },
     "08_LOCALIZATION": {
