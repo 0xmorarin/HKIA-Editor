@@ -7896,23 +7896,29 @@
     },
     "r4CI": {
       "task": "R4_FIXED_PUBLIC_CI_CODE_ONLY",
-      "status": "IN_FLIGHT",
+      "status": "CI_IN_FLIGHT",
       "owner": "00 CTRL",
       "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
       "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
       "pr": 8,
       "scope": "Only PR8 isolated nondeploy workflow; 95 Rust +14 TS; code-only executable; no genuine Save in CI",
-      "next": "06A existing independent static claim continues; 07 genuine local after binary"
+      "next": "06A existing independent static claim continues; 07 genuine local after binary",
+      "head": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+      "run": 43378029329,
+      "verified": "Only one workflow ADD; fixed R4 source unchanged"
     },
     "svelteR2CI": {
       "task": "SVELTE_R2_FIXED_ISOLATED_CI",
-      "status": "IN_FLIGHT",
+      "status": "CI_IN_FLIGHT",
       "owner": "00 CTRL",
       "sourceHead": "4888d776bc3e73af763a0941980b8d5fa700dc28",
       "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
       "branch": "web05/svelte-filters-r2",
       "scope": "Only R2 isolated nondeploy workflow; fixed lock, compile/check/build, actual legacy reference and both Chromium scripts; PR6 R1 immutable",
-      "next": "06B independent changed scope after fixed CI; 05 focused repairs"
+      "next": "06B independent changed scope after fixed CI; 05 focused repairs",
+      "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
+      "run": 43378037110,
+      "verified": "Only one workflow ADD; PR6 R1 snapshot unchanged"
     }
   },
   "formalRelease": {
