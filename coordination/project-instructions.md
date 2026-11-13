@@ -1,5 +1,5 @@
 # HKIA_EDITOR
-PROJECT=HKIA Editor; REPO=0xmorarin/HKIA-Editor; TARGET=Hello Kitty Island Adventure; FUTURE=夢綺羅星/Yumekiraboshi; HOST=GitHub Pages; OWNER=User。
+PROJECT=HKIA Editor; REPO=Yumekiraboshi/HKIA-Editor; TARGET=Hello Kitty Island Adventure; FUTURE=夢綺羅星/Yumekiraboshi; HOST=GitHub Pages; OWNER=User。
 MODE=AUTONOMOUS_CONTINUOUS_EXECUTION/DIRECT_HANDOFF/RISK_BASED_QA。
 PRIORITY=DataIntegrity>Correctness>VerifiedProgress>DependencyUnblocking>Parallelism>Speed>TokenCost。
 SSOT=GitHub main実HEAD/Blob、coordination/current.json、config/release-gates.json、coordination/architecture-decision-20261113.md、architecture-decision-20261112.md、localization-decision-20261113.md、qa-operation-decision-20261113.md（coordination/）。最新Owner/正本ADR優先。PRIVATE=既存Drive開発フォルダ＋Library /HKIA Editor Private/。固定Source/SHA/Manifest/Delta/CI/真正Save/Native/QAが証拠。会話補助、同期仮定禁止。
@@ -57,4 +57,4 @@ RE=Locate→CrossReference→Hypothesis→ControlledTest→Evidence→Contract�
 main-first/minimal diff/1PR=1責務、最新HEAD/Blob/競合確認。main Merge=00/明示委任のみ直列。Focused→必要CI→risk-based acceptance→統合→影響検証。不要PR/CI/再統合/強制上書き/旧Draft無条件Merge禁止。PR/Delta=基準/Source/Scope/実測/リスク/依存/rollback。
 真正Save/個人ID/秘密/元ゲームデータGit/CI/PR/Issue/公開ログ投入禁止。公開Fixture=合成/安全匿名化。実Save非公開ローカル、外部送信禁止。00配布=既存Build/Workflow/依存閉包/Pages subpath/HTTPS/WebCrypto/全SHA/再現Build/手動固定Artifact Gate/rollback、allowlistでprivate Save/NSO/元AssetBundle/研究Fixture/Drive参照ID/秘密排除。実HTTP/HTTPS/WebCrypto/Module Worker正規Browser、Node/inline/digest bridge≠実Browser PASS。
 QA=影響ScopeのNo-op/単独複数一括/双方向/連動/日時/未知値/破損/不正ZIP/非対象保持/再読込/rollback/CAS/replay/負荷/UI/回帰。Rust全Payload消費/型/unknown/Writer/ABI/実Chrome/予算、Svelte同等性。実機=代替不能release-critical Load/再保存/副作用のみ代表操作。
-Pages=pages-preview-decision-20261113.md。視覚成果受入後速やかに/dev/更新、root維持、固定媒体再利用/Actions差分合成、研究のみ配布不要。06C配布QA/手動固定Artifact/Owner承認必須。Beta/正式Gate=両Domain真正出力/実UI/credit/SHA/privacy/実Browser/独立QA/rollback/Owner承認、正式Rust/Svelte/全言語。未承認Deploy/自動Deploy/Writer ON/課金/Community本番DB/Wand本番変更禁止。正式昇格別承認。Task DONE≠製品DONE。
+Pages=pages-preview-decision-20261113.md。受入後単一root更新、/dev/不要、固定媒体再利用/Actions差分合成、研究のみ配布不要。06C配布QA/手動固定Artifact/Owner承認必須。Beta/正式Gate=両Domain真正出力/実UI/credit/SHA/privacy/実Browser/独立QA/rollback/Owner承認、正式Rust/Svelte/全言語。未承認Deploy/自動Deploy/Writer ON/課金/Community本番DB/Wand本番変更禁止。正式昇格別承認。Task DONE≠製品DONE。
