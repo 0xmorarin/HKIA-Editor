@@ -1,0 +1,96 @@
+name: CTRL fixed V33 OFF root verification (no deploy)
+on:
+  push:
+    branches: [ctrl/pages-v33-off-verify-20261113]
+    paths: ['.github/workflows/ctrl-pages-v33-off-verify.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: candidate
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Exact manifest, policy and OFF source
+        run: |
+          set -euo pipefail
+          test "$(git -C candidate rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(git hash-object scripts/pages-artifact-policy.mjs)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(git hash-object scripts/lossless-webp.mjs)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+          node scripts/00-verify-beta-artifact.mjs candidate/site candidate/site-manifest.json 137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db
+          node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("candidate/site-manifest.json"));if(m.writer!=="OFF"||m.sourceSha256!=="78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7"||m.entries!==4146||m.webp!==4076||m.modules!==55)throw Error("Unexpected OFF source")'
+      - run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+      - name: Real local HTTP browser and Module Worker (no Save)
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/hkia-www"
+          mv candidate/site "$RUNNER_TEMP/hkia-www/HKIA-Editor"
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory "$RUNNER_TEMP/hkia-www" > "$RUNNER_TEMP/hkia-http.log" 2>&1 &
+          pid=$!
+          trap 'kill "$pid" || true' EXIT
+          python3 - <<'PY'
+          import urllib.request, urllib.error, time
+          from playwright.sync_api import sync_playwright
+          root='http://127.0.0.1:8765/HKIA-Editor/'
+          for i in range(40):
+              try:
+                  with urllib.request.urlopen(root,timeout=2) as r: assert r.status==200
+                  break
+              except OSError:
+                  if i==39: raise
+                  time.sleep(.25)
+          for path in ['coordination/current.json','config/release-gates.json','site-manifest.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','README.md','dev/index.html','src/app.js.map']:
+              try: urllib.request.urlopen(root+path,timeout=5); raise AssertionError('Unexpected path '+path)
+              except urllib.error.HTTPError as e: assert e.code==404,(path,e.code)
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(headless=True)
+              for width in (320,375,1280):
+                  page=browser.new_page(viewport={'width':width,'height':900})
+                  foreign=[]; errors=[]; downloads=[]
+                  page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(root) else None)
+                  page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.on('download',lambda d:downloads.append(d.suggested_filename))
+                  page.goto(root,wait_until='networkidle',timeout=90000)
+                  assert page.locator('#fileStatus').inner_text().strip()=='未読み込み'
+                  for sel in ['#nativeDownload','#openNativePreview','#closeNativePreview','#nativeDiscard','#downloadEdited']:
+                      assert page.locator(sel).is_disabled(),sel
+                  page.locator('#colTab').click()
+                  page.wait_for_function("document.querySelector('#collectionGrid').children.length > 0")
+                  assert page.locator('#colTab').get_attribute('aria-selected')=='true'
+                  page.locator('#collectionSearch').fill('zzzzzz-no-match-00')
+                  page.locator('#collectionSearch').fill('')
+                  page.locator('#achTab').click()
+                  assert page.locator('#achTab').get_attribute('aria-selected')=='true'
+                  credit=page.locator('#attributionNotice')
+                  assert credit.is_visible() and 'Sunblink' in credit.inner_text() and 'SANRIO' in credit.inner_text() and '非公式' in credit.inner_text()
+                  result=page.evaluate("""async () => {
+                    const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('abc'));
+                    const hex=Array.from(new Uint8Array(d),n=>n.toString(16).padStart(2,'0')).join('');
+                    const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
+                    const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(e.message))};w.postMessage(m)});
+                    try {const a=await call({id:1,kind:'export'});const b=await call({id:1,kind:'noop'});const c=await call({id:2,kind:'apply'});return {secure:isSecureContext,hex,a,b,c,width:document.documentElement.scrollWidth,viewport:innerWidth};}finally{w.terminate()}
+                  }""")
+                  assert result['secure'] and result['hex']=='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
+                  assert result['a']=={'id':1,'error':'Native worker session missing'} and result['b']=={'id':1,'error':'Native worker replay'} and result['c']=={'id':2,'error':'Native worker session missing'},result
+                  assert result['width']<=width and not foreign and not errors and not downloads,(result,foreign,errors,downloads)
+                  print('CTRL REAL_BROWSER',width,'WebCrypto, Worker export/apply/replay denied, tabs/search/credits PASS',flush=True)
+                  page.close()
+              browser.close()
+          print('CTRL V33 OFF FIXED SELF_QA PASS; NO DEPLOY',flush=True)
+          PY
