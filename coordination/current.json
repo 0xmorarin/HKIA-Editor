@@ -10834,6 +10834,12 @@
         "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "compiled": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
         "scope": "fixed code-only artifact and actual V30 browser evidence; independent lifecycle/negative prior preflight reuse"
+      },
+      "nativeLiteralClaim": {
+        "claim": "20261113_06B_NATIVE_LITERAL",
+        "status": "IN_FLIGHT",
+        "source": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
+        "scope": "Switch300/301 exact Native literal mapping, missing sentinel and negative/collision; static only"
       }
     },
     "06C_QA_RELEASE": {
