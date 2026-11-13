@@ -774,6 +774,15 @@
         "next": "06 scoped 8 new paths + separate 01 producer 6 paths; no repeated allocator/Provider/accepted scope. 03 only new exact station/mission/counter evidence or QA counterexample. 04 WAIT accepted exact collection-only contract and physical history/reload preconditions; formal implementation owner by architecture switch. 00 serial research reference after QA.",
         "productAuthorized": false,
         "gameAccepted": false
+      },
+      "exact29SourceAdjudication": {
+        "task": "SWITCH300_EXACT29_SOURCE_CAUSAL_ADJUDICATION",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseLedgerBlob": "92005770b03a2521d409b0faee2fb655f8dcdd1d",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Join new 02 exact29 serialized definition witness to prior 03 genuine read-only causal aggregate; verify exact IDs, parent/ordered membership, thresholds, reward absence, operation fields, root conditional transitions; no Native repeat or product authority",
+        "dependency": "02 e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f pending independent QA; prior 03 ca8c9a39c6232277f643e4ae3f760548fafff5d8db762e6e452e2a1b4824d06e and 06 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
       }
     },
     "04_SAVE_CORE": {
