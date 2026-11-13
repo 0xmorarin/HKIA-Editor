@@ -5760,7 +5760,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -6009,6 +6009,16 @@
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
           "readbackVerified": true
         }
+      },
+      "r4": {
+        "task": "R4_ACHIEVEMENT_LIST_LOCALE_KEYS",
+        "claim": "20261113_08_R4_ACH_LIST_LOCALE",
+        "status": "IN_FLIGHT",
+        "baseHead": "6d4970dee93a1f2ea8312a006ce665104dcb98ba",
+        "sourceHead": "a6a0d8732f73b0e13817b943f294832c61d769dd",
+        "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+        "scope": "Fixed Svelte R4 added UI strings and dynamic labels only; separate delta on R3, no shared source writes",
+        "dependency": "R3 catalog fixed; R4 Source fixed; integration after R3 and R4 relevant acceptance"
       }
     },
     "06A_QA_DATA_CORE": {
