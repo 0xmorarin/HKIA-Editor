@@ -4497,7 +4497,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "R3_COMPILED_GENUINE_NEW_PROJECTION_LOCAL_PASS_06_READY",
+      "status": "IN_FLIGHT_R4_MINIMUM_TRANSACTIONAL_WRITER",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4569,8 +4569,8 @@
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
       "handoffTo": "06_DIRECT_R3_EXISTING_IN_FLIGHT; 07_WRITER_FOUNDATION_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
       "dependency": "06_INDEPENDENT_R3_SCOPED_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
-      "resumeBaseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
-      "resumeScope": "Pin R3 CI 43373753393, workflow-only successor; obtain code-only binary; genuine private local R3 additional projection and ABI parity; evidence and direct 06 handoff; no R2 full re-QA",
+      "resumeBaseHead": "7da4c3956b2eab799db9f06215430dac3400225e",
+      "resumeScope": "R3 accepted; minimal Rust transactional writer existing Key1 ticks and exact 100Fwishes incomplete progress pair, batch, typed CAS/revision/plan/reparse/ZIP raw preservation/undo redo reset; native only before WASM; no JS product changes",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -4584,7 +4584,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-006",
+      "resumeTask": "HKIA-RUST-008",
       "previousTask": "HKIA-RUST-005",
       "r2": {
         "source": {
@@ -5079,6 +5079,23 @@
               "sha256": "01ddd6bd60e8036870983751c4a860430eb1feb6cc46768d79a4533703811e17"
             },
             "readback": "ALL_4_NEW_ARTIFACTS_BYTE_EXACT_5_ENTRY_CRC_SHA_PASS"
+          }
+        },
+        "acceptance": {
+          "verdict": "SCOPED_PASS_R3_NATIVE_READONLY_SESSION_ABI",
+          "source": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+          "head": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+          "run": 43373753393,
+          "artifact": 14013712258,
+          "binary": "cbbf675843b88f354443d319f3f766be1b8a338ddbad682c10dc13d793c6e47a",
+          "independentTS": 14,
+          "genuineVersions": 2,
+          "frames": 2692,
+          "independentArchivePositive": 6,
+          "independentArchiveNegative": 20,
+          "report": {
+            "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+            "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
           }
         }
       },
