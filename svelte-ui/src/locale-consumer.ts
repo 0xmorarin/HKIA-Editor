@@ -25,24 +25,56 @@ export function createLocaleConsumer<P extends Pack>(args:{runtime:Runtime<P>;re
  let pref=runtime.readPreference(guarded); if(pref.mode==='manual'&&!enabled.includes(pref.locale))pref={mode:'auto'};
  let state:LocaleState<P>=Object.freeze({status:'IDLE',preference:Object.freeze({...pref}),version:null,active:null,storage:storageState,error:null});
  let generation=0;const loader=runtime.createLocaleLoader(args.fetchVerified);const listeners=new Set<(s:LocaleState<P>)=>void>();
- function publish(next:LocaleState<P>){state=Object.freeze(next);for(const fn of listeners)fn(state)}
+ function current(g:number){return g===generation&&state.status!=='CLOSED'}
+ function publish(next:LocaleState<P>){const snapshot=Object.freeze(next);state=snapshot;for(const fn of listeners){if(state!==snapshot)break;fn(snapshot)}}
  function valid(p:Preference){return p.mode==='auto'||(p.mode==='manual'&&enabled.includes(p.locale))}
+ // The accepted runtime writes one preference key. Stage the write before calling the
+ // external synchronous StoragePort. If it reenters and invalidates this request,
+ // compensate only our exact written value; never overwrite a different external value.
+ // Sinks must be synchronous, truthful storage operations. Failed compensation is
+ // reported as unavailable, not as a successful persistence or READY state.
+ function persistCurrent(g:number,desired:Preference){
+  let mutation:{key:string;value:string|null}|undefined;
+  const stage=(key:string,value:string|null)=>{if(mutation)throw Error('MULTIPLE_PREFERENCE_WRITES');mutation={key,value}};
+  try{runtime.writePreference({getItem(){throw Error('UNEXPECTED_PREFERENCE_READ')},setItem:stage,removeItem:k=>stage(k,null)},desired)}catch{if(current(g))storageState='UNAVAILABLE';return}
+  if(!current(g))return;
+  if(!mutation){storageState='UNAVAILABLE';return}
+  const {key,value}=mutation;
+  let previous:string|null;
+  try{previous=storage.getItem(key)}catch{if(current(g))storageState='UNAVAILABLE';return}
+  if(!current(g))return;
+  try{if(value===null)storage.removeItem(key);else storage.setItem(key,value)}catch{if(current(g))storageState='UNAVAILABLE'}
+  if(current(g))return;
+  // A nested request cannot finish its awaited load within this synchronous stack.
+  // Compare-and-restore is best effort, including a sink that wrote then threw.
+  try{if(storage.getItem(key)===value&&previous!==value){if(previous===null)storage.removeItem(key);else storage.setItem(key,previous)}}catch{storageState='UNAVAILABLE'}
+ }
  async function request(version:Version,preference:Preference,persist=false):Promise<'READY'|'STALE'|'ERROR'> {
   if(state.status==='CLOSED')throw new Error('LOCALE_CONSUMER_CLOSED');
   if(!['3.0.0','3.0.1'].includes(version)||!valid(preference))throw new Error('INVALID_LOCALE_REQUEST');
-  const desired=Object.freeze({...preference}); const locale=runtime.resolvePreference(desired,args.browser(),enabled);
-  const entry=entries.find(r=>r.id===locale);if(!entry)throw new Error('INVALID_RESOLVED_LOCALE');
-  const g=++generation;publish({...state,status:'LOADING',version,active:state.active?.version===version?state.active:null,error:null});
-  if(g!==generation)return 'STALE';
-  try {
+  const desired=Object.freeze({...preference});const g=++generation;
+  let locale:string;let entry:LocaleEntry;
+  try{
+   const nav=args.browser();if(!current(g))return 'STALE';
+   locale=runtime.resolvePreference(desired,nav,enabled);if(!current(g))return 'STALE';
+   const resolved=entries.find(r=>r.id===locale);if(!resolved)throw new Error('INVALID_RESOLVED_LOCALE');entry=resolved;
+  }catch(e){if(!current(g))return 'STALE';throw e}
+  try{
+   publish({...state,status:'LOADING',version,active:state.active?.version===version?state.active:null,error:null});
+   if(!current(g))return 'STALE';
    const result=await loader.load(version,locale);
-   if(g!==generation||result.status==='STALE')return 'STALE';
-   if(result.pack.version!==version||result.pack.locale!==locale){publish({...state,status:'ERROR',error:'PACK_MISMATCH'});return 'ERROR'}
-   // Commit only verified current request. A failed storage write does not undo the display.
-   args.documentLanguage(entry.htmlLang,entry.direction);
-   if(persist){try{runtime.writePreference(guarded,desired)}catch{storageState='UNAVAILABLE'}}
-   publish({status:'READY',preference:desired,version,active:Object.freeze({version,locale,pack:result.pack}),storage:storageState,error:null});return 'READY';
-  }catch{if(g!==generation)return 'STALE';publish({...state,status:'ERROR',storage:storageState,error:'LOAD_FAILED'});return 'ERROR'}
+   if(!current(g)||result.status==='STALE')return 'STALE';
+   if(result.pack.version!==version||result.pack.locale!==locale){publish({...state,status:'ERROR',error:'PACK_MISMATCH'});return current(g)?'ERROR':'STALE'}
+   const prior=state.active;
+   // A document setter already invoked cannot be cancelled. If reentry leaves an
+   // older displayed pack, restore that pack's language; CLOSED has no active pack.
+   const restoreDocument=()=>{if(state.status==='CLOSED'||!prior||state.active!==prior)return;const old=entries.find(r=>r.id===prior.locale);if(old)try{args.documentLanguage(old.htmlLang,old.direction)}catch{/* external sink failure; no stale state commit */}};
+   try{args.documentLanguage(entry.htmlLang,entry.direction)}catch(e){if(!current(g)){restoreDocument();return 'STALE'}throw e}
+   if(!current(g)){restoreDocument();return 'STALE'}
+   if(persist)persistCurrent(g,desired);
+   if(!current(g)){restoreDocument();return 'STALE'}
+   publish({status:'READY',preference:desired,version,active:Object.freeze({version,locale,pack:result.pack}),storage:storageState,error:null});return current(g)?'READY':'STALE';
+  }catch{if(!current(g))return 'STALE';publish({...state,status:'ERROR',storage:storageState,error:'LOAD_FAILED'});return current(g)?'ERROR':'STALE'}
  }
  return Object.freeze({get state(){return state},entries:Object.freeze(entries),subscribe(fn:(s:LocaleState<P>)=>void){listeners.add(fn);fn(state);return ()=>listeners.delete(fn)},start(v:Version){return request(v,state.preference)},choose(p:Preference){if(state.version===null)throw new Error('LOCALE_VERSION_REQUIRED');return request(state.version,p,true)},refreshAuto(){if(state.version===null)throw new Error('LOCALE_VERSION_REQUIRED');return request(state.version,state.preference)},close(){if(state.status==='CLOSED')return;generation++;loader.invalidate();publish({...state,status:'CLOSED',active:null,version:null,error:null});listeners.clear()}});
 }
