@@ -1103,7 +1103,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "04_V301_MARKER_METADATA_CHAIN_IN_FLIGHT; 04_WAIT_BETA_ENV_OR_NEW_CONTRACT_OR_00_DISJOINT_ASSIGNMENT",
+      "next": "06A_V301_MARKER_METADATA_CHAIN_HIGH_READY; 04_WAIT_BETA_ENV_OR_NEW_CAUSAL_CONTRACT_OR_06A_COUNTEREXAMPLE_OR_00_DISJOINT_RUST_ASSIGNMENT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -2028,7 +2028,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06A -> 05/07/00",
       "v301MarkerMetadataReview": {
         "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
-        "status": "IN_FLIGHT",
+        "status": "STATIC_SELF_PASS_06A_READY",
         "owner": "04 SAVE CORE",
         "baseMain": "1894448ddd77ff05239650eeec3a5126efa2ce03",
         "scope": "HIGH evidence-only: exact Switch301 NSO + metadata FieldRef -> default arrays -> genuine headers; reuse v301 existing static and v300 accepted chain. No Writer or version expansion.",
@@ -2038,7 +2038,49 @@
           "dump": "4b4eb6a543722e1dfaf8aad5593e9e1300723aff55e9e750d489744960feb738",
           "metadata": "e4300e0e4235c99bf791392c2a2b50ae3d693edc328a68ce2f5a20571de1f7bb"
         },
-        "risk": "HIGH"
+        "risk": "HIGH",
+        "evidence": {
+          "file": "HKIA_04_V301_MarkerMetadata_20261113_Evidence.zip",
+          "sha256": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
+          "manifestSha256": "3df7649d2179d9d01d6df158f64accd0ad54b2732905c3aabab029397470dc49",
+          "resultSha256": "6de5c8880b73e630716195c70b6892bae5c622f5dade93269a632028ff7afd45",
+          "handoffSha256": "8321455276137f66bca9a515d3b0c8bfd6dcfa0d24433f94c2dbcda44a4ab653",
+          "privateLibrary": "HKIA Editor Private",
+          "bytes": 7770,
+          "readback": "BYTE_EXACT_CRC_4_ENTRIES_3_MANIFEST_HASHES_PASS"
+        },
+        "verified": {
+          "buildId": "5B05C9862BC39061",
+          "anchors": 43,
+          "branches": 8,
+          "methods": 5,
+          "classLinks": 2,
+          "fieldChains": 2,
+          "priorV300ArrayDigestParity": 2,
+          "genuineHeaders": {
+            "3.0.0": 4,
+            "3.0.1": 1,
+            "2.18.1": 1
+          },
+          "negativeMetadata": 6,
+          "negativeHeader": 12,
+          "originalsUnchanged": true,
+          "productSourceChanged": 0,
+          "writerAuthorized": false,
+          "gameAccepted": false
+        },
+        "unverified": [
+          "06A_INDEPENDENT_STATIC_SCOPE",
+          "GAME_LOAD_RESAVE_AUTH_OUTSIDE_SCOPE",
+          "V24_GENUINE_ACTUAL_BROWSER_WAIT_ENV"
+        ],
+        "handoff": {
+          "to": "06A QA-DATA-CORE",
+          "status": "READY_DISJOINT_STATIC",
+          "scope": "New v301 two exact FieldRef/default chains, 43 anchors/8 branches/5 method bindings/2 TypeInfo links, prior v300 digest equality and read-only genuine headers; independent oracle negative tests. No broad v300/v301 re-QA or release authority.",
+          "nextAfter": "07 RUST CORE and 04 reuse accepted static marker evidence; no Writer activation, no development switch."
+        },
+        "notes": "Recovered exact original metadata via existing Drive version folder, NSO/dump pins matched. Initial self-QA class regex matched nested DbRoot; fixed exact owner delimiter, full verification rerun PASS. Evidence only; no raw game assets or save in ZIP."
       }
     },
     "05_WEB": {
