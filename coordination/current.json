@@ -5712,7 +5712,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R6_1_FIXED_DIAGNOSTIC_MEASURED_WAIT_CI_R5_1_BROWSER_WAIT_ENV",
+      "status": "PARTIAL_R6_1_WAIT_CI_BROWSER_KIT_REPAIR_SELF_PASS_06A_READY_GENUINE_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5729,7 +5729,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 R6.1 fixed nondeploy CI READY; 07 candidate measurement/private genuine self-QA after fixed artifact; 06A then independent scratch/capacity scope. Existing R6 CI correctness accepted evidence, no capacity grant. R5.1 actual Chrome WAIT_ENV separate.",
+      "next": "06A browser kit strict evidence repair READY (test-only, new fixed kit); 00 R6.1 fixed nondeploy CI under transferred repo READY/00 owns; 07 after R6.1 artifact measured capacity and private genuine parity; genuine Chrome WAIT_ENV separate. No duplicate or Development Switch.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -7080,11 +7080,50 @@
       "browserKitRepair": {
         "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
         "owner": "07 RUST CORE",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_06A_READY_GENUINE_WAIT_ENV",
         "risk": "HIGH",
         "baseKit": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
-        "scope": "Private test-only strict evidence validation, 9 counterexamples, JSON/publish and browser context parity; no core/flags/deploy; no genuine input before authorized environment",
-        "dependency": "06A TRUE_RED fixed kit evidence"
+        "scope": "Private test-only wrapper and browser-runner derivative with shared strict browser context; original exact runner/wrapper retained, product WASM/JS and reference kit byte-identical; no core/limits/flag/deploy changes.",
+        "dependency": "06A TRUE_RED fixed kit evidence",
+        "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+        "evidence": {
+          "file": "HKIA_Rust07_R5_1_BrowserKitStrictRepair_20261113_Kit.zip",
+          "sha256": "a2d2bd1fb110f0bd3a593882472ebecb43a011facaa073b01a035cad403d0efe",
+          "manifest": "HKIA_Rust07_R5_1_BrowserKitStrictRepair_20261113_Manifest.json",
+          "manifestSha256": "9a8ae20a11cd51b2e328b3651b854f10bece7df1bbff35fe16f171c65f5107ac",
+          "result": "HKIA_Rust07_R5_1_BrowserKitStrictRepair_20261113_RESULT.json",
+          "resultSha256": "a23a11f9a3ecd6abf6df4ab043351785a14adca0ddd403f72eb1ab7de5a84b15",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "4/4 byte exact, ZIP CRC PASS, 12 entries/11 manifest hashes"
+        },
+        "verified": {
+          "retainedTests": 17,
+          "newTests": 9,
+          "oldInvalidReproduced": 9,
+          "newInvalidRejected": 9,
+          "codeHashes": 8,
+          "actualPythonLoopbackHTTPCodeAllowlist": "PASS",
+          "mockContext": "PASS sandbox true/service workers block/exact GET/WebSocket deny",
+          "optimizedPythonRejected": true,
+          "strictJson": "PASS duplicate/nonfinite/overflow floats",
+          "memoryBound": "actual pinned WASM memory section max 8192 pages (512MiB)",
+          "crossCheck": "nonTarget frame count browser vs oracle",
+          "actualBrowser": "NOT_RUN",
+          "genuine": "NOT_RUN"
+        },
+        "risks": [
+          "Actual Chrome probe/6 genuine/actual network negatives not observed; managed URLBlocklist remains blocked; require authorized sandbox-capable browser; no fallback --no-sandbox",
+          "Evidence validation self-QA only, 06A independent needed; no product correctness or release claims changed."
+        ],
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
+          "status": "READY",
+          "file": "HKIA_Rust07_R5_1_BrowserKitStrictRepair_20261113_HANDOFF_06A.md",
+          "sha256": "94a1315fcfceb3b762ccf1c590fc8eda14f76b2f790a385de0a5ae365bbf39bd",
+          "condition": "Independent exact kit SHA/11 manifest hashes, nine counterexamples, strict JSON/type/count/unknown-field negatives, cross-check and same-context pre-input gate; no genuine browser claim. After independent scoped acceptance and authorized sandbox-capable actual Chrome, 07 genuine six then 06A execution acceptance."
+        }
       }
     },
     "08_LOCALIZATION": {
