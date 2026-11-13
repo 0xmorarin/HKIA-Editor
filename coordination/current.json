@@ -12306,6 +12306,18 @@
         "condition": "Repair only Locale Consumer state/callback boundary; no R4 or accepted runtime change; 00 fixed CI then 06B focused independent acceptance"
       },
       "scope": "Do not consume unsafe locale consumer; fixed 08 runtime/catalog and accepted Web R4/Switch300 remain valid. 00 fixed repair CI after 05."
+    },
+    "previewRefresh": {
+      "task": "PAGES_VISUAL_PREVIEW_DELTA_STAGING",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT_NONDEPLOY",
+      "risk": "RELEASE",
+      "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+      "previewSource": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+      "scope": "Prepare isolated nondeploy candidate: preserve exact V30 root/assets, add /dev/ synthetic Svelte R4 accepted UI, explicit development/no-save and rights notice, no raw data or source maps, all hashes and policy, nested HTTP Chromium, delta-only artifact. R5 after independent acceptance; locale Consumer TRUE_RED excluded. Owner deployment approval separate.",
+      "ownerIntent": "Owner requests evaluation of long Pages gaps and visible progress; staging only, no inference of deployment grant.",
+      "next": "06C fixed artifact independent QA then separate Owner approval before actual manual Pages dispatch. Reuse existing remote media; no recurring full transfer."
     }
   },
   "formalRelease": {
