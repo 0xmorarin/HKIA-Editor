@@ -1,0 +1,77 @@
+{
+  "schema": "HKIA.06C.V33.Live.1",
+  "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA",
+  "verdict": "SCOPED_PASS_LIVE_FIXED_V33_OFF_ROOT",
+  "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+  "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+  "host": "https://yumekiraboshi.github.io/HKIA-Editor/",
+  "deployment": {
+    "run": 43432381119,
+    "verifyJob": 131908829815,
+    "deployJob": 131909012030,
+    "event": "workflow_dispatch",
+    "conclusion": "success",
+    "head": "306d6c2119babb1839b2a3f436ba89124cf1171b",
+    "pr12Merge": "a280b65989fb9808bc339b3462ca6ccee998cef7"
+  },
+  "independent": {
+    "run": 43434165900,
+    "job": 131914901040,
+    "head": "c9159db016eea29ee2b43a870047886354cd8440",
+    "workflowBlob": "0d5530a95c4ce34e4b129af315d64c7354997fbf",
+    "conclusion": "success",
+    "verified": {
+      "fixedFiles": 4146,
+      "liveHTTPSHashes": 77,
+      "allChanged6": true,
+      "denials": 10,
+      "rootExact": true,
+      "httpToHttps": true,
+      "browserContexts": 6,
+      "widths": [
+        375,
+        320,
+        1280,
+        375,
+        375,
+        1280
+      ],
+      "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+      "webCryptoKnownAnswer": true,
+      "writer": "OFF",
+      "pageErrors": 0,
+      "externalRequests": 0,
+      "failedRequests": 0,
+      "httpErrors": 0,
+      "downloads": 0,
+      "credits": true
+    }
+  },
+  "initialCtrlFailure": {
+    "run": 43432726052,
+    "width": 375,
+    "error": "Worker onerror empty message",
+    "diagnosticRun": 43432865398,
+    "diagnostic": "PASS all 3 widths",
+    "independentRecurrence": "0/6 contexts; 0/3 at 375px",
+    "cause": "UNKNOWN_NOT_REPRODUCED_NOT_CLAIMED_FIXED"
+  },
+  "rollback": {
+    "ref": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+    "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+    "evidence": "V33 predeploy exact rollback map with full base/candidate bytes verified",
+    "actualLiveRollback": false
+  },
+  "limits": [
+    "No genuine Save loaded; V24 genuine browser/game WAIT_ENV",
+    "77 samples live, not all 4076 image bytes individually fetched",
+    "No deploy, DNS, Writer activation or formal promotion by 06C",
+    "First CTRL Worker error cause unknown, no recurrence observed",
+    "Historical exposure NOT_ERASED"
+  ],
+  "handoff": {
+    "to": "00 CTRL",
+    "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
+    "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
+  }
+}
