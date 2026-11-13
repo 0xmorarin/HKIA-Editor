@@ -1951,15 +1951,15 @@
       }
     },
     "06_QA": {
-      "status": "FORMAL_V33_COMBINED_QA_IN_FLIGHT",
-      "acceptedSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
-      "acceptedScope": "V32 fixed OFF combined 518 source, 4146 artifact, 55 modules; separate 05 fixed 521 source Exact5 Receipt UI inline scoped PASS. Recipe32 limited 32/32 writer/UI accepted; no actual HTTP/HTTPS or game acceptance",
+      "status": "FORMAL_V33_OFF_COMBINED_SCOPED_PASS_V24_WAIT_ENV",
+      "acceptedSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+      "acceptedScope": "V33 fixed OFF combined, 521 logical source and 4146 distribution files, 55-module closure; exact accepted 05 source and V32 unchanged core. Recipe32 limited existing-row cancellation and same-runtime receipt UI accepted; no live HTTP/HTTPS or game acceptance",
       "targetSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-      "targetScope": "00 successor integration of exact 05 five paths; new fixed source required",
-      "next": "06_IN_FLIGHT_THEN_00_DIRECT_HANDOFF",
+      "targetScope": "V33 accepted; new fixed deployment or authorized real browser or new source required",
+      "next": "00_RECORD_V33_ACCEPTANCE_AND_CONTINUE_PAGES; 06_AFTER_FIXED_LIVE_ARTIFACT_OR_NEW_SOURCE_OR_AUTHORIZED_BROWSER; V24_WAIT_ENV",
       "execution": {
         "task": "FORMAL_V33_CELEBRATION5_UI_COMBINED_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "owner": "06 QA",
         "baseHead": "ff715620d977b7a339f7383f1c82e02f2a9ba0d3",
         "baseSourceSha256": "4c6a84864b5a3c19ceb3df0f09e1c3b956d8d19994137d278a57e6944a8df917",
@@ -3330,6 +3330,58 @@
             "deltaSha256": "b048af393965098cbe54c10cbc5ab0e162e0acf4def2a1fee19e878b82a9b4f1",
             "scope": "2 MOD 3 ADD, all V32 base hashes exact, 521 successor logical entries; 2 UI dist files expected; fixed successor + 4146 exact hashes + 55 module closure + OFF + rollback V32. No full repeat. Separate Pages live verification."
           }
+        },
+        "verdict": "SCOPED_PASS_FORMAL_V33_OFF_COMBINED",
+        "verified": {
+          "sourceEntries": 521,
+          "modified": 2,
+          "added": 3,
+          "unchanged": 516,
+          "distributionEntries": 4146,
+          "distributionModified": 2,
+          "distributionUnchanged": 4144,
+          "webp": 4076,
+          "modules": 55,
+          "focused": 17,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "mediaProjection": "EXACT_1_LINE_4_MEDIA_FILES_4076_WEBP_UNCHANGED_MAP_PINS_MATCH",
+          "rollbackSource": 518,
+          "rollbackDist": 4146,
+          "rebuildExact": 4146,
+          "flagsOff": 18,
+          "realSaveEvidence": "REUSED_EXACT_05_SOURCE_AND_V32_CORE_NO_REPEAT",
+          "trueRedNew": 0
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
+            "sha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0"
+          },
+          "report": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_REPORT.md",
+            "sha256": "b3baf159c01151e7eedf2589e1b98df6c8404695855c15d326386029ba63ed17"
+          },
+          "zip": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_EVIDENCE.zip",
+            "sha256": "4b9aff5a735a04aa670838d42f060d3f1be36dadf7d088638e4509b26a2e2202",
+            "entries": 14
+          },
+          "readback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "ACTUAL_PAGES_FIXED_ARTIFACT_LIVE_ACCEPTANCE",
+          "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
+          "GAME_AUTH_LOAD_RESAVE_REBOOT_RUNTIME_EFFECTS",
+          "V24_FROZEN"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V33_FORMAL_OFF_COMBINED_ACCEPTANCE_AND_PAGES_CONTINUATION",
+          "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "artifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "scope": "V33 complete exact OFF combined accepted; record candidate acceptance; continue existing approved Pages V30/V29 staging or separately pinned authorized successor, no deployment/flag expansion by QA. Rollback V32 source/artifact exact; actual live rollback unverified."
         }
       },
       "handoffRecheck": {
