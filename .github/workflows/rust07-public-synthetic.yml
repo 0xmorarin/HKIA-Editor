@@ -40,4 +40,41 @@ jobs:
           set -euo pipefail
           test "$(rustc --version | cut -d" " -f2)" = 1.85.1
           test "$(cargo --version | cut -d" " -f2)" = 1.85.1
-          python3 tests/rust/run-public-ci.py
+          python3 - <<'PY'
+          import contextlib, hashlib, importlib.util, io, json, os, pathlib, shutil, sys
+          path = pathlib.Path('tests/rust/run-public-ci.py').resolve()
+          spec = importlib.util.spec_from_file_location('public_ci', path)
+          runner = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(runner)
+          original = runner.run
+          dest = pathlib.Path(os.environ['RUNNER_TEMP']) / 'hkia-r2-code-only'
+          dest.mkdir(exist_ok=False)
+          binary = dest / 'hkia-private-parity'
+          def retain(args, cwd, env=None):
+              output = original(args, cwd, env)
+              if list(map(str,args[:3])) == ['cargo','build','--offline']:
+                  source = pathlib.Path(cwd) / 'target/release/hkia-private-parity'
+                  if binary.exists() or not source.is_file():
+                      raise RuntimeError('unexpected binary output')
+                  shutil.copyfile(source, binary)
+              return output
+          runner.run = retain
+          sys.argv = [str(path)]
+          log = io.StringIO()
+          with contextlib.redirect_stdout(log):
+              runner.main()
+          print(log.getvalue(), end='')
+          report = json.loads(log.getvalue()[log.getvalue().rfind('\n{')+1:])
+          assert report['status'] == 'SYNTHETIC_COMPILE_AND_TEST_PASS'
+          assert report['rustTests'] == {'passed':39,'failed':0,'skipped':0}
+          assert hashlib.sha256(binary.read_bytes()).hexdigest() == report['binarySha256']
+          report.update(gitHead=os.environ['GITHUB_SHA'], runId=os.environ['GITHUB_RUN_ID'], codeHead='7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd', scope='PUBLIC_CODE_ONLY_NO_REAL_SAVE')
+          (dest/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+      - name: Retain verified code-only executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: hkia-r2-code-only-parity
+          path: ${{ runner.temp }}/hkia-r2-code-only/
+          if-no-files-found: error
+          retention-days: 7
