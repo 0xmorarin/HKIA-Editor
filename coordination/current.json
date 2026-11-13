@@ -599,6 +599,16 @@
           "runtime registration/scheduler/game load/resave/reward replay"
         ],
         "next": "06A Research independent scoped QA now READY; 02 WAIT QA counterexample or new concrete task; 01 remaining originals and 07 R4 separate; no writer/deploy"
+      },
+      "derivedSwitchDefinitionReview": {
+        "task": "SWITCH300_301_MISSING_DERIVED23_DEFINITION_WITNESS",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "456b22da76af204163027f56ad8c690c0c894d2c",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "risk": "HIGH",
+        "scope": "Exact 22 missing Visitor and 1 Mission definitions: Switch 300/301 typed producer PPtr and registration intent, relevant parent membership and reward facts; no repeat Exact29 or Native causal analysis; no writer",
+        "dependency": "V36 accepted; 02/03 derived source + Native evidence and accepted Switch exact29 reader/config reuse; actual source assets now available"
       }
     },
     "03_LINKAGE": {
