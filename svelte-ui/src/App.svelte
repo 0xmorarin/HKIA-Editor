@@ -1,11 +1,15 @@
 <script lang="ts">
   import WorkspaceNavigation from './WorkspaceNavigation.svelte';
-  import type { WorkspaceNavigationPort, WorkspaceTab } from './navigation.ts';
-  // Synthetic harness only: real product will supply its existing UI controller port.
-  let activeTab:WorkspaceTab=$state('achievements');
-  const port:WorkspaceNavigationPort={get activeTab(){return activeTab;},selectTab(next){activeTab=next;}};
+  import { createLegacyNavigationPort } from './legacy-navigation-port.ts';
+  import { createLegacyNavigationFixture } from './legacy-navigation-fixture.ts';
+  // Detached legacy DOM fixture is the only selection authority. Revision invalidates the view,
+  // not a second selection/session. Actual product binding remains a later integration task.
+  const fixture=createLegacyNavigationFixture();
+  let revision=$state(0);
+  const port=createLegacyNavigationPort({read(){void revision;return fixture.read();},setTab:fixture.setTab,invalidate(){revision++;}});
+  const collectionRenders=$derived.by(()=>{void revision;return fixture.collectionRenders();});
 </script>
-<main class="site-shell">
+<main class="site-shell" data-legacy-renders={collectionRenders}>
   <p>独立UI検証用 / セーブ入力・編集・出力なし</p>
   {#snippet achievements()}
     <div class="panel-header"><div><h3>アチーブメント</h3><p>ファイルを読み込むと達成記録が表示されます。</p></div><span class="count-pill">0件</span></div>

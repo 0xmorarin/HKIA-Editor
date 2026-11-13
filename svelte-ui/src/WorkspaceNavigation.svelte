@@ -18,6 +18,6 @@
       <button id={tab.id} role="tab" aria-controls={tab.panel} aria-selected={presentation.selected} class={presentation.activeClass} tabindex={presentation.tabIndex} type="button" onclick={()=>requestTab(port,tab.value)} onkeydown={(event)=>keydown(event,tab.value)}>{tab.icon} <span>{tab.label}</span></button>
     {/each}
   </div>
-  <section id="achPanel" class="content-panel" role="tabpanel" aria-labelledby="achTab" hidden={port.activeTab!=='achievements'}>{@render achievements()}</section>
-  <section id="colPanel" class="content-panel" role="tabpanel" aria-labelledby="colTab" hidden={port.activeTab!=='collections'}>{@render collections()}</section>
+  <div id="achPanel" class="content-panel" role="tabpanel" aria-labelledby="achTab" hidden={port.activeTab!=='achievements'}>{@render achievements()}</div>
+  <div id="colPanel" class="content-panel" role="tabpanel" aria-labelledby="colTab" hidden={port.activeTab!=='collections'}>{@render collections()}</div>
 </section>

@@ -29,14 +29,19 @@ try:
                     assert button.get_attribute('tabindex')==('0' if selected else '-1')
                     assert page.locator(panel).is_visible()==selected
                 assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
-            expect('achievements'); col.click();expect('collections')
+            expect('achievements'); assert page.locator('main').get_attribute('data-legacy-renders')=='0'
+            col.click();expect('collections');assert page.locator('main').get_attribute('data-legacy-renders')=='1'
+            col.click();expect('collections');assert page.locator('main').get_attribute('data-legacy-renders')=='2'
             col.press('ArrowLeft');expect('achievements');assert ach.evaluate('el=>el===document.activeElement')
             ach.press('End');expect('collections');assert col.evaluate('el=>el===document.activeElement')
             col.press('Home');expect('achievements');assert ach.evaluate('el=>el===document.activeElement')
             ach.press('ArrowRight');expect('collections');assert col.evaluate('el=>el===document.activeElement')
             col.press('ArrowRight');expect('achievements');assert ach.evaluate('el=>el===document.activeElement')
+            assert page.locator('main').get_attribute('data-legacy-renders')=='4'
+            assert page.locator('#achPanel').evaluate('el=>el.tagName')=='DIV'
+            assert page.locator('#colPanel').evaluate('el=>el.tagName')=='DIV'
             assert not errors and not external,(errors,external)
-            records.append({'viewport':width,'keyboardAndClick':'PASS','horizontalOverflow':False,'externalRequests':0,'pageErrors':0})
+            records.append({'viewport':width,'keyboardAndClick':'PASS','horizontalOverflow':False,'externalRequests':0,'pageErrors':0,'legacyCollectionRenders':4,'tabpanelRole':'DIV'})
             page.close()
         browser.close()
 finally:
