@@ -652,6 +652,16 @@
           "condition": "READY_FIXED_PRIVATE_DELTA_READBACK"
         },
         "next": "06A independent research QA -> 03/04/07 direct source-only reference. 02 WAIT concrete runtime/first-progress/reward witness or QA counterexample. No deploy."
+      },
+      "hatsOffProducerReview": {
+        "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "risk": "HIGH",
+        "scope": "Static exact missing Manual target HatsOffToYouAchievementCounter binding and native legitimate hat-removal producer branch; source-only, no row allocation or game persistence assertion",
+        "dependency": "02 existing missing Manual WAIT real before/after; exact class field now located in v301 dump, original Switch core available; independent of Derived23 QA"
       }
     },
     "03_LINKAGE": {
