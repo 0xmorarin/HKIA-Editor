@@ -3158,7 +3158,7 @@
         },
         "r4": {
           "task": "SVELTE_R4_ACHIEVEMENT_BOUNDED_LIST",
-          "status": "TEST_ORACLE_REPAIR_SELF_PASS_WAIT_FIXED_CI",
+          "status": "COMPILED_BROWSER_PASS_06B_READY",
           "owner": "05 WEB",
           "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
           "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
@@ -3210,14 +3210,73 @@
             },
             "verified": "1 MOD, 224 unchanged; exact new/old Blob; 3 selected assertions replaced by exact unordered token regex; 6 permutations and 4 negative cases; actual system Chromium assertion controls 2 positive and 1 negative; syntax; private 3 readbacks exact",
             "unverified": "Complete compiled R4 Vite HTTP 320/375/1280; independent R4 acceptance. No product defect proven by original class order mismatch.",
-            "next": "00 pin test-only successor in R4 branch/workflow and rerun fixed isolated CI. 06B independent R4 on complete green CI; no repeat or product change"
+            "next": "00 pin test-only successor in R4 branch/workflow and rerun fixed isolated CI. 06B independent R4 on complete green CI; no repeat or product change",
+            "compiled": {
+              "task": "SVELTE_R4_FIXED_ORACLE_REPAIR_CI",
+              "status": "DONE_FIXED_R4_REPAIR_CI_PASS_06B_READY",
+              "owner": "00 CTRL",
+              "sourceHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
+              "scope": "1 test-only MOD; repin existing workflow, fast-forward fixed R4 branch, full regression",
+              "head": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+              "run": 43391376268,
+              "job": 131771848994,
+              "verified": {
+                "repairPaths": 1,
+                "workflowPaths": 1,
+                "sourceGuard": "PASS",
+                "lock": "PASS",
+                "unit": 71,
+                "fail": 0,
+                "skip": 0,
+                "svelteCheck": "0 errors 0 warnings",
+                "build": "PASS",
+                "legacyReference": "PASS",
+                "browserWidths": [
+                  320,
+                  375,
+                  1280
+                ],
+                "r1r2r3Regression": "PASS",
+                "r4Paging": [
+                  120,
+                  240,
+                  241
+                ],
+                "selection": 2,
+                "filterReset": true,
+                "missingDistinct": true,
+                "overflow": 0,
+                "pageErrors": 0,
+                "externalRequests": 0
+              },
+              "ci": "SUCCESS",
+              "handoff": {
+                "to": "06B QA-WEB-LOCALE",
+                "task": "SVELTE_R4_FIXED_ACHIEVEMENT_LIST_SCOPED_QA",
+                "sourceHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+                "sourceSha256": "c6289fa836912dc101ed19b9ed50979cad4b778c9773fb041fe4e429ea8e3371",
+                "repairDeltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
+                "run": 43391376268,
+                "scope": "New R4 component and test-only repair, independent model/behavior counterexamples and fixed actual browser CI, no R1-R3 repeat. Product binding/actual game images separate."
+              }
+            }
           }
+        },
+        "r5": {
+          "task": "SVELTE_R5_COLLECTION_DEFINITION_ITEM_VIEW",
+          "status": "IN_FLIGHT",
+          "owner": "05 WEB",
+          "baseHead": "a4ded599c12a2208c0e154a9b745814655a55e0e",
+          "basePrHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+          "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+          "scope": "svelte-ui only; collection definition selection, item list filter/search/sort/page and read-only inspection; exact V33 display semantics, no writer permission, no raw save, no production binding; R4 and locale frozen scope unchanged",
+          "next": "05 local QA, fixed branch, 00 isolated R5 CI then 06B; R4 and locale QA parallel"
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
       "localeIntegration": {
         "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
-        "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+        "status": "COMPILED_BROWSER_PASS_06B_READY",
         "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
         "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
@@ -3242,7 +3301,47 @@
           "Switch300 exact typed mapping, physical selector language inventory; accepted source locale inventory not formal full language certification"
         ],
         "decisions": "Use injected exact 08 runtime, no copy or modification of 08 paths; code-only standalone synthetic preview (3 fake fixture entries, not full game registry), separate Vite config; no actual game packs or source locators published; manual commits only after READY, storage denial visible, old version pack hidden during switch; no App.svelte overlap with R4.",
-        "next": "00 isolated nondeploy CI on locale branch, fixed lock npm ci, check --fail-on-warnings, vite build --config vite.locale.config.ts, browser-locale-parity.py dist-locale. 06B independent consumer scope after compiled fixed result, reuse 08 exact runtime/registry QA and run private verify-locale-consumer on exact accepted inputs. 05 later integrate accepted full catalog and actual product controller after prerequisites."
+        "next": "00 isolated nondeploy CI on locale branch, fixed lock npm ci, check --fail-on-warnings, vite build --config vite.locale.config.ts, browser-locale-parity.py dist-locale. 06B independent consumer scope after compiled fixed result, reuse 08 exact runtime/registry QA and run private verify-locale-consumer on exact accepted inputs. 05 later integrate accepted full catalog and actual product controller after prerequisites.",
+        "compiled": {
+          "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_CI",
+          "status": "DONE_FIXED_LOCALE_R1_CI_PASS_06B_READY",
+          "owner": "00 CTRL",
+          "sourceHead": "9863dd6b38ebcbf4ce25611812dd78ea8dd7e887",
+          "scope": "8 ADD isolated synthetic consumer; nondeploy CI only; no game packs or live binding",
+          "head": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+          "run": 43391367596,
+          "job": 131771821207,
+          "verified": {
+            "sourceGuard": "PASS",
+            "lock": "PASS",
+            "unit": 58,
+            "fail": 0,
+            "skip": 0,
+            "svelteCheck": "0 errors 0 warnings",
+            "build": "PASS_BOTH",
+            "legacyReference": "PASS",
+            "browserWidths": [
+              320,
+              375,
+              1280
+            ],
+            "r1r2r3Regression": "PASS",
+            "syntheticSelector": "AUTO_MANUAL_RELOAD_LANG_FOCUS_PASS",
+            "overflow": 0,
+            "pageErrors": 0,
+            "externalRequests": 0,
+            "privateActualRuntime": "05 existing 15 cases, not public CI"
+          },
+          "ci": "SUCCESS",
+          "handoff": {
+            "to": "06B QA-WEB-LOCALE",
+            "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_SCOPED_QA",
+            "sourceHead": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+            "deltaSha256": "e69cf532d8529fe5c0e41ed7dbaaaea3523191800fa1be6fe1b51cd3f7549fee",
+            "run": 43391367596,
+            "scope": "8 ADD isolated consumer, actual accepted 08 runtime/registry private independent oracle; synthetic selector Chrome and state/storage/stale negatives; no repeat locale R1-R4 catalog QA, no actual product binding claim"
+          }
+        }
       }
     },
     "06_QA": {
