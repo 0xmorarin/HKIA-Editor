@@ -6106,6 +6106,19 @@
         ],
         "rollback": "PR5 previous workflow 034f7dba…; PR6 prior source fa180633…; neither PR merged, main product and Pages unchanged."
       }
+    },
+    "researchIntegration": {
+      "task": "LIVE_V30_ACCEPTANCE_AND_RESEARCH_SERIAL_INTEGRATION",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
+      "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+      "qaResult": {
+        "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+        "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+      },
+      "scope": "11 accepted private research deltas, 61 ADD 1 MOD; Dense repair before dependent tests; evidence-only 04 separate. No product Writer or deployment.",
+      "dependency": "06 exact scoped PASS; V33 fixed reference"
     }
   },
   "formalRelease": {
