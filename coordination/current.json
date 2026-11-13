@@ -551,12 +551,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "EXACT29_SOURCE_CAUSAL_JOIN_LOCAL_PASS_QA_READY_RECIPE6_WAIT_STATION_WITNESS",
+      "status": "V301_EXACT29_CAUSAL_JOIN_SELF_PASS_06A_READY_RECIPE6_WAIT_STATION",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "WAIT_CONCRETE_STATION_RUNTIME_OR_06A_COUNTEREXAMPLE; EXACT29_ACCEPTED_REUSE; 01_02_V301_ORIGINALS_AFTER_FIXED",
+      "next": "06A_V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_INDEPENDENT_QA; 07_R4_WASM_CHROME_PARALLEL; 03_WAIT_CONCRETE_STATION_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -928,14 +928,35 @@
       "qaRouting": "SELF_QA; HIGH -> 06A -> 04/07",
       "v301Exact29Causal": {
         "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
         "baseLedgerBlob": "b246404cbc56e56efa7af87032faba624a54804c",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "New Switch301/87 serialized Exact29 identity/config to accepted versioned causal contracts; exact target/ordered group/root/field constraints, source witness vs existing JS contract and v300 accepted join; no new Writer or re-QA prior source",
-        "dependency": "06A accepted 02 4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849 / witness e5c4a06cf8c71bd3cec793013d501cab1b87fd5e2a0e391756f8d01f56f17e55; prior 03 v300 join 643f4bfc64946fcd6f4cc0290ca0f7563121aef608b671a0d4c399aa6f21de9b"
+        "dependency": "06A accepted 02 4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849 / witness e5c4a06cf8c71bd3cec793013d501cab1b87fd5e2a0e391756f8d01f56f17e55; prior 03 v300 join 643f4bfc64946fcd6f4cc0290ca0f7563121aef608b671a0d4c399aa6f21de9b",
+        "claimCommit": "4fabdeab457a837caa7fc0f84ac439f3094288a3",
+        "referenceSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "artifact": "HKIA_03_SWITCH301_EXACT29_JOIN_V36_DELTA_20261113.zip",
+        "deltaSha256": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+        "manifestSha256": "14e80e1c5cd37624171ad828463bef654bca1388fcbeba14e720163d93b8baa1",
+        "resultSha256": "2ecca51984542f71023ea9dc033aad6413e90ec5976127dfb2a4841c735faf57",
+        "changes": "5 ADD + transport manifest; 0 MOD/DEL; V36 625 unchanged; research only",
+        "verified": "Exact pins/CRC 4 ZIP + V33 manifest; 5 V33 preimages and integrated 02/03 witness bytes exact; 29 target GUID/Counter/parent/operation shapes, 118 semantic rows, 8 parent/110 children, 63 ordered root groups/757 ordered references, 118 changed reward RIDs; 10 complete/19 revoke/6 terminal/9 absence; 281 fixed absence refs/67 distinct; serialized Platform9 and three factories/master/root; 30 tests (1 positive/29 negative) PASS; private Library byte exact SHA CRC 5 manifest entries",
+        "classification": "STATIC_VERSIONED_SOURCE_CONFIG_AND_ACCEPTED_CAUSAL_JOIN_ONLY; NO_NEW_UNCONDITIONAL_REQUIRED; EXISTING_V301_JS_CONTRACT_UNCHANGED; NO_WRITER_AUTHORITY",
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "remaining": "Independent 06A new join; no actual factory invocation, runtime registration/scheduling, game authentication/load/resave/reward replay; no fresh genuine Save outputs. Recipe6 exact station/consumer source still WAIT. V36 integrated candidate acceptance separate 06C.",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "status": "READY",
+          "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_INDEPENDENT_QA",
+          "fixedSourceSha256": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+          "scope": "5 new research paths; alternate GUID/order/field/config oracle; negative version, RID reuse, root/absence/threshold, null/shared counter, gate/reward/authority. Reuse accepted 02 and v300 sources, no native or whole QA redo.",
+          "condition": "06A scoped acceptance -> 04/07 contract reference only; 00 serial research integration; no product permission"
+        },
+        "next": "06A new fixed HIGH join READY; 07 R4 WASM/Chrome independent parallel (existing claim); 03 WAIT new station/consumer original or 06A counterexample; 00 serial research after QA"
       }
     },
     "04_SAVE_CORE": {
