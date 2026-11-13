@@ -13318,9 +13318,9 @@
     "betaWriterActuallyEnabled": false,
     "actualPagesDeploymentObserved": true,
     "actualPagesPreviewOnly": true,
-    "targetPagesLiveVerified": true,
-    "targetPagesStatus": "LIVE_FIXED_V30_OFF_NEW_HOST_INDEPENDENT_SCOPED_PASS",
-    "targetPagesIndependentAccepted": true
+    "targetPagesLiveVerified": false,
+    "targetPagesStatus": "DEPLOYED_V33_OFF_ACTIONS_SUCCESS_LIVE_QA_PENDING",
+    "targetPagesIndependentAccepted": false
   },
   "nextSerial": [
     "06 continue V30 live and new research scoped QA; 00 integrate exact accepted research deltas after handoff.",
@@ -17547,7 +17547,7 @@
       "owner": "00 CTRL",
       "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
       "risk": "RELEASE",
-      "status": "MERGED_WAIT_ENV_MANUAL_DISPATCH",
+      "status": "DEPLOY_SUCCESS_LIVE_VERIFY_IN_FLIGHT",
       "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
       "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
       "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -17569,7 +17569,7 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "WAIT_ENV manual GitHub Actions dispatch; exact V33 Owner-approved and merged; after run 06C postdeploy QA.",
+      "next": "00 live HTTPS verification, 06C independent postdeploy scoped QA; no Writer activation.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
@@ -17691,7 +17691,7 @@
         "interpretation": "Contextual explicit direction to execute the immediately proposed fixed OFF update, not standing auto-deploy authority."
       },
       "manualDispatch": {
-        "status": "WAIT_ENV",
+        "status": "DONE_SUCCESS",
         "workflow": ".github/workflows/pages-off-repair.yml",
         "ref": "main",
         "inputs": {
@@ -17700,7 +17700,26 @@
         },
         "reason": "Available GitHub connector exposes no workflow_dispatch write action; manual GitHub Actions UI required. No push-trigger workaround, no deployment observed.",
         "ownerAction": "Run workflow once with exact inputs; no further approval required for this fixed scope.",
-        "next": "Observe exact dispatch run and verify deploy job success; 06C postdeploy independent actual HTTPS, hash, subpath, privacy, credits, Writer OFF, rollback."
+        "next": "Observe exact dispatch run and verify deploy job success; 06C postdeploy independent actual HTTPS, hash, subpath, privacy, credits, Writer OFF, rollback.",
+        "run": 43432381119,
+        "verifyJob": 131908829815,
+        "deployJob": 131909012030,
+        "workflowHead": "306d6c2119babb1839b2a3f436ba89124cf1171b",
+        "actualArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "actualManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "artifactId": 14039113768,
+        "artifactBytes": 118453518,
+        "completedAt": "2026-11-13T13:17:59Z",
+        "verified": "Exact target V33/ref and manifest in job logs, all 4146/4076/Writer OFF, deploy-pages reported success."
+      },
+      "liveVerification": {
+        "owner": "00 CTRL",
+        "task": "V33_PUBLIC_HTTPS_CHANGED_SCOPE_SELF_QA",
+        "status": "IN_FLIGHT",
+        "branch": "ctrl/pages-v33-live-verify-20261113",
+        "scope": "Live V33 six changed runtime files plus root, sampled media/denials and actual Chromium; reuse prior V30 accepted oracle; 06C independent review after evidence. No deployment.",
+        "baseHead": "306d6c2119babb1839b2a3f436ba89124cf1171b",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d"
       }
     },
     "productTabsCI": {
