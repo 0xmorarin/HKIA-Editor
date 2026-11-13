@@ -1,0 +1,118 @@
+name: HKIA fixed visual preview delta staging (no deploy)
+on:
+  push:
+    branches: [ctrl/visual-preview-delta-20261113]
+permissions:
+  contents: read
+concurrency:
+  group: hkia-visual-preview-staging
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/ctrl/visual-preview-delta-20261113'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: accepted-v30
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 90d39d24fe7a82e0f77c867091eb18a984ae93d8
+          path: accepted-ui
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify exact accepted base and UI
+        run: |
+          set -euo pipefail
+          test "$(git -C accepted-v30 rev-parse HEAD)" = b7e91df1e456ded1b50b4649797bf1b7df216717
+          test "$(git -C accepted-ui rev-parse HEAD)" = 90d39d24fe7a82e0f77c867091eb18a984ae93d8
+          node scripts/00-verify-beta-artifact.mjs accepted-v30/site accepted-v30/site-manifest.json 564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6
+          cd accepted-ui/svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          npm test
+          npm run check -- --fail-on-warnings
+          npm run build
+      - name: Compose additive preview only
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, pathlib, shutil, hashlib, json
+          P=pathlib.Path
+          base=P('accepted-v30/site'); dist=P('accepted-ui/svelte-ui/dist')
+          candidate=P(os.environ['RUNNER_TEMP'])/'candidate'; delta=P(os.environ['RUNNER_TEMP'])/'preview-delta'
+          assert not candidate.exists() and not delta.exists() and not (base/'dev').exists()
+          def files(root):
+              result={}
+              for p in root.rglob('*'):
+                  assert not p.is_symlink()
+                  if p.is_file(): result[p.relative_to(root).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
+              return result
+          before=files(base); assert len(before)==4146
+          built=files(dist); assert 'index.html' in built
+          assert all(p=='index.html' or (p.startswith('assets/') and P(p).suffix in ('.js','.css','.webp','.svg')) for p in built)
+          shutil.copytree(base,candidate); shutil.copytree(dist,candidate/'dev')
+          index=candidate/'dev/index.html'; html=index.read_text()
+          notice='<aside aria-label="Development preview" style="padding:12px;max-width:100%;overflow-wrap:anywhere"><strong>開発プレビュー Svelte R4 / Development preview</strong><p>合成データのみ・セーブ入力／編集／出力なし。Synthetic data only; no save input, edit or export.</p><p><a href="../">現在の公開版 / Current public preview</a></p><p>Unofficial fan-made tool; not affiliated with or endorsed by Sunblink, SANRIO CO., LTD. or Apple. Game artwork and characters belong to their respective rights holders. No ownership claimed.</p></aside>'
+          assert html.count('<body>')==1
+          index.write_text(html.replace('<body>','<body>'+notice,1))
+          after=files(candidate); assert all(after.get(k)==v for k,v in before.items())
+          additions={k:v for k,v in after.items() if k not in before}
+          assert additions and all(k.startswith('dev/') for k in additions)
+          assert all(after['dev/'+k]==v for k,v in built.items() if k!='index.html')
+          delta.mkdir();shutil.copytree(candidate/'dev',delta/'dev')
+          report={'schema':'HKIA.VisualPreviewDelta.1','baseRef':'b7e91df1e456ded1b50b4649797bf1b7df216717','baseManifestSha256':'564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6','uiRef':'90d39d24fe7a82e0f77c867091eb18a984ae93d8','writer':'OFF','mode':'SYNTHETIC_NO_SAVE','baseUnchanged':len(before),'added':len(additions),'files':additions,'combinedFiles':after,'distributionOnlyProjection':'index notice + back link; built JS/CSS unchanged'}
+          (delta/'preview-manifest.json').write_text(json.dumps(report,sort_keys=True,indent=2)+'\n')
+          print(json.dumps({k:v for k,v in report.items() if k not in ('files','combinedFiles')}))
+          PY
+          node --input-type=module -e 'import {verifyDist} from "./scripts/pages-artifact-policy.mjs"; console.log("policy PASS",verifyDist(process.env.RUNNER_TEMP+"/candidate"))'
+      - name: Actual Chromium nested preview and existing UI regression
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          for test in browser-parity browser-filter-parity browser-category-parity browser-achievement-parity; do
+            python3 "accepted-ui/svelte-ui/scripts/$test.py" "$RUNNER_TEMP/candidate/dev"
+          done
+          python3 - <<'PY'
+          import os, pathlib
+          from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+          from functools import partial
+          from threading import Thread
+          from playwright.sync_api import sync_playwright, expect
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])/'candidate'
+          server=ThreadingHTTPServer(('127.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(root.parent)))
+          thread=Thread(target=server.serve_forever,daemon=True); thread.start()
+          origin=f'http://127.0.0.1:{server.server_port}'
+          try:
+            with sync_playwright() as p:
+              b=p.chromium.launch()
+              for width in (320,375,1280):
+                page=b.new_page(viewport={'width':width,'height':900}); errors=[]; external=[]
+                page.on('pageerror',lambda e:errors.append(str(e)))
+                page.on('request',lambda r:external.append(r.url) if not r.url.startswith(origin+'/candidate/') else None)
+                assert page.goto(origin+'/candidate/dev/').ok
+                expect(page.get_by_text('開発プレビュー Svelte R4 / Development preview')).to_be_visible()
+                expect(page.locator('main')).to_be_visible()
+                assert page.locator('a[href="../"]').count()==1
+                assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
+                assert not errors and not external,(errors,external)
+                page.close()
+              b.close()
+            print('PASS nested preview 320/375/1280; external=0; errors=0')
+          finally: server.shutdown(); server.server_close(); thread.join()
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_VisualPreview_R4_Delta_${{ github.run_id }}
+          path: ${{ runner.temp }}/preview-delta
+          if-no-files-found: error
+          retention-days: 7
