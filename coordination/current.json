@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06A_SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA_READY; 03/04/07/05_AFTER_ACCEPTANCE; 01_WAIT_NEW_CAUSAL_WITNESS_OR_QA_COUNTEREXAMPLE; V39_SAVED_CONDITIONS_ACCEPTED",
+      "next": "01_VERSIONED_SAVED_MEMBERSHIP_IN_FLIGHT; V41_ACCEPTED; 03_CAUSAL_DISJOINT",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -314,14 +314,14 @@
       },
       "switch300OriginalParity": {
         "task": "FORMAL_SWITCH300_ORIGINAL_RECIPE_OBJECT_PARITY",
-        "status": "SELF_PASS_06A_READY",
+        "status": "SCOPED_PASS_06A_INTEGRATED_V41_ACCEPTED",
         "owner": "01 COLLECTION",
         "risk": "HIGH",
         "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
         "baseLedgerBlob": "df728c2070d53430d98c06021664195fcd477efd",
         "scope": "New exact Switch300 original MasterDefinition from 08 recovered Stage54 archive; compare original 282 Recipe object identity/raw bytes/typed prefix and targeted local pointers against accepted v301 Steam/Switch parity. No repeat 08 localized IDs/key mapping or 03 station/producer; no Writer authority; private additive evidence only.",
         "dependency": "08 fixed original archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; 06B accepted typed version scope 9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83; 01 v301 accepted parity; V39 fixed",
-        "next": "06A READY exact new four-path HIGH scope; 01 WAIT new causal witness or independent counterexample; 03/04/07/05 conditional after acceptance; no V24/Pages change",
+        "next": "New 01 read-only versioned saved membership observation; 03 causal remains separate; no Writer",
         "productAuthorized": false,
         "gameAccepted": false,
         "claimCommit": "fc0da8fa4b375b08bc3eec8836fa812ffb9cf7b7",
@@ -337,11 +337,33 @@
         "handoff": {
           "to": "06A_QA_DATA_CORE",
           "task": "SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA",
-          "status": "READY",
+          "status": "DONE_ACCEPTED_DIRECT_REFERENCE",
           "fixedSourceSha256": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
           "scope": "New four ADD paths; exact original typed object/field oracle, 282 Recipe and 29 membership pairs (13 exact-to-empty, 6 Recipe6 food-to-recipe, 6 result Food), all 183 references and tails, 25 groups/181 nested/130 counters; version substitution, key/GUID mismatch, partial/extra field, duplicate ID, empty vs unknown negatives. No repeat 08 localization or 03 station; reuse accepted v301 witness. 647 V39 unchanged, independent source/projection hashes.",
           "consumer": "03 versioned membership/history/migration causal contract; 04/07 stable version-specific mapping and fail-closed boundary; 05 display only, material UI changes via 06B; 00 additive research integration only after 06A; no new writer authority"
+        },
+        "acceptance": {
+          "scope": "DONE_SCOPED_PASS_STATIC_VERSIONED_MEMBERSHIP",
+          "evidenceSha256": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166",
+          "resultSha256": "4b0fcf31ee2316c5329e095ba09455aac00cbbfc13c1cff640d115c342841b4f",
+          "integratedSourceSha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+          "integrationResultSha256": "e1d86bd301e1dcedefd647120230f10ddc6fdccc8962d01479c1a48078410517",
+          "productAuthorized": false,
+          "gameAccepted": false
         }
+      },
+      "versionedSavedMembership": {
+        "task": "SWITCH300_301_VERSIONED_COLLECTION_SAVED_MEMBERSHIP_OBSERVATION",
+        "owner": "01 COLLECTION",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH",
+        "baseLedgerBlob": "e6b088122dc05e9655a242940d7f1ca1c69549f3",
+        "baseSourceSha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "scope": "Read-only genuine four distinct known-version slots; 29 exact membership-change ItemIds only, Key1/Key0 typed presence and inventory ownership status, version-specific aggregate grouping vs v301-only mapping. No Native causal/migration analysis (03), no prior Recipe6 station/producer repeat, no edits, no private IDs or timestamps exported.",
+        "dependency": "06A static versioned membership accepted; V41 integrated accepted; existing private two archives",
+        "next": "Self-QA exact version join and typed observation, then 06A; no product authority",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
