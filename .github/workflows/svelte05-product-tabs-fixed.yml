@@ -1,0 +1,110 @@
+name: HKIA Svelte actual product tabs fixed compile and browser (no deploy)
+on:
+  push:
+    branches:
+      - ctrl/svelte-product-tabs-fixed-20261113
+permissions:
+  contents: read
+concurrency:
+  group: hkia-svelte-product-tabs-fixed
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753' && github.ref == 'refs/heads/ctrl/svelte-product-tabs-fixed-20261113'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed combined source and lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor a178d943fd44ea34934aea0738c7e292f1944b27 HEAD
+          test "$(git diff --name-only a178d943fd44ea34934aea0738c7e292f1944b27 HEAD)" = .github/workflows/svelte05-product-tabs-fixed.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          sha256sum package-lock.json
+      - name: Unit compile and legacy reference parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check -- --fail-on-warnings
+          node --experimental-strip-types scripts/verify-legacy-port.mjs ..
+          node --experimental-strip-types scripts/verify-filter-reference.mjs ..
+          node --experimental-strip-types scripts/verify-category-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-reference.mjs ..
+          node --experimental-strip-types scripts/verify-collection-detail-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-detail-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-facts-reference.mjs ..
+          npm run build
+      - name: Actual built Vite Chromium regression and R7 parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-parity.py dist
+          python3 scripts/browser-filter-parity.py dist
+          python3 scripts/browser-category-parity.py dist
+          python3 scripts/browser-achievement-parity.py dist
+          python3 scripts/browser-collection-detail-parity.py dist
+          python3 scripts/browser-achievement-detail-parity.py dist
+          python3 scripts/browser-achievement-facts-parity.py dist
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: fixed-v30
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Fixed actual V30 reference and compiled tab bridge
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          test "$(git -C ../fixed-v30 rev-parse HEAD)" = b7e91df1e456ded1b50b4649797bf1b7df216717
+          node --experimental-strip-types scripts/verify-product-tab-reference.mjs ../fixed-v30/site ../fixed-v30/site-manifest.json
+          node --experimental-strip-types scripts/verify-product-tab-delta.mjs ../fixed-v30/site ../fixed-v30/site-manifest.json
+          npx --no-install vite build --config vite.product-tabs.config.ts
+          node scripts/prepare-product-tabs-delta.mjs ../fixed-v30/site ../fixed-v30/site-manifest.json dist-product-tabs/product-tabs.mjs "$RUNNER_TEMP/product-tabs-delta"
+          cp -a ../fixed-v30/site "$RUNNER_TEMP/product-tabs-candidate"
+          cp "$RUNNER_TEMP/product-tabs-delta/src/"* "$RUNNER_TEMP/product-tabs-candidate/src/"
+          python3 - <<'PY'
+          import hashlib,json,pathlib,os
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])
+          base=pathlib.Path('../fixed-v30/site')
+          candidate=root/'product-tabs-candidate'
+          delta=root/'product-tabs-delta'
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          m=json.loads(pathlib.Path('../fixed-v30/site-manifest.json').read_bytes())
+          d=json.loads((delta/'delta-manifest.json').read_bytes())
+          actual={p.relative_to(candidate).as_posix() for p in candidate.rglob('*') if p.is_file()}
+          assert actual==set(m['files'])|{'src/product-tabs.mjs'}
+          assert set(d['changes'])=={'src/app.js','src/product-tabs.mjs'}
+          for p,e in m['files'].items():
+              assert sha(base/p)==e['sha256'],p
+              if p=='src/app.js': assert sha(candidate/p)==d['changes'][p]['after'] and d['changes'][p]['before']==e['sha256']
+              else: assert sha(candidate/p)==e['sha256'],p
+          assert sha(candidate/'src/product-tabs.mjs')==d['changes']['src/product-tabs.mjs']['after']
+          assert 'sourceMappingURL=' not in (candidate/'src/product-tabs.mjs').read_text()
+          print('PRODUCT DELTA 4145 unchanged 1 MOD 1 ADD; 4076 WebP exact; no maps')
+          PY
+          python3 scripts/browser-product-tabs-parity.py ../fixed-v30/site "$RUNNER_TEMP/product-tabs-candidate"
+          mkdir -p "$RUNNER_TEMP/product-tabs-evidence"
+          cp "$RUNNER_TEMP/product-tabs-delta/delta-manifest.json" "$RUNNER_TEMP/product-tabs-evidence/"
+          cp "$RUNNER_TEMP/product-tabs-delta/src/"* "$RUNNER_TEMP/product-tabs-evidence/"
+          cp node_modules/svelte/LICENSE.md "$RUNNER_TEMP/product-tabs-evidence/Svelte-LICENSE.md"
+          sha256sum "$RUNNER_TEMP/product-tabs-evidence/"*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_ProductTabs_V30_CodeOnly
+          path: ${{ runner.temp }}/product-tabs-evidence
+          if-no-files-found: error
+          retention-days: 7
