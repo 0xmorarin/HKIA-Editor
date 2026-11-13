@@ -8488,10 +8488,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_LOCALE_REPAIR_R6_PASS_R5_NEW_REGRESSION",
+      "status": "PARTIAL_R7_STATIC_PASS_WAIT_CI_R5_REGRESSION",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 READY new R5 definition reselect regression repair; consume accepted locale repair and exact R6 7 paths separately; 00 successor CI after repair; 06B focused QA on new fixed successor or other new HIGH only",
+      "next": "00 R7 fixed isolated CI READY; 05 R5 definition reselect regression repair READY parallel; 06B R7 compiled scoped QA after CI and R5 focused QA after fixed repaired CI; no repeat accepted R6/locale",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -9279,11 +9279,47 @@
       },
       "webR7Claim": {
         "claim": "20261113_06B_WEB_R7_STATIC",
-        "status": "IN_FLIGHT",
+        "status": "DONE_STATIC_PREFLIGHT_WAIT_COMPILED_CI",
         "source": "af261fd12385a3209aca458dfc2c394862d2e504",
         "sourceSha256": "ef7652a7ad3e6934adf253378f7b7fd0783341943f6e0ceee096ac18d269b474",
         "baseHead": "53bddc64bfd6152e770bec6cb31da32dc6029f37",
         "scope": "R7 seven exact paths independent static/typed negative preflight; compiled/browser acceptance waits 00 fixed CI; R5 isolated"
+      },
+      "webR7": {
+        "task": "SVELTE_R7_ACHIEVEMENT_FACTS_INDEPENDENT_QA",
+        "status": "PARTIAL_NODE_STATIC_PASS_WAIT_COMPILED_CI",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "af261fd12385a3209aca458dfc2c394862d2e504",
+        "sourceSha256": "ef7652a7ad3e6934adf253378f7b7fd0783341943f6e0ceee096ac18d269b474",
+        "deltaSha256": "1700157631e9d67c5abd12dc68567c94e4de06237c401cf5f39ce9cce7846fc3",
+        "manifestSha256": "5decc74520fde541a373b62e3a35bc799cec4d4c9abb7cd47a272493d3a6f00e",
+        "verified": {
+          "remoteChangedPaths": 7,
+          "remoteBlobs": 7,
+          "exactLocalExecutedBlob": "71e821b3f8acdb2d9738e21093606f8a08c58402",
+          "independentNode": 8,
+          "fail": 0,
+          "tsc": "5.8.3 strict noEmit PASS",
+          "node": "22.16.0",
+          "negativeSuffixCases": 20
+        },
+        "unverified": [
+          "R7 compiled Svelte/check/build/actual Chromium 320/375/1280; no fixed R7 workflow evidence observed at claim",
+          "producer private Source/Delta ZIP SHA/CRC not independently re-read this turn",
+          "actual product controller/catalog/media/session/Writer and locale binding; no release authority"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_R7_INDEPENDENT_PREFLIGHT_20261113.zip",
+          "sha256": "b1c378ad60ee202f00dd87e279339ef8b6a1b43b6ad506d09bb1f2e945bf10b1",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_4_ENTRIES"
+        },
+        "handoff": {
+          "recipient": "00 CTRL",
+          "task": "R7_ISOLATED_FIXED_CI",
+          "status": "READY",
+          "condition": "Compile/check/build, fixed 115 producer tests and reference/browser regressions 320/375/1280; R7 exact 7 paths plus workflow only; no deploy. 06B scoped compiled acceptance after CI; R5 reselect repair separately."
+        }
       }
     },
     "06C_QA_RELEASE": {
