@@ -9407,11 +9407,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_PAGES_R4_PREVIEW_AND_V39",
-      "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
-      "scope": "11 ADD only, 630 exact V37; verify both upstream accepted V36 deltas and absence of collision with V37, 22 focused tests + 27 mutation subtests, independent integration negatives, rollback/reconstruct, 55 source-build exact and 4146 prior map exact; no external media rehash, no Writer/deploy authority",
-      "next": "00 accept fixed V38 private reference; 06C wait authorized V24 genuine browser or new fixed integration",
-      "dependency": "V38_SCOPED_ACCEPTED; 00_REFERENCE_RECORD; V24_WAIT_ENV_ADMINISTRATOR_BLOCK; NEXT_FIXED_INTEGRATION_WAIT_DEP",
+      "status": "DONE_R4_PREVIEW_PREDEPLOY_AND_V39_SCOPED_PASS_WAIT_OWNER_DEPLOY_OR_NEW_FIXED",
+      "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_AND_V39_FIXED_647_RESEARCH_REFERENCE",
+      "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
+      "next": "00 record R4 predeploy acceptance and V39 research reference; prepare manual exact R4 deployment only after existing explicit Owner approval; 06C wait new fixed distribution or authorized postdeploy verification, V24 genuine private Browser WAIT_ENV. No duplicate specialist/research QA.",
+      "dependency": "OWNER_EXPLICIT_FIXED_R4_DEPLOYMENT_APPROVAL_FOR_LIVE_DEPLOY; 00_FIXED_MANUAL_COMPOSITION; NEW_FIXED_SCOPE_OR_AUTHORIZED_V24_BROWSER",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -9513,49 +9513,38 @@
         "noDeployment": true
       },
       "fixedCandidate": {
-        "label": "V38_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
-        "file": "HKIA_CTRL_V38_ResearchReference_20261113_Source.zip",
-        "sha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
-        "entries": 641,
-        "bytes": 3637413,
-        "baseSha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+        "label": "V39_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V39_ResearchReference_20261113_Source.zip",
+        "sha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "entries": 647,
+        "bytes": 3694571,
         "manifest": {
-          "file": "HKIA_CTRL_V38_ResearchReference_20261113_Manifest.json",
-          "sha256": "76ccd458f1b1e5d4f7369dafa34a37182248cba4e6a1e1724245b08a194702d2"
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Manifest.json",
+          "sha256": "66e9abf7217a72365137c3febe40462b89b3199bc9aef0aa536e0eafa21993c4"
         },
         "delta": {
-          "file": "HKIA_CTRL_V38_ResearchReference_20261113_Delta.zip",
-          "sha256": "fe036aba722d7a05b6088c6551021795070e2b6093ace9f659a044f96b4e6a93",
-          "added": 11,
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Delta.zip",
+          "sha256": "1b92a91ac7f95da8976fe3a70e33f478407b3f1bf313099e9176a1223d30a667",
+          "added": 6,
           "modified": 0,
           "deleted": 0
         },
-        "distribution": {
-          "artifactManifest": {
-            "file": "HKIA_CTRL_V38_ResearchReference_20261113_ArtifactManifest.json",
-            "sha256": "afb8b20b50a37fec700998399316cf3b513c6f1aaee953bc38d682f6a6b77735"
-          },
-          "baseArtifactManifestSha256": "b8c6cf6610efcfcf7e40067ed2a32aa1501d48ebef9d970210c49366a41c60a0",
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "8b9eaf51047b39b67f88410adb33c22e57fc9309140160f921de436eda179f7a",
           "entries": 4146,
-          "unchanged": 4146,
-          "modified": 0,
-          "added": 0,
-          "flags": "OFF",
-          "externalMediaRehashed": false
+          "unchanged": 4146
+        },
+        "result": {
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_RESULT.json",
+          "sha256": "eb0011e15b0330dd7993bf7680a9d6b3cb24b702b7494eec4a2bfd8058afabd1"
         },
         "evidence": {
-          "result": {
-            "file": "HKIA_CTRL_V38_ResearchReference_20261113_RESULT.json",
-            "sha256": "cf5a9499850c3c7987887d5a3d42fccdd72e5b460df76626423adad7d8db8f16"
-          },
-          "zip": {
-            "file": "HKIA_CTRL_V38_ResearchReference_20261113_Evidence.zip",
-            "sha256": "de0c96a4bc8f0314a815a7c3c95079eb2b3d98fa227a6622dea7e5f557e7e693"
-          }
+          "file": "HKIA_CTRL_V39_ResearchReference_20261113_Evidence.zip",
+          "sha256": "2017db7c85867bd3b7b33ce7501087c49648119b67469da9581e26049e5d7e87"
         },
         "privateLibrary": "HKIA Editor Private",
-        "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS",
-        "acceptance": "SELF_PASS_06C_READY"
+        "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS"
       },
       "claim": {
         "task": "V38_FIXED_641_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
@@ -9888,71 +9877,21 @@
         }
       },
       "result": {
-        "verdict": "SCOPED_PASS_V38_PRIVATE_RESEARCH_REFERENCE",
-        "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
-        "baseSourceSha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
-        "manifest": "76ccd458f1b1e5d4f7369dafa34a37182248cba4e6a1e1724245b08a194702d2",
-        "delta": "fe036aba722d7a05b6088c6551021795070e2b6093ace9f659a044f96b4e6a93",
-        "artifactManifest": "afb8b20b50a37fec700998399316cf3b513c6f1aaee953bc38d682f6a6b77735",
-        "upstreamDeltas": [
-          "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
-          "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62"
-        ],
-        "upstreamAcceptance": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
-        "verified": {
-          "pins": 14,
-          "sourceEntries": 641,
-          "unchanged": 630,
-          "add": 11,
-          "mod": 0,
-          "del": 0,
-          "upstreamPaths": [
-            6,
-            5
-          ],
-          "transportManifestExcluded": 1,
-          "upstreamBase625Exact": true,
-          "crc": "PASS",
-          "focused": 22,
-          "recipe6MutationSubtests": 27,
-          "fail": 0,
-          "independentNegativeControls": 6,
-          "check": "PASS_BOTH",
-          "build": "PASS_BOTH",
-          "sourceDerivedBuildExact": 55,
-          "fullManifestDirectMatch": 54,
-          "indexProjectionExact": true,
-          "fullDistributionMapExact": 4146,
-          "rollbackSourceExact": 630,
-          "reconstructionExact": 641,
-          "writer": "OFF",
-          "newResearchPathsInDistribution": 0
-        },
+        "verdict": "BOTH_SCOPED_PASS",
+        "pages": "SCOPED_PASS_PREDEPLOY_FIXED_R4_VISUAL_PREVIEW",
+        "v39": "SCOPED_PASS_V39_PRIVATE_RESEARCH_REFERENCE",
         "evidence": {
-          "result": {
-            "file": "HKIA_06C_V38_SCOPED_QA_20261113_RESULT.json",
-            "sha256": "85ec2e74322d7fd0738c65faa3fbd99f6a7aea8d3a6bcda6a6e612e443878290"
-          },
-          "zip": {
-            "file": "HKIA_06C_V38_SCOPED_QA_20261113_EVIDENCE.zip",
-            "sha256": "0944eeebe00038959299d1aed32835120d807e3a6fac8072ddeaa4d14c3bc316"
-          },
-          "readback": "BOTH_BYTE_EXACT_SHA_CRC_10_MANIFEST_ENTRIES_PASS",
-          "privateLibrary": "HKIA Editor Private"
-        },
-        "trueRed": [],
-        "unverified": [
-          "External media bytes not rehashed; prior accepted V37 map reused",
-          "V24 genuine real Browser administrator block; game persistence unverified",
-          "No live deploy/rollback or Writer enablement"
-        ],
-        "handoff": {
-          "to": "00 CTRL",
-          "task": "V38_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-          "condition": "Record fixed V38 scoped PASS; no Writer/deploy permission; V24/V30 unchanged; no repeated QA",
-          "nextAfterDep": "06C authorized V24 browser or new fixed integration"
-        },
-        "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
+          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
+          "manifestSha256": "7a90e790f35c2ccc2b561cd24afb4b1bd3e0033ac2b2e3baf5e5d4e3ee2922aa",
+          "handoffSha256": "bc4db866805b8a495856a2ca36dfd269758d70c788968fcfa44acc69fcaef38f",
+          "previewResultSha256": "9e8ff879b5d5d10e10a28fe9f6dd8c3e5d020d659a9874221b0d0dfbda242745",
+          "v39ResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+          "ciObservationSha256": "37c7eef11d632883b94ad82ae8107896c3443ee1f4827213970a9ea199eae72b",
+          "bytes": 12607,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+        }
       },
       "v38Completed": {
         "claim": {
@@ -10080,17 +10019,247 @@
         {
           "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
           "source": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_PREDEPLOY_FIXED_R4",
           "risk": "RELEASE",
           "priority": "P0"
         },
         {
           "task": "V39_FIXED_647_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
           "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_V39_PRIVATE_REFERENCE",
           "risk": "RELEASE"
         }
-      ]
+      ],
+      "pagesR4Result": {
+        "status": "SCOPED_PASS_PREDEPLOY_FIXED_R4_VISUAL_PREVIEW",
+        "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
+        "baseRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+        "uiRef": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+        "baseArtifact": {
+          "id": 14000317355,
+          "deployRun": 43342655323,
+          "sha256": "dd91d2d717213425ef74f4444b111d088cff952e54e6e75a8a5916d429aa9ac3",
+          "files": 4146,
+          "bytes": 146346689,
+          "webp": 4076
+        },
+        "fixedArtifact": {
+          "id": 14022124789,
+          "run": 43396673488,
+          "sha256": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+          "manifestSha256": "fd9a8fbc41bc0bfe43cae6eefdc83fe8425a36d27e127fb5b3c1b6ad279f1ee3",
+          "bytes": 335761,
+          "entries": 4
+        },
+        "verified": {
+          "baseExact": 4146,
+          "webpExact": 4076,
+          "added": 3,
+          "modified": 0,
+          "deleted": 0,
+          "combined": 4149,
+          "baseMapFingerprint": "b64c73858e9cc5447b78c105db91cbe2237ffb86bb8e4308b3b2ac80ecca075c",
+          "combinedMapFingerprint": "eff0dbbe6cdd55462f5c0b35740c88ee8997745b8735154cf4be22e7f24f4e43",
+          "deltaFiles": {
+            "dev/index.html": "09790c0c5f14c9bd0314b3999999f005ff8bafc9f00249818f512c4ee7b51d81",
+            "dev/assets/index-CY-DWLoU.js": "989c21d317302cadb7b4ec515acc684f4c104574d910afa95bc38c722698e219",
+            "dev/assets/index-Cnlz5SAB.css": "588383fee64105272fb9a07ec78822c7266d56df7a780312ca72965366147a50"
+          },
+          "crc": "PASS",
+          "privacy": "EXACT_PRIOR_BASE_PLUS_3_ADDITIONS_INDEPENDENT_SCAN_PASS",
+          "dependencyClosure": "EXACT_HTML_JS_CSS_BACKLINK_NO_UNEXPECTED_PATHS",
+          "localNegativeControls": 7,
+          "ciNegativeControls": 5,
+          "rollback": "ACTUAL_REMOVE_DEV_REHASH_4146_REAPPLY_4149_EXACT",
+          "writer": "OFF",
+          "mode": "SYNTHETIC_NO_SAVE",
+          "browser": {
+            "actualChromium": "140.0.7339.16",
+            "widths": [
+              320,
+              375,
+              1280
+            ],
+            "nestedPath": "/HKIA-Editor/dev/",
+            "transport": "HTTP_LOOPBACK_CI",
+            "exactHtmlResponseSha": true,
+            "tabs": true,
+            "rightsVisible": true,
+            "noSaveNotice": true,
+            "fileInputs": 0,
+            "externalRequests": 0,
+            "pageErrors": 0,
+            "deniedPathsPerWidth": 6,
+            "secureContext": true,
+            "webCrypto": true,
+            "liveHttps": "NOT_RUN_NOT_DEPLOYED"
+          }
+        },
+        "independentCI": {
+          "pr": 11,
+          "head": "8d920611b865add136e4400a7bd60bcee6fa136f",
+          "workflowBlob": "6310ae49d0ef690c161b3bfc4fd5430329a8cc10",
+          "scope": "ONE_QA_WORKFLOW_ADD_ONLY_NO_DEPLOY",
+          "run": 43409024134,
+          "job": 131830471186,
+          "conclusion": "SUCCESS_LIVE_API_AND_JOB_LOG_OBSERVED"
+        },
+        "trueRed": [],
+        "unverified": [
+          "actual live HTTPS on newly deployed /dev/ and postdeploy SHA/rights/path checks",
+          "live deployment and live rollback not performed",
+          "local managed Chromium administrator policy blocked; authorized nondeploy CI used for synthetic candidate",
+          "V24 genuine real Browser separate WAIT_ENV",
+          "R5/Locale Consumer pending scope excluded; no Writer or formal release authority"
+        ],
+        "evidence": {
+          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
+          "manifestSha256": "7a90e790f35c2ccc2b561cd24afb4b1bd3e0033ac2b2e3baf5e5d4e3ee2922aa",
+          "handoffSha256": "bc4db866805b8a495856a2ca36dfd269758d70c788968fcfa44acc69fcaef38f",
+          "previewResultSha256": "9e8ff879b5d5d10e10a28fe9f6dd8c3e5d020d659a9874221b0d0dfbda242745",
+          "v39ResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+          "ciObservationSha256": "37c7eef11d632883b94ad82ae8107896c3443ee1f4827213970a9ea199eae72b",
+          "bytes": 12607,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_ACCEPTANCE_AND_MANUAL_DEPLOY_GATE",
+          "status": "READY_PREDEPLOY_ACCEPTANCE",
+          "condition": "Record exact predeploy acceptance, prepare/pin manual fixed composition and combined artifact, obtain or verify existing explicit Owner approval for this exact deployment scope, then deploy only under authorized 00 manual workflow. Verify actual HTTPS root and /dev/, distribution SHA, no-save/rights/network, denied paths and rollback readiness. No automatic deploy, no Writer/cutover, V24 separate."
+        },
+        "ownerApprovalRequired": "ACTUAL_FIXED_ARTIFACT_DEPLOYMENT_AND_LIVE_ROLLBACK"
+      },
+      "v39Result": {
+        "status": "SCOPED_PASS_V39_PRIVATE_RESEARCH_REFERENCE",
+        "verdict": "SCOPED_PASS_V39_PRIVATE_RESEARCH_REFERENCE",
+        "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "baseSourceSha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+        "manifest": "66e9abf7217a72365137c3febe40462b89b3199bc9aef0aa536e0eafa21993c4",
+        "delta": "1b92a91ac7f95da8976fe3a70e33f478407b3f1bf313099e9176a1223d30a667",
+        "artifactManifest": "8b9eaf51047b39b67f88410adb33c22e57fc9309140160f921de436eda179f7a",
+        "upstreamDelta": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+        "upstreamAcceptance": "06A_SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
+        "upstreamResult": "350e9af5e9fc4c0c4074f624bbc0bbd4172d4c462be7dbc4730a164b342ba4fb",
+        "verified": {
+          "sourceEntries": 647,
+          "unchanged": 641,
+          "add": 6,
+          "mod": 0,
+          "del": 0,
+          "upstreamExactPaths": 6,
+          "upstreamManifestHashes": 6,
+          "originalV36NoCollision": true,
+          "transportManifestExcluded": 1,
+          "sourceManifestExact": 647,
+          "baseManifestExact": 641,
+          "focused": 16,
+          "fail": 0,
+          "independentNegativeControls": 6,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "sourceDerivedBuildExact": 55,
+          "fullManifestDirectMatch": 54,
+          "indexProjection": "V38_ACCEPTED_PROJECTION_EXACT_MAP_REUSED_SOURCE_INDEX_UNCHANGED",
+          "fullDistributionMapExact": 4146,
+          "webp": 4076,
+          "rollbackSourceExact": 641,
+          "reconstructSourceExact": 647,
+          "newResearchPathsInDistribution": 0,
+          "writer": "OFF"
+        },
+        "trueRed": [],
+        "unverified": [
+          "External media bytes not rehashed for V39; prior exact V38 map reused",
+          "06A genuine saved-condition acceptance reused, no genuine rerun",
+          "Runtime station access/Candy script/actual cook/persistence/game acceptance unverified",
+          "V24 genuine actual Browser separate WAIT_ENV",
+          "No live deploy or Writer authority"
+        ],
+        "evidence": {
+          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
+          "manifestSha256": "7a90e790f35c2ccc2b561cd24afb4b1bd3e0033ac2b2e3baf5e5d4e3ee2922aa",
+          "handoffSha256": "bc4db866805b8a495856a2ca36dfd269758d70c788968fcfa44acc69fcaef38f",
+          "previewResultSha256": "9e8ff879b5d5d10e10a28fe9f6dd8c3e5d020d659a9874221b0d0dfbda242745",
+          "v39ResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+          "ciObservationSha256": "37c7eef11d632883b94ad82ae8107896c3443ee1f4827213970a9ea199eae72b",
+          "bytes": 12607,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "status": "READY",
+          "condition": "Record V39 exact fixed 647 reference only; no research-only deploy, no Writer/cutover. Reuse accepted V38 and 06A exact scope."
+        }
+      },
+      "nextReadyParallel": [
+        {
+          "stream": "00_CTRL",
+          "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_ACCEPTANCE_AND_MANUAL_DEPLOY_GATE",
+          "priority": "P0",
+          "dependency": "06C fixed predeploy SCOPED PASS; explicit deployment approval remains separate"
+        },
+        {
+          "stream": "00_CTRL",
+          "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "dependency": "06C fixed V39 SCOPED PASS; no deployment"
+        }
+      ],
+      "nextAfterDep": [
+        {
+          "stream": "00_CTRL",
+          "task": "PAGES_R4_FIXED_MANUAL_DEPLOY_AND_LIVE_VERIFICATION",
+          "condition": "exact fixed composition and existing explicit Owner approval for deployment scope"
+        },
+        {
+          "stream": "06C_QA_RELEASE",
+          "task": "AUTHORIZED_LIVE_R4_POSTDEPLOY_SCOPED_QA",
+          "condition": "00 authorized actual deployment and fixed live artifact evidence"
+        },
+        {
+          "stream": "06C_QA_RELEASE",
+          "task": "V24_GENUINE_PRIVATE_BROWSER_RELEASE_QA",
+          "condition": "authorized local actual Browser environment"
+        }
+      ],
+      "handoff": {
+        "to": "00 CTRL",
+        "status": "READY",
+        "tasks": [
+          {
+            "to": "00 CTRL",
+            "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_ACCEPTANCE_AND_MANUAL_DEPLOY_GATE",
+            "status": "READY_PREDEPLOY_ACCEPTANCE",
+            "condition": "Record exact predeploy acceptance, prepare/pin manual fixed composition and combined artifact, obtain or verify existing explicit Owner approval for this exact deployment scope, then deploy only under authorized 00 manual workflow. Verify actual HTTPS root and /dev/, distribution SHA, no-save/rights/network, denied paths and rollback readiness. No automatic deploy, no Writer/cutover, V24 separate."
+          },
+          {
+            "to": "00 CTRL",
+            "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+            "status": "READY",
+            "condition": "Record V39 exact fixed 647 reference only; no research-only deploy, no Writer/cutover. Reuse accepted V38 and 06A exact scope."
+          }
+        ],
+        "evidence": {
+          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
+          "manifestSha256": "7a90e790f35c2ccc2b561cd24afb4b1bd3e0033ac2b2e3baf5e5d4e3ee2922aa",
+          "handoffSha256": "bc4db866805b8a495856a2ca36dfd269758d70c788968fcfa44acc69fcaef38f",
+          "previewResultSha256": "9e8ff879b5d5d10e10a28fe9f6dd8c3e5d020d659a9874221b0d0dfbda242745",
+          "v39ResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+          "ciObservationSha256": "37c7eef11d632883b94ad82ae8107896c3443ee1f4827213970a9ea199eae72b",
+          "bytes": 12607,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+        }
+      },
+      "noDeployment": true,
+      "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
     }
   },
   "p0FixCandidate": {
