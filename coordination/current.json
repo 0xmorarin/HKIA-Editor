@@ -1646,7 +1646,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "V301_MARKER_SCOPED_PASS_REUSE_04_07; 04_WAIT_BETA_ENV_OR_NEW_ACCEPTED_BETA_CONTRACT_OR_06A_COUNTEREXAMPLE_OR_00_DISJOINT_RUST_ASSIGNMENT",
+      "next": "04_V24_VERSIONED_MEMBERSHIP_IMPACT_PREFLIGHT_IN_FLIGHT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -2664,6 +2664,16 @@
         },
         "classification": "All new causal scopes reference-only; no Writer permission. Existing V24 frozen; V33 JS reference maintained; no Rust ownership assigned to 04; no duplicated QA.",
         "next": "04 WAIT_ENV authorized V24 genuine Browser; WAIT_DEP new concrete accepted Beta contract, QA counterexample or 00 disjoint Rust assignment. No new legacy 06 activation."
+      },
+      "versionedMembershipPreflight": {
+        "task": "BETA_V24_VERSIONED_MEMBERSHIP_IMPACT_PREFLIGHT",
+        "owner": "04 SAVE CORE",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH_READ_ONLY_IMPACT",
+        "baseLedgerBlob": "42dbe0660527093497b90a3f75b11ba06e808b00",
+        "baseSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+        "acceptedResearchSha256": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+        "scope": "29 new versioned membership pairs vs frozen V24 source. Check exact catalog mismatch and typed Key1 plan gates; synthetic/read-only only; no change V24, no 01/03 reanalysis, no product authority. Escalate reproducible contractual mismatch only."
       }
     },
     "05_WEB": {
