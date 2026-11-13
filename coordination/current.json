@@ -6475,7 +6475,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "WAIT_DEP_00_R6_1_SCOPED_INTEGRATION_AND_WAIT_ENV_R5_1_GENUINE_CHROME",
+      "status": "WAIT_ENV_R5_1_GENUINE_CHROME_AND_WAIT_DEP_NEW_DISJOINT_ASSIGNMENT",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -6492,7 +6492,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 R6.1 scoped integration READY via 06A direct accepted handoff; no duplicate 07/06A work. R5.1 genuine Chrome WAIT_ENV authorized sandbox-capable private browser; after 00 explicit disjoint assignment, other Rust foundation capacity work may proceed. No new task currently assigned; no Development Switch, limits or Writer/deploy changes.",
+      "next": "R6.1 isolated PR10 integration DONE; consume fixed accepted source 76ab71edf507cdcec13a6faf0db8ebcd56d4b672. Genuine Chrome WAIT_ENV authorized sandbox-capable private browser; 07 additional capacity work only after 00 explicit disjoint assignment. No new 07 READY; no Development Switch, limits, Writer or deploy changes.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -6768,7 +6768,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "00 scoped integration of exact R6.1 accepted chain; R5.1 actual genuine Chrome and independent acceptance; 64/128MiB and 2M document targets, browser JS/Rust performance and game persistence separately. No new 07 READY.",
+      "remaining": "R5.1 genuine Chrome and independent acceptance; 64/128MiB and 2M document targets, same-case actual browser JS/Rust performance and game persistence separately. R6.1 isolated PR10 advanced; no main merge. No new 07 READY.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -8035,7 +8035,7 @@
         "integrationHandoff": {
           "to": "00_CTRL",
           "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
-          "status": "READY",
+          "status": "DONE_CTRL_ISOLATED_PR10_ADVANCED",
           "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
           "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
           "scope": "exact 7 MOD vs R6 and fixed CI artifact; 06A scoped acceptance only; verify overlap/base/PR9/10 chain, no unapproved deploy, no Development Switch or Writer/limits grant",
@@ -8049,6 +8049,22 @@
             "privateLibrary": "HKIA Editor Private",
             "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
           }
+        }
+      },
+      "resumeReconciliation": {
+        "task": "07_R61_INTEGRATION_CONSUMER_RECONCILIATION",
+        "owner": "07 RUST CORE",
+        "risk": "LOW_LEDGER_ONLY",
+        "status": "DONE",
+        "baseBlob": "ebd522bfe1fbb0dbf68a72c2013b3d36cbe64eae",
+        "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "pr": 10,
+        "verified": "00 r61Integration DONE; live PR10 exact HEAD; PR9 unchanged per 00; managed Chromium URLBlocklist=* persists, no URLAllowlist; no new browser execution or policy change.",
+        "remaining": "WAIT_ENV genuine Chrome; WAIT_DEP explicit new disjoint 00 capacity assignment; no product changes.",
+        "handoff": {
+          "to": "00 CTRL",
+          "status": "WAIT_NEW_ASSIGNMENT_OR_AUTHORIZED_BROWSER",
+          "scope": "Accepted R6.1 reference, no duplicate integration. 64/128MiB/2M targets remain unaccepted."
         }
       }
     },
