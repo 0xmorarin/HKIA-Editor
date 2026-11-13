@@ -204,12 +204,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "V20_ALWAYSRUN_CAUSAL_LOCAL_PASS_QA_PENDING",
+      "status": "FORMAL_V33_CAUSAL_SCOPES_ACCEPTED_DONE_WAIT_NEW_WITNESS",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "CELEBRATION5_LOCAL_SCOPED_PASS_06_QA_PENDING; 04_AFTER_CAUSAL_ACCEPTANCE; 03_NO_REPEAT",
+      "next": "DONE_NO_READY_03; 00_CONTINUE_FIXED_OFF_PAGES; 06_AFTER_FIXED_LIVE_ARTIFACT_OR_AUTHORIZED_BROWSER; 03_ONLY_NEW_CONCRETE_CAUSAL_WITNESS_OR_QA_FAILURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -378,6 +378,15 @@
         "acceptance": {
           "file": "HKIA_06_RECIPE23UI_CELEBRATION5_QA_20261113_RESULT.json",
           "sha256": "e603766d58dee7a47dbe9348a683b1a63ddbca4c57b156458fc9601520f7c39a"
+        },
+        "downstreamAcceptance": {
+          "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "verdict": "SCOPED_PASS_FORMAL_V33_OFF_COMBINED",
+          "qaResult": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
+          "qaResultSha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0",
+          "verified": "V33 ZIP SHA CRC and 521/521 manifest SHA+size; 03 Celebration5 8/8 exact path hashes (transport manifest excluded); reuse accepted 04/05/06 genuine outputs, no new tests",
+          "scope": "Recipe32 exact existing v301 row cancellation and same-runtime receipt restore, isolated offline/inline QA; OFF source; no actual game or release authorization",
+          "remaining": "Runtime reference/claim/new row and v300 parity witnesses; actual game load/resave/reboot; no new 03 task"
         }
       }
     },
