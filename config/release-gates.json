@@ -245,7 +245,7 @@
       "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
       "projectInstructions": {
         "path": "coordination/project-instructions.md",
-        "characters": 7965
+        "characters": 7993
       }
     }
   },
