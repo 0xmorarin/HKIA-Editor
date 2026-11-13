@@ -8623,6 +8623,18 @@
           "status": "WAIT_ENV",
           "condition": "restore local execution for independent harness negatives; authorized private actual Chrome for genuine six; no bypass, no development switch"
         }
+      },
+      "resume20261113": {
+        "task": "REMAINING_HATS_OFF_AND_BROWSER_KIT_OFFLINE_QA",
+        "status": "IN_FLIGHT_EXISTING_CLAIMS_RESUMED",
+        "baseHead": "a1e5fd52d32585c5071be688053f9884fb4ace97",
+        "risk": "HIGH",
+        "scope": "Existing two disjoint claims only: HatsOff native/typed/negatives and R5.1 browser readiness harness independent negative execution; exact original pins; no genuine browser before authorized environment, no product changes. R6.1 WAIT fixed candidate self-QA.",
+        "sources": [
+          "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+          "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616"
+        ],
+        "environment": "Container recovered; managed Chromium URLBlocklist=* unchanged; no navigation bypass."
       }
     },
     "06B_QA_WEB_LOCALE": {
