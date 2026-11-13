@@ -6225,6 +6225,16 @@
         "sourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
         "scope": "62 changed source paths; dense correction prior causal tests; one changed distribution contract; 4145 unchanged, 55 modules, rollback V33, no duplicate accepted independent research; no activation"
       }
+    },
+    "svelteFollowupCI": {
+      "task": "SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
+      "sourceHead": "bb563adb29046fb83f0360a303b9119487bb43dd",
+      "sourceSha256": "8da9c065f522906dc11656a4ff1d91b109758eeaaef348bd0f1a424ba5ad310a",
+      "scope": "Only existing 05 followup 8 paths plus CI workflow, no main merge, no deploy",
+      "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd"
     }
   },
   "formalRelease": {
