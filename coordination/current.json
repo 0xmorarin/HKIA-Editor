@@ -4552,6 +4552,18 @@
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "10 exact paths, compiled actual V33, independent lifecycle/DOM-key identity/stale/reentry/repeated selection/image/fallback/real projection. No accepted R1-R7/tab/filter repeat"
         }
+      },
+      "productAchievementList": {
+        "task": "SVELTE_PRODUCT_ACHIEVEMENT_LIST_BINDING",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "baseHead": "fe4b548965248219be1ea900f545a00489ee246e",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "scope": "New svelte-ui paths only; actual V33 achievement list R4 projection/selection/paging, exact legacy controller retains ownership; fallback on unsupported or >1200 visible bound, no writer/session/detail change, no deploy.",
+        "dependency": "R4 independently accepted; category/tab/filter separate fixed scopes; shared app composition 00",
+        "next": "Implement and focused self QA; fixed source and handoff."
       }
     },
     "06_QA": {
