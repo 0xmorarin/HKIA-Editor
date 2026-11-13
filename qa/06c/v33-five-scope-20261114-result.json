@@ -1,0 +1,81 @@
+{
+  "schema": "HKIA.06C.FiveScope.1",
+  "task": "V33_FIVE_SCOPE_SINGLE_ROOT_FIXED_DISTRIBUTION_INDEPENDENT_QA",
+  "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_FIVE_SCOPE_ROOT",
+  "base": {
+    "ref": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+    "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db"
+  },
+  "candidate": {
+    "ciHead": "dea263044f0bc5bf12134b51202ae88afbb6298a",
+    "run": 43505994342,
+    "artifact": 14075649096,
+    "artifactSha256": "1ec235f9253aa5b09a69623b75f39660259a31190aa78b931ab51080a0f2a2aa",
+    "source": "ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352",
+    "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
+    "app": "adaf88bec2db44bd9b3babfa11519f052ccaf5b76a27d750ccf49913bbe3c663"
+  },
+  "independent": {
+    "head": "9c698b711be1428d4cb8f8a56675119e5f7be41e",
+    "workflowBlob": "a54fcd9f16ac505acc7f49b1e0d95c353a870a9f",
+    "run": 43506613333,
+    "job": 132165839130,
+    "conclusion": "success",
+    "artifact": {
+      "id": 14077300909,
+      "sha256": "2182f3f58981201956722d61218dbe430a7f9e9940a274f709b6a0ba07db405d",
+      "bytes": 649
+    },
+    "observed": {
+      "archives": 6,
+      "entries": 4152,
+      "unchanged": 4145,
+      "modified": 1,
+      "added": 6,
+      "webp": 4076,
+      "commentCounts": [
+        256,
+        293,
+        288,
+        292,
+        264
+      ],
+      "exactCommentMasksAndTokens": 5,
+      "reverseAppComposition": true,
+      "licenseExact": true,
+      "rollbackActualFiles": 4146,
+      "policy": true,
+      "browserWidths": [
+        320,
+        375,
+        1280
+      ],
+      "individualAbort": [
+        "tabs",
+        "filters",
+        "categories",
+        "achievement-list",
+        "achievement-header"
+      ],
+      "comparisons": 8,
+      "syntheticOnly": true,
+      "writer": "OFF"
+    }
+  },
+  "excluded": [
+    "Collection Items unaccepted scope fe2a4c2ceb26758bcf768a129008a5b06c5174b8"
+  ],
+  "limitations": [
+    "No genuine Save, native edit/export/game or Writer grant",
+    "Loopback Chromium only; live HTTPS/postdeploy QA not executed for this candidate",
+    "Candidate is CI delta artifact; no retained full remote fixed root ref or manual dispatch authorized yet",
+    "CI artifact retention 7 days; 00 must stage exact retained root before expiry and bind all hashes",
+    "Prior V33 live initial Worker error remains cause unknown/not reproduced"
+  ],
+  "handoff": {
+    "to": "00 CTRL",
+    "task": "V33_FIVE_SCOPE_FIXED_ROOT_STAGE_AND_OWNER_GATE",
+    "status": "READY",
+    "acceptance": "Stage exact 4152-file root and manifest from pinned artifact/base without changing bytes; verify full remote map and rollback to exact V33. Record 06C acceptance. Existing Owner exact fixed artifact approval before manual deployment; 06C actual HTTPS postdeploy QA. Do not deploy or activate Writer without approval."
+  }
+}
