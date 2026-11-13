@@ -9382,6 +9382,15 @@
         ],
         "scope": "Accepted exact V33 achievement list and header producer/bridge/Svelte + inherited R4/R6 display contracts. Map existing catalog and dynamic fields; no product code edits, no repeat 06B lifecycle QA, collection items TRUE_RED scope excluded.",
         "dependency": "Accepted R4/R6/R7 editor catalogs and exact 06B source acceptance"
+      },
+      "productAchievementStatusCatalog": {
+        "task": "PRODUCT_ACHIEVEMENT_HEADER_STATUS_LABEL_CATALOG",
+        "claim": "20261114_08_ACH_HEADER_STATUS_KEY",
+        "status": "IN_FLIGHT",
+        "baseLedgerBlob": "9edbdef8ca31227304aeb49945c6dc3d8105db01",
+        "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+        "scope": "One new editor-owned header field label ach.detail.statusLabel (状態), 15 languages; existing filter label has different semantic role. Preserve all 189 accepted keys and all game data; private catalog delta and focused tests only.",
+        "dependency": "R5-R7 fixed accepted catalog 0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02; accepted header source b7061525fd00e68b6505b334a1a061903cd71014"
       }
     },
     "06A_QA_DATA_CORE": {
