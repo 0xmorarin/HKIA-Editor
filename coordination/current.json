@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "03_HISTORICAL_RECIPE6_CAUSAL_AND_06_NEW_ABSENCE_SCOPED_QA; 04_AFTER_EXACT_ACCEPTED_CONTRACT; NONRECIPE_WAIT_DEP; PAGES_INDEPENDENT",
+      "next": "06_V300_NATIVE_STATIC_QA_AND_03_EXACT_SIX_TARGET_PRODUCER_DEFINITION; 04_WAIT_EXACT_ACCEPTED_CONTRACT; NO_V24_OR_PAGES_CHANGE",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -97,11 +97,24 @@
       },
       "native300Parity": {
         "task": "FORMAL_RECIPE6_V300_NATIVE_PERSISTENCE_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY",
         "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Newly located Switch v300 executable and IL2CPP dump; exact allocator/Inventory producer/load/persistence/predicate paths only; no 03 v301 repeat; additive 01 evidence; V24/Pages unchanged",
-        "dependency": "01 historical Recipe6 + 03 causal advisory pending 06"
+        "dependency": "01 historical Recipe6 + 03 causal advisory pending 06",
+        "artifact": "HKIA_01_V300_RECIPE_NATIVE_V33_DELTA_20261113.zip",
+        "deltaSha256": "861dec326680bf8ec26619c2719e296b0e5e106267d3cfd32a59765b4c8cfcbc",
+        "manifestSha256": "e030a391d11682570e8494bdc9c5247bc5468a9ab07dd16820d3697d25e610e8",
+        "changes": "4 ADD 0 MOD 0 DEL + transport manifest; 521 V33 unchanged",
+        "nativeBuildId": "D0E7F0B11DADACFF",
+        "nativeSha256": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a",
+        "dumpSha256": "ff61e4c9688e8be45422ed6c5c187ab36068c08f9b8cd7795999358374fbbf8a",
+        "verified": "27 ranges / 214 instructions / 18 method bindings / 12 decoded direct branches / 10 model keys; 10 focused synthetic PASS; V33 521 unchanged; Library exact SHA CRC; prior genuine six+batch not rerun",
+        "classification": "V300_STATIC_GENERIC_ALLOCATOR_SIMPLE_PRODUCER_LOAD_SAVE_PROJECTION_RECIPE_PREDICATE_AND_HISTORY_ROUTE_CONFIRMED; TARGET_SPECIFIC_PRODUCER_SWITCH_DEFINITION_DYNAMIC_PROVIDER_BINDING_UNKNOWN",
+        "remaining": "Exact Switch six definition bundle/identity and legitimate per-target producer; exact closed generic provider dispatch; indirect references and actual native load/resave/auth/history physical persistence; 06 independent QA",
+        "next": "06 new 4 paths static scoped QA independently of prior 01/03; 03 exact six producer/definition and dynamic dispatch follow-up only; 04 WAIT accepted exact target contract; V24/Pages unchanged",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
