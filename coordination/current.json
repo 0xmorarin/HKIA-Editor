@@ -5171,7 +5171,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5184,7 +5184,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests and 06 independent QA",
-      "next": "08_EXISTING_IN_FLIGHT_SELF_QA; HIGH_FIXED_GAME_LOCALE_CONTRACT_TO_06B_THEN_05_DIRECT",
+      "next": "06 QA independently verify fixed R1 private delta; 05 WEB consume accepted scoped registry/catalog runtime after QA, separately complete actual UI inventory and integration; 08 continue native selector/fallback and full per-version key parity only when source ready.",
       "handoffTo": [
         "05 WEB",
         "06 QA",
@@ -5192,7 +5192,60 @@
       ],
       "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
       "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes",
-      "qaRouting": "SELF_QA; HIGH -> 06B -> 05/00"
+      "qaRouting": "SELF_QA; HIGH -> 06B -> 05/00",
+      "result": "R1_FIXED_PRIVATE_CANDIDATE_READY_FOR_SCOPED_06_QA",
+      "fixedSource": {
+        "artifact": "HKIA_08_LOCALIZATION_R1_PRIVATE_DELTA_20261113.zip",
+        "sha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
+        "manifestSha256": "019f2e46566f4ce329b7cf2e088b6dc6290b939ce4b029259213774f8a259422",
+        "identitySha256": "a58d8bceadb94eefe02187a8bd3f781160663fec0d01f28b15decbfb5a47e12c",
+        "registrySha256": "5489a5e51c5cdd08e5120b5cdaea94c84665e78f4dbbea53422b028c5e1d8fbc",
+        "privateOnly": true,
+        "readbackVerified": true
+      },
+      "verified": {
+        "sourceLocalesEachVersion": 15,
+        "babelInputs": 90,
+        "identityRows": 13220,
+        "uniqueKeys": 15304,
+        "gamePacks": 30,
+        "v301KeysEach": 15304,
+        "v300KeysEach": 15292,
+        "v300MissingEach": 12,
+        "versionChangedPairs": 245,
+        "existingENJAExact": 3080,
+        "uiR2SettingsKeysEach": 44,
+        "uiSeedKeysENJA": 80,
+        "nodeTests": "8 PASS / 0 FAIL",
+        "rewardLinks": 264,
+        "rewardItemIds": 77
+      },
+      "unverified": [
+        "Switch native selector/config and exact supported locale inventory; Turkish discrepancy",
+        "Switch300 full definition key mapping; Switch301 full achievement/account key parity",
+        "game fallback and account platform-specific titles",
+        "full product UI inventory and 36 remaining seed keys in 13 locales; linguistic and browser QA",
+        "independent QA and 00 distribution allowlist"
+      ],
+      "handoff": {
+        "to06": {
+          "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA",
+          "fixedSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
+          "status": "READY",
+          "acceptance": "Rebuild exact 30 packs/90 input SHA and stable identity; 15 locale catalog 44-key/placeholder parity, missing/fallback/version negative cases, no release/Writer changes; scope limited to available evidence."
+        },
+        "to05": {
+          "task": "LOCALIZATION_R1_PRESENTATION_ADAPTER",
+          "status": "READY_AFTER_DEP",
+          "dependency": "06 scoped acceptance of registry/catalog/runtime; independent R2 work continues",
+          "acceptance": "Use fixed version/locale packs with SHA, preference, safe text, generation guard; keep stable IDs and no save mutation. No full-language claim or deploy."
+        },
+        "to00": {
+          "status": "WAIT_DEP",
+          "dependency": "06/05 acceptance and release allowlist/Owner approval; no Beta added gate"
+        }
+      },
+      "releaseImpact": "NONE; V24 frozen, V30 public, Writer OFF"
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
