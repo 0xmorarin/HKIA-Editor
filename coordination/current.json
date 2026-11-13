@@ -5947,6 +5947,15 @@
           "status": "READY_PARALLEL",
           "conditions": "06A independent scoped counterexamples and Node genuine proof now; 00 append fixed-source CI workflow pin update then advance PR9 via lease and run synthetic real Chromium; 07 private actual Chrome six only after fixed repaired Artifact and authorized browser; 06A final execution acceptance then 00 Development Switch. No deploy or Writer grant."
         }
+      },
+      "resourcePreflight": {
+        "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
+        "status": "IN_FLIGHT",
+        "baseHead": "4927c555bcaaf0604de3c5a62b2dee2d6f252bc1",
+        "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "risk": "HIGH",
+        "scope": "Synthetic Node direct WASM capacity and bounded reject preflight; immutable R5.1 code, no production limits changes, no browser PASS, independent of 00 CI and 06A reply repair",
+        "dependency": "R5.1 fixed artifact for actual browser measurements; existing WASM exact native R4 unchanged for preflight"
       }
     },
     "08_LOCALIZATION": {
