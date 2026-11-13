@@ -2452,7 +2452,7 @@
         ],
         "followup": {
           "task": "SVELTE_R1_LOCK_A11Y_LEGACY_PORT",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "COMPILED_BROWSER_PASS_06_QA_READY",
           "owner": "05 WEB",
           "baseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
           "basePrHead": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
@@ -2485,7 +2485,36 @@
             "updated built HTTP Chromium 320/375/1280 and collection side effect count",
             "actual production JS controller binding, actual collection content rendering, full UI parity"
           ],
-          "next": "00 adjust branch-only workflow guard to exact followup scope/lock (no npm install regenerating lock); integrate staged commit into PR6 without false CI fail, npm ci/check/build/tests and actual browser plus verify-legacy-port against exact public legacy setTab; 05 minimal fixes on actual failures; 06 independent scope after fixed compiled source. No product merge/deploy, Beta gate or save data."
+          "next": "00 adjust branch-only workflow guard to exact followup scope/lock (no npm install regenerating lock); integrate staged commit into PR6 without false CI fail, npm ci/check/build/tests and actual browser plus verify-legacy-port against exact public legacy setTab; 05 minimal fixes on actual failures; 06 independent scope after fixed compiled source. No product merge/deploy, Beta gate or save data.",
+          "compiled": {
+            "head": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+            "run": 43361999625,
+            "verified": {
+              "scope": "05 exact 8 paths + 00 workflow only",
+              "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+              "lockCheck": "PASS_NO_REGEN",
+              "tests": 31,
+              "fail": 0,
+              "checkErrors": 0,
+              "checkWarnings": 0,
+              "build": "PASS",
+              "actualLegacySha256": "71bd1573da6be32a489bce0bf9823d49cc64d979f94a9f829ce5f2709892070d",
+              "fixtureExact": true,
+              "legacyTransitions": 6,
+              "externalTransition": 1,
+              "malformedStateDenied": 1,
+              "actualChromiumWidths": [
+                320,
+                375,
+                1280
+              ],
+              "collectionRendersPerWidth": 4,
+              "overflow": 0,
+              "externalRequests": 0,
+              "pageErrors": 0,
+              "artifactId": 14007874929
+            }
+          }
         },
         "r1Acceptance": {
           "status": "COMPILE_CHECK_BUILD_ISOLATED_BROWSER_PASS_NOT_FULL_PRODUCT_PARITY",
@@ -2496,6 +2525,14 @@
           "initialFailure": "Playwright runner unsupported Ubuntu26.04; runner corrected to Ubuntu24.04",
           "verified": "20 tests; 0 check errors, 2 a11y warnings; build; actual Vite HTTP Chromium 320/375/1280; no overflow/external requests/page errors",
           "lockSha256": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd"
+        },
+        "r2": {
+          "task": "SVELTE_R2_SEARCH_FILTER_CONTROLS",
+          "status": "IN_FLIGHT",
+          "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
+          "basePrHead": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+          "scope": "Additive isolated svelte-ui R2 toolbar controls and typed legacy event port; preserve R1 frozen snapshot, existing product/V24/V33, lock, Writer, Pages. Exact V33 control metadata and event routing; test synthetic UI and legacy callbacks; no second session.",
+          "next": "05 implementation and fixed branch; 06 R1 independent QA in parallel; 00 isolated R2 CI"
         }
       }
     },
