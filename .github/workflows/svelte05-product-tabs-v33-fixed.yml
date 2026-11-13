@@ -1,0 +1,83 @@
+name: HKIA V33 fixed product tabs rebind (no deploy)
+on:
+  push:
+    branches: [ctrl/svelte-v33-tabs-fixed-20261113]
+    paths: ['.github/workflows/svelte05-product-tabs-v33-fixed.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Pin rebind source
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor f320ef06f0d8732ee1ec1c96c1d1163e15e821f7 HEAD
+          test "$(git diff --name-only f320ef06f0d8732ee1ec1c96c1d1163e15e821f7 HEAD)" = .github/workflows/svelte05-product-tabs-v33-fixed.yml
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: fixed-V33
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: HKIA_ProductTabs_V30_CodeOnly
+          run-id: 43426396053
+          github-token: ${{ github.token }}
+          path: accepted-module
+      - name: Reuse exact accepted module and verify V33 delta
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          test "$(git -C ../fixed-V33 rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          printf '%s  ../accepted-module/product-tabs.mjs\n' 856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245 | sha256sum -c -
+          printf '%s  ../accepted-module/Svelte-LICENSE.md\n' 06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3 | sha256sum -c -
+          mkdir "$RUNNER_TEMP/accepted-tab-bundle"
+          cp ../accepted-module/product-tabs.mjs "$RUNNER_TEMP/accepted-tab-bundle/"
+          node --experimental-strip-types scripts/verify-product-tab-v33-reference.mjs ../fixed-V33/site ../fixed-V33/site-manifest.json
+          node --experimental-strip-types scripts/verify-product-tab-v33-delta.mjs ../fixed-V33/site ../fixed-V33/site-manifest.json
+          node scripts/prepare-product-tabs-v33-delta.mjs ../fixed-V33/site ../fixed-V33/site-manifest.json "$RUNNER_TEMP/accepted-tab-bundle/product-tabs.mjs" "$RUNNER_TEMP/tabs-v33-delta"
+          cp -a ../fixed-V33/site "$RUNNER_TEMP/tabs-v33-candidate"
+          cp "$RUNNER_TEMP/tabs-v33-delta/src/"* "$RUNNER_TEMP/tabs-v33-candidate/src/"
+          python3 - <<'PY'
+          import hashlib,json,pathlib,os
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])
+          base=pathlib.Path('../fixed-V33/site')
+          c=root/'tabs-v33-candidate'
+          d=json.loads((root/'tabs-v33-delta/delta-manifest.json').read_bytes())
+          m=json.loads(pathlib.Path('../fixed-V33/site-manifest.json').read_bytes())
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          assert {p.relative_to(c).as_posix() for p in c.rglob('*') if p.is_file()}==set(m['files'])|{'src/product-tabs.mjs'}
+          assert set(d['changes'])=={'src/app.js','src/product-tabs.mjs'}
+          for p,e in m['files'].items():
+              assert sha(base/p)==e['sha256'],p
+              assert sha(c/p)==(d['changes'][p]['after'] if p=='src/app.js' else e['sha256']),p
+          assert sha(c/'src/app.js')=='b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47'
+          assert sha(c/'src/product-tabs.mjs')=='856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245'
+          print('V33 REBIND 4145 unchanged 1 MOD 1 ADD 4076 WebP; exact accepted module')
+          PY
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+          python3 scripts/browser-product-tabs-parity.py ../fixed-V33/site "$RUNNER_TEMP/tabs-v33-candidate"
+          mkdir "$RUNNER_TEMP/tabs-v33-evidence"
+          cp "$RUNNER_TEMP/tabs-v33-delta/delta-manifest.json" "$RUNNER_TEMP/tabs-v33-evidence/"
+          cp "$RUNNER_TEMP/tabs-v33-delta/src/"* "$RUNNER_TEMP/tabs-v33-evidence/"
+          cp ../accepted-module/Svelte-LICENSE.md "$RUNNER_TEMP/tabs-v33-evidence/"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_ProductTabs_V33_CodeOnly
+          path: ${{ runner.temp }}/tabs-v33-evidence
+          if-no-files-found: error
+          retention-days: 7
