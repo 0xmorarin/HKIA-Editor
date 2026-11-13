@@ -11850,7 +11850,9 @@
       "00_SINGLE_ROOT_COMPOSE_AFTER_05_AND_06B",
       "06C_FIXED_ROOT_DISTRIBUTION_AFTER_00",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
+      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
+      "06C_V33_FIXED_OFF_ROOT_AFTER_CTRL_CI_43421992728",
+      "00_V33_MANUAL_FIXED_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -15155,7 +15157,25 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "00 nondeploy fixed artifact verifyDist/actual local HTTP Chromium, then 06C fixed delta predeployment scoped independent QA; manual fixed deployment with exact ref/manifest and Owner approval. Separate 05 Svelte root claim unchanged."
+      "next": "00 nondeploy fixed artifact verifyDist/actual local HTTP Chromium, then 06C fixed delta predeployment scoped independent QA; manual fixed deployment with exact ref/manifest and Owner approval. Separate 05 Svelte root claim unchanged.",
+      "ci": {
+        "branch": "ctrl/pages-v33-off-verify-20261113",
+        "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
+        "workflowBlob": "81b83393de18148a8e95de1cddbf2b7895996b7f",
+        "run": 43421992728,
+        "status": "IN_PROGRESS",
+        "scope": "No deploy, exact 4146 SHA+policy, actual loopback HTTP Chromium 320/375/1280, credits/tabs/search/disabled writer/WebCrypto Worker negative, 8 path denials; no real save."
+      },
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
+        "status": "READY_AFTER_CTRL_CI",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "base": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment.",
+        "dependency": "CTRL CI 43421992728 success; explicit Owner exact candidate deploy authorization and 06C predeploy acceptance before 00 whitelist/manual deploy."
+      }
     }
   },
   "formalRelease": {
