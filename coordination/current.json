@@ -5801,7 +5801,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R6_1_SELF_PASS_06A_READY_R5_1_BROWSER_KIT_ACCEPTED_GENUINE_WAIT_ENV",
+      "status": "PARTIAL_R6_1_WAIT_INDEPENDENT_QA_R5_1_GENUINE_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5818,7 +5818,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06A R6.1 independent scoped capacity/genuine/lifecycle READY then 00 integration. Browser kit strict repair independently accepted; 07 R5.1 actual Chrome WAIT_ENV authorized sandbox-capable browser only, no duplicate offline QA. No Development Switch or capacity grant.",
+      "next": "06A R6.1 independent QA already IN_FLIGHT; await verdict, repair only fixed counterexample if any, 00 integration after acceptance. R5.1 genuine Chrome WAIT_ENV authorized sandbox-capable private browser. No additional 07 READY scope or new 00 assignment; no duplicate QA, no limits/flags changes.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -6094,7 +6094,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "06A R6.1 scoped independent acceptance, 00 integration decision; R5.1 actual genuine Chrome with accepted strict kit and independent execution evidence; formal capacity goals, browser JS/Rust comparison and game persistence separate.",
+      "remaining": "06A R6.1 independent scoped acceptance (active), 00 integration; R5.1 actual genuine Chrome with accepted strict kit and independent evidence; formal capacity goals, actual browser JS/Rust comparison and game persistence separate.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -7295,10 +7295,15 @@
         "handoff": {
           "to": "06A_QA_DATA_CORE",
           "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
-          "status": "READY",
+          "status": "RECEIVED_IN_FLIGHT_06A",
           "file": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_HANDOFF_06A.md",
           "sha256": "f4ccc0a80c3b04785e23450d7f570d42d6f36d39f5c78c40fc6eda18c1f53739",
-          "condition": "Fixed 7 MOD and exact CI artifact, independent scratch lifetime/all errors and length variations, paired resource and exact genuine output/lifecycle, reuse accepted base. 06A then 00 scoped integration; no limits, PR9/PR10 or deployment change."
+          "condition": "Fixed 7 MOD and exact CI artifact, independent scratch lifetime/all errors and length variations, paired resource and exact genuine output/lifecycle, reuse accepted base. 06A then 00 scoped integration; no limits, PR9/PR10 or deployment change.",
+          "received": {
+            "claimTask": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+            "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+            "claimBaseHead": "b931a399858872433250f5e746e5ee0617a6f676"
+          }
         }
       }
     },
