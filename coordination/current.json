@@ -9611,6 +9611,22 @@
           "status": "READY",
           "condition": "Compile/check/build, fixed 115 producer tests and reference/browser regressions 320/375/1280; R7 exact 7 paths plus workflow only; no deploy. 06B scoped compiled acceptance after CI; R5 reselect repair separately."
         }
+      },
+      "combinedR5R7Claims": {
+        "r5": {
+          "claim": "20261113_06B_R5_RESELECT_FIXED",
+          "status": "IN_FLIGHT",
+          "source": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
+          "compiled": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+          "scope": "3 exact repair paths, independent transition regression"
+        },
+        "r7": {
+          "claim": "20261113_06B_R7_COMPILED",
+          "status": "IN_FLIGHT",
+          "source": "af261fd12385a3209aca458dfc2c394862d2e504",
+          "compiled": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+          "scope": "7 exact R7 paths; compiled browser and independent negatives; reuse prior static"
+        }
       }
     },
     "06C_QA_RELEASE": {
