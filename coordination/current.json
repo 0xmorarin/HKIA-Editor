@@ -5432,13 +5432,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "WAIT_LEGACY_V300_EXISTING_CLAIM",
-      "task": "DATA_CORE_HIGH_RISK_QA",
-      "scope": "04 V300 fixed static evidence; v301 pending exact originals; R3 accepted; R4 after fixed",
+      "status": "IN_FLIGHT",
+      "task": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_STATIC_QA",
+      "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
       "next": "No duplicate legacy scope; consume legacy result; v301 after exact originals; R4 Writer after fixed",
-      "dependency": "Legacy V300 if active; 07 fixed R4; 01/02 originals",
+      "dependency": "R4 static READY; compiled execution requires fixed 00 CI artifact; 01/02 remaining exact originals",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -5517,6 +5517,19 @@
             "tests": 18
           }
         ]
+      },
+      "claim": {
+        "task": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_STATIC_QA",
+        "sourceHead": "d6401ccea03d67ad312ca1b052455974498ebe1e",
+        "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
+        "deltaSha256": "ccdbd317cb214fd9fcc08ec93b498376447b07302d0b8c6a7b1c5661215c5750",
+        "risk": "HIGH",
+        "status": "IN_FLIGHT"
+      },
+      "legacyV300": {
+        "verdict": "SCOPED_PASS_STATIC_LOAD_BOUNDARY_AND_HEADER_ONLY",
+        "evidence": "713f3320a4bc2ae183c6a904dcf8dd3a9d641245931de12ccba4a53d72c20e34",
+        "scope": "static load boundary and headers only"
       }
     },
     "06B_QA_WEB_LOCALE": {
