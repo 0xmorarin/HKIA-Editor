@@ -5534,13 +5534,13 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "WAIT_DEP_R2_COMPILED_OR_08_FIXED",
-      "task": "SVELTE_R2_AND_LOCALIZATION_SCOPED",
-      "scope": "R1 accepted; R2 static PASS; 08 IN_FLIGHT",
-      "next": "After 00 R2 compiled/browser; 08 fixed locale high-risk scope; no R1 repeat",
+      "status": "IN_FLIGHT",
+      "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA",
+      "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
+      "next": "06B independent scoped QA then direct 08/05 handoff; R2 WAIT compiled/browser",
       "dependency": "00 R2 CI or 08 fixed",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -5571,7 +5571,9 @@
           "transitions": 25,
           "status": "STATIC_PASS_WAIT_COMPILE_BROWSER"
         }
-      }
+      },
+      "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
+      "claim": "20261113_06B_LOCALE_R1"
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
