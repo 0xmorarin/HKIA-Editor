@@ -8610,6 +8610,20 @@
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
           "readbackVerified": true
         }
+      },
+      "productUiMapping": {
+        "task": "PRODUCT_TABS_FILTERS_LOCALE_BINDING_PREFLIGHT",
+        "claim": "20261113_08_PRODUCT_TABS_FILTERS_LOCALE",
+        "status": "IN_FLIGHT",
+        "baseHead": "ef5d052f8eed9c3f1686b462e185467762d0d798",
+        "baseLedgerBlob": "5e44fee7b6308ddf4339653dfba46bbf5b19d60d",
+        "risk": "LOW_ADVISORY_SOURCE_MAPPING_ONLY",
+        "scope": "Fixed 05 product tabs and filters sources; map existing catalog keys, identify localized text guards and dynamic values; no new catalog key/translation, no product code changes; new key or behavior requires separate HIGH claim.",
+        "dependency": "R1-R4 accepted catalog; R5-R7 fixed catalog QA IN_FLIGHT; mapping only; 05 tab/filter branches fixed; no parallel QA overlap",
+        "sourceHeads": [
+          "a178d943fd44ea34934aea0738c7e292f1944b27",
+          "a94cb913122df7cd63ab00fafea0428b2e7f4bac"
+        ]
       }
     },
     "06A_QA_DATA_CORE": {
