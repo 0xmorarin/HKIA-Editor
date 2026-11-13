@@ -5635,7 +5635,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5648,7 +5648,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B existing R1 fixed-SHA scoped QA IN_FLIGHT; do not duplicate claim; 05 consume accepted scope directly after 06B; 08 continue unresolved Native selector/fallback and version definition evidence; future LOW changes direct after self-QA.",
+      "next": "06B independent scoped R2 runtime repair and new native/version evidence, disjoint from Svelte R3; 05 private data preparation may proceed, runtime binding after repair acceptance; 08 continue Switch300 exact typed definitions when source available and full UI inventory/catalog work independently. No R1 accepted-data re-QA.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -5657,7 +5657,7 @@
       "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
       "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes",
       "qaRouting": "SELF_QA_ALWAYS; LOW_DIRECT_TO_CONSUMER; HIGH_06B_SCOPED_BEFORE_DEPENDENT_ACCEPTANCE; 06C_RELEASE_ONLY",
-      "result": "R1_DATA_SCOPED_PASS_RUNTIME_TRUE_RED_R2_CLAIMED",
+      "result": "R1_DATA_SCOPED_PASS_R2_RUNTIME_REPAIR_SELF_PASS_NATIVE_VERSION_STATIC_SELF_PASS",
       "fixedSource": {
         "artifact": "HKIA_08_LOCALIZATION_R1_PRIVATE_DELTA_20261113.zip",
         "sha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
@@ -5682,21 +5682,28 @@
         "uiSeedKeysENJA": 80,
         "nodeTests": "8 PASS / 0 FAIL",
         "rewardLinks": 264,
-        "rewardItemIds": 77
+        "rewardItemIds": 77,
+        "r2RuntimeSelfQA": "13 PASS / 0 FAIL; before 10 PASS / 3 FAIL",
+        "nativePinnedMethodRanges": 50,
+        "nativeVersions": 2,
+        "nativeValidEnumIds": 16,
+        "nativeManifestBackedLocales": 15,
+        "switch301TypedExactRows": 13220,
+        "switch301TypedChangedRows": 0
       },
       "unverified": [
-        "Switch native selector/config and exact supported locale inventory; Turkish discrepancy",
-        "Switch300 full definition key mapping; Switch301 full achievement/account key parity",
-        "game fallback and account platform-specific titles",
-        "full product UI inventory and 36 remaining seed keys in 13 locales; linguistic and browser QA",
-        "06B independent scoped acceptance and 00 distribution allowlist"
+        "Switch300 full typed definition key mapping: original exact all-deps archive/core unavailable in this run; no substitution from Switch301",
+        "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
+        "Account platform-specific runtime titles",
+        "Full product UI inventory and remaining 36 seed keys in 13 locales; linguistic/browser QA, session immutability",
+        "06B R2 scoped independent acceptance; 05 integration and 00 distribution allowlist"
       ],
       "handoff": {
         "to05": {
           "task": "LOCALIZATION_R1_PRESENTATION_ADAPTER",
           "status": "READY_AFTER_DEP",
-          "dependency": "06B scoped acceptance of new extraction/identity/registry/catalog/runtime; independent 05 work continues; future LOW changes direct after self-QA",
-          "acceptance": "Use fixed version/locale packs with SHA, preference, safe text, generation guard; keep stable IDs and no save mutation. No full-language claim or deploy."
+          "dependency": "R1 fixed data scoped accepted; private data preparation and independent WEB work can proceed now. Runtime binding waits only 06B R2 runtime repair scoped PASS; new Native evidence independent, no unnecessary coupling.",
+          "acceptance": "Use fixed R1 packs/identity/registry and accepted R2 runtime overlay, SHA and generation guard; preserve stable IDs, Save/Session/Revision/Undo/selection; locale missing-key explicit; no deploy."
         },
         "to00": {
           "status": "WAIT_DEP",
@@ -5705,10 +5712,34 @@
         "to06B": {
           "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA",
           "fixedSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
-          "status": "PARTIAL_DATA_SCOPED_PASS_RUNTIME_TRUE_RED",
+          "status": "PARTIAL_DATA_SCOPED_PASS_RUNTIME_TRUE_RED_REPAIR_FIXED",
           "acceptance": "Rebuild exact 30 packs/90 input SHA and stable identity; 15 locale catalog 44-key/placeholder parity, missing/fallback/version negative cases, no release/Writer changes; scope limited to available evidence.",
           "recipient": "06B QA-WEB-LOCALE",
-          "claim": "20261113_06B_LOCALE_R1"
+          "claim": "20261113_06B_LOCALE_R1",
+          "r2Runtime": {
+            "task": "LOCALIZATION_R2_STALE_REJECT_SCOPED_QA",
+            "artifact": "HKIA_08_LOCALIZATION_R2_RUNTIME_REPAIR_20261113.zip",
+            "sha256": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
+            "manifestSha256": "71ad62400ac532cdeda13317122a61f9358399322e1d9818aea02dbba9632f29",
+            "scope": "LOCALE-R1-STALE-REJECT: runtime.mjs and regression tests only; 2 MOD, 2 ADD logs, manifest; 58 R1 entries unchanged",
+            "status": "READY",
+            "risk": "HIGH",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+            "readbackVerified": true,
+            "acceptance": "Independent stale rejection after newer ready/invalidate, current rejection preserved, sync exception and generation guard; reuse R1 data acceptance; direct 05 on PASS; no product/Writer authorization"
+          },
+          "r2NativeVersion": {
+            "task": "LOCALIZATION_R2_NATIVE_VERSION_KEY_SCOPED_QA",
+            "artifact": "HKIA_08_LOCALIZATION_R2_NATIVE_VERSION_EVIDENCE_20261113.zip",
+            "sha256": "391a2ebe51aaa17ed1bd208f8dd87d54d3553a2dff7f4c2a2b9707db826c03bf",
+            "manifestSha256": "5ada23615fce5f52871458a3177142d466056e967f788b96bc913fcb28382e86",
+            "scope": "50 pinned method ranges on Switch300/301; 16 valid enum IDs and 15 manifest-backed; native startup/change/miss control flow; Switch301 13220 typed identity/name/title/description rows exact; 8 ADD incl manifest, all 60 R1 entries unchanged",
+            "status": "READY",
+            "risk": "HIGH",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+            "readbackVerified": true,
+            "acceptance": "Independent original Native and bundle verification; iterator binding, manifest existence filter, fallback distinction, typed identity/key join and counterexamples; static only; do not re-QA accepted R1 data; direct 08/05 on PASS"
+          }
         }
       },
       "releaseImpact": "NONE; V24 frozen, V30 public, Writer OFF",
@@ -5719,13 +5750,58 @@
       },
       "r2": {
         "task": "LOCALIZATION_R1_STALE_REJECT_REPAIR_AND_NATIVE_VERSION_EVIDENCE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
         "baseHead": "ce823591b30c5b40fdd33e0da7fccbdb9b02c17b",
         "claim": "20261113_08_R2_RUNTIME_NATIVE",
         "risk": "HIGH",
         "scope": "Repair only runtime stale rejected requests; separate native selector/fallback and versioned typed localization key evidence; preserve R1 accepted data bytes",
         "dependency": "06B R1 partial data PASS and LOCALE-R1-STALE-REJECT; original native/source pins",
-        "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945"
+        "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
+        "runtimeRepair": {
+          "task": "LOCALIZATION_R2_STALE_REJECT_SCOPED_QA",
+          "artifact": "HKIA_08_LOCALIZATION_R2_RUNTIME_REPAIR_20261113.zip",
+          "sha256": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
+          "manifestSha256": "71ad62400ac532cdeda13317122a61f9358399322e1d9818aea02dbba9632f29",
+          "scope": "LOCALE-R1-STALE-REJECT: runtime.mjs and regression tests only; 2 MOD, 2 ADD logs, manifest; 58 R1 entries unchanged",
+          "status": "READY",
+          "risk": "HIGH",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true,
+          "acceptance": "Independent stale rejection after newer ready/invalidate, current rejection preserved, sync exception and generation guard; reuse R1 data acceptance; direct 05 on PASS; no product/Writer authorization"
+        },
+        "nativeVersionEvidence": {
+          "task": "LOCALIZATION_R2_NATIVE_VERSION_KEY_SCOPED_QA",
+          "artifact": "HKIA_08_LOCALIZATION_R2_NATIVE_VERSION_EVIDENCE_20261113.zip",
+          "sha256": "391a2ebe51aaa17ed1bd208f8dd87d54d3553a2dff7f4c2a2b9707db826c03bf",
+          "manifestSha256": "5ada23615fce5f52871458a3177142d466056e967f788b96bc913fcb28382e86",
+          "scope": "50 pinned method ranges on Switch300/301; 16 valid enum IDs and 15 manifest-backed; native startup/change/miss control flow; Switch301 13220 typed identity/name/title/description rows exact; 8 ADD incl manifest, all 60 R1 entries unchanged",
+          "status": "READY",
+          "risk": "HIGH",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true,
+          "acceptance": "Independent original Native and bundle verification; iterator binding, manifest existence filter, fallback distinction, typed identity/key join and counterexamples; static only; do not re-QA accepted R1 data; direct 08/05 on PASS"
+        },
+        "unverified": [
+          "Switch300 full typed definition key mapping: original exact all-deps archive/core unavailable in this run; no substitution from Switch301",
+          "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
+          "Account platform-specific runtime titles",
+          "Full product UI inventory and remaining 36 seed keys in 13 locales; linguistic/browser QA, session immutability",
+          "06B R2 scoped independent acceptance; 05 integration and 00 distribution allowlist"
+        ],
+        "nextAfterDep": {
+          "switch300": {
+            "status": "WAIT_DEP",
+            "owner": "08 LOCALIZATION",
+            "sourceArchiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
+            "coreSha256": "883ad6551f01424f0f56fe3c9ce20d2576915a44c573609a011c5b112b28ef10",
+            "condition": "Locate exact original Switch300 all-deps/core via 02/00 private source evidence; validate pins; compare actual typed rows; do not substitute Switch301."
+          },
+          "ui": {
+            "status": "READY",
+            "owner": "08 LOCALIZATION",
+            "task": "Full editor UI inventory and remaining 36 seed keys per 13 locales; coordinate 05 fixed UI and linguistic validation; no game text inferred"
+          }
+        }
       }
     },
     "06A_QA_DATA_CORE": {
