@@ -9566,6 +9566,16 @@
           "Independent translation/source QA, native speaker review; no actual product locale behavior"
         ],
         "next": "06B independent new-key scoped QA then 05 direct"
+      },
+      "productCollectionItemLocaleAudit": {
+        "task": "PRODUCT_COLLECTION_ITEMS_LOCALE_DISPLAY_PREFLIGHT",
+        "claim": "20261114_08_PRODUCT_COLLECTION_ITEMS_LOCALE",
+        "status": "IN_FLIGHT",
+        "baseLedgerBlob": "03886b82b7c6f7273506260b52d07e481a4812f6",
+        "sourceHead": "1cbd350e7f466a58f8e46e6611414e04a12ca5b8",
+        "risk": "LOW_ADVISORY_EXISTING_CONTRACT",
+        "scope": "Only unchanged fixed ProductCollectionItems.svelte/ProductCollectionItemImage.svelte and existing R5 producer/display mapping; exclude bridge rollback and all behavior QA. Map accepted 189 keys and explicit new candidates; no 05 code writes or runtime acceptance.",
+        "dependency": "05 fixed successor with unchanged display sources; existing R5 catalog acceptance. Independent collection rollback QA separate; no use of candidate for release."
       }
     },
     "06A_QA_DATA_CORE": {
