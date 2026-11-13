@@ -4701,7 +4701,7 @@
       "productCollectionItems": {
         "task": "SVELTE_PRODUCT_COLLECTION_ITEM_LIST_BINDING",
         "owner": "05 WEB",
-        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
+        "status": "TRUE_RED_REPAIR_IN_FLIGHT",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "baseHead": "c12fe0b000129c61706015f26a980083df75e440",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
@@ -4765,6 +4765,17 @@
           "acceptance": "Pinned npm ci; npm test expected140 (123+17); svelte check --fail-on-warnings; ordinary Vite build + vite build --config vite.product-collection-items.config.ts. Exact V33 site+manifest; node --experimental-strip-types scripts/verify-product-collection-items-reference.mjs <site> <manifest>; node scripts/prepare-product-collection-items-delta.mjs <site> <manifest> dist-product-collection-items/product-collection-items.mjs <fresh-delta>. Overlay only app and module, 4145 unchanged/4076 WebP. Actual browser-product-collection-items-parity.py <base> <candidate> 320/375/1280: actual 103-item mapped definition, paging, search/sort, disabled history filter unloaded, inspect, same panel, stale list, module abort and mapped image LOAD_FAILED, no external/errors/download/overflow, Writer OFF. Record module SHA/manifest/delta/log/license. Independent matched history and real Save scope only as required, no false game pass.",
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "11 fixed paths; exact R5 display reuse, lifecycle restore/duplicate/stale/reentry, actual controller and compiled browser; genuine history/inspector if needed; no prior scopes repeat."
+        },
+        "repair": {
+          "task": "COLLECTION_ITEMS_POSTCOMMIT_DUPLICATE_HOST_ROLLBACK",
+          "status": "IN_FLIGHT",
+          "owner": "05 WEB",
+          "risk": "HIGH",
+          "baseHead": "7808ef6bfbc60124a216268229a654fabbbe4500",
+          "baseSource": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+          "scope": "bridge postcommit rollback plus focused regression; exact 06B counterexample; no unrelated changes",
+          "dependency": "06B TRUE_RED_MODEL_ROLLBACK",
+          "next": "reproduce, minimal repair, regression, fixed CI/06B"
         }
       }
     },
