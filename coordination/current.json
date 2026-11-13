@@ -6285,11 +6285,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_V35_SCOPED_PASS_WAIT_ENV_V24",
-      "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
-      "scope": "33 additive research paths only; 582 unchanged; prior V34 distribution exact map reused; no deployment/Writer/new authority. 106 focused self PASS; check/build/source-derived 55 exact; rollback 582 and rebuild 615. No repeat V34 accepted specialist QA.",
+      "status": "IN_FLIGHT",
+      "task": "V36_FIXED_625_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+      "scope": "10 ADD only, 615 exact V35; exact 01/02 accepted deltas and 06A research result; 31 focused tests, independent negative/reconstruction/rollback, 55 source-build exact, 54 direct full-manifest match + media boot index projection, 4146 prior map exact; no media rehash, no new product authorization; V24 and live V30 untouched",
       "next": "V35 accepted by 00; wait authorized V24 genuine Browser or new fixed integrated candidate",
-      "dependency": "V35_ACCEPTED_BY_00; V24_WAIT_ENV_ADMINISTRATOR_BLOCK",
+      "dependency": "V35_ACCEPTED_BY_00; V36_FIXED_READY",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
       "legacyEvidence": {
@@ -6391,90 +6391,144 @@
         "noDeployment": true
       },
       "fixedCandidate": {
-        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-        "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
-        "delta": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
-        "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+        "label": "V36_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V36_ResearchReference_20261113_Source.zip",
+        "sha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "entries": 625,
+        "bytes": 3564865,
+        "baseSha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "manifest": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_Manifest.json",
+          "sha256": "e915cb92864de9dc755a2ba3d618b24f1023b6e679b06bb687053ca0540101bc"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_Delta.zip",
+          "sha256": "7f43b0e9408d0d052b6eff1582f9f4d41af9b7bde9ebf4b9f1ae1978611bcaaa",
+          "added": 10,
+          "modified": 0,
+          "deleted": 0
+        },
+        "distribution": {
+          "artifactManifest": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_ArtifactManifest.json",
+            "sha256": "12877c97e403ecd6aae110165395d5c0cf9a0119df02304ce2ff475b97110ef5"
+          },
+          "baseArtifactManifestSha256": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+          "entries": 4146,
+          "unchanged": 4146,
+          "modified": 0,
+          "added": 0,
+          "flags": "OFF",
+          "externalMediaRehashed": false
+        },
         "evidence": {
           "result": {
-            "file": "HKIA_CTRL_V35_ResearchReference_20261113_RESULT.json",
-            "sha256": "ee550141bd8f8f3f103d511df17bd8150191a5998aa20e648c63845d93b245fd"
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_RESULT.json",
+            "sha256": "e340aa03a053698dfe6319ef018d19d8ac6e02a5b73cc3789724a39344c1a418"
           },
           "zip": {
-            "file": "HKIA_CTRL_V35_ResearchReference_20261113_Evidence.zip",
-            "sha256": "82f05ab1dcfd0f82cd530c0c9657b8b04b219cd67f21445118ae03323aa9df54"
-          },
-          "readback": "EXACT"
-        }
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_Evidence.zip",
+            "sha256": "1d04c3cdbf494ee495f0d78d44933d0069cbc88b7614390686c70ff5749e5168"
+          }
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "6_OF_6_BYTE_EXACT_SHA_3_ZIP_CRC_PASS",
+        "acceptance": "SELF_PASS_06C_READY"
       },
       "claim": {
-        "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
-        "baseHead": "19ad086a28fff1f34382a2da66764f66c4b0e0ea",
-        "baseLedgerBlob": "9d157117da0593bbf4ece7657768fcacf8181236",
-        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-        "scope": "V35 33 ADD only, 582 exact, upstream five deltas, distribution map and source build, rollback; independent integration; no product change",
-        "status": "COMPLETED"
+        "task": "V36_FIXED_625_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+        "baseHead": "c429b8ff2a65ae87abdf376eccb1184c5e0f68f1",
+        "baseLedgerBlob": "f2a6530d2de58589d91ef61ec97a83c46ead3f76",
+        "source": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "scope": "10 ADD, 615 exact, two accepted upstream deltas; independent integration/build/map/rollback"
       },
-      "result": {
-        "verdict": "SCOPED_PASS_V35_PRIVATE_RESEARCH_REFERENCE",
-        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-        "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
-        "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
-        "delta": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
-        "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
-        "verified": {
-          "sourceEntries": 615,
-          "unchanged": 582,
-          "add": 33,
-          "mod": 0,
-          "del": 0,
-          "upstreamDeltas": 5,
-          "upstreamLogicalPaths": 33,
-          "conflicts": 0,
-          "pendingExcluded": 2,
-          "crc": "PASS",
-          "focused": 106,
-          "fail": 0,
-          "skip": 0,
-          "independentNegativeControls": 4,
-          "check": "PASS_BOTH",
-          "build": "PASS_BOTH",
-          "sourceDerivedBuildExact": 55,
-          "fullManifestDirectMatch": 54,
-          "indexProjectionExact": true,
-          "fullDistributionMapExact": 4146,
-          "webp": 4076,
-          "rollbackSourceExact": 582,
-          "reconstructSourceExact": 615,
-          "writer": "OFF",
-          "distribution": "NO_NEW_RESEARCH_PAYLOAD_OR_PATH",
-          "legacyScope": "EXACT_ACCEPTED_V34_EVIDENCE_REUSE"
+      "v35Completed": {
+        "claim": {
+          "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+          "baseHead": "19ad086a28fff1f34382a2da66764f66c4b0e0ea",
+          "baseLedgerBlob": "9d157117da0593bbf4ece7657768fcacf8181236",
+          "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+          "scope": "V35 33 ADD only, 582 exact, upstream five deltas, distribution map and source build, rollback; independent integration; no product change",
+          "status": "COMPLETED"
         },
-        "evidence": {
-          "result": {
-            "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
-            "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+        "result": {
+          "verdict": "SCOPED_PASS_V35_PRIVATE_RESEARCH_REFERENCE",
+          "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+          "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+          "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
+          "delta": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
+          "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+          "verified": {
+            "sourceEntries": 615,
+            "unchanged": 582,
+            "add": 33,
+            "mod": 0,
+            "del": 0,
+            "upstreamDeltas": 5,
+            "upstreamLogicalPaths": 33,
+            "conflicts": 0,
+            "pendingExcluded": 2,
+            "crc": "PASS",
+            "focused": 106,
+            "fail": 0,
+            "skip": 0,
+            "independentNegativeControls": 4,
+            "check": "PASS_BOTH",
+            "build": "PASS_BOTH",
+            "sourceDerivedBuildExact": 55,
+            "fullManifestDirectMatch": 54,
+            "indexProjectionExact": true,
+            "fullDistributionMapExact": 4146,
+            "webp": 4076,
+            "rollbackSourceExact": 582,
+            "reconstructSourceExact": 615,
+            "writer": "OFF",
+            "distribution": "NO_NEW_RESEARCH_PAYLOAD_OR_PATH",
+            "legacyScope": "EXACT_ACCEPTED_V34_EVIDENCE_REUSE"
           },
-          "zip": {
-            "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
-            "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
+          "evidence": {
+            "result": {
+              "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
+              "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+            },
+            "zip": {
+              "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
+              "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
+            },
+            "readback": "BOTH_EXACT_SHA_CRC_PASS",
+            "privateLibrary": "HKIA Editor Private"
           },
-          "readback": "BOTH_EXACT_SHA_CRC_PASS",
-          "privateLibrary": "HKIA Editor Private"
+          "trueRed": [],
+          "unverified": [
+            "External media pack bytes not rehashed; exact prior accepted V34 map reused",
+            "V24 authorized genuine browser and game persistence",
+            "V35 no release/Writer authorization; no live deploy or rollback"
+          ],
+          "handoff": {
+            "to": "00 CTRL",
+            "task": "V35_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+            "condition": "Record scoped PASS for fixed 615 reference only; no new Writer/deployment; preserve V24 and V30; no further integration QA absent new fixed scope",
+            "nextAfterDep": "06C authorized V24 browser or new fixed release/integration candidate"
+          },
+          "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
         },
-        "trueRed": [],
-        "unverified": [
-          "External media pack bytes not rehashed; exact prior accepted V34 map reused",
-          "V24 authorized genuine browser and game persistence",
-          "V35 no release/Writer authorization; no live deploy or rollback"
-        ],
-        "handoff": {
-          "to": "00 CTRL",
-          "task": "V35_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-          "condition": "Record scoped PASS for fixed 615 reference only; no new Writer/deployment; preserve V24 and V30; no further integration QA absent new fixed scope",
-          "nextAfterDep": "06C authorized V24 browser or new fixed release/integration candidate"
-        },
-        "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
+        "fixedCandidate": {
+          "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+          "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
+          "delta": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
+          "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+          "evidence": {
+            "result": {
+              "file": "HKIA_CTRL_V35_ResearchReference_20261113_RESULT.json",
+              "sha256": "ee550141bd8f8f3f103d511df17bd8150191a5998aa20e648c63845d93b245fd"
+            },
+            "zip": {
+              "file": "HKIA_CTRL_V35_ResearchReference_20261113_Evidence.zip",
+              "sha256": "82f05ab1dcfd0f82cd530c0c9657b8b04b219cd67f21445118ae03323aa9df54"
+            },
+            "readback": "EXACT"
+          }
+        }
       }
     }
   },
