@@ -4,6 +4,9 @@
   import {createCollectionDetailFixture} from './legacy-collection-detail-fixture.ts';
   import AchievementList from './AchievementList.svelte';
   import AchievementDetail from './AchievementDetail.svelte';
+  import AchievementFacts from './AchievementFacts.svelte';
+  import {createFactsPort} from './achievement-facts.ts';
+  import {fixtureFacts} from './legacy-achievement-facts-fixture.ts';
   import {createAchievementDetailPort} from './achievement-detail.ts';
   import {createAchievementPort} from './achievement-list.ts';
   import {createLegacyAchievementFixture} from './legacy-achievement-fixture.ts';
@@ -28,6 +31,7 @@
   let achievementRevision=$state(0);
   const achievementPort=createAchievementPort({read(){void achievementRevision;return achievementFixture.read();},selectGuid:achievementFixture.selectGuid,showMore:achievementFixture.showMore,invalidate(){achievementRevision++;}});
   const achievementDetailPort=createAchievementDetailPort({selectedGuid(){return achievementPort.read().selectedGuid;},read(){void achievementRevision;return achievementFixture.readDetail();}});
+  const factsPort=createFactsPort({selectedGuid(){return achievementPort.read().selectedGuid;},read(){return fixtureFacts(achievementDetailPort.read());}});
   const achievementMetrics=$derived.by(()=>{void achievementRevision;return achievementFixture.metrics();});
   const filterMetrics=$derived.by(()=>{void filterRevision;return filterFixture.metrics();});
   const categoryFixture=createLegacyCategoryFixture(()=>filterPort.read());
@@ -46,6 +50,7 @@
     <FilterToolbar port={filterPort} domain="achievements"/>
     <AchievementList port={achievementPort}/>
     <AchievementDetail port={achievementDetailPort}/>
+    <AchievementFacts port={factsPort}/>
   {/snippet}
   {#snippet collections()}
     <div class="panel-header"><div><h3>コレクション</h3><p>ゲーム定義のアイテムIDと収集履歴を直接照合します。ゲーム内の達成率とは異なります。</p></div><span class="count-pill">{categoryPort.read().totalCategories}カテゴリ</span></div>
