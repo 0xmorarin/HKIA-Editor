@@ -8561,7 +8561,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "05 READY consume 189-key accepted catalog + Native static, tab/filter, V33 search and category-grid locale advisories; 08 WAIT fixed next product list/dynamic source or QA counterexample; no repeat. Physical selector/device, actual localized product browser/session and linguistic review unverified.",
+      "next": "06B READY new one-key R8 catalog scoped QA; 05 READY accepted 189 keys + list/header locale advisory (24 keys), new status key after 06B; 08 next fixed collection item display source audit without rollback overlap. No release/Writer/Pages change.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -8717,6 +8717,12 @@
             "status": "READY_DIRECT_LOW_ADVISORY",
             "scope": "Fixed 05 category grid fd893041 + inherited R3 model/image exact five blobs; eight already-accepted editor keys x15 locales, dynamic title/count/image guard mapping; no source changes.",
             "condition": "Localize existing controller producer and Svelte candidate coherently, preserve exact snapshot equality and machine identity/count/order/selection/image status; use exact versioned category key/GUID game-text mapping or explicit fallback. Actual locale behavior HIGH -> 06B independent browser/negative QA, separate from current category QA; no Writer/deploy."
+          },
+          "productAchievementLocale": {
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "scope": "Exact 9 fixed list/header and inherited R4/R6 source blobs; 24 accepted UI keys ×15 locales (360 cells), title/status/ARIA/subtitle/image/empty/more/header field and value mapping; existing accepted 189 keys reused. New status field key separately HIGH/06B.",
+            "condition": "Keep controller and candidate DOM signature in same locale generation; use stable GUID/field identifiers, not translated label keys; raw decimal/timestamps and unknown/null/missing/zero distinct, image machine status invariant; exact versioned game names and Account absent refs, no guessed joins. Actual locale behavior HIGH, separate 06B scope; no Writer/Pages authority."
           }
         },
         "to00": {
@@ -8843,6 +8849,21 @@
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
             "readbackVerified": true,
             "independentEvidenceSha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508"
+          },
+          "productAchievementStatusCatalog": {
+            "recipient": "06B QA-WEB-LOCALE",
+            "task": "PRODUCT_ACHIEVEMENT_HEADER_STATUS_LABEL_CATALOG_SCOPED_QA",
+            "status": "READY",
+            "scope": "New editor-owned ach.detail.statusLabel only, 15 new cells, prior 2835 unchanged; 16 MOD + 4 ADD including manifest. Fixed R5-R7 base + accepted header source b7061525fd00e68b6505b334a1a061903cd71014. Independent semantic/source mapping, exact SHA/manifest, one key and all 15 locales, placeholder/key parity and 3 negatives; no earlier accepted data/translation re-QA, no product runtime acceptance.",
+            "acceptance": "Reconstruct exact delta on base; check Status field role vs Achievement filter label, locale translations and unchanged old keys, GUID/UNKNOWN tokens invariant, scope exclusion; verify 190 keys per locale and 2850 total cells, 2835 prior exact; after scoped PASS direct 05 WEB; no release/Writer.",
+            "artifact": {
+              "file": "HKIA_08_PRODUCT_ACH_HEADER_LOCALE_R8_DELTA_20261114.zip",
+              "sha256": "d496cc4c2752df23b32a1e5c1c275eed5102622163a33156bf7b4547826bcdd0",
+              "manifestSha256": "47e0593a46f1b76b5cb293caba6902548b069b1148da087a059f510f678fbf82",
+              "location": "Private Library /HKIA Editor Private/",
+              "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES",
+              "baseCatalogSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02"
+            }
           }
         },
         "sourceRecovery": {
@@ -9464,7 +9485,7 @@
       "productAchievementLocaleAudit": {
         "task": "PRODUCT_ACHIEVEMENT_LIST_HEADER_LOCALE_BINDING_PREFLIGHT",
         "claim": "20261114_08_PRODUCT_ACH_LIST_HEADER_LOCALE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_ADVISORY",
         "baseLedgerBlob": "dea73afdaa1e0889e082ecbccfeef49b54a282dc",
         "risk": "LOW_ADVISORY_EXISTING_CONTRACT",
         "sourceHeads": [
@@ -9472,16 +9493,79 @@
           "b7061525fd00e68b6505b334a1a061903cd71014"
         ],
         "scope": "Accepted exact V33 achievement list and header producer/bridge/Svelte + inherited R4/R6 display contracts. Map existing catalog and dynamic fields; no product code edits, no repeat 06B lifecycle QA, collection items TRUE_RED scope excluded.",
-        "dependency": "Accepted R4/R6/R7 editor catalogs and exact 06B source acceptance"
+        "dependency": "Accepted R4/R6/R7 editor catalogs and exact 06B source acceptance",
+        "artifact": {
+          "file": "HKIA_08_PRODUCT_ACH_HEADER_LOCALE_R8_DELTA_20261114.zip",
+          "sha256": "d496cc4c2752df23b32a1e5c1c275eed5102622163a33156bf7b4547826bcdd0",
+          "manifestSha256": "47e0593a46f1b76b5cb293caba6902548b069b1148da087a059f510f678fbf82",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES",
+          "baseCatalogSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02"
+        },
+        "verified": {
+          "sourceBlobs": 9,
+          "reusedKeys": 24,
+          "reusedCells": 360,
+          "locales": 15,
+          "jaExactTemplates": 24,
+          "placeholderParityCells": 360,
+          "priorSourceAcceptance": "06B exact list/header scoped PASS"
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "scope": "Exact 9 fixed list/header and inherited R4/R6 source blobs; 24 accepted UI keys ×15 locales (360 cells), title/status/ARIA/subtitle/image/empty/more/header field and value mapping; existing accepted 189 keys reused. New status field key separately HIGH/06B.",
+          "condition": "Keep controller and candidate DOM signature in same locale generation; use stable GUID/field identifiers, not translated label keys; raw decimal/timestamps and unknown/null/missing/zero distinct, image machine status invariant; exact versioned game names and Account absent refs, no guessed joins. Actual locale behavior HIGH, separate 06B scope; no Writer/Pages authority."
+        },
+        "unverified": [
+          "Actual locale-aware product generation and signature binding, browser/session invariance, native speaker review; not full detail/form scope"
+        ],
+        "next": "05 may consume 24 accepted keys now; R8 new key waits independent QA"
       },
       "productAchievementStatusCatalog": {
         "task": "PRODUCT_ACHIEVEMENT_HEADER_STATUS_LABEL_CATALOG",
         "claim": "20261114_08_ACH_HEADER_STATUS_KEY",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_06B",
         "baseLedgerBlob": "9edbdef8ca31227304aeb49945c6dc3d8105db01",
         "risk": "HIGH_NEW_UI_KEY_CONTRACT",
         "scope": "One new editor-owned header field label ach.detail.statusLabel (状態), 15 languages; existing filter label has different semantic role. Preserve all 189 accepted keys and all game data; private catalog delta and focused tests only.",
-        "dependency": "R5-R7 fixed accepted catalog 0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02; accepted header source b7061525fd00e68b6505b334a1a061903cd71014"
+        "dependency": "R5-R7 fixed accepted catalog 0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02; accepted header source b7061525fd00e68b6505b334a1a061903cd71014",
+        "artifact": {
+          "file": "HKIA_08_PRODUCT_ACH_HEADER_LOCALE_R8_DELTA_20261114.zip",
+          "sha256": "d496cc4c2752df23b32a1e5c1c275eed5102622163a33156bf7b4547826bcdd0",
+          "manifestSha256": "47e0593a46f1b76b5cb293caba6902548b069b1148da087a059f510f678fbf82",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES",
+          "baseCatalogSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02"
+        },
+        "verified": {
+          "newKeys": 1,
+          "newCells": 15,
+          "keysPerLocale": 190,
+          "totalCells": 2850,
+          "priorCellsUnchanged": 2835,
+          "focusedLocalePass": 15,
+          "requiredKeyAndPlaceholderParity": "PASS",
+          "negativeCases": 3,
+          "fail": 0,
+          "deltaEntries": 20,
+          "modified": 16,
+          "added": 4,
+          "unchangedBaseArchiveEntries": 11,
+          "manifestPrePostHashes": "PASS",
+          "crc": "PASS"
+        },
+        "handoff": {
+          "recipient": "06B QA-WEB-LOCALE",
+          "task": "PRODUCT_ACHIEVEMENT_HEADER_STATUS_LABEL_CATALOG_SCOPED_QA",
+          "status": "READY",
+          "scope": "New editor-owned ach.detail.statusLabel only, 15 new cells, prior 2835 unchanged; 16 MOD + 4 ADD including manifest. Fixed R5-R7 base + accepted header source b7061525fd00e68b6505b334a1a061903cd71014. Independent semantic/source mapping, exact SHA/manifest, one key and all 15 locales, placeholder/key parity and 3 negatives; no earlier accepted data/translation re-QA, no product runtime acceptance.",
+          "acceptance": "Reconstruct exact delta on base; check Status field role vs Achievement filter label, locale translations and unchanged old keys, GUID/UNKNOWN tokens invariant, scope exclusion; verify 190 keys per locale and 2850 total cells, 2835 prior exact; after scoped PASS direct 05 WEB; no release/Writer."
+        },
+        "unverified": [
+          "Independent translation/source QA, native speaker review; no actual product locale behavior"
+        ],
+        "next": "06B independent new-key scoped QA then 05 direct"
       }
     },
     "06A_QA_DATA_CORE": {
