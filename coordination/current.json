@@ -7927,11 +7927,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL_WEB_R4_SWITCH300_PASS_LOCALE_CONSUMER_TRUE_RED",
       "task": "WEB_R4_LOCALE_CONSUMER_SWITCH300_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "00 execute fixed R4 successor CI; 06B independent R4 after green or other new fixed HIGH scope; accepted locale R3/R4 and web R3 not repeated",
-      "dependency": "R4 test oracle repair self-QA complete; 00 fixed full CI pending; no product defect established by original class order failure",
+      "next": "05 direct consume isolated Web R4 and Switch300 versioned identity; 05 READY repair Locale Consumer R1 TRUE_RED; 08 account-native in-flight or next fixed HIGH; 00 fixed repair CI after 05; 06B focused re-QA after repair, no repeat accepted scopes",
+      "dependency": "Only Locale Consumer R1 blocked by reproducible reentrant close; isolated R4 and Switch300 acceptance independent; JS Beta unaffected",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -7976,7 +7976,7 @@
         "run": 43378037110,
         "scope": "R2 seven changed paths, independent browser/negative cases only; R1 accepted reuse"
       },
-      "claimStatus": "COMPLETE_SCOPED",
+      "claimStatus": "COMPLETE_SCOPED_WITH_TRUE_RED",
       "evidence": {
         "file": "HKIA_06B_R1_LOCALE_R2_WEB_INDEPENDENT_QA_20261113.zip",
         "sha256": "db2746c6eefc1d5dcef82efbe1c57d73607a5c20b6389756b50e4a03c6378930",
@@ -8193,17 +8193,17 @@
       },
       "nextAfterDep": {
         "webR4": {
-          "status": "WAIT_DEP",
-          "head": "a6a0d8732f73b0e13817b943f294832c61d769dd",
-          "repairHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
-          "repairDeltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
-          "repairStatus": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
-          "failedRun": 43386305291,
-          "condition": "00 pin test-only successor; full isolated compile/check/build and actual Chromium R4 320/375/1280 plus R1-R3 regression; 06B claims fixed HIGH R4 only after green evidence"
+          "status": "DONE_SCOPED_PASS",
+          "head": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+          "run": 43391376268
         },
         "locale": {
           "status": "WAIT_NEW_FIXED_HIGH_SCOPE",
           "condition": "08 new Switch300 typed evidence/locale contract or 05 fixed live locale integration; source exact; no full-language claim"
+        },
+        "localeConsumer": {
+          "status": "WAIT_DEP",
+          "condition": "05 fixed reentrant commit repair, 00 scope-pinned CI, then 06B independent focused re-test"
         }
       },
       "catalogClaims": {
@@ -8296,19 +8296,149 @@
       "newClaims": {
         "webR4": {
           "claim": "20261113_06B_WEB_R4",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS",
           "source": "90d39d24fe7a82e0f77c867091eb18a984ae93d8"
         },
         "localeConsumer": {
           "claim": "20261113_06B_LOCALE_CONSUMER_R1",
-          "status": "IN_FLIGHT",
+          "status": "TRUE_RED",
           "source": "523cbd8508773042380362e21fcc2ce7d0770c6a"
         },
         "switch300": {
           "claim": "20261113_06B_SWITCH300_TYPED",
-          "status": "IN_FLIGHT",
+          "status": "DONE_STATIC_NODE_SCOPED_PASS",
           "source": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83"
         }
+      },
+      "webR4": {
+        "status": "DONE_SCOPED_PASS_ISOLATED_R4",
+        "sourceHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+        "sourceSha256": "c6289fa836912dc101ed19b9ed50979cad4b778c9773fb041fe4e429ea8e3371",
+        "repairDeltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
+        "run": 43391376268,
+        "job": 131771848994,
+        "verified": {
+          "exactBlobs": 9,
+          "producerUnit": 71,
+          "independent": 5,
+          "fail": 0,
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "paging": [
+            120,
+            240,
+            241
+          ],
+          "selection": true,
+          "overflow": 0,
+          "externalRequests": 0
+        },
+        "unverified": [
+          "Separate local compiled Browser rerun unavailable (locked deps not installed)",
+          "actual product controller/catalog/media binding, actual mapped-image load failure, full Svelte/JS parity and Rust adapter"
+        ],
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY",
+          "condition": "R4 isolated component scoped acceptance; actual binding separate, no release authority"
+        },
+        "evidence": {
+          "file": "HKIA_06B_WEB_R4_LOCALE_CONSUMER_SWITCH300_QA_20261113.zip",
+          "sha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
+        }
+      },
+      "switch300": {
+        "status": "DONE_STATIC_NODE_SCOPED_PASS",
+        "sourceSha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
+        "manifestSha256": "a10c119b6f4f827839ea2d854165bc089fee1cf76548c47a1fa9c2b9f577727f",
+        "witnessSha256": "db2c39e8a9550a0f7f1af10d9063b68019bcf9f28ce3b676dfcb2b3402b32825",
+        "verified": {
+          "originalArchiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
+          "originalCRC": "PASS",
+          "producerReproduction": "BYTE_EXACT",
+          "independentTypedReader": "PASS_SHARED_FRAMING_TABLE_METADATA_ONLY",
+          "rows": 13220,
+          "exact": 13208,
+          "descriptionNullDeltas": 12,
+          "commonIds": 13220,
+          "v300Keys": 15292,
+          "v301Keys": 15304,
+          "actualMissing": 0,
+          "packCount": 30,
+          "independentLookup": 793200,
+          "corrections": 180,
+          "combinedTests": 54,
+          "unchanged": 79
+        },
+        "unverified": [
+          "Physical selector/official platform language inventory, runtime account platform titles",
+          "actual product UI and session invariance"
+        ],
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY",
+          "condition": "Use fixed versioned identity and pinned verified pack selected by actual save version; accepted R1 packs unchanged; not game-wide text coverage or release authority"
+        },
+        "evidence": {
+          "file": "HKIA_06B_WEB_R4_LOCALE_CONSUMER_SWITCH300_QA_20261113.zip",
+          "sha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
+        }
+      },
+      "localeConsumerR1": {
+        "status": "TRUE_RED",
+        "risk": "HIGH_LOCALE_UI_ADAPTER",
+        "sourceHead": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+        "deltaSha256": "e69cf532d8529fe5c0e41ed7dbaaaea3523191800fa1be6fe1b51cd3f7549fee",
+        "run": 43391367596,
+        "job": 131771821207,
+        "verified": {
+          "exactBlobs": 8,
+          "acceptedRuntimeRegistryPins": "PASS",
+          "producer": 15,
+          "independentPass": 4,
+          "independentFail": 2,
+          "fixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ]
+        },
+        "trueRed": {
+          "id": "LOCALE_CONSUMER_R1_REENTRANT_CLOSE_COMMIT",
+          "path": "svelte-ui/src/locale-consumer.ts",
+          "input": "Injected documentLanguage or storage.setItem synchronously calls consumer.close() during current verified request",
+          "expected": "STALE, CLOSED, active null; no old READY state resurrection",
+          "actual": "READY, READY, active ja/en; CLOSED notification occurred before resurrection; storage case writes=1",
+          "cause": "generation check after loader but absent after external callback(s) before final READY publish",
+          "impact": "Injected consumer close/state contract violation; no actual browser native callback reentry, live session/save mutation or game corruption observed",
+          "repair": "05 check generation/closed after each external call and before READY commit; define guarded side-effect contract for storage/document callback reentry, prevent stale preference/state commits; test Close/newer request during document/storage callbacks, stale success/reject, ordinary reentrant subscriber, metadata mismatch, storage denial and all 15 locales; preserve accepted runtime and other UI scopes",
+          "regression": "Independent repro red-repro.mjs and independent-locale.mjs in fixed evidence; fixed successor + 00 isolated CI + 06B focused acceptance"
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "task": "SVELTE_LOCALE_R1_REENTRANT_CLOSE_COMMIT_REPAIR",
+          "status": "READY",
+          "condition": "Repair only Locale Consumer state/callback boundary; no R4 or accepted runtime change; 00 fixed CI then 06B focused independent acceptance"
+        },
+        "evidence": {
+          "file": "HKIA_06B_WEB_R4_LOCALE_CONSUMER_SWITCH300_QA_20261113.zip",
+          "sha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
+        }
+      },
+      "newEvidence": {
+        "file": "HKIA_06B_WEB_R4_LOCALE_CONSUMER_SWITCH300_QA_20261113.zip",
+        "sha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_19_ENTRIES"
       }
     },
     "06C_QA_RELEASE": {
