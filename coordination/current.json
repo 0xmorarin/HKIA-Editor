@@ -5425,7 +5425,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R6_CAPACITY_R5_1_BROWSER_WAIT_ENV",
+      "status": "PARTIAL_R6_FIXED_SOURCE_WAIT_CI_R5_1_BROWSER_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5442,7 +5442,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 authorized private browser environment; 07 run fixed browser kit after environment, 06A independent harness/browser scope; 00 ADR Development Switch. Existing resource and Node QA accepted; no duplicate claims, no further 07 READY product work without ADR switch or explicit disjoint 00 assignment.",
+      "next": "00 R6 isolated CI READY (PR10 fixed, PR9 frozen); 07 after fixed CI artifact measured paired capacity and private genuine parity; 06A scoped acceptance after self-QA. R5.1 authorized genuine Chrome separate WAIT_ENV; no Development Switch or capacity grant.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -5718,7 +5718,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Actual empty Worker probe and genuine Chrome six; independent 06A browser/harness acceptance and 00 Development Switch; later formal features, capacity targets and production cutover separate. Existing managed Chrome URLBlocklist=* unchanged.",
+      "remaining": "R6 Rust compile/regression/paired measurement and genuine parity; R5.1 actual Chrome and independent browser/harness acceptance then 00 Development Switch; formal capacity targets and production cutover separate.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -6627,12 +6627,75 @@
       },
       "r6": {
         "task": "HKIA-RUST-014_BOUNDED_CAPACITY_FOUNDATION_R6",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_FIXED_SOURCE_BASELINE_HARNESS_PASS_WAIT_CI",
         "owner": "07 RUST CORE",
         "risk": "HIGH",
         "baseHead": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
         "claimBase": "0fe5c8f60c98b9ce5ad4aafdb8560fcc989614be",
-        "scope": "Explicit 00 disjoint foundation capacity work on new isolated branch, keep accepted R5.1 source/PR9/artifact frozen. Profile decode/index/Writer transient memory; bounded byte-range/lazy or chunked indexing and avoid redundant whole-buffer copies; implement smallest measured safe improvement, not new edit semantics. 07 owns crates/hkia-save-core/**, tests/rust/** and contracts/rust/** on new branch; no shared JS/UI/config/deploy edits. No unconditional raise limits; retain current default acceptance bounds until measured replacement independently approved. Compare 1/5/10/25/45 MiB and target 64/128 MiB/2M docs via separately guarded experimental profile if safe, checked arithmetic, memory and node/depth/cpu budgets, pathological shape controls, exact parity/rollback. Synthetic public CI only; genuine private; actual browser resource comparison separate. Deliver fixed Source/Delta/Manifest, self-QA and 06A scoped acceptance before any capacity change; preserve R5.1 genuine browser gate."
+        "scope": "One Writer file (exact segmented comparison and borrowed untouched LZ4 tokens), six test/contract ADD. R5.1 PR9 frozen, no ABI/limit/flags/workflow/UI edits. No experimental profile until candidate measured.",
+        "sourceHead": "ba11ec40229b031e09e5d48a7b81edcb7365c477",
+        "branch": "rust07/r6-bounded-capacity",
+        "pr": 10,
+        "source": {
+          "file": "HKIA_Rust07_R6_BoundedCapacity_20261113_Source.zip",
+          "sha256": "45d01c9f4a6afc747a6116fc40f31769fa7a5c920dd977a269b0c81cf3d9215b",
+          "entries": 112
+        },
+        "delta": {
+          "file": "HKIA_Rust07_R6_BoundedCapacity_20261113_Delta.zip",
+          "sha256": "de963f85afada3bfa7b32f247fe715b86ce8669a44f02fd8d42c6284aea9dae4",
+          "modified": 1,
+          "added": 6,
+          "deleted": 0
+        },
+        "manifest": {
+          "file": "HKIA_Rust07_R6_BoundedCapacity_20261113_Manifest.json",
+          "sha256": "b2857a3496f9200cb3160c43887eb15329d82f52ee94e2fb6940be25056bd7e4"
+        },
+        "evidence": {
+          "file": "HKIA_Rust07_R6_BoundedCapacity_20261113_Evidence.zip",
+          "sha256": "1ac21ce22f7e61be87be08cb3440ea8121389f805710133d28e6db3d143b413c",
+          "result": "HKIA_Rust07_R6_BoundedCapacity_20261113_RESULT.json",
+          "resultSha256": "693e50ae8722a8da53f2aa1544cfa8675472e99aab799a03095bd65b9d693c51",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "6/6 byte exact; 112 source and 7 delta SHA, 3 ZIP CRC PASS; 7 Git changed blobs exact"
+        },
+        "verified": {
+          "baseUnchanged": 105,
+          "changedGitBlobs": 7,
+          "referencePins": 11,
+          "generatedPins": 54,
+          "preparedCrateFiles": 76,
+          "syntheticGeneratorCases": 25,
+          "baselineHarnessCases": 15,
+          "baselineAccepted": 8,
+          "baselineRejected": 7,
+          "baselineEdits": 5,
+          "baselinePythonExactOracle": 5,
+          "baselineOriginalsUnchanged": 15,
+          "baseline45MiBMemoryBytes": 190971904,
+          "pythonSyntax": 4,
+          "nodeSyntax": 1,
+          "newRustTestsAdded": 4,
+          "newRustTestsRun": 0,
+          "candidateWasm": "NOT_BUILT",
+          "baselineArtifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838"
+        },
+        "unverified": [
+          "R6 compile, native/bridge regression, actual WASM paired 15-case memory gain, private genuine parity, independent QA",
+          "64/128MiB and 2M documents target NOT_MET; no limit raise",
+          "actual genuine Chrome R5.1/R6 WAIT_ENV"
+        ],
+        "blocker": "Local rustc/cargo absent; public toolchain DNS unavailable; 00 owns isolated nondeploy workflow. No candidate PASS asserted.",
+        "handoff": {
+          "to": "00_CTRL",
+          "task": "HKIA-RUST-014_R6_ISOLATED_NONDEPLOY_CI",
+          "status": "READY",
+          "file": "HKIA_Rust07_R6_BoundedCapacity_20261113_HANDOFF_00_06A.md",
+          "sha256": "b32b0bf902f99fb7ff97f1967d68d7bb336f3fe18423a4be85662f0be2a1ff6f",
+          "condition": "00 exact R6 branch nondeploy CI; fixed source guard 7 paths, prepare exact R4 reference checkout, Rust1.85.1 all native/bridge tests, WASM build; fixed baseline artifact id14019348055, paired synthetic15 and measured peak delta; code-only output. 07 after CI fixed artifact genuine private six/rollback and self-QA, then 06A HIGH independent. No main/PR9/deploy changes or genuine public CI."
+        },
+        "next": "00 isolated nondeploy CI READY; 07 WAIT_CI then exact R6 private genuine parity and measured self-QA; 06A after, 00 integration only accepted. R5.1 actual browser WAIT_ENV separate."
       }
     },
     "08_LOCALIZATION": {
