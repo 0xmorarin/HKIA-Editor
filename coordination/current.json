@@ -6473,6 +6473,16 @@
         "run": 43361999625,
         "condition": "05 continue independent next UI scope without changing accepted snapshot; 06 verify exact 8 paths and compiled evidence; no main merge/deploy."
       }
+    },
+    "r3CI": {
+      "task": "R3_SESSION_ABI_FIXED_PUBLIC_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "baseMain": "9045aba8b742d0f888445c466b71525150ba8d0c",
+      "sourceHead": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
+      "sourceSha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+      "scope": "PR7 workflow only, pinned synthetic 81 Rust/14 TS and code-only executable, no private inputs, no main merge/deploy",
+      "dependency": "R2 independent accepted; 07 R3 fixed"
     }
   },
   "formalRelease": {
