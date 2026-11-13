@@ -4704,7 +4704,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R4_GENUINE_WRITER_PARITY",
+      "status": "R4_GENUINE_WRITER_SELF_PASS_06A_EXECUTION_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4721,10 +4721,10 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "R4 fixed CI SUCCESS and private code-only executable ready; 07 genuine local only 6 candidates; 06A existing static then independent execution; no production enablement",
-      "task": "HKIA-RUST-008",
-      "baseHead": "7da4c3956b2eab799db9f06215430dac3400225e",
-      "scope": "R4 private native minimum transactional Writer, existing history+exact incomplete progress pair/batch, bounded reparse/export, one-step history",
+      "next": "06A independent R4 execution READY using fixed local binary and genuine six regenerated candidates; static scope already done, research originals separate. 07 after scoped acceptance actual WASM Module Worker Chrome minimum edit foundation; focused repair only if TRUE_RED. No JS Beta gate, main merge, deployment or Development Switch until Owner ADR conditions.",
+      "task": "HKIA-RUST-009",
+      "baseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
+      "scope": "Native minimum R4 genuine six candidates both versions/domains exact independent V33 comparison and Python block check, no product source change",
       "sourceSha256": "a04c1a6f7503f3eeeac6cf002b4c6726dc612b005db738985f33e469bb67ebff",
       "source": {
         "file": "HKIA_Rust07_R4_MinimumWriter_20261113_Source.zip",
@@ -4738,12 +4738,14 @@
       },
       "handoff": {
         "to": "06A QA-DATA-CORE",
-        "task": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_QA",
-        "status": "STATIC_IN_FLIGHT_EXECUTION_WAIT_CI",
-        "file": "HKIA_Rust07_R4_MinimumWriter_20261113_HANDOFF_06.md",
-        "sha256": "f52d2cb409dd0f956fc1c088a84e111cf18b2e96c3ee33d3184cd43163f2a1b2",
+        "task": "HKIA-RUST-009_R4_INDEPENDENT_EXECUTION",
+        "status": "READY_NOW_STATIC_ALREADY_DONE_NO_REPEAT",
+        "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_HANDOFF_06A.md",
+        "sha256": "8c4449fbf22b9bbeab76b46459ccf2f7c0cd171d65f33175d54c7130ddf94de7",
         "fixedSource": "d6401ccea03d67ad312ca1b052455974498ebe1e",
-        "scope": "R4 delta only, accepted R3 reuse. Private native Writer exact history and incomplete 100Fwishes decrease pair, atomic batch, verification and snapshots; 95 planned Rust tests, actual 6 private candidates pending."
+        "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+        "scope": "R4 HIGH execution scope only: actual six private candidates, exact independent Python decoded/raw witness, 12 fields, 60 ZIP frames, 192 LZ4 tokens, negatives and runtime rollback/CAS/replay/close/File A-B as needed; reuse existing 06A static and R2/R3 acceptance. No raw save in CI, no product changes by QA.",
+        "dependency": "NONE_FOR_R4_LOCAL_EXECUTION; V301_RESEARCH_ORIGINALS_SEPARATE"
       },
       "verification": {
         "sourceReadback": "PASS_93_SHA_CRC_ALL_5_ARTIFACTS",
@@ -4751,23 +4753,37 @@
         "gitBlobs": "PASS_11_OF_11",
         "publicCrate": "PASS_74_OF_74_54_GENERATED",
         "syntheticFixtureRead": "PASS_14_OF_14_EXISTING_R3_READER_NOT_WRITER",
-        "typescript": "PASS_14_OF_14",
+        "typescript": "PASS_14_OF_14_FIXED_CI",
         "v33ReferencePreview": 8,
         "v33ReferenceReject": 14,
-        "rustCompile": "UNVERIFIED_WAIT_00_CI",
+        "rustCompile": "PASS_FIXED_CI_1_85_1",
         "rustNewTestsPlanned": 14,
         "rustRegressionPlanned": 81,
-        "rustExecutedTests": 0,
-        "genuineRustWriter": "UNVERIFIED_0_OF_6",
-        "writer": "PRIVATE_NATIVE_SOURCE_IMPLEMENTED_UNCOMPILED",
+        "rustExecutedTests": 95,
+        "genuineRustWriter": "SELF_PASS_6_OF_6_EXACT_V33_ORACLE",
+        "writer": "PRIVATE_NATIVE_SCOPED_SELF_PASS",
         "wasm": "NOT_CONNECTED",
         "browser": "UNVERIFIED",
-        "gameAuth": "UNKNOWN"
+        "gameAuth": "UNKNOWN",
+        "rustNewTestsExecuted": 14,
+        "rustRegressionExecuted": 81,
+        "rustTestsPassed": 95,
+        "rustTestsFailed": 0,
+        "rustTestsSkipped": 0,
+        "releaseBuild": "PASS",
+        "originalsUnchanged": 2,
+        "exactFields": 12,
+        "nonTargetRawZipFrames": 60,
+        "unchangedRawLz4Tokens": 192,
+        "changedLz4Blocks": 12,
+        "rustCliNegatives": "PASS_8_OF_8_ZERO_STDOUT",
+        "oracleNegative": "PASS_2_OF_2_ZERO_STDOUT",
+        "independentQA": "06A_STATIC_REUSED_EXECUTION_READY"
       },
-      "implementation": "R4_PRIVATE_NATIVE_WRITER_SOURCE_IMPLEMENTED_UNCOMPILED",
+      "implementation": "R4_PRIVATE_NATIVE_WRITER_COMPILED_AND_GENUINE_SCOPED_SELF_PASS",
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
-      "handoffTo": "06A_EXISTING_R4_STATIC; 00_CI_DEPENDENCY_ONLY; 07_GENUINE_AFTER_CI; 06A_SCOPED_EXECUTION",
-      "dependency": "R4_CI_DONE; 07_PRIVATE_GENUINE_AND_06A_STATIC_PARALLEL",
+      "handoffTo": "06A_DIRECT_EXECUTION_ONLY_NO_REPEAT_STATIC; 07_WASM_WORKER_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
+      "dependency": "06A_INDEPENDENT_R4_EXECUTION_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
       "resumeBaseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
       "resumeScope": "Fixed R4 binary 43378029329, six genuine private candidates, V33 oracle and original preservation; no static QA repeat, no source edits except scoped repair if needed",
       "executionKit": {
@@ -4784,7 +4800,7 @@
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
       "resumeTask": "HKIA-RUST-009",
-      "previousTask": "HKIA-RUST-006",
+      "previousTask": "HKIA-RUST-008",
       "r2": {
         "source": {
           "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -5001,7 +5017,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Compile95 and actual six genuine candidates independent V33 verifier, 06 scoped acceptance, WASM Worker actual Chrome and resource/game/release gates",
+      "remaining": "06A independent R4 runtime/rollback scoped acceptance; actual WASM Module Worker Chrome both versions/domains; resource budgets and Development Switch gate; full formal scope and game persistence/production release",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -5362,13 +5378,14 @@
         },
         "handoff": {
           "to": "06A QA-DATA-CORE",
-          "task": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_QA",
-          "status": "STATIC_IN_FLIGHT_EXECUTION_WAIT_CI",
-          "file": "HKIA_Rust07_R4_MinimumWriter_20261113_HANDOFF_06.md",
-          "sha256": "f52d2cb409dd0f956fc1c088a84e111cf18b2e96c3ee33d3184cd43163f2a1b2",
+          "task": "HKIA-RUST-009_R4_INDEPENDENT_EXECUTION",
+          "status": "READY_NOW_STATIC_ALREADY_DONE_NO_REPEAT",
+          "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_HANDOFF_06A.md",
+          "sha256": "8c4449fbf22b9bbeab76b46459ccf2f7c0cd171d65f33175d54c7130ddf94de7",
           "fixedSource": "d6401ccea03d67ad312ca1b052455974498ebe1e",
-          "scope": "R4 delta only, accepted R3 reuse. Private native Writer exact history and incomplete 100Fwishes decrease pair, atomic batch, verification and snapshots; 95 planned Rust tests, actual 6 private candidates pending.",
-          "activeClaim": "HKIA-RUST-008_R4_MINIMUM_WRITER_SCOPED_STATIC_QA"
+          "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+          "scope": "R4 HIGH execution scope only: actual six private candidates, exact independent Python decoded/raw witness, 12 fields, 60 ZIP frames, 192 LZ4 tokens, negatives and runtime rollback/CAS/replay/close/File A-B as needed; reuse existing 06A static and R2/R3 acceptance. No raw save in CI, no product changes by QA.",
+          "dependency": "NONE_FOR_R4_LOCAL_EXECUTION; V301_RESEARCH_ORIGINALS_SEPARATE"
         },
         "verification": {
           "sourceReadback": "PASS_93_SHA_CRC_ALL_5_ARTIFACTS",
@@ -5376,18 +5393,32 @@
           "gitBlobs": "PASS_11_OF_11",
           "publicCrate": "PASS_74_OF_74_54_GENERATED",
           "syntheticFixtureRead": "PASS_14_OF_14_EXISTING_R3_READER_NOT_WRITER",
-          "typescript": "PASS_14_OF_14",
+          "typescript": "PASS_14_OF_14_FIXED_CI",
           "v33ReferencePreview": 8,
           "v33ReferenceReject": 14,
-          "rustCompile": "UNVERIFIED_WAIT_00_CI",
+          "rustCompile": "PASS_FIXED_CI_1_85_1",
           "rustNewTestsPlanned": 14,
           "rustRegressionPlanned": 81,
-          "rustExecutedTests": 0,
-          "genuineRustWriter": "UNVERIFIED_0_OF_6",
-          "writer": "PRIVATE_NATIVE_SOURCE_IMPLEMENTED_UNCOMPILED",
+          "rustExecutedTests": 95,
+          "genuineRustWriter": "SELF_PASS_6_OF_6_EXACT_V33_ORACLE",
+          "writer": "PRIVATE_NATIVE_SCOPED_SELF_PASS",
           "wasm": "NOT_CONNECTED",
           "browser": "UNVERIFIED",
-          "gameAuth": "UNKNOWN"
+          "gameAuth": "UNKNOWN",
+          "rustNewTestsExecuted": 14,
+          "rustRegressionExecuted": 81,
+          "rustTestsPassed": 95,
+          "rustTestsFailed": 0,
+          "rustTestsSkipped": 0,
+          "releaseBuild": "PASS",
+          "originalsUnchanged": 2,
+          "exactFields": 12,
+          "nonTargetRawZipFrames": 60,
+          "unchangedRawLz4Tokens": 192,
+          "changedLz4Blocks": 12,
+          "rustCliNegatives": "PASS_8_OF_8_ZERO_STDOUT",
+          "oracleNegative": "PASS_2_OF_2_ZERO_STDOUT",
+          "independentQA": "06A_STATIC_REUSED_EXECUTION_READY"
         },
         "publicTransport": {
           "file": "HKIA_Rust07_R4_MinimumWriter_20261113_PublicCodeTransport.json",
@@ -5406,7 +5437,7 @@
         },
         "ci": {
           "owner": "00 CTRL",
-          "status": "COMPILED_SYNTHETIC_PASS_CODE_ONLY_READY",
+          "status": "COMPILED_SYNTHETIC_PASS_CODE_ONLY_EXECUTED_PRIVATE",
           "runner": "RUSTUP_TOOLCHAIN=1.85.1 python3 tests/rust/run-writer-ci.py --abi-ts --code-only-artifact <fresh-dir>",
           "expectedTests": 95,
           "artifact": {
@@ -5424,7 +5455,16 @@
           },
           "toolchain": "Rust1.85.1 Node22.16 Python3 tsc5.8.3",
           "ciHead": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
-          "run": 43378029329
+          "run": 43378029329,
+          "job": 131729013270,
+          "tests": {
+            "passed": 95,
+            "failed": 0,
+            "skipped": 0
+          },
+          "abiTs": 14,
+          "releaseBuild": "PASS",
+          "diff": "ONLY_00_WORKFLOW_ADD"
         },
         "reference": {
           "v33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -5444,9 +5484,55 @@
             "3.0.1"
           ],
           "expectedCandidates": 6,
-          "actual": 0
+          "actual": 6
         },
-        "limits": "Existing history, not acquisition; incomplete 100Fwishes exact scalar decrease only; v300 RELATED pair vs v301 REQUIRED static reload; no timestamp/completion/Account writes; one-step undo/redo; HKS1 default read-only; no WASM/Worker/game acceptance"
+        "limits": "Existing history, not acquisition; incomplete 100Fwishes exact scalar decrease only; v300 RELATED pair vs v301 REQUIRED static reload; no timestamp/completion/Account writes; one-step undo/redo; HKS1 default read-only; no WASM/Worker/game acceptance",
+        "genuineExecution": {
+          "status": "SELF_PASS_6_OF_6_06A_INDEPENDENT_PENDING",
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "operations": [
+            "history",
+            "progress",
+            "batch"
+          ],
+          "exactFields": 12,
+          "nonTargetFrames": 60,
+          "unchangedRawLz4Tokens": 192,
+          "changedBlocks": 12,
+          "rawLz4BlocksTotal": 204,
+          "cliNegatives": 8,
+          "oracleNegatives": 2,
+          "originalsUnchanged": 2,
+          "accountRawPreserved": 6,
+          "actualCLI": "PLAN_PREVIEW_APPLY_VERIFY_EXPORT",
+          "syntheticSessionHistory": "95_CI_PASS_NOT_GENUINE_UNDO_REDO_REPLAY",
+          "wrapper": "Combined helper invocation timed out; individual actual six candidate, negative and block comparisons PASS; helper not claimed PASS",
+          "privacy": "PRIVATE_LOCAL_ORIGINAL_AND_TRANSIENT_CANDIDATES_ONLY; SIX_CANDIDATE_ZIPS_DISCARDED_AFTER_VERIFICATION; AGGREGATE_EVIDENCE_ONLY",
+          "evidence": {
+            "zip": {
+              "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_Evidence.zip",
+              "sha256": "29e967b54e502078cf4a9e38c7af929c0c6de2ee3e6f57148d4f7679698797c5",
+              "entries": 4,
+              "bytes": 7205
+            },
+            "result": {
+              "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_RESULT.json",
+              "sha256": "b7564cdd9191bb381d6ad8442cea9055466e38d6697e425a26b56576cd3dccdf"
+            },
+            "manifest": {
+              "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_Manifest.json",
+              "sha256": "cce10ecf3d884d33a7c93bc710cd73f5626908db1e67af908f789e728a2aebef"
+            },
+            "handoff": {
+              "file": "HKIA_Rust07_R4_Compiled_GenuineWriter_20261113_HANDOFF_06A.md",
+              "sha256": "8c4449fbf22b9bbeab76b46459ccf2f7c0cd171d65f33175d54c7130ddf94de7"
+            },
+            "readback": "ALL_4_BYTE_EXACT_4_ZIP_ENTRY_SHA_CRC_PASS"
+          }
+        }
       }
     },
     "08_LOCALIZATION": {
