@@ -4167,9 +4167,9 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "06 independent V30 fixed OFF live artifact and HTTPS/UI/rollback readiness QA; no Writer activation.",
-    "06 independent V33 new 01 historical Recipe6, 02 derived Visitor/Mission, 03 two causal research deltas; 00 serial integration only after acceptance.",
-    "07 R2 compile PASS; pin exact compiled source and private parity preparation, independent of JS Beta. 06 synthetic QA after fixed scope.",
+    "06 continue V30 live and new research scoped QA; 00 integrate exact accepted research deltas after handoff.",
+    "07 R2 code-only executable verified private readback; genuine Switch300/301 parity local only, then 06 independent acceptance; no JS Beta gate.",
+    "05 Svelte R1 compile/check/build and isolated Chromium PASS; adopt exact lock, a11y warnings/legacy adapter scoped followup; 06 independent UI QA.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED."
   ],
   "imageAssets": {
@@ -5030,15 +5030,18 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V30_FIXED_LIVE_ARTIFACT_QA",
-      "06_V33_NEW_01_02_03_RESEARCH_SCOPED_QA",
-      "07_RUST_R2_COMPILED_SOURCE_PIN_AND_PRIVATE_PARITY_PREPARATION"
+      "07_R2_PRIVATE_GENUINE_PARITY_LOCAL_ONLY",
+      "05_SVELTE_R1_LOCK_ADOPTION_A11Y_AND_COMPILED_SCOPE_PARITY",
+      "06_EXISTING_CLAIMS_CONTINUE_THEN_R2_SYNTHETIC_AND_SVELTE_SCOPED_QA"
     ],
     "nextAfterDep": [
       "00_SERIAL_FORMAL_RESEARCH_INTEGRATION_AFTER_06_ACCEPTANCE",
-      "04_ONLY_AFTER_V300_NATIVE_PRODUCER_AND_REWARD_CAUSAL_WITNESSES",
-      "06_V24_AUTHORIZED_PRIVATE_BROWSER",
-      "06_RUST_R2_INDEPENDENT_SYNTHETIC_QA_THEN_PRIVATE_PARITY_IF_ENV"
+      "06_R2_REAL_PARITY_AFTER_07",
+      "06_SVELTE_ADAPTER_PARITY_AFTER_05_FIXED_SCOPE",
+      "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
+      "00_DEVELOPMENT_SWITCH_AFTER_06",
+      "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL",
+      "06_V24_AUTHORIZED_PRIVATE_BROWSER"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -5743,25 +5746,25 @@
       "productionCutover": "PENDING",
       "nextReadyParallel": [
         "07_R2_PRIVATE_GENUINE_PARITY_LOCAL_ONLY",
-        "05_SVELTE_R1_COMPILED_SCOPE_AND_LOCK_ADOPTION",
-        "06_EXISTING_CLAIMS_CONTINUE_THEN_R2_SYNTHETIC"
+        "05_SVELTE_R1_LOCK_ADOPTION_A11Y_AND_COMPILED_SCOPE_PARITY",
+        "06_EXISTING_CLAIMS_CONTINUE_THEN_R2_SYNTHETIC_AND_SVELTE_SCOPED_QA"
       ],
       "nextAfterDep": [
         "06_R2_REAL_PARITY_AFTER_07",
-        "06_SVELTE_COMPILED_UI_AFTER_05_FIXED_SCOPE",
+        "06_SVELTE_ADAPTER_PARITY_AFTER_05_FIXED_SCOPE",
         "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
         "00_DEVELOPMENT_SWITCH_AFTER_06",
         "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
       ],
       "dependencyUnblock": {
         "task": "SVELTE_RUST_DEPENDENCY_UNBLOCK",
-        "status": "PARTIAL_RUST_READY_SVELTE_COMPILE_PASS_BROWSER_IN_FLIGHT",
+        "status": "DONE_RUST_EXECUTABLE_AND_SVELTE_COMPILED_BROWSER_DEPENDENCIES_UNBLOCKED",
         "owner": "00 CTRL",
         "baseMain": "8ed5f3303e3ead03de03bb08ae4343db77e813f9",
         "scope": "Nondeploy branch-only CI PR6 and exact code-only Rust R2 binary artifact PR5; no product source or live flags",
         "pr6": {
           "base": "fa18063330558e188e947c44843f7a3c6870559e",
-          "status": "COMPILE_PASS_BROWSER_ENV_REPAIR_IN_FLIGHT",
+          "status": "DONE_COMPILE_CHECK_BUILD_AND_ISOLATED_CHROMIUM_PASS",
           "head": "7fe5a83d09091eb1ded3f0fc61317c5d34acb5af",
           "run": 43353782026,
           "job": 131650828219,
@@ -5779,7 +5782,36 @@
             "readback": "BYTE_EXACT_CRC_PASS"
           },
           "warnings": "WorkspaceNavigation.svelte 21/22 a11y_no_noninteractive_element_to_interactive_role section role=tabpanel; 05 adjudicate/fix before full UI acceptance",
-          "verified": "Both runs fixed R1 code; 20 tests, typecheck and Vite compile/build PASS; browser rerun in progress"
+          "verified": {
+            "tests": 20,
+            "fail": 0,
+            "svelteCheckErrors": 0,
+            "svelteCheckWarnings": 2,
+            "build": "PASS",
+            "actualBuiltViteChromium": [
+              320,
+              375,
+              1280
+            ],
+            "clickKeyboard": "PASS",
+            "overflow": 0,
+            "externalRequests": 0,
+            "pageErrors": 0,
+            "runner": "ubuntu-24.04",
+            "lockPayload": "EXACT_SAME_SHA_BOTH_RUNS",
+            "lockRerunArtifact": {
+              "id": 14004772504,
+              "zipSha256": "1be3a93e064671a1770652f78f486a73eae6a52c28695b7d8a3dd7b6b1244c71",
+              "crc": "PASS",
+              "samePayload": true
+            }
+          },
+          "ci": "SUCCESS",
+          "handoff": {
+            "to": "05 WEB",
+            "task": "SVELTE_R1_LOCK_ADOPTION_AND_COMPILED_SCOPE_PARITY",
+            "condition": "Use existing private lock ZIP (same exact package-lock payload); adopt lock in 05-owned paths, adjudicate 2 tabpanel accessibility warnings, verify actual legacy adapter and expand only fixed scoped migration; no live JS/UI changes; 06 independent compiled scope QA before integration."
+          }
         },
         "pr5": {
           "base": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
@@ -5809,7 +5841,14 @@
             "condition": "Use existing private parity kit; verify ZIP/binary hashes, execute local only with two genuine originals; no upload; then 06 independent real parity. Existing 06 synthetic QA on fixed code remains READY."
           }
         },
-        "next": "07 READY genuine parity; 05 compiled scope ready after browser result; 06 current QA and independent Rust/Svelte scoped; no deploy"
+        "next": "Direct handoff 07 and 05 in parallel; 06 existing IN_FLIGHT then independent Rust/Svelte scoped QA; 00 only new serial integration/dependency/release task.",
+        "unverified": [
+          "R2 genuine Save parity not run",
+          "Rust Session/Writer/WASM browser not accepted",
+          "Svelte R1 isolated navigation only; actual legacy app adapter/full UI parity and 2 a11y warnings outstanding",
+          "V24 genuine browser and game acceptance separate"
+        ],
+        "rollback": "PR5 previous workflow 034f7dba…; PR6 prior source fa180633…; neither PR merged, main product and Pages unchanged."
       }
     }
   },
