@@ -13940,7 +13940,17 @@
         "run": 43505994342,
         "scope": "Exact accepted five modules/app composition, source provenance, full map and rollback, MIT notice, actual combined browser/interaction and per-module abort; independent integration oracle, privacy/allowlist and no Writer. Collection items excluded. Owner approval for fixed artifact only after acceptance. Generated modules have distribution-only comment normalization; verify original accepted input hashes, normalized output hashes, exact AST/tokens and actual browser; no automatic inheritance of transformed module PASS.",
         "risk": "RELEASE",
-        "owner": "06C QA-RELEASE"
+        "owner": "06C QA-RELEASE",
+        "independent": {
+          "branch": "qa06c/v33-five-scope-20261114",
+          "head": "9c698b711be1428d4cb8f8a56675119e5f7be41e",
+          "workflowBlob": "a54fcd9f16ac505acc7f49b1e0d95c353a870a9f",
+          "run": 43506613333,
+          "status": "IN_PROGRESS_OBSERVED",
+          "manifest": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
+          "provenance": "ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352",
+          "scope": "Six pinned archives, exact comment masks/tokenization, reverse patch composition, actual rollback bytes, full policy, synthetic cross-scope Chromium and all five individual module aborts; no deploy."
+        }
       }
     }
   },
