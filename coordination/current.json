@@ -53,7 +53,7 @@
       },
       "formalFollowup": {
         "task": "FORMAL_COLLECTION_EXISTING_RECIPE_TARGET_EXPANSION",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "SCOPED_PASS_06_INTEGRATED_V27",
         "baseHead": "9f1501e75199a49644e2e3d3577de6011577f826",
         "baseSourceSha256": "1a0a8af846c4f6ec6b4adf43f0f136176c8de5ad5b2557a38bf8912a19625074",
         "scope": "New exact existing Recipe targets only; source reference selection, genuine typed quantity inverse, deny unproved targets; no 5913958 receipt redo; no 03 reference overlap; V24 frozen",
@@ -67,7 +67,15 @@
         "remaining": "Own RecipeItemDetails managed bodies unconsumed; generic/external consumers, Switch asset/version parity, game auth/load/resave, actual product receipt and independent QA; nonrecipe reference closure remains WAIT_DEP",
         "next": "06 scoped 8 ADD QA after currently claimed scope; 03 targeted 32 causal review (4 representative first, 5 tag8), independently; 04 only accepted exact subset after both scoped acceptance; no V24 changes",
         "gameAccepted": false,
-        "productAuthorized": false
+        "productAuthorized": false,
+        "acceptance": "06 SCOPED_PASS_RECIPE32_EXISTING_ROW_RESEARCH_ONLY; 03 causal advisory accepted; 04 exact4 Writer independently accepted"
+      },
+      "absenceWitness": {
+        "task": "FORMAL_COLLECTION_HISTORICAL_RECIPE_ABSENCE_WITNESS",
+        "status": "IN_FLIGHT",
+        "baseHead": "95093e653156ea416881079a16130f8a0be392c0",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Audit existing private historical backups for actual absent/zero Recipe rows and same-version positive donor; no new row authorization or 32 target repeat; read-only typed audit and exact candidate eligibility; V24/Pages untouched"
       }
     },
     "02_ACHIEVEMENT": {
