@@ -11338,7 +11338,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_ACTIVE_PAGES_POLICY_V38_ACCEPTED_LOCALE_REPAIR_CI_R6_MEASURED",
+    "status": "DONE_POST_TRANSFER_R7_R5_R61_CI_V39_ACCEPT_V40_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -11448,19 +11448,20 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06C_YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
-      "00_R7_R5_RESELECT_COMBINED_FIXED_CI_NEW_REPO_GUARD",
-      "00_R6_1_FIXED_NONDEPLOY_CI_NEW_REPO_GUARD",
-      "07_BROWSER_KIT_STRICT_REPORT_REPAIR",
-      "00_V39_AND_HATS_OFF_SCOPED_RESEARCH_ACCEPTANCE"
+      "06B_R7_AND_R5_RESELECT_FIXED_DISJOINT_QA",
+      "07_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
+      "06A_BROWSER_KIT_STRICT_REPORT_REPAIR_FIXED_QA",
+      "05_SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
+      "06C_V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA"
     ],
     "nextAfterDep": [
-      "06B_R7_AND_R5_RESELECT_FIXED_SCOPED_QA_AFTER_CI",
-      "07_R6_1_MEASURED_CAPACITY_AFTER_FIXED_CI_THEN_06A",
-      "06A_BROWSER_KIT_REPAIR_QA_AFTER_07",
+      "06C_NEW_HOST_QA_IN_FLIGHT_NO_DUPLICATE",
+      "06A_R6_1_AFTER_07_FIXED_SELF_QA",
+      "05_R5_R7_BIND_AFTER_06B",
+      "00_SINGLE_ROOT_COMPOSE_AFTER_05_AND_06B",
+      "06C_FIXED_ROOT_DISTRIBUTION_AFTER_00",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
-      "05_PRODUCT_EQUIVALENT_SINGLE_ROOT_AFTER_00_FIXED_SCOPE"
+      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -13976,7 +13977,7 @@
     "v39Research": {
       "task": "V38_PLUS_RECIPE6_SAVED_CONDITIONS_RESEARCH_REFERENCE",
       "owner": "00 CTRL",
-      "status": "SELF_PASS_06C_READY",
+      "status": "DONE_06C_SCOPED_PASS_PRIVATE_REFERENCE",
       "risk": "RELEASE",
       "baseSourceSha256": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
       "sourceDelta": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
@@ -14021,7 +14022,7 @@
       "handoff": {
         "to": "06C QA-RELEASE",
         "task": "V39_FIXED_647_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "fixedSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
         "scope": "6 ADD only, 641 V38 exact, 06A accepted read-only saved conditions; exact source pins, 16 focused incl env witness, independent integration negatives, rollback, build and 4146 map; no repeated 06A genuine scope; no deployment.",
         "dependency": "V38 accepted; 06A stationSavedResult scoped PASS"
@@ -14454,7 +14455,7 @@
     },
     "postTransferExecution": {
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "DONE_FIXED_CI_AND_V39_ACCEPTANCE_V40_SELF_PASS",
       "baseHead": "1a1b4695ed757326a52b2bd50b459aad91c45f18",
       "baseBlob": "d2a5f87735f203ae20dab410a8d8ad1bd71a311d",
       "claims": {
@@ -14463,23 +14464,212 @@
           "source": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
           "scope": "one new workflow only; fixed 7+3 product paths unchanged",
           "risk": "HIGH",
-          "status": "IN_FLIGHT"
+          "status": "DONE"
         },
         "rust": {
           "task": "R6_1_FIXED_NONDEPLOY_CI",
           "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
           "scope": "one new workflow only; 7 MOD exact, PR10 lease only if necessary; no PR9 change",
           "risk": "HIGH",
-          "status": "IN_FLIGHT"
+          "status": "DONE"
         },
         "research": {
           "task": "V39_ACCEPTANCE_AND_HATS_OFF_RESEARCH_INTEGRATION",
           "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
           "risk": "RELEASE",
-          "status": "IN_FLIGHT"
+          "status": "DONE"
         }
       },
-      "noDeploy": true
+      "noDeploy": true,
+      "result": {
+        "web": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "rust": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
+        "v40": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641"
+      }
+    },
+    "svelteR7R5CombinedCI": {
+      "task": "R7_R5_FIXED_COMBINED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "status": "DONE_FIXED_CI_PASS_06B_READY",
+      "risk": "HIGH",
+      "source": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+      "head": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+      "branch": "web05/svelte-r7-r5-reselect-combined",
+      "workflowBlob": "7ac11e32bd1067a2f9a15ede89c7b8e7dd3694dd",
+      "run": 43418206708,
+      "job": 131861325132,
+      "verified": {
+        "node": 123,
+        "fail": 0,
+        "skip": 0,
+        "svelteErrors": 0,
+        "svelteWarnings": 0,
+        "build": "PASS",
+        "reference": "R1-R7 PASS",
+        "chromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r5DefinitionReselect": true,
+        "r7NullDistinct": true,
+        "r7RewardUnconfirmed": true,
+        "r7GroupSeparate": true,
+        "overflow": 0,
+        "errors": 0,
+        "external": 0,
+        "writer": "NO_WRITER_CONTROLS"
+      },
+      "handoffs": [
+        {
+          "to": "06B QA-WEB-LOCALE",
+          "task": "SVELTE_R7_FIXED_ACHIEVEMENT_FACTS_INDEPENDENT_QA",
+          "source": "af261fd12385a3209aca458dfc2c394862d2e504",
+          "compiledHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+          "scope": "exact seven R7 paths; source static preflight reused, compiled/browser independent material state negatives; no R1-R6 re-QA",
+          "status": "READY"
+        },
+        {
+          "to": "06B QA-WEB-LOCALE",
+          "task": "SVELTE_R5_RESELECT_FIXED_INDEPENDENT_QA",
+          "source": "8223586e4ca46eefe98472f83fbb9701c006fa2c",
+          "compiledHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+          "scope": "exact three repair paths; original definition reselect hidden/visible counterexample + independent transition regression, no R7 duplicated",
+          "status": "READY"
+        }
+      ],
+      "unverified": "Independent R5/R7, actual product binding, full localization and Writer; no merge/deploy"
+    },
+    "r61CI": {
+      "task": "R6_1_FIXED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "status": "DONE_FIXED_CI_PASS_CAPACITY_IMPROVEMENT_07_READY",
+      "risk": "HIGH",
+      "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+      "head": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
+      "branch": "rust07/r6-scratch-reuse",
+      "workflowBlob": "cbfaf2ad7b900fd3b86206a4f2faff1d81d76134",
+      "run": 43418211809,
+      "job": 131861342315,
+      "artifact": {
+        "id": 14032362483,
+        "name": "HKIA_Rust_R6_1_CodeOnly_43418211809",
+        "sha256": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+        "bytes": 133865,
+        "expiresUTC": "2026-11-20T11:36:25Z",
+        "wasmSha256": "2f91736baf1ee71c7ba111758ea7e24eea985d375b54e90e305c645817fde4b7"
+      },
+      "verified": {
+        "rust": "1.85.1",
+        "coreTests": 103,
+        "bridgeTests": 4,
+        "fail": 0,
+        "wasmRelease": "PASS",
+        "pairedSynthetic": 15,
+        "exactEditedOutputs": 5,
+        "chromeSyntheticResults": 8,
+        "nativeExact": 6,
+        "networkDenied": 0,
+        "serverViolations": 0,
+        "linear45MiB": {
+          "r51": 190971904,
+          "r6": 191102976,
+          "r61": 97058816,
+          "baselineReduction": 93913088
+        },
+        "capacityImprovementMeasured": true,
+        "resourceTargetAcceptance": false
+      },
+      "handoff": {
+        "to": "07 RUST CORE",
+        "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
+        "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "scope": "download code-only exact artifact via authorized connector; check SHA/manifest, all measured phase data, genuine private v300/v301 parity and lifecycle retained scratch/close/reopen/failed open; no real Save CI; then 06A independent HIGH QA",
+        "status": "READY"
+      },
+      "unverified": "Actual genuine candidate, 64/128MiB/2M goals, R5.1 real private Browser WAIT_ENV; no PR10/PR9 update, no Development Switch/deploy"
+    },
+    "v39Acceptance": {
+      "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "status": "DONE_V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTED",
+      "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+      "manifest": "66e9abf7217a72365137c3febe40462b89b3199bc9aef0aa536e0eafa21993c4",
+      "qaResult": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+      "qaEvidence": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
+      "verified": "Fixed source 647 manifest exact, accepted 06C scope and evidence ZIP SHA/CRC readback; 641 exact plus 6 ADD; 4146 distribution unchanged; no research-only deploy",
+      "handoff": {
+        "to": "01/03/04/07 reference consumers",
+        "scope": "read-only saved station conditional reference; no writer authority"
+      }
+    },
+    "v40Research": {
+      "task": "V39_PLUS_HATS_OFF_EXACT_PRODUCER_STATIC_RESEARCH_REFERENCE",
+      "owner": "00 CTRL",
+      "status": "SELF_PASS_06C_READY",
+      "risk": "RELEASE",
+      "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+      "upstreamDelta": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+      "upstreamAcceptance": "06A_DONE_SCOPED_PASS_STATIC_EXACT_PRODUCER",
+      "upstreamResult": "8d2f6e76273a2f94417f8bca282551af493d67345cb1f14aed826968c156d641",
+      "candidate": {
+        "label": "V40_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V40_ResearchReference_20261113_Source.zip",
+        "sha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "entries": 653,
+        "bytes": 3662307,
+        "manifest": {
+          "file": "HKIA_CTRL_V40_ResearchReference_20261113_Manifest.json",
+          "sha256": "b87564e932a96fa40c541dafc846823aa79c00c0867f1b5184181681e4b96b60"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V40_ResearchReference_20261113_Delta.zip",
+          "sha256": "7b054ec7ed6971a4c74d4b06edc44939ff49b864314dc4a59d2b97eecaba4298",
+          "added": 6,
+          "modified": 0,
+          "deleted": 0
+        },
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V40_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "484bfd2932b50e82545d0aff22337d7580a9051373d32d3a5812b0a220f5137b",
+          "entries": 4146,
+          "unchanged": 4146
+        },
+        "result": {
+          "file": "HKIA_CTRL_V40_ResearchReference_20261113_RESULT.json",
+          "sha256": "f182b2691e8df3aa29497528f54b4b58cf6d69482eaad43061ba03e2cb91c79f"
+        },
+        "evidence": {
+          "file": "HKIA_CTRL_V40_ResearchReference_20261113_Evidence.zip",
+          "sha256": "579249aedf8687217219ab92d554b3158a763a8135dec1ea25fb5c95b9fe678a"
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS"
+      },
+      "verified": "647 base exact, 6 ADD, upstream 5 hashes and manifest exact, 23 focused PASS, check/build both PASS, 55 source-derived distribution exact, 4146 map unchanged, rollback/reconstruction exact. Library evidence first lookup not visible; list recovered exact file and re-materialized all 6 exact.",
+      "unverified": "No genuine rerun, no external media rehash; runtime interaction eligibility, first-progress structural creation, reward persistence, Switch300 exact static parity unverified; no Writer or deploy.",
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "task": "V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+        "status": "READY",
+        "source": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "scope": "6 ADD only, 647 V39 exact; 06A static exact producer accepted scope reuse. Verify source/delta/manifest, focused 23 + independent integration negatives, build 55 and full map 4146 unchanged, rollback. No repeated Native proof, no deployment.",
+        "dependency": "V39 accepted; 06A Hats Off scoped static accepted"
+      }
+    },
+    "singleRootProductBinding": {
+      "owner": "00 CTRL",
+      "task": "SVELTE_SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING",
+      "status": "READY_05_WEB",
+      "risk": "HIGH",
+      "base": "V30 exact retained root b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "scope": "05 plan and implement minimal product-equivalent root UI/JS Adapter binding using accepted R1-R4/R6 and locale scopes, preserve V30 real display data, image map/4076 WebP, tabs/search/filter/state and no-save Writer OFF capability. Avoid replacing root by synthetic R4 or including unaccepted R5/R7. Keep V24 frozen; no deploy or Writer change. Reuse accepted components, incremental bridge or compatible fallback to existing V30 product if parity not proven; fixed source and self QA then 06B scope, 00 compose and 06C release. Can begin read-only binding baseline now; defer only R5/R7-dependent paths until independent acceptance.",
+      "handoff": {
+        "to": "05 WEB",
+        "status": "READY",
+        "task": "SINGLE_ROOT_PRODUCT_EQUIVALENT_BINDING_BASELINE",
+        "acceptance": "Actual product data+image parity, capability boundaries, no regression existing UI, 320/375/1280 real browser, privacy; no deploy. 06B independent HIGH QA before root distribution 06C."
+      }
     }
   },
   "formalRelease": {
