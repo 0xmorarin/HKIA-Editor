@@ -5537,7 +5537,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -5559,7 +5559,7 @@
       "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
       "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes",
       "qaRouting": "SELF_QA_ALWAYS; LOW_DIRECT_TO_CONSUMER; HIGH_06B_SCOPED_BEFORE_DEPENDENT_ACCEPTANCE; 06C_RELEASE_ONLY",
-      "result": "R1_FIXED_PRIVATE_CANDIDATE_06B_SCOPED_QA_IN_FLIGHT",
+      "result": "R1_DATA_SCOPED_PASS_RUNTIME_TRUE_RED_R2_CLAIMED",
       "fixedSource": {
         "artifact": "HKIA_08_LOCALIZATION_R1_PRIVATE_DELTA_20261113.zip",
         "sha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
@@ -5607,7 +5607,7 @@
         "to06B": {
           "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA",
           "fixedSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_DATA_SCOPED_PASS_RUNTIME_TRUE_RED",
           "acceptance": "Rebuild exact 30 packs/90 input SHA and stable identity; 15 locale catalog 44-key/placeholder parity, missing/fallback/version negative cases, no release/Writer changes; scope limited to available evidence.",
           "recipient": "06B QA-WEB-LOCALE",
           "claim": "20261113_06B_LOCALE_R1"
@@ -5618,6 +5618,16 @@
         "R1": "HIGH_NEW_GAME_EXTRACTION_LOCALE_IDENTITY_RUNTIME_AND_CATALOG_CONTRACT",
         "future": "LOW only within exact accepted contract with no new behavior, extraction, identity, safety, privacy or release risk; self-QA + applicable CI -> direct 05; HIGH -> 06B scoped QA",
         "release": "00 -> 06C integrated artifact/release only"
+      },
+      "r2": {
+        "task": "LOCALIZATION_R1_STALE_REJECT_REPAIR_AND_NATIVE_VERSION_EVIDENCE",
+        "status": "IN_FLIGHT",
+        "baseHead": "ce823591b30c5b40fdd33e0da7fccbdb9b02c17b",
+        "claim": "20261113_08_R2_RUNTIME_NATIVE",
+        "risk": "HIGH",
+        "scope": "Repair only runtime stale rejected requests; separate native selector/fallback and versioned typed localization key evidence; preserve R1 accepted data bytes",
+        "dependency": "06B R1 partial data PASS and LOCALE-R1-STALE-REJECT; original native/source pins",
+        "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945"
       }
     },
     "06A_QA_DATA_CORE": {
