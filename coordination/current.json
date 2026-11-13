@@ -3503,7 +3503,7 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "P0 Pages: Actions source verified; both exact V30/V29 commits absent; authenticated kit stage required; PR3 draft, no deploy or Writer activation.",
+    "P0 OWNER 20261113: restore V30 OFF Pages immediately after authenticated exact V30/V29 push; no wait V33/Beta/Rust/Svelte; PR3 serial/manual dispatch/06 live QA; never branch-root or activate Writer.",
     "06 V33 fixed 5 source/2 dist path scoped QA; V32 and UI accepted. 00 after QA.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
   ],
@@ -5201,6 +5201,15 @@
           "next": "Run existing private kit check/stage on authorized authenticated git host; verify both exact refs; then 00 serial PR3 integration/manual OFF deployment and 06 live QA. No further unchanged binary-chunk retries.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy"
         }
+      },
+      "ownerRecoveryPriority": {
+        "date": "2026-11-13",
+        "status": "OWNER_REITERATED_P0_RESTORE_VISIBLE_PAGES",
+        "decision": "Restore independently accepted fixed V30 OFF visual distribution first; do not wait for formal V33, Rust, Svelte or functional Beta. Preserve manual artifact-only publishing, Writer OFF, existing privacy and rollback gates.",
+        "execution": "Existing exact V30/V29 bundle stage on authenticated Git host; verify both remote refs then PR3 serial integration, manual workflow dispatch V30, 06 live HTTPS exact artifact and internal-path denial. No branch-root fallback.",
+        "observed": "Owner reports Site not found; current runtime cannot independently reach HTTPS or resolve github.com. PR3 still draft; fixed refs absent in last verified check. No new deployment.",
+        "parallel": "06 V33 combined QA already IN_FLIGHT; do not duplicate. Formal scope and functional Beta remain separate.",
+        "kitUse": "Existing private kit check and stage only; accept-v30 obsolete because current formal candidate V33; never run it or reset ledger."
       }
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
