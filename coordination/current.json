@@ -8994,7 +8994,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_V37_FIXED_06C_READY_R5_1_CI_PASS",
+    "status": "DONE_V37_ACCEPTED_SVELTE_R4_AND_LOCALE_CI_PASS_RUST_CAPACITY_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -9104,20 +9104,17 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "07_R5_1_NEW_EXACT_WASM_GENUINE_NODE_REBIND_PRIVATE",
-      "05_SVELTE_R4_TEST_REPAIR_EXISTING_AND_R3_LOCALE_BINDING",
-      "06A_R5_1_INDEPENDENT_REPAIR_EXISTING_IN_FLIGHT",
-      "04_V301_MARKER_METADATA_CHAIN_EXISTING_IN_FLIGHT",
-      "06C_V37_FIXED_630_SCOPED_QA"
+      "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT",
+      "06B_SVELTE_R4_AND_LOCALE_R1_FIXED_SCOPED_QA_PARALLEL",
+      "06A_THREE_RESEARCH_EXISTING_IN_FLIGHT",
+      "05_NEXT_DISJOINT_UI_OR_ACCEPTED_R3_CATALOG_PREPARATION"
     ],
     "nextAfterDep": [
-      "00_ACCEPT_V37_AFTER_06C",
-      "00_SVELTE_R4_REPIN_CI_AFTER_05_FIXED_TEST_REPAIR",
-      "06B_SVELTE_R4_AFTER_GREEN_CI_OR_NEW_FIXED_LOCALE_BINDING",
-      "05_R4_CATALOG_BINDING_AFTER_RELEVANT_WEB_ACCEPTANCE",
+      "00_AFTER_06A_DERIVED23_RECIPE6_OR_MARKER_FIXED_ACCEPTANCE",
+      "05_R4_LOCALE_AND_PRODUCT_INTEGRATION_AFTER_06B",
+      "06A_R6_CAPACITY_AFTER_07_FIXED_SELF_QA",
       "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
-      "06A_R5_1_EXECUTION_AFTER_07_FIXED_SELF_QA_OR_04_MARKER_METADATA_FIXED",
-      "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
+      "06C_V24_GENUINE_BROWSER_WAIT_ENV",
       "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
       "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
     ],
@@ -9778,25 +9775,22 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "V37_FIXED_REFERENCE_AND_R5_1_CI",
+      "task": "V37_ACCEPTANCE_SVELTE_CI_AND_CAPACITY_ASSIGNMENT",
       "status": "DONE_SCOPED_HANDOFF",
       "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
-      "scope": "V37 self-QA fixed, 06C ready; R5.1 synthetic actual Chrome PASS new binary; actual genuine Chrome remains WAIT_ENV; no deploy/activation",
+      "scope": "V37 accepted reference; both Svelte isolated CI green ->06B; explicit 07 capacity foundation R6 isolated, prior R5.1 accepted frozen. Actual genuine browser wait env; no product enable/deploy",
       "next": [
-        "07_R5_1_NEW_EXACT_WASM_GENUINE_NODE_REBIND_PRIVATE",
-        "05_SVELTE_R4_TEST_REPAIR_EXISTING_AND_R3_LOCALE_BINDING",
-        "06A_R5_1_INDEPENDENT_REPAIR_EXISTING_IN_FLIGHT",
-        "04_V301_MARKER_METADATA_CHAIN_EXISTING_IN_FLIGHT",
-        "06C_V37_FIXED_630_SCOPED_QA"
+        "07_R6_BOUNDED_CAPACITY_FOUNDATION_EXPLICIT_DISJOINT",
+        "06B_SVELTE_R4_AND_LOCALE_R1_FIXED_SCOPED_QA_PARALLEL",
+        "06A_THREE_RESEARCH_EXISTING_IN_FLIGHT",
+        "05_NEXT_DISJOINT_UI_OR_ACCEPTED_R3_CATALOG_PREPARATION"
       ],
       "after": [
-        "00_ACCEPT_V37_AFTER_06C",
-        "00_SVELTE_R4_REPIN_CI_AFTER_05_FIXED_TEST_REPAIR",
-        "06B_SVELTE_R4_AFTER_GREEN_CI_OR_NEW_FIXED_LOCALE_BINDING",
-        "05_R4_CATALOG_BINDING_AFTER_RELEVANT_WEB_ACCEPTANCE",
+        "00_AFTER_06A_DERIVED23_RECIPE6_OR_MARKER_FIXED_ACCEPTANCE",
+        "05_R4_LOCALE_AND_PRODUCT_INTEGRATION_AFTER_06B",
+        "06A_R6_CAPACITY_AFTER_07_FIXED_SELF_QA",
         "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
-        "06A_R5_1_EXECUTION_AFTER_07_FIXED_SELF_QA_OR_04_MARKER_METADATA_FIXED",
-        "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
+        "06C_V24_GENUINE_BROWSER_WAIT_ENV",
         "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
         "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
       ]
@@ -10942,7 +10936,7 @@
     "v37Research": {
       "task": "V36_PLUS_V301_EXACT29_CAUSAL_REFERENCE",
       "owner": "00 CTRL",
-      "status": "DONE_SELF_PASS_FIXED_06C_READY",
+      "status": "DONE_SCOPED_PASS_V37_ACCEPTED",
       "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
       "deltaSha256": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
       "scope": "5 accepted research ADD only; exact V36 625 unchanged; no product/deploy change",
@@ -11048,32 +11042,132 @@
     },
     "svelteR4RepairCI": {
       "task": "SVELTE_R4_FIXED_ORACLE_REPAIR_CI",
-      "status": "IN_FLIGHT_CI_RUNNING",
+      "status": "DONE_FIXED_R4_REPAIR_CI_PASS_06B_READY",
       "owner": "00 CTRL",
       "sourceHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
       "scope": "1 test-only MOD; repin existing workflow, fast-forward fixed R4 branch, full regression",
       "head": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
       "run": 43391376268,
       "job": 131771848994,
-      "verified": "repair 1 MOD only, workflow 1 MOD; exact fixed pin, fast-forward success"
+      "verified": {
+        "repairPaths": 1,
+        "workflowPaths": 1,
+        "sourceGuard": "PASS",
+        "lock": "PASS",
+        "unit": 71,
+        "fail": 0,
+        "skip": 0,
+        "svelteCheck": "0 errors 0 warnings",
+        "build": "PASS",
+        "legacyReference": "PASS",
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r1r2r3Regression": "PASS",
+        "r4Paging": [
+          120,
+          240,
+          241
+        ],
+        "selection": 2,
+        "filterReset": true,
+        "missingDistinct": true,
+        "overflow": 0,
+        "pageErrors": 0,
+        "externalRequests": 0
+      },
+      "ci": "SUCCESS",
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "task": "SVELTE_R4_FIXED_ACHIEVEMENT_LIST_SCOPED_QA",
+        "sourceHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+        "sourceSha256": "c6289fa836912dc101ed19b9ed50979cad4b778c9773fb041fe4e429ea8e3371",
+        "repairDeltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
+        "run": 43391376268,
+        "scope": "New R4 component and test-only repair, independent model/behavior counterexamples and fixed actual browser CI, no R1-R3 repeat. Product binding/actual game images separate."
+      }
     },
     "svelteLocaleCI": {
       "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_CI",
-      "status": "IN_FLIGHT_CI_RUNNING",
+      "status": "DONE_FIXED_LOCALE_R1_CI_PASS_06B_READY",
       "owner": "00 CTRL",
       "sourceHead": "9863dd6b38ebcbf4ce25611812dd78ea8dd7e887",
       "scope": "8 ADD isolated synthetic consumer; nondeploy CI only; no game packs or live binding",
       "head": "523cbd8508773042380362e21fcc2ce7d0770c6a",
       "run": 43391367596,
       "job": 131771821207,
-      "verified": "8 ADD only, isolated workflow 1 ADD; exact fixed pin"
+      "verified": {
+        "sourceGuard": "PASS",
+        "lock": "PASS",
+        "unit": 58,
+        "fail": 0,
+        "skip": 0,
+        "svelteCheck": "0 errors 0 warnings",
+        "build": "PASS_BOTH",
+        "legacyReference": "PASS",
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r1r2r3Regression": "PASS",
+        "syntheticSelector": "AUTO_MANUAL_RELOAD_LANG_FOCUS_PASS",
+        "overflow": 0,
+        "pageErrors": 0,
+        "externalRequests": 0,
+        "privateActualRuntime": "05 existing 15 cases, not public CI"
+      },
+      "ci": "SUCCESS",
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_SCOPED_QA",
+        "sourceHead": "523cbd8508773042380362e21fcc2ce7d0770c6a",
+        "deltaSha256": "e69cf532d8529fe5c0e41ed7dbaaaea3523191800fa1be6fe1b51cd3f7549fee",
+        "run": 43391367596,
+        "scope": "8 ADD isolated consumer, actual accepted 08 runtime/registry private independent oracle; synthetic selector Chrome and state/storage/stale negatives; no repeat locale R1-R4 catalog QA, no actual product binding claim"
+      }
     },
     "v37Acceptance": {
       "task": "V37_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "DONE_V37_PRIVATE_RESEARCH_REFERENCE_ACCEPTED",
       "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
-      "scope": "Record 06C independent fixed reference scoped PASS only; no deploy or Writer grant"
+      "scope": "Record 06C independent fixed reference scoped PASS only; no deploy or Writer grant",
+      "verified": {
+        "source": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+        "manifest": "7f9b5928b0593bf98789e820253be2e36f7814b413b998d8e053125d0e8d24c7",
+        "artifactManifest": "b8c6cf6610efcfcf7e40067ed2a32aa1501d48ebef9d970210c49366a41c60a0",
+        "qaResult": "aa057aa0074b2d346586771e0703b7a3e50fe917e18de1a7667316606705e555",
+        "qaEvidence": "57c155f9c1efaaccab8e590accb5c33cec45851016337333b726fb2ae380a30f",
+        "readback": "FIVE_FILES_SHA_MATCH_BOTH_ZIP_CRC_PASS",
+        "scope": "630 entries; 625 unchanged; 5 ADD; 30 focused + 6 negatives; exact rollback/reconstruction; 55 build and 4146 distribution map unchanged"
+      },
+      "handoff": {
+        "to": "01/02/03/04/07/05 reference consumers",
+        "scope": "Reference only; no Writer or deploy authority"
+      }
+    },
+    "r51IndependentReconciliation": {
+      "status": "DONE_SCOPED_ACCEPTED_NODE_GENUINE_AND_DEFENSIVE_BOUNDS",
+      "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+      "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+      "replyAndGenuine": "65acd834efd0e0c54ad9ca716de9a5ddbc1c47631f2924c23df1d198a19348e3",
+      "resource": "b64f819c6abccce5b68b7e04a04410f925e8c9f199405fe4fc614fd66b1eec5b",
+      "developmentSwitch": "WAIT_ENV_GENUINE_ACTUAL_CHROME",
+      "resourceTargets": "NOT_MET; 45MiB max and shape-specific 333326 documents; no defense failure"
+    },
+    "rustCapacityAssignment": {
+      "task": "HKIA-RUST-013_BOUNDED_CAPACITY_FOUNDATION_R6",
+      "owner": "07 RUST CORE",
+      "status": "READY",
+      "risk": "HIGH",
+      "baseHead": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+      "baseArtifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+      "scope": "Explicit 00 disjoint foundation capacity work on new isolated branch, keep accepted R5.1 source/PR9/artifact frozen. Profile decode/index/Writer transient memory; bounded byte-range/lazy or chunked indexing and avoid redundant whole-buffer copies; implement smallest measured safe improvement, not new edit semantics. 07 owns crates/hkia-save-core/**, tests/rust/** and contracts/rust/** on new branch; no shared JS/UI/config/deploy edits. No unconditional raise limits; retain current default acceptance bounds until measured replacement independently approved. Compare 1/5/10/25/45 MiB and target 64/128 MiB/2M docs via separately guarded experimental profile if safe, checked arithmetic, memory and node/depth/cpu budgets, pathological shape controls, exact parity/rollback. Synthetic public CI only; genuine private; actual browser resource comparison separate. Deliver fixed Source/Delta/Manifest, self-QA and 06A scoped acceptance before any capacity change; preserve R5.1 genuine browser gate.",
+      "dependency": "06A current defensive bounds independently accepted; no genuine Chrome prerequisite for isolated foundation work",
+      "acceptance": "Measured improvements vs exact R5.1 baseline, no old accepted safety regression; unknown/rejected targets explicitly reported; 06A independent HIGH before 00 integration. No Development Switch, public enablement or new Writer capability."
     }
   },
   "formalRelease": {
@@ -11609,6 +11703,110 @@
       "noDeployAuthorization": true
     },
     "researchReference": {
+      "label": "V37_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
+      "file": "HKIA_CTRL_V37_ResearchReference_20261113_Source.zip",
+      "sha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+      "entries": 630,
+      "bytes": 3579125,
+      "baseSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+      "manifest": {
+        "file": "HKIA_CTRL_V37_ResearchReference_20261113_Manifest.json",
+        "sha256": "7f9b5928b0593bf98789e820253be2e36f7814b413b998d8e053125d0e8d24c7"
+      },
+      "delta": {
+        "file": "HKIA_CTRL_V37_ResearchReference_20261113_Delta.zip",
+        "sha256": "b18711a11e6204c5f57cb8ae98425514bc1918674ce26a3498088a5fd3196a07",
+        "added": 5,
+        "modified": 0,
+        "deleted": 0
+      },
+      "distribution": {
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V37_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "b8c6cf6610efcfcf7e40067ed2a32aa1501d48ebef9d970210c49366a41c60a0"
+        },
+        "baseArtifactManifestSha256": "12877c97e403ecd6aae110165395d5c0cf9a0119df02304ce2ff475b97110ef5",
+        "entries": 4146,
+        "unchanged": 4146,
+        "modified": 0,
+        "added": 0,
+        "flags": "OFF",
+        "externalMediaRehashed": false
+      },
+      "evidence": {
+        "result": {
+          "file": "HKIA_CTRL_V37_ResearchReference_20261113_RESULT.json",
+          "sha256": "f8c25082a49338dadedb0a9597ddd5c2366ef3efa9bffa69a2cb94705ae4d87d"
+        },
+        "zip": {
+          "file": "HKIA_CTRL_V37_ResearchReference_20261113_Evidence.zip",
+          "sha256": "f82f85902d8d98fd3e2f9ea61eff682732ad00a00164b931fe1bd3578acec6bf"
+        }
+      },
+      "privateLibrary": "HKIA Editor Private",
+      "readback": "6_OF_6_BYTE_EXACT_3_ZIP_CRC_PASS",
+      "acceptance": "SCOPED_PASS_V37_PRIVATE_RESEARCH_REFERENCE",
+      "independentEvidence": {
+        "result": {
+          "file": "HKIA_06C_V37_SCOPED_QA_20261113_RESULT.json",
+          "sha256": "aa057aa0074b2d346586771e0703b7a3e50fe917e18de1a7667316606705e555"
+        },
+        "zip": {
+          "file": "HKIA_06C_V37_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "57c155f9c1efaaccab8e590accb5c33cec45851016337333b726fb2ae380a30f"
+        },
+        "readback": "BOTH_BYTE_EXACT_SHA_CRC_5_MANIFEST_ENTRIES_PASS",
+        "privateLibrary": "HKIA Editor Private"
+      }
+    },
+    "localization": {
+      "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "record": "coordination/localization-decision-20261113.md",
+      "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
+      "formalRequired": true,
+      "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
+      "supportedLanguages": {
+        "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
+        "status": "UNVERIFIED_FULL_INVENTORY",
+        "versions": [
+          "3.0.0",
+          "3.0.1"
+        ],
+        "noWandLocaleListReuse": true
+      },
+      "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
+      "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
+      "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
+      "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
+      "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
+      "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
+      "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
+      "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
+      "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
+      "existing": {
+        "file": "data/local-achievement-locales.json",
+        "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
+        "version": "3.0.1",
+        "records": 820,
+        "enTitles": 820,
+        "jaTitles": 820,
+        "enDescriptions": 720,
+        "jaDescriptions": 720,
+        "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
+      },
+      "wandReference": {
+        "repo": "DreamwishWand/web",
+        "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
+        "files": {
+          "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
+          "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
+          "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
+          "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
+        },
+        "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
+      }
+    },
+    "previousResearchReference": {
       "label": "V36_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
       "file": "HKIA_CTRL_V36_ResearchReference_20261113_Source.zip",
       "sha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
@@ -11662,104 +11860,6 @@
           "sha256": "17edcea0595ba4ce8a1fd051a2708feaca6983a8f6f3ccf280536baad9caa2ac"
         },
         "readback": "BOTH_BYTE_EXACT_SHA_CRC_8_MANIFEST_ENTRIES_PASS",
-        "privateLibrary": "HKIA Editor Private"
-      }
-    },
-    "localization": {
-      "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
-      "record": "coordination/localization-decision-20261113.md",
-      "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
-      "formalRequired": true,
-      "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
-      "supportedLanguages": {
-        "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
-        "status": "UNVERIFIED_FULL_INVENTORY",
-        "versions": [
-          "3.0.0",
-          "3.0.1"
-        ],
-        "noWandLocaleListReuse": true
-      },
-      "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
-      "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
-      "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
-      "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
-      "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
-      "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
-      "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
-      "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
-      "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
-      "existing": {
-        "file": "data/local-achievement-locales.json",
-        "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
-        "version": "3.0.1",
-        "records": 820,
-        "enTitles": 820,
-        "jaTitles": 820,
-        "enDescriptions": 720,
-        "jaDescriptions": 720,
-        "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
-      },
-      "wandReference": {
-        "repo": "DreamwishWand/web",
-        "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
-        "files": {
-          "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
-          "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
-          "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
-          "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
-        },
-        "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
-      }
-    },
-    "previousResearchReference": {
-      "label": "V35_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
-      "file": "HKIA_CTRL_V35_ResearchReference_20261113_Source.zip",
-      "sha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-      "entries": 615,
-      "bytes": 3464886,
-      "baseSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
-      "classification": "RESEARCH_REFERENCE_ONLY_NO_NEW_WRITER_OR_DEPLOY_PERMISSION",
-      "manifest": {
-        "file": "HKIA_CTRL_V35_ResearchReference_20261113_Manifest.json",
-        "sha256": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004"
-      },
-      "delta": {
-        "file": "HKIA_CTRL_V35_ResearchReference_20261113_Delta.zip",
-        "sha256": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
-        "added": 33,
-        "modified": 0,
-        "deleted": 0
-      },
-      "distribution": {
-        "artifactManifest": {
-          "file": "HKIA_CTRL_V35_ResearchReference_20261113_ArtifactManifest.json",
-          "sha256": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500"
-        },
-        "baseArtifactManifestSha256": "8ebf4517f9b041a8d451440b122f12bcc96c8c9f4a3e48a5b60273643d66cb7c",
-        "entries": 4146,
-        "bytes": 146355796,
-        "webp": 4076,
-        "modules": 55,
-        "modified": 0,
-        "added": 0,
-        "unchanged": 4146,
-        "flags": "OFF",
-        "reconstruct": "EXACT_ACCEPTED_V34_FULL_MAP_REUSED; V34/V35_SOURCE_BUILD_55_FILES_BYTE_EXACT; EXTERNAL_MEDIA_NOT_REHASHED"
-      },
-      "acceptance": "SCOPED_PASS_V35_PRIVATE_RESEARCH_REFERENCE",
-      "privateLibrary": "HKIA Editor Private",
-      "readback": "ALL_6_BYTE_EXACT_SHA_CRC_PASS",
-      "independentEvidence": {
-        "result": {
-          "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
-          "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
-        },
-        "zip": {
-          "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
-          "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
-        },
-        "readback": "BOTH_EXACT_SHA_CRC_PASS",
         "privateLibrary": "HKIA Editor Private"
       }
     }
