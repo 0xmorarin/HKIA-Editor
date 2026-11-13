@@ -438,12 +438,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "RECIPE6_SWITCH300_CAUSAL_LOCAL_PASS_QA_READY_WAIT_EXACT_STATION_CONSUMER_WITNESS",
+      "status": "EXACT29_SOURCE_CAUSAL_JOIN_LOCAL_PASS_QA_READY_RECIPE6_WAIT_STATION_WITNESS",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_SCOPED_01_RECIPE6_PRODUCER_AND_03_CAUSAL_NEW_DELTAS; 03_WAIT_EXACT_STATION_MISSION_COUNTER_ASSET_WITNESS_OR_QA_COUNTEREXAMPLE; 04_WAIT_ACCEPTED_EXACT_COLLECTION_ONLY_CONTRACT; 00_SERIAL_AFTER_QA; NO_WRITER_OR_DEPLOY",
+      "next": "06_EXISTING_IN_FLIGHT_ADD_03_EXACT29_JOIN_FIXED_SCOPE; 04_AFTER_02_03_ACCEPTED_EXACT_V300_83_PRIVATE_WRITER; 03_WAIT_NEW_RECIPE6_STATION_CONSUMER_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -794,12 +794,23 @@
       },
       "exact29SourceAdjudication": {
         "task": "SWITCH300_EXACT29_SOURCE_CAUSAL_ADJUDICATION",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_SOURCE_CAUSAL_JOIN_PASS_QA_READY",
         "owner": "03 LINKAGE",
         "baseLedgerBlob": "92005770b03a2521d409b0faee2fb655f8dcdd1d",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Join new 02 exact29 serialized definition witness to prior 03 genuine read-only causal aggregate; verify exact IDs, parent/ordered membership, thresholds, reward absence, operation fields, root conditional transitions; no Native repeat or product authority",
-        "dependency": "02 e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f pending independent QA; prior 03 ca8c9a39c6232277f643e4ae3f760548fafff5d8db762e6e452e2a1b4824d06e and 06 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+        "dependency": "02 e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f pending independent QA; prior 03 ca8c9a39c6232277f643e4ae3f760548fafff5d8db762e6e452e2a1b4824d06e and 06 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3",
+        "claimCommit": "6305ae742ffd05d079ff2468c0515740c14800f3",
+        "artifact": "HKIA_03_SWITCH300_EXACT29_JOIN_V33_DELTA_20261113.zip",
+        "deltaSha256": "643f4bfc64946fcd6f4cc0290ca0f7563121aef608b671a0d4c399aa6f21de9b",
+        "manifestSha256": "8700a2863b8abf5c391015a9227d6d1caf6e714179b91db234ef9ed3fe03e3c9",
+        "changes": "6 ADD + transport manifest; 0 MOD/DEL; disjoint V33/V34/02 definition/01+03 Recipe6",
+        "verified": "29 exact targets 10 complete/19 revoke/6 terminal/9 absence; 118 closure rows 110 ordered child refs/8 parents; 63 root group identities and 757 member counts; 118 no reward/DLC/Event; exact v300/83 genuine read-only 9 ordered absence sets 281 occurrences/67 distinct, original unchanged/no outputs; 18 focused PASS; V33 two source preimages equal V34; ZIP SHA CRC Library exact readback",
+        "classification": "CONDITIONAL_SERIALIZED_DEFINITION_AND_CAUSAL_JOIN_ONLY; 23_NONTERMINAL_6_SLOT_0_ACCOUNT; 6_TERMINAL_REVOKE_8_SLOT_2_ACCOUNT; ABSENCE9_NO_STRUCTURAL_WRITES; NO_NEW_UNCONDITIONAL_REQUIRED",
+        "remaining": "02 raw serialized extraction independent QA and 03 join independent QA; runtime registration/scheduling; physical auth/load/resave and reward claim/replay; 04 exact v300/83 private Writer proof. Manual counterUnique null is not explicit false; prior typed scalar guards retained.",
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "next": "06 existing V34_SVELTE_R1_R3_AND_NEW_RESEARCH_SCOPED_QA in flight: add exact new 03 6 paths after fixed current scope; compare 02 definition independently, reproduce 18 focused + genuine ordered absence audit. 04 after both scoped accepted only; 00 serial research; 03 WAIT new concrete Recipe6 station/consumer original or QA counterexample."
       }
     },
     "04_SAVE_CORE": {
