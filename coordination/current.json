@@ -13972,7 +13972,7 @@
     "organizationTransferPreflight": {
       "task": "HKIA_ORGANIZATION_TRANSFER_PREFLIGHT_20261113",
       "owner": "00 CTRL",
-      "status": "READY_OWNER_NATIVE_TRANSFER_UI_CONDITIONAL_ORG_POLICY_CHECK",
+      "status": "IN_FLIGHT_POST_TRANSFER_CANONICAL_REBIND",
       "risk": "RELEASE",
       "sourceRepository": "0xmorarin/HKIA-Editor",
       "targetRepository": "Yumekiraboshi/HKIA-Editor",
@@ -14306,6 +14306,17 @@
           "browserKit": "TRUE_RED_TEST_EVIDENCE_VALIDATION_ONLY_WAIT_ENV_GENUINE"
         },
         "limitation": "Main advances by this ledger commit; compare final main HEAD at native transfer. Tags endpoint unsupported; do not infer absence. No evidence of live workflow; old embedded IN_FLIGHT entries are historical/stale or pending scope, not blanket cleared. Owner must confirm other conversations no longer write before transfer."
+      },
+      "postTransfer": {
+        "repository": "Yumekiraboshi/HKIA-Editor",
+        "id": "1453520753",
+        "installation": 181562279,
+        "baseHead": "37be4aa02e11b4f2cbb8977cd4e4052e876006ea",
+        "baseBlob": "83f5ad9ad39daef35b2004d76fec0e312c780841",
+        "branchesExact": 35,
+        "pullsExact": 8,
+        "actualWrite": "CAS_PROBE_REQUESTED",
+        "scope": "00 settings, active canonical refs, nondeploy CI; no deploy"
       }
     }
   },
