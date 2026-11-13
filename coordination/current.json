@@ -10000,6 +10000,13 @@
         "sha256": "b28000223c5d88790396bba68cb4394cdd576461f6a5100bcbefc4d37a792b50",
         "location": "Private Library /HKIA Editor Private/",
         "readback": "BYTE_EXACT_SHA_CRC_PASS"
+      },
+      "productTabsClaim": {
+        "claim": "20261113_06B_V30_PRODUCT_TABS_STATIC",
+        "status": "IN_FLIGHT",
+        "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
+        "scope": "10 added product-tab files, independent state/lifecycle/negative preflight only; compiled/browser acceptance after fixed CI; no overlap with prior R1-R7"
       }
     },
     "06C_QA_RELEASE": {
