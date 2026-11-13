@@ -1,4 +1,4 @@
-name: HKIA Rust R5 isolated WASM Module Worker
+name: HKIA Rust R5.1 isolated WASM Module Worker
 on:
   pull_request:
     branches:
@@ -26,8 +26,8 @@ jobs:
       - name: Verify exact R5 scope
         run: |
           set -euo pipefail
-          git merge-base --is-ancestor 9797367c6a227fccf8ce5620c1f8ad4710ab4031 HEAD
-          test "$(git diff --name-only 9797367c6a227fccf8ce5620c1f8ad4710ab4031 HEAD)" = .github/workflows/rust07-r5-isolated.yml
+          git merge-base --is-ancestor 41936b5a16505b4ba61782f6d960928ad9a26cdd HEAD
+          test "$(git diff --name-only 41936b5a16505b4ba61782f6d960928ad9a26cdd HEAD)" = .github/workflows/rust07-r5-isolated.yml
       - name: Prepare fixed toolchains and real Chromium
         run: |
           set -euo pipefail
@@ -58,7 +58,7 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: HKIA_Rust_R5_CodeOnly_${{ github.run_id }}
+          name: HKIA_Rust_R5_1_CodeOnly_${{ github.run_id }}
           path: ${{ runner.temp }}/hkia-r5-code
           if-no-files-found: error
           retention-days: 7
