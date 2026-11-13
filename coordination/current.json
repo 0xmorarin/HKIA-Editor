@@ -1330,7 +1330,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06A_V301_MARKER_METADATA_CHAIN_HIGH_READY; 04_WAIT_BETA_ENV_OR_NEW_CAUSAL_CONTRACT_OR_06A_COUNTEREXAMPLE_OR_00_DISJOINT_RUST_ASSIGNMENT",
+      "next": "V301_MARKER_SCOPED_PASS_REUSE_04_07; 04_WAIT_BETA_ENV_OR_NEW_ACCEPTED_BETA_CONTRACT_OR_06A_COUNTEREXAMPLE_OR_00_DISJOINT_RUST_ASSIGNMENT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -2255,7 +2255,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06A -> 05/07/00",
       "v301MarkerMetadataReview": {
         "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
-        "status": "STATIC_SELF_PASS_06A_READY",
+        "status": "DONE_SCOPED_PASS_STATIC_REFERENCE",
         "owner": "04 SAVE CORE",
         "baseMain": "1894448ddd77ff05239650eeec3a5126efa2ce03",
         "scope": "HIGH evidence-only: exact Switch301 NSO + metadata FieldRef -> default arrays -> genuine headers; reuse v301 existing static and v300 accepted chain. No Writer or version expansion.",
@@ -2297,17 +2297,57 @@
           "gameAccepted": false
         },
         "unverified": [
-          "06A_INDEPENDENT_STATIC_SCOPE",
           "GAME_LOAD_RESAVE_AUTH_OUTSIDE_SCOPE",
           "V24_GENUINE_ACTUAL_BROWSER_WAIT_ENV"
         ],
         "handoff": {
-          "to": "06A QA-DATA-CORE",
-          "status": "READY_DISJOINT_STATIC",
-          "scope": "New v301 two exact FieldRef/default chains, 43 anchors/8 branches/5 method bindings/2 TypeInfo links, prior v300 digest equality and read-only genuine headers; independent oracle negative tests. No broad v300/v301 re-QA or release authority.",
-          "nextAfter": "07 RUST CORE and 04 reuse accepted static marker evidence; no Writer activation, no development switch."
+          "to": [
+            "07 RUST CORE",
+            "04 SAVE CORE"
+          ],
+          "status": "ACCEPTED_STATIC_REFERENCE_REUSE",
+          "scope": "Exact two marker metadata chains and header boundary only; no product authorization, full codec/migration/auth or game acceptance."
         },
-        "notes": "Recovered exact original metadata via existing Drive version folder, NSO/dump pins matched. Initial self-QA class regex matched nested DbRoot; fixed exact owner delimiter, full verification rerun PASS. Evidence only; no raw game assets or save in ZIP."
+        "notes": "Recovered exact original metadata via existing Drive version folder, NSO/dump pins matched. Initial self-QA class regex matched nested DbRoot; fixed exact owner delimiter, full verification rerun PASS. Evidence only; no raw game assets or save in ZIP.",
+        "independentAcceptance": {
+          "sourceEvidence": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
+          "verdict": "SCOPED_PASS_STATIC_MARKER_METADATA_AND_HEADER_ONLY",
+          "resultSha256": "6de5c8880b73e630716195c70b6892bae5c622f5dade93269a632028ff7afd45",
+          "evidence": {
+            "file": "HKIA_06A_DERIVED23_RECIPE6_MARKER_20261113_EVIDENCE.zip",
+            "sha256": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+            "manifestSha256": "3ddf7358c6fc85f6fe0056886957559205fb61f410728ca699115de4c33784a2",
+            "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+            "handoffSha256": "0e358ad635410cd4531f0a664a619de093cec15aba06f23d22167baf354adb4a",
+            "bytes": 15572,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_10_ENTRIES_9_MANIFEST_HASHES_PASS"
+          },
+          "scope": "FieldRef/default marker arrays and header boundary only; not authentication, full codec/migration, arbitrary legacy or game acceptance; V24 genuine Browser still WAIT_ENV.",
+          "productAuthorized": false,
+          "gameAccepted": false
+        }
+      },
+      "resumeReconciliation20261113": {
+        "task": "04_POST_TRANSFER_ACCEPTED_REFERENCE_RECONCILIATION",
+        "status": "DONE_NO_NEW_READY_PRODUCT_TASK",
+        "risk": "LOW_LEDGER_ONLY",
+        "baseLedgerBlob": "ed1b3cff6d495adf91dc19b417d4e442ef7af7ca",
+        "source": "Yumekiraboshi/HKIA-Editor main",
+        "verified": {
+          "marker": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
+          "markerAcceptance": "05c5e6915a1e6119d37a61be52cabbe9f2c11bb04ef87221e348db0de21c1818",
+          "stationSource": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+          "stationSaved": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+          "hatsOff": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+          "derived23": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+          "exact29": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+          "developmentSwitch": "PENDING",
+          "rustCapacityOwner": "07 RUST CORE",
+          "betaEnv": "WAIT_ENV_ADMINISTRATOR_BLOCK"
+        },
+        "classification": "All new causal scopes reference-only; no Writer permission. Existing V24 frozen; V33 JS reference maintained; no Rust ownership assigned to 04; no duplicated QA.",
+        "next": "04 WAIT_ENV authorized V24 genuine Browser; WAIT_DEP new concrete accepted Beta contract, QA counterexample or 00 disjoint Rust assignment. No new legacy 06 activation."
       }
     },
     "05_WEB": {
