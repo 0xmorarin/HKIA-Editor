@@ -35,7 +35,10 @@ export const RECIPE_EXPANSION23=Object.freeze([
   [2057550216,'3afa80c6:d08c0684:a8ee9b8b:f2383972'],
   [2097311220,'86865ab2:622ddb34:cb09c6d5:24dfe15f']
 ].map(([itemId,guid])=>Object.freeze({itemId,guid:guid.split(':').map(w=>[...w].reverse().join('')).join(':')})));
-const RECIPE_EXPANSION_ALL=Object.freeze([...RECIPE_EXPANSION4,...RECIPE_EXPANSION23]);
+export const RECIPE_CELEBRATION5=Object.freeze([
+ [81841632,'c9d550f09983a904388f49ca37c2ac58'],[436991714,'fb7fc0c952c814f43a2bdb0fa31e6483'],[883856013,'34754541020dbc24eb6876d62bcb576f'],[1597283478,'0649df866b137334b8a0a46bebe674e6'],[2090982333,'918574ea5dac8b44f8b0365b3d73b5d1']
+].map(([itemId,guid])=>Object.freeze({itemId,guid:guid.match(/.{8}/g).map(w=>[...w].reverse().join('')).join(':')})));
+const RECIPE_EXPANSION_ALL=Object.freeze([...RECIPE_EXPANSION4,...RECIPE_EXPANSION23,...RECIPE_CELEBRATION5]);
 const RECIPE_EXPANSION_IDS=new Set(RECIPE_EXPANSION_ALL.map(t=>t.itemId));
 const RECIPE_MEMBER_IDS=new Set(RECIPE_EVIDENCE.items.map(x=>x.itemId));
 function freezeSchema(x){if(x&&typeof x==='object'&&!Object.isFrozen(x)){for(const v of Object.values(x))freezeSchema(v);Object.freeze(x);}return x;}
@@ -70,7 +73,7 @@ export function decodeNativePayloadBySchema(expanded,expectedVersion){
   ensure(VERSIONS.has(expectedVersion),'Unsupported schema version');
   const r=new MessagePackReader(expanded);let nodes=0;
   const stats={documents:0,dictionaries:0,dictionaryEntries:0,hash128Dictionaries:0,hash128Entries:0,compoundDictionaries:0,compoundEntries:0,scalarDictionaries:0,scalarEntries:0,typedDuplicateKeys:0,distinctDocumentTypeIds:0,crossTypeDocumentIdReuses:0};
-  const inventoryRecipeRows=[],inventoryRecipeRecountRows=[],inventoryRecipeExpansionRows=[];const models=new Map(),collectionSpans=new Map(),achievements=[],counters=[];
+  const celebrationSpans=[];const inventoryRecipeRows=[],inventoryRecipeRecountRows=[],inventoryRecipeExpansionRows=[];const models=new Map(),collectionSpans=new Map(),achievements=[],counters=[];
   let collection=null,version=null,collectionMap=null,collectionVersionNumber=null;
   function fail(message){throw Error('Native schema: '+message);}
   function header(kind){const op=r.u8();let n;
@@ -125,9 +128,9 @@ export function decodeNativePayloadBySchema(expanded,expectedVersion){
     if(type.enum)return read(type.enum,depth+1,context);
     if(r.b[r.p]===0xc0){r.p++;return null;}
     if(Object.keys(type.union).length){
-      if(header('array')!==2)fail('union width');const tag=read('int',depth+1);const branch=type.union[tag];
+      const unionStart=r.p;if(header('array')!==2)fail('union width');const tag=read('int',depth+1);const branch=type.union[tag];
       if(!branch)fail('unknown union tag '+type.name);const v=read(branch,depth+1,{union:type.name,tag});
-      return [tag,v];
+      if(type.name==='IDocument'&&tag===8){ensure(Array.isArray(v)&&v.length===2&&Number.isInteger(v[0])&&Array.isArray(v[1]),'Invalid Celebration document');celebrationSpans.push({id:v[0],start:unionStart,end:r.p});}return [tag,v];
     }
     const n=header('array'),keys=Object.keys(type.fields).map(Number),count=keys.length?Math.max(...keys)+1:0;
     if(n>count)fail('appended fields in '+type.name);
@@ -190,6 +193,6 @@ export function decodeNativePayloadBySchema(expanded,expectedVersion){
   stats.documents=root[2].length;stats.distinctDocumentTypeIds=ids.size;
   const collectionHistoryEntries=collection.key1.map(([id,tick])=>[id,String(tick)]);
   return {version,collectionVersionNumber,achievements,counters,collections:{historyEntries:collectionHistoryEntries.length,deprecatedEntries:collection.key0.length,kind:'item-id-collected-ticks',editable:false},
-    collectedItemIds:collectionHistoryEntries.map(x=>x[0]),collectionHistoryEntries,collectionDeprecatedEntries:collection.key0,inventoryRecipeRows,inventoryRecipeRecountRows,inventoryRecipeExpansionRows,recipeExpansionReferences:RECIPE_EXPANSION_ALL.map(t=>({itemId:t.itemId,celebrated:root[2].filter(x=>x[0]===8).reduce((n,x)=>n+x[1][1].filter(g=>GUID(g)===t.guid).length,0),counter:counters.reduce((n,x)=>n+x.countedGuidWords.filter(g=>GUID(g)===t.guid).length,0)})),models,collectionSpans,collectionMap,stats:Object.freeze(stats),
+    collectedItemIds:collectionHistoryEntries.map(x=>x[0]),collectionHistoryEntries,collectionDeprecatedEntries:collection.key0,inventoryRecipeRows,inventoryRecipeRecountRows,inventoryRecipeExpansionRows,celebrationSpans,recipeExpansionReferences:RECIPE_EXPANSION_ALL.map(t=>({itemId:t.itemId,celebrated:root[2].filter(x=>x[0]===8).reduce((n,x)=>n+x[1][1].filter(g=>GUID(g)===t.guid).length,0),counter:counters.reduce((n,x)=>n+x.countedGuidWords.filter(g=>GUID(g)===t.guid).length,0)})),models,collectionSpans,collectionMap,stats:Object.freeze(stats),
     fullLogicalPayloadConsumed:true,typedDictionaryKeysVerified:true,typedDocumentIdsVerified:true};
 }

@@ -6,7 +6,7 @@
    
 import {MAGIC,MessagePackReader,lz4Decompress,readSave,inspectSaveGameV2Header} from '../../src/save.js';
 import {sha256Hex} from './native-browser-primitives.mjs';
-import {decodeNativePayloadBySchema,RECIPE_EXPANSION4,RECIPE_EXPANSION23} from './save-native-schema-reader.mjs';
+import {decodeNativePayloadBySchema,RECIPE_EXPANSION4,RECIPE_EXPANSION23,RECIPE_CELEBRATION5} from './save-native-schema-reader.mjs';
 import {lz4EncodeLiteralOnly} from './save-envelope-noop.mjs';
 import {lz4EncodeBoundedMatch} from './lz4-match-encoder.mjs';
 
@@ -245,9 +245,11 @@ const FIELD_MAP={AchievementModel:{tag:16,fields:['IsComplete','CurrentValue','C
 function parseChange(c,models,expanded,collection,original){
   failUnless(c&&typeof c==='object'&&!Array.isArray(c),'Invalid field change');
   if(c.model==='InventoryItem'){
-    const expandedTarget=(RECIPE_EXPANSION4.some(t=>t.itemId===c.itemId)||RECIPE_EXPANSION23.some(t=>t.itemId===c.itemId));
+    const celebration=RECIPE_CELEBRATION5.some(t=>t.itemId===c.itemId);
+    failUnless(celebration?c.scope==='CELEBRATION5':!Object.hasOwn(c,'scope'),'Recipe exact operation scope required');
+    const expandedTarget=(celebration||RECIPE_EXPANSION4.some(t=>t.itemId===c.itemId)||RECIPE_EXPANSION23.some(t=>t.itemId===c.itemId));
     const rows=c.itemId===5913958?original?.inventoryRecipeRows:expandedTarget?original?.inventoryRecipeExpansionRows.filter(x=>x.itemId===c.itemId):null;
-    failUnless(original?.version==='3.0.1'&&original.collectionDeprecatedEntries.length===0&&rows?.length===1&&c.field==='Quantity'&&(c.itemId===5913958||expandedTarget&&original.collectionVersionNumber===87&&original.recipeExpansionReferences.some(t=>t.itemId===c.itemId&&t.celebrated===0&&t.counter===0)&&original.collectionHistoryEntries.some(([id])=>id===c.itemId)),'Recipe exact scope required');
+    failUnless(original?.version==='3.0.1'&&original.collectionDeprecatedEntries.length===0&&rows?.length===1&&c.field==='Quantity'&&(c.itemId===5913958||expandedTarget&&original.collectionVersionNumber===87&&original.recipeExpansionReferences.some(t=>t.itemId===c.itemId&&t.celebrated===(celebration?1:0)&&t.counter===0)&&original.collectionHistoryEntries.some(([id])=>id===c.itemId)),'Recipe exact scope required');
     const r=rows[0];failUnless(r.id===c.documentId&&r.uniqueId===0&&r.uniqueData===null&&r.quantity===c.expected&&((c.expected===0&&c.next===1)||(c.expected===1&&c.next===0)),'Recipe quantity CAS or transition invalid');
     failUnless(r.span.end-r.span.start===1&&expanded[r.span.start]===c.expected,'Recipe quantity token shape');
     return {start:r.span.start,end:r.span.end,bytes:Uint8Array.of(c.next),model:c.model,field:c.field,id:r.id,itemId:c.itemId,expected:c.expected,next:c.next};
@@ -383,6 +385,8 @@ function runNativeSlotResearchTransaction(input,plan,schemaMode=false){
   const modelMap=schemaMode?original.models:locateModels(env.expanded);
   const collection=plan.changes.some(c=>c.model==='GameCollectionsTraitModel')?(schemaMode?original.collectionSpans:locateCollectionHistoryTicks(env.expanded)):null;
   const membership=plan.membership?membershipSplices(original,env.expanded,plan.membership):null;
+  const celebrationPlan=plan.changes.some(c=>c.scope==='CELEBRATION5');
+  failUnless(!celebrationPlan||schemaMode&&plan.changes.length===1&&plan.changes[0].model==='InventoryItem','Celebration5 single typed change only');
   const changes=membership?membership.changes:plan.changes.map(c=>parseChange(c,modelMap,env.expanded,collection,schemaMode?original:null));
   changes.sort((a,b)=>a.start-b.start);
   const parts=[];let cursor=0;
@@ -394,6 +398,7 @@ function runNativeSlotResearchTransaction(input,plan,schemaMode=false){
   failUnless(equal(raw.subarray(0,env.marker),encoded.subarray(0,env.marker)),'Opaque header or metadata changed');
   const recovered=extract(encoded);failUnless(equal(changed,recovered.expanded),'Recompression failed exact token readback');
   const decoded=readResearchState(encoded,recovered,schemaMode);compareState(original,decoded,changes,membership);
+  if(celebrationPlan){const a=original.celebrationSpans,b=decoded.celebrationSpans;failUnless(a.length>0&&a.length===b.length&&a.every((x,i)=>x.id===b[i].id&&equal(env.expanded.subarray(x.start,x.end),recovered.expanded.subarray(b[i].start,b[i].end))),'Celebration5 raw tag8 preservation failed');}
                                                                                                     
   let oldCursor=0,newCursor=0;
   for(const c of changes){const n=c.start-oldCursor;failUnless(equal(env.expanded.subarray(oldCursor,c.start),changed.subarray(newCursor,newCursor+n)),'Unknown/non-target token changed');
@@ -408,7 +413,7 @@ function runNativeSlotResearchTransaction(input,plan,schemaMode=false){
     copiedUntouchedCompressedTokenBytes:patched.reusedBytes,
     touchedBlockOnlyReencode:true,
     fields:Object.freeze((membership?[changes[0]]:changes).map(c=>Object.freeze({model:c.model,field:c.field,documentId:c.id,guid:c.guid,itemId:c.itemId,expected:c.expected,next:c.next}))),
-    copiedAllUneditedTokenBytes:true,opaqueMetadataPreserved:true,readbackVerified:true,originalInputUnmodified:true,
+    copiedAllUneditedTokenBytes:true,opaqueMetadataPreserved:true,readbackVerified:true,originalInputUnmodified:true,...(celebrationPlan?{celebrationTag8RawPreserved:true}:{}),
                                                                                        
     requiresSemanticLinkageApproval:true,requiresCrossStoreAtomicityGate:true});
   return {proof,encoded};
@@ -441,7 +446,7 @@ function verifyNativeSlotCandidateWithMode(sourceSlot,plan,candidateSlot,schemaM
   return Object.freeze({schema:'HKIA.04.NativeCandidateTokenVerify.1',mode:'READ_ONLY_CANDIDATE_AUDIT',
     version:after.version,verifiedFieldCount:expected.proof.changedFieldCount,
     originalHeaderByteIdentical:true,completeExpandedMessagePackExpectedDiffOnly:true,
-    unknownTokenBytesPreserved:true,sourceInputUnmodified:true,candidateInputUnmodified:true,
+    unknownTokenBytesPreserved:true,...(expected.proof.celebrationTag8RawPreserved?{celebrationTag8RawPreserved:true}:{}),sourceInputUnmodified:true,candidateInputUnmodified:true,
     nativeAuthenticated:false,gameAccepted:false,writerEnabled:false,outputBytesReturned:false});
 }
 export function verifyNativeSlotCandidateAgainstPlanReadOnly(sourceSlot,plan,candidateSlot){return verifyNativeSlotCandidateWithMode(sourceSlot,plan,candidateSlot,false);}

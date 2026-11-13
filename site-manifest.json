@@ -2,17 +2,13 @@
   "schema": "HKIA.BetaArtifactPreparation.1",
   "state": "FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING_NOT_RELEASE_AUTHORIZED",
   "writer": "OFF",
-  "sourceSha256": "a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a",
-  "baseArtifactManifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d",
+  "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+  "baseArtifactManifestSha256": "f97c80d5b7148c9664dbe5651b16504db4dc2ed9065db41c257eb3305862883f",
   "entries": 4146,
-  "bytes": 146346689,
+  "bytes": 146355449,
   "webp": 4076,
   "modules": 55,
   "modifiedPaths": [
-    "native-product/api.mjs",
-    "native-product/dev-output-policy.mjs",
-    "scripts/research/save-native-schema-reader.mjs",
-    "scripts/research/save-transaction-engine.mjs",
     "src/app.js",
     "src/native-preview-ui.js"
   ],
@@ -16419,12 +16415,12 @@
       "sha256": "facd400ddbf060e31df1059663eaf47f65b4e56ccd2a56a29f4355504407a87a"
     },
     "native-product/api.mjs": {
-      "bytes": 38865,
-      "sha256": "93e77b48ce50c1786996bca474f6e431e4bff8e8402074e8614ffa9570299020"
+      "bytes": 39547,
+      "sha256": "7409075245b304cc9d284450d956178a5ebae0f9ca0ec82a0243883347a281e1"
     },
     "native-product/dev-output-policy.mjs": {
-      "bytes": 10947,
-      "sha256": "b2230091ce8be10b85d3932e1a5a028aac8e5080750fe4e649b07b7fb80ea4a3"
+      "bytes": 12166,
+      "sha256": "cbaed8a696803935f2ec915054986859ad5d6df9ba5943da0fb9fe2e02ca71a2"
     },
     "native-product/formal49-plan.mjs": {
       "bytes": 108256,
@@ -16515,24 +16511,24 @@
       "sha256": "128d62cf90753ebc03ac304e2ba0e262649eccb40b743e168eab0a679c820dc6"
     },
     "scripts/research/save-native-schema-reader.mjs": {
-      "bytes": 15260,
-      "sha256": "41fdba3dee572c2a4d6cbdf5b399bc3799ff6da606b7109798207b57bb2d8dc8"
+      "bytes": 15963,
+      "sha256": "3df8e93e06a6d8ad4fc0760cd628b370c1da5f261c431b8dd61ce1b8ad026e40"
     },
     "scripts/research/save-native-writer-gates.mjs": {
       "bytes": 8522,
       "sha256": "fa5c367eefb32ecd9e76f5f43e001c80b831a5421ef7a0c438978936523f1c66"
     },
     "scripts/research/save-transaction-engine.mjs": {
-      "bytes": 44945,
-      "sha256": "949e7880ccb365cb1120c5d5cb2de73ec06ea13a579013b200cf50fa94b4b1ff"
+      "bytes": 45852,
+      "sha256": "e8958e0ab3ddfed2ad3bf76043b79bcb1bd1658dad89168cadc191169cbf1db2"
     },
     "src/account.js": {
       "bytes": 3953,
       "sha256": "8b5e3e7049055ef38a647afe75635a9fc45fc44b10af3e4b473417f9d2021019"
     },
     "src/app.js": {
-      "bytes": 106628,
-      "sha256": "b736e11af8c527f497a1c975e1479aa3f6c5b7204fd8b6c44cc098921060d56d"
+      "bytes": 108472,
+      "sha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5"
     },
     "src/collection-history-extension.js": {
       "bytes": 9717,
@@ -16575,8 +16571,8 @@
       "sha256": "2f2e6e36d28f8628a4336eb64bc42fb6898b6c2b71873f03fe18f18719ecfa47"
     },
     "src/native-preview-ui.js": {
-      "bytes": 49828,
-      "sha256": "6da8dea1be57f9f8809fc8bfd9ed47301ff2803105dababbe1cd996c4e2a3fbe"
+      "bytes": 53233,
+      "sha256": "60507af80a8d71b88e55f657333adf57ee8a5debaae9bcca5455c46403ecd930"
     },
     "src/save.js": {
       "bytes": 23511,
