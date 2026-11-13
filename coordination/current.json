@@ -10728,6 +10728,18 @@
           "status": "READY",
           "condition": "Fixed 10 ADD scope and exact V30 artifact, 132 tests, compile/check/build product-tabs bundle, actual V30 candidate vs legacy Chromium 320/375/1280; 06B after green scoped browser/negative QA. No deploy/Writer."
         }
+      },
+      "catalogR5R7Claim": {
+        "claim": "20261113_06B_LOCALE_R5R7",
+        "status": "IN_FLIGHT",
+        "source": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+        "scope": "83 keys 1245 cells; exact accepted R5-R7 source, prior cells unchanged"
+      },
+      "productFiltersClaim": {
+        "claim": "20261113_06B_PRODUCT_FILTERS_STATIC",
+        "status": "IN_FLIGHT",
+        "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+        "scope": "10 added files, actual legacy callback and independent model negatives; compiled browser later"
       }
     },
     "06C_QA_RELEASE": {
