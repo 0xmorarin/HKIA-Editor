@@ -12912,6 +12912,17 @@
         "status": "READY",
         "scope": "Fixed candidate correctness and synthetic Chrome pass, 45MiB linear memory +131072 bytes, 1/5/10 MiB also +131072, 25MiB unchanged; capacity improvement acceptance not met. Profile allocation high-water and minimal next optimization, no limits raise, no R5.1/PR9 changes. Reuse fixed artifact and paired oracle; genuine private parity on surviving candidate; 06A high-risk after self-QA and measured improvement. No integration or Development Switch."
       }
+    },
+    "svelteR6CombinedCI": {
+      "task": "SVELTE_R6_R5_REPAIR_FIXED_COMBINED_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "risk": "HIGH",
+      "baseHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+      "sourceHead": "2924eaa2b51968e50f22a97524b2f8d308ad1931",
+      "sourceSha256": "32263f4b55eed99fe2e3bf6288baef39e8c09b609f02dc94b61ed681dff1f86d",
+      "scope": "One isolated nondeploy workflow only; 9 source changes against accepted R5 CI baseline; exact R5 repair 2 paths + R6 7 paths. 104 tests, compile/build, R1-R6 actual browser; distinct 06B scopes after green.",
+      "dependency": "05 fixed composed source self-PASS; existing R5 TRUE_RED not closed until independent repair QA."
     }
   },
   "formalRelease": {
