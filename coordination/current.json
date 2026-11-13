@@ -10552,10 +10552,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_V30_TABS_CATALOG_NATIVE_PASS_FILTERS_WAIT_CI",
+      "status": "DONE_V30_TABS_V30_V33_FILTERS_R5R7_CATALOG_NATIVE_SCOPED_PASS",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 READY consume R5-R7 catalog and native literal; 00 READY V33 tab rebind fixed CI; 06B filter fixed browser after run 43426763281, V33 rebind after fixed CI, next new product category scope after 05 selfQA; no repeat",
+      "next": "00 READY V33 tab rebind fixed CI f320ef06; 05 consume exact accepted V30 tabs, V30/V33 filters, R5-R7 catalog/native; 06B after V33 tab fixed CI or new fixed category/product UI scope; 00 shared V33 root composition after tab rebind acceptance, then 06C distribution; no repeat",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -11551,7 +11551,7 @@
       },
       "productFiltersClaim": {
         "claim": "20261113_06B_PRODUCT_FILTERS_STATIC",
-        "status": "DONE_STATIC_PREFLIGHT_WAIT_FIXED_CI",
+        "status": "DONE_SCOPED_PASS_FIXED_COMPILED",
         "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
         "scope": "10 added files, actual legacy callback and independent model negatives; compiled browser later"
       },
@@ -11606,7 +11606,7 @@
       },
       "productFilters": {
         "task": "V30_V33_PRODUCT_FILTERS_INDEPENDENT_QA",
-        "status": "PARTIAL_NODE_STATIC_PASS_WAIT_FIXED_CI",
+        "status": "DONE_SCOPED_PASS_FIXED_COMPILED",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
         "manifestSha256": "f485219dad9affb45d0b7f33d6beecfe0f6571340c1cff887dfd4b5a6a6019ce",
@@ -11746,11 +11746,89 @@
       },
       "productFiltersCompiledClaim": {
         "claim": "20261113_06B_PRODUCT_FILTERS_COMPILED",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
         "compiled": "21624edfab9a4a1f5ae92689843fe4f31b54c4d3",
         "run": 43426763281,
         "scope": "fixed code-only artifacts V30/V33 and actual browser evidence; reuse prior independent 5 tests; no combined app composition"
+      },
+      "productFiltersCompiled": {
+        "task": "V30_V33_PRODUCT_FILTERS_FIXED_INDEPENDENT_QA",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+        "compiledHead": "21624edfab9a4a1f5ae92689843fe4f31b54c4d3",
+        "run": 43426763281,
+        "job": 131889953653,
+        "artifact": {
+          "id": 14037742173,
+          "sha256": "6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb",
+          "moduleSha256": "586297ee82e193ccec800c10558acd723feeb8652268f7656551d550fa8079af",
+          "appSha256": {
+            "V30": "12f1ee46365d54605c196b9480dfa82c8e6bd65f1b4c9835c0ac22e968d0dde7",
+            "V33": "2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"
+          },
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "priorIndependent": 5,
+          "priorTransitions": 160,
+          "compiledNegatives": 3,
+          "artifactExact7Entries": "SHA_CRC_PASS",
+          "reversibleAppHooks": "EXACT_V30_V33",
+          "identicalCompiledModule": true,
+          "compiledDiff": "WORKFLOW_ONLY",
+          "fixedCIUnit": 133,
+          "svelteErrors": 0,
+          "svelteWarnings": 0,
+          "actualFixedCIBrowserVersions": [
+            "V30",
+            "V33"
+          ],
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "categoryImagesPerWidth": 25,
+          "syntheticAccountRecords": 2,
+          "allSevenControls": true,
+          "resetSortRetention": true,
+          "sameProjection": true,
+          "exactRenderCounts": [
+            20,
+            14
+          ],
+          "moduleAbortFallback": true,
+          "unchangedFilesPerVersion": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "externalOrDownload": 0
+        },
+        "unverified": [
+          "Independent local actual browser remains unavailable due prior administrator policy; fixed CI actual browser evidence reused, no new local Browser PASS",
+          "Combined app delta, V33 tab rebind, full license/allowlist/privacy and distribution QA, genuine save and Writer authorization separate"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_FILTERS_FIXED_QA_20261113.zip",
+          "sha256": "2ca401b0a98d6c9772ce0e4a4dd9f1d52711aa88334ac664d868d29240f5138b",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_5_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "05 WEB",
+            "00 CTRL"
+          ],
+          "status": "READY",
+          "condition": "Consume exact accepted V30/V33 filter module and pinned app deltas; 00 compose hooks from exact V33 base only after V33 tab rebind acceptance; no overwrite, deploy or Writer activation"
+        }
+      },
+      "filterCompiledEvidence": {
+        "file": "HKIA_06B_PRODUCT_FILTERS_FIXED_QA_20261113.zip",
+        "sha256": "2ca401b0a98d6c9772ce0e4a4dd9f1d52711aa88334ac664d868d29240f5138b",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_5_ENTRIES"
       }
     },
     "06C_QA_RELEASE": {
