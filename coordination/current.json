@@ -10454,10 +10454,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL_PRODUCT_TABS_STATIC_PASS_WAIT_FIXED_CI",
+      "status": "PARTIAL_V30_TABS_CATALOG_NATIVE_PASS_FILTERS_WAIT_CI",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "00 fixed V30 product-tabs nondeploy CI READY; 06B product-tabs scoped acceptance after fixed compiled actual product browser; 05 product binding follow-up after result; no repeat R1-R7 or locale accepted scopes",
+      "next": "05 READY consume R5-R7 catalog and native literal; 00 READY V33 tab rebind fixed CI; 06B filter fixed browser after run 43426763281, V33 rebind after fixed CI, next new product category scope after 05 selfQA; no repeat",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -11401,14 +11401,14 @@
       },
       "productTabsClaim": {
         "claim": "20261113_06B_V30_PRODUCT_TABS_STATIC",
-        "status": "DONE_STATIC_PREFLIGHT_WAIT_FIXED_CI",
+        "status": "DONE_SCOPED_PASS_FIXED_COMPILED",
         "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
         "scope": "10 added product-tab files, independent state/lifecycle/negative preflight only; compiled/browser acceptance after fixed CI; no overlap with prior R1-R7"
       },
       "productTabs": {
         "task": "V30_PRODUCT_TABS_INDEPENDENT_QA",
-        "status": "PARTIAL_NODE_STATIC_PASS_WAIT_FIXED_CI",
+        "status": "DONE_SCOPED_PASS_FIXED_COMPILED",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "sourceHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "standaloneHead": "b69bab53c10eef93fff0b0cde8c6469788f3fddc",
@@ -11447,28 +11447,204 @@
       },
       "catalogR5R7Claim": {
         "claim": "20261113_06B_LOCALE_R5R7",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
         "scope": "83 keys 1245 cells; exact accepted R5-R7 source, prior cells unchanged"
       },
       "productFiltersClaim": {
         "claim": "20261113_06B_PRODUCT_FILTERS_STATIC",
-        "status": "IN_FLIGHT",
+        "status": "DONE_STATIC_PREFLIGHT_WAIT_FIXED_CI",
         "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
         "scope": "10 added files, actual legacy callback and independent model negatives; compiled browser later"
       },
       "productTabsCompiledClaim": {
         "claim": "20261113_06B_PRODUCT_TABS_COMPILED",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "compiled": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
         "scope": "fixed code-only artifact and actual V30 browser evidence; independent lifecycle/negative prior preflight reuse"
       },
       "nativeLiteralClaim": {
         "claim": "20261113_06B_NATIVE_LITERAL",
-        "status": "IN_FLIGHT",
+        "status": "DONE_STATIC_SCOPED_PASS",
         "source": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
         "scope": "Switch300/301 exact Native literal mapping, missing sentinel and negative/collision; static only"
+      },
+      "localeR5R7": {
+        "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+        "sourceSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+        "manifestSha256": "4f57e01af4464c95be3edf913a75381a744865cc36c0d6eb873b7b3010a8aa2e",
+        "sourceHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "verified": {
+          "fixedSourceBlobs": 8,
+          "keys": 83,
+          "newCells": 1245,
+          "priorCells": 1590,
+          "staticMappings": 68,
+          "dynamicMappings": 15,
+          "regeneratedExact": 17,
+          "manifestChangedEntries": 26,
+          "producerTests": 17,
+          "fail": 0,
+          "semanticTokensAndTemplateParity": "PASS",
+          "priorR4Preimages": "PASS"
+        },
+        "unverified": [
+          "Native speaker linguistic review, actual product locale switching/binding, remaining dynamic controller strings, full product coverage; no game text change"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+          "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY",
+          "condition": "Consume exact 83 new editor keys/15 locales; existing accepted 106 preserved; no game text inference, no session mutation; product locale behavior separate QA"
+        }
+      },
+      "productFilters": {
+        "task": "V30_V33_PRODUCT_FILTERS_INDEPENDENT_QA",
+        "status": "PARTIAL_NODE_STATIC_PASS_WAIT_FIXED_CI",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
+        "manifestSha256": "f485219dad9affb45d0b7f33d6beecfe0f6571340c1cff887dfd4b5a6a6019ce",
+        "verified": {
+          "newExactBlobs": 10,
+          "reusedModelBlob": "2e4a31013bfad1fb1cf9f036289e333cc607970a",
+          "producerPrivateShaCrc": "PASS_12_ENTRIES",
+          "independentTests": 5,
+          "transitionSteps": 160,
+          "producerRegression": 10,
+          "fail": 0,
+          "strictTS": "PASS",
+          "actualV30V33CallbackLinesIdentical": true,
+          "staleTargets": 7,
+          "precommitSwapFailures": 3
+        },
+        "unverified": [
+          "Fixed compiled filter bundle and actual V30/V33 browser, full artifact closure, synthetic Account reset browser; DOM double is not real browser",
+          "Combined tab/filter shared app delta requires 00 composition and separate integration/release QA"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+          "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+        },
+        "handoff": {
+          "recipient": "00 CTRL",
+          "status": "WAIT_DEP",
+          "condition": "Existing run 43426763281 in flight; do not rerun. After fixed compile/browser evidence, 06B scoped acceptance; no V30 or V33 app delta overwrite"
+        }
+      },
+      "productTabsCompiled": {
+        "task": "SVELTE_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "compiledHead": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
+        "run": 43426396053,
+        "job": 131888739039,
+        "artifact": {
+          "id": 14037746671,
+          "sha256": "22ad990d379c0f23b396c50a24f68dc608da74bf959ff403e64eac6fb669537d",
+          "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+          "appSha256": "089758e40a67df2def07b2da8818d6a5637c9798c4c339639d6e713095740c8d",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "priorIndependent": 6,
+          "priorTransitions": 320,
+          "compiledNegatives": 3,
+          "artifactExact4Entries": "SHA_CRC_PASS",
+          "reversibleAppHook": "EXACT_V30",
+          "compiledDiff": "WORKFLOW_ONLY",
+          "fixedCIUnit": 132,
+          "svelteErrors": 0,
+          "svelteWarnings": 0,
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "categoryImagesPerWidth": 25,
+          "legacyPanelIdentity": true,
+          "keyboard": true,
+          "filterSelection": true,
+          "moduleAbortFallback": true,
+          "unchangedFiles": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "external": 0,
+          "pageErrors": 0,
+          "overflow": 0
+        },
+        "unverified": [
+          "Independent local browser unavailable due prior ERR_BLOCKED_BY_ADMINISTRATOR; reused fixed CI actual browser evidence, no new local browser PASS",
+          "V33 rebind, shared app composition, full product binding, license/allowlist/release separately"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+          "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "05 WEB",
+            "00 CTRL"
+          ],
+          "status": "READY",
+          "condition": "Exact V30 product tab scope accepted; use pinned module in existing V33 rebind f320ef06; 00 V33 fixed CI then 06B scoped rebind QA. Never overwrite V33 with V30 app; no deploy or Writer authority"
+        }
+      },
+      "nativeLiteral": {
+        "task": "LOCALIZATION_NATIVE_LITERAL_SCOPED_QA",
+        "status": "DONE_STATIC_SCOPED_PASS",
+        "risk": "HIGH_NATIVE_TEXT_PROVENANCE",
+        "sourceSha256": "1eede0a4fab23c9a72ce81db8589a133bc7912ac77076f3dc8594a4c61f8bc34",
+        "manifestSha256": "f1bc7fa67cd511a766f77f3eae6b36a62281174a280985369942cc01f140709e",
+        "witnessSha256": "a6bd2d8387bae6d946f475021e4d155336e4858a209a518fc147f68accd2d5ec",
+        "verified": {
+          "originalPins": 6,
+          "segmentHashes": 6,
+          "methods": 10,
+          "rawLiteralPaths": 134,
+          "ordinalComparisonGuards": 90,
+          "negativeHashes": 36,
+          "actualHashCollisionCases": 82,
+          "normalizedModelCases": 42,
+          "producerReproduction": "BYTE_EXACT",
+          "semanticMapParity": true,
+          "oracle": "independent raw AArch64 branch/MOV/CMP/ADRP/LDR/GOT/usage and ordinal comparison call/return decode"
+        },
+        "unverified": [
+          "Physical selector and game runtime, CultureInfo native names except 3 literal branches, Arabic shipped support; static does not authorize runtime policy"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+          "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "05 WEB",
+            "08 LOCALIZATION"
+          ],
+          "status": "READY",
+          "condition": "Consume exact native witness only; retain Editor BCP47/script/region policy; Arabic enum not shipped language proof; game [Error] not Editor ABSENT_REF/MISSING_ID; no new game/Writer claim"
+        }
+      },
+      "latestEvidence": {
+        "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+        "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
       }
     },
     "06C_QA_RELEASE": {
