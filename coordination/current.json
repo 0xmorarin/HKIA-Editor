@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06A_RECIPE6_STATION_SAVED_CONDITIONS_READY_SOURCE_DEP_ACCEPTED; 03_DIRECT_CONDITIONAL_REFERENCE_AFTER_SAVED_STATE_QA; 01_WAIT_RUNTIME_OR_QA_COUNTEREXAMPLE; NO_REPEAT",
+      "next": "01_SWITCH300_ORIGINAL_RECIPE_OBJECT_PARITY_IN_FLIGHT; SAVED_CONDITIONS_V39_ACCEPTED; 03/04/07_READONLY_REFERENCE; NO_REPEAT",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -265,12 +265,12 @@
       },
       "stationSaveWitness": {
         "task": "RECIPE6_SWITCH300_STATION_SAVED_CONDITIONS_WITNESS",
-        "status": "SELF_PASS_06A_READY_SOURCE_DEP_ACCEPTED",
+        "status": "SCOPED_PASS_06A_INTEGRATED_V39_ACCEPTED",
         "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "risk": "HIGH",
         "scope": "New read-only historical genuine v300 saved friendship/mission/blackboard evidence for exact 03 station source GUIDs; no repeat source extraction or producer, no runtime eligibility inference; 03 pending QA source treated conditional",
-        "dependency": "SATISFIED: 06A recipe6StationResult SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC, exact 03 e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62; saved-state QA still independent pending",
+        "dependency": "SATISFIED: exact 03 static station source and 01 saved-state independent QA; V39 accepted",
         "artifact": "HKIA_01_RECIPE6_STATION_SAVED_CONDITIONS_V36_DELTA_20261113.zip",
         "deltaSha256": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
         "manifestSha256": "e43382a6db8af1faca137aade88df960342adc7c1fda2d9c6400a60713c08a41",
@@ -278,16 +278,20 @@
         "changes": "6 ADD 0 MOD 0 DEL + transport manifest; V36 all 625 entries unchanged",
         "verified": "3 distinct genuine v300 typed slots (1 all-six absent,2 all-six positive); exact 4 NPC Key7 >= thresholds + Key6 met, 3 exact Mission GUIDs status3 and 4 exact TaskId complete, 5 global union15 bool true each, zero matching tag32 trait3 local; same across all 3; 8 keys/6 unions/4 enums/3 schema bindings; 16 focused PASS, source-pin negative PASS, result byte-exact repeat, originals unchanged; Library byte-exact SHA CRC 7 entries 6 manifest hashes",
         "classification": "SAVED_CONDITION_OBSERVATIONS_ONLY_ON_FIXED_03_SOURCE; RUNTIME_STATION_ACCESS_UPGRADE_EVENT_PERSISTENCE_UNKNOWN; NO_NEW_REQUIRED_WRITE_OR_PRODUCT_AUTHORITY",
-        "remaining": "06A new saved-condition scope independent oracle; dynamic station lock/upgrade/registration, recipe selection, Candy Cloud script and actual cook/event/reload/persistence UNKNOWN; no game authority",
+        "remaining": "Saved condition observations only; no dynamic unlock/registration/recipe selection/Candy script/event persistence, no game authority or writer permission",
         "handoff": {
-          "to": "06A_QA_DATA_CORE",
+          "to": [
+            "03_LINKAGE",
+            "04_SAVE_CORE",
+            "07_RUST_CORE"
+          ],
           "task": "RECIPE6_SWITCH300_STATION_SAVED_CONDITIONS_INDEPENDENT_QA",
-          "status": "READY",
+          "status": "DONE_ACCEPTED_DIRECT_REFERENCE",
           "scope": "New 6 ADD only, fixed V36 and 03 e22a5596 scope; independent typed genuine v300 3-slot exact GUID join, task ID not index, global/local/absent/false/duplicate/type negatives, source hash and exact aggregate; no repeated station extraction/allocator/producer or v301 inference. May run disjoint from existing 06A station source scope, dependent use only after both accepted.",
           "consumer": "03_LINKAGE then 04/07 conditional advisory only; 00 research-only integration if applicable",
-          "condition": "03 fixed source independently accepted; 06A saved-state independent QA must pass before dependent use; no duplicate 03 source QA"
+          "condition": "06A and V39 accepted; read-only conditional advisory only; no writer authority"
         },
-        "next": "06A READY new six-path saved-state scope only; 01 WAIT dynamic station/controlled event/persistence or QA counterexample; no new product authorization",
+        "next": "WAIT new dynamic station/controlled event/persistence or independent counterexample; no repeat",
         "productAuthorized": false,
         "gameAccepted": false,
         "sourceAcceptance": {
@@ -296,7 +300,30 @@
           "scope": "SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC",
           "productAuthorized": false,
           "gameAccepted": false
+        },
+        "acceptance": {
+          "status": "SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
+          "sourceSha256": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+          "independentEvidenceTextSha256": "9edd3bd7bdb919cbf8ae209fd1661c42aa49b02b4d5794cc2f9eed500f7f439a",
+          "integratedSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "integrationQAResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
+          "scope": "Saved condition observations only; no dynamic unlock/registration/recipe selection/Candy script/event persistence, no game authority or writer permission",
+          "productAuthorized": false,
+          "gameAccepted": false
         }
+      },
+      "switch300OriginalParity": {
+        "task": "FORMAL_SWITCH300_ORIGINAL_RECIPE_OBJECT_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "01 COLLECTION",
+        "risk": "HIGH",
+        "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "baseLedgerBlob": "df728c2070d53430d98c06021664195fcd477efd",
+        "scope": "New exact Switch300 original MasterDefinition from 08 recovered Stage54 archive; compare original 282 Recipe object identity/raw bytes/typed prefix and targeted local pointers against accepted v301 Steam/Switch parity. No repeat 08 localized IDs/key mapping or 03 station/producer; no Writer authority; private additive evidence only.",
+        "dependency": "08 fixed original archive f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a; 06B accepted typed version scope 9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83; 01 v301 accepted parity; V39 fixed",
+        "next": "Read fixed original bytes; compare exact typed object and local reference parity; self-QA then 06A; if bytes unavailable WAIT_ENV",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
