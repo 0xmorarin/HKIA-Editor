@@ -15158,7 +15158,7 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "06C fixed V33 root independent QA now READY; 00 prepare pin-only workflow candidate no deployment; 05 root Svelte independent IN_FLIGHT; publish V33 after scoped acceptance and Owner fixed approval.",
+      "next": "06C P0 fixed artifact + PR12 independent review; 00 merge/dispatch after scoped PASS and explicit Owner fixed approval. 05 Svelte root parallel.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
@@ -15193,16 +15193,20 @@
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "base": "b7e91df1e456ded1b50b4649797bf1b7df216717",
-        "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment.",
+        "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment. Review PR12 exact one workflow pin diff (V33 target only, preserve manual main-only and existing V30/V29 rollback).",
         "dependency": "CTRL CI SUCCESS; 06C independent predeploy acceptance and Owner exact fixed artifact approval before manual deploy"
       },
       "workflowPinPreparation": {
         "task": "V33_MANUAL_OFF_WORKFLOW_PIN_ONLY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_DRAFT_PR_FIXED_06C_READY",
         "baseHead": "7df956fa51284dc34fa8a5e7ca50629b046a4c82",
         "baseBlob": "8b8bd314589572743b93d133632ebc6dc8395c85",
         "scope": "One existing manual-only Pages workflow: add exact V33 commit+manifest+source as third permitted OFF target. Preserve V30/V29, all policy checks and workflow_dispatch/main-only. Draft PR, no merge or dispatch until independent acceptance and Owner approval.",
-        "risk": "RELEASE"
+        "risk": "RELEASE",
+        "pr": 12,
+        "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
+        "blob": "75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5",
+        "verified": "Exact 4 line V33 pin additions/substitution only; V30/V29 rollback and manual dispatch/main-only/permissions/verifyDist unchanged; actual PR draft/head readback. No merge/deploy."
       }
     }
   },
