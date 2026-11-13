@@ -12866,17 +12866,14 @@
       "06B_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA"
     ],
     "nextAfterDep": [
-      "06A_R6_1_AFTER_07_FIXED_SELF_QA",
-      "00_SINGLE_ROOT_COMPOSE_AFTER_05_AND_06B",
+      "00_V33_MANUAL_FIXED_DEPLOY_AFTER_OWNER_EXACT_APPROVAL",
+      "06B_PRODUCT_FILTERS_AFTER_FIXED_CI",
+      "00_PRODUCT_TABS_V33_REBIND_CI_AFTER_05_SELF_PASS",
+      "00_PRODUCT_TABS_FILTERS_COMPOSE_AFTER_06B_AND_05_V33_REBIND",
       "06C_FIXED_ROOT_DISTRIBUTION_AFTER_00",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
-      "00_V33_MANUAL_FIXED_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
-      "06B_PRODUCT_TABS_AFTER_FIXED_CI",
-      "05_V33_APP_PREIMAGE_REBIND_AFTER_00_CI_AND_06B",
-      "00_V33_MANUAL_FIXED_DEPLOY_AFTER_OWNER_APPROVAL",
-      "06B_PRODUCT_FILTERS_AFTER_FIXED_CI",
-      "00_PRODUCT_TABS_FILTERS_COMPOSE_AFTER_06B_AND_05_V33_REBIND"
+      "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
+      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -16460,6 +16457,28 @@
       "run": 43426763281,
       "ciStatus": "in_progress",
       "next": "06B fixed filter browser scoped QA after CI; 05/00 shared app composition only after accepted scopes."
+    },
+    "resumeQueue20261113": {
+      "status": "RECONCILED",
+      "owner": "00 CTRL",
+      "baseHead": "fc87a95e3b8bc672939d2ce1f370fadfab003802",
+      "ready": [
+        "06B_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA"
+      ],
+      "inFlight": [
+        "06A three disjoint research scopes (existing claims)",
+        "06B product filter static + locale R5R7 (existing claims)",
+        "05 product tabs V33 exact rebind (existing claim)",
+        "00 product filters fixed CI 43426763281"
+      ],
+      "waitOwner": [
+        "V33 exact fixed OFF artifact approval"
+      ],
+      "waitEnv": [
+        "V24 genuine private Browser",
+        "Rust genuine Chrome Module Worker"
+      ],
+      "notes": "No duplicate start; V40 and R6.1 accepted; R5/R7 specialist already accepted. No new 07 task assigned."
     }
   },
   "formalRelease": {
