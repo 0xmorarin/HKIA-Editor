@@ -11016,10 +11016,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "DONE_V30_TABS_V30_V33_FILTERS_R5R7_CATALOG_NATIVE_SCOPED_PASS",
+      "status": "DONE_V33_TABS_CATEGORIES_ACH_LIST_HEADER_SCOPED_PASS",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "00 READY V33 tab rebind fixed CI f320ef06; 05 consume exact accepted V30 tabs, V30/V33 filters, R5-R7 catalog/native; 06B after V33 tab fixed CI or new fixed category/product UI scope; 00 shared V33 root composition after tab rebind acceptance, then 06C distribution; no repeat",
+      "next": "00 READY exact V33 accepted Tab+Filter+Category+Achievement list+Header shared app composition and integrated browser; 05 next Collection item binding self-QA fixed CI; 06B new fixed scope after CI, no repeat; 06C after integrated artifact",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -12296,31 +12296,284 @@
       },
       "v33TabsClaim": {
         "claim": "20261113_06B_V33_TABS",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
         "compiled": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
         "scope": "fixed independent changed scope, prior acceptance reused"
       },
       "productCategoriesClaim": {
         "claim": "20261113_06B_V33_CATEGORIES",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
         "compiled": "4b87b341d95c4f23e33a59384ffea740738ef656",
         "scope": "fixed independent changed scope, prior acceptance reused"
       },
       "productAchievementListClaim": {
         "claim": "20261113_06B_V33_ACH_LIST",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
         "compiled": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
         "scope": "fixed independent changed scope, prior acceptance reused"
       },
       "productAchievementHeaderClaim": {
         "claim": "20261113_06B_V33_ACH_HEADER",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "source": "b7061525fd00e68b6505b334a1a061903cd71014",
         "compiled": "2381c7641a4bec039b9ea84d72fa2203dff70122",
         "scope": "10 new paths static preflight, browser after fixed CI"
+      },
+      "v33Tabs": {
+        "task": "20261113_06B_V33_TABS",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+        "compiledHead": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
+        "run": 43428472417,
+        "job": 131895684723,
+        "scope": "3 ADD V33 pin scripts; accepted V30 module exact",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "artifact": {
+          "id": 14037284400,
+          "sha256": "4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7",
+          "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+          "appSha256": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "independentTests": 2,
+          "fail": 0,
+          "sourceBlobs": 3,
+          "compiledDiff": "WORKFLOW_ONLY",
+          "artifactCRC": "PASS",
+          "recoveredBaseSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "unchangedFiles": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "moduleAbortFallback": true,
+          "priorV30ModuleByteExact": true,
+          "crossBaseRepeatMutationTruncationDenied": true,
+          "actualCategoryImagesPerWidth": 25,
+          "legacyPanelIdentity": true,
+          "keyboard": true,
+          "filterSelection": true
+        },
+        "unverified": [
+          "Independent local Browser not executed; actual fixed CI Browser evidence reused with independent Node/model tests.",
+          "Combined app hook composition, integrated product behavior, release/privacy/allowlist/rollback and genuine Save/Writer separately."
+        ],
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "00 CTRL",
+            "05 WEB"
+          ],
+          "status": "READY",
+          "condition": "Consume exact accepted module and scoped delta; 00 compose from exact V33 app base, never overlay standalone app.js over another. Integrated browser/06C distribution/Owner approval separate. No deploy or Writer activation."
+        }
+      },
+      "productCategories": {
+        "task": "20261113_06B_V33_CATEGORIES",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "fd893041d47051016fbc4797d9e8d67dc7865389",
+        "compiledHead": "4b87b341d95c4f23e33a59384ffea740738ef656",
+        "run": 43429463962,
+        "job": 131899029168,
+        "scope": "10 ADD exact category grid",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "artifact": {
+          "id": 14038264996,
+          "sha256": "3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d",
+          "moduleSha256": "2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72",
+          "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "independentTests": 2,
+          "fail": 0,
+          "sourceBlobs": 10,
+          "compiledDiff": "WORKFLOW_ONLY",
+          "artifactCRC": "PASS",
+          "recoveredBaseSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "unchangedFiles": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "moduleAbortFallback": true,
+          "ciUnit": 135,
+          "selectionSteps": 50,
+          "disposals": 150,
+          "stalePortDenied": true,
+          "duplicateHostAndImageAttributeDenied": true,
+          "actualCategoryImagesPerWidth": 25,
+          "mappedImageFailureFallback": true
+        },
+        "unverified": [
+          "Independent local Browser not executed; actual fixed CI Browser evidence reused with independent Node/model tests.",
+          "Combined app hook composition, integrated product behavior, release/privacy/allowlist/rollback and genuine Save/Writer separately."
+        ],
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "00 CTRL",
+            "05 WEB"
+          ],
+          "status": "READY",
+          "condition": "Consume exact accepted module and scoped delta; 00 compose from exact V33 app base, never overlay standalone app.js over another. Integrated browser/06C distribution/Owner approval separate. No deploy or Writer activation."
+        }
+      },
+      "productAchievementList": {
+        "task": "20261113_06B_V33_ACH_LIST",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+        "compiledHead": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
+        "run": 43430603821,
+        "job": 131902833386,
+        "scope": "10 ADD exact achievement list",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "artifact": {
+          "id": 14038992117,
+          "sha256": "3bd3d3888c3b638dc5e252f9187612317758a44edadb9fd14a322c503bdd4921",
+          "moduleSha256": "a8a756e7790c83a2deca44cf4387e388e348ff1f41f5b9296b8e1cf1a1065c95",
+          "appSha256": "4a03848e2a4fc70ef6a776a151118b3d04182e346fcb14d281513ad78f8b86be",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "independentTests": 2,
+          "fail": 0,
+          "sourceBlobs": 10,
+          "compiledDiff": "WORKFLOW_ONLY",
+          "artifactCRC": "PASS",
+          "recoveredBaseSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "unchangedFiles": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "moduleAbortFallback": true,
+          "ciUnit": 135,
+          "pageBoundaries": [
+            120,
+            240,
+            360
+          ],
+          "hiddenSelection": true,
+          "staleIntentDenied": true,
+          "duplicateGuidUnsafeCountSlotMissingDenied": true,
+          "syntheticAccountRows": 161,
+          "actualImagesPerWidth": 13
+        },
+        "unverified": [
+          "Independent local Browser not executed; actual fixed CI Browser evidence reused with independent Node/model tests.",
+          "Combined app hook composition, integrated product behavior, release/privacy/allowlist/rollback and genuine Save/Writer separately."
+        ],
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "00 CTRL",
+            "05 WEB"
+          ],
+          "status": "READY",
+          "condition": "Consume exact accepted module and scoped delta; 00 compose from exact V33 app base, never overlay standalone app.js over another. Integrated browser/06C distribution/Owner approval separate. No deploy or Writer activation."
+        }
+      },
+      "productAchievementHeader": {
+        "task": "20261113_06B_V33_ACH_HEADER",
+        "status": "DONE_SCOPED_PASS",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "b7061525fd00e68b6505b334a1a061903cd71014",
+        "compiledHead": "2381c7641a4bec039b9ea84d72fa2203dff70122",
+        "run": 43433563639,
+        "job": 131912828220,
+        "scope": "10 ADD exact achievement header; not full detail",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "artifact": {
+          "id": 14041045919,
+          "sha256": "143ee34689dec6eedcbc972e101d0db5cf53b2b0f849ec37acba6b30cddfc663",
+          "moduleSha256": "98746c2e0c828e7d4ce9b2a6a0f1555295a071bc8cd6ff66eb3eec256387d843",
+          "appSha256": "7601ea1c99265a96862ef9ca035b1a61ad7ffe17dc94fa04c4d7d6250bfee60c",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "verified": {
+          "independentTests": 4,
+          "fail": 0,
+          "sourceBlobs": 10,
+          "compiledDiff": "WORKFLOW_ONLY",
+          "artifactCRC": "PASS",
+          "recoveredBaseSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "actualFixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ],
+          "unchangedFiles": 4145,
+          "webpUnchanged": 4076,
+          "writer": "OFF",
+          "moduleAbortFallback": true,
+          "ciUnit": 139,
+          "sameGuidRevisions": 30,
+          "largeDecimalAndTimestampExact": true,
+          "cleanupNewerNodesRetained": true,
+          "rollbackOriginalNodes": true,
+          "boundedInputDenied": true,
+          "samePanelAndProjection": true
+        },
+        "unverified": [
+          "Independent local Browser not executed; actual fixed CI Browser evidence reused with independent Node/model tests.",
+          "Combined app hook composition, integrated product behavior, release/privacy/allowlist/rollback and genuine Save/Writer separately."
+        ],
+        "evidence": {
+          "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+          "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+        },
+        "handoff": {
+          "recipient": [
+            "00 CTRL",
+            "05 WEB"
+          ],
+          "status": "READY",
+          "condition": "Consume exact accepted module and scoped delta; 00 compose from exact V33 app base, never overlay standalone app.js over another. Integrated browser/06C distribution/Owner approval separate. No deploy or Writer activation."
+        }
+      },
+      "v33ProductEvidence": {
+        "file": "HKIA_06B_V33_TABS_CATEGORIES_ACH_LIST_HEADER_QA_20261113.zip",
+        "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
       }
     },
     "06C_QA_RELEASE": {
