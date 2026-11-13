@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "01_RECOVER_REMAINING_EXACT_V301_CATALOGS_STEAM301_SERIAL_V33_HELPERS_FROM_LEGACY_DRAIN_LOCATOR; 06A_AFTER_FIXED_ORIGINALS; STATION_RUNTIME_WAIT_NEW_WITNESS; NO_REPEAT",
+      "next": "06A_SWITCH301_DEFINITION_FIXED_ORIGINALS_READY; 01_WAIT_NEW_CONCRETE_STATION_WITNESS_OR_QA_COUNTEREXAMPLE; 02_SHARED_V33_AND_CORE_REUSE_ONLY; NO_LEGACY_06_ACTIVATION",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -133,7 +133,7 @@
       },
       "switch301Definition": {
         "task": "FORMAL_SWITCH301_RECIPE_DEFINITION_PARITY",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "READY_06A_FIXED_ORIGINALS_SELF_REPRODUCTION_PASS",
         "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Switch301 MasterDefinition original vs Steam301 exact 282 Recipe object byte/path identity; targeted local references 39 and collection groups, no game/producer authority; v300 catalog differs and remains separate",
@@ -144,8 +144,8 @@
         "changes": "4 ADD + transport manifest; 521 V33 base entries unchanged",
         "verified": "Exact Switch301 bundle/serial and Steam301 serial pins; 12163 Item definition raw SHA+identity, 282 Recipe raw bytes/typed prefix/tail, 183 local pointer occurrences across 39 selected recipes, 25 group raw/181 nested, 130 ItemCounter raw SHA; 12 focused PASS; catalog same-name different-content boundary; Library readback exact CRC",
         "classification": "V301_DEFINITION_OBJECT_PARITY_STATIC_ONLY; V300_ORIGINAL_ASSET_UNKNOWN; NO_NEW_REQUIRED_OR_PRODUCT_AUTHORIZATION",
-        "remaining": "06 independent scoped verification; external references and runtime/game acceptance; no v300 inference",
-        "next": "06 new 4 paths scoped QA after current claim; 03/04 consume v301 only after acceptance; 01 WAIT exact v300 original or QA counterexample",
+        "remaining": "06A independent exact original reproduction; external reference closure and game acceptance UNKNOWN; no new product authority",
+        "next": "06A scoped pending 01_SWITCH301_DEFINITION exact fixed originals; direct consumers after acceptance",
         "productAuthorized": false,
         "gameAccepted": false
       },
@@ -188,11 +188,29 @@
       "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07",
       "v301OriginalRecovery": {
         "task": "FORMAL_V301_DEFINITION_ORIGINAL_RECOVERY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_FIXED_ORIGINALS_READY_06A",
         "baseHead": "ce823591b30c5b40fdd33e0da7fccbdb9b02c17b",
         "scope": "Recover exact pinned catalogs, Steam301 serial, V33 helpers for 06A pending 01 parity; no v300 research, no product changes",
         "risk": "HIGH_SOURCE_PROVENANCE_EXISTING_PARITY_QA",
-        "dependency": "06A pending 01_SWITCH301_DEFINITION; legacy core original pin recovered"
+        "dependency": "06A pending 01_SWITCH301_DEFINITION; legacy core original pin recovered",
+        "artifact": "HKIA_01_V301_ORIGINAL_RECOVERY_HANDOFF_20261113.zip",
+        "sha256": "1790af81a6b9dd54d9c071999a8d191f4ca8bd09859e23fd80921d31287b1fc5",
+        "manifestSha256": "985380993c836041b7b07edd2381f3058f1ca2b45145589071460cf0b2114c3f",
+        "resultSha256": "743127bf7b995e5539848e65962cf81b3dccb7638361630e63f29656aaab971a",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "fixedDeltaSha256": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
+        "verified": "All 4 existing original Drive locators verified; catalogs 300/301 exact SHA; Steam301 and Switch301 bundle and extracted Serial exact; V33 and delta Library readback exact CRC; 521 unchanged 4 ADD; 12 focused PASS; reproduced existing evidence byte identical SHA 6c1f880a457441b911d0f6874a5364fe1cb841bec278c998c9302d93a3073458; handoff Library byte exact CRC",
+        "classification": "HIGH_SCOPE_ORIGINAL_RECOVERY_SELF_REPRODUCTION_ONLY",
+        "remaining": "06A independent exact v301 original reproduction with independent oracle; no v300 repeated research; runtime/external reference closure/game acceptance not inferred. 02 scripts/config/Stage54 separate owner dependency.",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "01_SWITCH301_DEFINITION",
+          "status": "READY_FIXED_ORIGINALS",
+          "scope": "Existing 01 fixed 4 ADD only, private locators in handoff; independent v301 exact input reproduction and negative/oracle checks; v300 catalog boundary only; consume 03/04/07 after scoped acceptance; disjoint from R4.",
+          "evidence": "Private Library HKIA Editor Private; handoff artifact contains original locators, source pins and reproduction commands; no raw assets or private source IDs in ledger."
+        },
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
