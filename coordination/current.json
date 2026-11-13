@@ -12236,6 +12236,34 @@
         "sha256": "2ca401b0a98d6c9772ce0e4a4dd9f1d52711aa88334ac664d868d29240f5138b",
         "location": "Private Library /HKIA Editor Private/",
         "readback": "BYTE_EXACT_SHA_CRC_PASS_5_ENTRIES"
+      },
+      "v33TabsClaim": {
+        "claim": "20261113_06B_V33_TABS",
+        "status": "IN_FLIGHT",
+        "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+        "compiled": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
+        "scope": "fixed independent changed scope, prior acceptance reused"
+      },
+      "productCategoriesClaim": {
+        "claim": "20261113_06B_V33_CATEGORIES",
+        "status": "IN_FLIGHT",
+        "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
+        "compiled": "4b87b341d95c4f23e33a59384ffea740738ef656",
+        "scope": "fixed independent changed scope, prior acceptance reused"
+      },
+      "productAchievementListClaim": {
+        "claim": "20261113_06B_V33_ACH_LIST",
+        "status": "IN_FLIGHT",
+        "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+        "compiled": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
+        "scope": "fixed independent changed scope, prior acceptance reused"
+      },
+      "productAchievementHeaderClaim": {
+        "claim": "20261113_06B_V33_ACH_HEADER",
+        "status": "IN_FLIGHT",
+        "source": "b7061525fd00e68b6505b334a1a061903cd71014",
+        "compiled": "2381c7641a4bec039b9ea84d72fa2203dff70122",
+        "scope": "10 new paths static preflight, browser after fixed CI"
       }
     },
     "06C_QA_RELEASE": {
