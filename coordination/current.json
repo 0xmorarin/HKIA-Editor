@@ -5924,11 +5924,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_V35_SCOPED_PASS_WAIT_ENV_V24",
       "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
       "scope": "33 additive research paths only; 582 unchanged; prior V34 distribution exact map reused; no deployment/Writer/new authority. 106 focused self PASS; check/build/source-derived 55 exact; rollback 582 and rebuild 615. No repeat V34 accepted specialist QA.",
-      "next": "06C independent V35 changed integration scope; 00 direct handoff. V24 genuine browser WAIT_ENV separately.",
-      "dependency": "V35_FIXED_SOURCE_AND_MANIFEST_READY",
+      "next": "00 CTRL accept fixed V35 private research reference; 06C next only new fixed integrated candidate or authorized V24 genuine Browser environment",
+      "dependency": "V35_SCOPED_ACCEPTED; V24_WAIT_ENV; NEXT_NEW_FIXED_INTEGRATION_WAIT_DEP",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
       "legacyEvidence": {
@@ -6051,7 +6051,69 @@
         "baseHead": "19ad086a28fff1f34382a2da66764f66c4b0e0ea",
         "baseLedgerBlob": "9d157117da0593bbf4ece7657768fcacf8181236",
         "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-        "scope": "V35 33 ADD only, 582 exact, upstream five deltas, distribution map and source build, rollback; independent integration; no product change"
+        "scope": "V35 33 ADD only, 582 exact, upstream five deltas, distribution map and source build, rollback; independent integration; no product change",
+        "status": "COMPLETED"
+      },
+      "result": {
+        "verdict": "SCOPED_PASS_V35_PRIVATE_RESEARCH_REFERENCE",
+        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+        "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
+        "delta": "1142f019d4815666b0b0b728cbf351e5e74bb1131a9efa69665faa67c50a9c91",
+        "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+        "verified": {
+          "sourceEntries": 615,
+          "unchanged": 582,
+          "add": 33,
+          "mod": 0,
+          "del": 0,
+          "upstreamDeltas": 5,
+          "upstreamLogicalPaths": 33,
+          "conflicts": 0,
+          "pendingExcluded": 2,
+          "crc": "PASS",
+          "focused": 106,
+          "fail": 0,
+          "skip": 0,
+          "independentNegativeControls": 4,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "sourceDerivedBuildExact": 55,
+          "fullManifestDirectMatch": 54,
+          "indexProjectionExact": true,
+          "fullDistributionMapExact": 4146,
+          "webp": 4076,
+          "rollbackSourceExact": 582,
+          "reconstructSourceExact": 615,
+          "writer": "OFF",
+          "distribution": "NO_NEW_RESEARCH_PAYLOAD_OR_PATH",
+          "legacyScope": "EXACT_ACCEPTED_V34_EVIDENCE_REUSE"
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+          },
+          "zip": {
+            "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
+          },
+          "readback": "BOTH_EXACT_SHA_CRC_PASS",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "trueRed": [],
+        "unverified": [
+          "External media pack bytes not rehashed; exact prior accepted V34 map reused",
+          "V24 authorized genuine browser and game persistence",
+          "V35 no release/Writer authorization; no live deploy or rollback"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V35_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record scoped PASS for fixed 615 reference only; no new Writer/deployment; preserve V24 and V30; no further integration QA absent new fixed scope",
+          "nextAfterDep": "06C authorized V24 browser or new fixed release/integration candidate"
+        },
+        "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
       }
     }
   },
