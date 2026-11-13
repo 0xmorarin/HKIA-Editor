@@ -2782,7 +2782,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V33_COLLECTION_ITEMS_REPAIR_FIXED_CI_READY; 06B_REPAIR_AFTER_FIXED_CI; 05_ACCEPTED_LOCALE_CATALOG_CONSUMER_READY; EXISTING_OTHER_UI_QUEUES_UNCHANGED",
+      "next": "00_COLLECTION_ITEMS_REPAIR_AND_PRODUCT_LOCALE_CHROME_FIXED_CI_READY; 06B_INDEPENDENT_AFTER_FIXED_CI; 08_EDITOR_SCOPE_STORAGE_KEYS_READY; 05_NEXT_REMAINING_PRODUCT_LOCALE_OR_QA_REPAIR; EXISTING_OTHER_UI_QUEUES_UNCHANGED",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -5042,7 +5042,7 @@
       },
       "productLocaleChrome": {
         "task": "SVELTE_PRODUCT_LOCALE_CHROME_BINDING",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "owner": "05 WEB",
         "risk": "HIGH_LOCALE_UI_ADAPTER",
         "baseHead": "efadb660930b34ac72ced1dda2754040255891eb",
@@ -5050,7 +5050,73 @@
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "scope": "32 exact legacy V33 tab/filter labels from accepted 08 advisory, explicit search placeholder exclusion, accepted R1 repaired consumer/selector, 15x189 pinned catalogs, private staging; no full product/game text/localized search or shared app composition",
         "dependency": "06B R1 repaired consumer and 08 R3/R4/R5-R7 catalog scoped PASS; V33 tabs/filters actual accepted scopes, combined localized producer separately 00",
-        "next": "05 self-QA exact catalog and DOM transaction; 00 fixed nondeploy compile/browser; 06B independent behavior"
+        "next": "05 self-QA exact catalog and DOM transaction; 00 fixed nondeploy compile/browser; 06B independent behavior",
+        "sourceHead": "93c21aceab6c831c467e16a6db5a1a37e571c3b5",
+        "tree": "4e42beef7b788568dcccfb4aeac13fbb895e1d48",
+        "branch": "web05/product-locale-chrome-v33",
+        "changes": "15 ADD 0 MOD 0 DEL svelte-ui only; no raw game data, locale packs or live source changes",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "catalogSha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+        "runtimeSha256": "95bb02c1440bad492aea24f46eb653d036525b8d1be5a4733e769bdf397ccaa6",
+        "manifestSha256": "ea407e737d101191e8eed60341bba1a1e10f784c21cf1b210790a9f2c755d915",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductLocaleChrome_20261114_Evidence.zip",
+          "sha256": "4242a7747e7311c1b10d897a3fb7210c74a45466c5df29d579ef780e137a6e8d",
+          "evidenceSha256": "b92b539041b5aa4ca80b5dd4f785ba8079746a97b0ffdca9e1ef18dbd6def5f4",
+          "transport": "HKIA_WEB05_ProductLocaleChrome_20261114_Transport.txt",
+          "transportSha256": "7466e8d16a1d9d1cc2debfa0f4c64f3ce5d5a22bcd0dbb563ca1cd46b1659d4a",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BOTH_BYTE_EXACT_SHA_PASS_ZIP_CRC_20_ENTRIES"
+        },
+        "verified": {
+          "node": "22.16.0",
+          "fullSuite": 81,
+          "newTests": 12,
+          "fail": 0,
+          "strictTS": "5.8.3 CORE",
+          "acceptedR1ConsumerBlob": "6bfc2251bf962cb70f0d74fb0c99401de95df7f8",
+          "acceptedSelectorBlob": "ed89b6b259efcf205bd2b0c8e3a778c33e419e04",
+          "actualV33IndexBlob": "c0b89bc784bad62bb537124ccbbea4b1dea5181d",
+          "actualChromeFragments": 4,
+          "exactAnchors": 2,
+          "locales": 15,
+          "catalogKeys": 189,
+          "staticSites": 32,
+          "actualCatalogCellComparisons": 480,
+          "inlineRealDOMDiagnosticWidths": [
+            320,
+            375,
+            1280
+          ],
+          "inlineLabelComparisons": 1440,
+          "inlineEvents": 0,
+          "inlineDigestBridge": true,
+          "inlineNativeWebCrypto": false,
+          "remoteBlobsExact": 15,
+          "actualAcceptedRuntime": "auto/manual/stale/close/corrupt/storage denial tested"
+        },
+        "decision": "Isolated V33 legacy DOM text/aria/placeholder transaction, reuses accepted repaired Svelte locale consumer/selector and runtime/catalog pins. Keep all machine IDs/options/caret/focus/tab and input state; no Save calls. Separate editor-only catalog reference version, not actual save version. Preserve JA/EN/GUID search placeholder and do not claim localized-name search. Partial chrome labels lang-marked; document lang remains JA while remaining UI JA, full document language switch only on full binding. No new translations; two visible English source-only messages (partial scope and storage unavailable) require 08 keys. No game packs or distribution authorization.",
+        "unverified": [
+          "Svelte compile/check/build and actual full product HTTP/HTTPS Chrome 320/375/1280: local HTTP blocked ERR_BLOCKED_BY_ADMINISTRATOR, inline diagnostic not Browser PASS",
+          "Actual product Save/Session/Revision/Undo and combined localized Svelte tab/filter producers; no game text/name search, remaining UI and document lang, physical locale availability/linguistic review",
+          "Independent 06B HIGH behavior acceptance; 00/06C integration/release; Writer OFF"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_LOCALE_CHROME_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "93c21aceab6c831c467e16a6db5a1a37e571c3b5",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "15 code-only ADD; exact accepted runtime + 15 editor catalog JSON only staged privately, no game packs, no live deploy or shared producer composition",
+          "acceptance": "Pinned npm ci, HKIA_LOCALE_INPUT=<exact accepted R1+R2+R3+R4+R5R7 overlay localization directory> npm test expected81 (public no private input tests 71 pass 10 skip, not full gate); svelte check --fail-on-warnings; ordinary Vite build + vite build --config vite.product-locale-chrome.config.ts. Actual exact V33 manifest and verify-product-locale-chrome-reference.mjs <site> <locale>; prepare-product-locale-chrome-delta.mjs <site> <manifest> dist-product-locale-chrome <locale> <fresh-delta>. 1 index MOD +19 ADD, unchanged 4145 and WebP4076, no game packs. Actual browser-product-locale-chrome-parity.py <candidate> at 320/375/1280 with synthetic Account (no Apply/export), 15 locales, current tab/filter/input/detail/draft/node identity, preference reload and auto, no external/download/overflow, OFF. Record bundle/manifest/delta/license; 06B independent changed scope. Combined Svelte producer locale binding and full release separately.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "Exact 15 new paths, independent locale commit/rollback/stale/close/corrupt/DOM identity + actual compiled browser, no catalog linguistic or prior R1 re-QA. 08 direct next key gap and localized producer advisory."
+        },
+        "localeFollowup": {
+          "to": "08 LOCALIZATION",
+          "status": "READY_ADVISORY_NEW_EDITOR_KEYS",
+          "scope": "Provide exact editor-owned keys for partial chrome-only scope notice including JA/EN/GUID-only search and locale preference persistence failure, across 15 accepted source locales; existing 189 cells unchanged; actual product locale/search and whole UI next."
+        }
       }
     },
     "06_QA": {
