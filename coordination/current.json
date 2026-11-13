@@ -1,8 +1,0 @@
-{
-  "schema": "HKIA.PublicDistributionRole.1",
-  "status": "DEVELOPMENT_LEDGER_RETIRED",
-  "role": "PUBLIC_FIXED_PRODUCT_DISTRIBUTION_ONLY",
-  "developmentCoordination": "Private; this file is not a development task ledger. Use the current Owner-approved private development repository.",
-  "writer": "OFF",
-  "note": "Existing approved manual Pages distribution is unchanged. Historical Git commits are not erased."
-}
