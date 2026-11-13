@@ -18041,7 +18041,7 @@
       "owner": "00 CTRL",
       "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_NONDEPLOY_CI",
       "risk": "HIGH",
-      "status": "CI_SUBMITTED",
+      "status": "DONE_FIXED_CI_PASS_06B_READY",
       "baseHead": "dd225c417ac427249104f3380f910bc26215454b",
       "baseBlob": "08e1c72e2d2422e1c8d1f2a30399c627f235c391",
       "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
@@ -18051,30 +18051,90 @@
       "branch": "ctrl/svelte-v33-categories-fixed-20261113",
       "workflowBlob": "32b217796630feca659305bcdf6c6472365f7a5e",
       "run": 43429463962,
-      "ciStatus": "IN_PROGRESS",
-      "next": "06B independent exact category bridge after green fixed browser; no delay V33 tab/filter composition once accepted; category integration separate.",
+      "ciStatus": "SUCCESS",
+      "next": "06B independent fixed category acceptance; then 00 shared app composition; no deploy.",
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
         "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_BROWSER_INDEPENDENT_QA",
-        "status": "READY_AFTER_CI",
+        "status": "READY",
         "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
         "compiledHead": "4b87b341d95c4f23e33a59384ffea740738ef656",
         "run": 43429463962,
-        "scope": "10 exact new category bridge paths, 25 actual category images, unique grid lifecycle/selection/focus/filters, mapped image LOAD_FAILED and bundle abort fallback, 320/375/1280; reuse accepted R3, no other re-QA."
+        "scope": "10 exact new category bridge paths, 25 actual category images, unique grid lifecycle/selection/focus/filters, mapped image LOAD_FAILED and bundle abort fallback, 320/375/1280; reuse accepted R3, no other re-QA.",
+        "artifact": {
+          "id": 14038264996,
+          "name": "HKIA_ProductCategories_V33_CodeOnly",
+          "sha256": "3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d",
+          "bytes": 55068,
+          "moduleSha256": "2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72",
+          "moduleBytes": 76112,
+          "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce"
+        }
+      },
+      "job": 131899029168,
+      "artifact": {
+        "id": 14038264996,
+        "name": "HKIA_ProductCategories_V33_CodeOnly",
+        "sha256": "3123cad624fed8e7b763fa0e2205d5723eabf50fb2604c6ca96b7b132d6e104d",
+        "bytes": 55068,
+        "moduleSha256": "2a198ad274f01ac56dd310a0386a41760424c5756efaff09d3648dd02f665e72",
+        "moduleBytes": 76112,
+        "appSha256": "e825e12c68c26b5acef427e5f904e2882d1ee64d773eb7a7636bd0796900ddce"
+      },
+      "verified": {
+        "unit": 135,
+        "fail": 0,
+        "compileCheckBuild": "SUCCESS",
+        "baseFiles": 4146,
+        "unchanged": 4145,
+        "modified": 1,
+        "added": 1,
+        "webpUnchanged": 4076,
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "actualCategoryImagesPerWidth": 25,
+        "exactProjection": true,
+        "singleGridHost": true,
+        "legacyPanelsSameNodes": true,
+        "selectionFocus": true,
+        "filtersSelectionRetained": true,
+        "bundleAbortFallback": true,
+        "mappedImageFailureFallback": true,
+        "writer": "OFF",
+        "pageErrors": 0,
+        "externalRequests": 0,
+        "overflow": 0
       }
     },
     "productAchievementListCI": {
       "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_NONDEPLOY_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "IN_FLIGHT",
+      "status": "CI_SUBMITTED",
       "baseHead": "4dbda258a1f58dfe755c64c9547597446809b355",
       "baseBlob": "b4b5670c7e41150f9beb6c1a6c072ccc10104a69",
       "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
       "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
       "scope": "10 exact ADD, one isolated fixed workflow; real V33 browser and code-only artifact; no deploy, no shared app composition.",
       "branch": "ctrl/svelte-v33-achievement-list-fixed-20261113",
-      "next": "06B independent scoped acceptance after CI; static preflight parallel."
+      "next": "06B independent scoped acceptance after CI; static preflight parallel.",
+      "head": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
+      "workflowBlob": "ad00a639a10ce92b43ba610e5a67ad5d31c74470",
+      "run": 43430603821,
+      "ciStatus": "QUEUED_OBSERVED",
+      "verified": "Exact 10 ADD source vs 767decd; exact single workflow ADD vs source, branch and workflow blob readback, GitHub run head exact. No build PASS yet.",
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_BROWSER_INDEPENDENT_QA",
+        "status": "READY_AFTER_CI_STATIC_PREFLIGHT_PARALLEL",
+        "source": "b9be0e94b0ab5454f0827be935c93203fca68df8",
+        "compiledHead": "ac3980f8cfb91b9e9adcad1ab43a8fa3dcea2926",
+        "run": 43430603821,
+        "scope": "Exact 10 ADD plus compiled actual V33; separate R4 list lifecycle/paging/stale/DOM identity/fallback/actual image projection; no prior R4 or other scopes repeat. Require CI artifact SHA and independent oracle before acceptance."
+      }
     }
   },
   "formalRelease": {
