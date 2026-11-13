@@ -1,0 +1,2 @@
+import {defineConfig} from 'vite';import {svelte} from '@sveltejs/vite-plugin-svelte';
+export default defineConfig({base:'./',plugins:[svelte()],esbuild:{legalComments:'none'},build:{outDir:'dist-product-filters',emptyOutDir:true,sourcemap:false,minify:'esbuild',lib:{entry:'src/product-filters-entry.ts',formats:['es'],fileName:()=> 'product-filters.mjs'},rollupOptions:{output:{inlineDynamicImports:true}}}});
