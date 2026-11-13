@@ -1,6 +1,6 @@
 {
   "schema": "HKIA.ReleaseGates.1",
-  "repository": "0xmorarin/HKIA-Editor",
+  "repository": "Yumekiraboshi/HKIA-Editor",
   "productScope": [
     "Achievements",
     "Collections"
@@ -181,9 +181,9 @@
       "record": "coordination/pages-preview-decision-20261113.md",
       "status": "OWNER_APPROVED_POLICY_ACTIVE",
       "priority": "VISIBLE_ACCEPTED_MILESTONES_PROMPTLY",
-      "root": "PRESERVE_EXISTING_ACCEPTED_PRODUCT",
-      "path": "/HKIA-Editor/dev/",
-      "initialMode": "SYNTHETIC_NO_SAVE_WRITER_OFF",
+      "root": "SINGLE_PRODUCT_DEVELOPMENT_TEST_SITE_PRESERVE_ACCEPTED_UI_DATA_IMAGES",
+      "path": "/HKIA-Editor/",
+      "initialMode": "EXACT_ACCEPTED_V30_RESTORE_WRITER_OFF_THEN_PRODUCT_EQUIVALENT_ROOT",
       "updateTrigger": "VISIBLE_UI_UX_IMAGES_LOCALIZATION_OR_ACCEPTED_OPERATION_CHANGE",
       "skip": "RESEARCH_ONLY_OR_IDENTICAL_DISTRIBUTION",
       "transport": "REUSE_PINNED_REMOTE_MEDIA_AND_BASE; COMPOSE_IN_ACTIONS; DELTA_INPUT_ONLY",
@@ -194,7 +194,7 @@
       "formalPromotionAuthorization": false,
       "privacy": "NO_GENUINE_SAVE_RAW_GAME_DATA_PRIVATE_LOCATORS_SOURCE_MAPS_INTERNAL_PATHS",
       "rollback": "LAST_ACCEPTED_FIXED_ARTIFACT",
-      "note": "No new Beta gate; do not wait unrelated formal work."
+      "note": "No separate /dev/ deployment. Preserve fixed V30 rollback; nested R4 evidence is not root acceptance. No new Beta gate; do not wait unrelated formal work."
     }
   },
   "compatibility": {
