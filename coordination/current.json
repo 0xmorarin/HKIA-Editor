@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "01_VERSIONED_SAVED_MEMBERSHIP_IN_FLIGHT; V41_ACCEPTED; 03_CAUSAL_DISJOINT",
+      "next": "06A_VERSIONED_SAVED_MEMBERSHIP_READY; 03_CAUSAL_IN_FLIGHT_DISJOINT; 01_WAIT_NEW_WITNESS_OR_QA_COUNTEREXAMPLE",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -176,6 +176,11 @@
         "acceptance": {
           "resultSha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f",
           "scope": "Exact conditional cooking producer research only; no product authorization; V35 additive integration and V36 accepted successor"
+        },
+        "summaryCorrection": {
+          "status": "CORRECTED_LEDGER_SHORTHAND_ONLY",
+          "source": "Accepted detailed docs/research/01-recipe6-switch300-producer.json and new V41 read-only observation",
+          "correction": "Earlier/later selected v300 result Food positive false in both; history absent both. Third distinct v300 record and v301 positive and history recorded. Prior shorthand 'food positive/history absent both' incorrect; preserve original evidence; no change to static producer classification."
         }
       },
       "stationWitness": {
@@ -355,15 +360,32 @@
       "versionedSavedMembership": {
         "task": "SWITCH300_301_VERSIONED_COLLECTION_SAVED_MEMBERSHIP_OBSERVATION",
         "owner": "01 COLLECTION",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_06A_READY",
         "risk": "HIGH",
         "baseLedgerBlob": "e6b088122dc05e9655a242940d7f1ca1c69549f3",
         "baseSourceSha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
         "scope": "Read-only genuine four distinct known-version slots; 29 exact membership-change ItemIds only, Key1/Key0 typed presence and inventory ownership status, version-specific aggregate grouping vs v301-only mapping. No Native causal/migration analysis (03), no prior Recipe6 station/producer repeat, no edits, no private IDs or timestamps exported.",
         "dependency": "06A static versioned membership accepted; V41 integrated accepted; existing private two archives",
-        "next": "Self-QA exact version join and typed observation, then 06A; no product authority",
+        "next": "06A READY; 01 wait independent counterexample/new witness; 03 existing causal IN_FLIGHT may consume after acceptance; no repeat",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "claimCommit": "26659fb9c283e24062e6115d672388c65d77da4e",
+        "artifact": "HKIA_01_VERSIONED_SAVED_MEMBERSHIP_V41_DELTA_20261114.zip",
+        "deltaSha256": "f62783daa4a74a1a451ad772fffcfb1b5624d930625aa82ccad1046d4200941b",
+        "manifestSha256": "35e1ba70bb05cb106df2ffbd6bb96705adfb47ccbf20eb3b2420e8b551800746",
+        "resultSha256": "24530a842e9d0394a7e3bdb0dc551a3b0ad81f9ccd70d5680ee92e0383b24921",
+        "changes": "4 ADD 0 MOD 0 DEL + transport manifest; all 671 V41 byte exact",
+        "verified": "2 private archives, 4 distinct typed genuine slots (3 v300/1 v301), 3 duplicates, 1 unsupported; Key0 empty all; exact 29 v301 crosswalk joins; v300 recorded 1/19/25, actual version assigned 1/19/25 vs v301-only 0/6/12, different pair 1/19/25; v301 29 recorded, 16 assigned/13 empty; each v300 4 simple positive without Key1; Recipe6/Food6 histories and simple positive 0/0,6/0,6/6 vs v301 6/6; 18 focused PASS; byte-exact replay, original unchanged, 671 base exact, private Library readback byte exact CRC and 4 hashes",
+        "classification": "READONLY_VERSIONED_SOURCE_JOIN; ACTUAL LIVE UI/EDIT NOT ASSERTED; NO MIGRATION/CAUSAL/NEW REQUIRED/WRITER AUTHORITY",
+        "remaining": "06A independent typed genuine oracle and 29 pair group buckets; 03 versioned predicate/history/migration causal claim IN_FLIGHT separate; 04/05/07 assess fixed candidate affected scope only after acceptance. Dynamic and physical persistence/game unknown; no product/game authority",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "SWITCH300_301_VERSIONED_COLLECTION_SAVED_MEMBERSHIP_INDEPENDENT_QA",
+          "status": "READY",
+          "fixedSourceSha256": "f62783daa4a74a1a451ad772fffcfb1b5624d930625aa82ccad1046d4200941b",
+          "scope": "4 ADD only V41; independent typed genuine 4-slot oracle, 29 fixed membership joins/empty and exact pair, v300 1/19/25 versus v301-only 0/6/12, v301 16/13; Key0, inventory states/Key1 separate, duplicate/malformed/version/pair negatives; prior static membership and 03 Native not repeated; original unchanged",
+          "consumer": "03_LINKAGE observation only; 04/07 version-correct capability selection; 05 display reference and 06B material UI; 00 additive integration after scoped acceptance, no Writer/deploy"
+        }
       }
     },
     "02_ACHIEVEMENT": {
