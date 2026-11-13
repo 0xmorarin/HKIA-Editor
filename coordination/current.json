@@ -13852,6 +13852,69 @@
           "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
           "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
         }
+      },
+      "resumeReconciliation20261114": {
+        "task": "06C_LATEST_SSOT_QUEUE_RECONCILIATION",
+        "status": "DONE_NO_NEW_FIXED_RELEASE_SCOPE",
+        "baseHead": "41c9b52a2b9d300e6aaaa409a746ebc6553dd167",
+        "baseLedgerBlob": "4acc96cf26ebcf28151558749f59da406eb7686b",
+        "releaseGateBlob": "43a49327f26ce2b49e993387a27ab12cb54a691a",
+        "verified": {
+          "v33Live": {
+            "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+            "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+            "run": 43434165900,
+            "conclusion": "SUCCESS_LIVE_RUN_METADATA",
+            "evidenceBlob": "b4ac6bd41e603766e5147b20caac825adf0ebeb9",
+            "readback": "EXACT"
+          },
+          "v41": {
+            "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+            "verdict": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+            "entries": 671,
+            "distributionUnchanged": 4146,
+            "recordedEvidence": "c66ce8b6d0fecbf7fe26f52b93acecc8430ae01dd4ec52734342fb88b7793435"
+          },
+          "mainProtected": false,
+          "branchProtectionDetails": "403_NOT_ACCESSIBLE_BY_INTEGRATION",
+          "active06CClaims": "NONE"
+        },
+        "queue": {
+          "ready": [
+            "00 CTRL: record already accepted V33 live and V41 research; compose only accepted V33 UI scopes",
+            "05 WEB: repair Collection Items postcommit duplicate-host rollback"
+          ],
+          "waitDep": [
+            "06C fixed single-root distribution after 00 composition and 06B accepted changed scopes",
+            "06C next fixed research reference after 00"
+          ],
+          "waitEnv": [
+            "V24 authorized genuine private real Browser; no unchanged retry or public CI Save upload"
+          ],
+          "isolatedTrueRed": {
+            "task": "COLLECTION_ITEMS_POSTCOMMIT_DUPLICATE_HOST_ROLLBACK",
+            "owner": "05 WEB",
+            "source": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+            "acceptance": "Fixed source, regression, 00 nondeploy CI and 06B independent browser before inclusion; accepted other V33 scopes proceed"
+          }
+        },
+        "handoff": {
+          "to": "00 CTRL",
+          "tasks": [
+            {
+              "to": "00 CTRL",
+              "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
+              "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
+            },
+            {
+              "to": "00 CTRL",
+              "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+              "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
+            }
+          ],
+          "additional": "Exclude unaccepted Collection Items scope from next root; preserve current V33 OFF and exact rollback. Existing 05 repair handoff remains authoritative."
+        },
+        "limitations": "No new fixed 06C artifact or authorized genuine Browser environment; prior V33 Worker onerror cause UNKNOWN not reproduced; V41 private evidence reused from prior verified record, not rerun. No deployment, product change, new Writer authority or Owner approval."
       }
     }
   },
