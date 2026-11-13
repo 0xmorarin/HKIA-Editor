@@ -32,3 +32,7 @@ Supersedes: 2026-11-12 ADR's execution sequence and formal-release stack optiona
 - All independent READY tasks in parallel; preserve existing IN_FLIGHT claims, exact fixed sources, prior accepted scope; isolate WAIT_DEP/WAIT_ENV. Do not start duplicate tasks.
 - 00 main merge serialized; coordination/current.json is sole progress ledger. This ADR is the authoritative Owner execution decision; config/release-gates.json reflects release architecture requirements. Update ledger using CAS and readback.
 - Current snapshots at decision: V24 JS private Beta candidate (offline scoped PASS, genuine actual browser pending); V33 JS OFF combined scoped PASS; PR5 R2 compile evidence (39 synthetic PASS, real parity pending); PR6 isolated Svelte R1 draft, actual compiler/CI/UI parity pending. These are evidence references, not new acceptance or release authorization.
+
+## Supplemental Owner decision: localization
+
+See [OWNER_LOCALIZATION_DECISION_20261113](localization-decision-20261113.md). All HKIA-supported languages and exact game-localized text are required for formal release. JS Beta remains independent; no new deploy or Writer authorization.

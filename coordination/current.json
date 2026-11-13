@@ -4834,6 +4834,29 @@
           }
         }
       }
+    },
+    "08_LOCALIZATION": {
+      "owner": "08 LOCALIZATION",
+      "status": "READY_LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
+      "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
+      "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
+      "baseHead": "d51a5c25c2beb11645480b4b9bcb02249e7ee53c",
+      "decision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "scope": "Actual supported Switch300/301 locale metadata and game localization text, stable IDs/keys, existing EN/JA reuse; independent locale packs and editor catalog contract; no raw assets or shared UI/Writer changes",
+      "allowedPaths": [
+        "localization/**",
+        "contracts/localization/**",
+        "tests/localization/**"
+      ],
+      "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
+      "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests and 06 independent QA",
+      "next": "Inspect available authorized game localization sources; reuse existing EN/JA, inventory all official locales and exact table/key joins; execute all READY scopes; missing source only WAIT_DEP; hand off fixed contract 05 and 06",
+      "handoffTo": [
+        "05 WEB",
+        "06 QA",
+        "00 CTRL"
+      ],
+      "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION"
     }
   },
   "p0FixCandidate": {
@@ -5221,7 +5244,14 @@
     "executionMode": "AUTONOMOUS_STREAM_DIRECT_HANDOFF",
     "currentWorkOrderUnchanged": false,
     "executionDecision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112",
-    "previousDecision": "OWNER_ARCHITECTURE_APPROVED_BETA_FIRST_PARALLEL_RUST"
+    "previousDecision": "OWNER_ARCHITECTURE_APPROVED_BETA_FIRST_PARALLEL_RUST",
+    "localizationCriticalPath": [
+      "08_VERIFIED_GAME_LOCALE_INVENTORY_AND_KEY_MAPPING",
+      "08_FIXED_GAME_TEXT_AND_EDITOR_CATALOGS",
+      "05_REACTIVE_LOCALE_UI_AND_ADAPTER",
+      "06_INDEPENDENT_ALL_LOCALE_COVERAGE",
+      "00_FORMAL_LOCALIZATION_GATE"
+    ]
   },
   "ownerCheckpoint20261112": {
     "status": "V18_LOCAL_INTEGRATED_AND_ARCHITECTURE_OWNER_APPROVED",
@@ -5559,7 +5589,12 @@
     "driveHandoffTitle": "HKIA Editor — OWNER_ARCHITECTURE_DECISION_20261112 引継ぎ",
     "driveHandoffStatus": "SAVED_EXISTING_COORDINATION_FOLDER_AND_READBACK_PASS",
     "bootstrapFile": "HKIA_Rust_Core_Bootstrap_20261112.zip",
-    "previousDecision": "coordination/architecture-decision-20261112.md"
+    "previousDecision": "coordination/architecture-decision-20261112.md",
+    "localization": {
+      "decision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "record": "coordination/localization-decision-20261113.md",
+      "formalRequired": true
+    }
   },
   "executionPolicy": {
     "decision": "OWNER_APPROVED_AUTONOMOUS_STREAM_HANDOFF_20261112",
@@ -5589,7 +5624,8 @@
       "writeRule": "STREAM_UPDATES_OWN_STATUS_AND_TASK_EVIDENCE_ONLY; FETCH_LATEST_BLOB_CAS_BEFORE_WRITE; ON_CONFLICT_REFETCH_AND_RECONCILE_OWN_FIELDS; NEVER_OVERWRITE_OTHER_STREAM_PROGRESS",
       "taskClaim": "CHECK_EXISTING_IN_FLIGHT_SCOPE_AND_FILE_OWNERSHIP_BEFORE_CHANGE; RECORD_TASK_BASE_SCOPE_STATUS; SHARED_FILES_AND_MAIN_MERGE_SERIAL_VIA_00",
       "privacy": "SANITIZED_PUBLIC_LEDGER_ONLY; PRIVATE_SAVE_IDS_BYTES_GAME_BINARIES_SECRETS_NEVER_PUBLISH",
-      "conversationVisibility": "NO_ASSUMPTION_OF_COMPLETE_CROSS_CHAT_SYNC; MISSING_OR_UNVERIFIED_EVIDENCE_REMAINS_UNKNOWN"
+      "conversationVisibility": "NO_ASSUMPTION_OF_COMPLETE_CROSS_CHAT_SYNC; MISSING_OR_UNVERIFIED_EVIDENCE_REMAINS_UNKNOWN",
+      "localization": "coordination/localization-decision-20261113.md"
     },
     "endReport": [
       "STREAM",
@@ -5617,10 +5653,11 @@
       "02_ACHIEVEMENT": "Language-independent achievement/progress/reward contracts; Rust-first implementation routing after development switch.",
       "03_LINKAGE": "Language-independent causal requirements; direct accepted contract handoff to active implementation owner.",
       "04_SAVE_CORE": "JS Beta safety/maintenance/reference; no full formal JS requirement; after development switch Rust capacity only with 00 disjoint ownership assignment.",
-      "05_WEB": "JS Beta UI maintenance plus isolated Svelte/TS formal migration; PR6 nondeploy compile then JS adapter parity then accepted Rust adapter.",
-      "06_QA": "Preserve active QA; V24 independent Beta gate; minimum Rust foundation development gate and full production cutover separate; Rust/Svelte scoped parity.",
+      "05_WEB": "JS Beta UI maintenance plus isolated Svelte/TS formal migration; PR6 nondeploy compile then JS adapter parity then accepted Rust adapter.; consume accepted HKIA locale registry/catalog, reactive browser/manual locale UI and Intl",
+      "06_QA": "Preserve active QA; V24 independent Beta gate; minimum Rust foundation development gate and full production cutover separate; Rust/Svelte scoped parity.; all-game-language localization scoped QA and formal coverage gate",
       "07_RUST_CORE": "P0 formal Rust/WASM foundation; R2 synthetic QA and genuine parity; Session/Writer/Worker; new formal features Rust-first after minimum foundation acceptance.",
-      "00_MEDIA": "Existing image pipeline and authorized missing assets unchanged."
+      "00_MEDIA": "Existing image pipeline and authorized missing assets unchanged.",
+      "08_LOCALIZATION": "Independent game locale inventory/extraction and catalog coverage; fixed contracts to 05 and 06; no shared source changes without 00"
     }
   },
   "ctrlExecution": {
@@ -6775,6 +6812,21 @@
         "06 independent R3 acceptance",
         "Writer/WASM/real browser/game acceptance"
       ]
+    },
+    "localizationDecision": {
+      "decision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "record": "coordination/localization-decision-20261113.md",
+      "status": "OWNER_APPROVED_RECORDED_READY_08",
+      "baseHead": "d51a5c25c2beb11645480b4b9bcb02249e7ee53c",
+      "nextReadyParallel": [
+        "08_LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE"
+      ],
+      "nextAfterDep": [
+        "05_LOCALE_REGISTRY_SELECTOR_AND_CATALOG_INTEGRATION_AFTER_FIXED_08_CONTRACT",
+        "06_FIXED_LOCALE_SCOPE_QA",
+        "00_SERIAL_FORMAL_LOCALIZATION_ACCEPTANCE"
+      ],
+      "noBetaGate": true
     }
   },
   "formalRelease": {
@@ -7352,6 +7404,100 @@
       "acceptance": "06_INDEPENDENT_FIXED_SUCCESSOR_QA_READY",
       "privateLibrary": "HKIA Editor Private",
       "readback": "ALL_5_BYTE_EXACT_SHA_CRC_PASS"
+    },
+    "localization": {
+      "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
+      "record": "coordination/localization-decision-20261113.md",
+      "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
+      "formalRequired": true,
+      "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
+      "supportedLanguages": {
+        "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
+        "status": "UNVERIFIED_FULL_INVENTORY",
+        "versions": [
+          "3.0.0",
+          "3.0.1"
+        ],
+        "noWandLocaleListReuse": true
+      },
+      "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
+      "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
+      "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
+      "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
+      "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
+      "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
+      "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
+      "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
+      "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
+      "existing": {
+        "file": "data/local-achievement-locales.json",
+        "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
+        "version": "3.0.1",
+        "records": 820,
+        "enTitles": 820,
+        "jaTitles": 820,
+        "enDescriptions": 720,
+        "jaDescriptions": 720,
+        "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
+      },
+      "wandReference": {
+        "repo": "DreamwishWand/web",
+        "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
+        "files": {
+          "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
+          "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
+          "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
+          "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
+        },
+        "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
+      }
+    }
+  },
+  "localization": {
+    "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
+    "record": "coordination/localization-decision-20261113.md",
+    "status": "OWNER_APPROVED_ACTIVE_IMPLEMENTATION_PENDING",
+    "formalRequired": true,
+    "betaPolicy": "DO_NOT_BLOCK_OR_REOPEN_FROZEN_V24; DELIVER VERIFIED LOCALES IN BETA WHEN READY; COMPLETE ALL GAME_SUPPORTED LOCALES BEFORE FORMAL RELEASE",
+    "supportedLanguages": {
+      "authority": "ACTUAL_GAME_LOCALIZATION_TABLES_AND_LANGUAGE_SELECTOR_METADATA_PER_SUPPORTED_SWITCH_VERSION; OFFICIAL_PLATFORM_METADATA_CORROBORATION_ONLY",
+      "status": "UNVERIFIED_FULL_INVENTORY",
+      "versions": [
+        "3.0.0",
+        "3.0.1"
+      ],
+      "noWandLocaleListReuse": true
+    },
+    "defaultLocale": "BROWSER_NAVIGATOR_LANGUAGES_ORDERED_SUPPORTED_MATCH_THEN_NAVIGATOR_LANGUAGE_THEN_EN_IF_SUPPORTED_ELSE_VERIFIED_GAME_DEFAULT",
+    "manual": "PERSIST_EXPLICIT_SELECTION_LOCALLY; AUTO_RESTORE; NO_SAVE_MUTATION_OR_NETWORK",
+    "resolution": "CANONICAL_BCP47_EXACT_THEN_VERIFIED_LANGUAGE_SCRIPT_REGION_ALIASES; NEVER_CONFLATE_DISTINCT_SCRIPT_OR_REGIONAL_GAME_LOCALES",
+    "gameText": "EXACT_GAME_LOCALIZED_TEXT_BY_VERSION_DOMAIN_STABLE_ID_LOCALIZATION_KEY; NO_MACHINE_TRANSLATION_OR_ENGLISH_NAME_JOIN; PRESERVE_UNICODE_AND_PLACEHOLDERS",
+    "editorText": "KEYED_TRANSLATION_CATALOGS_ALL_SUPPORTED_LOCALES; PLURAL_PLACEHOLDER_VALIDATION; ERRORS_WARNINGS_CAPABILITIES_ACCESSIBILITY_CREDITS",
+    "missing": "EXPLICIT_MISSING_OR_GAME_DEFINED_ABSENCE; VERIFIED_FALLBACK_LABEL_WITH_SOURCE; NO_FAKE_TRANSLATION; FORMAL_COMPLETE_REQUIRED_PRESENT_KEYS",
+    "runtime": "SVELTE_TYPESCRIPT_REACTIVE_UI; LAZY_VERSIONED_LOCALE_PACKS; DISPLAY_ONLY_NO_SESSION_REVISION_WRITER_CHANGE; RUST_ABI_STABLE_IDS",
+    "qa": "LOCALE_INVENTORY_SOURCE_SHA_KEY_COVERAGE_EXACT_TEXT, UI_CATALOG_KEYS, BROWSER_AUTODETECT_MANUAL_AUTO_RELOAD_FALLBACK_SCRIPT_REGION_RTL_IF_APPLICABLE_SEARCH_INTL_LAYOUT_ACCESSIBILITY_SAVE_STATE_UNCHANGED_PUBLIC_ARTIFACT_PRIVACY",
+    "privacy": "NO_RAW_BUNDLE_SAVE_GAME_BINARY_OR_PRIVATE_REFERENCE_PUBLICATION; DERIVED_MINIMAL_DATA_ALLOWLIST_AND_ATTRIBUTION; NO_LICENSE_OR_ENDORSEMENT_CLAIM",
+    "existing": {
+      "file": "data/local-achievement-locales.json",
+      "blob": "cf473453cb4664a55b87c05310eb220b2230e40b",
+      "version": "3.0.1",
+      "records": 820,
+      "enTitles": 820,
+      "jaTitles": 820,
+      "enDescriptions": 720,
+      "jaDescriptions": 720,
+      "scope": "EXISTING_EN_JA_ONLY; NO FULL_LANGUAGE_COVERAGE_CLAIM"
+    },
+    "wandReference": {
+      "repo": "DreamwishWand/web",
+      "head": "7823a2d66a0ae8f9a6a80bbf225734d2c52bf204",
+      "files": {
+        "src/lib/i18n/preference.js": "7c94677e7ee5140ecc667ce552adb311b4dd0a30",
+        "src/lib/i18n/registry.js": "bdaeebb13132cf0b45de778c4c7bdc15ddf545f8",
+        "src/lib/i18n/runtime.js": "faed7e6815ad7e3a9b18ae79ff2726ba2bfcc42c",
+        "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
+      },
+      "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
     }
   }
 }
