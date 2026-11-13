@@ -811,7 +811,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_V300_ALLOCATOR_STATIC_SCOPE_AFTER_CURRENT_QA; 04_WAIT_EXACT_TARGET_PRODUCER_CAUSAL_REWARD_OR_QA_FAILURE",
+      "next": "04_BETA_V300_NATIVE_LOAD_ENVELOPE_BOUNDARY_IN_FLIGHT; WAIT_NEW_ACCEPTED_CAUSAL_CONTRACT_AND_RUST_DEVELOPMENT_SWITCH",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1629,7 +1629,7 @@
       },
       "v300AllocatorReview": {
         "task": "FORMAL_V300_PROVIDER_ALLOCATOR_NATIVE_BOUNDARY",
-        "status": "STATIC_LOCAL_PASS_QA_READY_RESEARCH_ONLY",
+        "status": "SCOPED_PASS_06_RESEARCH_ONLY",
         "owner": "04 SAVE CORE",
         "baseMain": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -1663,7 +1663,21 @@
           "HISTORY_BACKFILL_AND_GAME_LOAD_RESAVE_AUTH",
           "06_INDEPENDENT_NEW_STATIC_QA"
         ],
-        "next": "06 scoped 69 anchors + 6 branches + 5 calls + 10 metadata; 01 consume allocator subcondition after acceptance; 03 exact target producer/runtime provider dispatch/history closure; 04 WAIT full accepted causal contract or QA fix. No product flag or V24/Pages change"
+        "next": "06 scoped 69 anchors + 6 branches + 5 calls + 10 metadata; 01 consume allocator subcondition after acceptance; 03 exact target producer/runtime provider dispatch/history closure; 04 WAIT full accepted causal contract or QA fix. No product flag or V24/Pages change",
+        "qa": {
+          "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+          "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3",
+          "scope": "Evidence-only 4 payloads included in research SCOPED PASS; not game or Writer authority"
+        }
+      },
+      "v300LoadBoundaryReview": {
+        "task": "BETA_V300_NATIVE_LOAD_ENVELOPE_BOUNDARY",
+        "status": "IN_FLIGHT",
+        "owner": "04 SAVE CORE",
+        "baseMain": "9045aba8b742d0f888445c466b71525150ba8d0c",
+        "baseSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
+        "scope": "V24 unchanged; new v300 platform/envelope/load validation static parity evidence, only gaps in v301 existing 04 accepted work; no product flags, game PASS or producer overlap",
+        "dependency": "Latest ADR 20261113 JS Beta safety and evidence only; live V30 OFF and V24 genuine Browser WAIT_ENV; no repeat allocator or 03 linkage"
       }
     },
     "05_WEB": {
