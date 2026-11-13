@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
 BASE='f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838';WASM='ecadf4450acf79c6068e81ae3dd2c9f021870d77453ce656e46fcdc4d6940e4c'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def run(args):return subprocess.run([str(x) for x in args],check=True,capture_output=True,text=True,timeout=240).stdout
-p=argparse.ArgumentParser();p.add_argument('--baseline',type=Path,required=True);p.add_argument('--candidate',type=Path);p.add_argument('--candidate-sha');p.add_argument('--baseline-only',action='store_true');p.add_argument('--result',type=Path,required=True);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--prepared-root',type=Path,default=ROOT);p.add_argument('--baseline',type=Path,required=True);p.add_argument('--candidate',type=Path);p.add_argument('--candidate-sha');p.add_argument('--baseline-only',action='store_true');p.add_argument('--result',type=Path,required=True);a=p.parse_args()
 assert not a.result.exists() and a.baseline_only!=(a.candidate is not None) and sha(a.baseline)==BASE
 if a.candidate:assert a.candidate_sha and sha(a.candidate)==a.candidate_sha and a.candidate_sha!=WASM
 with tempfile.TemporaryDirectory(prefix='hkia-r6-synthetic-') as td:
@@ -16,7 +16,7 @@ with tempfile.TemporaryDirectory(prefix='hkia-r6-synthetic-') as td:
   for rel,h in files.items():
    assert rel.startswith(('rust-worker/','tests/rust/wasm-browser/')) and '..' not in Path(rel).parts and Path(rel).suffix in ('.js','.html','.wasm');b=z.read(rel);assert hashlib.sha256(b).hexdigest()==h;f=bundle/rel;f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(b)
  wasm=bundle/'tests/rust/wasm-browser/hkia_wasm_bridge.wasm';assert sha(wasm)==WASM
- run(['python3',HERE/'generate.py',ROOT,fixtures]);rows=json.loads((fixtures/'cases.json').read_text())
+ run(['python3',HERE/'generate.py',a.prepared_root.resolve(),fixtures]);rows=json.loads((fixtures/'cases.json').read_text())
  for row in rows:
   inp=fixtures/(row['case']+'.zip');assert sha(inp)==row['sha256'];mode='edit' if row['case'].startswith('mib-') and row['expect']=='accept' else 'read';outputs=[]
   for label,wp,pin in [('baseline',wasm,WASM)]+([] if a.baseline_only else [('candidate',a.candidate.resolve(),a.candidate_sha)]):
