@@ -3742,7 +3742,7 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "P0 OFF V30 manual Pages dispatch requested after verified V30/V29 refs and PR3 merge; observe actual workflow and 06 live QA; no Writer activation.",
+    "V30 OFF fixed Pages deployment SUCCESS run 43342655323; 06 live exact artifact and HTTPS QA now READY; V29 rollback ref fixed; no Writer activation.",
     "V33 fixed 5 source/2 dist path independent SCOPED PASS recorded; next formal scope only on new evidence.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
   ],
@@ -4446,7 +4446,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "P0_PAGES_OFF_DISPATCH_IN_FLIGHT",
+    "status": "P0_PAGES_FIXED_OFF_DEPLOY_SUCCESS_06_LIVE_QA_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -4555,11 +4555,13 @@
       "condition": "First scoped activation and kit review READY; actual browser WAIT_ENV until authorized host. Determine only irreducible Native game evidence required for release-critical accepted operation scope; game acceptance remains unobserved.",
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
-    "nextReadyParallel": [],
+    "nextReadyParallel": [
+      "06_LIVE_V30_OFF_ARTIFACT_HTTPS_QA",
+      "00_RUST07_PR5_SYNTHETIC_CI_SETUP"
+    ],
     "nextAfterDep": [
-      "00_PAGES_PR3_AFTER_REMOTE_FIXED_REFS",
-      "06_LIVE_ARTIFACT_HTTPS_AFTER_DEPLOY",
-      "06_V24_AUTHORIZED_BROWSER"
+      "06_V24_AUTHORIZED_BROWSER",
+      "07_AFTER_RUST_CI_RESULT"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -5225,7 +5227,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
     "pages": {
-      "status": "ACTUAL_PAGES_DEPLOY_SUCCESS_OFF_SOURCE_PREVIEW_FULL_ARTIFACT_PENDING",
+      "status": "V30_FIXED_OFF_DEPLOY_SUCCESS_LIVE_QA_READY",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -5263,7 +5265,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "Stage V30/V29 exact artifact refs via authenticated git; then PR3 serial merge and manual OFF repair; functional beta remains separate.",
+      "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -5404,27 +5406,29 @@
         "note": "Public-safe source projection independently accepted; nondeploying CI only. Source archive is not full distribution."
       },
       "actualPages": {
-        "status": "LEGACY_PREVIEW_UNPUBLISHED_OWNER_CONFIRMED_ACTIONS_SOURCE_VERIFIED_NEW_ARTIFACT_PENDING",
-        "observedMain": "1b441369d0378a44592ca6c9095f6eb670939ac7",
-        "runId": 43223287803,
+        "status": "FIXED_V30_OFF_ACTIONS_DEPLOY_SUCCESS_LIVE_QA_PENDING",
+        "observedMain": "b57341f52c0bbf357ea4e26f3aa95d34a4b36baa",
+        "runId": 43342655323,
         "buildJob": 131199989881,
-        "deployJob": 131200093038,
+        "deployJob": 131614601722,
         "url": "https://0xmorarin.github.io/HKIA-Editor/",
-        "verified": "GitHub built-in pages build and deployment build/deploy/report SUCCESS; deployment log URL and SHA; index.html in archive, 25 WebP source icons, no raw Save/game binary/archive path; public ledger known private patterns absent",
+        "verified": "Manual fixed site-only V30 manifest and verifier gate PASS; actual Pages deploy SUCCESS; 4146 files and 4076 WebP; Writer OFF; public HTTPS independent QA pending",
         "limitations": "Public HTTP response and actual rendering not independently observed; full V24 4076-image 4144-file artifact not deployed; Writer remains OFF; branch-root deployment publishes source tree, not fixed allowlisted release artifact.",
         "rootCause": "GitHub metadata has_pages=true; built-in dynamic deployments existed even when project gate OFF. Main previously lacked index.html; successful branch build therefore did not establish usable page. Actual source settings admin API unavailable; merge triggered existing branch-based Pages automatically.",
         "risk": "Unexpected automatic branch-root Pages configuration conflicts with approved manual artifact-only release workflow. Owner explicitly requested immediate public view; do not label preview functional Beta. Switch Pages source to GitHub Actions via authorized Settings before fixed full distribution publication; no automatic activation. Do not add private or raw inputs to main.",
-        "next": "Confirm user-visible HTTPS rendering; stage full verified distribution artifact and use manual fixed artifact workflow after real Browser acceptance. For immediate full-image visual-only preview distinct from Beta, Owner must explicitly authorize that scope and use allowlisted OFF artifact, not branch-root source. Do not repeat local build/kit.",
+        "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
         "lastReachabilityCheck": {
           "date": "2026-11-12",
           "status": "UNVERIFIED_TOOL_ACCESS",
           "web": "URL inaccessible via web tool",
           "container": "DNS resolution failed",
           "interpretation": "No proof of HTTP 404 or live rendering; existing deployment success remains only GitHub evidence. Owner can open recorded URL; no changed environment for private browser."
-        }
+        },
+        "verifyJob": 131614448873,
+        "artifactId": 14000317355
       },
       "distributionRepair": {
-        "status": "PINNED_REMOTE_REFS_AND_PR3_MERGED_OFF_DISPATCH_IN_FLIGHT",
+        "status": "V30_FIXED_OFF_DEPLOY_SUCCESS_LIVE_QA_READY",
         "incidentRun": 43307905181,
         "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
         "sourceProbe": {
@@ -5458,18 +5462,18 @@
           "sha256": "a0fc3157af6affe2a4e3174b9a2d9eccdc82a8f07e270c682aaf8f3b9ce94d76"
         },
         "writer": "OFF",
-        "deployment": "UNVERIFIED",
-        "https": "UNVERIFIED",
+        "deployment": "GITHUB_ACTIONS_SUCCESS",
+        "https": "UNVERIFIED_IN_ASSISTANT_WEB_TOOL",
         "historicalExposure": "NOT_ERASED",
-        "next": "Observe dispatch and actual Pages workflow; 06 live exact artifact/HTTPS/internal path denial/rollback verification.",
+        "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "PINNED_REMOTE_REFS_AND_PR3_MERGED_OFF_DISPATCH_IN_FLIGHT",
+          "status": "DONE_REMOTE_STAGE_AND_DEPLOY",
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "57/57 committed; staging CI passed and both exact remote refs, manifest blobs read back. PR3 merged fixed accepted scope. One-shot dispatch in progress.",
-          "next": "Observe dispatch and actual Pages workflow; 06 live exact artifact/HTTPS/internal path denial/rollback verification.",
+          "observed": "57/57 exact transport, CI stage success, exact remote V30/V29 refs and manifest blobs, PR3 merged, actual verify/deploy jobs success; public HTTP reachability not observed by web tool.",
+          "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
@@ -5512,12 +5516,28 @@
           "scope": "manual-only fixed OFF; all three verifier blobs and gate blob exact"
         },
         "dispatch": {
-          "status": "REQUEST_WORKFLOW_IN_PROGRESS",
+          "status": "SUCCESS",
           "commit": "93cdb41780bceabb0111861b822912d2118a6269",
           "run": 43342637137,
           "target": "V30",
           "artifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
-          "boundary": "one-shot explicit dispatch, not main push or persistent automatic deployment; no Writer activation"
+          "boundary": "one-shot explicit dispatch, not main push or persistent automatic deployment; no Writer activation",
+          "job": 131614381913
+        },
+        "deployRun": {
+          "run": 43342655323,
+          "head": "b57341f52c0bbf357ea4e26f3aa95d34a4b36baa",
+          "verifyJob": 131614448873,
+          "deployJob": 131614601722,
+          "conclusion": "success",
+          "artifact": {
+            "id": 14000317355,
+            "size": 118451661,
+            "digest": "sha256:dd91d2d717213425ef74f4444b111d088cff952e54e6e75a8a5916d429aa9ac3"
+          },
+          "url": "https://0xmorarin.github.io/HKIA-Editor/",
+          "writer": "OFF",
+          "scope": "V30 exact site/ only"
         }
       },
       "ownerRecoveryPriority": {
