@@ -875,7 +875,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "04_BETA_V300_NATIVE_LOAD_ENVELOPE_BOUNDARY_IN_FLIGHT; WAIT_NEW_ACCEPTED_CAUSAL_CONTRACT_AND_RUST_DEVELOPMENT_SWITCH",
+      "next": "06_V300_LOAD_BOUNDARY_SCOPED_QA; 04_WAIT_BETA_ENV_OR_QA_FAILURE_OR_00_DISJOINT_RUST_ASSIGNMENT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1736,12 +1736,56 @@
       },
       "v300LoadBoundaryReview": {
         "task": "BETA_V300_NATIVE_LOAD_ENVELOPE_BOUNDARY",
-        "status": "IN_FLIGHT",
+        "status": "STATIC_LOCAL_PASS_QA_READY_RESEARCH_ONLY",
         "owner": "04 SAVE CORE",
         "baseMain": "9045aba8b742d0f888445c466b71525150ba8d0c",
         "baseSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
         "scope": "V24 unchanged; new v300 platform/envelope/load validation static parity evidence, only gaps in v301 existing 04 accepted work; no product flags, game PASS or producer overlap",
-        "dependency": "Latest ADR 20261113 JS Beta safety and evidence only; live V30 OFF and V24 genuine Browser WAIT_ENV; no repeat allocator or 03 linkage"
+        "dependency": "Latest ADR 20261113 JS Beta safety and evidence only; live V30 OFF and V24 genuine Browser WAIT_ENV; no repeat allocator or 03 linkage",
+        "evidence": {
+          "file": "HKIA_04_V300_LoadEnvelope_Native_20261113_Evidence.zip",
+          "sha256": "1f84cecc5650f218e1c1f5ef467d1fe111d67c87ed7649f40b9e0b00f8f53f70",
+          "manifestSha256": "98a0ec32a7c8e1d0210bd80d0d4873e5baf34cc09f5266e08e1594f0ab0e2fd7",
+          "resultSha256": "ce911689bd3d038aee32a25afacce1472f6d65ba8d191ecf5567a1d7da06efab",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_CRC_4_ENTRIES_3_MANIFEST_HASHES_PASS"
+        },
+        "verified": {
+          "nsoSha256": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a",
+          "metadataSha256": "f76036e761b2e16d19e035a74356de31497b19c1c2598e52ce3ed80cc7ba9f2b",
+          "dumpSha256": "ff61e4c9688e8be45422ed6c5c187ab36068c08f9b8cd7795999358374fbbf8a",
+          "buildId": "D0E7F0B11DADACFF",
+          "anchors": 80,
+          "branches": 39,
+          "methods": 13,
+          "fieldChains": 2,
+          "rawMetadataArrays": 2,
+          "markerComparison": "STATIC_32_INT32_ARRAY_TO_32_BYTE_MARKERS",
+          "genuineHeaders": {
+            "3.0.0": 4,
+            "3.0.1": 1,
+            "2.18.1": 1
+          },
+          "originalsUnchanged": true,
+          "productSourceChanged": 0,
+          "writerAuthorized": false,
+          "gameAccepted": false,
+          "service": "SLOT_EQUALITY_AND_CLEAR_FLAGS_SUCCESS_PATH; MISMATCH_FALSE_ERROR103",
+          "load": "OUTER_MATCH_MESSAGEPACK_LEGACY_FALLBACK; INNER_MISMATCH_ERROR; NONEMPTY_MIGRATE_EMPTY_LATEST_VERSION"
+        },
+        "unverified": [
+          "ADDITIONAL_NATIVE_AUTH_OUTSIDE_AUDITED_FUNCTIONS",
+          "FULL_MIGRATION_AND_GAME_LOAD_RESAVE",
+          "V301_EXACT_FIELDREF_CHAIN",
+          "V24_GENUINE_ACTUAL_BROWSER_WAIT_ENV",
+          "06_INDEPENDENT_STATIC_QA"
+        ],
+        "handoff": {
+          "to": "06 QA",
+          "scope": "New 80 instruction anchors, 39 branch targets, 13 method bindings, 2 metadata fieldref-to-default chains and 6 genuine headers, exact pinned NSO/metadata/dump; verify platform/inner/service branches; static only, no repeat accepted allocator or broad V301, V24 unchanged",
+          "nextAfter": "07 reuse accepted static facts for Rust foundation; 04 WAIT authorized V24 browser / scoped QA fix / new accepted causal scope / 00 disjoint Rust assignment after development switch"
+        },
+        "notes": "First workspace artifact upload failed; reran verifier against exact original pins, saved regenerated ZIP with above actual SHA and readback. No original Save or game binary included."
       }
     },
     "05_WEB": {
