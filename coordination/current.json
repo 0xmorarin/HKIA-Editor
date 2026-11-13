@@ -10440,7 +10440,6 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
       "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
       "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
       "00_V38_FIXED_ACCEPTANCE",
@@ -11122,7 +11121,6 @@
       "status": "DONE_POLICY_FIXED_CANDIDATE_06C_READY",
       "scope": "Policy persisted, CI green, artifact exact; 06C next; no deployment",
       "next": [
-        "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
         "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
         "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
         "00_V38_FIXED_ACCEPTANCE",
