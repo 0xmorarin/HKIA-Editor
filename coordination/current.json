@@ -12310,14 +12310,20 @@
     "previewRefresh": {
       "task": "PAGES_VISUAL_PREVIEW_DELTA_STAGING",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT_NONDEPLOY",
+      "status": "IN_FLIGHT_STAGING_CI",
       "risk": "RELEASE",
       "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
       "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
       "previewSource": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
       "scope": "Prepare isolated nondeploy candidate: preserve exact V30 root/assets, add /dev/ synthetic Svelte R4 accepted UI, explicit development/no-save and rights notice, no raw data or source maps, all hashes and policy, nested HTTP Chromium, delta-only artifact. R5 after independent acceptance; locale Consumer TRUE_RED excluded. Owner deployment approval separate.",
       "ownerIntent": "Owner requests evaluation of long Pages gaps and visible progress; staging only, no inference of deployment grant.",
-      "next": "06C fixed artifact independent QA then separate Owner approval before actual manual Pages dispatch. Reuse existing remote media; no recurring full transfer."
+      "next": "06C fixed artifact independent QA then separate Owner approval before actual manual Pages dispatch. Reuse existing remote media; no recurring full transfer.",
+      "branch": "ctrl/visual-preview-delta-20261113",
+      "head": "9d48b8261a79c30be983cd3347371f45a7951e2a",
+      "run": 43396673488,
+      "job": 131789159607,
+      "verified": "Exact V30 and R4 source guards, build and additive composition/policy step SUCCESS; actual nested Chromium pending",
+      "proposedUpdatePolicy": "Milestone-based visible preview updates, no research-only redeploy; preserve existing root, separate /dev/ synthetic no-save; reuse remote media, fixed manual artifact and rollback, independent 06C then Owner deployment approval. Not an automatic deploy authorization."
     }
   },
   "formalRelease": {
