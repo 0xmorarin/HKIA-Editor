@@ -10952,6 +10952,20 @@
         "status": "IN_FLIGHT",
         "next": "Existing 04 claim continue; 06A after fixed self-QA; no duplicate."
       }
+    },
+    "svelteR4RepairCI": {
+      "task": "SVELTE_R4_FIXED_ORACLE_REPAIR_CI",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "sourceHead": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
+      "scope": "1 test-only MOD; repin existing workflow, fast-forward fixed R4 branch, full regression"
+    },
+    "svelteLocaleCI": {
+      "task": "SVELTE_LOCALE_R1_FIXED_CONSUMER_CI",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "sourceHead": "9863dd6b38ebcbf4ce25611812dd78ea8dd7e887",
+      "scope": "8 ADD isolated synthetic consumer; nondeploy CI only; no game packs or live binding"
     }
   },
   "formalRelease": {
