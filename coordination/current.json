@@ -10011,8 +10011,8 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_NEW_HOST_V30_AND_V40_SCOPED_PASS_WAIT_NEW_FIXED_OR_V24_ENV",
-      "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA_AND_V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "status": "IN_FLIGHT_V33_FIXED_OFF_ROOT",
+      "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
       "next": "00 record new-host V30 acceptance and V40 accepted reference; 05 root binding and specialist scopes independent; 06C wait new fixed root/research or authorized V24 genuine Browser",
       "dependency": "00_RECORD_NEW_HOST_AND_V40; NEXT_FIXED_ROOT_DISTRIBUTION_OR_RESEARCH_SCOPE_WAIT_DEP; V24_GENUINE_BROWSER_WAIT_ENV",
@@ -10966,6 +10966,15 @@
           "task": "V40_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
           "condition": "Record scoped V40 accepted 653 research reference; no Writer/deploy authority; no repeated QA."
         }
+      },
+      "v33PagesClaim": {
+        "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
+        "baseHead": "69f76f9d737bf2b2a5bbbc18dc9965f8a7c6d2d9",
+        "baseLedgerBlob": "5f790a058d3e542b758e68c51960cdfb63b1adea",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment. Review PR12 exact one workflow pin diff (V33 target only, preserve manual main-only and existing V30/V29 rollback).",
+        "status": "IN_FLIGHT"
       }
     }
   },
