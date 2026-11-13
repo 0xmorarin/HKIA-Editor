@@ -263,12 +263,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "FORMAL_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_PARTIAL_LOCAL_PASS_QA_PENDING",
+      "status": "FORMAL_V33_GROUP_WITNESS_REPAIR_LOCAL_PASS_QA_PENDING",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_GROUP_WITNESS_REPAIR; HISTORICAL_AND_VISITOR_QA_PENDING",
+      "next": "06_GROUP_WITNESS_REPAIR_AND_INDEPENDENT_HISTORICAL_DERIVED_QA; 00_AFTER_ACCEPTANCE_SERIAL_SUCCESSOR; 03_WAIT_NEW_WITNESS_OR_QA_FAILURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -486,12 +486,24 @@
       },
       "groupWitnessRepair": {
         "task": "V33_ALWAYSRUN_DENSE_GROUP_WITNESS_REPAIR",
-        "status": "IN_FLIGHT",
+        "status": "TRUE_RED_REPAIRED_LOCAL_SCOPED_PASS_QA_PENDING",
         "baseMain": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "03 existing AlwaysRun advisory input validation only; sparse and inherited member index reproduced on exact V33; one module plus focused tests; no 04 caller or flags change",
         "preimageSha256": "822ef25e13a2e3a543500d503bacf694a03c604c7e0874eb07f923f188bfe1c5",
-        "acceptance": "Reject absent/inherited/non-boolean member positions; count only validated own boolean data; preserve dense predictions and formal49/9 behavior; old research pins immutable; independent QA before integration"
+        "acceptance": "Reject absent/inherited/non-boolean member positions; count only validated own boolean data; preserve dense predictions and formal49/9 behavior; old research pins immutable; independent QA before integration",
+        "delta": {
+          "file": "HKIA_03_V33_DENSE_GROUP_WITNESS_REPAIR_20261113.zip",
+          "sha256": "50d41ea895070f8345e05870fd3874fe524991b58193bed1b8ebbf31a94cd0a5",
+          "manifestSha256": "b19f2286fdf0f0c18a6c7ba296b94e8d9c7105010c66b5918993e9f0dd9546c5",
+          "scope": "1 MOD 2 ADD; 520 V33 paths unchanged; transport manifest excluded",
+          "postimageSha256": "a04ee7b54943c734add3d8151945d41b2cc8803fb74017a29fccf754e5b189ac",
+          "verified": "Old exact V33 11 new tests: 3 PASS 8 FAIL; fixed 11/11 plus existing AlwaysRun/Formal49/Missing Manual/04 Exact20/Manual9 75/75 PASS; check/build PASS; SHA CRC and byte-exact Library readback",
+          "classification": "Reproduced advisory contract failure only, not observed product corruption; own boolean data per index, no sparse/inherited/accessor or overridden iteration bypass; dense outcomes preserved",
+          "gameAccepted": false
+        },
+        "remaining": "06 independent scoped QA; normal build only, not full media distribution; actual product sparse producer not observed; no genuine or browser rerun; historical evidence pins intentionally unchanged; arbitrary hostile Proxy sandbox not claimed",
+        "next": "06 reproduce old/new and exact 04 caller regressions; 00 serial integrate after scoped acceptance, rebuild existing allowlisted module, exact artifact/rollback; no V24 change or Writer activation. Historical/derived QA independent."
       }
     },
     "04_SAVE_CORE": {
