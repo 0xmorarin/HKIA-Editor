@@ -1,4 +1,4 @@
-name: HKIA Svelte R1 isolated compile and browser
+name: HKIA Svelte R1 followup fixed lock compile and browser
 on:
   push:
     branches:
@@ -25,10 +25,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git merge-base --is-ancestor fa18063330558e188e947c44843f7a3c6870559e HEAD
-          test "$(git diff --name-only fa18063330558e188e947c44843f7a3c6870559e HEAD)" = .github/workflows/svelte05-r1-isolated.yml
+          git merge-base --is-ancestor bb563adb29046fb83f0360a303b9119487bb43dd HEAD
+          test "$(git diff --name-only bb563adb29046fb83f0360a303b9119487bb43dd HEAD)" = .github/workflows/svelte05-r1-isolated.yml
           cd svelte-ui
-          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
           npm ci --no-audit --no-fund
           sha256sum package-lock.json
           node --version
@@ -38,7 +38,8 @@ jobs:
         run: |
           set -euo pipefail
           npm test
-          npm run check
+          npm run check -- --fail-on-warnings
+          node --experimental-strip-types scripts/verify-legacy-port.mjs ..
           npm run build
       - name: Actual built Vite Chromium navigation
         working-directory: svelte-ui
