@@ -1,4 +1,4 @@
-name: HKIA Svelte R4 fixed category grid compile and browser
+name: HKIA Svelte R4 fixed achievement list repair compile and browser
 on:
   push:
     branches:
@@ -25,8 +25,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git merge-base --is-ancestor a6a0d8732f73b0e13817b943f294832c61d769dd HEAD
-          test "$(git diff --name-only a6a0d8732f73b0e13817b943f294832c61d769dd HEAD)" = .github/workflows/svelte05-r4-isolated.yml
+          git merge-base --is-ancestor 01a4a7fd420afd7eadf5f5186f965d7d81bfa155 HEAD
+          test "$(git diff --name-only 01a4a7fd420afd7eadf5f5186f965d7d81bfa155 HEAD)" = .github/workflows/svelte05-r4-isolated.yml
           cd svelte-ui
           printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
           npm ci --no-audit --no-fund
@@ -42,7 +42,7 @@ jobs:
           node --experimental-strip-types scripts/verify-category-reference.mjs ..
           node --experimental-strip-types scripts/verify-achievement-reference.mjs ..
           npm run build
-      - name: Actual built Vite Chromium regression and category parity
+      - name: Actual built Vite Chromium regression and achievement parity
         working-directory: svelte-ui
         run: |
           set -euo pipefail
