@@ -14412,6 +14412,35 @@
           "status": "READY"
         }
       }
+    },
+    "postTransferExecution": {
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "baseHead": "1a1b4695ed757326a52b2bd50b459aad91c45f18",
+      "baseBlob": "d2a5f87735f203ae20dab410a8d8ad1bd71a311d",
+      "claims": {
+        "web": {
+          "task": "R7_R5_FIXED_COMBINED_NONDEPLOY_CI",
+          "source": "a527d33d994423e558a2ac0abbf17beae67f4e9c",
+          "scope": "one new workflow only; fixed 7+3 product paths unchanged",
+          "risk": "HIGH",
+          "status": "IN_FLIGHT"
+        },
+        "rust": {
+          "task": "R6_1_FIXED_NONDEPLOY_CI",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "scope": "one new workflow only; 7 MOD exact, PR10 lease only if necessary; no PR9 change",
+          "risk": "HIGH",
+          "status": "IN_FLIGHT"
+        },
+        "research": {
+          "task": "V39_ACCEPTANCE_AND_HATS_OFF_RESEARCH_INTEGRATION",
+          "source": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+          "risk": "RELEASE",
+          "status": "IN_FLIGHT"
+        }
+      },
+      "noDeploy": true
     }
   },
   "formalRelease": {
