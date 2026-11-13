@@ -8071,6 +8071,12 @@
           "source": "a2d2bd1fb110f0bd3a593882472ebecb43a011facaa073b01a035cad403d0efe",
           "status": "DONE_SCOPED_PASS_OFFLINE_TEST_HARNESS_REPAIR",
           "risk": "HIGH"
+        },
+        {
+          "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH"
         }
       ],
       "executionResult": {
@@ -9036,6 +9042,16 @@
           "task": "R5_1_FIXED_REAL_CHROME_GENUINE",
           "condition": "Authorized sandbox-capable private Chrome; exact repaired kit, empty real Worker before inputs, genuine v300/v301 x history/progress/batch, native byte exact and independent oracle, lifecycle/negative, network/no original change; fixed aggregate evidence then 06A independent. No policy bypass, public CI Save, deployment or Writer permission."
         }
+      },
+      "r61Claim": {
+        "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+        "status": "IN_FLIGHT",
+        "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
+        "baseBlob": "ffadabd49e50f984d41b60ae00513f0afa9bba3b",
+        "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+        "risk": "HIGH",
+        "scope": "7 MOD only; fixed code artifact; independent scratch lifetime, errors, size variation, genuine parity, resource measurements. No product changes."
       }
     },
     "06B_QA_WEB_LOCALE": {
