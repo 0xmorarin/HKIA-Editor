@@ -2576,7 +2576,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V33_PRODUCT_ACHIEVEMENT_LIST_FIXED_CI_READY; 06B_ACH_LIST_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; CATEGORY_TAB_REBIND_EXISTING_QUEUE_NO_REPEAT; 05_NEXT_DISJOINT_DETAIL_OR_REPAIR; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
+      "next": "00_V33_PRODUCT_ACHIEVEMENT_HEADER_FIXED_CI_READY; 06B_HEADER_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; EXISTING_CATEGORY_LIST_TAB_FILTER_QUEUES_UNCHANGED; 05_NEXT_COLLECTION_DETAIL_OR_ACCEPTED_R3_LOCALE_CONSUMER_DISJOINT; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4631,14 +4631,72 @@
       "productAchievementDetail": {
         "task": "SVELTE_PRODUCT_ACHIEVEMENT_HEADER_BINDING",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "baseHead": "28933f663b022660e45356633126d17eb564f7b4",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-        "scope": "05-owned additive Svelte achievement read-only header only; preserve exact legacy media, dependency, edit forms and panel host; no shared app composition or Writer",
+        "scope": "10 ADD 0 MOD 0 DEL svelte-ui only; exact actual V33 ASIDE static Svelte header; title/empty and 5 existing R6 display lines; panel, media/dependencies/Counter/Group/preview/edit forms unchanged. No product app or distribution source change; no Writer/session authority.",
         "dependency": "R6 independently accepted; V33 exact reference; separate from tab/filter/category/list and locale",
-        "next": "Self-QA exact scope; 00 isolated compile/browser; 06B independent changed scope"
+        "next": "00 isolated nondeploy fixed header CI; 06B static preflight parallel then fixed browser scope after CI; 05 next disjoint collection detail or accepted R3 catalog consumer; 00 shared app composition after accepted scopes",
+        "sourceHead": "b7061525fd00e68b6505b334a1a061903cd71014",
+        "branch": "web05/product-achievement-header-v33",
+        "tree": "3f2de6cb31b471b2c2fb4d76e3c8202a564699de",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "manifestSha256": "96575b8857010f488e656448a928b55b7e1c7c61420f4cd4f4bcf51cb7ead7a0",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductAchievementHeader_V33_20261113_Evidence.zip",
+          "location": "Private Library /HKIA Editor Private/",
+          "sha256": "f9460e2e76261ee7fab1d404960a577f77facbeffff37c289eee66b819aa681f",
+          "manifestSha256": "96575b8857010f488e656448a928b55b7e1c7c61420f4cd4f4bcf51cb7ead7a0",
+          "evidenceSha256": "4eab5063dc69bffc942eeda105d7a6ef56e9f8f33447d2d03200a3e441afa38d",
+          "nodeLogSha256": "33f2f92770dd6aaee584c308aeab3992a212bacfdb756e8531073efffe9e318a",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_3_ENTRIES"
+        },
+        "verified": {
+          "nodeVersion": "22.16.0",
+          "focusedNode": 16,
+          "fail": 0,
+          "skip": 0,
+          "localThreeGitBlobsExact": true,
+          "actualAppBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
+          "actualHost": "ASIDE",
+          "actualControllerV8Cases": 5,
+          "headerNodes": 26,
+          "actualReadStatusAndR6Projection": true,
+          "compatibilityStub": true,
+          "syntheticDOMAndRecords": true,
+          "exactFourPatchAnchors": true,
+          "reversible": true,
+          "legacyDetailTailByteExact": true,
+          "remoteReadbackBlobs": 10,
+          "acceptedR6ModelBlob": "f9a05cd009d528f657ac96dfc2dfcbc1d1009235",
+          "preRepairActualAsideRegressionFailures": 9,
+          "afterRepairFocusedPass": 16
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "delta": "4 exact reversible anchors; 1 MOD + 1 ADD compiled product-achievement-header.mjs; 4145 unchanged, 4076 WebP; not built"
+        },
+        "decision": "Detached Svelte mount, exact DOM validation, clone static header elements then dispose; no second state/session or retained component. Initial mock assumed DIV; actual HTML ASIDE mismatch reproduced, fixed and tested. Existing legacy tail byte exact. Module abort/mismatch retain legacy. No arbitrary external callback side-effect rollback claim.",
+        "unverified": [
+          "Svelte compiler/check/build and full expected139 Node tests not run; npm cache lacks Svelte and GitHub DNS unavailable in local container",
+          "Actual compiled HTTP Chromium 320/375/1280; actual Slot genuine save/native persistence",
+          "Synthetic DOM, compatibility stub, not game or browser evidence",
+          "06B independent HIGH acceptance; 00 shared app composition and 06C release/rights/privacy/rollback; Writer OFF"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_ACHIEVEMENT_HEADER_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "b7061525fd00e68b6505b334a1a061903cd71014",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "10 ADD exact, isolated nondeploy CI, no repeat existing tab/filter/category/list CI",
+          "acceptance": "Pinned npm ci; npm test expected139 (123+16), svelte check --fail-on-warnings, ordinary Vite build + vite build --config vite.product-achievement-header.config.ts. Checkout exact V33 site+manifest; node --experimental-strip-types scripts/verify-product-achievement-header-reference.mjs <site> <manifest>; prepare-product-achievement-header-delta.mjs <site> <manifest> dist-product-achievement-header/product-achievement-header.mjs <fresh-delta>. Overlay src/app.js+product-achievement-header.mjs only; 4145 unchanged/4076 WebP. Actual browser-product-achievement-header-parity.py <base> <candidate> 320/375/1280; ASIDE marker and same panel, full body/form parity, two known images/unknown, exact 7-digit UTC, preview 1 diff/cancel/hidden selection/module abort fallback, no external/errors/download/overflow, Writer OFF. Record fixed SHA/manifest/delta/log/license. 06B changed scope after green, shared composition separately 00/06C.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "10 fixed paths; actual ASIDE identity and Svelte static header; exact R6 model reuse, empty/stale/reentry/same GUID newer render, form identity and module fallback; no prior scope repeat."
+        }
       }
     },
     "06_QA": {
