@@ -5002,7 +5002,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06A R5.1 independent scoped repair QA and 00 R5.1 nondeploy fixed CI in parallel. 07 genuine Chrome WAIT_ENV and WAIT_CI; then 06A execution acceptance, 00 Development Switch only after ADR conditions. R4 independent acceptance reused; JS Beta unaffected.",
+      "next": "00/06A R5.1 fixed CI and repair QA IN_FLIGHT; 06A new disjoint resource preflight evidence READY. 07 genuine Chrome WAIT_ENV/CI; actual browser capacity JS/Rust comparison after environment. Development Switch only after ADR acceptance and 00 record.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -5997,12 +5997,71 @@
       },
       "resourcePreflight": {
         "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_RESOURCE_PREFLIGHT_06A_READY",
         "baseHead": "4927c555bcaaf0604de3c5a62b2dee2d6f252bc1",
         "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
         "risk": "HIGH",
-        "scope": "Synthetic Node direct WASM capacity and bounded reject preflight; immutable R5.1 code, no production limits changes, no browser PASS, independent of 00 CI and 06A reply repair",
-        "dependency": "R5.1 fixed artifact for actual browser measurements; existing WASM exact native R4 unchanged for preflight"
+        "scope": "New synthetic capacity preflight only; no product code changes or limit relaxation. Node real WASM with R5.1 client; no browser or game claim.",
+        "dependency": "R5.1 fixed artifact for actual browser measurements; existing WASM exact native R4 unchanged for preflight",
+        "evidence": {
+          "file": "HKIA_Rust07_R5_1_ResourcePreflight_20261113_Evidence.zip",
+          "sha256": "0c815f3fcaf76790001216587eb241c7d2b111892793548bd0d3e044aa160cd5",
+          "result": "HKIA_Rust07_R5_1_ResourcePreflight_20261113_RESULT.json",
+          "resultSha256": "0e8ec841abc11a555e10f220284d4de3902752ee3cc07f0c87502913f14f1604",
+          "manifest": "HKIA_Rust07_R5_1_ResourcePreflight_20261113_Manifest.json",
+          "manifestSha256": "e17631418688edccb52023950f7179441c89cac9e4d65631a61902b2e9039ed7",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "4/4 byte exact; 7 ZIP entries; 6 member SHA CRC PASS"
+        },
+        "verified": {
+          "cases": 13,
+          "historyEdits": 5,
+          "readOnly": 2,
+          "expectedReject": 6,
+          "exactDecodedSplice": 5,
+          "rawNonTargetZipFrames": 15,
+          "unchangedLz4Blocks": 1371,
+          "originalsUnchanged": 13,
+          "decodedMiBPassed": [
+            1,
+            5,
+            10,
+            25,
+            45
+          ],
+          "decodedReject": [
+            "45MiB+1",
+            "64MiB",
+            "128MiB"
+          ],
+          "documentsReadPassed": [
+            100000,
+            300000
+          ],
+          "documentsRejected": [
+            350000,
+            1000000,
+            2000000
+          ],
+          "wasmMemoryHighWater45MiB": 190971904,
+          "wasmSha256": "e9a4caf35236ad20e57c360654b61e36e18066b76e3cc1307fa0ffabccd15ee9",
+          "runtime": "Node22 direct WASM, repaired client; prior R5 CI WASM Rust code unchanged"
+        },
+        "unverified": [
+          "real Chrome Module Worker resource timing",
+          "JS/Rust same-input comparison",
+          "64/128MiB and 2M documents target support",
+          "native gameplay-realistic high-volume structure"
+        ],
+        "handoff": {
+          "to": "06A QA-DATA-CORE",
+          "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
+          "status": "READY_NEW_SCOPE_AFTER_OR_PARALLEL_DISJOINT_ACTIVE_REPAIR_CLAIM",
+          "file": "HKIA_Rust07_R5_1_ResourcePreflight_20261113_HANDOFF_06A.md",
+          "sha256": "24584dae72f3b6df315f40beba9a490fad3251e950763026412739e9b4744f98",
+          "condition": "Independently reproduce synthetic boundary/byte-oracle scope; no accepted resource target or new writer permission. Genuine Chrome unchanged WAIT_ENV/CI."
+        },
+        "next": "06A independent synthetic capacity evidence; 07 real browser same-case JS/Rust comparison after authorized environment and R5.1 fixed CI; no limits changes"
       }
     },
     "08_LOCALIZATION": {
