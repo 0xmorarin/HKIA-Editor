@@ -8095,7 +8095,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "05 READY consume accepted R5-R7 catalog, Native literal advisory, tab/filter map and V33 search audit; 08 WAIT fixed next category/list/dynamic UI source or QA counterexample; no repeat. Physical selector/device, product browser and linguistic review remain unverified.",
+      "next": "05 READY consume 189-key accepted catalog + Native static, tab/filter, V33 search and category-grid locale advisories; 08 WAIT fixed next product list/dynamic source or QA counterexample; no repeat. Physical selector/device, actual localized product browser/session and linguistic review unverified.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -8245,6 +8245,12 @@
             "status": "READY_DIRECT_LOW_ADVISORY",
             "scope": "Exact V33 Achievement/Collection category/definition/item search/sort and display producers; 13 static checks + 8 executed synthetic cases; actual legacy JA/EN/internal names, hardcoded JA collation; no product or game text changes.",
             "condition": "Reuse exact accepted versioned IDs, packs and 189-key catalog; localized name search/sort only after actual producer binding, preserve legacy machine-field search and stable selection, unknown/absent/history semantics; actual UI state/locale behavior HIGH -> 06B scoped real browser and independent negatives; no Writer or deployment authority."
+          },
+          "categoryGridLocale": {
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "scope": "Fixed 05 category grid fd893041 + inherited R3 model/image exact five blobs; eight already-accepted editor keys x15 locales, dynamic title/count/image guard mapping; no source changes.",
+            "condition": "Localize existing controller producer and Svelte candidate coherently, preserve exact snapshot equality and machine identity/count/order/selection/image status; use exact versioned category key/GUID game-text mapping or explicit fallback. Actual locale behavior HIGH -> 06B independent browser/negative QA, separate from current category QA; no Writer/deploy."
           }
         },
         "to00": {
@@ -8956,13 +8962,38 @@
       "categoryGridLocaleAudit": {
         "task": "PRODUCT_CATEGORY_GRID_LOCALE_BINDING_PREFLIGHT",
         "claim": "20261113_08_PRODUCT_CATEGORY_LOCALE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_ADVISORY",
         "baseLedgerBlob": "c434321ddb3442e972920470e621cae1dedce103",
         "sourceHead": "fd893041d47051016fbc4797d9e8d67dc7865389",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "risk": "LOW_ADVISORY_EXISTING_CONTRACT",
         "scope": "Exact new category grid Svelte/bridge and inherited R3 display contracts; audit existing key coverage and exact producer vs game text boundary; no new UI code, no duplicate 06B lifecycle QA",
-        "dependency": "R3 catalog accepted and fixed 05 category source; actual category grid QA separate"
+        "dependency": "R3 catalog accepted and fixed 05 category source; actual category grid QA separate",
+        "artifact": "HKIA_08_PRODUCT_CATEGORY_LOCALE_ADVISORY_20261113.json",
+        "sha256": "7267f00a92c3bd700efe3bf3bf1d66460858f24824ca1a34db0c5f26164432a4",
+        "evidenceLocation": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA256_PASS",
+        "verified": {
+          "sourceBlobs": 5,
+          "staticPass": 10,
+          "fail": 0,
+          "existingKeys": 8,
+          "locales": 15,
+          "priorCellsUnchanged": 120,
+          "placeholderParityCells": 120,
+          "r4R5R7ZipShaCrc": "PASS",
+          "newKeys": 0
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "scope": "Fixed 05 category grid fd893041 + inherited R3 model/image exact five blobs; eight already-accepted editor keys x15 locales, dynamic title/count/image guard mapping; no source changes.",
+          "condition": "Localize existing controller producer and Svelte candidate coherently, preserve exact snapshot equality and machine identity/count/order/selection/image status; use exact versioned category key/GUID game-text mapping or explicit fallback. Actual locale behavior HIGH -> 06B independent browser/negative QA, separate from current category QA; no Writer/deploy."
+        },
+        "unverified": [
+          "Actual localized controller/bridge behavior, browser/session invariance, native speaker review; current product category grid compile/independent QA separate"
+        ],
+        "next": "WAIT 05 fixed actual Achievement list/detail or new locale contract/QA counterexample; no repeat."
       }
     },
     "06A_QA_DATA_CORE": {
