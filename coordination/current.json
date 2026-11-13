@@ -329,12 +329,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "V300_DERIVED_REWARD_MANUAL_CAUSAL_LOCAL_PASS_QA_PENDING",
+      "status": "V300_DERIVED_REWARD_EXACT29_PROVIDER_LOCAL_PASS_QA_PENDING_WAIT_NEW_WITNESS",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_PENDING; 03_EXACT_SIX_PROVIDER_DISPATCH_IN_FLIGHT; 04_WAIT",
+      "next": "06_QA_INDEPENDENT_FOUR_NEW_DELTAS_PLUS_PRIOR_GROUP_HISTORICAL_DERIVED; 01_EXACT_SWITCH_DEFINITION_SOURCE_IF_AVAILABLE; 04_AFTER_ACCEPTED_02_03_EXACT29_AND_DEFINITION_PRECONDITIONS; 03_WAIT_NEW_CONCRETE_WITNESS_OR_QA_FAILURE; 00_SERIAL_AFTER_QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -636,12 +636,24 @@
       },
       "v300RecipeProvider": {
         "task": "FORMAL_V300_EXACT_SIX_PROVIDER_DISPATCH",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_STATIC_DISPATCH_PASS_QA_PENDING_WAIT_EXACT_DEFINITION",
         "owner": "03 LINKAGE",
         "baseHead": "4558c23447a6e89cd3eb4d2cd2eb8a3212973470",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Resolve closed InventoryItem interface dispatch and concrete provider initialization, not repeat generic allocator/Inventory predicate or assume six asset parity",
-        "dependency": "01 V300 Recipe Native delta and 04 v300 allocator evidence; exact Switch definitions not located"
+        "dependency": "01 V300 Recipe Native delta and 04 v300 allocator evidence; exact Switch definitions not located",
+        "delta": {
+          "file": "HKIA_03_V300_RECIPE_PROVIDER_V33_DELTA_20261113.zip",
+          "sha256": "4e4452c59a7a90f398ae3c29c3db29dac26f6bb2e0923d76ba6cdeebf4eef2dd",
+          "manifestSha256": "8726f57f86a9cba7469707b8528210b40e38a99e1a5a55daeaa6a4e7956002c5",
+          "scope": "4 ADD 0 MOD 0 DEL + transport manifest",
+          "verified": "v300 original NSO/dump/script SHA; 40 anchors,4 BL,5 metadata slots,6 methods,1 interface slot,4 fields; 7 focused PASS; private Library byte exact CRC"
+        },
+        "classification": "CLOSED_INVENTORYITEM_INTERFACE_DISPATCH_AND_EXAMINED_MESSAGEPACK_PROVIDER_INITIALIZERS_STATIC; TARGET_SPECIFIC_PRODUCER_UNKNOWN; NO_NEW_UNCONDITIONAL_REQUIRED",
+        "remaining": "exact Switch300 definition bundle and six legitimate acquisition triggers; runtime vtable invocation/physical persistence; independent QA; no row creation authority",
+        "gameAccepted": false,
+        "productAuthorized": false,
+        "next": "06 independent scoped QA; 01 exact Switch definition bundle/source identity; 03 after concrete exact six trigger evidence or 06 counterexample; 04 WAIT exact accepted contract"
       }
     },
     "04_SAVE_CORE": {
