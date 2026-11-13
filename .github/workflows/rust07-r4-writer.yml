@@ -1,0 +1,58 @@
+name: HKIA Rust07 R4 fixed Writer public CI
+on:
+  push:
+    branches:
+      - rust07/r4-minimum-writer
+permissions:
+  contents: read
+concurrency:
+  group: hkia-rust07-r4-writer
+  cancel-in-progress: false
+jobs:
+  public-synthetic:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/rust07/r4-minimum-writer'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed scope and toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor d6401ccea03d67ad312ca1b052455974498ebe1e HEAD
+          test "$(git diff --name-only d6401ccea03d67ad312ca1b052455974498ebe1e HEAD)" = .github/workflows/rust07-r4-writer.yml
+          rustup toolchain install 1.85.1 --profile minimal
+          npm install --global typescript@5.8.3 --ignore-scripts --no-audit --no-fund
+          test "$(tsc --version)" = "Version 5.8.3"
+      - name: Synthetic compile tests and code-only release executable
+        env:
+          RUSTUP_TOOLCHAIN: 1.85.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/rust/run-writer-ci.py --abi-ts --code-only-artifact "$RUNNER_TEMP/hkia-r4-code-only"
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'hkia-r4-code-only'
+          assert {x.name for x in p.iterdir()}=={'hkia-writer-private','build-report.json'}
+          f=p/'build-report.json'
+          d=json.loads(f.read_text())
+          assert d['rustTests']=={'passed':95,'failed':0,'skipped':0}
+          assert d['abiTs']=='14_PASS' and d['realParity']=='NOT_RUN'
+          assert hashlib.sha256((p/'hkia-writer-private').read_bytes()).hexdigest()==d['binarySha256']
+          d.update(gitHead=os.environ['GITHUB_SHA'],runId=os.environ['GITHUB_RUN_ID'],codeHead='d6401ccea03d67ad312ca1b052455974498ebe1e',scope='PUBLIC_CODE_ONLY_NO_REAL_SAVE')
+          f.write_text(json.dumps(d,indent=2)+'\n')
+          PY
+      - name: Retain verified code-only executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: hkia-r4-code-only-writer
+          path: ${{ runner.temp }}/hkia-r4-code-only/
+          if-no-files-found: error
+          retention-days: 7
