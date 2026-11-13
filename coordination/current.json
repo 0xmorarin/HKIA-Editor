@@ -8798,8 +8798,8 @@
       "status": "PARTIAL_THREE_RESEARCH_SCOPED_ACCEPTED_R61_ACCEPTED_GENUINE_BROWSER_WAIT_ENV",
       "task": "HKIA_06A_THREE_DISJOINT_RESEARCH_ACCEPTANCE",
       "scope": "01 versioned Recipe membership 4 ADD; 02 v300 HatsOff partial Native 6 ADD; 03 Candy Cloud static/read-only genuine 8 ADD; fixed V39/V40. No product source changes.",
-      "next": "00 research-only 18 ADD integration READY and R6.1 existing integration READY. Direct 03/04/07/05 static/conditional references as scoped. 07 actual private genuine Chrome WAIT_ENV. No duplicate accepted scopes.",
-      "dependency": "NEW_FIXED_HIGH_SOURCE_OR_AUTHORIZED_PRIVATE_BROWSER; R61_AND_RESEARCH_00_INTEGRATION_SEPARATE",
+      "next": "00 research-only 18 ADD integration READY; R6.1 isolated PR10 integration consumed. 06A no new READY; wait new fixed HIGH evidence or authorized private genuine Browser. No repeat.",
+      "dependency": "NEW_FIXED_HIGH_SOURCE_OR_AUTHORIZED_PRIVATE_BROWSER",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "fd39028dee034c3c85b095a6237e1d18a6b3cde4",
       "legacyEvidence": {
@@ -9133,11 +9133,6 @@
           "stream": "00_CTRL",
           "task": "HKIA_THREE_RESEARCH_ADDITIVE_INTEGRATION",
           "dependency": "three 06A scoped acceptances, 18 disjoint fixed ADD; serial research integration only"
-        },
-        {
-          "stream": "00_CTRL",
-          "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
-          "dependency": "prior 06A scoped accepted, separate 7 MOD chain"
         }
       ],
       "nextAfterDep": [
@@ -10068,7 +10063,7 @@
         "handoff": {
           "to": "00_CTRL",
           "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
-          "status": "READY",
+          "status": "CONSUMED_00_ISOLATED_PR10_INTEGRATED",
           "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
           "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
           "scope": "exact 7 MOD vs R6 and fixed CI artifact; 06A scoped acceptance only; verify overlap/base/PR9/10 chain, no unapproved deploy, no Development Switch or Writer/limits grant",
@@ -10081,6 +10076,13 @@
             "bytes": 13213,
             "privateLibrary": "HKIA Editor Private",
             "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
+          },
+          "integration": {
+            "pr": 10,
+            "head": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+            "pr9Head": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+            "scope": "isolated, no main merge",
+            "status": "DONE_ISOLATED_PR10_ADVANCED_SCOPED_PASS"
           }
         }
       },
@@ -10585,6 +10587,20 @@
             "readback": "BYTE_EXACT_SHA_CRC_9_ENTRIES_8_MANIFEST_HASHES_PASS"
           }
         }
+      },
+      "resumeQueue20261113": {
+        "status": "RECONCILED_NO_NEW_06A_READY",
+        "observedHead": "950e87f636da8f6801310f8d8c0224518d046372",
+        "observedBlob": "1a28d84d4ca97073f1e6d0c4ef57651cfaa8d035",
+        "verified": {
+          "pr9": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+          "pr10": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "r61Integration": "DONE_ISOLATED_PR10_ADVANCED_SCOPED_PASS",
+          "activeQaClaims": 0,
+          "threeResearch": "DONE_THREE_SCOPED_ACCEPTANCES"
+        },
+        "scope": "06A handoff queue reconciliation only; prior accepted scopes retained; no product/source QA rerun",
+        "next": "00 research 18 ADD integration READY; 07 new capacity assignment or authorized genuine Browser; new 01/02/03/04/07 fixed HIGH source for 06A"
       }
     },
     "06B_QA_WEB_LOCALE": {
