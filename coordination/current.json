@@ -5103,7 +5103,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R5_1_SELF_PASS_FIXED_06A_READY_00_CI_READY_GENUINE_CHROME_WAIT_ENV",
+      "status": "WAIT_ENV_GENUINE_CHROME_R5_1_FIXED_NODE_INDEPENDENT_ACCEPTED_RESOURCE_QA_IN_FLIGHT",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5120,7 +5120,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00/06A R5.1 fixed CI and repair QA IN_FLIGHT; 06A new disjoint resource preflight evidence READY. 07 genuine Chrome WAIT_ENV/CI; actual browser capacity JS/Rust comparison after environment. Development Switch only after ADR acceptance and 00 record.",
+      "next": "07 genuine actual Chrome WAIT_ENV only; 06A resource scoped QA consume new exact artifact evidence; independent Node genuine and reply integrity accepted. No new Rust product scope before Development Switch or 00 explicit disjoint assignment; JS Beta and 05/08 independent.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -5396,7 +5396,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "R5.1 CI and independent QA, genuine Chrome six, resource stress 64/128MiB/2M, development switch, formal Rust features and cutover",
+      "remaining": "Authorized local actual Chrome loopback HTTP or private local HTTPS, fixed artifact genuine six and independent browser evidence; resource targets and same-case browser comparison; ADR Development Switch and formal full features/cutover separate.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -6183,15 +6183,67 @@
       },
       "fixedArtifactExecution": {
         "task": "HKIA-RUST-012_R5_1_FIXED_CI_ARTIFACT_PRIVATE_REBIND",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_PASS_AND_06A_FIXED_NODE_GENUINE_ACCEPTED",
         "owner": "07 RUST CORE",
         "baseHead": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
         "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
         "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
         "wasmSha256": "ecadf4450acf79c6068e81ae3dd2c9f021870d77453ce656e46fcdc4d6940e4c",
         "risk": "HIGH",
-        "scope": "Rebind genuine 6 and synthetic capacity 13 to exact new CI code-only WASM/client, no browser claim or source changes; 06A active repair independent.",
-        "dependency": "CI PASS fixed artifact, genuine private originals available; real Chrome environment remains separate"
+        "scope": "Fixed CI artifact Node genuine rebind 6/6 and new deterministic synthetic resource preflight 13/13; no source or bounds changes; genuine browser distinct WAIT_ENV.",
+        "dependency": "CI PASS fixed artifact, genuine private originals available; real Chrome environment remains separate",
+        "evidence": {
+          "file": "HKIA_Rust07_R5_1_FixedArtifactRebind_20261113_Evidence.zip",
+          "sha256": "72668579063a86f04f9ea70d67a4477c59ea64563b201ab1e5a546d91a568732",
+          "result": "HKIA_Rust07_R5_1_FixedArtifactRebind_20261113_RESULT.json",
+          "resultSha256": "a66db1cc163d33562ddc87055525decc094bab33e6c10c76d9604739d8751a44",
+          "manifest": "HKIA_Rust07_R5_1_FixedArtifactRebind_20261113_Manifest.json",
+          "manifestSha256": "dd963c1b7bcfa477fed839e259f3e2437551f3b946b5c6c178c4f8bb520cb0e7",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "4/4 byte exact; ZIP CRC and 9 manifest hashes PASS"
+        },
+        "verified": {
+          "artifactCodeHashes": 8,
+          "artifactEntries": 9,
+          "actualNodeWasmGenuine": 6,
+          "nativeByteExact": 6,
+          "v33ExactDiff": 6,
+          "genuineOriginalsUnchanged": 2,
+          "rollback": 6,
+          "resourceCases": 13,
+          "resourceEdits": 5,
+          "resourceReadOnly": 2,
+          "resourceExpectedReject": 6,
+          "resourceExactSplice": 5,
+          "resourceNonTargetRawFrames": 15,
+          "resourceUnchangedLz4Blocks": 1371,
+          "resourceDeterministicRegeneration": 13,
+          "resource45MiBMemoryBytes": 190971904,
+          "rawGenuineOutputsPersisted": false
+        },
+        "independentAcceptance": {
+          "status": "SCOPED_PASS_REPLY_REPAIR_AND_FIXED_ARTIFACT_NODE_GENUINE_WASM",
+          "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+          "evidenceSha256": "65acd834efd0e0c54ad9ca716de9a5ddbc1c47631f2924c23df1d198a19348e3",
+          "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838"
+        },
+        "unverified": [
+          "actual repaired Chrome Module Worker genuine 0/6, administrator loopback restriction WAIT_ENV",
+          "64/128MiB and 2M document resource targets",
+          "JS/Rust same-case real browser comparison",
+          "game persistence/auth",
+          "WASM binary difference cause UNKNOWN"
+        ],
+        "handoff": {
+          "to": [
+            "06A_QA_DATA_CORE",
+            "00_CTRL"
+          ],
+          "status": "READY_RESOURCE_SCOPED_CONSUME_NEW_FIXED_EVIDENCE",
+          "file": "HKIA_Rust07_R5_1_FixedArtifactRebind_20261113_HANDOFF_06A_00.md",
+          "sha256": "efbd3cd52d179b57e363d064a5191c7b38bde12ef55aae4a67aa636f5165e0ba",
+          "condition": "06A resource preflight active claim consume exact new CI artifact 13 deterministic cases; previous Node genuine independently accepted, no duplicate. 00 genuine browser authorized private environment only then 07 actual Chrome six and 06A independent acceptance; no development switch before ADR."
+        }
       }
     },
     "08_LOCALIZATION": {
