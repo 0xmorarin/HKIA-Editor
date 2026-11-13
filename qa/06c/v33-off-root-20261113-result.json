@@ -1,0 +1,84 @@
+{
+  "schema": "HKIA.QA06C.FixedOffRoot.1",
+  "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
+  "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_V33_OFF_ROOT",
+  "base": {
+    "ref": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+    "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6"
+  },
+  "candidate": {
+    "ref": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+    "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+    "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+    "manifestBlob": "0461df44239a3fa6e45e286e18d16615b1625fd4"
+  },
+  "verified": {
+    "artifactFilesEach": 4146,
+    "modified": 6,
+    "unchanged": 4140,
+    "webpUnchanged": 4076,
+    "changedPaths": [
+      "native-product/api.mjs",
+      "native-product/dev-output-policy.mjs",
+      "scripts/research/save-native-schema-reader.mjs",
+      "scripts/research/save-transaction-engine.mjs",
+      "src/app.js",
+      "src/native-preview-ui.js"
+    ],
+    "policy": "PASS",
+    "reconstruct": "EXACT_MAP_WITH_ALL_BYTES_VERIFIED",
+    "rollback": "EXACT_V30_MAP_WITH_ALL_BYTES_VERIFIED",
+    "localHTTPSubpath": "PASS",
+    "pathDenials": 8,
+    "realChromiumWidths": [
+      320,
+      375,
+      1280
+    ],
+    "recipeRequestShapesPerWidth": 28,
+    "recipeNegativeCasesPerWidth": 112,
+    "capabilityCasesPerWidth": 4,
+    "writer": "OFF",
+    "webCryptoKnownAnswer": "PASS",
+    "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+    "pageErrors": 0,
+    "externalRequests": 0,
+    "downloads": 0
+  },
+  "workflow": {
+    "head": "6fcfeedd032275eb06bcf38bb33d7b7a333dba01",
+    "blob": "f35606048bb53206c7facbad565c987d31760428",
+    "run": 43424957254,
+    "job": 131884002261,
+    "conclusion": "success",
+    "observedLog": [
+      "QA EXACT 4146 each; 6 MOD 4140 unchanged; 4076 WebP unchanged; forward/reverse exact",
+      "QA BROWSER 320 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+      "QA BROWSER 375 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+      "QA BROWSER 1280 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+      "QA06C V33 PREDEPLOY SCOPED PASS NO DEPLOY NO SAVE"
+    ]
+  },
+  "pr12": {
+    "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
+    "workflowBlob": "75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5",
+    "mainWorkflowBlob": "ea3b177631999431e856967f8e45a214be0442ba",
+    "scope": "one file; exact expected 4-line pin additions/replacement; manual dispatch/main-only existing V30/V29 gates unchanged",
+    "gateBlob": "43a49327f26ce2b49e993387a27ab12cb54a691a",
+    "mergeable": "NOT_OBSERVED_NULL",
+    "merged": false
+  },
+  "limitations": [
+    "Actual private Save browser/load and game persistence not executed; 28 request shapes synthetic, not successful genuine edits; use prior V33 scoped specialist acceptance",
+    "Local HTTP secure context; V33 live HTTPS not checked before deploy; V30 new-host QA reused",
+    "No deployment or live rollback; no writer or flag change; top screen with no Save unchanged",
+    "PR12 mergeability returned null; CTRL must recheck head/base and Owner approval before merge/dispatch",
+    "Artifact manifest historical state label retained; scoped QA does not turn it into release-authorized state"
+  ],
+  "trueRed": [],
+  "handoff": {
+    "to": "00 CTRL",
+    "task": "V33_FIXED_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
+    "condition": "Exact fixed V33 and PR12 scoped predeploy PASS; recheck PR lease, current main workflow/gates and explicit fixed-artifact Owner approval before merge/dispatch; after deployment 06C fixed live HTTPS boundary QA. Preserve V24 and no Writer activation."
+  }
+}
