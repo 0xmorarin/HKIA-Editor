@@ -4668,7 +4668,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "R4_MINIMUM_WRITER_SOURCE_FROZEN_WAIT_CI_06_STATIC_READY",
+      "status": "IN_FLIGHT_R4_GENUINE_WRITER_PARITY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4732,8 +4732,8 @@
       "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
       "handoffTo": "06A_EXISTING_R4_STATIC; 00_CI_DEPENDENCY_ONLY; 07_GENUINE_AFTER_CI; 06A_SCOPED_EXECUTION",
       "dependency": "R4_CI_DONE; 07_PRIVATE_GENUINE_AND_06A_STATIC_PARALLEL",
-      "resumeBaseHead": "7da4c3956b2eab799db9f06215430dac3400225e",
-      "resumeScope": "R3 accepted; minimal Rust transactional writer existing Key1 ticks and exact 100Fwishes incomplete progress pair, batch, typed CAS/revision/plan/reparse/ZIP raw preservation/undo redo reset; native only before WASM; no JS product changes",
+      "resumeBaseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
+      "resumeScope": "Fixed R4 binary 43378029329, six genuine private candidates, V33 oracle and original preservation; no static QA repeat, no source edits except scoped repair if needed",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -4747,7 +4747,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-008",
+      "resumeTask": "HKIA-RUST-009",
       "previousTask": "HKIA-RUST-006",
       "r2": {
         "source": {
