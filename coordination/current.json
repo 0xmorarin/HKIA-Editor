@@ -7144,13 +7144,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "DONE_THREE_SCOPED_STATIC_RESEARCH_WAIT_NEW_HIGH_OR_BROWSER",
-      "task": "DERIVED23_RECIPE6_STATION_V301_MARKER_INDEPENDENT_QA",
+      "status": "IN_FLIGHT_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT",
+      "task": "RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
       "next": "Three new research scopes independently accepted. 00 serial additive Derived23/Recipe6 research integration, 04/07 marker reference; 07 R6 explicit disjoint capacity remains independent; 06A wait new fixed HIGH result or authorized genuine browser self-QA. No duplicate accepted scope.",
       "dependency": "NEW_FIXED_HIGH_SCOPE_OR_07_GENUINE_BROWSER_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
+      "baseHead": "28e99955e4b40ac9b25f782532a188719ea1904e",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -7296,21 +7296,21 @@
       },
       "activeClaims": [
         {
-          "task": "SWITCH300_301_MISSING_DERIVED23_INDEPENDENT_QA",
-          "source": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
-          "status": "DONE_SCOPED_PASS_STATIC",
+          "task": "RECIPE6_STATION_SAVED_CONDITIONS",
+          "source": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         },
         {
-          "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_INDEPENDENT_QA",
-          "source": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
-          "status": "DONE_SCOPED_PASS_STATIC",
+          "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER_INDEPENDENT_QA",
+          "source": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         },
         {
-          "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
-          "source": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
-          "status": "DONE_SCOPED_PASS_STATIC",
+          "task": "HKIA-RUST-013_PRIVATE_BROWSER_EXECUTION_READINESS",
+          "source": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         }
       ],
