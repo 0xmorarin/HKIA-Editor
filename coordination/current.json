@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06A_SWITCH301_DEFINITION_FIXED_ORIGINALS_READY; 01_WAIT_NEW_CONCRETE_STATION_WITNESS_OR_QA_COUNTEREXAMPLE; 02_SHARED_V33_AND_CORE_REUSE_ONLY; NO_LEGACY_06_ACTIVATION",
+      "next": "WAIT_DEP_NEW_CONCRETE_STATION_OR_NONRECIPE_WITNESS_OR_QA_COUNTEREXAMPLE; V301_STATIC_PARITY_ACCEPTED_V36; 03/04/07_DIRECT_REUSE; NO_REPEAT_NO_LEGACY_QA",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -72,7 +72,7 @@
       },
       "absenceWitness": {
         "task": "FORMAL_COLLECTION_HISTORICAL_RECIPE_ABSENCE_WITNESS",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "SCOPED_PASS_HISTORICAL_STRUCTURAL_WAIT_PRODUCT_CONTRACT",
         "baseHead": "95093e653156ea416881079a16130f8a0be392c0",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Audit existing private historical backups for actual absent/zero Recipe rows and same-version positive donor; no new row authorization or 32 target repeat; read-only typed audit and exact candidate eligibility; V24/Pages untouched",
@@ -90,7 +90,7 @@
           2101238998
         ],
         "classification": "RESEARCH_ONLY_GENUINE_V300_ABSENT_TO_POSITIVE_STRUCTURAL; V301_NATIVE_ALLOCATOR_REUSED_NOT_V300_PARITY; NO_PRODUCT_AUTHORITY_OR_NEW_CROSS_MODEL_REQUIRED",
-        "remaining": "v300 generic allocator and projection statically evidenced by 01, closed provider by 03 pending QA; exact Switch300 six definition/producer and runtime history/physical persistence remain UNKNOWN; no product authorization",
+        "remaining": "V300 normalized six, generic allocator/provider and conditional cook producer accepted scoped static/structural; exact station state, actual event, ownership-only causal closure and game persistence unknown.",
         "next": "03 exact six causal review + 06 new 6 paths independent QA in parallel; 04 only after exact accepted v300 producer/consumer contract; 00 Pages recovery independent; V24 frozen",
         "productAuthorized": false,
         "gameAccepted": false,
@@ -98,7 +98,7 @@
       },
       "native300Parity": {
         "task": "FORMAL_RECIPE6_V300_NATIVE_PERSISTENCE_PARITY",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY",
+        "status": "SCOPED_PASS_STATIC_NATIVE_PERSISTENCE_REUSE",
         "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Newly located Switch v300 executable and IL2CPP dump; exact allocator/Inventory producer/load/persistence/predicate paths only; no 03 v301 repeat; additive 01 evidence; V24/Pages unchanged",
@@ -112,7 +112,7 @@
         "dumpSha256": "ff61e4c9688e8be45422ed6c5c187ab36068c08f9b8cd7795999358374fbbf8a",
         "verified": "27 ranges / 214 instructions / 18 method bindings / 12 decoded direct branches / 10 model keys; 10 focused synthetic PASS; V33 521 unchanged; Library exact SHA CRC; prior genuine six+batch not rerun",
         "classification": "V300_STATIC_GENERIC_ALLOCATOR_SIMPLE_PRODUCER_LOAD_SAVE_PROJECTION_RECIPE_PREDICATE_AND_HISTORY_ROUTE_CONFIRMED; TARGET_SPECIFIC_PRODUCER_SWITCH_DEFINITION_DYNAMIC_PROVIDER_BINDING_UNKNOWN",
-        "remaining": "Exact Switch300 six definition/legitimate producer pending original bundle; 03 closed InventoryItem provider dispatch static evidence pending 06; indirect refs/runtime physical persistence/game acceptance unknown",
+        "remaining": "V300 normalized six and closed provider accepted scoped static; actual native invocation/physical history persistence/game unknown.",
         "next": "06 new 4 paths static scoped QA independently of prior 01/03; 03 exact six producer/definition and dynamic dispatch follow-up only; 04 WAIT accepted exact target contract; V24/Pages unchanged",
         "productAuthorized": false,
         "gameAccepted": false,
@@ -133,7 +133,7 @@
       },
       "switch301Definition": {
         "task": "FORMAL_SWITCH301_RECIPE_DEFINITION_PARITY",
-        "status": "READY_06A_FIXED_ORIGINALS_SELF_REPRODUCTION_PASS",
+        "status": "SCOPED_PASS_06A_INTEGRATED_V36_ACCEPTED",
         "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Switch301 MasterDefinition original vs Steam301 exact 282 Recipe object byte/path identity; targeted local references 39 and collection groups, no game/producer authority; v300 catalog differs and remains separate",
@@ -144,14 +144,21 @@
         "changes": "4 ADD + transport manifest; 521 V33 base entries unchanged",
         "verified": "Exact Switch301 bundle/serial and Steam301 serial pins; 12163 Item definition raw SHA+identity, 282 Recipe raw bytes/typed prefix/tail, 183 local pointer occurrences across 39 selected recipes, 25 group raw/181 nested, 130 ItemCounter raw SHA; 12 focused PASS; catalog same-name different-content boundary; Library readback exact CRC",
         "classification": "V301_DEFINITION_OBJECT_PARITY_STATIC_ONLY; V300_ORIGINAL_ASSET_UNKNOWN; NO_NEW_REQUIRED_OR_PRODUCT_AUTHORIZATION",
-        "remaining": "06A independent exact original reproduction; external reference closure and game acceptance UNKNOWN; no new product authority",
-        "next": "06A scoped pending 01_SWITCH301_DEFINITION exact fixed originals; direct consumers after acceptance",
+        "remaining": "External reference closure and runtime/game persistence UNKNOWN; no acquisition authorization.",
+        "next": "03/04/07 consume accepted static v301 identity for concrete contracts; no repeat",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": {
+          "resultSha256": "ec444d4e795e696214c6754aa3512bb71326179e07d294188bd05e5594f44e40",
+          "witnessSha256": "6c1f880a457441b911d0f6874a5364fe1cb841bec278c998c9302d93a3073458",
+          "scope": "STATIC v301 Switch/Steam parity only; v300 catalog distinct; no external closure, acquisition or game authority",
+          "integratedSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+          "integrationQAResultSha256": "b842eace5f9b1115ff49b28fa0df0e7ba627bbda160a44f0cad02112c6b178c7"
+        }
       },
       "exactProducer": {
         "task": "RECIPE6_SWITCH300_EXACT_PRODUCER_WITNESS",
-        "status": "PARTIAL_STATIC_CONDITIONAL_PRODUCER_QA_READY",
+        "status": "SCOPED_PASS_STATIC_CONDITIONAL_PRODUCER_INTEGRATED_V35_WAIT_WITNESS",
         "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Exact six trigger conditions and target producer from cooking paths; reuse accepted normalized definitions and allocator; no product changes",
@@ -163,13 +170,17 @@
         "verified": "30 exact ranges / 265 Native instructions / 25 direct branches / 18 method + 3 state-machine bindings; 24 focused PASS; 6 exact accepted normalized target tuples; genuine v300 historical read-only ingredient checks all sufficient for one cook in both, food positive/history absent both; original unchanged; Library readback byte exact CRC",
         "classification": "STATIC_CONDITIONAL_COOKING_PRODUCER: exact recipe selected and unknown => client grantRecipe; server verifies ingredient/DLC, appends recipe qty1 with food result, exchange add then subtract, client SaveInventory; normal UI 1/2 slots by upgrade. No historical event proof or new product permission.",
         "remaining": "Actual four station access/upgrade state and native selected recipe, alternative producer/event, post-cooking station/Mission/Achievement effects and game physical load/resave. Ingredients sufficient is not cooking acquisition proof. Exact cooking emulation requires costs/output/grant, not automatically Collection-only edits.",
-        "next": "03 targeted station access/upgrade and postcook causal effects + 06 scoped 6 new paths in parallel. 04 WAIT accepted exact collection-only contract. No repeat definition/allocator/structural tests.",
+        "next": "WAIT concrete station/actual acquisition or QA counterexample; 03 target causal consumer; 04/07 only accepted future collection-only contract",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": {
+          "resultSha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f",
+          "scope": "Exact conditional cooking producer research only; no product authorization; V35 additive integration and V36 accepted successor"
+        }
       },
       "stationWitness": {
         "task": "RECIPE6_SWITCH300_STATION_STATE_WITNESS",
-        "status": "PARTIAL_LOCAL_PASS_QA_READY_STATION_SOURCE_WAIT_DEP",
+        "status": "SCOPED_PASS_COOKING_HISTORY_INTEGRATED_V35_WAIT_STATION_WITNESS",
         "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
         "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
         "scope": "New exact station script/Blackboard and failed cooking record evidence; no repeat producer or 03 causal work; read-only private research",
@@ -181,9 +192,13 @@
         "verified": "9 ranges/136 new words/9 direct branches/9 method bindings/4 keys/union13; zero overlapping 01/03 Native words; 18 focused PASS; 2 genuine archives read-only, 4 distinct typed slots (3 v300,1 v301), 89 ordered failed tuples equal all, 46 one/43 two extras, six exact tuples 0, 4 base two-extra counts 5/5/22/1, originals unchanged; Library readback exact CRC",
         "classification": "READ_ONLY_FAILED_CATCHALL_HISTORY_ADVISORY; NO_STATION_ACCESS_UPGRADE_OR_HISTORICAL_ACQUISITION_PROOF; PRESERVE_TAG13; NO_NEW_REQUIRED_WRITE_OR_PRODUCT_AUTHORITY",
         "remaining": "Exact Switch300 four station scripts/scene bindings and condition assets, current genuine station state, competing runtime recipe selection, controlled successful acquisition/postprocess and physical load/resave; 06 separate scoped QA. Original archive name known, bytes not available in this run; no same-name v301 substitution.",
-        "next": "06 independent new 7-path QA separate from 01 producer and 03 causal; 03 consume accepted tag13 evidence only, then WAIT exact station asset/runtime witness. 01 WAIT exact source or concrete QA counterexample, no repeat. 04 WAIT accepted exact ownership-only contract. V24/Pages unchanged.",
+        "next": "WAIT exact station asset/runtime witness or QA counterexample; no repeated search or QA",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": {
+          "resultSha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f",
+          "scope": "Tag13 read-only failed cooking history advisory; no station unlock/upgrade inference or product authority; V36 accepted successor"
+        }
       },
       "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07",
       "v301OriginalRecovery": {
@@ -210,7 +225,43 @@
           "evidence": "Private Library HKIA Editor Private; handoff artifact contains original locators, source pins and reproduction commands; no raw assets or private source IDs in ledger."
         },
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": "06A independent scoped static PASS; V36 integration accepted by 06C and 00"
+      },
+      "queueReconciliation": {
+        "task": "01_V301_ACCEPTANCE_AND_REMAINING_SCOPE_RECONCILIATION",
+        "status": "DONE_NO_READY_01_TASK",
+        "baseHead": "4927c555bcaaf0604de3c5a62b2dee2d6f252bc1",
+        "risk": "LOW_LEDGER_ONLY",
+        "acceptedV36": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "acceptedV301": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
+        "verified": "06A researchAcceptance exact delta and witness; 00 V36 acceptance and 06C result; legacy five research exact producer/history integrated; no new code or original research",
+        "remaining": [
+          {
+            "task": "RECIPE6_STATION_RUNTIME_AND_COLLECTION_ONLY_CAUSAL",
+            "status": "WAIT_DEP",
+            "unblock": "New exact station script/condition + genuine runtime state or controlled acquisition witness; 01/03 coordinate disjoint scope"
+          },
+          {
+            "task": "NONRECIPE_STRUCTURAL_OWNERSHIP",
+            "status": "WAIT_DEP",
+            "unblock": "New target-specific active reference/producer closure or controlled native/game witness"
+          },
+          {
+            "task": "NEW_COLLECTION_CONTRACT",
+            "status": "WAIT_DEP",
+            "unblock": "Concrete 06A counterexample or newly accepted downstream need"
+          }
+        ],
+        "handoff": {
+          "to": [
+            "03_LINKAGE",
+            "04_SAVE_CORE",
+            "07_RUST_CORE"
+          ],
+          "scope": "Reuse exact accepted v301 static definition identity and V36 research reference only; no new Writer authority"
+        },
+        "next": "No new 01 activation until specific unblock; 00 and 06A existing R5.1/V37 work independent"
       }
     },
     "02_ACHIEVEMENT": {
