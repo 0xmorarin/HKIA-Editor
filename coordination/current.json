@@ -6118,10 +6118,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "READY_SVELTE_R3_FIXED_COMPILED_SCOPE",
-      "task": "SVELTE_R3_CATEGORY_GRID_SCOPED_INDEPENDENT_QA",
+      "status": "IN_FLIGHT",
+      "task": "LOCALE_R2_RUNTIME_NATIVE_AND_WEB_R3_INDEPENDENT_QA",
       "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
-      "next": "Independent R3 changed scope and impact, exact source/CI; R1/R2 accepted reuse; locale R2 repair after fixed 08 evidence; disjoint claims allowed",
+      "next": "Execute disjoint scoped QA; direct handoff to 05/08; no product changes",
       "dependency": "R3_FIXED_CI_SUCCESS; LOCALE_R2_WAIT_08_FIXED",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -6259,6 +6259,28 @@
         "run": 43381925291,
         "status": "READY",
         "scope": "Fixed isolated R3 synthetic fixture; legacy renderCollections VM synthetic sinks; actual built Vite HTTP Chromium; no production binding or Save; mapped image load failure not tested"
+      },
+      "r2Claims": {
+        "runtime": {
+          "status": "IN_FLIGHT",
+          "claim": "20261113_06B_LOCALE_R2_RUNTIME",
+          "source": "b14c906f1e32d19e0e50d6fe5d088c966d86a426f21d6963d05fa4bafa37ed05",
+          "scope": "runtime repair only"
+        },
+        "native": {
+          "status": "IN_FLIGHT",
+          "claim": "20261113_06B_LOCALE_R2_NATIVE",
+          "source": "391a2ebe51aaa17ed1bd208f8dd87d54d3553a2dff7f4c2a2b9707db826c03bf",
+          "scope": "Native version/identity evidence only"
+        }
+      },
+      "webR3Claim": {
+        "status": "IN_FLIGHT",
+        "claim": "20261113_06B_WEB_R3",
+        "source": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
+        "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+        "run": 43381925291,
+        "scope": "R3 8 changed paths, fixed compile/browser and independent negative cases"
       }
     },
     "06C_QA_RELEASE": {
