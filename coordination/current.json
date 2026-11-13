@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06_SWITCH301_DEFINITION_PARITY_SCOPED_QA; 01_WAIT_SWITCH300_ORIGINAL_BUNDLE; 03_EXACT_SIX_AFTER_SOURCE; 04_WAIT_ACCEPTED_CONTRACT; V24_PAGES_UNCHANGED",
+      "next": "03_RECIPE6_STATION_POSTCOOK_CAUSAL_AND_06_PRODUCER_SCOPED_QA; 04_WAIT_EXACT_ACCEPTED_CONTRACT; V24_PAGES_UNCHANGED",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -93,7 +93,8 @@
         "remaining": "v300 generic allocator and projection statically evidenced by 01, closed provider by 03 pending QA; exact Switch300 six definition/producer and runtime history/physical persistence remain UNKNOWN; no product authorization",
         "next": "03 exact six causal review + 06 new 6 paths independent QA in parallel; 04 only after exact accepted v300 producer/consumer contract; 00 Pages recovery independent; V24 frozen",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": "06 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3 historical structural scoped accepted; no product authority"
       },
       "native300Parity": {
         "task": "FORMAL_RECIPE6_V300_NATIVE_PERSISTENCE_PARITY",
@@ -114,7 +115,8 @@
         "remaining": "Exact Switch300 six definition/legitimate producer pending original bundle; 03 closed InventoryItem provider dispatch static evidence pending 06; indirect refs/runtime physical persistence/game acceptance unknown",
         "next": "06 new 4 paths static scoped QA independently of prior 01/03; 03 exact six producer/definition and dynamic dispatch follow-up only; 04 WAIT accepted exact target contract; V24/Pages unchanged",
         "productAuthorized": false,
-        "gameAccepted": false
+        "gameAccepted": false,
+        "acceptance": "06 same result accepted v300 native generic and provider evidence scope; actual game unknown"
       },
       "switch300Definition": {
         "task": "FORMAL_RECIPE6_SWITCH300_EXACT_DEFINITION",
@@ -124,7 +126,7 @@
         "scope": "Resolve MasterDefinition catalog dependencies and exact six Switch300 Recipe/Food definitions; no 03 provider or existing native repeats; additive research only",
         "dependency": "03 v300 closed provider static evidence pending QA",
         "verified": "Exact Switch300 catalog named bundle and raw Hash128/size differ from Switch301; 37371991 vs 37339929; 1000-entry folder listing omitted target, exact-name search empty; no original bytes",
-        "remaining": "Need original Switch300 7acd12a2895ab8172afdabcd72f5af5c.bundle 37371991 bytes from Data/StreamingAssets/aa/Switch; obtain exact ID or private original, then six target definitions/producer closure",
+        "remaining": "Exact normalized six accepted by 06; conditional producer now locally evidenced; station/event/runtime effects unknown",
         "next": "01 after exact original source; 03 producer after verified definitions; 04 WAIT exact accepted contract",
         "productAuthorized": false,
         "gameAccepted": false
@@ -149,11 +151,21 @@
       },
       "exactProducer": {
         "task": "RECIPE6_SWITCH300_EXACT_PRODUCER_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_STATIC_CONDITIONAL_PRODUCER_QA_READY",
         "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "scope": "Exact six trigger conditions and target producer from cooking paths; reuse accepted normalized definitions and allocator; no product changes",
-        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3",
+        "artifact": "HKIA_01_RECIPE6_SWITCH300_PRODUCER_V33_DELTA_20261113.zip",
+        "deltaSha256": "fe97cce85187f15c7d5545a753ea4f7c92c4f22520f933ccfc890cf9a551f4d6",
+        "manifestSha256": "f30079aaa30aefe5e2f7d14536577027f445172abf009c6671060f4f1adb4901",
+        "changes": "6 ADD + transport manifest; 521 V33 entries unchanged",
+        "verified": "30 exact ranges / 265 Native instructions / 25 direct branches / 18 method + 3 state-machine bindings; 24 focused PASS; 6 exact accepted normalized target tuples; genuine v300 historical read-only ingredient checks all sufficient for one cook in both, food positive/history absent both; original unchanged; Library readback byte exact CRC",
+        "classification": "STATIC_CONDITIONAL_COOKING_PRODUCER: exact recipe selected and unknown => client grantRecipe; server verifies ingredient/DLC, appends recipe qty1 with food result, exchange add then subtract, client SaveInventory; normal UI 1/2 slots by upgrade. No historical event proof or new product permission.",
+        "remaining": "Actual four station access/upgrade state and native selected recipe, alternative producer/event, post-cooking station/Mission/Achievement effects and game physical load/resave. Ingredients sufficient is not cooking acquisition proof. Exact cooking emulation requires costs/output/grant, not automatically Collection-only edits.",
+        "next": "03 targeted station access/upgrade and postcook causal effects + 06 scoped 6 new paths in parallel. 04 WAIT accepted exact collection-only contract. No repeat definition/allocator/structural tests.",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
