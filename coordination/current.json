@@ -9766,8 +9766,8 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "DONE_NEW_HOST_V30_SCOPED_PASS",
-      "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
+      "status": "IN_FLIGHT_V40_SCOPED_QA",
+      "task": "V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
       "next": "00 record new-host V30 scoped PASS; V40 fixed 653 research integration ready; V24 genuine Browser WAIT_ENV",
       "dependency": "NEW_HOST_V30_SCOPED_PASS; V40_FIXED_READY; V24_WAIT_ENV",
@@ -10689,6 +10689,14 @@
           "task": "YUMEKIRABOSHI_V30_NEW_HOST_ACCEPTANCE",
           "condition": "Record scoped new-host acceptance, no redeploy required for unchanged V30; preserve single root policy and Owner gates."
         }
+      },
+      "v40Claim": {
+        "task": "V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+        "baseHead": "dfffc1ee51d2b451a6f572b375d6d8cfd0748e82",
+        "baseLedgerBlob": "4d6668fdfde7414aed2ab978baca9a6e7a49fbe8",
+        "source": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "scope": "6 ADD only, 647 V39 exact; 06A static exact producer accepted scope reuse. Verify source/delta/manifest, focused 23 + independent integration negatives, build 55 and full map 4146 unchanged, rollback. No repeated Native proof, no deployment.",
+        "status": "IN_FLIGHT"
       }
     }
   },
