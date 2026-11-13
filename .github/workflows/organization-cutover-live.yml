@@ -1,0 +1,77 @@
+name: HKIA CTRL new-host V30 live browser (no deploy)
+on:
+  push:
+    branches: [ctrl/organization-cutover-check-20261113]
+    paths:
+      - '.github/workflows/organization-cutover-live.yml'
+permissions:
+  contents: read
+jobs:
+  live:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753' && github.ref == 'refs/heads/ctrl/organization-cutover-check-20261113'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          persist-credentials: false
+      - name: Install isolated browser
+        run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+      - name: Verify live fixed artifact boundary and real browser
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,urllib.request,urllib.error,time,pathlib
+          from playwright.sync_api import sync_playwright
+          root='https://yumekiraboshi.github.io/HKIA-Editor/'
+          raw=pathlib.Path('site-manifest.json').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=='564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6'
+          m=json.loads(raw); assert m['writer']=='OFF' and len(m['files'])==4146
+          def fetch(path,base=root):
+              for attempt in range(4):
+                  try:
+                      with urllib.request.urlopen(base+path,timeout=25) as r:return r.status,r.geturl(),r.read()
+                  except urllib.error.HTTPError as e:
+                      if e.code in (403,404):return e.code,e.url,b''
+                      if attempt==3:raise
+                      time.sleep(2)
+          paths=['index.html','media/boot.mjs','media/image-map.json','media/fallback-image-map.delta.json','src/app.js','src/native-preview-ui.js','native-product/worker.mjs','native-product/worker-client.mjs','native-product/dev-output-policy.mjs']
+          paths += sorted(p for p in m['files'] if p.endswith('.webp'))[::815]
+          for p in paths:
+              status,url,b=fetch(p);assert status==200 and url==root+p and len(b)==m['files'][p]['bytes'] and hashlib.sha256(b).hexdigest()==m['files'][p]['sha256'],p
+          status,url,b=fetch('');assert status==200 and url==root and hashlib.sha256(b).hexdigest()==m['files']['index.html']['sha256']
+          status,url,b=fetch('',root.replace('https:','http:'));assert status==200 and url==root
+          denied=['coordination/current.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','site-manifest.json','README.md','HKIA_Pages_OFF_V30_V29_20261113.bundle','parts/0000.bin']
+          for p in denied:assert fetch(p)[0] in (403,404),p
+          print('CTRL LIVE_HTTP exact files',len(paths),'denials',len(denied),'redirect PASS',flush=True)
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(headless=True)
+              for width in (320,375,1280):
+                  page=browser.new_page(viewport={'width':width,'height':900})
+                  errors=[]; foreign=[]
+                  page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(root) else None)
+                  page.goto(root,wait_until='networkidle',timeout=90000)
+                  page.locator('#colTab').click()
+                  page.locator('#collectionGrid').wait_for(state='visible')
+                  page.wait_for_function("document.querySelector('#collectionGrid').children.length > 0")
+                  assert page.locator('#nativeDownload').is_disabled()
+                  assert page.locator('#attributionNotice').is_visible()
+                  assert page.evaluate("isSecureContext && !!crypto.subtle && typeof Worker === 'function'")
+                  result=page.evaluate("""async () => {
+                    const d=await crypto.subtle.digest('SHA-256',new Uint8Array([1,2,3]));
+                    const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
+                    try { const r=await new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('Worker timeout')),20000); w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(e.message))};w.postMessage({id:1,kind:'noop'});});
+                      return {digest:d.byteLength,worker:r.error==='Native worker session missing',width:document.documentElement.scrollWidth,viewport:innerWidth};
+                    } finally{w.terminate()}
+                  }""")
+                  assert result['digest']==32 and result['worker'],result
+                  assert result['width']<=width,result
+                  assert not errors and not foreign,(errors,foreign)
+                  print('CTRL LIVE_BROWSER',width,json.dumps(result),'errors',len(errors),'external',len(foreign),flush=True)
+                  page.close()
+              browser.close()
+          print('CTRL SELF_PASS LIVE_NO_SAVE_REAL_HTTPS_WEBCRYPTO_MODULE_WORKER_NO_DEPLOY')
+          PY
