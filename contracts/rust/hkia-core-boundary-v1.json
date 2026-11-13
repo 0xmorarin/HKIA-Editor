@@ -1,0 +1,85 @@
+{
+  "schema": "HKIA.CoreBoundary.3",
+  "state": "R3_NATIVE_SESSION_SOURCE_COMPILE_PENDING",
+  "sourceAuthority": "single Rust ProductSession; actual Worker wiring pending",
+  "sessionScope": [
+    "sessionId",
+    "generation",
+    "revision",
+    "sourceSha256",
+    "schemaIdentity"
+  ],
+  "request": [
+    "requestId",
+    "sessionScope",
+    "typedCommand"
+  ],
+  "commands": [
+    "Open",
+    "Summary",
+    "IndexPage",
+    "DetailPage",
+    "Close",
+    "Plan_UNSUPPORTED",
+    "Preview_UNSUPPORTED",
+    "Apply_UNSUPPORTED",
+    "Verify_UNSUPPORTED",
+    "Export_UNSUPPORTED",
+    "Undo_UNSUPPORTED",
+    "Redo_UNSUPPORTED",
+    "Reset_UNSUPPORTED"
+  ],
+  "integers64": "canonical decimal strings across JSON; native i64/u64 within Rust; no Number coercion",
+  "pageLimit": "bounded, selected domain only; no full-document JSON bridge",
+  "export": "separate verified copy, original immutable; capability by native version and operation",
+  "currentBudgets": {
+    "compressedMiB": 25,
+    "decodedMiB": 45,
+    "blockBytes": 65536,
+    "blocks": 4096,
+    "containerElements": 1000000,
+    "logicalNodes": 2000000,
+    "depth": 80,
+    "zipMiB": 60,
+    "zipMembers": 2000,
+    "zipMemberMiB": 25,
+    "zipExpandedMiB": 60,
+    "accountUtf8Bytes": 2000000,
+    "accountNodes": 100000,
+    "accountDepth": 64,
+    "pageRows": 128,
+    "replyBytes": 32768,
+    "deflateBlocks": 65536
+  },
+  "designTargets": {
+    "decodedMiB": 64,
+    "stressMiB": 128,
+    "documents": 2000000,
+    "qualification": "not measured, no cap relaxation"
+  },
+  "implementedSource": [
+    "decode_envelope",
+    "index_native",
+    "read_slot",
+    "ZIP32_STORED_DEFLATE_FULL_CRC",
+    "ACCOUNT_JSON_TYPED_SPANS",
+    "INVENTORY_KEY0_MIGRATION_AND_LAZY_DETAILS",
+    "PRODUCT_SESSION_READ_ONLY",
+    "HKS1_NATIVE_ABI",
+    "TS_CODEC_SINGLE_FLIGHT",
+    "IMMUTABLE_WRITER_INPUT_AND_CAS_WITNESS"
+  ],
+  "notImplemented": [
+    "WASM_MODULE_GLUE",
+    "ACTUAL_WORKER",
+    "TRANSACTIONAL_WRITER",
+    "NATIVE_AUTHENTICATION",
+    "OPERATION_CAPABILITIES",
+    "REAL_BROWSER_AND_RESOURCE_BUDGET_ACCEPTANCE"
+  ],
+  "strictness": "known versions only; reject unknown Native unions or fields, malformed identity, and leading UTF-8 BOM ambiguity; raw bytes retained",
+  "privateParity": "tests/rust/run-session-private.mjs (new R3 projections only; genuine inputs local)",
+  "abi": "contracts/rust/hkia-session-abi-v1.md",
+  "schemaSha256": "a64edcf1da558ab72dab63d9ac27ee9e555812af777581251ab5d4323d2c1a73",
+  "verification": "TS codec compile and 14 synthetic tests PASS; new Rust compile/tests and genuine parity pending"
+}
