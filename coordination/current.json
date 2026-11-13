@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "WAIT_DEP_NEW_CONCRETE_STATION_OR_NONRECIPE_WITNESS_OR_QA_COUNTEREXAMPLE; V301_STATIC_PARITY_ACCEPTED_V36; 03/04/07_DIRECT_REUSE; NO_REPEAT_NO_LEGACY_QA",
+      "next": "06A_RECIPE6_STATION_SAVED_CONDITIONS_NEW_SCOPED_QA_AFTER_OR_PARALLEL_03_SOURCE; 03_DIRECT_CONDITIONAL_REFERENCE_AFTER_BOTH; 01_WAIT_RUNTIME_OR_QA_COUNTEREXAMPLE; NO_REPEAT",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -230,7 +230,7 @@
       },
       "queueReconciliation": {
         "task": "01_V301_ACCEPTANCE_AND_REMAINING_SCOPE_RECONCILIATION",
-        "status": "DONE_NO_READY_01_TASK",
+        "status": "SUPERSEDED_BY_NEW_STATION_SOURCE_WITNESS",
         "baseHead": "4927c555bcaaf0604de3c5a62b2dee2d6f252bc1",
         "risk": "LOW_LEDGER_ONLY",
         "acceptedV36": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
@@ -261,16 +261,34 @@
           ],
           "scope": "Reuse exact accepted v301 static definition identity and V36 research reference only; no new Writer authority"
         },
-        "next": "No new 01 activation until specific unblock; 00 and 06A existing R5.1/V37 work independent"
+        "next": "New 03 source e22a5596 enabled 01 saved-condition witness; see stationSaveWitness. Other prior waiting scopes unchanged."
       },
       "stationSaveWitness": {
         "task": "RECIPE6_SWITCH300_STATION_SAVED_CONDITIONS_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_QA_READY_CONDITIONAL_SOURCE",
         "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
         "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
         "risk": "HIGH",
         "scope": "New read-only historical genuine v300 saved friendship/mission/blackboard evidence for exact 03 station source GUIDs; no repeat source extraction or producer, no runtime eligibility inference; 03 pending QA source treated conditional",
-        "dependency": "03 e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62 pending independent acceptance; disjoint save observation"
+        "dependency": "03 e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62 pending independent acceptance; disjoint save observation",
+        "artifact": "HKIA_01_RECIPE6_STATION_SAVED_CONDITIONS_V36_DELTA_20261113.zip",
+        "deltaSha256": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+        "manifestSha256": "e43382a6db8af1faca137aade88df960342adc7c1fda2d9c6400a60713c08a41",
+        "resultSha256": "350e9af5e9fc4c0c4074f624bbc0bbd4172d4c462be7dbc4730a164b342ba4fb",
+        "changes": "6 ADD 0 MOD 0 DEL + transport manifest; V36 all 625 entries unchanged",
+        "verified": "3 distinct genuine v300 typed slots (1 all-six absent,2 all-six positive); exact 4 NPC Key7 >= thresholds + Key6 met, 3 exact Mission GUIDs status3 and 4 exact TaskId complete, 5 global union15 bool true each, zero matching tag32 trait3 local; same across all 3; 8 keys/6 unions/4 enums/3 schema bindings; 16 focused PASS, source-pin negative PASS, result byte-exact repeat, originals unchanged; Library byte-exact SHA CRC 7 entries 6 manifest hashes",
+        "classification": "SAVED_CONDITION_OBSERVATIONS_ONLY_ON_FIXED_03_SOURCE; RUNTIME_STATION_ACCESS_UPGRADE_EVENT_PERSISTENCE_UNKNOWN; NO_NEW_REQUIRED_WRITE_OR_PRODUCT_AUTHORITY",
+        "remaining": "03 exact source independent acceptance and 06A new saved-condition scope independent oracle; dynamic station lock/upgrade/registration, recipe selection, Candy Cloud script and actual cook/event/reload/persistence UNKNOWN; no game authority",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "task": "RECIPE6_SWITCH300_STATION_SAVED_CONDITIONS_INDEPENDENT_QA",
+          "status": "READY_CONDITIONAL_ON_03_FIXED_SOURCE_ACCEPTANCE",
+          "scope": "New 6 ADD only, fixed V36 and 03 e22a5596 scope; independent typed genuine v300 3-slot exact GUID join, task ID not index, global/local/absent/false/duplicate/type negatives, source hash and exact aggregate; no repeated station extraction/allocator/producer or v301 inference. May run disjoint from existing 06A station source scope, dependent use only after both accepted.",
+          "consumer": "03_LINKAGE then 04/07 conditional advisory only; 00 research-only integration if applicable"
+        },
+        "next": "06A new saved-state scope after or alongside current exact 03 source QA; 01 WAIT dynamic station/controlled event/persistence or QA counterexample; no new product authorization",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
