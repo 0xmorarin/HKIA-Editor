@@ -6327,7 +6327,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -6340,7 +6340,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "05 READY accepted R1 data + R2 runtime/static Switch301 and direct LOW legacy inventory; 06B R3/R4 catalog changed scope READY (disjoint review, ordered overlay acceptance); 00 R4 fixed nondeploy CI; 08 continue exact Switch300 original/core or account platform runtime name evidence and future actual UI keys; no repeat. V24/Writer/Pages unchanged.",
+      "next": "06B new Switch300 typed/version scoped QA READY, no R1/R2/R3/R4 repeat; 05 accepted R1/R2/R3 catalog/runtime adapter integration READY, R4 catalog accepted but relevant R4 UI CI/QA dependency remains; 08 remaining Account platform title/native locale-code/sentinel evidence and future UI keys. Original recovery direct private dependency witness to 01/02/03/06A only.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -6396,17 +6396,23 @@
         "legacyRenderInventorySources": 20,
         "legacyRenderInventoryTests": "4 PASS / 0 FAIL",
         "r2RuntimeIndependent": "8 PASS / 0 FAIL; TRUE_RED closed",
-        "r2NativeIndependent": "50 ranges, 36 independent branch decodes, 30 manifest headers, 13220 Switch301 typed rows, 0 diff; static scoped PASS"
+        "r2NativeIndependent": "50 ranges, 36 independent branch decodes, 30 manifest headers, 13220 Switch301 typed rows, 0 diff; static scoped PASS",
+        "switch300TypedRows": 13220,
+        "switch300TypedExactRows": 13208,
+        "switch300DescriptionOnlyNullDelta": 12,
+        "switch300ActualKeysEach": 15292,
+        "switch300TrueMissing": 0,
+        "switch300VersionTests": "54 PASS / 0 FAIL",
+        "r3CatalogIndependent": "SCOPED PASS",
+        "r4CatalogIndependent": "SCOPED PASS"
       },
       "unverified": [
-        "Switch300 full typed definition key mapping: original exact all-deps archive/core unavailable in this run; no substitution from Switch301",
         "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
         "Account platform-specific runtime titles",
-        "06B R3 catalog scoped acceptance",
-        "06B R4 catalog scoped acceptance",
         "Legacy static render-site inventory fixed (827 candidate sites), actual visibility/dynamic dataflow and semantic key binding not complete; future UI beyond R4",
-        "Linguistic/actual Browser/session QA and R3/R4 acceptance",
-        "05 actual locale adapter integration and 00 distribution allowlist"
+        "05 actual locale adapter integration and 00 distribution allowlist",
+        "06B Switch300 new typed version contract independent acceptance",
+        "Native-speaker linguistic review; actual browser/session invariance; full product UI coverage"
       ],
       "handoff": {
         "to05": {
@@ -6436,6 +6442,11 @@
             "acceptance": "05 consumes advisory source-location inventory directly; review actual UI dataflow and map accepted keys or request new key/translation from 08; no auto translation of machine codes/game text; no independent QA for advisory itself; new contract/important UI HIGH ->06B",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
             "readbackVerified": true
+          },
+          "switch300": {
+            "status": "READY_AFTER_DEP",
+            "dependency": "06B exact Switch300 typed version delta scoped PASS",
+            "scope": "Version-aware identity lookup with verified R1 packs; 12 v300 descriptions ABSENT_REF not MISSING_ID; preserve all raw texts, IDs, session. Existing accepted runtime/catalog integration independently READY."
           }
         },
         "to00": {
@@ -6502,7 +6513,33 @@
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
             "readbackVerified": true,
             "independentEvidenceSha256": "340eec4c6dde137f62dd8cee65000b9595f80a0fbaa9c32e892887fc679b688a"
+          },
+          "switch300": {
+            "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
+            "status": "READY",
+            "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
+            "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
+            "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
+            "manifestSha256": "a10c119b6f4f827839ea2d854165bc089fee1cf76548c47a1fa9c2b9f577727f",
+            "witnessSha256": "db2c39e8a9550a0f7f1af10d9063b68019bcf9f28ce3b676dfcb2b3402b32825",
+            "scope": "Switch300 original full typed mapping, 13220 common IDs, 13208 exact rows, 12 item description refs null in v300 vs non-null v301; 15292/15304 actual keys per locale, zero true missing; additive versioned lookup 8 ADD, 79 prior composite files unchanged; no raw or private locator in public repo",
+            "dependency": "R1 fixed data and R2/R3/R4 accepted, exact original recovered in private HKIARE source, fixed v300 archive SHA",
+            "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
+            "readbackVerified": true
           }
+        },
+        "sourceRecovery": {
+          "recipient": [
+            "01 COLLECTION",
+            "02 ACHIEVEMENT",
+            "03 LINKAGE",
+            "06A QA-DATA-CORE"
+          ],
+          "status": "READY_PRIVATE_ORIGINAL_LOCATOR_RECOVERED",
+          "archiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
+          "coreSha256": "883ad6551f01424f0f56fe3c9ce20d2576915a44c573609a011c5b112b28ef10",
+          "evidence": "08 fixed Switch300 delta private handoff; exact source retrieval only; respective claim and acceptance unchanged"
         }
       },
       "releaseImpact": "NONE; V24 frozen, V30 public, Writer OFF",
@@ -6555,11 +6592,11 @@
         ],
         "nextAfterDep": {
           "switch300": {
-            "status": "IN_FLIGHT",
+            "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
             "owner": "08 LOCALIZATION",
             "sourceArchiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
             "coreSha256": "883ad6551f01424f0f56fe3c9ce20d2576915a44c573609a011c5b112b28ef10",
-            "condition": "Locate exact original Switch300 all-deps/core via 02/00 private source evidence; validate pins; compare actual typed rows; do not substitute Switch301."
+            "condition": "06B new version typed mapping independent scoped acceptance; private original locator recovered and fixed"
           },
           "ui": {
             "status": "PARTIAL_106_KEYS_AND_LEGACY_INVENTORY_FIXED",
@@ -6739,13 +6776,64 @@
       },
       "switch300": {
         "task": "LOCALIZATION_SWITCH300_FULL_TYPED_KEY_PARITY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
         "claim": "20261113_08_SWITCH300_TYPED",
         "baseHead": "4555081b2215753222cb07f89a3bfb9a2ff65433",
         "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
         "archiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
         "coreSha256": "883ad6551f01424f0f56fe3c9ce20d2576915a44c573609a011c5b112b28ef10",
-        "scope": "Actual Switch300 full typed identity, key and version delta, preserve R1 data until proven, private originals only"
+        "scope": "Actual Switch300 full typed identity, key and version delta, preserve R1 data until proven, private originals only",
+        "fixed": {
+          "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
+          "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
+          "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
+          "manifestSha256": "a10c119b6f4f827839ea2d854165bc089fee1cf76548c47a1fa9c2b9f577727f",
+          "witnessSha256": "db2c39e8a9550a0f7f1af10d9063b68019bcf9f28ce3b676dfcb2b3402b32825",
+          "scope": "Switch300 original full typed mapping, 13220 common IDs, 13208 exact rows, 12 item description refs null in v300 vs non-null v301; 15292/15304 actual keys per locale, zero true missing; additive versioned lookup 8 ADD, 79 prior composite files unchanged; no raw or private locator in public repo",
+          "dependency": "R1 fixed data and R2/R3/R4 accepted, exact original recovered in private HKIARE source, fixed v300 archive SHA",
+          "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
+          "readbackVerified": true
+        },
+        "verified": {
+          "archiveBytes": 110017158,
+          "archiveEntries": 17,
+          "archiveCRC": "PASS",
+          "sourceObjects": 41729,
+          "registryValues": 3855,
+          "registryCount": 5933,
+          "identityRows": 13220,
+          "exactRows": 13208,
+          "changedDescriptionRows": 12,
+          "identityDifferences": 0,
+          "v300ActualKeysEach": 15292,
+          "v301ActualKeysEach": 15304,
+          "actualMissing": 0,
+          "lookupCount": 793200,
+          "correctedStatuses": 180,
+          "tests": 54,
+          "newTests": 7,
+          "fail": 0,
+          "reproduction": "BYTE_EXACT",
+          "gamePacksUnchanged": 30,
+          "compositeUnchanged": 79
+        },
+        "handoff": {
+          "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
+          "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
+          "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
+          "manifestSha256": "a10c119b6f4f827839ea2d854165bc089fee1cf76548c47a1fa9c2b9f577727f",
+          "witnessSha256": "db2c39e8a9550a0f7f1af10d9063b68019bcf9f28ce3b676dfcb2b3402b32825",
+          "scope": "Switch300 original full typed mapping, 13220 common IDs, 13208 exact rows, 12 item description refs null in v300 vs non-null v301; 15292/15304 actual keys per locale, zero true missing; additive versioned lookup 8 ADD, 79 prior composite files unchanged; no raw or private locator in public repo",
+          "dependency": "R1 fixed data and R2/R3/R4 accepted, exact original recovered in private HKIARE source, fixed v300 archive SHA",
+          "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
+          "readbackVerified": true
+        }
       }
     },
     "06A_QA_DATA_CORE": {
