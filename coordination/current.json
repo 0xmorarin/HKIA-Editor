@@ -8083,7 +8083,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "08 IN_FLIGHT exact V33 search audit; 05 accepted R5-R7 catalog and Native literal advisory READY; category source IN_FLIGHT 05; no duplicate claim.",
+      "next": "05 READY consume accepted R5-R7 catalog, Native literal advisory, tab/filter map and V33 search audit; 08 WAIT fixed next category/list/dynamic UI source or QA counterexample; no repeat. Physical selector/device, product browser and linguistic review remain unverified.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -8227,6 +8227,12 @@
             "status": "READY_DIRECT_LOW_ADVISORY",
             "scope": "33 display sites, 32 exact JA matches; one achievementSearch placeholder semantic mismatch (legacy JA/EN/GUID vs generic name/GUID). No new keys; all 495 cells already accepted R4. Fixed six source blobs and full per-site key map in private evidence.",
             "condition": "Keep initial legacy JA checks and structural/state guards; mounted locale-aware text expectations from coherent accepted generation; preserve machine IDs/option values/order/focus/caret/filter/active tab/Save/Session/Revision/Undo. Do not claim multilingual search until query evidence; 05 actual change HIGH -> 06B scoped browser/negative QA; 00 distribution separate."
+          },
+          "productSearchAudit": {
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "scope": "Exact V33 Achievement/Collection category/definition/item search/sort and display producers; 13 static checks + 8 executed synthetic cases; actual legacy JA/EN/internal names, hardcoded JA collation; no product or game text changes.",
+            "condition": "Reuse exact accepted versioned IDs, packs and 189-key catalog; localized name search/sort only after actual producer binding, preserve legacy machine-field search and stable selection, unknown/absent/history semantics; actual UI state/locale behavior HIGH -> 06B scoped real browser and independent negatives; no Writer or deployment authority."
           }
         },
         "to00": {
@@ -8889,8 +8895,8 @@
           "newKeys": 0
         },
         "unverified": [
-          "Actual product locale switch and localized query semantics; no direct V33 app source read in this turn (artifact ref path 404)",
-          "Browser/session invariance and linguistic review"
+          "Browser/session invariance and linguistic review",
+          "Actual locale-aware product query/sort remains unverified; prior V33 direct source 404 resolved by correct site/src/app.js path; see productSearchAudit."
         ],
         "handoff": {
           "recipient": "05 WEB",
@@ -8898,19 +8904,42 @@
           "scope": "33 display sites, 32 exact JA matches; one achievementSearch placeholder semantic mismatch (legacy JA/EN/GUID vs generic name/GUID). No new keys; all 495 cells already accepted R4. Fixed six source blobs and full per-site key map in private evidence.",
           "condition": "Keep initial legacy JA checks and structural/state guards; mounted locale-aware text expectations from coherent accepted generation; preserve machine IDs/option values/order/focus/caret/filter/active tab/Save/Session/Revision/Undo. Do not claim multilingual search until query evidence; 05 actual change HIGH -> 06B scoped browser/negative QA; 00 distribution separate."
         },
-        "next": "WAIT 05 actual locale-aware product binding or explicit new capability keys; no repeat."
+        "next": "Search legacy semantics resolved in productSearchAudit; WAIT 05 actual locale-aware binding/new keys."
       },
       "productSearchAudit": {
         "task": "V33_PRODUCT_LOCALE_SEARCH_SOURCE_AUDIT",
         "claim": "20261113_08_V33_SEARCH_AUDIT",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_ADVISORY",
         "baseLedgerBlob": "1a7e898680cf8f892e1f1f09e9bbe375ff7bfe7d",
         "risk": "LOW_ADVISORY_READ_ONLY_SOURCE_MAPPING_NO_NEW_BEHAVIOR",
         "scope": "Recover fixed V33 app blob via exact SHA, inspect actual search/sort producers for Achievement, Collection categories/items; map language authority and exact legacy terms, identify missing localized query/display semantics; advisory only. No 05 source edits or 06B repeated QA.",
         "dependency": "V33 fixed predeploy accepted, prior 08 tab/filter advisory unresolved query semantics; R1-R7 accepted catalog",
         "artifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "appBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
-        "appSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5"
+        "appSha256": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+        "artifact": "HKIA_08_V33_LOCALE_SEARCH_AUDIT_20261113.json",
+        "sha256": "dbde610b3c9703498ec9b14020f8f4774b2c400b896218f049cce7b43bf4cdb0",
+        "evidenceLocation": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA256_PASS",
+        "verified": {
+          "fixedSourceFiles": 3,
+          "appPathAndBlobExact": true,
+          "staticPass": 13,
+          "syntheticExecuted": 8,
+          "fail": 0,
+          "manifestPinsObserved": true,
+          "sourceHelper": "Actual fixed filterSortAchievements and titleForCategory executed with synthetic inputs; not Browser PASS"
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "scope": "Exact V33 Achievement/Collection category/definition/item search/sort and display producers; 13 static checks + 8 executed synthetic cases; actual legacy JA/EN/internal names, hardcoded JA collation; no product or game text changes.",
+          "condition": "Reuse exact accepted versioned IDs, packs and 189-key catalog; localized name search/sort only after actual producer binding, preserve legacy machine-field search and stable selection, unknown/absent/history semantics; actual UI state/locale behavior HIGH -> 06B scoped real browser and independent negatives; no Writer or deployment authority."
+        },
+        "unverified": [
+          "Actual locale-aware product query/sort, product browser/session invariance, full UI coverage, native speaker and physical game; fixed manifest pins reused, full files not rehashed in this audit"
+        ],
+        "next": "05 actual product locale-aware binding and category/list source; no duplicate QA."
       }
     },
     "06A_QA_DATA_CORE": {
