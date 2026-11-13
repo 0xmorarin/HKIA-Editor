@@ -1,0 +1,80 @@
+name: HKIA Rust07 R2 public synthetic compile
+on:
+  push:
+    branches:
+      - rust07/r2-public-synthetic-compile
+permissions:
+  contents: read
+concurrency:
+  group: hkia-rust07-public-synthetic
+  cancel-in-progress: false
+jobs:
+  public-synthetic:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/rust07/r2-public-synthetic-compile'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Validate fixed public input and provision pinned Rust
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd HEAD
+          test "$(git diff --name-only 7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd HEAD)" = .github/workflows/rust07-public-synthetic.yml
+          python3 tests/rust/run-public-ci.py --preflight-only
+          rustup toolchain install 1.85.1 --profile minimal
+          rustup override set 1.85.1
+          rustc --version
+          cargo --version
+      - name: Offline public-synthetic tests and release build
+        env:
+          RUSTUP_TOOLCHAIN: 1.85.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(rustc --version | cut -d" " -f2)" = 1.85.1
+          test "$(cargo --version | cut -d" " -f2)" = 1.85.1
+          python3 - <<'PY'
+          import contextlib, hashlib, importlib.util, io, json, os, pathlib, shutil, sys
+          path = pathlib.Path('tests/rust/run-public-ci.py').resolve()
+          spec = importlib.util.spec_from_file_location('public_ci', path)
+          runner = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(runner)
+          original = runner.run
+          dest = pathlib.Path(os.environ['RUNNER_TEMP']) / 'hkia-r2-code-only'
+          dest.mkdir(exist_ok=False)
+          binary = dest / 'hkia-private-parity'
+          def retain(args, cwd, env=None):
+              output = original(args, cwd, env)
+              if list(map(str,args[:3])) == ['cargo','build','--offline']:
+                  source = pathlib.Path(cwd) / 'target/release/hkia-private-parity'
+                  if binary.exists() or not source.is_file():
+                      raise RuntimeError('unexpected binary output')
+                  shutil.copyfile(source, binary)
+              return output
+          runner.run = retain
+          sys.argv = [str(path)]
+          log = io.StringIO()
+          with contextlib.redirect_stdout(log):
+              runner.main()
+          print(log.getvalue(), end='')
+          report = json.loads(log.getvalue()[log.getvalue().rfind('\n{')+1:])
+          assert report['status'] == 'SYNTHETIC_COMPILE_AND_TEST_PASS'
+          assert report['rustTests'] == {'passed':39,'failed':0,'skipped':0}
+          assert hashlib.sha256(binary.read_bytes()).hexdigest() == report['binarySha256']
+          report.update(gitHead=os.environ['GITHUB_SHA'], runId=os.environ['GITHUB_RUN_ID'], codeHead='7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd', scope='PUBLIC_CODE_ONLY_NO_REAL_SAVE')
+          (dest/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+      - name: Retain verified code-only executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: hkia-r2-code-only-parity
+          path: ${{ runner.temp }}/hkia-r2-code-only/
+          if-no-files-found: error
+          retention-days: 7
