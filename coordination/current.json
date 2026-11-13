@@ -2004,7 +2004,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06B_R3_INDEPENDENT_QA_PARALLEL_00_R4_ISOLATED_CI; 05_AFTER_R4_RESULT_OR_ACCEPTED_LOCALE_OR_CORE_DEP; NO_REPEAT",
+      "next": "00_R4_TEST_ORACLE_FIXED_CI_AND_LOCALE_CONSUMER_ISOLATED_CI_PARALLEL; 06B_R4_AND_LOCALE_AFTER_COMPILED; 05_NEXT_DISJOINT_OR_REPAIR; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2764,7 +2764,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R2_ACCEPTED_R3_COMPILED_06B_READY_R4_FIXED_BRANCH_WAIT_CI",
+        "status": "R3_ACCEPTED_R4_TEST_REPAIR_READY_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3010,7 +3010,7 @@
         },
         "r4": {
           "task": "SVELTE_R4_ACHIEVEMENT_BOUNDED_LIST",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "TEST_ORACLE_REPAIR_SELF_PASS_WAIT_FIXED_CI",
           "owner": "05 WEB",
           "baseHead": "5c80984eed86e4f11b4ed1c818c8459cbe2c633f",
           "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
@@ -3044,24 +3044,57 @@
           "decisions": "Read-only synthetic fixture; 120-row increments with isolated 1200 display cap not a production contract or save limit; exact progress strings no arithmetic; local WebP only; no R3 accepted snapshot changes",
           "repair": {
             "task": "SVELTE_R4_CLASS_TOKEN_ORACLE_MINIMAL_REPAIR",
-            "status": "IN_FLIGHT",
+            "status": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
             "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
             "basePrHead": "9fffbb07d6877b8c34997e9d07506cd2be7a9d9b",
             "scope": "svelte-ui/scripts/browser-achievement-parity.py only, exact class token checks plus controls; no component/CSS/workflow changes",
             "risk": "LOW_TEST_ORACLE_ONLY",
-            "run": 43386305291
+            "run": 43386305291,
+            "head": "01a4a7fd420afd7eadf5f5186f965d7d81bfa155",
+            "branch": "web05/svelte-r4-class-oracle",
+            "tree": "a39d34a9a1ffbde9482448efac0e4743958a2082",
+            "deltaSha256": "27fc41b652199887547141344f18c6524470b5724e023e57d33953d5721239c5",
+            "evidenceSha256": "71912e220e3105b4fda6b818c0d698883f8f40ff11df326768e9ba3511d6e350",
+            "artifacts": {
+              "delta": "HKIA_WEB05_SvelteR4_ClassOracle_20261113_Delta.zip",
+              "evidence": "HKIA_WEB05_SvelteR4_ClassOracle_20261113_Evidence.json",
+              "transport": "HKIA_WEB05_SvelteR4_ClassOracle_20261113_PublicCodeTransport.json"
+            },
+            "verified": "1 MOD, 224 unchanged; exact new/old Blob; 3 selected assertions replaced by exact unordered token regex; 6 permutations and 4 negative cases; actual system Chromium assertion controls 2 positive and 1 negative; syntax; private 3 readbacks exact",
+            "unverified": "Complete compiled R4 Vite HTTP 320/375/1280; independent R4 acceptance. No product defect proven by original class order mismatch.",
+            "next": "00 pin test-only successor in R4 branch/workflow and rerun fixed isolated CI. 06B independent R4 on complete green CI; no repeat or product change"
           }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
       "localeIntegration": {
         "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
         "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
         "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
         "risk": "HIGH_LOCALE_UI_ADAPTER",
-        "dependency": "06B runtime repair b14c906f... and R1 data scoped pass; catalog R3/R4 pending separately"
+        "dependency": "06B runtime repair b14c906f... and R1 data scoped pass; catalog R3/R4 pending separately",
+        "head": "9863dd6b38ebcbf4ce25611812dd78ea8dd7e887",
+        "branch": "web05/svelte-locale-consumer-r1",
+        "tree": "e54f38a41c0b92906f6d03f880de536212b48fb8",
+        "deltaSha256": "e69cf532d8529fe5c0e41ed7dbaaaea3523191800fa1be6fe1b51cd3f7549fee",
+        "manifestSha256": "9e023b9c11fac2792a8933bed5f5895a37d31932fd1e6306bcb33907cf04f73b",
+        "evidenceSha256": "dafc962406c97693d81b1d8fc477bde4ff1996d517742a74001e01ece4cf5e60",
+        "artifacts": {
+          "delta": "HKIA_WEB05_SvelteLocaleConsumer_R1_20261113_Delta.zip",
+          "manifest": "HKIA_WEB05_SvelteLocaleConsumer_R1_20261113_Manifest.json",
+          "evidence": "HKIA_WEB05_SvelteLocaleConsumer_R1_20261113_Evidence.json",
+          "transport": "HKIA_WEB05_SvelteLocaleConsumer_R1_20261113_PublicCodeTransport.json"
+        },
+        "verified": "8 ADD 0 MOD 0 DEL; 217 existing blobs unchanged; exact 8 Git blobs; strict TS consumer; actual accepted 08 R2 runtime/R1 registry 15 cases PASS including 14 synthetic consumer tests, 15 IDs, storage denied, stale success/rejection, close, reentrant request, representative accepted SHA verified 301 ja and 300 zh-Hant pack binding; private 4 readbacks exact, browser script syntax",
+        "unverified": [
+          "Svelte actual compile/check/build and synthetic selector HTTP Chrome 320/375/1280",
+          "actual production controller/session/selection/Undo immutability, complete localization catalog/Intl",
+          "Switch300 exact typed mapping, physical selector language inventory; accepted source locale inventory not formal full language certification"
+        ],
+        "decisions": "Use injected exact 08 runtime, no copy or modification of 08 paths; code-only standalone synthetic preview (3 fake fixture entries, not full game registry), separate Vite config; no actual game packs or source locators published; manual commits only after READY, storage denial visible, old version pack hidden during switch; no App.svelte overlap with R4.",
+        "next": "00 isolated nondeploy CI on locale branch, fixed lock npm ci, check --fail-on-warnings, vite build --config vite.locale.config.ts, browser-locale-parity.py dist-locale. 06B independent consumer scope after compiled fixed result, reuse 08 exact runtime/registry QA and run private verify-locale-consumer on exact accepted inputs. 05 later integrate accepted full catalog and actual product controller after prerequisites."
       }
     },
     "06_QA": {
