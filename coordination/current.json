@@ -5990,7 +5990,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R6_1_WAIT_INDEPENDENT_QA_R5_1_GENUINE_WAIT_ENV",
+      "status": "WAIT_DEP_00_R6_1_SCOPED_INTEGRATION_AND_WAIT_ENV_R5_1_GENUINE_CHROME",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -6007,7 +6007,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06A R6.1 independent QA already IN_FLIGHT; await verdict, repair only fixed counterexample if any, 00 integration after acceptance. R5.1 genuine Chrome WAIT_ENV authorized sandbox-capable private browser. No additional 07 READY scope or new 00 assignment; no duplicate QA, no limits/flags changes.",
+      "next": "00 R6.1 scoped integration READY via 06A direct accepted handoff; no duplicate 07/06A work. R5.1 genuine Chrome WAIT_ENV authorized sandbox-capable private browser; after 00 explicit disjoint assignment, other Rust foundation capacity work may proceed. No new task currently assigned; no Development Switch, limits or Writer/deploy changes.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -6283,7 +6283,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "06A R6.1 independent scoped acceptance (active), 00 integration; R5.1 actual genuine Chrome with accepted strict kit and independent evidence; formal capacity goals, actual browser JS/Rust comparison and game persistence separate.",
+      "remaining": "00 scoped integration of exact R6.1 accepted chain; R5.1 actual genuine Chrome and independent acceptance; 64/128MiB and 2M document targets, browser JS/Rust performance and game persistence separately. No new 07 READY.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -7265,7 +7265,7 @@
       "r6Followup": {
         "task": "HKIA-RUST-014_R6_MEASURED_CAPACITY_FOLLOWUP",
         "owner": "07 RUST CORE",
-        "status": "SELF_PASS_COMPILED_MEASURED_FIXED_GENUINE_06A_READY",
+        "status": "DONE_SCOPED_INDEPENDENT_PASS_R6_1_WAIT_00_INTEGRATION",
         "risk": "HIGH",
         "baseHead": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
         "claimBase": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
@@ -7354,7 +7354,12 @@
           "condition": "00 exact candidate 76ab71edf507cdcec13a6faf0db8ebcd56d4b672, base PR10 3f659c06f5f77fddd36f2b5415ffc082226afd40, 7 MOD scope. Update isolated workflow guard/report pin only, lease PR10, same R4 ref/Rust1.85.1, native+bridge tests, WASM, paired15 exact baseline Artifact14019348055, per-RPC memory, actual synthetic Chrome6; code-only artifact. No deploy, genuine CI, R5.1/PR9 changes. 07 rebind new artifact and genuine6/lifecycle self-QA, then 06A HIGH independent."
         },
         "next": "00 R6.1 exact CI READY; 07 WAIT_CI then actual candidate memory improvement and genuine private parity; 06A after self-QA. R5.1 genuine Chrome WAIT_ENV separate.",
-        "completion": "SELF_PASS_FIXED_R6_1_GENUINE_LIFECYCLE_CAPACITY_06A_READY"
+        "completion": "DONE_SCOPED_INDEPENDENT_PASS_R6_1_CAPACITY_GENUINE_LIFECYCLE",
+        "independentAcceptance": {
+          "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
+          "evidenceSha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672"
+        }
       },
       "browserKitRepair": {
         "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
@@ -7411,7 +7416,7 @@
       },
       "r61Execution": {
         "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_GENUINE_AND_LIFECYCLE_SELF_QA",
-        "status": "SELF_PASS_FIXED_R6_1_GENUINE_LIFECYCLE_CAPACITY_06A_READY",
+        "status": "DONE_SCOPED_INDEPENDENT_PASS_R6_1_CAPACITY_GENUINE_LIFECYCLE",
         "owner": "07 RUST CORE",
         "risk": "HIGH",
         "baseHead": "2f1c91dc9387b864147c7e87ff9c041bb0fade4e",
@@ -7474,7 +7479,6 @@
           "readback": "5/5 byte exact, evidence 9 entries/8 hashes and code artifact 9 entries/8 hashes CRC PASS"
         },
         "unverified": [
-          "06A independent R6.1 scratch/capacity/true parity",
           "actual genuine Chrome Module Worker",
           "64/128MiB and 2M documents target",
           "same-case real browser JS/Rust performance",
@@ -7484,7 +7488,7 @@
         "handoff": {
           "to": "06A_QA_DATA_CORE",
           "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
-          "status": "RECEIVED_IN_FLIGHT_06A",
+          "status": "DONE_ACCEPTED_BY_06A",
           "file": "HKIA_Rust07_R6_1_FixedArtifactSelfQA_20261113_HANDOFF_06A.md",
           "sha256": "f4ccc0a80c3b04785e23450d7f570d42d6f36d39f5c78c40fc6eda18c1f53739",
           "condition": "Fixed 7 MOD and exact CI artifact, independent scratch lifetime/all errors and length variations, paired resource and exact genuine output/lifecycle, reuse accepted base. 06A then 00 scoped integration; no limits, PR9/PR10 or deployment change.",
@@ -7492,6 +7496,73 @@
             "claimTask": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
             "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
             "claimBaseHead": "b931a399858872433250f5e746e5ee0617a6f676"
+          },
+          "acceptanceEvidenceSha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7"
+        },
+        "independentAcceptance": {
+          "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "ciHead": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
+          "artifactSha256": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+          "wasmSha256": "2f91736baf1ee71c7ba111758ea7e24eea985d375b54e90e305c645817fde4b7",
+          "verified": {
+            "sourceEntries": 112,
+            "modified": 7,
+            "unchanged": 105,
+            "remoteBlobs": 7,
+            "artifactCodeHashes": 8,
+            "nonWasmEqual": 7,
+            "pairedCases": 11,
+            "byteExactEdits": 5,
+            "pythonOracle": 5,
+            "capacity45MiB": {
+              "r6": 191102976,
+              "r61": 97058816,
+              "reduction": 94044160
+            },
+            "genuineNativeAndV33Exact": 8,
+            "exactFields": 14,
+            "nonTargetRawFrames": 80,
+            "reusedLz4Blocks": 258,
+            "originalsUnchanged": 2,
+            "lifecycleGateCalls": 90,
+            "rawCalls": 18,
+            "independentVariedCases": 4,
+            "independentVariedRpc": 118,
+            "failedOpen": 16,
+            "sizeChangingCases": 2,
+            "decodedLengthIncrease": 8,
+            "privateTransientOutputsRemoved": 8
+          },
+          "trueRed": "NONE_REPRODUCED_IN_SCOPE",
+          "evidence": {
+            "file": "HKIA_06A_R6_1_Independent_20261113_EVIDENCE.zip",
+            "sha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+            "manifestSha256": "3e0f4fc0637edf89b7751c510d992821a6ddd49239f3590682776bbdfb138456",
+            "resultSha256": "f165816043b50d73e9f1098aac70c2952eaec2236f636c36c7b00a8eb4e09c6e",
+            "handoffSha256": "16f9083a2a086a7af2915e25d124c302e2044bf47a664dd825460a7d53733296",
+            "bytes": 13213,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
+          },
+          "consumerReadback": "ZIP SHA, CRC, 15 entries, 14 member SHA and exact result/handoff pins verified"
+        },
+        "integrationHandoff": {
+          "to": "00_CTRL",
+          "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
+          "status": "READY",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+          "scope": "exact 7 MOD vs R6 and fixed CI artifact; 06A scoped acceptance only; verify overlap/base/PR9/10 chain, no unapproved deploy, no Development Switch or Writer/limits grant",
+          "evidence": {
+            "file": "HKIA_06A_R6_1_Independent_20261113_EVIDENCE.zip",
+            "sha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+            "manifestSha256": "3e0f4fc0637edf89b7751c510d992821a6ddd49239f3590682776bbdfb138456",
+            "resultSha256": "f165816043b50d73e9f1098aac70c2952eaec2236f636c36c7b00a8eb4e09c6e",
+            "handoffSha256": "16f9083a2a086a7af2915e25d124c302e2044bf47a664dd825460a7d53733296",
+            "bytes": 13213,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
           }
         }
       }
