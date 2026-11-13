@@ -10827,6 +10827,13 @@
         "status": "IN_FLIGHT",
         "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
         "scope": "10 added files, actual legacy callback and independent model negatives; compiled browser later"
+      },
+      "productTabsCompiledClaim": {
+        "claim": "20261113_06B_PRODUCT_TABS_COMPILED",
+        "status": "IN_FLIGHT",
+        "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "compiled": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
+        "scope": "fixed code-only artifact and actual V30 browser evidence; independent lifecycle/negative prior preflight reuse"
       }
     },
     "06C_QA_RELEASE": {
