@@ -5867,11 +5867,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "PARTIAL",
-      "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA_AND_SVELTE_R2",
+      "status": "WAIT_DEP_LOCALE_R2_FIXED_OR_SVELTE_R3_COMPILED",
+      "task": "WAIT_NEXT_FIXED_HIGH_RISK_SCOPE",
       "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
-      "next": "08 focused runtime fix READY; 05 private data prep only and R3 disjoint; 06B after fixed runtime repair or R3 compiled/browser; no R1/R2 repeat",
-      "dependency": "R1 runtime repair by 08 + fixed self-QA; R3 actual fixed CI; full UI/selector/version mapping separately",
+      "next": "08 existing IN_FLIGHT repair; 00 R3 fixed isolated CI; 06B starts only after either fixed result; no duplicate R1/R2",
+      "dependency": "08 R2 fixed repair + self-QA OR 00 R3 fixed compile/check/build/Chromium; independent disjoint scope",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -5986,6 +5986,20 @@
           "to05": "R2 isolated accepted; reuse exact blobs; continue disjoint R3 and integration only within prerequisites",
           "to00": "R2 scoped QA complete, R3 isolated fixed CI remains separate; no production merge/deploy permission"
         }
+      },
+      "resumeCheck": {
+        "baseHead": "e3e316d538e4fcbd87255a4ef8bd3187a4f88919",
+        "locale": {
+          "status": "IN_FLIGHT",
+          "claim": "20261113_08_R2_RUNTIME_NATIVE"
+        },
+        "web": {
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "head": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
+          "observedPrWorkflowRuns": 0
+        },
+        "ready": [],
+        "productSourceWrite": false
       }
     },
     "06C_QA_RELEASE": {
