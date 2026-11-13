@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "03_RECIPE6_STATION_POSTCOOK_CAUSAL_AND_06_PRODUCER_SCOPED_QA; 04_WAIT_EXACT_ACCEPTED_CONTRACT; V24_PAGES_UNCHANGED",
+      "next": "06_RECIPE6_COOKING_HISTORY_SCOPED_QA; 01_WAIT_EXACT_STATION_SOURCE_OR_QA_COUNTEREXAMPLE; 03_TARGETED_AFTER_SOURCE; 04_WAIT_EXACT_ACCEPTED_CONTRACT",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -169,11 +169,21 @@
       },
       "stationWitness": {
         "task": "RECIPE6_SWITCH300_STATION_STATE_WITNESS",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_READY_STATION_SOURCE_WAIT_DEP",
         "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
         "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
         "scope": "New exact station script/Blackboard and failed cooking record evidence; no repeat producer or 03 causal work; read-only private research",
-        "dependency": "01 producer fe97cce8 and 03 causal a3286804 pending separate 06"
+        "dependency": "01 producer fe97cce8 and 03 causal a3286804 pending separate 06",
+        "artifact": "HKIA_01_RECIPE6_COOKING_HISTORY_V34_DELTA_20261113.zip",
+        "deltaSha256": "133abf2dabe44a4875bc1a5f9faad98edd15c8fc4b44790956bea3c52ee0050d",
+        "manifestSha256": "b456de7a8f635993be775410f033b85caa4bc946029594566c22a9f504a4fd3f",
+        "changes": "7 ADD + transport manifest; 582 V34 entries byte unchanged",
+        "verified": "9 ranges/136 new words/9 direct branches/9 method bindings/4 keys/union13; zero overlapping 01/03 Native words; 18 focused PASS; 2 genuine archives read-only, 4 distinct typed slots (3 v300,1 v301), 89 ordered failed tuples equal all, 46 one/43 two extras, six exact tuples 0, 4 base two-extra counts 5/5/22/1, originals unchanged; Library readback exact CRC",
+        "classification": "READ_ONLY_FAILED_CATCHALL_HISTORY_ADVISORY; NO_STATION_ACCESS_UPGRADE_OR_HISTORICAL_ACQUISITION_PROOF; PRESERVE_TAG13; NO_NEW_REQUIRED_WRITE_OR_PRODUCT_AUTHORITY",
+        "remaining": "Exact Switch300 four station scripts/scene bindings and condition assets, current genuine station state, competing runtime recipe selection, controlled successful acquisition/postprocess and physical load/resave; 06 separate scoped QA. Original archive name known, bytes not available in this run; no same-name v301 substitution.",
+        "next": "06 independent new 7-path QA separate from 01 producer and 03 causal; 03 consume accepted tag13 evidence only, then WAIT exact station asset/runtime witness. 01 WAIT exact source or concrete QA counterexample, no repeat. 04 WAIT accepted exact ownership-only contract. V24/Pages unchanged.",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "02_ACHIEVEMENT": {
