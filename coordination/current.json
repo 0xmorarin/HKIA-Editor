@@ -351,7 +351,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_HATS_OFF_V300_PARTIAL_SELF_PASS_06A_READY; V300_EXACT_SCRIPT_WAIT_DEP; CREATION_WAIT_GENUINE_BEFORE_AFTER; V301_ACCEPTED_REUSE",
+      "next": "02_HATS_OFF_V300_PARTIAL_INDEPENDENT_PASS; 00_RESEARCH_18_ADD_READY; 03_04_07_DIRECT_STATIC_REFERENCE; V300_EXACT_SCRIPT_WAIT_DEP; CREATION_WAIT_GENUINE_BEFORE_AFTER; DERIVED_RUNTIME_REWARD_WAIT_DEP; V301_ACCEPTED_REUSE",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -802,7 +802,7 @@
       },
       "hatsOffV300Review": {
         "task": "SWITCH300_HATS_OFF_EXACT_PRODUCER_PARITY",
-        "status": "PARTIAL_SELF_PASS_06A_READY_WAIT_EXACT_SCRIPT",
+        "status": "DONE_SCOPED_PASS_PARTIAL_STATIC_NATIVE_SOURCE_WAIT_EXACT_SCRIPT_AND_GENUINE_WITNESS",
         "owner": "02 ACHIEVEMENT",
         "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
         "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
@@ -865,9 +865,107 @@
           "scope": "6 ADD V39, disjoint V40; independently verify exact 43/8/4 scoped Native, 3 methods, actual dispatch metadata, helper entry-only, target/parent/reward/Values/Master and prototype plus two catalog references; 17 focused and independent negatives; preserve script payload UNKNOWN; reuse v301 accepted no repeat",
           "privateLocator": "HKIA_02_HATS_OFF_V300_PRIVATE_LOCATOR_20261113.md",
           "privateLocatorSha256": "5d3f280a3bfa379943f18e039f34618b9e6d6ff8ccfcf3f0993d52ecef265b04",
-          "condition": "READY_FIXED_PRIVATE_DELTA_AND_LOCATORS_READBACK"
+          "condition": "READY_FIXED_PRIVATE_DELTA_AND_LOCATORS_READBACK",
+          "status": "DONE_06A_ACCEPTED",
+          "acceptance": "DONE_SCOPED_PASS_PARTIAL_STATIC_NATIVE_SOURCE",
+          "downstream": {
+            "to": [
+              "03_LINKAGE",
+              "04_SAVE_CORE",
+              "07_RUST_CORE",
+              "00_CTRL"
+            ],
+            "status": "READY_STATIC_REFERENCE_ONLY",
+            "scope": "bounded Native and typed target/prototype; 00 research-only 6 ADD",
+            "condition": "exact v300 bundle with verified version provenance; no v301 substitution or structural creation"
+          }
         },
-        "next": "06A independent partial static QA -> 03/04/07 direct reference only; exact v300 script and physical first-progress WAIT_DEP; no writer/deploy"
+        "next": "03/04/07 direct accepted bounded static reference; 00 serial research-only 6 ADD (within 18 ADD combined QA); WAIT_DEP exact Switch300 script and genuine first-progress/save reload witness; no repeat or Writer permission",
+        "independentAcceptance": {
+          "status": "DONE_SCOPED_PASS_PARTIAL_STATIC_NATIVE_SOURCE",
+          "sourceSha256": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+          "manifestSha256": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+          "witnessSha256": "31798d6117c314ebdf41323d7fda5e27b5ce81b9cf98dc7eca7f6b6457332770",
+          "resultSha256": "4b0fcf31ee2316c5329e095ba09455aac00cbbfc13c1cff640d115c342841b4f",
+          "evidenceSha256": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166",
+          "verified": {
+            "anchors300": 43,
+            "anchors301": 43,
+            "identicalWords": 38,
+            "relocatedWords": 5,
+            "branches300": 8,
+            "metadataSlots": 4,
+            "methods": 3,
+            "helperEntryBytes": 64,
+            "dispatchSlotAdrpLdr": true,
+            "leaves": 820,
+            "rewards": 820,
+            "values": 3855,
+            "master": 24107,
+            "typedPrototypeFactory": true,
+            "catalogRecords": 2,
+            "upstreamTests": 17,
+            "replaySha256": "31798d6117c314ebdf41323d7fda5e27b5ce81b9cf98dc7eca7f6b6457332770"
+          },
+          "scope": "bounded Native and typed target/prototype; 00 research-only 6 ADD",
+          "unverified": [
+            "exact v300 Hat/Pick script payload and external Counter PPtr; original missing from archive",
+            "helper full semantics, actual runtime eligibility/dispatch",
+            "first-progress physical absent-to-present pair Id/NextId, reload/resave, reward persistence"
+          ],
+          "newUnconditionalRequired": 0,
+          "productAuthorized": false,
+          "gameAccepted": false
+        }
+      },
+      "queueReconciliation20261113": {
+        "task": "02_HATS_OFF_V300_INDEPENDENT_ACCEPTANCE_RECONCILIATION",
+        "status": "DONE_LEDGER_ONLY_WAIT_DEP",
+        "risk": "LOW_EXISTING_ACCEPTANCE_LEDGER_ONLY",
+        "baseHead": "950e87f636da8f6801310f8d8c0224518d046372",
+        "baseLedgerBlob": "f106639245b23d61418aabee0d37d58565670bfc",
+        "sourceSha256": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+        "manifestSha256": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+        "witnessSha256": "31798d6117c314ebdf41323d7fda5e27b5ce81b9cf98dc7eca7f6b6457332770",
+        "independentResultSha256": "4b0fcf31ee2316c5329e095ba09455aac00cbbfc13c1cff640d115c342841b4f",
+        "verified": "Latest 06A researchIndependent20261113 exact source/manifest/witness and acceptance, zero unconditional REQUIRED, product/game false; 6 ADD within 18 disjoint ADD integration handoff; no new product changes or duplicate tests",
+        "handoff": {
+          "to": [
+            "03_LINKAGE",
+            "04_SAVE_CORE",
+            "07_RUST_CORE"
+          ],
+          "status": "READY_STATIC_REFERENCE_ONLY",
+          "scope": "bounded Native and typed target/prototype; 00 research-only 6 ADD",
+          "condition": "exact v300 bundle with verified version provenance; no v301 substitution or structural creation",
+          "integration": {
+            "to": "00_CTRL",
+            "task": "HKIA_THREE_RESEARCH_ADDITIVE_INTEGRATION",
+            "status": "READY",
+            "scope": "02 six additive paths within accepted 18 ADD; latest base overlap check, no deploy",
+            "evidenceSha256": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166"
+          }
+        },
+        "remaining": [
+          {
+            "task": "SWITCH300_HATS_OFF_EXACT_SCRIPT_PAYLOAD",
+            "status": "WAIT_DEP",
+            "unblock": "Exact original Switch300 cbe9aa2e3085dcc725a98cf12c16dfaa.bundle with version provenance and SHA; external Counter PPtr and script binding; no v301 substitution"
+          },
+          {
+            "task": "HATS_OFF_TO_YOU_FIRST_PROGRESS_STRUCTURAL_CREATION",
+            "status": "WAIT_DEP",
+            "unblock": "Genuine same-version absent pair before legitimate Nul hat removal -> both present after; exact Id/NextId, parent/root/reward, reload/resave; no synthetic creation"
+          },
+          {
+            "task": "MISSING_DERIVED_RUNTIME_REWARD",
+            "status": "WAIT_DEP",
+            "unblock": "Concrete runtime registration/scheduler/Mission lookup or reward persistence witness, or independent counterexample"
+          }
+        ],
+        "next": "No new independent 02 READY after scoped QA; resume only on exact new witness/counterexample or assigned accepted contract",
+        "productAuthorized": false,
+        "gameAccepted": false
       }
     },
     "03_LINKAGE": {
