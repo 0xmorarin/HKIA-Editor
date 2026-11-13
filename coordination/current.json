@@ -14120,13 +14120,14 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06B_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA"
+      "06B_V33_PRODUCT_TABS_FIXED_REBIND_INDEPENDENT_QA",
+      "06C_V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "06B_PRODUCT_CATEGORIES_STATIC_PREFLIGHT"
     ],
     "nextAfterDep": [
       "00_V33_MANUAL_FIXED_DEPLOY_AFTER_OWNER_EXACT_APPROVAL",
-      "06B_PRODUCT_FILTERS_AFTER_FIXED_CI",
-      "00_PRODUCT_TABS_V33_REBIND_CI_AFTER_05_SELF_PASS",
-      "00_PRODUCT_TABS_FILTERS_COMPOSE_AFTER_06B_AND_05_V33_REBIND",
+      "00_COMPOSE_V33_TABS_FILTERS_AFTER_06B_V33_TABS",
+      "06B_PRODUCT_CATEGORIES_AFTER_FIXED_CI",
       "06C_FIXED_ROOT_DISTRIBUTION_AFTER_00",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
       "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
@@ -17552,7 +17553,7 @@
       "task": "SVELTE_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "DONE_FIXED_CI_PASS_06B_READY",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "baseHead": "b0880b9f0810019f4e1393b94abf595dc40517d1",
       "baseBlob": "dde33e394af6ac6edeaa97a9f896b0719664a036",
       "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
@@ -17605,7 +17606,7 @@
       },
       "handoff": {
         "to": "06B QA-WEB-LOCALE",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "task": "SVELTE_PRODUCT_TABS_FIXED_BROWSER_INDEPENDENT_QA",
         "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "compiledHead": "08cc4cf57e2284b628bb9a4ef1af2ac4ef0f7275",
@@ -17620,6 +17621,15 @@
           "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
         },
         "scope": "Exact 10 added paths; actual compiled module and V30 bridge, independent lifecycle/DOM ownership/keyboard/parity and mount failure, no R1-R7 repeat; then 05 V33 rebind exact preimage; do not overwrite V33 app with V30 patched app."
+      },
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_TABS_FILTERS_LOCALE_NATIVE_QA_20261113.zip",
+          "sha256": "f276b34d9e3b42bb047cda89c63994fc6bc3180305075645e9b0489387443508",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_17_ENTRIES"
+        }
       }
     },
     "v40Acceptance": {
@@ -17701,7 +17711,7 @@
       "task": "SVELTE_V30_V33_PRODUCT_FILTERS_FIXED_NONDEPLOY_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "CI_SUBMITTED",
+      "status": "DONE_FIXED_CI_AND_06B_SCOPED_PASS",
       "baseHead": "62f674ba69639e6e1765406b5af8c195187a838c",
       "baseBlob": "ec9a9c554747876fe3aadac126a3ada923730f36",
       "source": "a94cb913122df7cd63ab00fafea0428b2e7f4bac",
@@ -17712,8 +17722,63 @@
       "branch": "ctrl/svelte-product-filters-fixed-20261113",
       "workflowBlob": "6d4c39a771f81cd4fb8824398e52470d310db934",
       "run": 43426763281,
-      "ciStatus": "in_progress",
-      "next": "06B fixed filter browser scoped QA after CI; 05/00 shared app composition only after accepted scopes."
+      "ciStatus": "SUCCESS",
+      "next": "00 exact V33 tab+filter composition after tab rebind independent acceptance; no overwrite.",
+      "job": 131889953653,
+      "artifact": {
+        "id": 14037742173,
+        "sha256": "6cb40829073819842fca233267a477c700e58adfc41b7f6c0e4cf6da1fda6ddb",
+        "moduleSha256": "586297ee82e193ccec800c10558acd723feeb8652268f7656551d550fa8079af",
+        "appSha256": {
+          "V30": "12f1ee46365d54605c196b9480dfa82c8e6bd65f1b4c9835c0ac22e968d0dde7",
+          "V33": "2157f2ceb8d7bba2640b502e073a105c47275b1c12259200dcdb211457d241e6"
+        },
+        "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      },
+      "verified": {
+        "priorIndependent": 5,
+        "priorTransitions": 160,
+        "compiledNegatives": 3,
+        "artifactExact7Entries": "SHA_CRC_PASS",
+        "reversibleAppHooks": "EXACT_V30_V33",
+        "identicalCompiledModule": true,
+        "compiledDiff": "WORKFLOW_ONLY",
+        "fixedCIUnit": 133,
+        "svelteErrors": 0,
+        "svelteWarnings": 0,
+        "actualFixedCIBrowserVersions": [
+          "V30",
+          "V33"
+        ],
+        "actualFixedCIBrowserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "categoryImagesPerWidth": 25,
+        "syntheticAccountRecords": 2,
+        "allSevenControls": true,
+        "resetSortRetention": true,
+        "sameProjection": true,
+        "exactRenderCounts": [
+          20,
+          14
+        ],
+        "moduleAbortFallback": true,
+        "unchangedFilesPerVersion": 4145,
+        "webpUnchanged": 4076,
+        "writer": "OFF",
+        "externalOrDownload": 0
+      },
+      "acceptance": {
+        "verdict": "DONE_SCOPED_PASS",
+        "evidence": {
+          "file": "HKIA_06B_PRODUCT_FILTERS_FIXED_QA_20261113.zip",
+          "sha256": "2ca401b0a98d6c9772ce0e4a4dd9f1d52711aa88334ac664d868d29240f5138b",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_5_ENTRIES"
+        }
+      }
     },
     "resumeQueue20261113": {
       "status": "RECONCILED",
@@ -17741,18 +17806,76 @@
       "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_CI",
       "owner": "00 CTRL",
       "risk": "HIGH",
-      "status": "IN_FLIGHT",
+      "status": "DONE_FIXED_CI_PASS_06B_READY",
       "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
       "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
       "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
       "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-      "scope": "Exact 3 ADD V33 rebind; reuse fixed module hash from accepted V30; V33 actual browser, no repeat V30 and no deploy."
+      "scope": "Exact 3 ADD V33 rebind; reuse fixed module hash from accepted V30; V33 actual browser, no repeat V30 and no deploy.",
+      "head": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
+      "branch": "ctrl/svelte-v33-tabs-fixed-20261113",
+      "workflowBlob": "36df8e7463a0398493eab7084944dc52aac75b6e",
+      "run": 43428472417,
+      "job": 131895684723,
+      "ciStatus": "SUCCESS",
+      "artifact": {
+        "id": 14037284400,
+        "name": "HKIA_ProductTabs_V33_CodeOnly",
+        "sha256": "4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7",
+        "bytes": 52463,
+        "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+        "appSha256": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
+        "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      },
+      "verified": {
+        "fixedV33Files": 4146,
+        "unchanged": 4145,
+        "modified": 1,
+        "added": 1,
+        "webpUnchanged": 4076,
+        "exactAcceptedModule": true,
+        "actualControllerVMTransitions": 12,
+        "negativeCases": 7,
+        "browserWidths": [
+          320,
+          375,
+          1280
+        ],
+        "actualCategoryImagesPerWidth": 25,
+        "projectionExact": true,
+        "legacyPanelIdentity": true,
+        "keyboard": true,
+        "filtersSelectionRetained": true,
+        "moduleAbortFallback": true,
+        "writer": "OFF",
+        "externalRequests": 0,
+        "pageErrors": 0,
+        "overflow": 0
+      },
+      "handoff": {
+        "to": "06B QA-WEB-LOCALE",
+        "status": "READY",
+        "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_INDEPENDENT_QA",
+        "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+        "compiledHead": "ca639a1b742fb0cfa80a1286550c57884f34af4c",
+        "artifact": {
+          "id": 14037284400,
+          "name": "HKIA_ProductTabs_V33_CodeOnly",
+          "sha256": "4d8112ab6ba9fd869083ffde4c0539b6d9228d05091231f51fe570a14bd581d7",
+          "bytes": 52463,
+          "moduleSha256": "856b15704039db6b1142e92de786c629a55440cfcd18392580b4567eeaf02245",
+          "appSha256": "b64e25f6482f819948446098d71e063db82894f06315a4720f4adb36428beb47",
+          "licenseSha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        },
+        "scope": "3 ADD exact V33 pin scripts and compiled rebind, reuse V30 independently accepted module/10 paths, actual V33 base and rollback/cross-base negative; no whole V30 or filter QA repeat. Then 00 compose exact V33 tab+filter hooks."
+      },
+      "next": "06B V33 rebind scope independent acceptance; then 00 composition with accepted V33 filters; 05 other scope parallel."
     },
     "v41Research": {
       "task": "V40_PLUS_18_ACCEPTED_RESEARCH_ADDITIONS",
       "owner": "00 CTRL",
       "risk": "LOW_EXISTING_ACCEPTED_RESEARCH_COMPOSITION",
-      "status": "IN_FLIGHT",
+      "status": "SELF_PASS_06C_READY",
       "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
       "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
       "baseSource": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
@@ -17776,7 +17899,91 @@
           "status": "DONE_SCOPED_PASS_STATIC_AND_READONLY_GENUINE"
         }
       ],
-      "scope": "Private research only 4+6+8 ADD; exact parent maps, disjoint paths, no distribution changes, no Writer authority."
+      "scope": "Private research only 4+6+8 ADD; exact parent maps, disjoint paths, no distribution changes, no Writer authority.",
+      "candidate": {
+        "label": "V41_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V41_ResearchReference_20261113_Source.zip",
+        "sha256": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "entries": 671,
+        "bytes": 3705770,
+        "baseSourceSha256": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "manifest": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_Manifest.json",
+          "sha256": "f557c5b5993c2f2245b6c9daef81be9f8c8e4ed0252fa26f36079bc609adae5d",
+          "location": "INSIDE_METADATA_ZIP"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_Delta.zip",
+          "sha256": "f45e7d68c1c784b8421acb4876371a9ce49011dfee7b0c962ec2fb72c8b44f6e",
+          "added": 18,
+          "modified": 0,
+          "deleted": 0
+        },
+        "artifactManifest": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_ArtifactManifest.json",
+          "sha256": "ff08fd010e652ebd42b9df1f5884786838f246ab6ff011fd2cd02b7fcd4945ec",
+          "location": "INSIDE_METADATA_ZIP",
+          "entries": 4146,
+          "unchanged": 4146
+        },
+        "metadata": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_Metadata.zip",
+          "sha256": "0e711e53fcf8f50e60162f9fbaa167c5af20f4c2dc4a8999e15366f27e726729",
+          "entries": 3
+        },
+        "result": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_RESULT.json",
+          "sha256": "b47db536d98615ca3b363f4952bc372c35e5923ba1b193fca936e798f4ac8743",
+          "location": "INSIDE_METADATA_ZIP_AND_EVIDENCE"
+        },
+        "evidence": {
+          "file": "HKIA_CTRL_V41_ResearchReference_20261113_Evidence.zip",
+          "sha256": "da165f69d693cba83bf7c734fe29ecd93edbfbbe2ed066572ba2e83fb2d434b0",
+          "entries": 5
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "4_OF_4_ZIP_BYTE_EXACT_CRC_PASS_ALL_3_METADATA_ENTRIES_EXACT"
+      },
+      "verified": {
+        "parentV39Exact": 647,
+        "parentV40Exact": 653,
+        "added": 18,
+        "modified": 0,
+        "deleted": 0,
+        "sourceEntries": 671,
+        "focused": 42,
+        "fail": 0,
+        "check": "PASS_BOTH",
+        "build": "PASS_BOTH",
+        "derivedBuildExact": 55,
+        "fullDistributionMapExact": 4146,
+        "directMapMatch": 54,
+        "indexProjection": "REUSED_EXACT_ACCEPTED_V40",
+        "upstreamEvidenceHashes": 8,
+        "rollbackExact": 653,
+        "reconstructExact": 671,
+        "writer": "OFF",
+        "externalMediaRehash": false
+      },
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "status": "READY",
+        "task": "V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+        "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "scope": "18 ADD only (4 Recipe membership V39, 6 Hats Off v300 V39, 8 Candy Cloud V40), 653 exact V40, 42 focused, prior 06A exact scoped evidence reuse; verify full source/map, no distribution change, no new REQUIRED/Writer, rollback; metadata files inside pinned Metadata ZIP. No deploy."
+      },
+      "next": "06C exact V41 private research scoped acceptance then 00 record pointer; independent of Pages V33."
+    },
+    "productCategoriesCI": {
+      "owner": "00 CTRL",
+      "task": "SVELTE_V33_PRODUCT_CATEGORIES_FIXED_NONDEPLOY_CI",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "dd225c417ac427249104f3380f910bc26215454b",
+      "baseBlob": "08e1c72e2d2422e1c8d1f2a30399c627f235c391",
+      "source": "fd893041d47051016fbc4797d9e8d67dc7865389",
+      "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+      "scope": "10 exact ADD; separate fixed V33 category grid compile and actual browser; no app composition or deployment."
     }
   },
   "formalRelease": {
