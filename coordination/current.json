@@ -5896,7 +5896,7 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "READY_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
+      "status": "IN_FLIGHT",
       "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
       "scope": "33 additive research paths only; 582 unchanged; prior V34 distribution exact map reused; no deployment/Writer/new authority. 106 focused self PASS; check/build/source-derived 55 exact; rollback 582 and rebuild 615. No repeat V34 accepted specialist QA.",
       "next": "06C independent V35 changed integration scope; 00 direct handoff. V24 genuine browser WAIT_ENV separately.",
@@ -6017,6 +6017,13 @@
           },
           "readback": "EXACT"
         }
+      },
+      "claim": {
+        "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+        "baseHead": "19ad086a28fff1f34382a2da66764f66c4b0e0ea",
+        "baseLedgerBlob": "9d157117da0593bbf4ece7657768fcacf8181236",
+        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "scope": "V35 33 ADD only, 582 exact, upstream five deltas, distribution map and source build, rollback; independent integration; no product change"
       }
     }
   },
