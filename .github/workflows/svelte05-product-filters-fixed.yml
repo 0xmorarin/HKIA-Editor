@@ -1,0 +1,92 @@
+name: HKIA actual product filters V30 and V33 fixed CI (no deploy)
+on:
+  push:
+    branches: [ctrl/svelte-product-filters-fixed-20261113]
+    paths: ['.github/workflows/svelte05-product-filters-fixed.yml']
+permissions:
+  contents: read
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Exact source and locked compile
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor a94cb913122df7cd63ab00fafea0428b2e7f4bac HEAD
+          test "$(git diff --name-only a94cb913122df7cd63ab00fafea0428b2e7f4bac HEAD)" = .github/workflows/svelte05-product-filters-fixed.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          npm test
+          npm run check -- --fail-on-warnings
+          npm run build
+          npx --no-install vite build --config vite.product-filters.config.ts
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: fixed-V30
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: fixed-V33
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Exact artifact and real filter browser for both versions
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          test "$(git -C ../fixed-V30 rev-parse HEAD)" = b7e91df1e456ded1b50b4649797bf1b7df216717
+          test "$(git -C ../fixed-V33 rev-parse HEAD)" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          for version in V30 V33; do
+            base="../fixed-$version/site"
+            manifest="../fixed-$version/site-manifest.json"
+            delta="$RUNNER_TEMP/filters-$version-delta"
+            candidate="$RUNNER_TEMP/filters-$version-candidate"
+            node --experimental-strip-types scripts/verify-product-filter-reference.mjs "$base" "$manifest" "$version"
+            node --experimental-strip-types scripts/verify-product-filter-delta.mjs "$base" "$manifest" "$version"
+            node scripts/prepare-product-filters-delta.mjs "$base" "$manifest" dist-product-filters/product-filters.mjs "$delta" "$version"
+            cp -a "$base" "$candidate"
+            cp "$delta/src/"* "$candidate/src/"
+            python3 - "$base" "$manifest" "$delta" "$candidate" <<'PY'
+          import hashlib,json,pathlib,sys
+          base,manifest,delta,candidate=map(pathlib.Path,sys.argv[1:])
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          m=json.loads(manifest.read_bytes())
+          d=json.loads((delta/'delta-manifest.json').read_bytes())
+          actual={p.relative_to(candidate).as_posix() for p in candidate.rglob('*') if p.is_file()}
+          assert actual==set(m['files'])|{'src/product-filters.mjs'}
+          assert set(d['changes'])=={'src/app.js','src/product-filters.mjs'}
+          for p,e in m['files'].items():
+              assert sha(base/p)==e['sha256'],p
+              if p=='src/app.js': assert sha(candidate/p)==d['changes'][p]['after'] and d['changes'][p]['before']==e['sha256']
+              else: assert sha(candidate/p)==e['sha256'],p
+          assert sha(candidate/'src/product-filters.mjs')==d['changes']['src/product-filters.mjs']['after']
+          assert 'sourceMappingURL=' not in (candidate/'src/product-filters.mjs').read_text()
+          print('FILTER DELTA 4145 unchanged 1 MOD 1 ADD; 4076 WebP exact')
+          PY
+            python3 scripts/browser-product-filters-parity.py "$base" "$candidate"
+            mkdir -p "$RUNNER_TEMP/filter-evidence/$version"
+            cp "$delta/delta-manifest.json" "$delta/src/"* "$RUNNER_TEMP/filter-evidence/$version/"
+          done
+          cp node_modules/svelte/LICENSE.md "$RUNNER_TEMP/filter-evidence/Svelte-LICENSE.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_ProductFilters_V30_V33_CodeOnly
+          path: ${{ runner.temp }}/filter-evidence
+          if-no-files-found: error
+          retention-days: 7
