@@ -2707,12 +2707,12 @@
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
     },
     "06_QA": {
-      "status": "V300_LOAD_BOUNDARY_SCOPED_PASS_V24_BROWSER_WAIT_ENV_R2_AND_V301_WAIT_DEP",
+      "status": "DONE_LEGACY_DRAIN_HISTORY_ONLY",
       "acceptedSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
       "acceptedScope": "V33 product OFF reference retained. V34 private research reference, R3 native readonly Session ABI, Svelte R1 navigation legacy port and five additive research deltas accepted in exact scopes. V301 two original-reproduction scopes and Svelte R2 compiled browser pending. V300 Native load boundary evidence independently accepted, static/header only.",
       "targetSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
       "targetScope": "V33 accepted; new fixed deployment or authorized real browser or new source required",
-      "next": "07_R4_MINIMUM_WRITER; 00_R2_COMPILE_CI_AND_V34_615_RESEARCH_INTEGRATION; 06_NEW_FIXED_ORIGINAL_REPRODUCTION_OR_AUTHORIZED_V24_BROWSER",
+      "next": "NO_LEGACY_ACTIVATION; 06A_DATA_CORE_06B_WEB_LOCALE_06C_RELEASE_PER_OWNER_ADR",
       "execution": {
         "task": "BETA_V300_LOAD_ENVELOPE_INDEPENDENT_QA",
         "status": "DONE",
@@ -4550,6 +4550,46 @@
         "existingTask": "BETA_V300_LOAD_ENVELOPE_INDEPENDENT_QA",
         "existingExecutionStatus": "IN_FLIGHT",
         "transition": "Existing V300 scope may complete under existing owner; direct 04/07, record result and retire. 06A must not duplicate."
+      },
+      "legacyDrain": {
+        "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+        "completedTask": "BETA_V300_LOAD_ENVELOPE_INDEPENDENT_QA",
+        "completedCommit": "e5f3559d76173bed7038409776b4858118b30122",
+        "evidenceSha256": "713f3320a4bc2ae183c6a904dcf8dd3a9d641245931de12ccba4a53d72c20e34",
+        "handoff": {
+          "to": [
+            "04_SAVE_CORE",
+            "07_RUST_CORE",
+            "06A_QA_DATA_CORE"
+          ],
+          "file": "HKIA_06_LEGACY_DRAIN_HANDOFF_20261113.md",
+          "sha256": "9dffbfa0af0a77c7df4aee4953b79a1c054f1e0742d2737b947962fb9ed238f4",
+          "privateLibraryReadback": "BYTE_EXACT"
+        },
+        "remainingTransfer": {
+          "dataCore": "06A_QA_DATA_CORE",
+          "webLocale": "06B_QA_WEB_LOCALE",
+          "release": "06C_QA_RELEASE"
+        },
+        "v301OriginalRecovery": {
+          "status": "CORE_ORIGINAL_PIN_MATCH_OTHER_INPUTS_WAIT_DEP",
+          "sha256": "660aba36ab6da5964180fe0d474696fc22dd806b2f5b19ce601222cb5a631afa",
+          "bytes": 37339929,
+          "scope": "01/02 shared core original only; private locator in handoff; no full acceptance",
+          "pending01": [
+            "v300 and v301 catalogs",
+            "Steam301 exact serial",
+            "V33 helpers"
+          ],
+          "pending02": [
+            "scripts/config original",
+            "Stage54",
+            "V33",
+            "prior02"
+          ],
+          "next": "06A reproduce exact remaining scopes; no legacy claim"
+        },
+        "boundary": "NO_PRODUCT_SOURCE_CHANGE_OR_DEPLOY_OR_ACTIVATION"
       }
     },
     "00_MEDIA": {
