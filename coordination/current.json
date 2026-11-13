@@ -12198,7 +12198,7 @@
     },
     "mainProtectionObservation": {
       "protected": false,
-      "head": "1504faec88a20707e72e8e40ee39ababbb970332",
+      "head": "afe410a62b5843348e9c6b6853ea173b47e11256",
       "scope": "GitHub branch metadata read only; no rule change or protection claim"
     },
     "r51CI": {
@@ -12916,13 +12916,19 @@
     "svelteR6CombinedCI": {
       "task": "SVELTE_R6_R5_REPAIR_FIXED_COMBINED_CI",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "IN_FLIGHT_FIXED_CI_RUNNING",
       "risk": "HIGH",
       "baseHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
       "sourceHead": "2924eaa2b51968e50f22a97524b2f8d308ad1931",
       "sourceSha256": "32263f4b55eed99fe2e3bf6288baef39e8c09b609f02dc94b61ed681dff1f86d",
       "scope": "One isolated nondeploy workflow only; 9 source changes against accepted R5 CI baseline; exact R5 repair 2 paths + R6 7 paths. 104 tests, compile/build, R1-R6 actual browser; distinct 06B scopes after green.",
-      "dependency": "05 fixed composed source self-PASS; existing R5 TRUE_RED not closed until independent repair QA."
+      "dependency": "05 fixed composed source self-PASS; existing R5 TRUE_RED not closed until independent repair QA.",
+      "head": "1997c6716342f4c18c036510968a52de014ca570",
+      "workflowBlob": "a3f92843de89be9c87524734efe7660131bbc628",
+      "run": 43407459659,
+      "ci": "IN_PROGRESS",
+      "verified": "Exact fixed branch HEAD, only 1 workflow ADD, 9 prior source paths, readback workflow blob; actual run observed in_progress",
+      "next": "00 check fixed CI result; 06B two disjoint scopes after green; no deployment."
     }
   },
   "formalRelease": {
