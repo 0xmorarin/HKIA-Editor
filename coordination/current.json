@@ -8089,13 +8089,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "PARTIAL_BROWSER_KIT_REPAIR_ACCEPTED_GENUINE_WAIT_ENV_R61_WAIT_DEP",
-      "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
-      "scope": "Fixed private test harness independent offline repair, exact original artifact retained; no product changes",
-      "next": "07 actual private genuine Chrome WAIT_ENV (repair accepted). 07 R6.1 fixed artifact genuine and lifecycle self-QA IN_FLIGHT; 06A independent after fixed self-QA. HatsOff already integrated V40, no repeat.",
-      "dependency": "AUTHORIZED_PRIVATE_SANDBOX_CAPABLE_REAL_CHROME; 07_R6_1_FIXED_CANDIDATE_SELF_QA",
+      "status": "PARTIAL_R61_SCOPED_ACCEPTED_R51_GENUINE_BROWSER_WAIT_ENV",
+      "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+      "scope": "7 MOD vs R6, generation-local scratch and retained exact correctness; actual Node WASM only",
+      "next": "00 R6.1 scoped integration READY, 07 private genuine Chrome WAIT_ENV (accepted strict kit), future resource targets separate; no repeat accepted scopes.",
+      "dependency": "AUTHORIZED_PRIVATE_SANDBOX_CAPABLE_REAL_CHROME; NEW_FIXED_HIGH_SCOPE",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "30d55907c8b7d22a4b524c8d73c066bbc193a2e8",
+      "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -8267,7 +8267,7 @@
         {
           "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
           "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
           "risk": "HIGH"
         }
       ],
@@ -8395,7 +8395,13 @@
           }
         }
       },
-      "nextReadyParallel": [],
+      "nextReadyParallel": [
+        {
+          "stream": "00_CTRL",
+          "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
+          "dependency": "06A exact scoped acceptance; check base/overlap; no development switch"
+        }
+      ],
       "nextAfterDep": [
         {
           "stream": "07_RUST_CORE",
@@ -8409,8 +8415,8 @@
         },
         {
           "stream": "06A_QA_DATA_CORE",
-          "task": "R6_1_FIXED_HIGH_QA",
-          "condition": "07 fixed candidate self-QA; existing fixed CI 43418211809 green, no duplicate claim"
+          "task": "NEW_FIXED_RUST_RESOURCE_HIGH_QA",
+          "condition": "07 new candidate with 64/128MiB/2M target evidence or other fixed new scope, self-QA first"
         },
         {
           "stream": "02_ACHIEVEMENT",
@@ -9237,13 +9243,103 @@
       },
       "r61Claim": {
         "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
         "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
         "baseBlob": "ffadabd49e50f984d41b60ae00513f0afa9bba3b",
         "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
         "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
         "risk": "HIGH",
-        "scope": "7 MOD only; fixed code artifact; independent scratch lifetime, errors, size variation, genuine parity, resource measurements. No product changes."
+        "scope": "7 MOD only; fixed code artifact; independent scratch lifetime, errors, size variation, genuine parity, resource measurements. No product changes.",
+        "evidence": {
+          "file": "HKIA_06A_R6_1_Independent_20261113_EVIDENCE.zip",
+          "sha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+          "manifestSha256": "3e0f4fc0637edf89b7751c510d992821a6ddd49239f3590682776bbdfb138456",
+          "resultSha256": "f165816043b50d73e9f1098aac70c2952eaec2236f636c36c7b00a8eb4e09c6e",
+          "handoffSha256": "16f9083a2a086a7af2915e25d124c302e2044bf47a664dd825460a7d53733296",
+          "bytes": 13213,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
+        }
+      },
+      "r61IndependentResult": {
+        "task": "HKIA-RUST-014_R6_1_FIXED_ARTIFACT_CAPACITY_GENUINE_INDEPENDENT_QA",
+        "status": "DONE_SCOPED_PASS_NODE_WASM_CAPACITY_GENUINE_LIFECYCLE",
+        "risk": "HIGH",
+        "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "ciHead": "e12564ffd4fbee62e30b61a06d143f01bd99191c",
+        "ciRun": 43418211809,
+        "artifactSha256": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+        "wasmSha256": "2f91736baf1ee71c7ba111758ea7e24eea985d375b54e90e305c645817fde4b7",
+        "sourceSha256": "71bd19525b87e6f0bb7e5bb229a48f27cb68696a2cfaa05af7e84ce4abf58d1d",
+        "deltaSha256": "2c7e2cfea33eecf1e1bd22bdd4b6542e15001ee5632d2066202ac4e0e21c95af",
+        "manifestSha256": "587cbeaed9bd9bb35cdbc53a80837d86b1ac10d68779a671b226d8ef7d6d1a3e",
+        "scope": "7 MOD vs R6, generation-local scratch and retained exact correctness; actual Node WASM only",
+        "verified": {
+          "sourceEntries": 112,
+          "modified": 7,
+          "unchanged": 105,
+          "remoteBlobs": 7,
+          "artifactCodeHashes": 8,
+          "nonWasmEqual": 7,
+          "pairedCases": 11,
+          "byteExactEdits": 5,
+          "pythonOracle": 5,
+          "capacity45MiB": {
+            "r6": 191102976,
+            "r61": 97058816,
+            "reduction": 94044160
+          },
+          "genuineNativeAndV33Exact": 8,
+          "exactFields": 14,
+          "nonTargetRawFrames": 80,
+          "reusedLz4Blocks": 258,
+          "originalsUnchanged": 2,
+          "lifecycleGateCalls": 90,
+          "rawCalls": 18,
+          "independentVariedCases": 4,
+          "independentVariedRpc": 118,
+          "failedOpen": 16,
+          "sizeChangingCases": 2,
+          "decodedLengthIncrease": 8,
+          "privateTransientOutputsRemoved": 8
+        },
+        "staticReview": "generation-local Vec, cleared before decode; full reparse/ZIP/splice/proof unchanged, failure drops scratch while preserving state; successful Open/Close reset state; no limits changed",
+        "trueRed": "NONE_REPRODUCED_IN_SCOPE",
+        "evidence": {
+          "file": "HKIA_06A_R6_1_Independent_20261113_EVIDENCE.zip",
+          "sha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+          "manifestSha256": "3e0f4fc0637edf89b7751c510d992821a6ddd49239f3590682776bbdfb138456",
+          "resultSha256": "f165816043b50d73e9f1098aac70c2952eaec2236f636c36c7b00a8eb4e09c6e",
+          "handoffSha256": "16f9083a2a086a7af2915e25d124c302e2044bf47a664dd825460a7d53733296",
+          "bytes": 13213,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
+        },
+        "unverified": [
+          "actual genuine Chrome Module Worker",
+          "64/128MiB and 2M docs target",
+          "same-case actual Browser JS/Rust",
+          "game load/resave/auth",
+          "Development Switch/production cutover"
+        ],
+        "handoff": {
+          "to": "00_CTRL",
+          "task": "HKIA_RUST_R6_1_SCOPED_INTEGRATION",
+          "status": "READY",
+          "source": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+          "artifact": "86b4f5e1b6aa21b62fede192f833077f252f0e4f17170648b8352c63234af401",
+          "scope": "exact 7 MOD vs R6 and fixed CI artifact; 06A scoped acceptance only; verify overlap/base/PR9/10 chain, no unapproved deploy, no Development Switch or Writer/limits grant",
+          "evidence": {
+            "file": "HKIA_06A_R6_1_Independent_20261113_EVIDENCE.zip",
+            "sha256": "b6feb15b1f8e190da944554947bca59d597c2f4e4b31f9874aebefc7acf3c3e7",
+            "manifestSha256": "3e0f4fc0637edf89b7751c510d992821a6ddd49239f3590682776bbdfb138456",
+            "resultSha256": "f165816043b50d73e9f1098aac70c2952eaec2236f636c36c7b00a8eb4e09c6e",
+            "handoffSha256": "16f9083a2a086a7af2915e25d124c302e2044bf47a664dd825460a7d53733296",
+            "bytes": 13213,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_15_ENTRIES_14_MANIFEST_HASHES_PASS"
+          }
+        }
       }
     },
     "06B_QA_WEB_LOCALE": {
