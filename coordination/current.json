@@ -2707,15 +2707,15 @@
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
     },
     "06_QA": {
-      "status": "V34_R3_SVELTE_R1_RESEARCH_SCOPED_PASS_V24_V301_R2_WAIT_DEP",
+      "status": "V300_LOAD_BOUNDARY_SCOPED_PASS_V24_BROWSER_WAIT_ENV_R2_AND_V301_WAIT_DEP",
       "acceptedSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-      "acceptedScope": "V33 product OFF reference retained. V34 private research reference, R3 native readonly Session ABI, Svelte R1 navigation legacy port and five additive research deltas accepted in exact scopes. V301 two original-reproduction scopes and Svelte R2 compiled browser pending.",
+      "acceptedScope": "V33 product OFF reference retained. V34 private research reference, R3 native readonly Session ABI, Svelte R1 navigation legacy port and five additive research deltas accepted in exact scopes. V301 two original-reproduction scopes and Svelte R2 compiled browser pending. V300 Native load boundary evidence independently accepted, static/header only.",
       "targetSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
       "targetScope": "V33 accepted; new fixed deployment or authorized real browser or new source required",
-      "next": "06_V300_LOAD_BOUNDARY_SCOPED_QA_IN_FLIGHT",
+      "next": "07_R4_MINIMUM_WRITER; 00_R2_COMPILE_CI_AND_V34_615_RESEARCH_INTEGRATION; 06_NEW_FIXED_ORIGINAL_REPRODUCTION_OR_AUTHORIZED_V24_BROWSER",
       "execution": {
         "task": "BETA_V300_LOAD_ENVELOPE_INDEPENDENT_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE",
         "owner": "06 QA",
         "baseHead": "65cc6187fcbd9211f87ec7a61912e846cd6406c8",
         "scope": "04 fixed v300 load boundary evidence only; independent original static/headers verification; V24 unchanged, no activation",
@@ -4421,6 +4421,65 @@
             ],
             "scope": "07 minimum transactional Writer both domains/both supported versions after R3 native readonly acceptance, then real WASM Worker; 00 record V34 + integrate five accepted research deltas 33 ADD ->615 logical entries, exclude pending v301; R1 accepted R2 isolated compile/browser by 00; 01/02 provide exact v301 source locators; 01/03 concrete station/mission/runtime witness only; 04 existing native load boundary IN_FLIGHT, Exact29 private proof after current work only if assigned by 00 consistent ADR, no broad JS duplication; V24 frozen and live V30 OFF."
           }
+        },
+        "verdict": "SCOPED_PASS_STATIC_LOAD_BOUNDARY_AND_HEADER_ONLY",
+        "verified": {
+          "upstreamReproduction": "BYTE_EXACT",
+          "originalPins": 3,
+          "nsoSegmentHashes": 3,
+          "llvmDecodedInstructions": 1192,
+          "anchors": 80,
+          "branches": 39,
+          "additionalSemanticChecks": 19,
+          "additionalManagedCallBindings": 4,
+          "metadataChains": 2,
+          "genuineArchives": 2,
+          "headerRecords": 6,
+          "uniqueHeaderRecords": 5,
+          "versions": {
+            "3.0.0": 4,
+            "3.0.1": 1,
+            "2.18.1": 1
+          },
+          "independentHeaderNegativeAssertions": 36,
+          "originalsUnchanged": true,
+          "productSourceChanged": 0,
+          "trueRedNew": 0,
+          "writerAuthorized": false,
+          "gameAccepted": false
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06_V300_LOAD_BOUNDARY_RESULT.json",
+            "sha256": "ec58c9ef67d9027c18513b5f45c124f478061a7130846af78e6a53ac0944630d"
+          },
+          "report": {
+            "file": "HKIA_06_V300_LOAD_BOUNDARY_REPORT.md",
+            "sha256": "5621162998cff1261817d9e94357e77f9adcd92683beaead4dcad1386974a302"
+          },
+          "zip": {
+            "file": "HKIA_06_V300_LOAD_BOUNDARY_EVIDENCE.zip",
+            "sha256": "713f3320a4bc2ae183c6a904dcf8dd3a9d641245931de12ccba4a53d72c20e34",
+            "entries": 4
+          },
+          "manifestSha256": "ff8e5a366a0c5779ba9f695829c5276d0ffa76807fee92292c20ad87f4536532",
+          "privateLibraryReadback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "remaining": [
+          "V24_AUTHORIZED_GENUINE_HTTP_HTTPS_BROWSER",
+          "ADDITIONAL_NATIVE_AUTH_OUTSIDE_AUDITED_FUNCTIONS",
+          "V301_EXACT_METADATA_FIELDREF_PARITY",
+          "GAME_LOAD_RESAVE_MIGRATION_AND_SIDE_EFFECTS",
+          "SVELTE_R2_FIXED_COMPILE_BROWSER",
+          "V301_DEFINITION_ORIGINAL_REPRODUCTION"
+        ],
+        "handoff": {
+          "to": [
+            "07 RUST CORE",
+            "04 SAVE CORE",
+            "00 CTRL"
+          ],
+          "scope": "07 reuse accepted v300 static load boundary in R4 minimum transactional writer/native foundation; 04 accepted evidence only, wait new scoped QA counterexample or causal evidence or 00 disjoint Rust assignment; 00 retain V24 frozen and V30 OFF, no deployment/activation. Distinguish flag-zero/equality true path from mismatch cleanup false/error103."
         }
       },
       "handoffRecheck": {
