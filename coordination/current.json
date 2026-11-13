@@ -3742,7 +3742,7 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "P0 OWNER 20261113: restore V30 OFF Pages immediately after authenticated exact V30/V29 push; no wait V33/Beta/Rust/Svelte; PR3 serial/manual dispatch/06 live QA; never branch-root or activate Writer.",
+    "P0 OFF V30 manual Pages dispatch requested after verified V30/V29 refs and PR3 merge; observe actual workflow and 06 live QA; no Writer activation.",
     "V33 fixed 5 source/2 dist path independent SCOPED PASS recorded; next formal scope only on new evidence.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
   ],
@@ -4446,7 +4446,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "P0_PAGES_ACTIONS_ISOLATION_VERIFIED_ARTIFACT_STAGE_PENDING",
+    "status": "P0_PAGES_OFF_DISPATCH_IN_FLIGHT",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -5424,7 +5424,7 @@
         }
       },
       "distributionRepair": {
-        "status": "ALL_PARTS_REMOTE_STAGED_ACTIONS_RECONSTRUCT_IN_FLIGHT",
+        "status": "PINNED_REMOTE_REFS_AND_PR3_MERGED_OFF_DISPATCH_IN_FLIGHT",
         "incidentRun": 43307905181,
         "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
         "sourceProbe": {
@@ -5444,13 +5444,15 @@
         "repairHead": "be84f8b145bf6f68e2440f0dc6a5a6a7f5e07138",
         "fixedArtifact": {
           "commit": "b7e91df1e456ded1b50b4649797bf1b7df216717",
-          "manifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6"
+          "manifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+          "remoteManifestBlob": "3fd8cb36f1ec21b46ba1a9ece80ef8276beb1b11"
         },
         "rollbackArtifact": {
           "commit": "15cacf59a0c24a1124edb3741816d300794b4cdb",
-          "manifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d"
+          "manifestSha256": "859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d",
+          "remoteManifestBlob": "3e834c5c0202e70b3ed421c10ace6857560ca7c8"
         },
-        "remoteRefs": "ORIGINAL_PINNED_REFS_PENDING_ACTIONS_RECONSTRUCTION",
+        "remoteRefs": "V30_V29_EXACT_REMOTE_COMMIT_AND_MANIFEST_BLOB_PASS",
         "repairKit": {
           "file": "HKIA_CTRL_Pages_PrivacyRepair_20261113.zip",
           "sha256": "a0fc3157af6affe2a4e3174b9a2d9eccdc82a8f07e270c682aaf8f3b9ce94d76"
@@ -5459,15 +5461,15 @@
         "deployment": "UNVERIFIED",
         "https": "UNVERIFIED",
         "historicalExposure": "NOT_ERASED",
-        "next": "Observe second staging Actions run; verify both exact V30/V29 remote refs and manifest blobs; PR3 independent scope and serial merge; manual OFF deploy.",
+        "next": "Observe dispatch and actual Pages workflow; 06 live exact artifact/HTTPS/internal path denial/rollback verification.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "ALL_PARTS_REMOTE_STAGED_ACTIONS_RECONSTRUCT_IN_FLIGHT",
+          "status": "PINNED_REMOTE_REFS_AND_PR3_MERGED_OFF_DISPATCH_IN_FLIGHT",
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "57/57 blobs verified and committed; exact 118292395 bytes; first push run observed in progress; corrected shallow checkout assertion to pin parts subtree, second run pending.",
-          "next": "Observe second staging Actions run; verify both exact V30/V29 remote refs and manifest blobs; PR3 independent scope and serial merge; manual OFF deploy.",
+          "observed": "57/57 committed; staging CI passed and both exact remote refs, manifest blobs read back. PR3 merged fixed accepted scope. One-shot dispatch in progress.",
+          "next": "Observe dispatch and actual Pages workflow; 06 live exact artifact/HTTPS/internal path denial/rollback verification.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
@@ -5478,7 +5480,7 @@
           "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
           "transport": {
             "branch": "ctrl/pages-off-transport-20261113",
-            "head": "b248505aad41ad765470c2d4d90a4afa64cedec4",
+            "head": "93cdb41780bceabb0111861b822912d2118a6269",
             "dataCommit": "464a92472823e401983309465799063b1541f04a",
             "partsTree": "db38cf6b47772253ec5daf463ebf0c7f0cb88004",
             "verifiedParts": 57,
@@ -5490,6 +5492,32 @@
             "workflow": ".github/workflows/stage-off-bundle.yml",
             "firstRun": 43342189200
           }
+        },
+        "stagingCI": {
+          "run": 43342240412,
+          "job": 131613070016,
+          "conclusion": "success",
+          "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
+          "filesEach": 4146,
+          "webpEach": 4076,
+          "stageHead": "b248505aad41ad765470c2d4d90a4afa64cedec4",
+          "failedInitialRun": 43342189200,
+          "repair": "Shallow HEAD^ replaced by pinned transport subtree SHA"
+        },
+        "repairMerge": {
+          "pr": 3,
+          "sha": "846092d07d9bb43e113d6fc15caa176245c217fe",
+          "workflowBlob": "ea3b177631999431e856967f8e45a214be0442ba",
+          "independentQA": "HKIA_06_PAGES_REPAIR_KIT_QA_20261113_RESULT.json",
+          "scope": "manual-only fixed OFF; all three verifier blobs and gate blob exact"
+        },
+        "dispatch": {
+          "status": "REQUEST_WORKFLOW_IN_PROGRESS",
+          "commit": "93cdb41780bceabb0111861b822912d2118a6269",
+          "run": 43342637137,
+          "target": "V30",
+          "artifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "boundary": "one-shot explicit dispatch, not main push or persistent automatic deployment; no Writer activation"
         }
       },
       "ownerRecoveryPriority": {
