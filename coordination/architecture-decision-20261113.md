@@ -36,3 +36,7 @@ Supersedes: 2026-11-12 ADR's execution sequence and formal-release stack optiona
 ## Supplemental Owner decision: localization
 
 See [OWNER_LOCALIZATION_DECISION_20261113](localization-decision-20261113.md). All HKIA-supported languages and exact game-localized text are required for formal release. JS Beta remains independent; no new deploy or Writer authorization.
+
+## Supplemental Owner QA decision
+
+See [OWNER_RISK_BASED_QA_DECISION_20261113](qa-operation-decision-20261113.md): self-QA all; high risk 06A/06B; 06C integration/release only; legacy 06 drain existing claim then historical. Existing safety/release gates unchanged.

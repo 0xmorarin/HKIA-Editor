@@ -13,7 +13,7 @@
       "deltaSha256": "428bc7ea4eeed5261919f9f517202970362b10d1595061587aa37d6d0f88e804",
       "recipe": "EXACT_V301_5913958; RESTORE_REQUIRES_TRUSTED_SAME_ROW_RECEIPT",
       "nonrecipe": "COMIC_1687397134_DELETE_REINSERT_STRUCTURAL_ONLY; REF_CLOSURE_UNKNOWN",
-      "next": "06_RECIPE6_COOKING_HISTORY_SCOPED_QA; 01_WAIT_EXACT_STATION_SOURCE_OR_QA_COUNTEREXAMPLE; 03_TARGETED_AFTER_SOURCE; 04_WAIT_EXACT_ACCEPTED_CONTRACT",
+      "next": "01_WAIT_EXACT_V301_OR_STATION_SOURCE_OR_06A_COUNTEREXAMPLE; ACCEPTED_RECIPE6_REUSE",
       "formalTask": {
         "task": "FORMAL_COLLECTION_NONRECIPE_STRUCTURAL_OWNERSHIP",
         "status": "PARTIAL_REFERENCE_WAIT_DEP",
@@ -184,7 +184,8 @@
         "next": "06 independent new 7-path QA separate from 01 producer and 03 causal; 03 consume accepted tag13 evidence only, then WAIT exact station asset/runtime witness. 01 WAIT exact source or concrete QA counterexample, no repeat. 04 WAIT accepted exact ownership-only contract. V24/Pages unchanged.",
         "productAuthorized": false,
         "gameAccepted": false
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07"
     },
     "02_ACHIEVEMENT": {
       "status": "V16_REMAINING_COUNTER_COVERAGE_INTEGRATED_LOCAL_PASS",
@@ -193,7 +194,7 @@
       "negative": 54,
       "staleCAS": 18,
       "uniqueCount": "NONEMPTY_LIST_LENGTH_NOT_HASHSET_DISTINCT; PRESERVE_DUPLICATES",
-      "next": "02_SWITCH301_EXACT29_DEFINITION_QA_READY; 03_AND_06_SCOPED_HANDOFF; 04_V300_AFTER_ACCEPTED_PRIOR_SWITCH300_CONTRACT; NO_REDO",
+      "next": "02_EXACT_V301_SOURCE_LOCATOR_REPRODUCTION; 06A_AFTER_FIXED_ORIGINAL; V300_ACCEPTED_REUSE",
       "formalTask": {
         "task": "FORMAL_ACHIEVEMENT_COMPLETE_REVOKE_COVERAGE",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -480,7 +481,8 @@
           "unrelated derived producers"
         ],
         "next": "03 versioned source/config adjudication and 06 independent 6 ADD scoped reproduction; 04 existing v301/87 Writer unchanged; v300/83 private proof after prior accepted 02/03/06 gates; 02 WAIT QA/new witness; no deploy"
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07"
     },
     "03_LINKAGE": {
       "status": "EXACT29_SOURCE_CAUSAL_JOIN_LOCAL_PASS_QA_READY_RECIPE6_WAIT_STATION_WITNESS",
@@ -488,7 +490,7 @@
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06_EXISTING_IN_FLIGHT_ADD_03_EXACT29_JOIN_FIXED_SCOPE; 04_AFTER_02_03_ACCEPTED_EXACT_V300_83_PRIVATE_WRITER; 03_WAIT_NEW_RECIPE6_STATION_CONSUMER_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
+      "next": "03_WAIT_CONCRETE_STATION_RUNTIME_OR_06A_COUNTEREXAMPLE; ACCEPTED_EXACT29_REUSE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -856,7 +858,8 @@
         "productAuthorized": false,
         "gameAccepted": false,
         "next": "06 existing V34_SVELTE_R1_R3_AND_NEW_RESEARCH_SCOPED_QA in flight: add exact new 03 6 paths after fixed current scope; compare 02 definition independently, reproduce 18 focused + genuine ordered absence audit. 04 after both scoped accepted only; 00 serial research; 03 WAIT new concrete Recipe6 station/consumer original or QA counterexample."
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 04/07"
     },
     "04_SAVE_CORE": {
       "status": "FORMAL_CELEBRATION5_EXACT_WRITER_SCOPED_PASS_INTEGRATED_V32",
@@ -875,7 +878,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "06_V300_LOAD_BOUNDARY_SCOPED_QA; 04_WAIT_BETA_ENV_OR_QA_FAILURE_OR_00_DISJOINT_RUST_ASSIGNMENT",
+      "next": "LEGACY_06_EXISTING_V300_QA_FINISH; NEW_HIGH_RISK_06A; 04_WAIT_BETA_ENV_OR_QA_FAILURE_OR_00_DISJOINT_ASSIGNMENT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1786,7 +1789,8 @@
           "nextAfter": "07 reuse accepted static facts for Rust foundation; 04 WAIT authorized V24 browser / scoped QA fix / new accepted causal scope / 00 disjoint Rust assignment after development switch"
         },
         "notes": "First workspace artifact upload failed; reran verifier against exact original pins, saved regenerated ZIP with above actual SHA and readback. No original Save or game binary included."
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 05/07/00"
     },
     "05_WEB": {
       "status": "FORMAL_CELEBRATION5_UI_SCOPED_PASS_INTEGRATED_V33",
@@ -1794,7 +1798,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06_R1_INDEPENDENT_QA_PARALLEL_00_R2_ISOLATED_CI; 05_AFTER_R2_RESULT_OR_NEW_ACCEPTED_CORE; NO_REPEAT",
+      "next": "00_R2_ISOLATED_CI; 05_AFTER_RESULT; 06B_R2_FIXED_COMPILED_SCOPE; R1_ACCEPTED_REUSE",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2699,7 +2703,8 @@
             "06 independent R1 and R2 scoped acceptance"
           ]
         }
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
     },
     "06_QA": {
       "status": "V34_R3_SVELTE_R1_RESEARCH_SCOPED_PASS_V24_V301_R2_WAIT_DEP",
@@ -4474,6 +4479,18 @@
           "HTTP_HTTPS",
           "LIVE_ROLLBACK"
         ]
+      },
+      "legacyRouting": {
+        "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+        "status": "DRAIN_EXISTING_CLAIM_NO_NEW_TASK",
+        "priorStatus": "V34_R3_SVELTE_R1_RESEARCH_SCOPED_PASS_V24_V301_R2_WAIT_DEP",
+        "latestAcceptedResult": {
+          "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+          "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+        },
+        "existingTask": "BETA_V300_LOAD_ENVELOPE_INDEPENDENT_QA",
+        "existingExecutionStatus": "IN_FLIGHT",
+        "transition": "Existing V300 scope may complete under existing owner; direct 04/07, record result and retire. 06A must not duplicate."
       }
     },
     "00_MEDIA": {
@@ -4502,7 +4519,8 @@
       "externalSteamRefs": 16,
       "externalSteamImages": 0,
       "externalAppleUnknown": 2,
-      "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
+      "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip",
+      "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
       "status": "IN_FLIGHT_R4_MINIMUM_TRANSACTIONAL_WRITER",
@@ -4522,7 +4540,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06 existing R3 independent QA IN_FLIGHT; consume fixed compiled/genuine evidence. Independent R4 reference oracle prep DONE (writerPreflight). 07 after R3 scoped acceptance implement minimal transactional Writer using fixed oracle, or focused repair if TRUE_RED; no R2/R3 repeat, no JS formal duplication, no main merge/deploy or Beta gate.",
+      "next": "R3_INDEPENDENT_READONLY_ACCEPTED; 07_EXISTING_R4_MINIMUM_TRANSACTIONAL_WRITER; 06A_HIGH_RISK_WRITER_AFTER_FIXED",
       "task": "HKIA-RUST-006",
       "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
       "scope": "R3 compiled read-only Session/ABI + ZIP/Account/additional typed projection, genuine 300/301 actual execution, 22 negative cases; no product source changes",
@@ -5148,7 +5166,8 @@
           "candidatePositiveExecuted": false
         },
         "next": "After R3 independent acceptance, 07 implement R4 minimum Writer; use existing source_for_writer/witness, pinned semantic guard + exact raw spans, extend counter/time witness, bounded LZ4, ZIP one slot replace raw other 10 frames including Account, atomic reparse/diff and rollback, actual CI + genuine candidates, run pinned private oracle. 06 independently verify R4 new scope after execution."
-      }
+      },
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 07/05/00"
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
@@ -5165,14 +5184,204 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests and 06 independent QA",
-      "next": "Inspect available authorized game localization sources; reuse existing EN/JA, inventory all official locales and exact table/key joins; execute all READY scopes; missing source only WAIT_DEP; hand off fixed contract 05 and 06",
+      "next": "08_EXISTING_IN_FLIGHT_SELF_QA; HIGH_FIXED_GAME_LOCALE_CONTRACT_TO_06B_THEN_05_DIRECT",
       "handoffTo": [
         "05 WEB",
         "06 QA",
         "00 CTRL"
       ],
       "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
-      "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes"
+      "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes",
+      "qaRouting": "SELF_QA; HIGH -> 06B -> 05/00"
+    },
+    "06A_QA_DATA_CORE": {
+      "owner": "06A QA-DATA-CORE",
+      "status": "WAIT_LEGACY_V300_EXISTING_CLAIM",
+      "task": "DATA_CORE_HIGH_RISK_QA",
+      "scope": "04 V300 fixed static evidence; v301 pending exact originals; R3 accepted; R4 after fixed",
+      "next": "No duplicate legacy scope; consume legacy result; v301 after exact originals; R4 Writer after fixed",
+      "dependency": "Legacy V300 if active; 07 fixed R4; 01/02 originals",
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "legacyEvidence": {
+        "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+        "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+      },
+      "productSourceWrite": false,
+      "fixedEvidence": {
+        "file": "HKIA_04_V300_LoadEnvelope_Native_20261113_Evidence.zip",
+        "sha256": "1f84cecc5650f218e1c1f5ef467d1fe111d67c87ed7649f40b9e0b00f8f53f70",
+        "manifestSha256": "98a0ec32a7c8e1d0210bd80d0d4873e5baf34cc09f5266e08e1594f0ab0e2fd7",
+        "resultSha256": "ce911689bd3d038aee32a25afacce1472f6d65ba8d191ecf5567a1d7da06efab",
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "BYTE_EXACT_CRC_4_ENTRIES_3_MANIFEST_HASHES_PASS"
+      },
+      "pending": [
+        {
+          "name": "01_SWITCH301_DEFINITION",
+          "delta": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
+          "tests": 12,
+          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION"
+        },
+        {
+          "name": "02_SWITCH301_EXACT29",
+          "delta": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
+          "tests": 19,
+          "status": "WAIT_EXACT_ORIGINAL_REPRODUCTION"
+        }
+      ],
+      "reused": {
+        "r3": {
+          "source": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+          "pr": 7,
+          "head": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
+          "run": 43373753393,
+          "artifact": 14013712258,
+          "binary": "cbbf675843b88f354443d319f3f766be1b8a338ddbad682c10dc13d793c6e47a",
+          "gitBlobs": 18,
+          "rustCI": 81,
+          "tsCI": 14,
+          "independentTS": 14,
+          "genuineVersions": 2,
+          "frames": 2692,
+          "independentArchivePositive": 6,
+          "independentArchiveNegative": 20,
+          "originalUnchanged": true,
+          "scope": "NATIVE_READONLY_SESSION_ABI_NO_WRITER_WASM_WORKER"
+        },
+        "research": [
+          {
+            "name": "01_RECIPE6_PRODUCER",
+            "delta": "fe97cce85187f15c7d5545a753ea4f7c92c4f22520f933ccfc890cf9a551f4d6",
+            "add": 6,
+            "tests": 24
+          },
+          {
+            "name": "03_RECIPE6_CAUSAL",
+            "delta": "a3286804459d4372ca60eb5312e133a0c0139cc31f070dd89e2cfd997c3ad3a5",
+            "add": 8,
+            "tests": 30
+          },
+          {
+            "name": "02_SWITCH300_EXACT29",
+            "delta": "e9ed764940ddb4d69aaee78a6f3c95c049314729ef661ce032175b7413232b0f",
+            "add": 6,
+            "tests": 16
+          },
+          {
+            "name": "03_SWITCH300_EXACT29_JOIN",
+            "delta": "643f4bfc64946fcd6f4cc0290ca0f7563121aef608b671a0d4c399aa6f21de9b",
+            "add": 6,
+            "tests": 18
+          },
+          {
+            "name": "01_RECIPE6_COOKING_HISTORY",
+            "delta": "133abf2dabe44a4875bc1a5f9faad98edd15c8fc4b44790956bea3c52ee0050d",
+            "add": 7,
+            "tests": 18
+          }
+        ]
+      }
+    },
+    "06B_QA_WEB_LOCALE": {
+      "owner": "06B QA-WEB-LOCALE",
+      "status": "WAIT_DEP_R2_COMPILED_OR_08_FIXED",
+      "task": "SVELTE_R2_AND_LOCALIZATION_SCOPED",
+      "scope": "R1 accepted; R2 static PASS; 08 IN_FLIGHT",
+      "next": "After 00 R2 compiled/browser; 08 fixed locale high-risk scope; no R1 repeat",
+      "dependency": "00 R2 CI or 08 fixed",
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "legacyEvidence": {
+        "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+        "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+      },
+      "productSourceWrite": false,
+      "reused": {
+        "svelteR1": {
+          "source": "8da9c065f522906dc11656a4ff1d91b109758eeaaef348bd0f1a424ba5ad310a",
+          "pr": 6,
+          "head": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+          "run": 43361999625,
+          "files": 18,
+          "gitBlobs": 18,
+          "localTests": 31,
+          "legacyTransitions": 6,
+          "externalTransition": 1,
+          "malformedDenied": 1,
+          "checkErrors": 0,
+          "checkWarnings": 0,
+          "browser": "FIXED_CI_CHROMIUM_320_375_1280_REVIEWED_NOT_INDEPENDENT_RERUN",
+          "scope": "ISOLATED_NAVIGATION_LEGACY_PORT"
+        },
+        "svelteR2Static": {
+          "source": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
+          "files": 24,
+          "changed": 7,
+          "localTests": 43,
+          "transitions": 25,
+          "status": "STATIC_PASS_WAIT_COMPILE_BROWSER"
+        }
+      }
+    },
+    "06C_QA_RELEASE": {
+      "owner": "06C QA-RELEASE",
+      "status": "WAIT_DEP_615_REFERENCE_OR_V24_BROWSER",
+      "task": "INTEGRATION_RELEASE_SCOPED",
+      "scope": "V34/V30 accepted; 615 successor; V24 authorized genuine browser WAIT_ENV",
+      "next": "Independent changed integration after fixed 615; V24 E2E after authorized env",
+      "dependency": "00 615 fixed or V24 authorized browser",
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "legacyEvidence": {
+        "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+        "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+      },
+      "productSourceWrite": false,
+      "reused": {
+        "v34": {
+          "source": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+          "sourceEntries": 582,
+          "add": 61,
+          "mod": 1,
+          "unchanged": 520,
+          "upstreamExact": 62,
+          "focused": 77,
+          "dist": 4146,
+          "webp": 4076,
+          "modules": 55,
+          "flagsOff": 18,
+          "rollback": "V33 exact",
+          "buildCheck": "PASS",
+          "scope": "PRIVATE_RESEARCH_REFERENCE_NOT_BETA_MANIFEST"
+        },
+        "liveV30": {
+          "artifact": 14000317355,
+          "deployRun": 43342655323,
+          "independentRun": 43354965221,
+          "files": 4146,
+          "webp": 4076,
+          "bytes": 146346689,
+          "httpsSampleHashes": 15,
+          "deniedPaths": 7,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "nativeWebCrypto": true,
+          "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+          "noSave": true,
+          "writer": "OFF",
+          "rollback": "V29_READY_NOT_LIVE_EXECUTED",
+          "historicalExposure": "NOT_ERASED",
+          "qaResult": {
+            "file": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json",
+            "sha256": "4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3"
+          },
+          "scope": "V30 OFF no-save live only"
+        }
+      }
     }
   },
   "p0FixCandidate": {
@@ -5567,6 +5776,13 @@
       "05_REACTIVE_LOCALE_UI_AND_ADAPTER",
       "06_INDEPENDENT_ALL_LOCALE_COVERAGE",
       "00_FORMAL_LOCALIZATION_GATE"
+    ],
+    "qaOperation": "OWNER_RISK_BASED_QA_DECISION_20261113",
+    "qaCriticalPath": [
+      "SELF_QA_ALL",
+      "HIGH_06A_OR_06B_PARALLEL",
+      "00_SERIAL_INTEGRATION",
+      "06C_RELEASE_SCOPE_ONLY"
     ]
   },
   "ownerCheckpoint20261112": {
@@ -5930,7 +6146,7 @@
       "parallel": "ALL_INDEPENDENT_READY_TASKS",
       "noRepeat": "EXACT_ACCEPTED_SCOPE_REUSE; DO_NOT_RESTART_WITHOUT_NEW_TASK",
       "blocked": "ISOLATE_ONLY_AFFECTED_SCOPE; CONTINUE_OTHER_READY_WORK",
-      "handoff": "DIRECTLY_NAME_NEXT_READY_STREAMS_AND_START_ORDER_PLUS_DEPENDENT_STREAMS_WITH_EXACT_START_CONDITIONS",
+      "handoff": "SELF_QA_ALWAYS; LOW_DIRECT; HIGH_06A_OR_06B_DIRECT; 06C_INTEGRATION_RELEASE_ONLY",
       "ctrl": "RETURN_TO_00_ONLY_FOR_SERIAL_INTEGRATION_SHARED_API_CONFLICT_CROSS_STREAM_DECISION_RELEASE_OR_OWNER_BOUNDARY"
     },
     "coordination": {
@@ -5941,7 +6157,9 @@
       "taskClaim": "CHECK_EXISTING_IN_FLIGHT_SCOPE_AND_FILE_OWNERSHIP_BEFORE_CHANGE; RECORD_TASK_BASE_SCOPE_STATUS; SHARED_FILES_AND_MAIN_MERGE_SERIAL_VIA_00",
       "privacy": "SANITIZED_PUBLIC_LEDGER_ONLY; PRIVATE_SAVE_IDS_BYTES_GAME_BINARIES_SECRETS_NEVER_PUBLISH",
       "conversationVisibility": "NO_ASSUMPTION_OF_COMPLETE_CROSS_CHAT_SYNC; MISSING_OR_UNVERIFIED_EVIDENCE_REMAINS_UNKNOWN",
-      "localization": "coordination/localization-decision-20261113.md"
+      "localization": "coordination/localization-decision-20261113.md",
+      "qaOperation": "coordination/qa-operation-decision-20261113.md",
+      "projectInstructions": "coordination/project-instructions.md"
     },
     "endReport": [
       "STREAM",
@@ -5965,15 +6183,43 @@
     },
     "supersedes": "OWNER_REQUESTED_AUTONOMOUS_STREAM_HANDOFF_20261112",
     "architectureRouting": {
-      "01_COLLECTION": "Language-independent acquisition/revoke contracts and genuine witnesses; Rust-first implementation routing after development switch.",
-      "02_ACHIEVEMENT": "Language-independent achievement/progress/reward contracts; Rust-first implementation routing after development switch.",
-      "03_LINKAGE": "Language-independent causal requirements; direct accepted contract handoff to active implementation owner.",
-      "04_SAVE_CORE": "JS Beta safety/maintenance/reference; no full formal JS requirement; after development switch Rust capacity only with 00 disjoint ownership assignment.",
-      "05_WEB": "JS Beta UI maintenance plus isolated Svelte/TS formal migration; PR6 nondeploy compile then JS adapter parity then accepted Rust adapter.; consume accepted HKIA locale registry/catalog, reactive browser/manual locale UI and Intl",
-      "06_QA": "Preserve active QA; V24 independent Beta gate; minimum Rust foundation development gate and full production cutover separate; Rust/Svelte scoped parity.; all-game-language localization scoped QA and formal coverage gate",
-      "07_RUST_CORE": "P0 formal Rust/WASM foundation; R2 synthetic QA and genuine parity; Session/Writer/Worker; new formal features Rust-first after minimum foundation acceptance.",
-      "00_MEDIA": "Existing image pipeline and authorized missing assets unchanged.",
-      "08_LOCALIZATION": "Independent game locale inventory/extraction and catalog coverage; fixed contracts to 05 and 06; no shared source changes without 00"
+      "01_COLLECTION": "Language-independent acquisition/revoke contracts and genuine witnesses; Rust-first implementation routing after development switch.; SELF_QA; HIGH -> 06A -> 03/04/07",
+      "02_ACHIEVEMENT": "Language-independent achievement/progress/reward contracts; Rust-first implementation routing after development switch.; SELF_QA; HIGH -> 06A -> 03/04/07",
+      "03_LINKAGE": "Language-independent causal requirements; direct accepted contract handoff to active implementation owner.; SELF_QA; HIGH -> 06A -> 04/07",
+      "04_SAVE_CORE": "JS Beta safety/maintenance/reference; no full formal JS requirement; after development switch Rust capacity only with 00 disjoint ownership assignment.; SELF_QA; HIGH -> 06A -> 05/07/00",
+      "05_WEB": "JS Beta UI maintenance plus isolated Svelte/TS formal migration; PR6 nondeploy compile then JS adapter parity then accepted Rust adapter.; consume accepted HKIA locale registry/catalog, reactive browser/manual locale UI and Intl; SELF_QA; HIGH -> 06B -> consumer/00",
+      "06_QA": "LEGACY_DRAIN_EXISTING_CLAIM_THEN_HISTORY_ONLY",
+      "07_RUST_CORE": "P0 formal Rust/WASM foundation; R2 synthetic QA and genuine parity; Session/Writer/Worker; new formal features Rust-first after minimum foundation acceptance.; SELF_QA; HIGH -> 06A -> 07/05/00",
+      "00_MEDIA": "Existing image pipeline and authorized missing assets unchanged.; SELF_QA; HIGH -> 06B; distribution -> 00/06C",
+      "08_LOCALIZATION": "Independent game locale inventory/extraction and catalog coverage; fixed contracts to 05 and 06; no shared source changes without 00; SELF_QA; HIGH -> 06B -> 05/00",
+      "06A_QA_DATA_CORE": "Independent high-risk data/core; disjoint claims",
+      "06B_QA_WEB_LOCALE": "Independent high-risk web/locale; disjoint claims",
+      "06C_QA_RELEASE": "Integrated artifact/release only; reuse exact specialist evidence"
+    },
+    "qaOperation": {
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "record": "coordination/qa-operation-decision-20261113.md",
+      "status": "OWNER_APPROVED_ACTIVE",
+      "model": "SELF_QA_ALWAYS_RISK_BASED_INDEPENDENT_QA",
+      "supersedes": "MONOLITHIC_06_AND_UNCONDITIONAL_HANDOFF_ONLY",
+      "riskClasses": {
+        "LOW": "Existing accepted contract, no new semantic/save/security/ABI/privacy/release risk; self-QA + applicable CI direct; never independent PASS",
+        "HIGH": "New/changed save semantics/operation/causal/Native/load/auth/migration/codec/precision/Writer/Session/CAS/ABI/Worker/genuine parity/new extraction or locale identity/material UI state/adapter/locale behavior/privacy/security/release-critical; uncertainty escalates; independent scoped QA",
+        "RELEASE": "Integrated artifact/capability activation/cutover/Pages/genuine E2E/rollback; 06C independent plus existing Owner gates"
+      },
+      "routing": {
+        "researchCore": "01/02/03/04/07 -> selfQA -> HIGH 06A -> consumer",
+        "webLocale": "05/08/MEDIA -> selfQA -> HIGH 06B -> consumer",
+        "release": "00 -> 06C integration/release only -> 00"
+      },
+      "parallel": "Disjoint Research/JS/Rust 06A and Web/Locale 06B temporary claims by fixed SHA/scope; no duplicate",
+      "independence": "Independent oracle/negative/native/real browser; separate conversation alone insufficient; exact accepted evidence reuse",
+      "legacy": "Existing IN_FLIGHT finishes or explicit remaining-scope transfer; no new task; history only after drain",
+      "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
+      "projectInstructions": {
+        "path": "coordination/project-instructions.md",
+        "characters": 7927
+      }
     }
   },
   "ctrlExecution": {
@@ -6088,19 +6334,18 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V34_FIXED_RESEARCH_REFERENCE_SCOPED_QA",
-      "06_SVELTE_PR6_FIXED_FOLLOWUP_SCOPED_QA",
-      "05_SVELTE_NEXT_ISOLATED_SCOPE",
-      "07_R3_BOUNDED_SESSION_ABI_EXISTING_IN_FLIGHT"
+      "00_V34_ACCEPTANCE_615_RESEARCH_INTEGRATION_AND_SVELTE_R2_CI",
+      "07_R4_EXISTING_IN_FLIGHT",
+      "08_EXISTING_LOCALE_IN_FLIGHT",
+      "LEGACY_06_EXISTING_V300_CLAIM_CONTINUE_ONLY"
     ],
     "nextAfterDep": [
-      "00_V34_FORMAL_RESEARCH_REFERENCE_ACCEPTANCE_AFTER_06",
-      "06_R3_SCOPE_AFTER_07_FIXED",
-      "00_SVELTE_SERIAL_INTEGRATION_AFTER_06",
-      "06_V24_AUTHORIZED_PRIVATE_BROWSER",
-      "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
-      "00_DEVELOPMENT_SWITCH_AFTER_06",
-      "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
+      "05_AFTER_R2_CI",
+      "06B_R2_COMPILED_AND_08_FIXED_HIGH_SCOPE",
+      "06C_615_FIXED_REFERENCE_OR_V24_AUTHORIZED_BROWSER",
+      "06A_R4_WRITER_AFTER_FIXED",
+      "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
+      "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -7143,6 +7388,40 @@
         "00_SERIAL_FORMAL_LOCALIZATION_ACCEPTANCE"
       ],
       "noBetaGate": true
+    },
+    "qaReorganization": {
+      "task": "RISK_BASED_QA_OPERATION_AND_STREAM_SPLIT",
+      "status": "DONE_OWNER_POLICY_RECORDED",
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
+      "record": "coordination/qa-operation-decision-20261113.md",
+      "projectInstructions": {
+        "path": "coordination/project-instructions.md",
+        "characters": 7927
+      },
+      "legacyResult": {
+        "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
+        "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
+      },
+      "legacyExecution": "DRAIN_EXISTING_V300_CLAIM_NO_DUPLICATE",
+      "acceptedReuse": [
+        "V34",
+        "R3",
+        "Svelte R1",
+        "five research deltas"
+      ],
+      "ready": [
+        "00_V34_ACCEPTANCE_615_RESEARCH_INTEGRATION_AND_SVELTE_R2_CI",
+        "07_R4_EXISTING_IN_FLIGHT",
+        "08_EXISTING_LOCALE_IN_FLIGHT",
+        "LEGACY_06_EXISTING_V300_CLAIM_CONTINUE_ONLY"
+      ],
+      "wait": [
+        "06A_NEW_FIXED_HIGH_RISK",
+        "06B_R2_COMPILED_OR_08_FIXED",
+        "06C_615_FIXED_OR_V24_AUTHORIZED_BROWSER"
+      ],
+      "unchanged": "V24 frozen; V30 OFF; existing release gates; no deploy/activation"
     }
   },
   "formalRelease": {
@@ -7547,7 +7826,7 @@
         "kitUse": "Existing private kit check and stage only; accept-v30 obsolete because current formal candidate V33; never run it or reset ledger."
       }
     },
-    "executionPolicy": "Accepted JS and language-independent evidence reused; 01/02/03 -> 06 -> implementation owner by development switch -> 05 -> 06 -> 00. V24 frozen; V33 accepted reference. Rust development switch distinct from full production cutover; no duplicate Writer.",
+    "executionPolicy": "Self-QA all; LOW direct; HIGH scoped 06A data/core or 06B web/locale then direct; 00 serial integration; 06C changed integration/release only. Existing independent release/operation/cutover gates unchanged; V24 frozen.",
     "integrationCandidate": {
       "label": "V33_FORMAL_OFF_COMBINED_SCOPED_PASS",
       "file": "HKIA_WEB05_FormalCelebration5UI_V31_20261113_Source.zip",
@@ -7814,6 +8093,31 @@
         "src/lib/i18n/catalog-schema.js": "af19aab0d1382a0e44f2d2f0eca2b34b0fad3801"
       },
       "reuse": "DESIGN_ONLY_REGISTRY_PREFERENCE_RUNTIME_CATALOG_VALIDATION; HKIA_OWN_STORAGE_KEY_LOCALES_AND_DATA; NO_WAND_MUTATION"
+    }
+  },
+  "qaOperation": {
+    "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+    "record": "coordination/qa-operation-decision-20261113.md",
+    "status": "OWNER_APPROVED_ACTIVE",
+    "model": "SELF_QA_ALWAYS_RISK_BASED_INDEPENDENT_QA",
+    "supersedes": "MONOLITHIC_06_AND_UNCONDITIONAL_HANDOFF_ONLY",
+    "riskClasses": {
+      "LOW": "Existing accepted contract, no new semantic/save/security/ABI/privacy/release risk; self-QA + applicable CI direct; never independent PASS",
+      "HIGH": "New/changed save semantics/operation/causal/Native/load/auth/migration/codec/precision/Writer/Session/CAS/ABI/Worker/genuine parity/new extraction or locale identity/material UI state/adapter/locale behavior/privacy/security/release-critical; uncertainty escalates; independent scoped QA",
+      "RELEASE": "Integrated artifact/capability activation/cutover/Pages/genuine E2E/rollback; 06C independent plus existing Owner gates"
+    },
+    "routing": {
+      "researchCore": "01/02/03/04/07 -> selfQA -> HIGH 06A -> consumer",
+      "webLocale": "05/08/MEDIA -> selfQA -> HIGH 06B -> consumer",
+      "release": "00 -> 06C integration/release only -> 00"
+    },
+    "parallel": "Disjoint Research/JS/Rust 06A and Web/Locale 06B temporary claims by fixed SHA/scope; no duplicate",
+    "independence": "Independent oracle/negative/native/real browser; separate conversation alone insufficient; exact accepted evidence reuse",
+    "legacy": "Existing IN_FLIGHT finishes or explicit remaining-scope transfer; no new task; history only after drain",
+    "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
+    "projectInstructions": {
+      "path": "coordination/project-instructions.md",
+      "characters": 7927
     }
   }
 }

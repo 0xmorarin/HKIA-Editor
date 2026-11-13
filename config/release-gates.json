@@ -202,7 +202,32 @@
     "unobservedGameBehavior": "UNVERIFIED_NEVER_INFER_PASS",
     "unprovenWriteScope": "FAIL_CLOSED_OR_EXCLUDE_FROM_RELEASE_UNTIL_PROVEN",
     "releaseNeedsOwnerApproval": true,
-    "publicValidation": "FUNCTIONAL_BETA_WITH_REAL_NATIVE_SAVE_EDIT_AND_OUTPUT; SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; ACTUAL_HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA"
+    "publicValidation": "FUNCTIONAL_BETA_WITH_REAL_NATIVE_SAVE_EDIT_AND_OUTPUT; SAME_RELEASE_IMPLEMENTATION_AND_IMAGES; ACTUAL_HTTPS_UI_WEBCRYPTO_ESM_WORKER_AND_ASSET_PATH_QA",
+    "riskBasedQA": {
+      "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
+      "record": "coordination/qa-operation-decision-20261113.md",
+      "status": "OWNER_APPROVED_ACTIVE",
+      "model": "SELF_QA_ALWAYS_RISK_BASED_INDEPENDENT_QA",
+      "supersedes": "MONOLITHIC_06_AND_UNCONDITIONAL_HANDOFF_ONLY",
+      "riskClasses": {
+        "LOW": "Existing accepted contract, no new semantic/save/security/ABI/privacy/release risk; self-QA + applicable CI direct; never independent PASS",
+        "HIGH": "New/changed save semantics/operation/causal/Native/load/auth/migration/codec/precision/Writer/Session/CAS/ABI/Worker/genuine parity/new extraction or locale identity/material UI state/adapter/locale behavior/privacy/security/release-critical; uncertainty escalates; independent scoped QA",
+        "RELEASE": "Integrated artifact/capability activation/cutover/Pages/genuine E2E/rollback; 06C independent plus existing Owner gates"
+      },
+      "routing": {
+        "researchCore": "01/02/03/04/07 -> selfQA -> HIGH 06A -> consumer",
+        "webLocale": "05/08/MEDIA -> selfQA -> HIGH 06B -> consumer",
+        "release": "00 -> 06C integration/release only -> 00"
+      },
+      "parallel": "Disjoint Research/JS/Rust 06A and Web/Locale 06B temporary claims by fixed SHA/scope; no duplicate",
+      "independence": "Independent oracle/negative/native/real browser; separate conversation alone insufficient; exact accepted evidence reuse",
+      "legacy": "Existing IN_FLIGHT finishes or explicit remaining-scope transfer; no new task; history only after drain",
+      "gates": "Existing Beta/formal independent operation/release QA, genuine edits, actual browser, cutover, privacy/rollback/Owner approval unchanged; no new Beta gate",
+      "projectInstructions": {
+        "path": "coordination/project-instructions.md",
+        "characters": 7927
+      }
+    }
   },
   "architecture": {
     "ownerDecision": "OWNER_ARCHITECTURE_EXECUTION_DECISION_20261113",
