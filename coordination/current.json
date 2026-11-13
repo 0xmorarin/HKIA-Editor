@@ -9910,11 +9910,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_V40_SCOPED_QA",
-      "task": "V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "status": "DONE_NEW_HOST_V30_AND_V40_SCOPED_PASS_WAIT_NEW_FIXED_OR_V24_ENV",
+      "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA_AND_V40_FIXED_653_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
-      "next": "00 record new-host V30 scoped PASS; V40 fixed 653 research integration ready; V24 genuine Browser WAIT_ENV",
-      "dependency": "NEW_HOST_V30_SCOPED_PASS; V40_FIXED_READY; V24_WAIT_ENV",
+      "next": "00 record new-host V30 acceptance and V40 accepted reference; 05 root binding and specialist scopes independent; 06C wait new fixed root/research or authorized V24 genuine Browser",
+      "dependency": "00_RECORD_NEW_HOST_AND_V40; NEXT_FIXED_ROOT_DISTRIBUTION_OR_RESEARCH_SCOPE_WAIT_DEP; V24_GENUINE_BROWSER_WAIT_ENV",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -10702,64 +10702,29 @@
         }
       },
       "nextReadyParallel": [
-        {
-          "stream": "00_CTRL",
-          "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_ACCEPTANCE_AND_MANUAL_DEPLOY_GATE",
-          "priority": "P0",
-          "dependency": "06C fixed predeploy SCOPED PASS; explicit deployment approval remains separate"
-        },
-        {
-          "stream": "00_CTRL",
-          "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-          "dependency": "06C fixed V39 SCOPED PASS; no deployment"
-        }
+        "00_NEW_HOST_V30_AND_V40_ACCEPTANCE"
       ],
       "nextAfterDep": [
-        {
-          "stream": "00_CTRL",
-          "task": "PAGES_R4_FIXED_MANUAL_DEPLOY_AND_LIVE_VERIFICATION",
-          "condition": "exact fixed composition and existing explicit Owner approval for deployment scope"
-        },
-        {
-          "stream": "06C_QA_RELEASE",
-          "task": "AUTHORIZED_LIVE_R4_POSTDEPLOY_SCOPED_QA",
-          "condition": "00 authorized actual deployment and fixed live artifact evidence"
-        },
-        {
-          "stream": "06C_QA_RELEASE",
-          "task": "V24_GENUINE_PRIVATE_BROWSER_RELEASE_QA",
-          "condition": "authorized local actual Browser environment"
-        }
+        "06C_FIXED_SINGLE_ROOT_DISTRIBUTION_AFTER_00",
+        "06C_NEW_FIXED_RESEARCH_REFERENCE",
+        "06C_V24_AUTHORIZED_GENUINE_BROWSER"
       ],
       "handoff": {
         "to": "00 CTRL",
-        "status": "READY",
         "tasks": [
           {
             "to": "00 CTRL",
-            "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_ACCEPTANCE_AND_MANUAL_DEPLOY_GATE",
-            "status": "READY_PREDEPLOY_ACCEPTANCE",
-            "condition": "Record exact predeploy acceptance, prepare/pin manual fixed composition and combined artifact, obtain or verify existing explicit Owner approval for this exact deployment scope, then deploy only under authorized 00 manual workflow. Verify actual HTTPS root and /dev/, distribution SHA, no-save/rights/network, denied paths and rollback readiness. No automatic deploy, no Writer/cutover, V24 separate."
+            "task": "YUMEKIRABOSHI_V30_NEW_HOST_ACCEPTANCE",
+            "condition": "Record scoped new-host acceptance, no redeploy required for unchanged V30; preserve single root policy and Owner gates."
           },
           {
             "to": "00 CTRL",
-            "task": "V39_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-            "status": "READY",
-            "condition": "Record V39 exact fixed 647 reference only; no research-only deploy, no Writer/cutover. Reuse accepted V38 and 06A exact scope."
+            "task": "V40_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+            "condition": "Record scoped V40 accepted 653 research reference; no Writer/deploy authority; no repeated QA."
           }
         ],
-        "evidence": {
-          "file": "HKIA_06C_R4_PREVIEW_V39_SCOPED_QA_20261113_EVIDENCE.zip",
-          "sha256": "b7a9bbdfb104e061c758263b6e1103441609154eadde8ad76fef97fcd6dd8d9a",
-          "manifestSha256": "7a90e790f35c2ccc2b561cd24afb4b1bd3e0033ac2b2e3baf5e5d4e3ee2922aa",
-          "handoffSha256": "bc4db866805b8a495856a2ca36dfd269758d70c788968fcfa44acc69fcaef38f",
-          "previewResultSha256": "9e8ff879b5d5d10e10a28fe9f6dd8c3e5d020d659a9874221b0d0dfbda242745",
-          "v39ResultSha256": "675ad5afa4106b20fce84a27d798fe55ab073d15b4a32d759dfa7c2a6ce792c5",
-          "ciObservationSha256": "37c7eef11d632883b94ad82ae8107896c3443ee1f4827213970a9ea199eae72b",
-          "bytes": 12607,
-          "privateLibrary": "HKIA Editor Private",
-          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
-        }
+        "noDeploy": true,
+        "noWriterChange": true
       },
       "noDeployment": true,
       "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK",
@@ -10840,7 +10805,66 @@
         "baseLedgerBlob": "4d6668fdfde7414aed2ab978baca9a6e7a49fbe8",
         "source": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
         "scope": "6 ADD only, 647 V39 exact; 06A static exact producer accepted scope reuse. Verify source/delta/manifest, focused 23 + independent integration negatives, build 55 and full map 4146 unchanged, rollback. No repeated Native proof, no deployment.",
-        "status": "IN_FLIGHT"
+        "status": "COMPLETED"
+      },
+      "v40Result": {
+        "verdict": "SCOPED_PASS_V40_PRIVATE_RESEARCH_REFERENCE",
+        "source": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "baseSource": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "manifest": "b87564e932a96fa40c541dafc846823aa79c00c0867f1b5184181681e4b96b60",
+        "delta": "7b054ec7ed6971a4c74d4b06edc44939ff49b864314dc4a59d2b97eecaba4298",
+        "artifactManifest": "484bfd2932b50e82545d0aff22337d7580a9051373d32d3a5812b0a220f5137b",
+        "upstreamDelta": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+        "upstreamAcceptance": "8d2f6e76273a2f94417f8bca282551af493d67345cb1f14aed826968c156d641",
+        "verified": {
+          "pins": 12,
+          "sourceEntries": 653,
+          "baseUnchanged": 647,
+          "add": 6,
+          "mod": 0,
+          "del": 0,
+          "upstreamDeltaPaths": 6,
+          "upstreamManifestHashes": 5,
+          "upstreamEvidenceManifestHashes": 6,
+          "priorEvidenceManifestHashes": 10,
+          "focused": 23,
+          "fail": 0,
+          "independentNegativeControls": 6,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "sourceDerivedBuildExact": 55,
+          "fullManifestDirectMatch": 54,
+          "indexProjectionExact": true,
+          "fullDistributionMapExact": 4146,
+          "rollbackExact": 647,
+          "reconstructionExact": 653,
+          "writer": "OFF"
+        },
+        "qaCorrection": "Independent oracle corrected Manifest path-array comparison from numeric count assumption; rerun PASS, no product defect.",
+        "evidence": {
+          "zip": {
+            "file": "HKIA_06C_V40_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "0d9c6a207eb8bf67520e36a86f8837d374f68b4fa189b3b885d95edb721a1b04"
+          },
+          "result": {
+            "file": "HKIA_06C_V40_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "a2757d722f91e36203cedee10229d5532412143275e4d26a9b4003c33d9a8e3c",
+            "location": "INSIDE_EVIDENCE_ZIP"
+          },
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_4_MANIFEST_HASHES_PASS"
+        },
+        "trueRed": [],
+        "unverified": [
+          "external media not rehashed; accepted map reused",
+          "static producer only; runtime eligibility, structural creation, reward persistence and Switch300 parity not established",
+          "V24 genuine Browser/game WAIT_ENV; no deployment"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V40_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record scoped V40 accepted 653 research reference; no Writer/deploy authority; no repeated QA."
+        }
       }
     }
   },
