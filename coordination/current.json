@@ -185,7 +185,15 @@
         "productAuthorized": false,
         "gameAccepted": false
       },
-      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07"
+      "qaRouting": "SELF_QA; HIGH -> 06A -> 03/04/07",
+      "v301OriginalRecovery": {
+        "task": "FORMAL_V301_DEFINITION_ORIGINAL_RECOVERY",
+        "status": "IN_FLIGHT",
+        "baseHead": "ce823591b30c5b40fdd33e0da7fccbdb9b02c17b",
+        "scope": "Recover exact pinned catalogs, Steam301 serial, V33 helpers for 06A pending 01 parity; no v300 research, no product changes",
+        "risk": "HIGH_SOURCE_PROVENANCE_EXISTING_PARITY_QA",
+        "dependency": "06A pending 01_SWITCH301_DEFINITION; legacy core original pin recovered"
+      }
     },
     "02_ACHIEVEMENT": {
       "status": "V16_REMAINING_COUNTER_COVERAGE_INTEGRATED_LOCAL_PASS",
