@@ -53,7 +53,7 @@ jobs:
               raise AssertionError('unreachable')
           # independently choose all non-image runtime files except .nojekyll (GitHub may hide dotfiles), and dispersed WebP by content hash
           images=sorted((p for p in files if p.endswith('.webp')),key=lambda p:files[p]['sha256'])
-          paths=['index.html','src/app.js','native-product/api.mjs','native-product/dev-output-policy.mjs','scripts/research/save-native-schema-reader.mjs','scripts/research/save-transaction-engine.mjs','src/native-preview-ui.js','native-product/worker.mjs']+[images[i] for i in [0,101,509,1023,2047,3071,4000,4075]]
+          paths=sorted(p for p in files if not p.endswith('.webp') and p!='.nojekyll')+[images[i] for i in [0,101,509,1023,2047,3071,4000,4075]]
           def verify(p):
               status,url,data=fetch(p)
               assert status==200 and url==root+p and len(data)==files[p]['bytes'] and sha(data)==files[p]['sha256'],(p,status,url,sha(data))
@@ -71,7 +71,10 @@ jobs:
               browser=pw.chromium.launch(headless=True)
               for width in (320,375,1280):
                   page=browser.new_page(viewport={'width':width,'height':900})
-                  foreign=[];errors=[];downloads=[]
+                  foreign=[];errors=[];downloads=[]; network=[]; worker_logs=[]
+                  page.on('requestfailed',lambda r:network.append(('failed',r.url,r.failure)))
+                  page.on('response',lambda r:network.append(('response',r.url,r.status,r.headers.get('content-type'))) if r.status>=400 or r.url.endswith('.mjs') else None)
+                  page.on('console',lambda m:worker_logs.append((m.type,m.text)) if m.type=='error' else None)
                   page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(root) else None)
                   page.on('pageerror',lambda e:errors.append(str(e)))
                   page.on('download',lambda d:downloads.append(d.suggested_filename))
@@ -89,13 +92,17 @@ jobs:
                   assert page.locator('#achTab').get_attribute('aria-selected')=='true'
                   credit=page.locator('#attributionNotice'); assert credit.is_visible()
                   assert 'Sunblink' in credit.inner_text() and 'SANRIO' in credit.inner_text() and '非公式' in credit.inner_text()
-                  result=page.evaluate("""async () => {
+                  try:
+                      result=page.evaluate("""async () => {
                     const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('abc'));
                     const hex=Array.from(new Uint8Array(d),n=>n.toString(16).padStart(2,'0')).join('');
                     const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
-                    const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(e.message))};w.postMessage(m)});
+                    const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(JSON.stringify({message:e.message||'',filename:e.filename||'',lineno:e.lineno||0,type:e.type})))};w.postMessage(m)});
                     try {const a=await call({id:1,kind:'export'});const b=await call({id:1,kind:'noop'});const c=await call({id:2,kind:'apply'});return {secure:isSecureContext,hex,a,b,c,width:document.documentElement.scrollWidth,viewport:innerWidth};}finally{w.terminate()}
                   }""")
+                  except Exception as e:
+                      print("WORKER_DIAGNOSTIC",width,repr(e),json.dumps(network),json.dumps(worker_logs),json.dumps(errors),flush=True)
+                      raise
                   assert result['secure'] and result['hex']=='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
                   assert result['a']=={'id':1,'error':'Native worker session missing'} and result['b']=={'id':1,'error':'Native worker replay'} and result['c']=={'id':2,'error':'Native worker session missing'},result
                   assert result['width']<=width and not foreign and not errors and not downloads,(result,foreign,errors,downloads)
