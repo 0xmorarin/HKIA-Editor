@@ -222,7 +222,6 @@
         "deltaSha256": "54a56a4419303ff70de5028f02702aae545132f666256e3849d4f500b764330b",
         "manifestSha256": "e5931a0d0c5cdbae7606ba6302cab4db9cde5437e5422d7e15769f28022a6ac3",
         "artifact": "HKIA_02_Missing_Derived_Member_V33_Delta_20261113.zip",
-        "libraryFileId": "libfile_a2b2f8de69d48191b338b36c93da9062",
         "verified": {
           "sourcePPtrs": 23,
           "visitorDistinct": 22,
@@ -3677,7 +3676,7 @@
           "realParity": "NOT_RUN"
         },
         "publicCI": {
-          "status": "DRAFT_PR_READY_WAIT_00_WORKFLOW",
+          "status": "CTRL_PUBLIC_SYNTHETIC_COMPILE_PASS_PINNED_RUST_1_85_1",
           "pr": 5,
           "branch": "rust07/r2-public-synthetic-compile",
           "baseHead": "39762813cf6af5e66aeb2cc23dc2b639bc099f56",
@@ -3695,11 +3694,33 @@
           },
           "privacy": "Only code and pins; no generated schema/fixture bytes or private source, no real saves, no Pages/live flags. CI runner generates exact crate and synthetic inputs from public JS.",
           "workflowOwner": "00 CTRL",
-          "next": "00 add isolated non-deploying Rust synthetic workflow on PR5; checkout exact PR head; read-only contents; no artifact publishing, no Pages; run 39 tests + release build; return exact head/run/job/conclusion to 07. Existing JS source closure CI is not Rust PASS.",
+          "next": "07 pin exact compiled R2 source and prepare private genuine parity for Switch300/301 V33; 06 independent synthetic QA may start; no real saves in CI.",
           "existingJsCI": {
             "runId": 43342423704,
             "conclusion": "SUCCESS",
             "scope": "PUBLIC_SOURCE_CLOSURE_JS_TEST_BUILD_CHECK_ONLY_NOT_RUST"
+          },
+          "ctrlWorkflow": {
+            "path": ".github/workflows/rust07-public-synthetic.yml",
+            "head": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
+            "originalCodeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
+            "workflowBlob": "466fbaa6474963ef40ea89979c238a624c4ce260",
+            "run": 43343089052,
+            "job": 131615861710,
+            "conclusion": "success",
+            "rustc": "1.85.1",
+            "cargo": "1.85.1",
+            "node": "22.16.0",
+            "tests": 39,
+            "fail": 0,
+            "skip": 0,
+            "releaseBuild": "PASS",
+            "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+            "initialRun": 43342926527,
+            "initialActualRust": "1.99.1",
+            "repair": "Explicit RUSTUP_TOOLCHAIN inherited across temporary crate working directory; fixed code unchanged",
+            "realParity": "NOT_RUN",
+            "scope": "public synthetic only, no deployment or merge"
           }
         }
       },
@@ -3742,7 +3763,7 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "V30 OFF fixed Pages deployment SUCCESS run 43342655323; 06 live exact artifact and HTTPS QA now READY; V29 rollback ref fixed; no Writer activation.",
+    "V30 OFF Pages restored; CTRL live HTTPS 8 exact file hashes, seven denied404, redirect PASS. 06 independent deployment artifact/live QA READY; no Writer activation.",
     "V33 fixed 5 source/2 dist path independent SCOPED PASS recorded; next formal scope only on new evidence.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
   ],
@@ -4446,7 +4467,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "P0_PAGES_FIXED_OFF_DEPLOY_SUCCESS_06_LIVE_QA_READY",
+    "status": "P0_PAGES_RESTORED_CTRL_HTTP_PASS_06_LIVE_QA_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -4556,12 +4577,15 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_LIVE_V30_OFF_ARTIFACT_HTTPS_QA",
-      "00_RUST07_PR5_SYNTHETIC_CI_SETUP"
+      "06_V30_LIVE_ARTIFACT_AND_NEW_01_02_SCOPED_QA",
+      "03_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_MISSION_CAUSAL",
+      "07_R2_PINNED_COMPILE_PASS_PRIVATE_PARITY_PREPARATION"
     ],
     "nextAfterDep": [
-      "06_V24_AUTHORIZED_BROWSER",
-      "07_AFTER_RUST_CI_RESULT"
+      "04_AFTER_01_02_03_EXACT_ACCEPTANCE",
+      "05_AFTER_NEW_04_ACCEPTED_WRITER",
+      "06_V24_AUTHORIZED_PRIVATE_BROWSER",
+      "00_SERIAL_INTEGRATION_AFTER_NEW_SCOPED_QA"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -4668,7 +4692,7 @@
       "count": 33,
       "scope": "Existing current.json only; matched private Library files by actual lookup; preserve status/ownership/SHA/filenames; no new private identifier; historical Git commits and other files not scrubbed",
       "next": "Do not republish private identifiers. Historical exposure separate; no destructive rewrite.",
-      "note": "Concurrent reference IDs replaced with verified filenames; historical Git not scrubbed.",
+      "note": "Redacted newly added private reference key from current public snapshot only; artifact filenames and hashes preserved; historical Git not scrubbed.",
       "latestRemoved": 1,
       "history": "NOT_ERASED"
     },
@@ -5218,7 +5242,20 @@
         }
       }
     },
-    "inFlightStreams": []
+    "inFlightStreams": [],
+    "currentHandoff": {
+      "date": "2026-11-13",
+      "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
+      "status": "DONE_CTRL_HTTP_PASS_INDEPENDENT_QA_READY",
+      "source": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "artifactManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+      "next": [
+        "06 live exact artifact and 01/02 new scoped QA",
+        "03 new exact 01 historical Recipe6 and 02 Visitor/Mission causal review",
+        "07 pinned public Rust CI PASS -> private parity preparation"
+      ],
+      "privacy": "No raw Save or private research inputs in transport or CI; historical legacy exposure not erased"
+    }
   },
   "formalRelease": {
     "ownerDefinition": "All valid Collections acquisition/revocation/history/date and Achievements completion/revocation/progress/date edits, individual/bulk, required causal consistency, verified edited-copy and actual game load/persistence; not limited beta. Unknown/entitlement/online/reward unproven changes fail closed.",
@@ -5227,7 +5264,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional beta first; Rust/Svelte independent, not extra gate; no change to release-gates or live approval.",
     "pages": {
-      "status": "V30_FIXED_OFF_DEPLOY_SUCCESS_LIVE_QA_READY",
+      "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
       "targetUrl": "https://0xmorarin.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -5265,7 +5302,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
+      "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -5406,17 +5443,17 @@
         "note": "Public-safe source projection independently accepted; nondeploying CI only. Source archive is not full distribution."
       },
       "actualPages": {
-        "status": "FIXED_V30_OFF_ACTIONS_DEPLOY_SUCCESS_LIVE_QA_PENDING",
+        "status": "FIXED_V30_OFF_DEPLOY_SUCCESS_CTRL_HTTPS_BOUNDARY_PASS_INDEPENDENT_QA_READY",
         "observedMain": "b57341f52c0bbf357ea4e26f3aa95d34a4b36baa",
         "runId": 43342655323,
         "buildJob": 131199989881,
         "deployJob": 131614601722,
         "url": "https://0xmorarin.github.io/HKIA-Editor/",
-        "verified": "Manual fixed site-only V30 manifest and verifier gate PASS; actual Pages deploy SUCCESS; 4146 files and 4076 WebP; Writer OFF; public HTTPS independent QA pending",
+        "verified": "GitHub Actions fixed V30 site-only deployment SUCCESS; actual public root and 8 sample SHA exact, 7 excluded paths 404, HTTP to HTTPS PASS; 4076 WebP in fixed artifact; Writer OFF.",
         "limitations": "Public HTTP response and actual rendering not independently observed; full V24 4076-image 4144-file artifact not deployed; Writer remains OFF; branch-root deployment publishes source tree, not fixed allowlisted release artifact.",
         "rootCause": "GitHub metadata has_pages=true; built-in dynamic deployments existed even when project gate OFF. Main previously lacked index.html; successful branch build therefore did not establish usable page. Actual source settings admin API unavailable; merge triggered existing branch-based Pages automatically.",
         "risk": "Unexpected automatic branch-root Pages configuration conflicts with approved manual artifact-only release workflow. Owner explicitly requested immediate public view; do not label preview functional Beta. Switch Pages source to GitHub Actions via authorized Settings before fixed full distribution publication; no automatic activation. Do not add private or raw inputs to main.",
-        "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
+        "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
         "lastReachabilityCheck": {
           "date": "2026-11-12",
           "status": "UNVERIFIED_TOOL_ACCESS",
@@ -5428,7 +5465,7 @@
         "artifactId": 14000317355
       },
       "distributionRepair": {
-        "status": "V30_FIXED_OFF_DEPLOY_SUCCESS_LIVE_QA_READY",
+        "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
         "incidentRun": 43307905181,
         "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
         "sourceProbe": {
@@ -5463,17 +5500,17 @@
         },
         "writer": "OFF",
         "deployment": "GITHUB_ACTIONS_SUCCESS",
-        "https": "UNVERIFIED_IN_ASSISTANT_WEB_TOOL",
+        "https": "CTRL_ACTUAL_HTTPS_8_HASHES_7_DENIALS_HTTP_REDIRECT_PASS",
         "historicalExposure": "NOT_ERASED",
-        "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
+        "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "DONE_REMOTE_STAGE_AND_DEPLOY",
+          "status": "DONE_REMOTE_STAGE_DEPLOY_AND_CTRL_HTTPS_SMOKE",
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "57/57 exact transport, CI stage success, exact remote V30/V29 refs and manifest blobs, PR3 merged, actual verify/deploy jobs success; public HTTP reachability not observed by web tool.",
-          "next": "06 independent live deployed artifact all 4146 hashes/HTTPS samples/internal path denial and rollback readiness; no Writer activation; 00 no repeat transfer.",
+          "observed": "57/57 exact; staging CI PASS; fixed refs and manifests exact; PR3 merged; Pages verify/deploy SUCCESS; root+8 live file hashes exact; 7 internal paths HTTP404; HTTP->HTTPS PASS.",
+          "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
@@ -5484,7 +5521,7 @@
           "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
           "transport": {
             "branch": "ctrl/pages-off-transport-20261113",
-            "head": "93cdb41780bceabb0111861b822912d2118a6269",
+            "head": "463025a3214aa9c70b50885bbe7857eba41b58c7",
             "dataCommit": "464a92472823e401983309465799063b1541f04a",
             "partsTree": "db38cf6b47772253ec5daf463ebf0c7f0cb88004",
             "verifiedParts": 57,
@@ -5538,6 +5575,27 @@
           "url": "https://0xmorarin.github.io/HKIA-Editor/",
           "writer": "OFF",
           "scope": "V30 exact site/ only"
+        },
+        "liveSmoke": {
+          "positive": {
+            "run": 43343002975,
+            "job": 131615580888,
+            "conclusion": "failure",
+            "positiveFiles": 8,
+            "allPositiveHashesExact": true,
+            "rootExact": true,
+            "initialBoundary": "503 not accepted as denial"
+          },
+          "boundary": {
+            "run": 43343120768,
+            "job": 131615966573,
+            "conclusion": "success",
+            "rootExact": true,
+            "denied404": 7,
+            "httpToHttps": true,
+            "transient503Recovered": true
+          },
+          "scope": "Actual public network HTTP(S), no browser/UI or real-save testing; independent 06 final artifact QA pending"
         }
       },
       "ownerRecoveryPriority": {
