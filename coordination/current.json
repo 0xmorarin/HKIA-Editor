@@ -1874,7 +1874,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "06B_R2_INDEPENDENT_QA_PARALLEL_00_R3_ISOLATED_CI; 05_AFTER_R3_RESULT_OR_NEW_ACCEPTED_DEP; NO_REPEAT",
+      "next": "R2 accepted exact scope; R3 fixed CI SUCCESS -> 06B scoped independent QA; 05 autonomously select next disjoint owned READY scope or accepted locale data preparation; no production binding before prerequisites.",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2844,7 +2844,39 @@
             "actual product controller/catalog/media binding and full UI parity",
             "mapped image load failure in actual browser",
             "06B independent R3 acceptance"
-          ]
+          ],
+          "compiledCI": {
+            "status": "PASS_FIXED_COMPILE_CHECK_BUILD_CHROMIUM",
+            "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+            "run": 43381925291,
+            "verified": {
+              "tests": 58,
+              "newTests": 15,
+              "r2Regression": 43,
+              "fail": 0,
+              "checkErrors": 0,
+              "checkWarnings": 0,
+              "build": "PASS",
+              "lock": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+              "navigationTransitions": 6,
+              "filterTransitions": 25,
+              "categoryDescriptionImageComparisons": 9,
+              "categoryFilterComparisons": 5,
+              "actualReferenceClickTransitions": 2,
+              "actualChromiumWidths": [
+                320,
+                375,
+                1280
+              ],
+              "selectionEventsPerWidth": 2,
+              "filterRetention": true,
+              "unknownDistinct": true,
+              "overflow": false,
+              "pageErrors": 0,
+              "externalRequests": 0,
+              "scope": "Fixed isolated R3 synthetic fixture; legacy renderCollections VM synthetic sinks; actual built Vite HTTP Chromium; no production binding or Save; mapped image load failure not tested"
+            }
+          }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
@@ -5867,11 +5899,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "WAIT_DEP_LOCALE_R2_FIXED_OR_SVELTE_R3_COMPILED",
-      "task": "WAIT_NEXT_FIXED_HIGH_RISK_SCOPE",
+      "status": "READY_SVELTE_R3_FIXED_COMPILED_SCOPE",
+      "task": "SVELTE_R3_CATEGORY_GRID_SCOPED_INDEPENDENT_QA",
       "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
-      "next": "08 existing IN_FLIGHT repair; 00 R3 fixed isolated CI; 06B starts only after either fixed result; no duplicate R1/R2",
-      "dependency": "08 R2 fixed repair + self-QA OR 00 R3 fixed compile/check/build/Chromium; independent disjoint scope",
+      "next": "Independent R3 changed scope and impact, exact source/CI; R1/R2 accepted reuse; locale R2 repair after fixed 08 evidence; disjoint claims allowed",
+      "dependency": "R3_FIXED_CI_SUCCESS; LOCALE_R2_WAIT_08_FIXED",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -6000,6 +6032,14 @@
         },
         "ready": [],
         "productSourceWrite": false
+      },
+      "webR3Ready": {
+        "sourceHead": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
+        "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
+        "ciHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+        "run": 43381925291,
+        "status": "READY",
+        "scope": "Fixed isolated R3 synthetic fixture; legacy renderCollections VM synthetic sinks; actual built Vite HTTP Chromium; no production binding or Save; mapped image load failure not tested"
       }
     },
     "06C_QA_RELEASE": {
@@ -6007,8 +6047,8 @@
       "status": "DONE_V35_SCOPED_PASS_WAIT_ENV_V24",
       "task": "V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
       "scope": "33 additive research paths only; 582 unchanged; prior V34 distribution exact map reused; no deployment/Writer/new authority. 106 focused self PASS; check/build/source-derived 55 exact; rollback 582 and rebuild 615. No repeat V34 accepted specialist QA.",
-      "next": "00 CTRL accept fixed V35 private research reference; 06C next only new fixed integrated candidate or authorized V24 genuine Browser environment",
-      "dependency": "V35_SCOPED_ACCEPTED; V24_WAIT_ENV; NEXT_NEW_FIXED_INTEGRATION_WAIT_DEP",
+      "next": "V35 accepted by 00; wait authorized V24 genuine Browser or new fixed integrated candidate",
+      "dependency": "V35_ACCEPTED_BY_00; V24_WAIT_ENV_ADMINISTRATOR_BLOCK",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
       "legacyEvidence": {
@@ -7053,7 +7093,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "QA_ROUTING_RECONCILED_R4_R2_CI_DONE_V35_FIXED_06C_READY",
+    "status": "DONE_V35_ACCEPTED_R3_CI_DEPENDENCY_UNBLOCK",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -7163,20 +7203,18 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
-      "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
-      "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+      "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+      "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
       "05_NEXT_DISJOINT_SVELTE_SCOPE",
-      "06C_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
-      "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
-      "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
+      "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
     ],
     "nextAfterDep": [
-      "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-      "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
-      "00_V35_REFERENCE_ACCEPTANCE_AFTER_06C",
+      "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
+      "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
+      "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+      "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
+      "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
       "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
-      "06A_V301_ONLY_AFTER_EXACT_ORIGINALS",
       "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
       "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
     ],
@@ -7837,22 +7875,28 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "date": "2026-11-13",
-      "task": "PROJECT_INSTRUCTIONS_QA_ROUTING_R4_R2_615_UNBLOCK",
-      "status": "DONE_POLICY_AND_DEPENDENCY_UNBLOCK",
-      "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-      "artifactManifestSha256": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+      "task": "V35_ACCEPTANCE_AND_SVELTE_R3_CI",
+      "status": "DONE",
       "next": [
-        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
-        "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
-        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
         "05_NEXT_DISJOINT_SVELTE_SCOPE",
-        "06C_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
-        "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
-        "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
+        "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
       ],
-      "privacy": "V30 current public path repaired, historical exposure not erased; private research reference only",
-      "qaRouting": "LOW selfQA+CI direct; HIGH 06A/06B; RELEASE 06C; legacy 06 retired"
+      "after": [
+        "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
+        "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
+        "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+        "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
+        "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
+        "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
+        "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
+        "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
+      ],
+      "ownerActivation": "STREAM_ID_ONLY_PER_OWNER_MINIMAL_ACTIVATION_DECISION_20261113",
+      "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+      "ciHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+      "scope": "V35 private research only; Svelte R3 isolated CI; no release/Writer activation"
     },
     "resumeCheckpoint20261113": {
       "task": "CTRL_POST_TIMEOUT_LIVE_RECONCILIATION",
@@ -7887,20 +7931,18 @@
       "developmentSwitch": "PENDING",
       "productionCutover": "PENDING",
       "nextReadyParallel": [
-        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
-        "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
-        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
         "05_NEXT_DISJOINT_SVELTE_SCOPE",
-        "06C_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
-        "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
-        "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
+        "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
       ],
       "nextAfterDep": [
-        "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
-        "00_V35_REFERENCE_ACCEPTANCE_AFTER_06C",
+        "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
+        "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
+        "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+        "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
+        "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
-        "06A_V301_ONLY_AFTER_EXACT_ORIGINALS",
         "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
         "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
       ],
@@ -8254,20 +8296,18 @@
         "five research deltas"
       ],
       "ready": [
-        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
-        "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
-        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
         "05_NEXT_DISJOINT_SVELTE_SCOPE",
-        "06C_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
-        "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
-        "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
+        "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
       ],
       "wait": [
-        "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
-        "00_V35_REFERENCE_ACCEPTANCE_AFTER_06C",
+        "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
+        "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
+        "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+        "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
+        "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
-        "06A_V301_ONLY_AFTER_EXACT_ORIGINALS",
         "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
         "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
       ],
@@ -8361,20 +8401,18 @@
         }
       },
       "ready": [
-        "07_R4_PRIVATE_GENUINE_WRITER_EXISTING_SCOPE",
-        "06B_LOCALIZATION_R1_EXISTING_IN_FLIGHT",
-        "06B_SVELTE_R2_FIXED_COMPILED_SCOPE_DISJOINT_READY",
+        "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+        "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
         "05_NEXT_DISJOINT_SVELTE_SCOPE",
-        "06C_V35_FIXED_615_RESEARCH_REFERENCE_SCOPED_QA",
-        "08_UNRESOLVED_NATIVE_SELECTOR_FALLBACK_VERSION_EVIDENCE",
-        "01_02_EXACT_V301_REMAINING_SOURCE_LOCATORS"
+        "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
       ],
       "after": [
-        "06A_R4_INDEPENDENT_EXECUTION_AFTER_07_FIXED",
-        "05_LOCALE_ADAPTER_AFTER_06B_ACCEPTED_CONTRACT",
-        "00_V35_REFERENCE_ACCEPTANCE_AFTER_06C",
+        "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
+        "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
+        "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+        "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
+        "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
         "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
-        "06A_V301_ONLY_AFTER_EXACT_ORIGINALS",
         "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
         "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
       ],
@@ -8590,7 +8628,7 @@
     "svelteR3CI": {
       "task": "SVELTE_R3_FIXED_ISOLATED_CI",
       "owner": "00 CTRL",
-      "status": "CI_IN_FLIGHT",
+      "status": "DONE_FIXED_R3_COMPILE_CHECK_BUILD_CHROMIUM_PASS",
       "sourceHead": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
       "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
       "branch": "web05/svelte-category-grid-r3",
@@ -8598,7 +8636,48 @@
       "next": "06B high-risk R3 scoped QA after fixed CI",
       "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
       "run": 43381925291,
-      "job": 131741430773
+      "job": 131741430773,
+      "ci": "SUCCESS",
+      "verified": {
+        "tests": 58,
+        "newTests": 15,
+        "r2Regression": 43,
+        "fail": 0,
+        "checkErrors": 0,
+        "checkWarnings": 0,
+        "build": "PASS",
+        "lock": "8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd",
+        "navigationTransitions": 6,
+        "filterTransitions": 25,
+        "categoryDescriptionImageComparisons": 9,
+        "categoryFilterComparisons": 5,
+        "actualReferenceClickTransitions": 2,
+        "actualChromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "selectionEventsPerWidth": 2,
+        "filterRetention": true,
+        "unknownDistinct": true,
+        "overflow": false,
+        "pageErrors": 0,
+        "externalRequests": 0,
+        "scope": "Fixed isolated R3 synthetic fixture; legacy renderCollections VM synthetic sinks; actual built Vite HTTP Chromium; no production binding or Save; mapped image load failure not tested"
+      },
+      "unverified": [
+        "06B independent fixed R3 scope acceptance",
+        "actual product controller/catalog/media binding",
+        "mapped image load failure actual browser",
+        "full Svelte/JS parity and Rust adapter"
+      ],
+      "handoff": {
+        "to": [
+          "06B QA-WEB-LOCALE",
+          "05 WEB"
+        ],
+        "condition": "06B R3 fixed code + CI; no R1/R2 repeat; 05 next disjoint owned UI scope if READY; no main merge/deploy"
+      }
     },
     "v35Acceptance": {
       "task": "V35_FIXED_REFERENCE_ACCEPTANCE",
