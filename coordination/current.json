@@ -7927,10 +7927,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT_ACCOUNT_NATIVE_PRIOR_SCOPES_RECORDED",
+      "status": "PARTIAL_WEB_R4_SWITCH300_ACCOUNT_NATIVE_PASS_LOCALE_CONSUMER_TRUE_RED",
       "task": "WEB_R4_LOCALE_CONSUMER_SWITCH300_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 direct consume isolated Web R4 and Switch300 versioned identity; 05 READY repair Locale Consumer R1 TRUE_RED; 08 account-native in-flight or next fixed HIGH; 00 fixed repair CI after 05; 06B focused re-QA after repair, no repeat accepted scopes",
+      "next": "05 direct consume isolated Web R4 + Switch300 identity + account native boundary; 05 repair Locale Consumer R1 TRUE_RED; 08 continue new fixed HIGH native locale or catalog gaps only; 00 fixed repair CI after 05; 06B focused re-QA after repair/new fixed HIGH scope",
       "dependency": "Only Locale Consumer R1 blocked by reproducible reentrant close; isolated R4 and Switch300 acceptance independent; JS Beta unaffected",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -8204,6 +8204,10 @@
         "localeConsumer": {
           "status": "WAIT_DEP",
           "condition": "05 fixed reentrant commit repair, 00 scope-pinned CI, then 06B independent focused re-test"
+        },
+        "accountNative": {
+          "status": "DONE_STATIC_SCOPED_PASS",
+          "sourceSha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89"
         }
       },
       "catalogClaims": {
@@ -8442,9 +8446,51 @@
       },
       "accountNativeClaim": {
         "claim": "20261113_06B_ACCOUNT_NATIVE_BOUNDARY",
-        "status": "IN_FLIGHT",
+        "status": "DONE_STATIC_SCOPED_PASS",
         "source": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
         "scope": "2 versions 8 backend method +2 getter ranges, independent native decode and account identity boundary only"
+      },
+      "accountNative": {
+        "status": "DONE_STATIC_SCOPED_PASS",
+        "sourceSha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
+        "manifestSha256": "90c88ef3bea284b16a004f2cd708f5e4ea19bd9691f6d1ea622cfe12ea52a897",
+        "witnessSha256": "ff0daee741087712db20a06a9da58ae0cfd6d3777330fef339d7020bfdbe43be",
+        "verified": {
+          "versions": 2,
+          "backendRanges": 8,
+          "getterRanges": 2,
+          "decodedBranchTargets": 64,
+          "independentNegativeChecks": 24,
+          "producerRepro": "BYTE_EXACT",
+          "basePins": 6,
+          "unchanged": 95,
+          "accountRows": 31,
+          "titlePresent": 13,
+          "titleAbsent": 18,
+          "descriptionAbsent": 31,
+          "typedVersionDelta": 0,
+          "oracle": "raw word/ADRP/LDR/branch direct decoding, independent of producer objdump oracle",
+          "normalReturn": "Task.CompletedTask"
+        },
+        "unverified": [
+          "runtime factory binding and other presentation/provider paths",
+          "physical game observation, native locale-code literals and missing-key sentinel",
+          "online platform sync or write permission"
+        ],
+        "handoff": {
+          "recipient": [
+            "05 WEB",
+            "08 LOCALIZATION"
+          ],
+          "status": "READY",
+          "condition": "Static name provenance only; exact 13 title refs, explicit absent 18 title/31 description refs, platform-specific names UNVERIFIED; no guessed names or write authority"
+        },
+        "evidence": {
+          "file": "HKIA_06B_ACCOUNT_NATIVE_BOUNDARY_INDEPENDENT_QA_20261113.zip",
+          "sha256": "11ef5fe659d10f66d7d63a11cd0c7816497f5a934a3580eecff2a3db94126169",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
+        }
       }
     },
     "06C_QA_RELEASE": {
