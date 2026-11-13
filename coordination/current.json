@@ -16000,7 +16000,7 @@
       "owner": "00 CTRL",
       "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
       "risk": "RELEASE",
-      "status": "SELF_PASS_REMOTE_FIXED_06C_READY",
+      "status": "PREDEPLOY_INDEPENDENT_PASS_WAIT_OWNER_EXACT_APPROVAL",
       "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
       "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
       "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -16022,7 +16022,7 @@
       },
       "verified": "Private V30/V33 manifests and V31/V32/V33 delta ZIP exact SHA/CRC; 6 cumulative paths exact target size/SHA, 4140 unchanged; 6 Git blob pins plus manifest exact; Git compare 7 MOD including metadata, no other changes; prior V33 combined independent acceptance reused, no new live deployment.",
       "visibility": "28 exact recipe existing-row preview/receipt scopes on compatible loaded save; no-save top screen unchanged; not functional Beta or Svelte product binding.",
-      "next": "06C P0 fixed artifact + PR12 independent review; 00 merge/dispatch after scoped PASS and explicit Owner fixed approval. 05 Svelte root parallel.",
+      "next": "Owner explicit V33 fixed OFF artifact approval required before PR12 merge/manual deployment. No Writer change. 06C live HTTPS after deploy.",
       "ci": {
         "branch": "ctrl/pages-v33-off-verify-20261113",
         "head": "eaad3e68d23c75a124521cf60d15c15f51f71870",
@@ -16053,7 +16053,7 @@
       "handoff": {
         "to": "06C QA-RELEASE",
         "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
-        "status": "READY",
+        "status": "DONE_ACCEPTED",
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "base": "b7e91df1e456ded1b50b4649797bf1b7df216717",
@@ -16062,7 +16062,7 @@
       },
       "workflowPinPreparation": {
         "task": "V33_MANUAL_OFF_WORKFLOW_PIN_ONLY",
-        "status": "DONE_DRAFT_PR_FIXED_06C_READY",
+        "status": "DONE_06C_ACCEPTED_WAIT_OWNER",
         "baseHead": "7df956fa51284dc34fa8a5e7ca50629b046a4c82",
         "baseBlob": "8b8bd314589572743b93d133632ebc6dc8395c85",
         "scope": "One existing manual-only Pages workflow: add exact V33 commit+manifest+source as third permitted OFF target. Preserve V30/V29, all policy checks and workflow_dispatch/main-only. Draft PR, no merge or dispatch until independent acceptance and Owner approval.",
@@ -16070,8 +16070,93 @@
         "pr": 12,
         "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
         "blob": "75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5",
-        "verified": "Exact 4 line V33 pin additions/substitution only; V30/V29 rollback and manual dispatch/main-only/permissions/verifyDist unchanged; actual PR draft/head readback. No merge/deploy."
+        "verified": "Exact 4 line V33 pin additions/substitution only; V30/V29 rollback and manual dispatch/main-only/permissions/verifyDist unchanged; actual PR draft/head readback. No merge/deploy.",
+        "liveMergeability": {
+          "raw": "clean",
+          "mergeable": true,
+          "normalizedConnector": false,
+          "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
+          "observedMain": "b0880b9f0810019f4e1393b94abf595dc40517d1",
+          "scope": "Raw REST mergeable true, normalized draft false; no merge before approval; recheck at merge"
+        }
+      },
+      "acceptance": {
+        "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_V33_OFF_ROOT",
+        "run": 43424957254,
+        "job": 131884002261,
+        "evidence": {
+          "commit": "099eb5e0004afcae56e15f19e9f23a8b954d866f",
+          "blob": "5f7cf9964b0b3fcea89c73725c1bc0da34fb0a00",
+          "path": "qa/06c/v33-off-root-20261113-result.json",
+          "readback": "EXACT",
+          "scope": "PUBLIC_SAFE_NO_RAW_SAVE_QA_BRANCH_ONLY; run logs pinned"
+        },
+        "pr": {
+          "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
+          "workflowBlob": "75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5",
+          "mainWorkflowBlob": "ea3b177631999431e856967f8e45a214be0442ba",
+          "scope": "one file; exact expected 4-line pin additions/replacement; manual dispatch/main-only existing V30/V29 gates unchanged",
+          "gateBlob": "43a49327f26ce2b49e993387a27ab12cb54a691a",
+          "mergeable": "NOT_OBSERVED_NULL",
+          "merged": false
+        },
+        "verified": {
+          "artifactFilesEach": 4146,
+          "modified": 6,
+          "unchanged": 4140,
+          "webpUnchanged": 4076,
+          "changedPaths": [
+            "native-product/api.mjs",
+            "native-product/dev-output-policy.mjs",
+            "scripts/research/save-native-schema-reader.mjs",
+            "scripts/research/save-transaction-engine.mjs",
+            "src/app.js",
+            "src/native-preview-ui.js"
+          ],
+          "policy": "PASS",
+          "reconstruct": "EXACT_MAP_WITH_ALL_BYTES_VERIFIED",
+          "rollback": "EXACT_V30_MAP_WITH_ALL_BYTES_VERIFIED",
+          "localHTTPSubpath": "PASS",
+          "pathDenials": 8,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "recipeRequestShapesPerWidth": 28,
+          "recipeNegativeCasesPerWidth": 112,
+          "capabilityCasesPerWidth": 4,
+          "writer": "OFF",
+          "webCryptoKnownAnswer": "PASS",
+          "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+          "pageErrors": 0,
+          "externalRequests": 0,
+          "downloads": 0
+        }
       }
+    },
+    "productTabsCI": {
+      "task": "SVELTE_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "b0880b9f0810019f4e1393b94abf595dc40517d1",
+      "baseBlob": "dde33e394af6ac6edeaa97a9f896b0719664a036",
+      "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
+      "sourceParent": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+      "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "baseManifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+      "scope": "One new branch-only workflow, exact 10 bridge additions, 132 unit + compile/check/build + actual fixed V30 browser. No deploy, source or flags changes; V33 app preimage differs and will require 05 rebind before root composition."
+    },
+    "v40Acceptance": {
+      "task": "V40_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "risk": "LOW_LEDGER_ONLY",
+      "status": "IN_FLIGHT",
+      "baseHead": "b0880b9f0810019f4e1393b94abf595dc40517d1",
+      "baseBlob": "dde33e394af6ac6edeaa97a9f896b0719664a036",
+      "source": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+      "scope": "Record exact 06C accepted V40 research reference only, V39 retained; no distribution change."
     }
   },
   "formalRelease": {
@@ -16119,7 +16204,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "V33 exact incremental root staged; 00 self-QA CI then 06C scoped distribution and fixed manual Owner gate; 05 product binding independent. V30 currently live.",
+      "next": "Owner explicit V33 fixed OFF artifact approval required before PR12 merge/manual deployment. No Writer change. 06C live HTTPS after deploy.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -16514,10 +16599,10 @@
         "instructionsBlob": "302b26a040cf4611b815118a9d566f19173667d0",
         "characters": 7991,
         "ownerDecisionDate": "2026-11-13",
-        "latestEligible": "V33_FIXED_ROOT_SELF_PASS_06C_READY",
+        "latestEligible": "V33_FIXED_OFF_ROOT_PREDEPLOY_SCOPED_PASS_WAIT_OWNER",
         "lastActualDeployment": 43342655323,
         "latestCandidate": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-        "pending": "06C V33 fixed distribution acceptance; pinned manual workflow review and Owner approval; 05 Svelte parallel"
+        "pending": "OWNER_EXPLICIT_V33_FIXED_ARTIFACT_APPROVAL_THEN_MANUAL_DEPLOY; 05 product tabs CI parallel"
       },
       "targetLive": {
         "status": "SELF_PASS_NEW_HOST_FIXED_V30_NO_DEPLOY",
