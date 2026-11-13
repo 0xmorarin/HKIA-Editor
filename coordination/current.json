@@ -702,6 +702,15 @@
         "gameAccepted": false,
         "productAuthorized": false,
         "next": "06 independent scoped QA; 01 exact Switch definition bundle/source identity; 03 after concrete exact six trigger evidence or 06 counterexample; 04 WAIT exact accepted contract"
+      },
+      "recipe6Switch300Causal": {
+        "task": "RECIPE6_SWITCH300_PROVIDER_TO_PERSISTENCE_CAUSAL",
+        "status": "IN_FLIGHT",
+        "owner": "03 LINKAGE",
+        "baseHead": "1b77761cb736869486adae0453e03b8534aef926",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Exact six Switch300 Recipe/Food identities; cooking completion -> recipe inventory/history/counters/achievement/reward; reuse accepted allocator/provider, no 01 acquisition overlap; research contract only",
+        "dependency": "06 result 4ee8e55fd5b2784a6c964acc27552f5f4374c306c4210dfec01fd4d6058a47f3; exact Switch300 serial 673938d0517178f330931f5d1b1d5fc26cbe7c8ca526798b65529817038bc77d"
       }
     },
     "04_SAVE_CORE": {
