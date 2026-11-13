@@ -11670,6 +11670,17 @@
       "scope": "Explicit 00 disjoint foundation capacity work on new isolated branch, keep accepted R5.1 source/PR9/artifact frozen. Profile decode/index/Writer transient memory; bounded byte-range/lazy or chunked indexing and avoid redundant whole-buffer copies; implement smallest measured safe improvement, not new edit semantics. 07 owns crates/hkia-save-core/**, tests/rust/** and contracts/rust/** on new branch; no shared JS/UI/config/deploy edits. No unconditional raise limits; retain current default acceptance bounds until measured replacement independently approved. Compare 1/5/10/25/45 MiB and target 64/128 MiB/2M docs via separately guarded experimental profile if safe, checked arithmetic, memory and node/depth/cpu budgets, pathological shape controls, exact parity/rollback. Synthetic public CI only; genuine private; actual browser resource comparison separate. Deliver fixed Source/Delta/Manifest, self-QA and 06A scoped acceptance before any capacity change; preserve R5.1 genuine browser gate.",
       "dependency": "06A current defensive bounds independently accepted; no genuine Chrome prerequisite for isolated foundation work",
       "acceptance": "Measured improvements vs exact R5.1 baseline, no old accepted safety regression; unknown/rejected targets explicitly reported; 06A independent HIGH before 00 integration. No Development Switch, public enablement or new Writer capability."
+    },
+    "v38Research": {
+      "task": "V37_PLUS_DERIVED23_RECIPE6_RESEARCH_REFERENCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "baseSourceSha256": "87e96cc319cedd80d7a30e7c46ea40135c3c20abab724352b82085233000f5e2",
+      "sourceDeltas": [
+        "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+        "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62"
+      ],
+      "scope": "6+5 accepted research ADD only; V37 630 unchanged; no writer/deploy"
     }
   },
   "formalRelease": {
