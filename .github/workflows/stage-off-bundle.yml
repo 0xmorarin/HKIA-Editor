@@ -1,0 +1,86 @@
+name: HKIA fixed OFF artifact staging (no deploy)
+on:
+  push:
+    branches:
+      - ctrl/pages-off-transport-20261113
+    paths:
+      - .github/workflows/stage-off-bundle.yml
+permissions:
+  contents: write
+  pages: read
+concurrency:
+  group: hkia-off-bundle-stage
+  cancel-in-progress: false
+jobs:
+  reconstruct:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/ctrl/pages-off-transport-20261113'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify exact transport and restore fixed OFF refs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = 464a92472823e401983309465799063b1541f04a
+          test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
+          test "$(find parts -maxdepth 1 -type f | wc -l)" = 57
+          bundle="$RUNNER_TEMP/hkia-off.bundle"
+          for i in $(seq 0 56); do
+            printf -v part '%04d' "$i"
+            cat "parts/$part.bin"
+          done > "$bundle"
+          test "$(wc -c < "$bundle")" = 118292395
+          echo "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112  $bundle" | sha256sum -c -
+          git bundle list-heads "$bundle" | sort > "$RUNNER_TEMP/actual-heads"
+          printf '%s\n' '15cacf59a0c24a1124edb3741816d300794b4cdb refs/heads/pages-artifacts/off-v29-20261113' 'b7e91df1e456ded1b50b4649797bf1b7df216717 refs/heads/pages-artifacts/off-v30-20261113' | sort > "$RUNNER_TEMP/expected-heads"
+          diff -u "$RUNNER_TEMP/expected-heads" "$RUNNER_TEMP/actual-heads"
+          repo="$RUNNER_TEMP/hkia-off.git"
+          git clone --bare "$bundle" "$repo"
+          git -C "$repo" fsck --full
+          for target in v29 v30; do
+            case "$target" in
+              v29) commit=15cacf59a0c24a1124edb3741816d300794b4cdb; manifest=859ea9296451be21ec114b0087542e9a6f477d96f486125c02660cff3ccd963d; source=aedb4cf63f7af9e7b95de684201b8bfe8ef3d421cf1ca98c724aa5f4ea385de0 ;;
+              v30) commit=b7e91df1e456ded1b50b4649797bf1b7df216717; manifest=564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6; source=a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a ;;
+            esac
+            ref="refs/heads/pages-artifacts/off-$target-20261113"
+            test "$(git -C "$repo" rev-parse "$ref")" = "$commit"
+            git -C "$repo" ls-tree -r --name-only "$commit" | python -c 'import sys; p=sys.stdin.read().splitlines(); assert len(p)==4147 and p.count("site-manifest.json")==1 and all(x=="site-manifest.json" or x.startswith("site/") for x in p)'
+            git -C "$repo" worktree add --detach "$RUNNER_TEMP/$target" "$commit"
+            TARGET_DIR="$RUNNER_TEMP/$target" MANIFEST="$manifest" SOURCE="$source" python - <<'PY'
+          import hashlib, json, os, pathlib
+          root=pathlib.Path(os.environ["TARGET_DIR"])
+          raw=(root/"site-manifest.json").read_bytes()
+          assert hashlib.sha256(raw).hexdigest()==os.environ["MANIFEST"]
+          m=json.loads(raw)
+          assert m["writer"]=="OFF" and m["sourceSha256"]==os.environ["SOURCE"]
+          assert m["entries"]==4146 and m["webp"]==4076 and m["modules"]==55
+          site=root/"site"
+          files={p.relative_to(site).as_posix():p for p in site.rglob("*") if p.is_file()}
+          assert set(files)==set(m["files"]) and len(files)==4146
+          assert sum(p.suffix.lower()==".webp" for p in files.values())==4076
+          for path,p in files.items():
+              assert not p.is_symlink()
+              b=p.read_bytes(); v=m["files"][path]
+              assert len(b)==v["bytes"] and hashlib.sha256(b).hexdigest()==v["sha256"],path
+          print("PASS: exact OFF manifest and 4146 file hashes")
+          PY
+          done
+          git -C "$repo" remote set-url origin "https://github.com/$GITHUB_REPOSITORY.git"
+          git_auth() { git -C "$repo" -c credential.helper= -c 'credential.helper=!gh auth git-credential' "$@"; }
+          pending=()
+          for pair in '15cacf59a0c24a1124edb3741816d300794b4cdb:refs/heads/pages-artifacts/off-v29-20261113' 'b7e91df1e456ded1b50b4649797bf1b7df216717:refs/heads/pages-artifacts/off-v30-20261113'; do
+            commit="${pair%%:*}"; ref="${pair#*:}"
+            actual="$(git_auth ls-remote --heads origin "$ref" | cut -f1)"
+            if [[ -z "$actual" ]]; then pending+=("$pair"); else test "$actual" = "$commit"; fi
+          done
+          test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
+          if (( ${#pending[@]} )); then git_auth push --atomic origin "${pending[@]}"; fi
+          for pair in '15cacf59a0c24a1124edb3741816d300794b4cdb:refs/heads/pages-artifacts/off-v29-20261113' 'b7e91df1e456ded1b50b4649797bf1b7df216717:refs/heads/pages-artifacts/off-v30-20261113'; do
+            commit="${pair%%:*}"; ref="${pair#*:}"
+            test "$(git_auth ls-remote --heads origin "$ref" | cut -f1)" = "$commit"
+          done
+          echo "PASS: both pinned remote OFF artifact refs restored; no deployment"
