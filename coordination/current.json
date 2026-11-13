@@ -8590,23 +8590,52 @@
     "svelteR3CI": {
       "task": "SVELTE_R3_FIXED_ISOLATED_CI",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "CI_IN_FLIGHT",
       "sourceHead": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
       "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
       "branch": "web05/svelte-category-grid-r3",
       "scope": "Workflow only; fixed lock, 58 Node tests, compile/check/build, three reference and Chromium scripts; no deployment",
-      "next": "06B high-risk R3 scoped QA after fixed CI"
+      "next": "06B high-risk R3 scoped QA after fixed CI",
+      "head": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
+      "run": 43381925291,
+      "job": 131741430773
     },
     "v35Acceptance": {
       "task": "V35_FIXED_REFERENCE_ACCEPTANCE",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "DONE_V35_PRIVATE_RESEARCH_REFERENCE_ACCEPTED",
       "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
       "qaResult": {
         "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
         "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
       },
-      "scope": "Accept exact 615 private research reference only, no product or distribution change"
+      "scope": "Accept exact 615 private research reference only, no product or distribution change",
+      "verified": {
+        "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "manifest": "2318c84b9588473e2ff8c6492cf44bf44a831851ff00d9939921824698114004",
+        "artifactManifest": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+        "result": {
+          "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
+          "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+        },
+        "zip": {
+          "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
+        },
+        "readback": "FIVE_FILES_RAW_SHA_MATCH; BOTH_ZIP_CRC_PASS",
+        "scope": "06C SCOPED_PASS 615 source; 33 ADD; 106 tests; four negatives; build map 55 exact; 4146 prior map exact; media not rehashed; rollback exact 582; no new writer/deploy"
+      },
+      "handoff": {
+        "to": "01/02/03/04/07 and 05 as reference consumers",
+        "condition": "Use exact accepted V35 research paths only; existing formal integration candidate/product and V24/V30 unchanged"
+      }
+    },
+    "betaBrowserEnvironmentCheck": {
+      "task": "V24_AUTHORIZED_LOCAL_BROWSER_ENV_PROBE",
+      "owner": "00 CTRL",
+      "status": "WAIT_ENV_ADMINISTRATOR_BLOCK",
+      "verified": "Chromium executable and Playwright installed; browser launch succeeds; ordinary localhost HTTP navigation denied net::ERR_BLOCKED_BY_ADMINISTRATOR; no genuine Save opened; no policy bypass",
+      "next": "06C needs authorized private browser with normal HTTP/HTTPS and actual Module Worker/WebCrypto; public CI synthetic only; no upload of genuine Save"
     }
   },
   "formalRelease": {
@@ -9142,7 +9171,7 @@
       "noDeployAuthorization": true
     },
     "researchReference": {
-      "label": "V35_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_PENDING",
+      "label": "V35_PRIVATE_RESEARCH_REFERENCE_OFF_ACCEPTED",
       "file": "HKIA_CTRL_V35_ResearchReference_20261113_Source.zip",
       "sha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
       "entries": 615,
@@ -9176,9 +9205,21 @@
         "flags": "OFF",
         "reconstruct": "EXACT_ACCEPTED_V34_FULL_MAP_REUSED; V34/V35_SOURCE_BUILD_55_FILES_BYTE_EXACT; EXTERNAL_MEDIA_NOT_REHASHED"
       },
-      "acceptance": "06C_FIXED_SUCCESSOR_SCOPED_QA_READY",
+      "acceptance": "SCOPED_PASS_V35_PRIVATE_RESEARCH_REFERENCE",
       "privateLibrary": "HKIA Editor Private",
-      "readback": "ALL_6_BYTE_EXACT_SHA_CRC_PASS"
+      "readback": "ALL_6_BYTE_EXACT_SHA_CRC_PASS",
+      "independentEvidence": {
+        "result": {
+          "file": "HKIA_06C_V35_SCOPED_QA_20261113_RESULT.json",
+          "sha256": "c1d39fbee4f8433bc51a6cb4d9e34ecce10f5128f831ba244281b3002a2a161c"
+        },
+        "zip": {
+          "file": "HKIA_06C_V35_SCOPED_QA_20261113_EVIDENCE.zip",
+          "sha256": "ae5e3781865b8f583b1c837a3191b8f6679f9d92740e43e8dbb23d15bc5e4c31"
+        },
+        "readback": "BOTH_EXACT_SHA_CRC_PASS",
+        "privateLibrary": "HKIA Editor Private"
+      }
     },
     "localization": {
       "ownerDecision": "OWNER_LOCALIZATION_DECISION_20261113",
