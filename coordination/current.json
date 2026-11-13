@@ -5753,7 +5753,23 @@
         "06_MINIMUM_RUST_FOUNDATION_AFTER_FIXED_PIPELINE",
         "00_DEVELOPMENT_SWITCH_AFTER_06",
         "00_PRODUCTION_CUTOVER_AFTER_FULL_QA_AND_OWNER_APPROVAL"
-      ]
+      ],
+      "dependencyUnblock": {
+        "task": "SVELTE_RUST_DEPENDENCY_UNBLOCK",
+        "status": "IN_FLIGHT",
+        "owner": "00 CTRL",
+        "baseMain": "8ed5f3303e3ead03de03bb08ae4343db77e813f9",
+        "scope": "Nondeploy branch-only CI PR6 and exact code-only Rust R2 binary artifact PR5; no product source or live flags",
+        "pr6": {
+          "base": "fa18063330558e188e947c44843f7a3c6870559e",
+          "status": "IN_FLIGHT"
+        },
+        "pr5": {
+          "base": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
+          "status": "IN_FLIGHT"
+        },
+        "next": "Verify exact branch CI and artifact; handoff 05 and 07 directly; 06 independent QA; no main product merge"
+      }
     }
   },
   "formalRelease": {
