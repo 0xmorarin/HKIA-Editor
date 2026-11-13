@@ -6683,13 +6683,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "DONE_SCOPED_R5_1_REPAIR_FIXED_NODE_RESOURCE_WAIT_ENV_BROWSER",
-      "task": "R5_1_REPLY_INTEGRITY_FIXED_ARTIFACT_RESOURCE_SCOPED_QA",
+      "status": "IN_FLIGHT_THREE_RESEARCH_SCOPES",
+      "task": "DERIVED23_RECIPE6_STATION_V301_MARKER_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
       "next": "R5.1 repair, fixed new WASM Node genuine, and existing defensive resource bounds all independently accepted scoped. 07 genuine Chrome WAIT_ENV only; 06A wait authorized actual Browser self-QA or new fixed HIGH scope. No duplicate Node or resource QA.",
       "dependency": "AUTHORIZED_PRIVATE_REAL_CHROME_ENVIRONMENT; 07_FIXED_BROWSER_GENUINE_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "8782b55ad96ff617c2f8af8e79fef041dfaff3bf",
+      "baseHead": "53f3c7e53b6a22f0ec20ea92fd9a831bb90e76ee",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -6835,16 +6835,21 @@
       },
       "activeClaims": [
         {
-          "task": "R5_1_REPLY_INTEGRITY_INDEPENDENT_QA",
-          "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
-          "status": "DONE_SCOPED_PASS_REPLY_REPAIR_AND_FIXED_ARTIFACT_NODE_GENUINE",
+          "task": "SWITCH300_301_MISSING_DERIVED23_INDEPENDENT_QA",
+          "source": "90a728f0458e50f5ea97b8df0f455a4e4a2399b58d01ad096f093a9984ac29fb",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         },
         {
-          "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
-          "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
-          "evidenceSha256": "0c815f3fcaf76790001216587eb241c7d2b111892793548bd0d3e044aa160cd5",
-          "status": "DONE_SCOPED_PASS_EXISTING_DEFENSIVE_BOUNDS",
+          "task": "SWITCH300_RECIPE6_EXACT_STATION_CONSUMER_SOURCE_INDEPENDENT_QA",
+          "source": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH"
+        },
+        {
+          "task": "BETA_V301_NATIVE_MARKER_METADATA_CHAIN",
+          "source": "db532cb75fd83da38a9a2e69cc8854808a9719440e42fa923234acc53b02fb14",
+          "status": "IN_FLIGHT",
           "risk": "HIGH"
         }
       ],
