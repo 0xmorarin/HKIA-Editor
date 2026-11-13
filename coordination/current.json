@@ -7969,11 +7969,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT_WEB_R5",
-      "task": "WEB_R4_LOCALE_CONSUMER_SWITCH300_INDEPENDENT_QA",
+      "status": "PARTIAL_WEB_R5_AND_LOCALE_CONSUMER_TRUE_RED",
+      "task": "WEB_R5_COLLECTION_DETAIL_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 direct consume isolated Web R4 + Switch300 identity + account native boundary; 05 repair Locale Consumer R1 TRUE_RED; 08 continue new fixed HIGH native locale or catalog gaps only; 00 fixed repair CI after 05; 06B focused re-QA after repair/new fixed HIGH scope",
-      "dependency": "Only Locale Consumer R1 blocked by reproducible reentrant close; isolated R4 and Switch300 acceptance independent; JS Beta unaffected",
+      "next": "05 disjoint repair R5 collection detail and Locale Consumer R1 reentrant close; 08 new fixed HIGH scope only; 00 fixed repair CI as available; 06B focused re-QA or next fixed HIGH; no repeat accepted scopes",
+      "dependency": "Two isolated TRUE_RED: R5 Collection adapter postcondition, Locale Consumer R1 reentrant close; JS Beta/accepted R4 and Locale unaffected",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -8250,6 +8250,11 @@
         "accountNative": {
           "status": "DONE_STATIC_SCOPED_PASS",
           "sourceSha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89"
+        },
+        "webR5": {
+          "status": "WAIT_DEP",
+          "head": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+          "condition": "05 R5 scoped postcondition repair then 00 fixed CI + 06B focused independent QA"
         }
       },
       "catalogClaims": {
@@ -8536,10 +8541,65 @@
       },
       "webR5Claim": {
         "claim": "20261113_06B_WEB_R5",
-        "status": "IN_FLIGHT",
+        "status": "TRUE_RED",
         "source": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
         "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
         "scope": "R5 changed model and behavior, exact fixed evidence"
+      },
+      "webR5": {
+        "status": "TRUE_RED",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+        "sourceSha256": "d04f51443a68f2c79a1e58c12a4b505d92839d3b19e3a856be3a15a50ad2b5f2",
+        "deltaSha256": "7ac84e6442b8385c0cbc0ee944bc047e76755ecb4b938fb597312bc2a4354038",
+        "manifestSha256": "3d836153753ac48273913988494b5f12f121f517edfb2a4bab736c830cf5c8fd",
+        "run": 43393283523,
+        "job": 131778074614,
+        "verified": {
+          "exactManifestEntries": 45,
+          "exactDeltaEntries": 8,
+          "exactRemoteBlobs": 9,
+          "compare": "8 R5 paths + 1 workflow",
+          "producerUnit": 86,
+          "producerFail": 0,
+          "independentPass": 5,
+          "independentFail": 3,
+          "fixedCIBrowserWidths": [
+            320,
+            375,
+            1280
+          ]
+        },
+        "trueRed": {
+          "id": "COLLECTION_DETAIL_R5_POSTCONDITION_IDENTITY_STATE",
+          "path": "svelte-ui/src/collection-detail.ts",
+          "repro": [
+            "filter on selected 10200; injected binding selects 10199, total=0; success",
+            "inspect visible 10200 fixture-guid-0 recorded=true; injected selectedItem same id WRONG-GUID recorded=false; success",
+            "more from source sort 100/201; injected binding sets id sort 200/201, first row 10200->10000; success"
+          ],
+          "expected": "Filter retains selected identity even offscreen; inspect same visible identity/history; more retains filters and existing page prefix; reject violations",
+          "actual": "All 3 accepted without error; independent asserts fail missing expected exception",
+          "cause": "validateDetail selected row shape only; inspect postcondition checks numeric id only, filter omits selected identity, more omits filter/prefix",
+          "impact": "Synthetic injected-binding state/identity violation; normal fixture CI green, no actual product or save mutation observed",
+          "repair": "05 scoped repair collection-detail.ts and focused tests: immutable pre-operation identity/filter and visible prefix, reject contradictory inspector visible row, preserve hidden selection and filters; valid refresh separate; no whole dataset, no R4/locale changes",
+          "regression": "qa-r5-independent.test.mjs + qa-r5-actual-state.mjs; 86 existing tests and fixed compile/check/Chromium then 06B focused re-QA"
+        },
+        "unverified": [
+          "Independent compiled Browser rerun, actual controller/catalog/media binding, mapped image failures, product session/Writer/Rust parity"
+        ],
+        "handoff": {
+          "recipient": "05 WEB",
+          "task": "SVELTE_R5_COLLECTION_DETAIL_POSTCONDITION_REPAIR",
+          "status": "READY",
+          "condition": "Minimal fix 3 reproduced postcondition paths + regression; exact fixed successor to 00 CI, then 06B focused re-QA; R1-R4 and accepted locale unaffected"
+        },
+        "evidence": {
+          "file": "HKIA_06B_WEB_R5_INDEPENDENT_QA_20261113.zip",
+          "sha256": "29c1318a1035d2008c2cea351fb3d78e7e09af5b64d6d3a4c1adb7dc462e84e4",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
+        }
       }
     },
     "06C_QA_RELEASE": {
