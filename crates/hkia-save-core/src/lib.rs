@@ -87,3 +87,11 @@ pub fn read_slot(raw: &[u8]) -> Result<ReadSlot, Error> {
     let index = native::index_native(&envelope.decoded, envelope.version)?;
     Ok(ReadSlot { envelope, index })
 }
+
+pub mod digest;
+mod deflate;
+pub mod archive;
+pub mod account;
+pub mod session;
+pub mod abi;
+pub mod projection;
