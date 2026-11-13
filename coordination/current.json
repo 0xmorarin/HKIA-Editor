@@ -3799,9 +3799,10 @@
     "actualPagesPreviewOnly": true
   },
   "nextSerial": [
-    "V30 OFF Pages restored; CTRL live HTTPS 8 exact file hashes, seven denied404, redirect PASS. 06 independent deployment artifact/live QA READY; no Writer activation.",
-    "V33 fixed 5 source/2 dist path independent SCOPED PASS recorded; next formal scope only on new evidence.",
-    "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
+    "06 independent V30 fixed OFF live artifact and HTTPS/UI/rollback readiness QA; no Writer activation.",
+    "06 independent V33 new 01 historical Recipe6, 02 derived Visitor/Mission, 03 two causal research deltas; 00 serial integration only after acceptance.",
+    "07 R2 compile PASS; pin exact compiled source and private parity preparation, independent of JS Beta. 06 synthetic QA after fixed scope.",
+    "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED."
   ],
   "imageAssets": {
     "status": "PRIVATE_IMAGE_ASSETS_DELIVERED_UI_PENDING",
@@ -4613,15 +4614,15 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06_V30_LIVE_ARTIFACT_AND_NEW_01_02_SCOPED_QA",
-      "03_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_MISSION_CAUSAL",
-      "07_R2_PINNED_COMPILE_PASS_PRIVATE_PARITY_PREPARATION"
+      "06_V30_FIXED_LIVE_ARTIFACT_QA",
+      "06_V33_NEW_01_02_03_RESEARCH_SCOPED_QA",
+      "07_RUST_R2_COMPILED_SOURCE_PIN_AND_PRIVATE_PARITY_PREPARATION"
     ],
     "nextAfterDep": [
-      "04_AFTER_01_02_03_EXACT_ACCEPTANCE",
-      "05_AFTER_NEW_04_ACCEPTED_WRITER",
+      "00_SERIAL_FORMAL_RESEARCH_INTEGRATION_AFTER_06_ACCEPTANCE",
+      "04_ONLY_AFTER_V300_NATIVE_PRODUCER_AND_REWARD_CAUSAL_WITNESSES",
       "06_V24_AUTHORIZED_PRIVATE_BROWSER",
-      "00_SERIAL_INTEGRATION_AFTER_NEW_SCOPED_QA"
+      "06_RUST_R2_INDEPENDENT_SYNTHETIC_QA_THEN_PRIVATE_PARITY_IF_ENV"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -5291,6 +5292,31 @@
         "07 pinned public Rust CI PASS -> private parity preparation"
       ],
       "privacy": "No raw Save or private research inputs in transport or CI; historical legacy exposure not erased"
+    },
+    "resumeCheckpoint20261113": {
+      "task": "CTRL_POST_TIMEOUT_LIVE_RECONCILIATION",
+      "status": "DONE_VERIFIED_EXISTING_DEPLOY_AND_RUST_CI_HANDOFF",
+      "baseHead": "c0cb2c7620a2e84e70c8b49a5f25e8a54f707a96",
+      "baseLedgerBlob": "be7ee6f211c13ffe6f74db32c35c46796e32c5a0",
+      "verified": {
+        "pages": "PR3 merged; 57 exact chunks; V30/V29 manifest blobs read back; 43342655323 verify+deploy success; 43343120768 boundary success",
+        "rust": "PR5 head 034f7dbaeb5a029c12fb70ce432cf19178a8bc53; 43343089052 public-synthetic success; 39 tests and release build recorded",
+        "formal": "V33 accepted source 78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7"
+      },
+      "handoff": {
+        "qa": {
+          "live": "V30 b7e91df1e456ded1b50b4649797bf1b7df216717 + V29 15cacf59a0c24a1124edb3741816d300794b4cdb; exact artifact, actual HTTPS/no-save UI, privacy and rollback readiness",
+          "research": [
+            "1550cd6929e15634288567d84ae3d3f077b07fba3367b29eebb6d154d3657bbd",
+            "54a56a4419303ff70de5028f02702aae545132f666256e3849d4f500b764330b",
+            "872ce7ce052ea52766fd34e453f389c6941d836f70145773702d371c49e8b66f",
+            "c3c96df439363167780c72e537b882d40f654f1a7f62c6e53ec07b5dd24a962f"
+          ],
+          "condition": "Independent scope only; no product authorization; no private inputs in public CI."
+        },
+        "rust": "07 pin compiled R2, private parity local-only; 06 independently review synthetic fixed scope; no JS gate."
+      },
+      "limitations": "No fresh browser rendering or genuine game save execution; no live rollback executed; historical incident not erased; no stream auto-launch."
     }
   },
   "formalRelease": {
@@ -5503,7 +5529,7 @@
       "distributionRepair": {
         "status": "V30_FIXED_OFF_DEPLOY_AND_HTTPS_BOUNDARY_SMOKE_PASS_INDEPENDENT_QA_READY",
         "incidentRun": 43307905181,
-        "verdict": "LEGACY_ARTIFACT_PRIVACY_TRUE_RED_REPLACEMENT_PENDING",
+        "verdict": "LEGACY_EXPOSURE_HISTORICAL_NOT_ERASED; V30_FIXED_OFF_REPLACEMENT_DEPLOYED_CTRL_HTTPS_PASS_INDEPENDENT_QA_PENDING",
         "sourceProbe": {
           "pr": 4,
           "head": "8076133b37ca84cb859b039135ab494247d02d7a",
@@ -5547,12 +5573,12 @@
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
           "observed": "57/57 exact; staging CI PASS; fixed refs and manifests exact; PR3 merged; Pages verify/deploy SUCCESS; root+8 live file hashes exact; 7 internal paths HTTP404; HTTP->HTTPS PASS.",
           "next": "06 independent actual published artifact 4146 hashes/HTTPS/UI no-save and rollback readiness; V24 real private genuine Browser WAIT_ENV, game acceptance separate.",
-          "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
+          "lastCheck": "Remote V30/V29 exact commit manifest blobs re-read; PR3 merged; deploy run 43342655323 verify+deploy SUCCESS; HTTPS boundary run 43343120768 SUCCESS. No further transfer.",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
           "transportHead": "9b4ebcccd91831e18dfcdeb7ca16955e143e9b1c",
           "transportTree": "34c96ee4e94eb67895462e4a0d050d51c1a81b5c",
-          "verifiedPartCount": 2,
+          "verifiedPartCount": 57,
           "totalParts": 57,
           "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
           "transport": {
@@ -5639,8 +5665,8 @@
         "status": "OWNER_REITERATED_P0_RESTORE_VISIBLE_PAGES",
         "decision": "Restore independently accepted fixed V30 OFF visual distribution first; do not wait for formal V33, Rust, Svelte or functional Beta. Preserve manual artifact-only publishing, Writer OFF, existing privacy and rollback gates.",
         "execution": "Existing exact V30/V29 bundle stage on authenticated Git host; verify both remote refs then PR3 serial integration, manual workflow dispatch V30, 06 live HTTPS exact artifact and internal-path denial. No branch-root fallback.",
-        "observed": "Owner reports Site not found; current runtime cannot independently reach HTTPS or resolve github.com. PR3 still draft; fixed refs absent in last verified check. No new deployment.",
-        "parallel": "06 V33 combined QA already IN_FLIGHT; do not duplicate. Formal scope and functional Beta remain separate.",
+        "observed": "V30 exact OFF public deployment and CTRL HTTPS smoke PASS; independent QA remains READY. No branch-root fallback or Writer activation.",
+        "parallel": "06 live artifact and new formal research scoped QA READY; 07 public synthetic compile PASS, private parity independently READY_AFTER_ENV; no V24/Rust/Svelte wait for OFF Pages.",
         "kitUse": "Existing private kit check and stage only; accept-v30 obsolete because current formal candidate V33; never run it or reset ledger."
       }
     },
