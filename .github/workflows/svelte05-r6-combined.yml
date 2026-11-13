@@ -1,0 +1,58 @@
+name: HKIA Svelte R6 and R5 repair fixed combined compile and browser
+on:
+  push:
+    branches:
+      - web05/svelte-achievement-detail-r6-repaired-r5
+permissions:
+  contents: read
+concurrency:
+  group: hkia-svelte-r6-combined
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-achievement-detail-r6-repaired-r5'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed combined source and lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 2924eaa2b51968e50f22a97524b2f8d308ad1931 HEAD
+          test "$(git diff --name-only 2924eaa2b51968e50f22a97524b2f8d308ad1931 HEAD)" = .github/workflows/svelte05-r6-combined.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          sha256sum package-lock.json
+      - name: Unit compile and legacy reference parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check -- --fail-on-warnings
+          node --experimental-strip-types scripts/verify-legacy-port.mjs ..
+          node --experimental-strip-types scripts/verify-filter-reference.mjs ..
+          node --experimental-strip-types scripts/verify-category-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-reference.mjs ..
+          node --experimental-strip-types scripts/verify-collection-detail-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-detail-reference.mjs ..
+          npm run build
+      - name: Actual built Vite Chromium regression and R6 parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-parity.py dist
+          python3 scripts/browser-filter-parity.py dist
+          python3 scripts/browser-category-parity.py dist
+          python3 scripts/browser-achievement-parity.py dist
+          python3 scripts/browser-collection-detail-parity.py dist
+          python3 scripts/browser-achievement-detail-parity.py dist
