@@ -7569,7 +7569,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "IN_FLIGHT",
+      "status": "PARTIAL",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -7582,7 +7582,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B existing Switch300/WebR4/locale consumer claims IN_FLIGHT; no duplicate. New Account Native boundary scoped QA READY separate SHA. 05 accepted R1/R2/R3/R4 catalog scopes and existing consumer QA; version lookup after 06B exact Switch300 PASS; Account provenance after relevant scoped PASS. 08 remaining native locale-code literal/missing sentinel and future fixed UI keys; no repeat. Source recovery direct private evidence available 01/02/03/06A; respective claims unchanged.",
+      "next": "06B new R5-R7 catalog scoped QA READY; 05 accepted version lookup/account boundary and existing accepted locale consumer; 00 product binding CI existing claim. 08 remaining native locale-code literal/missing sentinel and dynamic UI keys after fixed product source. No repeated prior QA.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -7652,14 +7652,21 @@
         "accountNativeNegativeChecks": 24,
         "accountNativeTitleRefs": 13,
         "accountNativeAbsentTitleRefs": 18,
-        "accountNativeAbsentDescriptionRefs": 31
+        "accountNativeAbsentDescriptionRefs": 31,
+        "r5r7Catalogs": 15,
+        "r5r7CatalogKeysEach": 189,
+        "r5r7NewTranslationCells": 1245,
+        "r5r7PriorCellsUnchanged": 1590,
+        "r5r7CombinedTests": "71 PASS / 0 FAIL",
+        "switch300Independent": "DONE_STATIC_NODE_SCOPED_PASS",
+        "accountNativeIndependent": "DONE_STATIC_SCOPED_PASS"
       },
       "unverified": [
         "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
-        "Legacy static render-site inventory fixed (827 candidate sites), actual visibility/dynamic dataflow and semantic key binding not complete; future UI beyond R4",
         "05 actual locale adapter integration and 00 distribution allowlist",
         "Native-speaker linguistic review; actual browser/session invariance; full product UI coverage",
-        "Account runtime factory/other provider/presentation and physical game UNVERIFIED; static boundary independent PASS"
+        "Account runtime factory/other provider/presentation and physical game UNVERIFIED; static boundary independent PASS",
+        "R5-R7 new catalog independent QA and actual product UI binding; dynamic producer text and complete product coverage unresolved"
       ],
       "handoff": {
         "to05": {
@@ -7699,6 +7706,11 @@
             "status": "READY",
             "dependency": "Exact independent scoped PASS; actual product binding separate",
             "scope": "Preserve explicit 13 title refs / 18 absent refs / 31 absent description refs. No inferred game names; other platform names UNVERIFIED; no sync capability."
+          },
+          "catalogR5R7": {
+            "status": "READY_AFTER_DEP",
+            "dependency": "06B fixed R5-R7 catalog scoped PASS; product binding separate",
+            "scope": "189 keys incl 83 additions; exact Svelte R5/R6/R7 accepted; preserve controller identity/session/decimal and dynamic producer text semantics"
           }
         },
         "to00": {
@@ -7796,6 +7808,19 @@
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
             "readbackVerified": true,
             "independentEvidenceSha256": "11ef5fe659d10f66d7d63a11cd0c7816497f5a934a3580eecff2a3db94126169"
+          },
+          "r5r7Catalog": {
+            "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
+            "status": "READY",
+            "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+            "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
+            "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+            "manifestSha256": "4f57e01af4464c95be3edf913a75381a744865cc36c0d6eb873b7b3010a8aa2e",
+            "scope": "83 new editor keys ×15 locales, 1245 cells; 1590 prior cells identical; fixed 8 Svelte source blobs at accepted 767decd9; 18 MOD 9 ADD, 90 composite paths unchanged incl 30 game packs, runtime unchanged",
+            "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
+            "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
+            "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+            "readbackVerified": true
           }
         },
         "sourceRecovery": {
@@ -8168,12 +8193,56 @@
       "r5r7": {
         "task": "EDITOR_CATALOG_R5_R6_R7_READONLY_SURFACES",
         "claim": "20261113_08_R5_R7_CATALOG",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
         "baseHead": "fc0da8fa4b375b08bc3eec8836fa812ffb9cf7b7",
         "risk": "HIGH_NEW_UI_KEY_CONTRACT",
         "scope": "Exact accepted R5/R6/R7 compiled source 767decd9; new editor strings only, preserve 106 keys and all game text; private additive catalog delta",
         "dependency": "R4 catalog and R5/R6/R7 exact accepted UI; no shared UI changes",
-        "sourceHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3"
+        "sourceHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "fixed": {
+          "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
+          "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+          "manifestSha256": "4f57e01af4464c95be3edf913a75381a744865cc36c0d6eb873b7b3010a8aa2e",
+          "scope": "83 new editor keys ×15 locales, 1245 cells; 1590 prior cells identical; fixed 8 Svelte source blobs at accepted 767decd9; 18 MOD 9 ADD, 90 composite paths unchanged incl 30 game packs, runtime unchanged",
+          "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
+          "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        },
+        "verified": {
+          "locales": 15,
+          "keysPerCatalog": 189,
+          "newKeys": 83,
+          "newCells": 1245,
+          "priorCellsUnchanged": 1590,
+          "sourceBlobs": 8,
+          "tests": 71,
+          "newTests": 17,
+          "fail": 0,
+          "regeneratedFiles": 17,
+          "unchangedCompositePaths": 90,
+          "gamePacksUnchanged": 30
+        },
+        "unverified": [
+          "06B semantic/source/linguistic acceptance",
+          "controller dynamic producer text, context-specific image SOURCE_NULL and other legacy UI binding, actual product browser and native speaker QA"
+        ],
+        "handoff": {
+          "task": "LOCALIZATION_R5_R7_EDITOR_CATALOG_SCOPED_QA",
+          "status": "READY",
+          "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+          "artifact": "HKIA_08_LOCALIZATION_R5_R7_CATALOG_20261113.zip",
+          "sha256": "0521b7c4e69288e0619a7d2dea749f1e365119bafc55a0a908c72090919afc02",
+          "manifestSha256": "4f57e01af4464c95be3edf913a75381a744865cc36c0d6eb873b7b3010a8aa2e",
+          "scope": "83 new editor keys ×15 locales, 1245 cells; 1590 prior cells identical; fixed 8 Svelte source blobs at accepted 767decd9; 18 MOD 9 ADD, 90 composite paths unchanged incl 30 game packs, runtime unchanged",
+          "dependency": "Accepted R4 catalog + fixed R5/R6/R7 UI; actual product binding separate",
+          "acceptance": "Independent semantic and source mapping review, all 83 keys/1245 additions, precise placeholders/ID/ticks/decimal, UNKNOWN/ABSENT/zero/null/reward distinctions, 17 new tests and 71 combined, 17 regenerated JSON exact; preserve accepted 106 keys and game data; no prior full QA repeat. Direct 05 on PASS.",
+          "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
+          "readbackVerified": true
+        }
       }
     },
     "06A_QA_DATA_CORE": {
