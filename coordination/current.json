@@ -6566,7 +6566,7 @@
     "r3CI": {
       "task": "R3_SESSION_ABI_FIXED_PUBLIC_CI",
       "owner": "00 CTRL",
-      "status": "CI_IN_FLIGHT",
+      "status": "DONE_FIXED_R3_PUBLIC_CI_CODE_ONLY_EXECUTABLE_READY",
       "baseMain": "9045aba8b742d0f888445c466b71525150ba8d0c",
       "sourceHead": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
       "sourceSha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
@@ -6574,7 +6574,51 @@
       "dependency": "R2 independent accepted; 07 R3 fixed",
       "head": "953c9745f71fe4de5ee92c6c1c8d271c43f33f04",
       "run": 43373753393,
-      "next": "Observe exact CI and retain code-only artifact for authorized private R3 projection parity; 06 scoped independent QA"
+      "next": "07 existing IN_FLIGHT genuine parity; 06 existing IN_FLIGHT V34/Svelte/R3/new research scoped QA; 00 integration after exact accepted handoff.",
+      "job": 131715324283,
+      "ci": "SUCCESS",
+      "verified": {
+        "rustc": "1.85.1",
+        "cargo": "1.85.1",
+        "node": "22.16.0",
+        "typescript": "5.8.3",
+        "rustTests": 81,
+        "newTests": 42,
+        "r2Regression": 39,
+        "abiTests": 14,
+        "fail": 0,
+        "skip": 0,
+        "releaseBuild": "PASS",
+        "crateFiles": 56,
+        "generatedFiles": 39,
+        "scope": "PUBLIC_SYNTHETIC_ONLY; 07 code unchanged; 1 ADD workflow only",
+        "artifact": {
+          "id": 14013712258,
+          "file": "HKIA_Rust_R3_CodeOnly_43373753393.zip",
+          "sha256": "cf5777ef84b07bbc71fd16bcff1f2b98d96462da2d5c53699e6849589e8db199",
+          "bytes": 305340,
+          "binarySha256": "cbbf675843b88f354443d319f3f766be1b8a338ddbad682c10dc13d793c6e47a",
+          "binaryBytes": 690736,
+          "reportSha256": "e3c9a250dde9121baeddd45d549d4e86511ab51b5893dac9637203f283317b58",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "ZIP_BYTE_EXACT_CRC_2_ENTRIES",
+          "localCompatibility": "ELF_X86_64_LDD_RESOLVED_NO_ARGUMENTS_RC1",
+          "realParity": "NOT_RUN"
+        }
+      },
+      "handoff": {
+        "to": [
+          "07 RUST CORE",
+          "06 QA"
+        ],
+        "task": "R3_COMPILED_GENUINE_SESSION_PARITY_AND_SCOPED_INDEPENDENT_QA",
+        "condition": "07 existing IN_FLIGHT; use fixed binary+private V33 reference and genuine originals locally only. 06 existing scoped QA; R3 independent execution after fixed parity, no R2 full repeat."
+      },
+      "unverified": [
+        "07 genuine R3 projection parity both versions",
+        "06 independent R3 acceptance",
+        "Writer/WASM/real browser/game acceptance"
+      ]
     }
   },
   "formalRelease": {
