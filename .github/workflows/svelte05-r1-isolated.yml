@@ -1,0 +1,57 @@
+name: HKIA Svelte R1 isolated compile and browser
+on:
+  push:
+    branches:
+      - web05/svelte-navigation-r1
+permissions:
+  contents: read
+concurrency:
+  group: hkia-svelte-r1-isolated
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/web05/svelte-navigation-r1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed R1 code and provision dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor fa18063330558e188e947c44843f7a3c6870559e HEAD
+          test "$(git diff --name-only fa18063330558e188e947c44843f7a3c6870559e HEAD)" = .github/workflows/svelte05-r1-isolated.yml
+          cd svelte-ui
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          npm ci --no-audit --no-fund
+          sha256sum package-lock.json
+          node --version
+          npm --version
+      - name: Compile and test isolated UI
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check
+          npm run build
+      - name: Actual built Vite Chromium navigation
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-parity.py dist
+      - name: Retain dependency lock for Web05
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hkia-svelte-r1-package-lock
+          path: svelte-ui/package-lock.json
+          if-no-files-found: warn
+          retention-days: 7
