@@ -15104,6 +15104,19 @@
         "06C_V24_GENUINE_BROWSER_WAIT_ENV",
         "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
       ]
+    },
+    "pagesIncrementalV33": {
+      "owner": "00 CTRL",
+      "task": "PAGES_V33_OFF_INCREMENTAL_ROOT_DELTA_ELIGIBILITY",
+      "risk": "RELEASE",
+      "status": "IN_FLIGHT",
+      "baseHead": "f2fb2b1ea9e4662a94e0091e5300d317c221072f",
+      "baseBlob": "b34b429fbffab910f47422ff4fb2d5821aae42a9",
+      "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+      "baseManifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+      "candidateSource": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+      "candidateManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+      "scope": "Compare exact accepted V30/V33 distribution maps and V31/V32/V33 small deltas; identify whether changed JS is visible with Writer OFF; preserve V24 and 05 in-flight Svelte binding. No release or flag change. Record new-host independent acceptance."
     }
   },
   "formalRelease": {
