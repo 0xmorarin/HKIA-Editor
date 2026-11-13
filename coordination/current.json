@@ -3452,6 +3452,33 @@
           "New formal successor",
           "04 exact20 and 05 batch UI new fixed source"
         ]
+      },
+      "pagesTransportCheckpoint": {
+        "task": "PAGES_FIXED_OFF_ARTIFACT_TRANSPORT_CHECKPOINT_QA",
+        "status": "SCOPED_PASS_TRANSPORT_PREFIX_ONLY",
+        "owner": "06 QA",
+        "transportHead": "e9cec791b3cc1585a048681a2ca97ac4ce0b21d3",
+        "branch": "ctrl/pages-off-transport-20261113",
+        "verifiedParts": 39,
+        "totalParts": 57,
+        "contiguousThrough": 38,
+        "verifiedBytes": 80740352,
+        "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
+        "manifestSha256": "07b2cab323e129ace0432145fb71f2d50bbbe2f61b6eb2a58d48cebcf340a4f6",
+        "verification": "Independent local byte-derived SHA256/Git blob SHA 57/57; actual remote tree 39/39 exact modes/sizes/blob SHA, contiguous, no extras. Not full remote reconstruction or deployment.",
+        "evidence": {
+          "file": "HKIA_06_PAGES_TRANSPORT_CHECKPOINT_20261113.json",
+          "sha256": "a4e26bfbe5435cd24a498140bce1a00d083c927f1696cad6b6e2c33a8bf294d0",
+          "readback": "BYTE_EXACT"
+        },
+        "next": "00 continue existing transport; latest remote head recheck before write, reconstruct complete bundle, verify pinned V30/V29 refs, merge PR3 and approved OFF deployment; 06 live artifact after handoff",
+        "unverified": [
+          "FULL_REMOTE_BUNDLE",
+          "PINNED_REMOTE_COMMITS",
+          "LIVE_DEPLOYMENT",
+          "HTTP_HTTPS",
+          "LIVE_ROLLBACK"
+        ]
       }
     },
     "00_MEDIA": {
