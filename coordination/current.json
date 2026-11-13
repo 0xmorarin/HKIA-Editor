@@ -7196,11 +7196,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT",
+      "status": "PARTIAL_RECIPE6_SAVED_ACCEPTED_HATS_OFF_AND_BROWSER_HARNESS_WAIT_ENV",
       "task": "RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "Three new research scopes independently accepted. 00 serial additive Derived23/Recipe6 research integration, 04/07 marker reference; 07 R6 explicit disjoint capacity remains independent; 06A wait new fixed HIGH result or authorized genuine browser self-QA. No duplicate accepted scope.",
-      "dependency": "NEW_FIXED_HIGH_SCOPE_OR_07_GENUINE_BROWSER_SELF_QA",
+      "next": "01 saved conditions accepted, direct 03/04/07 advisory and 00 additive integration READY. 02 raw prototype/hat PASS remainder native/typed/negatives WAIT_ENV. 07 kit pin closure PASS independent harness/browser execution WAIT_ENV. R6 IN_FLIGHT existing 07 no duplicate. New HIGH work only on fixed new evidence.",
+      "dependency": "RESTORED_EXECUTION_ENVIRONMENT_FOR_REMAINING_02_AND_HARNESS; AUTHORIZED_PRIVATE_REAL_CHROME_FOR_GENUINE_BROWSER",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "28e99955e4b40ac9b25f782532a188719ea1904e",
       "legacyEvidence": {
@@ -7350,19 +7350,19 @@
         {
           "task": "RECIPE6_STATION_SAVED_CONDITIONS",
           "source": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS_READONLY_GENUINE",
           "risk": "HIGH"
         },
         {
           "task": "HATS_OFF_TO_YOU_EXACT_FIRST_PROGRESS_PRODUCER_INDEPENDENT_QA",
           "source": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_WAIT_ENV_REMAINING_NATIVE_TYPED_CLOSURE",
           "risk": "HIGH"
         },
         {
           "task": "HKIA-RUST-013_PRIVATE_BROWSER_EXECUTION_READINESS",
           "source": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_STATIC_PIN_PASS_WAIT_ENV_HARNESS_BROWSER",
           "risk": "HIGH"
         }
       ],
@@ -7492,31 +7492,36 @@
       },
       "nextReadyParallel": [
         {
+          "stream": "03_LINKAGE",
+          "task": "RECIPE6_SAVED_CONDITIONS_CONDITIONAL_ADVISORY_CONSUME",
+          "dependency": "01 independent scoped PASS; no dynamic/Writer authority"
+        },
+        {
           "stream": "00_CTRL",
-          "task": "DERIVED23_AND_RECIPE6_STATION_ADDITIVE_RESEARCH_SERIAL_INTEGRATION",
-          "dependency": "02/03 scoped independent static PASS; latest integrated reference compatibility"
+          "task": "RECIPE6_SAVED_CONDITIONS_ADDITIVE_RESEARCH_INTEGRATION",
+          "dependency": "01 independent scoped PASS; latest base/overlap check"
         }
       ],
       "nextAfterDep": [
         {
           "stream": "06A_QA_DATA_CORE",
-          "task": "NEW_FIXED_HIGH_QA",
-          "condition": "07 R6 fixed self-QA or other genuinely new fixed HIGH evidence"
+          "task": "HATS_OFF_REMAINING_NATIVE_TYPED_CLOSURE_AND_BROWSER_HARNESS_NEGATIVES",
+          "condition": "executable environment restored; exact pins unchanged"
+        },
+        {
+          "stream": "06A_QA_DATA_CORE",
+          "task": "R6_FIXED_HIGH_QA",
+          "condition": "07 fixed R6 self-QA ready"
         },
         {
           "stream": "07_RUST_CORE",
           "task": "R5_1_FIXED_REAL_CHROME_GENUINE",
-          "condition": "authorized private real Chrome environment"
+          "condition": "authorized private actual Chrome; harness conditions satisfied"
         },
         {
           "stream": "06A_QA_DATA_CORE",
           "task": "R5_1_BROWSER_INDEPENDENT_EXECUTION",
-          "condition": "07 fixed actual browser self-QA"
-        },
-        {
-          "stream": "00_CTRL",
-          "task": "DEVELOPMENT_SWITCH",
-          "condition": "complete applicable ADR gates and independent acceptance"
+          "condition": "07 fixed genuine Browser evidence"
         }
       ],
       "r5Result": {
@@ -7974,6 +7979,172 @@
           ],
           "status": "READY_STATIC_REFERENCE",
           "scope": "Use exact v301 marker evidence only, no Writer grant or Development Switch."
+        }
+      },
+      "stationSavedResult": {
+        "status": "SCOPED_PASS_READONLY_SAVED_CONDITIONS_STATIC_GENUINE",
+        "sourceSha256": "46d0e4408bfe0735142c5c623f6f89995f449ce59c2c8a85375b15db70a97389",
+        "manifestSha256": "e43382a6db8af1faca137aade88df960342adc7c1fda2d9c6400a60713c08a41",
+        "resultSha256": "350e9af5e9fc4c0c4074f624bbc0bbd4172d4c462be7dbc4730a164b342ba4fb",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "dependencySource": {
+          "sourceSha256": "e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62",
+          "resultSha256": "44c822c843576eb37807deb5392ae62039e3d6073e7b8165fb7cc0e43db9437c",
+          "scope": "SCOPED_PASS_CONDITIONAL_COOK_SOURCE_STATIC",
+          "productAuthorized": false,
+          "gameAccepted": false
+        },
+        "verified": {
+          "entries": 7,
+          "manifestHashes": 6,
+          "additivePaths": 6,
+          "basePathOverlap": 0,
+          "archiveSha": 2,
+          "zipMemberCrc": 22,
+          "distinctV300Slots": 3,
+          "duplicateSlots": 2,
+          "otherVersionsSkipped": 3,
+          "collectionVersion": 83,
+          "documentCounts": [
+            19293,
+            19936,
+            20207
+          ],
+          "recipe6Roles": [
+            "ABSENT",
+            "POSITIVE",
+            "POSITIVE"
+          ],
+          "npcMatches": 12,
+          "npcLevels": [
+            25,
+            15,
+            25,
+            20
+          ],
+          "npcThresholds": [
+            16,
+            4,
+            15,
+            5
+          ],
+          "missionTasksMatched": 12,
+          "taskIds": [
+            7,
+            4,
+            5,
+            11
+          ],
+          "globalDiscoveryTrue": 15,
+          "localMatches": 0,
+          "independentNegatives": 12,
+          "originalsUnchanged": 2,
+          "oracle": "Independent JS ZIP/DEFLATE/LZ4/typed MessagePack root walker; fixed schema blob 49d8c7f2b027a110ab6b1daabe07f2ec7c6bb596; in-memory typed mutation negatives"
+        },
+        "limits": "Saved condition observations only; no dynamic unlock/registration/recipe selection/Candy script/event persistence, no game authority or writer permission",
+        "evidence": {
+          "file": "HKIA_06A_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_QA_20261113_CHECKPOINT",
+          "location": "Existing owner-only private Drive development folder",
+          "canonicalTextSha256": "9edd3bd7bdb919cbf8ae209fd1661c42aa49b02b4d5794cc2f9eed500f7f439a",
+          "canonicalization": "get_document_text paragraph text joined LF UTF8, no terminal LF",
+          "readback": "16 paragraphs, 6578 bytes, owner-only privacy checked, content key checks PASS; connector omits blank separators; no raw save/game bytes",
+          "format": "native Google Doc due container ClientError; no ZIP claimed"
+        },
+        "handoff": {
+          "to": [
+            "03_LINKAGE",
+            "04_SAVE_CORE",
+            "07_RUST_CORE",
+            "00_CTRL"
+          ],
+          "status": "READY",
+          "task": "RECIPE6_SAVED_CONDITIONS_ADVISORY_AND_ADDITIVE_RESEARCH_INTEGRATION",
+          "scope": "03 consume only conditional read-only advisory; 04/07 source reference; 00 integrate six research paths only after current base/overlap check. No new write."
+        }
+      },
+      "hatsOffProducerResult": {
+        "status": "PARTIAL_RAW_PROTOTYPE_HAT_CHAIN_PASS_NATIVE_TYPED_CLOSURE_WAIT_ENV",
+        "sourceSha256": "4b88419352e941800892a24963c40d16a8931a1d86f9be56a39ee224758e9b7c",
+        "manifestSha256": "b7ab3dc0231c8f656e507d7106797c3db58dbef0d2074b25e97e627e01a47d4e",
+        "witnessSha256": "eb127a01fac26b188fc6b5608528507c28eeba128e1902125099037365aa009f",
+        "verified": {
+          "entries": 6,
+          "manifestHashes": 5,
+          "additivePaths": 6,
+          "basePathOverlap": 0,
+          "rawHatSourceAndSerializedSha": "MATCH",
+          "hatBlocks": 9,
+          "hatObjects": 61,
+          "rawPrototypeSourceAndSerializedSha": "MATCH",
+          "prototypeBlocks": 322,
+          "prototypeObjects": 83214,
+          "prototypeFactoryWrapperPickCounter": "RAW_EXACT_PATH_ID_PPTR_GUID_CHAIN",
+          "dumpAndScriptMethodIdentities": "MATCH",
+          "witnessBranchArithmetic": 8
+        },
+        "unverified": [
+          "raw NSO 43 instruction anchors and four slot anchors",
+          "full independent typed core target/parent/reward closure",
+          "independent negative execution",
+          "actual first-progress and save persistence"
+        ],
+        "trueRed": "NONE_REPRODUCED_IN_EXECUTED_SCOPE",
+        "evidence": {
+          "file": "HKIA_06A_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_QA_20261113_CHECKPOINT",
+          "location": "Existing owner-only private Drive development folder",
+          "canonicalTextSha256": "9edd3bd7bdb919cbf8ae209fd1661c42aa49b02b4d5794cc2f9eed500f7f439a",
+          "canonicalization": "get_document_text paragraph text joined LF UTF8, no terminal LF",
+          "readback": "16 paragraphs, 6578 bytes, owner-only privacy checked, content key checks PASS; connector omits blank separators; no raw save/game bytes",
+          "format": "native Google Doc due container ClientError; no ZIP claimed"
+        },
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "status": "WAIT_ENV",
+          "task": "HATS_OFF_REMAINING_NATIVE_TYPED_CLOSURE_QA",
+          "condition": "restore executable environment, same pinned source; reuse verified raw prototype/hat and arithmetic, finish remaining scope only; then direct 03/04/07 source-only reference"
+        }
+      },
+      "browserKitResult": {
+        "status": "PARTIAL_SCOPED_PASS_STATIC_PIN_CLOSURE_WAIT_ENV_EXECUTION",
+        "sourceSha256": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
+        "manifestSha256": "75ca10903911545c594c7a64c4f673fc958c2411bcb9d1d045d77ec530e1d616",
+        "fixedSource": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "artifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+        "wasmSha256": "ecadf4450acf79c6068e81ae3dd2c9f021870d77453ce656e46fcdc4d6940e4c",
+        "verified": {
+          "entries": 8,
+          "manifestHashes": 7,
+          "artifactEntries": 9,
+          "codeHashes": 8,
+          "referenceEntries": 5,
+          "runnerGitBlob": "039a32a557aec3ccb6ebe03ea124ff39452b4466",
+          "runnerSha256": "fa63e53bb23c8241fb328f739190530760bd58a015f51faf9f8596b58ed2f071",
+          "staticPreflightAllowlistOraclePublication": "REVIEWED",
+          "upstreamSelfTests": 17
+        },
+        "unverified": [
+          "independent Python harness test execution",
+          "actual empty Worker probe and six genuine Chrome cases",
+          "privacy and network negative runtime",
+          "browser resources"
+        ],
+        "riskNote": "Probe/runner Chrome options differ; runner --no-sandbox and service_workers not explicitly block; review authorized environment and negatives; no exploit reproduced.",
+        "evidence": {
+          "file": "HKIA_06A_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_QA_20261113_CHECKPOINT",
+          "location": "Existing owner-only private Drive development folder",
+          "canonicalTextSha256": "9edd3bd7bdb919cbf8ae209fd1661c42aa49b02b4d5794cc2f9eed500f7f439a",
+          "canonicalization": "get_document_text paragraph text joined LF UTF8, no terminal LF",
+          "readback": "16 paragraphs, 6578 bytes, owner-only privacy checked, content key checks PASS; connector omits blank separators; no raw save/game bytes",
+          "format": "native Google Doc due container ClientError; no ZIP claimed"
+        },
+        "handoff": {
+          "to": [
+            "06A_QA_DATA_CORE",
+            "07_RUST_CORE",
+            "00_CTRL"
+          ],
+          "status": "WAIT_ENV",
+          "condition": "restore local execution for independent harness negatives; authorized private actual Chrome for genuine six; no bypass, no development switch"
         }
       }
     },
