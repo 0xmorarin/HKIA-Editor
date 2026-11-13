@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_LOCALE_REPAIR_AND_R6_ISOLATED_CI_PARALLEL_06B_EXISTING_R5_QA; 06B_AFTER_NEW_FIXED_COMPILED; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
+      "next": "00_LOCALE_REPAIR_AND_R6_R5_REPAIRED_COMBINED_CI_PARALLEL; 06B_FOCUSED_R5_AND_R6_AND_LOCALE_AFTER_FIXED_GREEN; 05_AFTER_NEW_RESULT_OR_NEXT_DISJOINT; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R4_ACCEPTED_R5_COMPILED_06B_IN_FLIGHT_R6_FIXED_WAIT_CI",
+        "status": "R4_ACCEPTED_R5_REPAIR_R6_COMPOSED_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3320,7 +3320,7 @@
         },
         "r5": {
           "task": "SVELTE_R5_COLLECTION_DEFINITION_ITEM_VIEW",
-          "status": "TRUE_RED_REPAIR_IN_FLIGHT",
+          "status": "TRUE_RED_REPAIR_SELF_PASS_WAIT_CI",
           "owner": "05 WEB",
           "baseHead": "a4ded599c12a2208c0e154a9b745814655a55e0e",
           "basePrHead": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
@@ -3356,16 +3356,40 @@
           "decisions": "Read-only isolated fixture, 100-row increments and isolated 1200 bound not production limit; no game-derived IDs/text/media bytes in new files; unknown history disables history filter; exact int64 strings; category reselect resets local detail fixture; no production state changes; item image local WebP only; R4/Locale fixed branches unchanged.",
           "repair": {
             "task": "SVELTE_R5_COLLECTION_DETAIL_POSTCONDITION_REPAIR",
-            "status": "IN_FLIGHT",
+            "status": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
             "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
             "baseHead": "a0da33507da597f22d30da15dbf28f2b2fc4c7df",
             "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
-            "scope": "collection-detail.ts plus focused tests; immutable pre-operation selected identity, filter and visible prefix; inspect visible row exact; no R6 or locale changes"
+            "scope": "collection-detail.ts plus focused tests; immutable pre-operation selected identity, filter and visible prefix; inspect visible row exact; no R6 or locale changes",
+            "head": "ceb4f768191bdbbd83fec202e24ae5b5d9eb76e0",
+            "branch": "web05/svelte-collection-detail-r5-repair",
+            "tree": "8e5de8c8ccffbe72eb10183d56e43c2d3249e964",
+            "sourceSha256": "bdb362d17a98c2f78d79fc081874e7508904ba69f378635cdeb22641530138fc",
+            "deltaSha256": "181aa7f9ba3332922f720ffacec255ce016a0a8b1e580db67e90c407d73c5e3a",
+            "manifestSha256": "a9ef1b4582f3847822e72e77a0c7fccf197fe430240e96b98afe501a09bdc178",
+            "transportSha256": "78f424d3e5ac3b0937908d481e687978463a752864b8c8e3ae3deab0cd6a25ee",
+            "evidenceSha256": "4ad3f969c449b7f65dfe15644e4f3bc08ac6c388be54ad56c020c0f83d39b054",
+            "logsSha256": "675f74b3ca4c731e8c79c35bb44b24020d05821610a8b5c6ec838cbc7710cab5",
+            "artifacts": {
+              "source": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_Source.zip",
+              "delta": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_Delta.zip",
+              "manifest": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_Manifest.json",
+              "transport": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_PublicCodeTransport.json",
+              "evidence": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_Evidence.json",
+              "logs": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_Logs.zip"
+            },
+            "verified": "Original 06B QA zip SHA exact; exact original independent tests before 5 PASS 3 FAIL, after developer rerun 8/8; 94 Node incl 8 new; strict TS; actual V33 902 row reference; 1 MOD 1 ADD, 232 unchanged, all 46 source blobs exact; private readbacks/CRC exact",
+            "unverified": [
+              "updated compile/check/build and actual Browser",
+              "06B independent repair acceptance",
+              "production controller/Writer"
+            ],
+            "next": "00 use R6 combined exact successor for single fixed compile/browser regression of R5 repair + R6; 06B independently scope R5 repair (exact 2 blobs, original QA) and R6 new 7 paths. Standalone repair branch retained for isolated attribution/rollback."
           }
         },
         "r6": {
           "task": "SVELTE_R6_ACHIEVEMENT_READONLY_INSPECTOR",
-          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
+          "status": "SELF_PASS_COMBINED_WITH_R5_REPAIR_READY_CTRL_CI",
           "owner": "05 WEB",
           "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
           "baseHead": "7b0d6dc983b3ae272ea68e9b433a28f210c0cdb0",
@@ -3397,7 +3421,22 @@
             "full detailed counter/group/reward/media UI and edit preview/Writer",
             "production controller/catalog/session binding and integrated locale/Rust"
           ],
-          "decisions": "Read-only first, exact selected GUID and state projection, no arithmetic on progress/time, zero confirmed REQUIRED, conditional candidates display-only; synthetic fixture, not full V33 editor replacement; R5 and locale repair snapshots unchanged."
+          "decisions": "Read-only first, exact selected GUID and state projection, no arithmetic on progress/time, zero confirmed REQUIRED, conditional candidates display-only; synthetic fixture, not full V33 editor replacement; R5 and locale repair snapshots unchanged.",
+          "composed": {
+            "head": "2924eaa2b51968e50f22a97524b2f8d308ad1931",
+            "branch": "web05/svelte-achievement-detail-r6-repaired-r5",
+            "tree": "aef692c1c58d3f074d68d8e7c95b981d95bc88ee",
+            "parent": "3b6322c51b0d2ab9670401d213ec5f731f1581e3",
+            "sourceSha256": "32263f4b55eed99fe2e3bf6288baef39e8c09b609f02dc94b61ed681dff1f86d",
+            "manifestSha256": "a98a96c0a20dd5f4bca7a26d694c4ac1ff1d1d21e2cec6174bb9f2267349142e",
+            "repairDeltaSha256": "181aa7f9ba3332922f720ffacec255ce016a0a8b1e580db67e90c407d73c5e3a",
+            "artifacts": {
+              "source": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_R6CombinedSource.zip",
+              "manifest": "HKIA_WEB05_SvelteCollectionDetail_R5_Repair_20261113_R6CombinedManifest.json"
+            },
+            "verified": "104 Node PASS, strict TS; exact 51 source blobs; only exact 2 R5 repair paths changed from R6 frozen snapshot; original 7 R6 blobs unchanged; all 8 Library readbacks exact/CRC",
+            "next": "00 nondeploy fixed combined CI, guard exact source + lock, npm ci/test 104/check --fail-on-warnings/build, R1-R6 reference/browser at 320/375/1280; 06B distinct R5 repair and R6 QA after green; no product integration before acceptance."
+          }
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
