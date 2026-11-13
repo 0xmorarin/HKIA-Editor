@@ -6374,11 +6374,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_V36_SCOPED_PASS_WAIT_ENV_V24",
       "task": "V36_FIXED_625_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
       "scope": "10 ADD only, 615 exact V35; exact 01/02 accepted deltas and 06A research result; 31 focused tests, independent negative/reconstruction/rollback, 55 source-build exact, 54 direct full-manifest match + media boot index projection, 4146 prior map exact; no media rehash, no new product authorization; V24 and live V30 untouched",
-      "next": "V35 accepted by 00; wait authorized V24 genuine Browser or new fixed integrated candidate",
-      "dependency": "V35_ACCEPTED_BY_00; V36_FIXED_READY",
+      "next": "00 accept fixed V36 private reference; 06C wait authorized V24 genuine browser or new fixed integration",
+      "dependency": "V36_SCOPED_ACCEPTED; 00_REFERENCE_RECORD; V24_WAIT_ENV_ADMINISTRATOR_BLOCK; NEXT_FIXED_INTEGRATION_WAIT_DEP",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8da559a75a38695ccec234bc7d68b013bb5f514b",
       "legacyEvidence": {
@@ -6529,7 +6529,8 @@
         "baseHead": "c429b8ff2a65ae87abdf376eccb1184c5e0f68f1",
         "baseLedgerBlob": "f2a6530d2de58589d91ef61ec97a83c46ead3f76",
         "source": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
-        "scope": "10 ADD, 615 exact, two accepted upstream deltas; independent integration/build/map/rollback"
+        "scope": "10 ADD, 615 exact, two accepted upstream deltas; independent integration/build/map/rollback",
+        "status": "COMPLETED"
       },
       "v35Completed": {
         "claim": {
@@ -6618,6 +6619,71 @@
             "readback": "EXACT"
           }
         }
+      },
+      "result": {
+        "verdict": "SCOPED_PASS_V36_PRIVATE_RESEARCH_REFERENCE",
+        "source": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "baseSourceSha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "manifest": "e915cb92864de9dc755a2ba3d618b24f1023b6e679b06bb687053ca0540101bc",
+        "delta": "7f43b0e9408d0d052b6eff1582f9f4d41af9b7bde9ebf4b9f1ae1978611bcaaa",
+        "artifactManifest": "12877c97e403ecd6aae110165395d5c0cf9a0119df02304ce2ff475b97110ef5",
+        "upstreamAcceptance": "ec444d4e795e696214c6754aa3512bb71326179e07d294188bd05e5594f44e40",
+        "verified": {
+          "pins": 13,
+          "sourceEntries": 625,
+          "unchanged": 615,
+          "add": 10,
+          "mod": 0,
+          "del": 0,
+          "upstreamDeltas": 2,
+          "upstreamPaths": [
+            4,
+            6
+          ],
+          "conflicts": 0,
+          "crc": "PASS",
+          "focused": 31,
+          "fail": 0,
+          "skip": 0,
+          "independentNegativeControls": 6,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "sourceDerivedBuildExact": 55,
+          "fullManifestDirectMatch": 54,
+          "indexProjectionExact": true,
+          "fullDistributionMapExact": 4146,
+          "webp": 4076,
+          "rollbackSourceExact": 615,
+          "reconstructionExact": 625,
+          "writer": "OFF",
+          "newResearchPathsInDistribution": 0
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_06C_V36_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "b842eace5f9b1115ff49b28fa0df0e7ba627bbda160a44f0cad02112c6b178c7"
+          },
+          "zip": {
+            "file": "HKIA_06C_V36_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "17edcea0595ba4ce8a1fd051a2708feaca6983a8f6f3ccf280536baad9caa2ac"
+          },
+          "readback": "BOTH_BYTE_EXACT_SHA_CRC_8_MANIFEST_ENTRIES_PASS",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "trueRed": [],
+        "qaCorrection": "Initial oracle blanket docs/scripts exclusion too broad: prior accepted allowlisted paths exist, exact prior map unchanged. Narrowed assertion, no product change.",
+        "unverified": [
+          "External media bytes not rehashed; prior accepted V35 map reused",
+          "V24 genuine real Browser administrator block; game persistence unverified",
+          "No live deploy/rollback or Writer enablement"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V36_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record fixed V36 scoped PASS; no Writer/deploy permission; V24/V30 unchanged; no repeated QA",
+          "nextAfterDep": "06C authorized V24 browser or new fixed integration"
+        },
+        "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK"
       }
     }
   },
