@@ -9705,6 +9705,33 @@
         },
         "after": "00 accept fixed V36 reference; V24 browser remains WAIT_ENV"
       }
+    },
+    "r5CI": {
+      "task": "R5_FIXED_WASM_WORKER_NONDEPLOY_CI",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "baseHead": "baf6cfc589943854cdff9bfecce121e263eb2e5a",
+      "sourceHead": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+      "sourceSha256": "71d40ee6094446cfb38568a347027206df656a34fa34f7a9fa63e4040436b77a",
+      "scope": "Only isolated workflow on PR9; synthetic compile/Chrome code-only artifact; no genuine Save or deployment",
+      "risk": "HIGH"
+    },
+    "svelteR4CI": {
+      "task": "SVELTE_R4_FIXED_ISOLATED_CI",
+      "status": "IN_FLIGHT",
+      "owner": "00 CTRL",
+      "baseHead": "baf6cfc589943854cdff9bfecce121e263eb2e5a",
+      "sourceHead": "a6a0d8732f73b0e13817b943f294832c61d769dd",
+      "sourceSha256": "c6289fa836912dc101ed19b9ed50979cad4b778c9773fb041fe4e429ea8e3371",
+      "scope": "Only isolated workflow on R4 branch; pinned lock, check/build/reference and Chromium; no deployment",
+      "risk": "HIGH"
+    },
+    "v36Acceptance": {
+      "task": "V36_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "source": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+      "scope": "Verify fixed 06C evidence and record accepted research reference only"
     }
   },
   "formalRelease": {
