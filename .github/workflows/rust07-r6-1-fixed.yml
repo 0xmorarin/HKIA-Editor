@@ -1,0 +1,99 @@
+name: HKIA Rust R6.1 fixed scratch reuse (no deploy)
+on:
+  push:
+    branches: [rust07/r6-scratch-reuse]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: hkia-rust-r6-1-fixed
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753' && github.ref == 'refs/heads/rust07/r6-scratch-reuse'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: d6401ccea03d67ad312ca1b052455974498ebe1e
+          path: r4-reference
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Pin source and install toolchains
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 76ab71edf507cdcec13a6faf0db8ebcd56d4b672 HEAD
+          test "$(git diff --name-only 76ab71edf507cdcec13a6faf0db8ebcd56d4b672 HEAD)" = .github/workflows/rust07-r6-1-fixed.yml
+          test "$(git -C r4-reference rev-parse HEAD)" = d6401ccea03d67ad312ca1b052455974498ebe1e
+          rustup toolchain install 1.85.1 --profile minimal --target wasm32-unknown-unknown
+          python3 -m pip install msgpack==1.1.2 lz4==4.4.5 playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+      - name: Prepare and compile fixed native and WASM
+        env:
+          RUSTUP_TOOLCHAIN: 1.85.1
+          CARGO_NET_OFFLINE: 'true'
+          CARGO_TERM_COLOR: never
+        run: |
+          set -euo pipefail
+          rustc --version
+          python3 tests/rust/capacity-r6/prepare.py --reference r4-reference --workspace "$RUNNER_TEMP/r6"
+          crate="$RUNNER_TEMP/r6/crates/hkia-save-core"
+          cargo test --offline --manifest-path "$crate/Cargo.toml" --target-dir "$RUNNER_TEMP/r6/target"
+          cargo test --offline --manifest-path "$crate/wasm-bridge/Cargo.toml" --target-dir "$RUNNER_TEMP/r6/target"
+          RUSTFLAGS='-C link-arg=--max-memory=536870912' cargo build --offline --release --target wasm32-unknown-unknown --manifest-path "$crate/wasm-bridge/Cargo.toml" --target-dir "$RUNNER_TEMP/r6/target"
+          cargo build --offline --release --manifest-path "$crate/Cargo.toml" --bin hkia-writer-private --target-dir "$RUNNER_TEMP/r6/target"
+      - name: Fixed baseline and paired synthetic memory/byte parity
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/14019348055/zip" > "$RUNNER_TEMP/baseline.zip"
+          printf '%s  %s\n' f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838 "$RUNNER_TEMP/baseline.zip" | sha256sum -c -
+          wasm="$RUNNER_TEMP/r6/target/wasm32-unknown-unknown/release/hkia_wasm_bridge.wasm"
+          pin="$(sha256sum "$wasm" | cut -d' ' -f1)"
+          python3 tests/rust/capacity-r6/compare.py --prepared-root "$RUNNER_TEMP/r6" --baseline "$RUNNER_TEMP/baseline.zip" --candidate "$wasm" --candidate-sha "$pin" --result "$RUNNER_TEMP/paired.json"
+          python3 - <<'PY'
+          import json,os,pathlib
+          r=json.loads((pathlib.Path(os.environ['RUNNER_TEMP'])/'paired.json').read_text())
+          assert r['status']=='PAIRED_NODE_WASM_PARITY_PASS' and len(r['cases'])==15 and r['resourceTargetAcceptance']==False
+          print(json.dumps({k:v for k,v in r.items() if k!='cases'}))
+          PY
+      - name: Fixed candidate code-only bundle and real synthetic Chrome
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os,pathlib,zipfile,json,hashlib,shutil
+          t=pathlib.Path(os.environ['RUNNER_TEMP']); b=t/'r6-code'; b.mkdir()
+          with zipfile.ZipFile(t/'baseline.zip') as z:
+            report=json.loads(z.read('build-report.json')); files=report['artifactFiles']
+            assert len(files)==8 and set(z.namelist())==set(files)|{'build-report.json'}
+            for p,h in files.items():
+              assert p.startswith(('rust-worker/','tests/rust/wasm-browser/')) and '..' not in pathlib.Path(p).parts and pathlib.Path(p).suffix in ('.js','.html','.wasm')
+              raw=z.read(p);assert hashlib.sha256(raw).hexdigest()==h
+              f=b/p;f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(raw)
+          shutil.copyfile(t/'r6/target/wasm32-unknown-unknown/release/hkia_wasm_bridge.wasm',b/'tests/rust/wasm-browser/hkia_wasm_bridge.wasm')
+          PY
+          chrome="$(python3 -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          f="$RUNNER_TEMP/r6/crates/hkia-save-core/tests/fixtures"
+          python3 tests/rust/wasm-browser/run-browser.py --bundle "$RUNNER_TEMP/r6-code" --chrome "$chrome" --input300 "$f/writer-3.0.0-good.zip" --input301 "$f/writer-3.0.1-good.zip" --synthetic-native "$RUNNER_TEMP/r6/target/release/hkia-writer-private" --result "$RUNNER_TEMP/browser.json"
+          python3 - <<'PY'
+          import os,pathlib,json,hashlib
+          t=pathlib.Path(os.environ['RUNNER_TEMP']); b=t/'r6-code'; br=json.loads((t/'browser.json').read_text()); pair=json.loads((t/'paired.json').read_text())
+          assert br['status']=='PASS_REAL_CHROME_MODULE_WORKER' and br['mode']=='SYNTHETIC' and len(br['results'])==8 and br['networkDenied']==br['serverViolations']==0 and sum(x.get('nativeExact',False) for x in br['results'])==6
+          files={p.relative_to(b).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in b.rglob('*') if p.is_file()};assert len(files)==8
+          report={'status':'COMPILE_SYNTHETIC_REAL_CHROME_PASS','sourceHead':'76ab71edf507cdcec13a6faf0db8ebcd56d4b672','artifactFiles':files,'wasmSha256':files['tests/rust/wasm-browser/hkia_wasm_bridge.wasm'],'realSave':'NOT_RUN','chrome':br,'capacity':pair}
+          (b/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HKIA_Rust_R6_1_CodeOnly_${{ github.run_id }}
+          path: ${{ runner.temp }}/r6-code
+          if-no-files-found: error
+          retention-days: 7
