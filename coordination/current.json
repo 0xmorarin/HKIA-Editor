@@ -772,6 +772,16 @@
           "condition": "READY_FIXED_DELTA_AND_ORIGINAL_LOCATORS_READBACK"
         },
         "next": "06A independent QA -> 03/04/07 source-only reference; physical first-progress WAIT_DEP; Derived23 separate existing claim"
+      },
+      "hatsOffV300Review": {
+        "task": "SWITCH300_HATS_OFF_EXACT_PRODUCER_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
+        "baseSourceSha256": "94a7c8ff016e093bb43f5ebe3661d25c29ebe88ec6084c90f7de4e6023e2b034",
+        "risk": "HIGH",
+        "scope": "v300 exact HatsOff static Native branch and typed source/counter/prototype; reuse accepted v301 producer; no structural creation or writer authorization",
+        "dependency": "06A accepted v301 fixed 4b884193...e9b7c; v300 NSO/dump and archive pinned"
       }
     },
     "03_LINKAGE": {
