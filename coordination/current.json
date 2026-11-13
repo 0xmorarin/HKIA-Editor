@@ -10019,6 +10019,22 @@
       "protected": false,
       "head": "1504faec88a20707e72e8e40ee39ababbb970332",
       "scope": "GitHub branch metadata read only; no rule change or protection claim"
+    },
+    "r51CI": {
+      "task": "R5_1_FIXED_REPAIR_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+      "sourceSha256": "958094c81f9a40349de178e1e1e3ab98b221d2b1452edf1cdf076f74d1245622",
+      "scope": "Workflow-only pin update on repair branch, fast-forward PR9; synthetic real Chrome, code-only artifact; no genuine inputs"
+    },
+    "v37Research": {
+      "task": "V36_PLUS_V301_EXACT29_CAUSAL_REFERENCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+      "deltaSha256": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+      "scope": "5 accepted research ADD only; exact V36 625 unchanged; no product/deploy change"
     }
   },
   "formalRelease": {
