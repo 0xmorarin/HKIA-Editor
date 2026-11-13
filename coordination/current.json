@@ -17396,6 +17396,47 @@
         "Rust genuine Chrome Module Worker"
       ],
       "notes": "No duplicate start; V40 and R6.1 accepted; R5/R7 specialist already accepted. No new 07 task assigned."
+    },
+    "productTabsV33CI": {
+      "task": "SVELTE_V33_PRODUCT_TABS_FIXED_REBIND_CI",
+      "owner": "00 CTRL",
+      "risk": "HIGH",
+      "status": "IN_FLIGHT",
+      "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
+      "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
+      "source": "f320ef06f0d8732ee1ec1c96c1d1163e15e821f7",
+      "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+      "scope": "Exact 3 ADD V33 rebind; reuse fixed module hash from accepted V30; V33 actual browser, no repeat V30 and no deploy."
+    },
+    "v41Research": {
+      "task": "V40_PLUS_18_ACCEPTED_RESEARCH_ADDITIONS",
+      "owner": "00 CTRL",
+      "risk": "LOW_EXISTING_ACCEPTED_RESEARCH_COMPOSITION",
+      "status": "IN_FLIGHT",
+      "baseHead": "a84d1b6705a391789c09d08fd3fc1a8a104c8dec",
+      "baseBlob": "83530c3665fdccd1f37689250135ea33699a975f",
+      "baseSource": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+      "inputs": [
+        {
+          "task": "SWITCH300_301_RECIPE_VERSIONED_COLLECTION_MEMBERSHIP_INDEPENDENT_QA",
+          "source": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
+          "manifest": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
+          "status": "DONE_SCOPED_PASS_STATIC_VERSIONED_MEMBERSHIP"
+        },
+        {
+          "task": "SWITCH300_HATS_OFF_PARTIAL_NATIVE_SOURCE_INDEPENDENT_QA",
+          "source": "6450ce8447e75c8775ba106b1028771bd4d60dbde2f7553007d18fcab038605b",
+          "manifest": "ba2b54e524b05f3e3f8a0cedd560151c3f0970027442bf8da094573ec6048c88",
+          "status": "DONE_SCOPED_PASS_PARTIAL_STATIC_NATIVE_SOURCE"
+        },
+        {
+          "task": "SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA",
+          "source": "2f4d0b60cbbbaef621f92b92861c5694471b26bf00c16c19a3bb237fa7ca323c",
+          "manifest": "914b07a5dd6451c49286a25f29d37a7975c9c96e161e325ed2e143ff1c00ebea",
+          "status": "DONE_SCOPED_PASS_STATIC_AND_READONLY_GENUINE"
+        }
+      ],
+      "scope": "Private research only 4+6+8 ADD; exact parent maps, disjoint paths, no distribution changes, no Writer authority."
     }
   },
   "formalRelease": {
