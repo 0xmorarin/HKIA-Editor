@@ -6160,13 +6160,13 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "DONE_SCOPED_R4_NATIVE_V301_DEFINITIONS_WAIT_NEW_FIXED_SCOPE",
-      "task": "R4_EXECUTION_AND_V301_DEFINITION_SCOPED_QA",
+      "status": "IN_FLIGHT",
+      "task": "R5_STATIC_AND_V301_CAUSAL_INDEPENDENT_QA",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
       "next": "07 R4 WASM Module Worker and real Chrome local genuine execution; 03 v301 Exact29 source/config causal adjudication; parallel, direct handoffs. 06A wait new fixed HIGH result; do not rerun accepted scopes.",
       "dependency": "NONE_FOR_ACCEPTED_SCOPES; NEXT_06A_AFTER_07_WASM_FIXED_SELF_QA_OR_03_CAUSAL_FIXED_SELF_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
-      "baseHead": "b73d147aca121a3ad6cf41aef79200e84e1d3aa6",
+      "baseHead": "13d33d1dbe2056054b1d6598dc2426feaf157e94",
       "legacyEvidence": {
         "file": "HKIA_06_V34_R3_SVELTE_RESEARCH_QA_20261113_RESULT.json",
         "sha256": "8e33e3b5adad1856dedb7779841ef141cf02363b5f05fc524a338afdf1a52f7f"
@@ -6312,20 +6312,16 @@
       },
       "activeClaims": [
         {
-          "task": "HKIA-RUST-009_R4_INDEPENDENT_EXECUTION",
-          "source": "d6401ccea03d67ad312ca1b052455974498ebe1e",
-          "ci": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
-          "status": "DONE_SCOPED_PASS"
+          "task": "HKIA-RUST-010_R5_WASM_MODULE_WORKER_SCOPED_QA",
+          "source": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH"
         },
         {
-          "task": "01_SWITCH301_DEFINITION",
-          "source": "07879811404afea778fb3be839fc133c8f888349686e1e3fd7cbdb2392d48c8a",
-          "status": "DONE_SCOPED_PASS"
-        },
-        {
-          "task": "02_SWITCH301_EXACT29",
-          "source": "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849",
-          "status": "DONE_SCOPED_PASS"
+          "task": "V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_INDEPENDENT_QA",
+          "source": "c05aa3b4633b673956921fc216c480d5d25581e32d877beb3437ffeba593be19",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH"
         }
       ],
       "executionResult": {
