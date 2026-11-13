@@ -1,0 +1,143 @@
+name: QA 06C V33 fixed OFF root independent (no deploy)
+on:
+  push:
+    branches: [qa06c/v33-off-root-20261113]
+    paths: ['.github/workflows/qa06c-v33-off-root.yml']
+permissions:
+  contents: read
+jobs:
+  independent:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: a86360077f3ecb64cb96e984f20f237046725ea2
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: b7e91df1e456ded1b50b4649797bf1b7df216717
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Existing artifact policy and exact base/candidate hashes
+        run: |
+          set -euo pipefail
+          test "$(git hash-object scripts/00-verify-beta-artifact.mjs)" = 1adca007becc7b0a4edb422496da8cbb2a7f25a8
+          test "$(git hash-object scripts/pages-artifact-policy.mjs)" = d6fc2872db11c301eef312574e3f4dfed16af138
+          test "$(git hash-object scripts/lossless-webp.mjs)" = fedeae3bd28ddda39e10f46902a44cc74ae930e4
+          node scripts/00-verify-beta-artifact.mjs candidate/site candidate/site-manifest.json 137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          sha=lambda b:hashlib.sha256(b).hexdigest()
+          def read(name,expected,source):
+              root=pathlib.Path(name);raw=(root/'site-manifest.json').read_bytes()
+              assert sha(raw)==expected
+              m=json.loads(raw); f=m['files']; site=root/'site'
+              assert m['writer']=='OFF' and m['sourceSha256']==source and len(f)==4146 and m['webp']==4076 and m['modules']==55
+              assert {p.relative_to(site).as_posix() for p in site.rglob('*') if p.is_file()}==set(f)
+              assert sum(x['bytes'] for x in f.values())==m['bytes']
+              for p,e in f.items():
+                  b=(site/p).read_bytes(); assert len(b)==e['bytes'] and sha(b)==e['sha256'],p
+              return f
+          a=read('baseline','564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6','a829350378ecf342cad6e23ae6b32f58b71514e08ba0428144eaa486dc202a4a')
+          b=read('candidate','137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db','78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7')
+          delta={'native-product/api.mjs','native-product/dev-output-policy.mjs','scripts/research/save-native-schema-reader.mjs','scripts/research/save-transaction-engine.mjs','src/app.js','src/native-preview-ui.js'}
+          assert set(a)==set(b) and {p for p in a if a[p]!=b[p]}==delta
+          assert sum(p.endswith('.webp') for p in a)==4076
+          assert not any(p.startswith(('coordination/','tests/','.github/','dev/')) or p.endswith(('.map','.zip','.save','.nso')) for p in b)
+          # independent reconstruction and rollback oracle, with exact byte checks above
+          reconstructed={**a,**{p:b[p] for p in delta}}
+          assert reconstructed==b and {**reconstructed,**{p:a[p] for p in delta}}==a
+          print('QA EXACT 4146 each; 6 MOD 4140 unchanged; 4076 WebP unchanged; forward/reverse exact')
+          PY
+      - name: Install actual Chromium
+        run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install chromium
+      - name: Independent actual browser OFF root and conditional recipe oracle
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, threading, http.server, functools, urllib.request,urllib.error,hashlib
+          from playwright.sync_api import sync_playwright
+          m=json.loads(pathlib.Path('candidate/site-manifest.json').read_text())['files']
+          root=pathlib.Path('candidate/site').resolve()
+          class Handler(http.server.BaseHTTPRequestHandler):
+              def do_GET(self):
+                  prefix='/HKIA-Editor/'
+                  if not self.path.startswith(prefix): self.send_error(404);return
+                  p=self.path[len(prefix):] or 'index.html'
+                  if p not in m: self.send_error(404);return
+                  data=(root/p).read_bytes()
+                  import mimetypes
+                  content='text/javascript' if p.endswith(('.mjs','.js')) else mimetypes.guess_type(p)[0] or 'application/octet-stream'
+                  self.send_response(200);self.send_header('Content-Type',content);self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+              def log_message(self,*a): pass
+          server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Handler)
+          threading.Thread(target=server.serve_forever,daemon=True).start()
+          url=f'http://127.0.0.1:{server.server_port}/HKIA-Editor/'
+          denied=['site-manifest.json','coordination/current.json','config/release-gates.json','tests/save.test.mjs','.github/workflows/pages-off-repair.yml','dev/index.html','src/app.js.map','README.md']
+          for p in denied:
+              try: urllib.request.urlopen(url+p);raise AssertionError(p)
+              except urllib.error.HTTPError as e: assert e.code==404,(p,e.code)
+          with sync_playwright() as pw:
+              browser=pw.chromium.launch(headless=True)
+              for width in [320,375,1280]:
+                  page=browser.new_page(viewport={'width':width,'height':900})
+                  errors=[];foreign=[];downloads=[]
+                  page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.on('request',lambda r:foreign.append(r.url) if not r.url.startswith(url) else None)
+                  page.on('download',lambda d:downloads.append(d.suggested_filename))
+                  page.goto(url,wait_until='networkidle',timeout=90000)
+                  assert page.locator('#fileStatus').inner_text().strip()=='未読み込み'
+                  for sel in ['#nativeDownload','#openNativePreview','#closeNativePreview','#nativeDiscard','#downloadEdited']:
+                      assert page.locator(sel).is_disabled(),sel
+                  page.locator('#colTab').click()
+                  page.wait_for_function("document.querySelector('#collectionGrid').children.length > 0")
+                  assert page.locator('#colTab').get_attribute('aria-selected')=='true'
+                  page.locator('#collectionSearch').fill('zzzzzz-no-match-06c')
+                  page.locator('#collectionSearch').fill('')
+                  page.locator('#achTab').click()
+                  assert page.locator('#achTab').get_attribute('aria-selected')=='true'
+                  assert page.locator('#attributionNotice').is_visible()
+                  result=page.evaluate("""async () => {
+                    const ui=await import(new URL('src/native-preview-ui.js',location.href));
+                    const core=await import(new URL('native-product/dev-output-policy.mjs',location.href));
+                    const consent={acknowledgeRecipeAvailabilityChange:true,acknowledgeAchievementAndRewardReference:true};
+                    const expect=(cond,msg)=>{if(!cond)throw Error(msg)};
+                    let positive=0,negative=0;
+                    const reject=f=>{try{f()}catch(e){negative++;return}throw Error('unexpected acceptance')};
+                    for(const [ids,fn,op] of [[ui.RECIPE_EXPANSION23_IDS,ui.recipeExpansion23ForwardRequest,'collection-recipe-expansion23-quantity'],[ui.RECIPE_CELEBRATION5_IDS,ui.recipeCelebration5ForwardRequest,'collection-recipe-celebration5-quantity']]){
+                      for(const id of ids){const row={itemId:id,documentId:77,quantity:1};const q=fn(row,consent);
+                        expect(q.operation===op&&q.itemId===id&&q.documentId===77&&q.expectedQuantity===1&&q.nextQuantity===0&&Object.keys(q).length===7,'request shape');positive++;
+                        reject(()=>fn({...row,quantity:0},consent));reject(()=>fn({...row,documentId:0},consent));reject(()=>fn(row,{...consent,acknowledgeAchievementAndRewardReference:false}));reject(()=>fn({...row,itemId:-1},consent));
+                      }
+                    }
+                    for(const [v,cv] of [['3.0.0',83],['3.0.1',87],['3.0.1',83],['unknown',0]]){
+                      const c=core.devOutputCapability(v,cv,true,true,true,true,true,true,true,true);
+                      expect(c.mode==='DEV_OUTPUT_OFF'&&c.authorizedOperations.length===0&&c.operations.every(x=>!x.canExport),'OFF authority');
+                    }
+                    expect(!core.betaWriterEnabled()&&!core.recipeExpansion23Enabled()&&!core.recipeCelebration5Enabled(),'OFF flags');
+                    const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('abc'));
+                    const hex=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
+                    const w=new Worker(new URL('native-product/worker.mjs',location.href),{type:'module'});
+                    const call=m=>new Promise((res,rej)=>{const t=setTimeout(()=>rej(Error('timeout')),20000);w.onmessage=e=>{clearTimeout(t);res(e.data)};w.onerror=e=>{clearTimeout(t);rej(Error(e.message))};w.postMessage(m)});
+                    try{const a=await call({id:1,kind:'export'});const b=await call({id:1,kind:'noop'});const c=await call({id:2,kind:'apply'});return {positive,negative,secure:isSecureContext,hex,a,b,c,width:document.documentElement.scrollWidth};}finally{w.terminate()}
+                  }""")
+                  assert result['positive']==28 and result['negative']==112 and result['secure'] and result['hex']=='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',result
+                  assert result['a']=={'id':1,'error':'Native worker session missing'} and result['b']=={'id':1,'error':'Native worker replay'} and result['c']=={'id':2,'error':'Native worker session missing'},result
+                  assert result['width']<=width and not errors and not foreign and not downloads,(result,errors,foreign,downloads)
+                  print('QA BROWSER',width,'28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads',flush=True)
+                  page.close()
+              browser.close()
+          server.shutdown()
+          print('QA06C V33 PREDEPLOY SCOPED PASS NO DEPLOY NO SAVE',flush=True)
+          PY
