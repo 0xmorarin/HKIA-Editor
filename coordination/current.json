@@ -5760,7 +5760,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -6086,6 +6086,15 @@
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
           "readbackVerified": true
         }
+      },
+      "uiInventory": {
+        "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
+        "status": "IN_FLIGHT",
+        "claim": "20261113_08_UI_RENDER_INVENTORY",
+        "baseHead": "fa09c9c5a66a4800c13847b066c4a286c4421eb7",
+        "risk": "LOW_ADVISORY_INVENTORY_ONLY_NO_NEW_PRODUCT_CONTRACT",
+        "scope": "Structural static audit V34 fixed legacy HTML and JS DOM rendering/visible attributes/dialogs/error propagation; map exact existing JA keys where unambiguous; candidate inventory only, no game text or product edits",
+        "dependency": "R3/R4 fixed catalogs, V34 fixed reference; no R2 QA dependency"
       }
     },
     "06A_QA_DATA_CORE": {
