@@ -7912,6 +7912,12 @@
           "source": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
           "status": "TRUE_RED_TEST_ONLY_REPAIR_WAIT_DEP_AND_GENUINE_WAIT_ENV",
           "risk": "HIGH"
+        },
+        {
+          "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
+          "source": "a2d2bd1fb110f0bd3a593882472ebecb43a011facaa073b01a035cad403d0efe",
+          "status": "IN_FLIGHT",
+          "risk": "HIGH"
         }
       ],
       "executionResult": {
@@ -8798,6 +8804,16 @@
           "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
         },
         "result": "HATS_SCOPED_PASS; BROWSER_KIT_TEST_ONLY_TRUE_RED; NO_GENUINE_BROWSER"
+      },
+      "browserRepairClaim": {
+        "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
+        "status": "IN_FLIGHT",
+        "baseHead": "30d55907c8b7d22a4b524c8d73c066bbc193a2e8",
+        "baseBlob": "e433eabb4fafbda30ffd1a1118c0b4cd84913a6d",
+        "source": "a2d2bd1fb110f0bd3a593882472ebecb43a011facaa073b01a035cad403d0efe",
+        "manifest": "9a8ae20a11cd51b2e328b3651b854f10bece7df1bbff35fe16f171c65f5107ac",
+        "risk": "HIGH",
+        "scope": "Independent strict evidence test-only repair; fixed kit, 9 previous invalid accepted + new negatives, context and pre-input gate. No product changes or real browser before authorized environment."
       }
     },
     "06B_QA_WEB_LOCALE": {
