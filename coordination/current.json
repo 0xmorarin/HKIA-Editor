@@ -10456,8 +10456,9 @@
     "betaWriterActuallyEnabled": false,
     "actualPagesDeploymentObserved": true,
     "actualPagesPreviewOnly": true,
-    "targetPagesLiveVerified": false,
-    "targetPagesStatus": "SETTINGS_WORKFLOW_BUILT_HTTPS_ENFORCED_LIVE_UNVERIFIED"
+    "targetPagesLiveVerified": true,
+    "targetPagesStatus": "LIVE_FIXED_V30_OFF_SELF_PASS_06C_READY",
+    "targetPagesIndependentAccepted": false
   },
   "nextSerial": [
     "06 continue V30 live and new research scoped QA; 00 integrate exact accepted research deltas after handoff.",
@@ -11390,14 +11391,13 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "00_POST_TRANSFER_NONDEPLOY_CI_OBSERVE_AND_PAGES_ROOT_RECOVERY",
+      "06C_YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
       "00_R7_R5_RESELECT_COMBINED_FIXED_CI_NEW_REPO_GUARD",
       "00_R6_1_FIXED_NONDEPLOY_CI_NEW_REPO_GUARD",
       "07_BROWSER_KIT_STRICT_REPORT_REPAIR",
       "00_V39_AND_HATS_OFF_SCOPED_RESEARCH_ACCEPTANCE"
     ],
     "nextAfterDep": [
-      "06C_NEW_HOST_V30_FIXED_OFF_LIVE_QA_AFTER_PAGES_RECOVERY",
       "06B_R7_AND_R5_RESELECT_FIXED_SCOPED_QA_AFTER_CI",
       "07_R6_1_MEASURED_CAPACITY_AFTER_FIXED_CI_THEN_06A",
       "06A_BROWSER_KIT_REPAIR_QA_AFTER_07",
@@ -13974,7 +13974,7 @@
     "organizationTransferPreflight": {
       "task": "HKIA_ORGANIZATION_TRANSFER_PREFLIGHT_20261113",
       "owner": "00 CTRL",
-      "status": "PARTIAL_TRANSFER_IDENTITY_WRITE_CI_PAGES_CONFIG_PASS_NEW_HOST_LIVE_IN_PROGRESS",
+      "status": "DONE_TRANSFER_IDENTITY_WRITE_CI_PAGES_LIVE_SELF_PASS",
       "risk": "RELEASE",
       "sourceRepository": "0xmorarin/HKIA-Editor",
       "targetRepository": "Yumekiraboshi/HKIA-Editor",
@@ -14019,12 +14019,13 @@
         "v24GenuineBrowser": "WAIT_ENV"
       },
       "blockers": [
-        "Target Pages actual HTTPS and admin/source policy not yet verified; connector settings endpoints unsupported, nondeploy CI read-only observation in progress.",
-        "Actual fixed-artifact deployment not authorized by settings approval alone; no Writer or DNS changes.",
-        "R7/R5 and R6.1 successor CI use new repository guard and exact source. Independent QA after fixed CI. Genuine V24/R5.1 browser WAIT_ENV."
+        "Independent 06C new-host release-scope acceptance pending; no blocker to nonrelease development.",
+        "External ChatGPT Project instructions still require Owner to apply canonical file text; repository instructions updated.",
+        "Genuine V24/R5.1 Browser WAIT_ENV; new root candidate must preserve accepted product data and images; no unapproved deploy.",
+        "R7/R5 and R6.1 successor CI guards must use new owner; historical CI and source immutable."
       ],
-      "decision": "TRANSFER_DONE_IDENTITY_REFS_PR_WRITE_PASS; TARGET_CANONICAL_REBOUND; NO_DEPLOY; REMAINING RELEASE_SCOPE_ONLY",
-      "next": "Observe live new-host fixed V30 result, hand off release scope to 06C. Nonrelease work may resume using target repository after canonical rebind; successor CI guards new owner. No deploy or DNS change.",
+      "decision": "TRANSFER_DONE; REPO_REBIND_AND_NEW_HOST_V30_SELF_PASS; NO_REDEPLOY_NEEDED; NONRELEASE_DEVELOPMENT_RESUME; NEW_HOST_06C_SCOPED_RELEASE_ACCEPTANCE_PENDING",
+      "next": "06C new-host scoped independent acceptance; 00 R7/R5 and R6.1 fixed nondeploy CI new owner guards, accepted V39/Hats Off research integration. 07 browser kit strict report repair. 05 single root product-equivalent candidate after 00 scope. Owner update external Project instruction text; no DNS/deploy/Writer activation.",
       "recheckAfterOwnerInstallation": {
         "status": "OWNER_REPORTED_INSTALLED_CONNECTOR_VISIBILITY_UNVERIFIED",
         "observedBlob": "c00a624fa2f7d0320999fe969f9383d64a38354e",
@@ -14073,7 +14074,7 @@
         "baseBlob": "db0e245864ae02adca744cb49aff865231776d2e",
         "risk": "RELEASE",
         "scope": "SSOT/ADR/settings preparation, fixed ref inventory, no product source/deployment",
-        "status": "DONE_PREPARATION_WAIT_OWNER_UI"
+        "status": "DONE"
       },
       "runbook": {
         "path": "coordination/organization-transfer-20261113.md",
@@ -14354,12 +14355,43 @@
           }
         },
         "liveCheck": {
-          "status": "IN_PROGRESS",
+          "status": "SELF_PASS_NEW_HOST_FIXED_V30_NO_DEPLOY",
           "branch": "ctrl/organization-cutover-check-20261113",
           "head": "80516cbf5b23ce0019e631e91b073ef46731ab68",
           "workflowBlob": "a307307dc5f5f5476e4212d721c3320b6cfa641c",
           "run": 43417018519,
-          "scope": "00 self QA at new HTTPS URL, exact fixed V30 file sample, denial paths, actual Chromium 320/375/1280, no deploy"
+          "job": 131857355168,
+          "conclusion": "success",
+          "url": "https://yumekiraboshi.github.io/HKIA-Editor/",
+          "artifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "manifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+          "verified": {
+            "rootHtmlExact": true,
+            "httpsSampleHashes": 15,
+            "deniedPaths": 7,
+            "httpToHttps": true,
+            "realChromiumWidths": [
+              320,
+              375,
+              1280
+            ],
+            "nativeWebCrypto": true,
+            "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+            "writer": "OFF",
+            "pageErrors": 0,
+            "externalRequests": 0
+          },
+          "limits": "00 self QA reuses old independent V30 oracle; new-host scoped 06C independent required; all 4146 exact in retained Git artifact, live 15 samples only. No actual deploy or live rollback performed, no genuine-save browser/game PASS."
+        },
+        "freeze": "RELEASED_FOR_NONRELEASE_DEVELOPMENT_NEW_CANONICAL_REPOSITORY",
+        "handoff": {
+          "to": "06C QA-RELEASE",
+          "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
+          "source": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+          "scope": "new HTTPS host and distribution boundary only; reuse original V30 accepted exact artifact and old-host independent evidence; independent network/Chromium negative checks, actual Pages metadata, no deploy or Writer change; confirm 15 samples or independent selection and 7 denials/redirect; report any mismatch",
+          "evidenceRun": 43417018519,
+          "status": "READY"
         }
       }
     }
@@ -14371,7 +14403,7 @@
     "betaFrozenSource": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
     "releaseScope": "JS functional Beta first, no Rust/Svelte Beta gate. Formal release requires Svelte+TypeScript+Rust/WASM single Worker ProductSession. No full formal JS implementation prerequisite. Existing feature/safety/Owner gates unchanged.",
     "pages": {
-      "status": "POST_TRANSFER_SETTINGS_VERIFIED_LIVE_PENDING",
+      "status": "POST_TRANSFER_V30_LIVE_SELF_PASS_06C_READY",
       "targetUrl": "https://yumekiraboshi.github.io/HKIA-Editor/",
       "preflight": {
         "mainHead": "303871b9276346f28f776e0a3d5c1870c2278fd8",
@@ -14409,7 +14441,7 @@
           "reconstruct": "existing pinned V24 parts + manifest, launcher in private staging kit; no duplicate large Library artifact"
         }
       },
-      "next": "00 verify target Pages configuration and exact V30 root; restore only approved fixed OFF artifact if required, 06C new-host verification; prepare single-root product-equivalent candidate; V24 genuine Browser separate WAIT_ENV",
+      "next": "06C new-host independent scoped verification, no V30 source re-QA; no redeploy needed. Build next accepted product-equivalent single root only under fixed artifact gates.",
       "closure": {
         "task": "V24_PUBLIC_SOURCE_TEST_CLOSURE",
         "status": "SCOPED_PASS_06_PRIVATE_STAGING",
@@ -14808,6 +14840,35 @@
         "lastActualDeployment": 43342655323,
         "latestCandidate": "V30_FIXED_REF_RESTORE_OR_LIVE_VERIFY",
         "pending": "TARGET_PAGES_CONFIGURATION_AND_LIVE_HTTPS; exact restoration if necessary under Owner approval; new root candidate 06C"
+      },
+      "targetLive": {
+        "status": "SELF_PASS_NEW_HOST_FIXED_V30_NO_DEPLOY",
+        "branch": "ctrl/organization-cutover-check-20261113",
+        "head": "80516cbf5b23ce0019e631e91b073ef46731ab68",
+        "workflowBlob": "a307307dc5f5f5476e4212d721c3320b6cfa641c",
+        "run": 43417018519,
+        "job": 131857355168,
+        "conclusion": "success",
+        "url": "https://yumekiraboshi.github.io/HKIA-Editor/",
+        "artifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "manifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+        "verified": {
+          "rootHtmlExact": true,
+          "httpsSampleHashes": 15,
+          "deniedPaths": 7,
+          "httpToHttps": true,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "nativeWebCrypto": true,
+          "actualModuleWorker": "START_RPC_NO_SESSION_DENIAL",
+          "writer": "OFF",
+          "pageErrors": 0,
+          "externalRequests": 0
+        },
+        "limits": "00 self QA reuses old independent V30 oracle; new-host scoped 06C independent required; all 4146 exact in retained Git artifact, live 15 samples only. No actual deploy or live rollback performed, no genuine-save browser/game PASS."
       }
     },
     "executionPolicy": "Self-QA all; LOW direct; HIGH scoped 06A data/core or 06B web/locale then direct; 00 serial integration; 06C changed integration/release only. Existing independent release/operation/cutover gates unchanged; V24 frozen.",
