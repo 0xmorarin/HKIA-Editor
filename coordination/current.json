@@ -9766,11 +9766,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_YUMEKIRABOSHI_V30_NEW_HOST",
+      "status": "DONE_NEW_HOST_V30_SCOPED_PASS",
       "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
-      "next": "00 record R4 predeploy acceptance and V39 research reference; prepare manual exact R4 deployment only after existing explicit Owner approval; 06C wait new fixed distribution or authorized postdeploy verification, V24 genuine private Browser WAIT_ENV. No duplicate specialist/research QA.",
-      "dependency": "OWNER_EXPLICIT_FIXED_R4_DEPLOYMENT_APPROVAL_FOR_LIVE_DEPLOY; 00_FIXED_MANUAL_COMPOSITION; NEW_FIXED_SCOPE_OR_AUTHORIZED_V24_BROWSER",
+      "next": "00 record new-host V30 scoped PASS; V40 fixed 653 research integration ready; V24 genuine Browser WAIT_ENV",
+      "dependency": "NEW_HOST_V30_SCOPED_PASS; V40_FIXED_READY; V24_WAIT_ENV",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -10621,12 +10621,74 @@
       "ownerApprovalRequired": "ACTUAL_DEPLOY_WRITER_ENABLEMENT_FORMAL_CUTOVER_LIVE_ROLLBACK",
       "newHostClaim": {
         "task": "YUMEKIRABOSHI_V30_NEW_HOST_SCOPED_INDEPENDENT_QA",
-        "status": "IN_FLIGHT",
+        "status": "COMPLETED",
         "baseHead": "00ce5684c61da0a5111a3a426eacf796a0a0e2d4",
         "baseLedgerBlob": "72f7929847f17f1bae5194c99ea7171ca5e5aca6",
         "source": "b7e91df1e456ded1b50b4649797bf1b7df216717",
         "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
         "scope": "new HTTPS host and distribution boundary only; reuse original V30 accepted exact artifact and old-host independent evidence; independent network/Chromium negative checks, actual Pages metadata, no deploy or Writer change; confirm 15 samples or independent selection and 7 denials/redirect; report any mismatch"
+      },
+      "newHostResult": {
+        "verdict": "SCOPED_PASS_NEW_HOST_V30_NO_SAVE_NO_DEPLOY",
+        "source": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+        "workflowHead": "331158657c4dcfad57f2e08bae6494e2c703125b",
+        "workflowBlob": "bf731cbd41faf9ab05515da1d6ea0afd3dd8becc",
+        "run": 43420822179,
+        "job": 131870066206,
+        "conclusion": "success",
+        "verified": {
+          "localFixedHashes": 4146,
+          "liveHTTPSHashes": 77,
+          "denials": 10,
+          "httpToHttps": true,
+          "pagesBuildType": "workflow",
+          "httpsEnforced": true,
+          "cname": null,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "nativeWebCryptoKnownAnswer": true,
+          "worker": "EXPORT_APPLY_NO_SESSION_AND_REPLAY_DENIED",
+          "pageErrors": 0,
+          "externalRequests": 0,
+          "downloads": 0,
+          "writer": "OFF"
+        },
+        "firstRun": {
+          "run": 43420725280,
+          "job": 131869742828,
+          "head": "d4310427ae7fde90f6e192a8302b1f12f55e5686",
+          "status": "FAIL_HTTP_503_TRANSIENT_NOT_DENIAL",
+          "repair": "bounded retry 429/502/503/504, strict 403/404 required; second run PASS"
+        },
+        "evidence": {
+          "zip": {
+            "file": "HKIA_06C_NEW_HOST_V30_20261113_EVIDENCE.zip",
+            "sha256": "b1e94e3039848846b4673f76718e77efa24021056571a0ece8550547b3ea411f"
+          },
+          "result": {
+            "file": "HKIA_06C_NEW_HOST_V30_20261113_RESULT.json",
+            "sha256": "c561c74679f86cd466e9f7eb71d5776dcd1b60629ff4e8be1c169ce56c9908a2",
+            "location": "INSIDE_EVIDENCE_ZIP"
+          },
+          "readback": "BYTE_EXACT_SHA_CRC_2_MANIFEST_HASHES_PASS",
+          "privateLibrary": "HKIA Editor Private"
+        },
+        "unverified": [
+          "all live image bytes not individually fetched; fixed 4146 exact and 77 live hashes",
+          "V24 genuine browser/game persistence; no Save opened",
+          "actual live rollback not performed; historical exposure NOT_ERASED"
+        ],
+        "noDeploy": true,
+        "noWriterChange": true,
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "YUMEKIRABOSHI_V30_NEW_HOST_ACCEPTANCE",
+          "condition": "Record scoped new-host acceptance, no redeploy required for unchanged V30; preserve single root policy and Owner gates."
+        }
       }
     }
   },
