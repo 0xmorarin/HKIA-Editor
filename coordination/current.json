@@ -10242,11 +10242,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_V33_FIXED_OFF_ROOT",
+      "status": "DONE_V33_OFF_ROOT_PREDEPLOY_SCOPED_PASS_WAIT_OWNER_DEPLOY_OR_NEW_FIXED",
       "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
       "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
-      "next": "00 record new-host V30 acceptance and V40 accepted reference; 05 root binding and specialist scopes independent; 06C wait new fixed root/research or authorized V24 genuine Browser",
-      "dependency": "00_RECORD_NEW_HOST_AND_V40; NEXT_FIXED_ROOT_DISTRIBUTION_OR_RESEARCH_SCOPE_WAIT_DEP; V24_GENUINE_BROWSER_WAIT_ENV",
+      "next": "00 record V33 fixed OFF root scoped acceptance; recheck PR12 and explicit Owner approval then manual fixed deploy; 06C postdeploy HTTPS checks after actual dispatch. V24 genuine Browser WAIT_ENV; new root product binding separate.",
+      "dependency": "V33_FIXED_PREDEPLOY_ACCEPTED; OWNER_EXPLICIT_FIXED_ARTIFACT_DEPLOY_APPROVAL_AND_00_MANUAL_DEPLOY; NEXT_ROOT_BINDING_WAIT_DEP; V24_WAIT_ENV",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -11034,27 +11034,25 @@
         }
       },
       "nextReadyParallel": [
-        "00_NEW_HOST_V30_AND_V40_ACCEPTANCE"
+        "00_V33_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
+        "00_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI"
       ],
       "nextAfterDep": [
-        "06C_FIXED_SINGLE_ROOT_DISTRIBUTION_AFTER_00",
-        "06C_NEW_FIXED_RESEARCH_REFERENCE",
+        "06C_V33_FIXED_LIVE_POSTDEPLOY_AFTER_OWNER_APPROVAL_AND_00_MANUAL_DEPLOY",
+        "06B_PRODUCT_TAB_BINDING_AFTER_FIXED_CI",
+        "06C_SINGLE_ROOT_DISTRIBUTION_AFTER_00",
         "06C_V24_AUTHORIZED_GENUINE_BROWSER"
       ],
       "handoff": {
         "to": "00 CTRL",
-        "tasks": [
-          {
-            "to": "00 CTRL",
-            "task": "YUMEKIRABOSHI_V30_NEW_HOST_ACCEPTANCE",
-            "condition": "Record scoped new-host acceptance, no redeploy required for unchanged V30; preserve single root policy and Owner gates."
-          },
-          {
-            "to": "00 CTRL",
-            "task": "V40_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
-            "condition": "Record scoped V40 accepted 653 research reference; no Writer/deploy authority; no repeated QA."
-          }
-        ],
+        "task": "V33_FIXED_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "condition": "Exact fixed V33 and PR12 scoped predeploy PASS; recheck PR lease, current main workflow/gates and explicit fixed-artifact Owner approval before merge/dispatch; after deployment 06C fixed live HTTPS boundary QA. Preserve V24 and no Writer activation.",
+        "prior": {
+          "newHost": "SCOPED_PASS_NEW_HOST_V30_NO_SAVE_NO_DEPLOY",
+          "v40": "SCOPED_PASS_V40_PRIVATE_RESEARCH_REFERENCE"
+        },
         "noDeploy": true,
         "noWriterChange": true
       },
@@ -11205,7 +11203,98 @@
         "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "scope": "6 changed site paths plus manifest only; reuse accepted V33 combined scoped QA and V30 new host/rollback. Verify fixed full hashes/privacy/closure, exact conditional Recipe UI and OFF capability, independent actual browser negatives, rollback to exact V30. No genuine raw Save CI/publication. No deployment. Review PR12 exact one workflow pin diff (V33 target only, preserve manual main-only and existing V30/V29 rollback).",
-        "status": "IN_FLIGHT"
+        "status": "COMPLETED"
+      },
+      "v33PagesResult": {
+        "schema": "HKIA.QA06C.FixedOffRoot.1",
+        "task": "PAGES_V33_FIXED_OFF_ROOT_SCOPED_INDEPENDENT_QA",
+        "verdict": "SCOPED_PASS_PREDEPLOY_FIXED_V33_OFF_ROOT",
+        "base": {
+          "ref": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6"
+        },
+        "candidate": {
+          "ref": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+          "manifestBlob": "0461df44239a3fa6e45e286e18d16615b1625fd4"
+        },
+        "verified": {
+          "artifactFilesEach": 4146,
+          "modified": 6,
+          "unchanged": 4140,
+          "webpUnchanged": 4076,
+          "changedPaths": [
+            "native-product/api.mjs",
+            "native-product/dev-output-policy.mjs",
+            "scripts/research/save-native-schema-reader.mjs",
+            "scripts/research/save-transaction-engine.mjs",
+            "src/app.js",
+            "src/native-preview-ui.js"
+          ],
+          "policy": "PASS",
+          "reconstruct": "EXACT_MAP_WITH_ALL_BYTES_VERIFIED",
+          "rollback": "EXACT_V30_MAP_WITH_ALL_BYTES_VERIFIED",
+          "localHTTPSubpath": "PASS",
+          "pathDenials": 8,
+          "realChromiumWidths": [
+            320,
+            375,
+            1280
+          ],
+          "recipeRequestShapesPerWidth": 28,
+          "recipeNegativeCasesPerWidth": 112,
+          "capabilityCasesPerWidth": 4,
+          "writer": "OFF",
+          "webCryptoKnownAnswer": "PASS",
+          "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+          "pageErrors": 0,
+          "externalRequests": 0,
+          "downloads": 0
+        },
+        "workflow": {
+          "head": "6fcfeedd032275eb06bcf38bb33d7b7a333dba01",
+          "blob": "f35606048bb53206c7facbad565c987d31760428",
+          "run": 43424957254,
+          "job": 131884002261,
+          "conclusion": "success",
+          "observedLog": [
+            "QA EXACT 4146 each; 6 MOD 4140 unchanged; 4076 WebP unchanged; forward/reverse exact",
+            "QA BROWSER 320 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+            "QA BROWSER 375 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+            "QA BROWSER 1280 28 conditional request shapes 112 negatives; all OFF; actual Worker/WebCrypto; no errors external downloads",
+            "QA06C V33 PREDEPLOY SCOPED PASS NO DEPLOY NO SAVE"
+          ]
+        },
+        "pr12": {
+          "head": "4b9fdf0cd7645878221b4f1c28404f82ad9e5c12",
+          "workflowBlob": "75f8ca2a827a400cd1ac0d3655642fd2f45e2fb5",
+          "mainWorkflowBlob": "ea3b177631999431e856967f8e45a214be0442ba",
+          "scope": "one file; exact expected 4-line pin additions/replacement; manual dispatch/main-only existing V30/V29 gates unchanged",
+          "gateBlob": "43a49327f26ce2b49e993387a27ab12cb54a691a",
+          "mergeable": "NOT_OBSERVED_NULL",
+          "merged": false
+        },
+        "limitations": [
+          "Actual private Save browser/load and game persistence not executed; 28 request shapes synthetic, not successful genuine edits; use prior V33 scoped specialist acceptance",
+          "Local HTTP secure context; V33 live HTTPS not checked before deploy; V30 new-host QA reused",
+          "No deployment or live rollback; no writer or flag change; top screen with no Save unchanged",
+          "PR12 mergeability returned null; CTRL must recheck head/base and Owner approval before merge/dispatch",
+          "Artifact manifest historical state label retained; scoped QA does not turn it into release-authorized state"
+        ],
+        "trueRed": [],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V33_FIXED_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
+          "condition": "Exact fixed V33 and PR12 scoped predeploy PASS; recheck PR lease, current main workflow/gates and explicit fixed-artifact Owner approval before merge/dispatch; after deployment 06C fixed live HTTPS boundary QA. Preserve V24 and no Writer activation."
+        },
+        "evidence": {
+          "commit": "099eb5e0004afcae56e15f19e9f23a8b954d866f",
+          "blob": "5f7cf9964b0b3fcea89c73725c1bc0da34fb0a00",
+          "path": "qa/06c/v33-off-root-20261113-result.json",
+          "readback": "EXACT",
+          "scope": "PUBLIC_SAFE_NO_RAW_SAVE_QA_BRANCH_ONLY; run logs pinned"
+        }
       }
     }
   },
