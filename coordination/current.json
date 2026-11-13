@@ -166,6 +166,14 @@
         "next": "03 targeted station access/upgrade and postcook causal effects + 06 scoped 6 new paths in parallel. 04 WAIT accepted exact collection-only contract. No repeat definition/allocator/structural tests.",
         "productAuthorized": false,
         "gameAccepted": false
+      },
+      "stationWitness": {
+        "task": "RECIPE6_SWITCH300_STATION_STATE_WITNESS",
+        "status": "IN_FLIGHT",
+        "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
+        "baseSourceSha256": "ca9aa15554e57c45b0809b656b798aeedc3fddcf7a424ea259a44f57cf03485f",
+        "scope": "New exact station script/Blackboard and failed cooking record evidence; no repeat producer or 03 causal work; read-only private research",
+        "dependency": "01 producer fe97cce8 and 03 causal a3286804 pending separate 06"
       }
     },
     "02_ACHIEVEMENT": {
