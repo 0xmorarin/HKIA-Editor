@@ -12574,6 +12574,12 @@
         "sha256": "3d86a7d5a3b0ed244211e8757efbce25b9a807b8ae08b0bffa79cc10b04e561f",
         "location": "Private Library /HKIA Editor Private/",
         "readback": "BYTE_EXACT_SHA_CRC_PASS_20_ENTRIES"
+      },
+      "productCollectionItemsClaim": {
+        "claim": "20261113_06B_V33_COLLECTION_ITEMS_STATIC",
+        "status": "IN_FLIGHT",
+        "source": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+        "scope": "11 ADD independent preflight; fixed compiled browser separate; no previous scope repeat"
       }
     },
     "06C_QA_RELEASE": {
