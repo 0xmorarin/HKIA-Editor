@@ -4878,6 +4878,14 @@
             "readback": "ALL_4_NEW_ARTIFACTS_BYTE_EXACT_5_ENTRY_CRC_SHA_PASS"
           }
         }
+      },
+      "writerPreflight": {
+        "status": "IN_FLIGHT_REFERENCE_ONLY",
+        "task": "HKIA-RUST-007_WRITER_ORACLE_PREP",
+        "baseHead": "a6cc9d238c9be9ce826355e0f088bd2b44ba75f3",
+        "baseSource": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+        "scope": "Independent test-only preparation while 06 R3 QA in flight: V33 accepted history/progress/timestamp/batch contracts, candidate verifier, aggregate evidence; no product or Session mutation, no R2/R3 re-QA",
+        "dependency": "NONE_REFERENCE_ONLY; R3 independent acceptance still required before writer implementation"
       }
     },
     "08_LOCALIZATION": {
