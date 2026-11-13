@@ -83,7 +83,12 @@ mod schema;
 #[derive(Debug)]
 pub struct ReadSlot { pub envelope: envelope::Envelope, pub index: native::NativeIndex }
 pub fn read_slot(raw: &[u8]) -> Result<ReadSlot, Error> {
-    let envelope = envelope::decode_envelope(raw)?;
+    read_slot_reuse(raw,Vec::new())
+}
+
+/// Reparse the complete input into a caller-owned allocation. No index or bytes are reused.
+pub(crate) fn read_slot_reuse(raw: &[u8], scratch:Vec<u8>) -> Result<ReadSlot, Error> {
+    let envelope = envelope::decode_envelope_reuse(raw,scratch)?;
     let index = native::index_native(&envelope.decoded, envelope.version)?;
     Ok(ReadSlot { envelope, index })
 }

@@ -34,7 +34,11 @@ fn header(raw:&[u8])->Result<Version,Error>{
     if c.array()?!=1||c.int(9,9)?!=9||c.pos!=raw.len(){return Err(Error::Schema)}
     Ok(version)
 }
-pub fn decode_envelope(raw:&[u8])->Result<Envelope,Error>{
+pub fn decode_envelope(raw:&[u8])->Result<Envelope,Error>{decode_envelope_reuse(raw,Vec::new())}
+
+/// A caller-owned scratch allocation is not an input or a validation shortcut.
+/// Bounds and framing are checked first; no previous bytes are visible to the parser.
+pub(crate) fn decode_envelope_reuse(raw:&[u8],mut decoded:Vec<u8>)->Result<Envelope,Error>{
     if raw.len()>MAX_INPUT{return Err(Error::Budget)}
     let tail=raw.get(32..).ok_or(Error::Truncated)?;
     if raw.get(..32)!=Some(PREFIX.as_slice()){return Err(Error::Marker)}
@@ -50,7 +54,10 @@ pub fn decode_envelope(raw:&[u8])->Result<Envelope,Error>{
     for _ in 1..n{sizes.push(l.int(1,MAX_BLOCK as i128)? as usize);}
     if l.pos!=lengths.len(){return Err(Error::Trailing)}
     let total=check_block_budget(&sizes)?;
-    let mut blocks=Vec::with_capacity(n-1);let mut decoded=Vec::with_capacity(total);
+    let mut blocks=Vec::with_capacity(n-1);
+    decoded.clear();
+    if decoded.capacity()>crate::MAX_DECODED{decoded=Vec::new()}
+    if decoded.capacity()<total{decoded.reserve_exact(total);}
     for size in sizes{
         let b=match c.token()?{Token::Bin(b)=>b,_=>return Err(Error::Schema)};
         let end=body_start+c.pos;let start=end-b.len();let d=decoded.len();
@@ -59,4 +66,34 @@ pub fn decode_envelope(raw:&[u8])->Result<Envelope,Error>{
     }
     if c.pos!=c.bytes.len(){return Err(Error::Trailing)}
     Ok(Envelope{version,marker,blocks,decoded})
+}
+
+#[cfg(test)]
+mod r61_reuse_tests {
+    use super::*;
+    const RAW:&[u8]=include_bytes!("../tests/fixtures/exact-ticks-multiblock.bin");
+    #[test]
+    fn reuse_decodes_all_bytes_and_keeps_all_spans() {
+        let first=decode_envelope(RAW).unwrap();
+        let scratch=vec![0xa5;first.decoded.len()+37];
+        let ptr=scratch.as_ptr();
+        let again=decode_envelope_reuse(RAW,scratch).unwrap();
+        assert_eq!(again.decoded.as_ptr(),ptr);
+        assert_eq!(again.decoded,first.decoded);
+        assert_eq!(again.blocks,first.blocks);
+        assert_eq!(again.marker,first.marker);
+        assert_eq!(again.version,first.version);
+    }
+    #[test]
+    fn scratch_never_bypasses_framing_or_budgets() {
+        let mut wrong=RAW.to_vec();wrong[0]^=1;
+        let mut trailing=RAW.to_vec();trailing.push(0);
+        for raw in [wrong.as_slice(),trailing.as_slice(),&RAW[..RAW.len()-1],b"bad".as_slice()] {
+            let ordinary=decode_envelope(raw).unwrap_err();
+            assert_eq!(decode_envelope_reuse(raw,vec![0xff;65536]).unwrap_err(),ordinary);
+        }
+        let x=decode_envelope_reuse(RAW,vec![0;crate::MAX_DECODED+1]).unwrap();
+        assert!(x.decoded.capacity()<=crate::MAX_DECODED);
+        assert_eq!(x.decoded,decode_envelope(RAW).unwrap().decoded);
+    }
 }
