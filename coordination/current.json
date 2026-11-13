@@ -4044,7 +4044,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "R2_GENUINE_PARITY_LOCAL_PASS_06_INDEPENDENT_QA_READY",
+      "status": "IN_FLIGHT_R3_BOUNDED_SESSION_ABI",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4111,8 +4111,8 @@
       "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
       "handoffTo": "06_QA_DIRECT_SYNTHETIC_AND_REAL; 07_SESSION_ABI_OR_REPAIR_AFTER_ACCEPTANCE",
       "dependency": "R2_INDEPENDENT_06_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
-      "resumeBaseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
-      "resumeScope": "Execute existing R2 private kit using identical CI binary, genuine Switch300/301 and V33 fixed reference; aggregate only; no upload or product changes",
+      "resumeBaseHead": "e332e30c2203fbf72598901811a08039812bbe85",
+      "resumeScope": "Add Rust-owned bounded ZIP/account/index projection, single read-only session/typed ABI, CAS/replay/generation/close/file switching and explicit disabled writer; preserve R2 reader bytes; new synthetic tests and scoped independent QA",
       "executionKit": {
         "file": "HKIA_Rust07_R1_LocalExecutionKit_20261112.zip",
         "sha256": "aa3d3b420722c2e1db9fd34b0d7ca1ca44b9e5310d6fb0944953bbb650a65483",
@@ -4126,7 +4126,7 @@
         "preflight": "SOURCE_VERIFIED_TOOLCHAIN_MISSING_CARGO",
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
-      "resumeTask": "HKIA-RUST-004",
+      "resumeTask": "HKIA-RUST-005",
       "previousTask": "HKIA-RUST-003",
       "r2": {
         "source": {
@@ -4384,6 +4384,14 @@
         "fixedSource": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
         "scope": "R2 3MOD4ADD; exact compile evidence and public generated input closure; independent synthetic tag8 typed identity/spans/duplicates/unknown/bounds; no true Save in CI; no source edits by QA",
         "dependency": "NONE_SYNTHETIC; PRIVATE_REAL_SEPARATE_WAIT_ENV"
+      },
+      "r2IndependentAcceptance": {
+        "verdict": "SCOPED_PASS_R2_FIXED_READER_SYNTHETIC_AND_GENUINE_SLOT_PARITY",
+        "source": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
+        "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+        "synthetic": 36,
+        "genuine": 2,
+        "report": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json"
       }
     }
   },
