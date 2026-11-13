@@ -12268,11 +12268,11 @@
     },
     "06C_QA_RELEASE": {
       "owner": "06C QA-RELEASE",
-      "status": "IN_FLIGHT_V33_LIVE_AND_V41",
-      "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA AND V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
-      "scope": "Release QA only: exact V30 preserved, three /dev/ synthetic R4 additions, fixed artifact independent actual Chromium, rollback; V39 six research additions over V38 exact. No deploy, no Writer grant, no V24 acceptance.",
-      "next": "00 record V33 fixed OFF root scoped acceptance; recheck PR12 and explicit Owner approval then manual fixed deploy; 06C postdeploy HTTPS checks after actual dispatch. V24 genuine Browser WAIT_ENV; new root product binding separate.",
-      "dependency": "V33_FIXED_PREDEPLOY_ACCEPTED; OWNER_EXPLICIT_FIXED_ARTIFACT_DEPLOY_APPROVAL_AND_00_MANUAL_DEPLOY; NEXT_ROOT_BINDING_WAIT_DEP; V24_WAIT_ENV",
+      "status": "DONE_V33_LIVE_AND_V41_SCOPED_PASS_WAIT_NEW_FIXED_OR_V24_ENV",
+      "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA_AND_V41_FIXED_671_PRIVATE_RESEARCH_REFERENCE_SCOPED_QA",
+      "scope": "Live V33 six changed paths and actual HTTPS boundary; V41 18 ADD research only",
+      "next": "00 record V33 live and V41 research acceptance; 06C wait next fixed root distribution or research, authorized V24 genuine Browser",
+      "dependency": "00_RECORD_V33_LIVE_AND_V41; NEXT_FIXED_ROOT_OR_RESEARCH_WAIT_DEP; V24_WAIT_ENV",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8ff90acc61abc22fc39f44685d8475d63a01d412",
       "legacyEvidence": {
@@ -13060,25 +13060,27 @@
         }
       },
       "nextReadyParallel": [
-        "00_V33_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
-        "00_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI"
+        "00_V33_LIVE_AND_V41_ACCEPTANCE"
       ],
       "nextAfterDep": [
-        "06C_V33_FIXED_LIVE_POSTDEPLOY_AFTER_OWNER_APPROVAL_AND_00_MANUAL_DEPLOY",
-        "06B_PRODUCT_TAB_BINDING_AFTER_FIXED_CI",
-        "06C_SINGLE_ROOT_DISTRIBUTION_AFTER_00",
+        "06C_FIXED_SINGLE_ROOT_DISTRIBUTION_AFTER_00_AND_06B",
+        "06C_NEW_FIXED_RESEARCH_REFERENCE",
         "06C_V24_AUTHORIZED_GENUINE_BROWSER"
       ],
       "handoff": {
         "to": "00 CTRL",
-        "task": "V33_FIXED_OFF_ROOT_ACCEPTANCE_AND_MANUAL_DEPLOY_PREPARATION",
-        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
-        "condition": "Exact fixed V33 and PR12 scoped predeploy PASS; recheck PR lease, current main workflow/gates and explicit fixed-artifact Owner approval before merge/dispatch; after deployment 06C fixed live HTTPS boundary QA. Preserve V24 and no Writer activation.",
-        "prior": {
-          "newHost": "SCOPED_PASS_NEW_HOST_V30_NO_SAVE_NO_DEPLOY",
-          "v40": "SCOPED_PASS_V40_PRIVATE_RESEARCH_REFERENCE"
-        },
+        "tasks": [
+          {
+            "to": "00 CTRL",
+            "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
+            "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
+          },
+          {
+            "to": "00 CTRL",
+            "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+            "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
+          }
+        ],
         "noDeploy": true,
         "noWriterChange": true
       },
@@ -13328,7 +13330,7 @@
         "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
         "baseHead": "22e2aaeb69e285f44a600f4bffc62b53004bec8c",
         "baseLedgerBlob": "fe9e45dedd380abf9132a931ed62962515aa5ffb",
-        "status": "IN_FLIGHT",
+        "status": "COMPLETED",
         "scope": "Actual new host V33 six changed runtime paths + root/sample/denials; actual HTTPS Chromium 320/375/1280, credit/Worker/WebCrypto/OFF/no external; reuse V30 host and V33 predeploy/rollback exact evidence; verify CTRL live run or independently execute changed-scope oracle. No deploy or genuine Save. First CTRL live run 43432726052 exact HTTPS PASS, 320 PASS, 375 Worker generic onerror; diagnostic e830910b pending. Do not mark full PASS; isolate transient transport vs runtime regression, verify 375/1280 and independent acceptance. Diagnostic run 43432865398 passed all 77 HTTPS samples, 10 denials and 3 widths; first error not reproduced; independent acceptance must retain failure history and assess recurrence."
       },
       "v41Claim": {
@@ -13336,8 +13338,153 @@
         "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
         "baseHead": "22e2aaeb69e285f44a600f4bffc62b53004bec8c",
         "baseLedgerBlob": "fe9e45dedd380abf9132a931ed62962515aa5ffb",
-        "status": "IN_FLIGHT",
+        "status": "COMPLETED",
         "scope": "18 ADD only (4 Recipe membership V39, 6 Hats Off v300 V39, 8 Candy Cloud V40), 653 exact V40, 42 focused, prior 06A exact scoped evidence reuse; verify full source/map, no distribution change, no new REQUIRED/Writer, rollback; metadata files inside pinned Metadata ZIP. No deploy."
+      },
+      "v33LiveResult": {
+        "schema": "HKIA.06C.V33.Live.1",
+        "task": "PAGES_V33_FIXED_OFF_ROOT_POSTDEPLOY_HTTPS_INDEPENDENT_QA",
+        "verdict": "SCOPED_PASS_LIVE_FIXED_V33_OFF_ROOT",
+        "source": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "manifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "host": "https://yumekiraboshi.github.io/HKIA-Editor/",
+        "deployment": {
+          "run": 43432381119,
+          "verifyJob": 131908829815,
+          "deployJob": 131909012030,
+          "event": "workflow_dispatch",
+          "conclusion": "success",
+          "head": "306d6c2119babb1839b2a3f436ba89124cf1171b",
+          "pr12Merge": "a280b65989fb9808bc339b3462ca6ccee998cef7"
+        },
+        "independent": {
+          "run": 43434165900,
+          "job": 131914901040,
+          "head": "c9159db016eea29ee2b43a870047886354cd8440",
+          "workflowBlob": "0d5530a95c4ce34e4b129af315d64c7354997fbf",
+          "conclusion": "success",
+          "verified": {
+            "fixedFiles": 4146,
+            "liveHTTPSHashes": 77,
+            "allChanged6": true,
+            "denials": 10,
+            "rootExact": true,
+            "httpToHttps": true,
+            "browserContexts": 6,
+            "widths": [
+              375,
+              320,
+              1280,
+              375,
+              375,
+              1280
+            ],
+            "worker": "EXPORT_APPLY_NO_SESSION_REPLAY_DENIED",
+            "webCryptoKnownAnswer": true,
+            "writer": "OFF",
+            "pageErrors": 0,
+            "externalRequests": 0,
+            "failedRequests": 0,
+            "httpErrors": 0,
+            "downloads": 0,
+            "credits": true
+          }
+        },
+        "initialCtrlFailure": {
+          "run": 43432726052,
+          "width": 375,
+          "error": "Worker onerror empty message",
+          "diagnosticRun": 43432865398,
+          "diagnostic": "PASS all 3 widths",
+          "independentRecurrence": "0/6 contexts; 0/3 at 375px",
+          "cause": "UNKNOWN_NOT_REPRODUCED_NOT_CLAIMED_FIXED"
+        },
+        "rollback": {
+          "ref": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+          "manifest": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+          "evidence": "V33 predeploy exact rollback map with full base/candidate bytes verified",
+          "actualLiveRollback": false
+        },
+        "limits": [
+          "No genuine Save loaded; V24 genuine browser/game WAIT_ENV",
+          "77 samples live, not all 4076 image bytes individually fetched",
+          "No deploy, DNS, Writer activation or formal promotion by 06C",
+          "First CTRL Worker error cause unknown, no recurrence observed",
+          "Historical exposure NOT_ERASED"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V33_LIVE_FIXED_OFF_ROOT_ACCEPTANCE",
+          "condition": "Record exact V33 live scoped acceptance and latest actual deployment; no redeploy, no new Writer authority."
+        },
+        "evidence": {
+          "commit": "1371ba5b0230dcd5c413a9d3470dea0ab79251e5",
+          "blob": "b4ac6bd41e603766e5147b20caac825adf0ebeb9",
+          "path": "qa/06c/v33-live-20261113-result.json",
+          "readback": "EXACT",
+          "scope": "PUBLIC_SAFE_QA_ONLY"
+        }
+      },
+      "v41Result": {
+        "verdict": "SCOPED_PASS_V41_PRIVATE_RESEARCH_REFERENCE",
+        "source": "b2fc36c85e827793624d4f3cfbbae7d35fac376c88b2131f1eceb5d6a43ba135",
+        "base": "50f9415f10bfdf0295311983ee445e2601e18ec0130bd13951b6ec0bb7234641",
+        "manifest": "f557c5b5993c2f2245b6c9daef81be9f8c8e4ed0252fa26f36079bc609adae5d",
+        "delta": "f45e7d68c1c784b8421acb4876371a9ce49011dfee7b0c962ec2fb72c8b44f6e",
+        "artifactManifest": "ff08fd010e652ebd42b9df1f5884786838f246ab6ff011fd2cd02b7fcd4945ec",
+        "upstreamEvidence": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166",
+        "verified": {
+          "inputPins": 13,
+          "metadataPins": 3,
+          "v39Unchanged": 647,
+          "v40Unchanged": 653,
+          "entries": 671,
+          "added": [
+            4,
+            6,
+            8
+          ],
+          "modified": 0,
+          "deleted": 0,
+          "focused": 42,
+          "fail": 0,
+          "independentNegatives": 6,
+          "upstreamEvidenceHashes": 8,
+          "check": "PASS_BOTH",
+          "build": "PASS_BOTH",
+          "derivedBuildExact": 55,
+          "directMatch": 54,
+          "indexProjectionExact": true,
+          "distributionMapExact": 4146,
+          "rollbackExact": 653,
+          "reconstructExact": 671,
+          "writer": "OFF"
+        },
+        "evidence": {
+          "zip": {
+            "file": "HKIA_06C_V41_SCOPED_QA_20261113_EVIDENCE.zip",
+            "sha256": "c66ce8b6d0fecbf7fe26f52b93acecc8430ae01dd4ec52734342fb88b7793435"
+          },
+          "result": {
+            "file": "HKIA_06C_V41_SCOPED_QA_20261113_RESULT.json",
+            "sha256": "e1d86bd301e1dcedefd647120230f10ddc6fdccc8962d01479c1a48078410517",
+            "location": "INSIDE_EVIDENCE_ZIP"
+          },
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_6_MANIFEST_HASHES_PASS"
+        },
+        "trueRed": [],
+        "unverified": [
+          "No genuine Save rerun; reuse upstream read-only saved conditions",
+          "Runtime interaction, game persistence, exact v300 Hats Off script not established",
+          "External media not rehashed; map reused",
+          "No deploy or Writer permission"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "V41_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+          "condition": "Record fixed 671 scoped PASS; no new REQUIRED/Writer/deploy"
+        }
       }
     }
   },
