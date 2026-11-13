@@ -7991,7 +7991,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "V36_ACCEPTED_R5_AND_SVELTE_R4_CI_IN_FLIGHT",
+    "status": "DONE_V36_ACCEPTED_R5_CI_PASS_SVELTE_R4_TEST_REPAIR_READY",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -8101,14 +8101,14 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
+      "07_R5_FIXED_WASM_PRIVATE_GENUINE_EXECUTION_AUTHORIZED_ENV_ONLY",
+      "05_SVELTE_R4_TEST_ORACLE_REPAIR_AND_ACCEPTED_LOCALE_PREPARATION",
       "06A_R5_STATIC_AND_V301_CAUSAL_EXISTING_IN_FLIGHT",
-      "06B_LOCALIZATION_R3_R4_SCOPED_QA",
-      "05_ACCEPTED_LOCALE_R1_R2_PREPARATION_DISJOINT",
-      "00_R5_AND_SVELTE_R4_CI_RESULT"
+      "06B_LOCALIZATION_R3_R4_SCOPED_QA"
     ],
     "nextAfterDep": [
-      "07_R5_COMPILED_CODE_ONLY_ARTIFACT_PRIVATE_GENUINE_AFTER_CI",
-      "06B_SVELTE_R4_AFTER_CI",
+      "00_SVELTE_R4_REPIN_CI_AFTER_05_FIXED_TEST_REPAIR",
+      "06B_SVELTE_R4_AFTER_GREEN_CI",
       "06A_R5_EXECUTION_AFTER_07_FIXED_SELF_QA",
       "00_AFTER_06A_V301_CAUSAL_ACCEPTANCE_FIXED_INTEGRATION",
       "05_LOCALE_CATALOG_BINDING_AFTER_06B_R3_R4_ACCEPTANCE",
@@ -8773,19 +8773,19 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "V36_ACCEPTED_R5_AND_SVELTE_R4_CI",
-      "status": "IN_FLIGHT_CI",
+      "task": "V36_ACCEPTANCE_R5_WASM_CI_AND_SVELTE_R4_CI",
+      "status": "DONE_SCOPED_HANDOFF",
+      "scope": "V36 accepted; R5 compile and synthetic actual browser PASS, genuine unverified; R4 compiled and old browser regression PASS, test-only oracle repair required; V24/V30 unchanged",
       "source": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
-      "scope": "Research reference accepted, two nondeploy CI workflows in progress; no new Writer/deploy authorization",
       "next": [
+        "07_R5_FIXED_WASM_PRIVATE_GENUINE_EXECUTION_AUTHORIZED_ENV_ONLY",
+        "05_SVELTE_R4_TEST_ORACLE_REPAIR_AND_ACCEPTED_LOCALE_PREPARATION",
         "06A_R5_STATIC_AND_V301_CAUSAL_EXISTING_IN_FLIGHT",
-        "06B_LOCALIZATION_R3_R4_SCOPED_QA",
-        "05_ACCEPTED_LOCALE_R1_R2_PREPARATION_DISJOINT",
-        "00_R5_AND_SVELTE_R4_CI_RESULT"
+        "06B_LOCALIZATION_R3_R4_SCOPED_QA"
       ],
       "after": [
-        "07_R5_COMPILED_CODE_ONLY_ARTIFACT_PRIVATE_GENUINE_AFTER_CI",
-        "06B_SVELTE_R4_AFTER_CI",
+        "00_SVELTE_R4_REPIN_CI_AFTER_05_FIXED_TEST_REPAIR",
+        "06B_SVELTE_R4_AFTER_GREEN_CI",
         "06A_R5_EXECUTION_AFTER_07_FIXED_SELF_QA",
         "00_AFTER_06A_V301_CAUSAL_ACCEPTANCE_FIXED_INTEGRATION",
         "05_LOCALE_CATALOG_BINDING_AFTER_06B_R3_R4_ACCEPTANCE",
@@ -9716,7 +9716,7 @@
     },
     "r5CI": {
       "task": "R5_FIXED_WASM_WORKER_NONDEPLOY_CI",
-      "status": "IN_FLIGHT_CI_RUNNING",
+      "status": "DONE_FIXED_R5_WASM_SYNTHETIC_CHROME_PASS",
       "owner": "00 CTRL",
       "baseHead": "baf6cfc589943854cdff9bfecce121e263eb2e5a",
       "sourceHead": "9797367c6a227fccf8ce5620c1f8ad4710ab4031",
@@ -9727,11 +9727,68 @@
       "pr": 9,
       "run": 43386307818,
       "job": 131755498600,
-      "verified": "Workflow-only 1 ADD; exact R5 source guard CI step PASS; actual compile/browser pending"
+      "verified": {
+        "rustBridge": 4,
+        "typescriptNew": 10,
+        "typescriptRegression": 14,
+        "fail": 0,
+        "wasm": "PASS",
+        "chrome": "140.0.7339.16",
+        "syntheticOutputs": 6,
+        "nativeByteExact": 6,
+        "versions": [
+          "3.0.0",
+          "3.0.1"
+        ],
+        "operations": [
+          "history",
+          "progress",
+          "batch"
+        ],
+        "originalsUnchanged": 6,
+        "lifecycle": [
+          "busy",
+          "replay",
+          "stale",
+          "foreign",
+          "close"
+        ],
+        "secureContext": true,
+        "networkDenied": 0,
+        "serverViolations": 0,
+        "artifact": {
+          "id": 14018627715,
+          "file": "HKIA_Rust_R5_CodeOnly_43386307818.zip",
+          "sha256": "524021ba77e327d262c71428df9c0cd2132f294181803ede696c8f3dcde0d881",
+          "bytes": 127712,
+          "wasmSha256": "e9a4caf35236ad20e57c360654b61e36e18066b76e3cc1307fa0ffabccd15ee9",
+          "reportSha256": "fe6e1f5dc05cda12d764d74a8fd8551c5524f1c482404db367c6b36b57801fa5",
+          "entries": 9,
+          "codeFiles": 8,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS"
+        }
+      },
+      "ci": "SUCCESS",
+      "unverified": [
+        "genuine Browser outputs 0/6",
+        "authorized local browser environment",
+        "independent R5 execution acceptance",
+        "resource targets and physical game persistence",
+        "Development Switch and production cutover"
+      ],
+      "handoff": {
+        "to": [
+          "07 RUST CORE",
+          "06A QA-DATA-CORE"
+        ],
+        "task": "R5_FIXED_COMPILED_WASM_PRIVATE_GENUINE_EXECUTION",
+        "condition": "07 use exact code-only artifact on authorized local browser; six genuine outputs + independent V33/R4 oracle, rollback lifecycle and resource evidence; if administrator restriction unchanged WAIT_ENV for genuine browser only. 06A current static claim continues, then fixed execution QA. Never send genuine inputs to CI."
+      }
     },
     "svelteR4CI": {
       "task": "SVELTE_R4_FIXED_ISOLATED_CI",
-      "status": "IN_FLIGHT_CI_RUNNING",
+      "status": "PARTIAL_COMPILE_PASS_BROWSER_TEST_ORACLE_RED_READY_05",
       "owner": "00 CTRL",
       "baseHead": "baf6cfc589943854cdff9bfecce121e263eb2e5a",
       "sourceHead": "a6a0d8732f73b0e13817b943f294832c61d769dd",
@@ -9741,7 +9798,36 @@
       "head": "9fffbb07d6877b8c34997e9d07506cd2be7a9d9b",
       "branch": "web05/svelte-achievement-list-r4",
       "run": 43386305291,
-      "verified": "Workflow-only 1 ADD; actual compile/browser pending"
+      "verified": {
+        "sourceGuard": "PASS",
+        "lock": "PASS",
+        "unit": "71 PASS",
+        "svelteCheck": "PASS",
+        "build": "PASS",
+        "legacyReference": "PASS",
+        "r1r2r3ActualChromiumWidths": [
+          320,
+          375,
+          1280
+        ],
+        "r4Browser": "FAILED_AT_320_CLASS_ORDER_ASSERTION",
+        "failure": {
+          "file": "svelte-ui/scripts/browser-achievement-parity.py",
+          "line": 17,
+          "expected": "achievement-row selected missing-record",
+          "actual": "achievement-row missing-record selected",
+          "classification": "TEST_ORACLE_CLASS_TOKEN_ORDER; no product defect established by this mismatch",
+          "preceding": "120->240->241 paging, selection/focus/keyboard succeeded before assertion",
+          "remaining": "post-assertion filter/tab/overflow and 375/1280 R4 not executed"
+        }
+      },
+      "ci": "FAILURE",
+      "job": 131755490901,
+      "handoff": {
+        "to": "05 WEB",
+        "task": "SVELTE_R4_CLASS_TOKEN_ORACLE_MINIMAL_REPAIR",
+        "condition": "Fix test-only class token order assertion without weakening required tokens or changing product CSS; keep 3 affected assertions, positive and negative control; preserve fixed R4 product bytes; hand off exact repair source to 00 for scope-pinned isolated CI rerun. No unmodified rerun; 06B R4 after full green evidence."
+      }
     },
     "v36Acceptance": {
       "task": "V36_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
