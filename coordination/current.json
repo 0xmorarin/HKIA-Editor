@@ -3439,6 +3439,17 @@
                 }
               ]
             }
+          },
+          "reselectRepair": {
+            "task": "SVELTE_R5_DEFINITION_RESELECT_REGRESSION_REPAIR",
+            "status": "IN_FLIGHT",
+            "owner": "05 WEB",
+            "baseHead": "53bddc64bfd6152e770bec6cb31da32dc6029f37",
+            "basePrHead": "1997c6716342f4c18c036510968a52de014ca570",
+            "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+            "scope": "R5 selectDefinition postcondition and focused model/browser regression only; R6 exact seven blobs and R7 fixed branch unchanged",
+            "dependency": "06B webR5Repair TRUE_RED_NEW_REGRESSION; original three guards retained",
+            "next": "05 reproduce then minimal repair and self-QA; 00 isolated CI; 06B independent repair"
           }
         },
         "r6": {
