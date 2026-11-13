@@ -2576,7 +2576,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_V33_PRODUCT_ACHIEVEMENT_HEADER_FIXED_CI_READY; 06B_HEADER_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; EXISTING_CATEGORY_LIST_TAB_FILTER_QUEUES_UNCHANGED; 05_NEXT_COLLECTION_DETAIL_OR_ACCEPTED_R3_LOCALE_CONSUMER_DISJOINT; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
+      "next": "00_V33_PRODUCT_COLLECTION_ITEMS_FIXED_CI_READY; 06B_ITEMS_STATIC_PREFLIGHT_PARALLEL_AND_FIXED_BROWSER_AFTER_CI; EXISTING_HEADER_CATEGORY_LIST_TAB_FILTER_QUEUES_UNCHANGED; 05_NEXT_ACCEPTED_R3_LOCALE_CONSUMER_OR_DISJOINT_BINDING; 00_SHARED_APP_COMPOSITION_AFTER_ACCEPTED_SCOPES",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -4701,14 +4701,71 @@
       "productCollectionItems": {
         "task": "SVELTE_PRODUCT_COLLECTION_ITEM_LIST_BINDING",
         "owner": "05 WEB",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_FIXED_READY_CTRL_CI",
         "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
         "baseHead": "c12fe0b000129c61706015f26a980083df75e440",
         "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
         "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
-        "scope": "05 additive bounded collection item rows with R5 presentation; existing detail toolbar, definition list, bulk, inspector and writer remain controller-owned",
+        "scope": "11 ADD only svelte-ui. Actual V33 collection item row list bounded projection, existing R5 itemPresentation and exact legacy image markup, search/filter/sort/page, original controller click and inspector; no edit/Writer/Session authority, no shared app source or distribution change.",
         "dependency": "R5 fixed reselect repair accepted; V33 artifact; independent tab/filter/category/list/header scopes",
-        "next": "Self-QA, fixed CI 00, independent 06B"
+        "next": "00 fixed nondeploy CI; 06B static preflight parallel then compiled changed-scope QA; 05 next accepted R3 locale consumer or remaining independent product binding; existing other queues unchanged; 00 shared app composition after acceptance",
+        "sourceHead": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+        "branch": "web05/product-collection-items-v33",
+        "tree": "a54387c74ed9fe28d6f0f03577558d18e19d603e",
+        "baseManifest": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "manifestSha256": "1dfa1fc3f1108399ff8de8b7ca51e189e651d77dfb9a3124e9353fbf2bc46aff",
+        "evidence": {
+          "file": "HKIA_WEB05_ProductCollectionItems_V33_20261113_Evidence.zip",
+          "location": "Private Library /HKIA Editor Private/",
+          "sha256": "9efe04c8c8fda24c85d1f5daa6a21fbae0cbad9b10f90be59de25354fd6dc736",
+          "evidenceSha256": "387cace7d5d5ce61fd7ff22e3e8e909f22bbce9de83916ec5a54994fe57ac31c",
+          "localCRC": "PASS",
+          "upload": "SUCCESS",
+          "readback": "LIBRARY_VISIBILITY_BLOCKED; exact current conversation artifact available; private raw readback not claimed"
+        },
+        "verified": {
+          "focusedV8": 17,
+          "fail": 0,
+          "actualV33RenderRowsCases": 10,
+          "actualRowComparisons": 1306,
+          "mounts": 9,
+          "disposals": 9,
+          "syntheticDOMAndRecords": true,
+          "inspectorStub": true,
+          "exactNinePatchAnchors": true,
+          "reversible": true,
+          "exactRemoteBlobs": 11,
+          "acceptedR5Blob": "5dc57889ddfa6812cfa88064d8060e69221d2eb8",
+          "actualAppBlob": "96d07a69441c2d8fe5d9ee2c5f71f05eef893625",
+          "catalogPagedMappedDefinitions": 28,
+          "firstDefinitionItems": 103,
+          "firstDefinitionMapped": 103,
+          "duplicateHostPreRepairFailure": 1,
+          "postRepairPass": 17
+        },
+        "patch": {
+          "path": "src/app.js",
+          "before": "6d1358ee1dd1991a8307dee28a42ffcf617e0af073533a23820f94c630c2bfe5",
+          "delta": "9 reversible anchors; 1 MOD + 1 ADD compiled src/product-collection-items.mjs; 4145 unchanged, 4076 WebP; not built"
+        },
+        "decision": "Mount detached Svelte row list then verify exact legacy DOM and stable IDs before swapping only list host. Restore original host before rerender/category change; stale token/scope and duplicate hosts deny clicks; restore owned parent even if duplicate elsewhere. Legacy owns inspect/more; no second state. Fixed scope callback checks original section not swapped host; attach section before first renderRows; no separate history inference. Fallback beyond 1200, no production cap. Image error status and original aria/title preserved. Earlier duplicate host negative reproduced then fixed.",
+        "unverified": [
+          "Node full suite expected140 (123+17), Svelte compile/check/build, actual compiled Chromium 320/375/1280; local DNS/npm cache unavailable",
+          "Actual matched genuine Save, collection history and inspector behavior in compiled browser; synthetic VM and inspector stub only",
+          "Private evidence Library raw readback blocked by visibility; local SHA/CRC and upload confirmed",
+          "06B independent acceptance; shared app composition/06C release; Writer OFF"
+        ],
+        "handoff": {
+          "to": "00 CTRL",
+          "task": "SVELTE_V33_PRODUCT_COLLECTION_ITEMS_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "sourceHead": "fe2a4c2ceb26758bcf768a129008a5b06c5174b8",
+          "baseArtifactRef": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+          "scope": "11 exact ADD, isolated CI, no deploy or existing tab/filter/category/list/header rerun",
+          "acceptance": "Pinned npm ci; npm test expected140 (123+17); svelte check --fail-on-warnings; ordinary Vite build + vite build --config vite.product-collection-items.config.ts. Exact V33 site+manifest; node --experimental-strip-types scripts/verify-product-collection-items-reference.mjs <site> <manifest>; node scripts/prepare-product-collection-items-delta.mjs <site> <manifest> dist-product-collection-items/product-collection-items.mjs <fresh-delta>. Overlay only app and module, 4145 unchanged/4076 WebP. Actual browser-product-collection-items-parity.py <base> <candidate> 320/375/1280: actual 103-item mapped definition, paging, search/sort, disabled history filter unloaded, inspect, same panel, stale list, module abort and mapped image LOAD_FAILED, no external/errors/download/overflow, Writer OFF. Record module SHA/manifest/delta/log/license. Independent matched history and real Save scope only as required, no false game pass.",
+          "consumer": "06B QA-WEB-LOCALE",
+          "consumerScope": "11 fixed paths; exact R5 display reuse, lifecycle restore/duplicate/stale/reentry, actual controller and compiled browser; genuine history/inspector if needed; no prior scopes repeat."
+        }
       }
     },
     "06_QA": {
