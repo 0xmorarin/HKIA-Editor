@@ -25,7 +25,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(git rev-parse HEAD^)" = 464a92472823e401983309465799063b1541f04a
+          test "$(git rev-parse HEAD:parts)" = db38cf6b47772253ec5daf463ebf0c7f0cb88004
           test "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" = workflow
           test "$(find parts -maxdepth 1 -type f | wc -l)" = 57
           bundle="$RUNNER_TEMP/hkia-off.bundle"
