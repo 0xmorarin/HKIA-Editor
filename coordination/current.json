@@ -326,6 +326,15 @@
           "game authentication/load/resave/reward replay; first-progress creation and derived missing remain WAIT"
         ],
         "next": "03 scoped v300 exact20+9 causal transfer adjudication and 06 independent 8 ADD QA parallel; 04 after both accepted exact v300/83 gated Writer proof; V24/V33/live OFF unchanged"
+      },
+      "v300DefinitionReview": {
+        "task": "FORMAL_V300_EXACT29_SWITCH_DEFINITION_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "exact20+absence9 Switch v300 asset identity, threshold, group membership, counter and rewards; no Inventory definition edits, no product changes",
+        "dependency": "02 native parity and 03 v300 exact29 causal pending QA; original Switch v300 bundle evidence from HKIARE"
       }
     },
     "03_LINKAGE": {
