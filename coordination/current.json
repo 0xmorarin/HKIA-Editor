@@ -263,12 +263,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "FORMAL_V33_CAUSAL_SCOPES_ACCEPTED_DONE_WAIT_NEW_WITNESS",
+      "status": "FORMAL_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_PARTIAL_LOCAL_PASS_QA_PENDING",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "IN_FLIGHT_HISTORICAL_RECIPE6_AND_DERIVED_VISITOR_MISSION",
+      "next": "06_SCOPED_QA_01_02_03_NEW; 04_WAIT_EXACT_NATIVE_AND_REWARD_WITNESSES; 00_PAGES_06_LIVE_QA_INDEPENDENT; 03_WAIT_NEW_WITNESS_OR_QA_FAILURE",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -450,19 +450,39 @@
       },
       "historicalRecipeReview": {
         "task": "FORMAL_HISTORICAL_RECIPE6_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_PENDING",
         "baseMain": "3d7422393e6ba06ffeb53578b7394f57ad15ca73",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "dependency": "1550cd6929e15634288567d84ae3d3f077b07fba3367b29eebb6d154d3657bbd",
-        "scope": "Exact six historical v300 absent rows; bounded source reference and typed historical evidence; no v300 parity inference, no writer permission"
+        "scope": "Exact six historical v300 absent rows; bounded source reference and typed historical evidence; no v300 parity inference, no writer permission",
+        "delta": {
+          "file": "HKIA_03_HISTORICAL_RECIPE6_V33_DELTA_20261113.zip",
+          "sha256": "872ce7ce052ea52766fd34e453f389c6941d836f70145773702d371c49e8b66f",
+          "manifestSha256": "2cc7dfcf374ff0f5a2973ccbc302578af1b132825aaebf19a0e37d3171588dd6",
+          "scope": "7 ADD + transport manifest; 521 V33 unchanged",
+          "verified": "6 complete Steam301 Recipe bodies + Food identities; 1837 bounded typed definitions, 0 direct Recipe/Food PPtr; v301 25 Native anchors/7 calls/3 branches; 17 focused; 01 historical v300 evidence reused only; CRC and Library readback byte exact",
+          "classification": "RELATED_HISTORY_AND_COOKING; NO_NEW_CROSS_MODEL_REQUIRED; v300 native producer/allocator/persistence UNKNOWN; no writer authorization"
+        },
+        "remaining": "Historical earlier private archive not available in this run; use 01 fixed evidence. v300 executable parity, actual producer, mission managed/opaque/indirect consumers, physical history backfill and game load/resave unknown.",
+        "next": "06 independent 01 + 03 scoped QA; 01 reuse source facts; 04 WAIT v300 native producer/allocator and safe closure; no new row authorization"
       },
       "derivedVisitorReview": {
         "task": "FORMAL_DERIVED_VISITOR_MISSION_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_LOCAL_PASS_QA_PENDING",
         "baseMain": "3d7422393e6ba06ffeb53578b7394f57ad15ca73",
         "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "dependency": "54a56a4419303ff70de5028f02702aae545132f666256e3849d4f500b764330b",
-        "scope": "readyForGuests exact 22 zero Visitor members and one missing Mission, conditional initial/recount vs runtime; reward UNKNOWN, no structural creation"
+        "scope": "readyForGuests exact 22 zero Visitor members and one missing Mission, conditional initial/recount vs runtime; reward UNKNOWN, no structural creation",
+        "delta": {
+          "file": "HKIA_03_DERIVED_VISITOR_MISSION_V33_DELTA_20261113.zip",
+          "sha256": "c3c96df439363167780c72e537b882d40f654f1a7f62c6e53ec07b5dd24a962f",
+          "manifestSha256": "c64e516f4b397b7f67abc7671b4c8aeb3ea22b398ecefe5caad6507a27dbf581",
+          "scope": "7 ADD + transport manifest; 521 V33 unchanged",
+          "verified": "genuine v301 readyForGuests model 22 exact zero Visitor, parent 54->53/76, 6 Slot fields, old Counter mismatch, paired model match, Account/structural 0, source original unchanged; 42 Native anchors/16 calls/5 branches; 10 focused; CRC and Library readback exact",
+          "classification": "CONDITIONAL_EXISTING_MANUAL_COUNTER_REQUIRED; VISITOR_ZERO_AND_MISSION_INITIAL_ZERO_CONDITIONAL; reward UNKNOWN; fixerUpper9 denied; no product authorization"
+        },
+        "remaining": "v300 parity; actual runtime definition registration, scheduler/event timing, reward replay and actual game load/resave; no missing row creation",
+        "next": "06 independent 02 + 03 scoped QA; 04 WAIT reward/game and causal acceptance; 02 exact runtime/first-progress witness"
       }
     },
     "04_SAVE_CORE": {
