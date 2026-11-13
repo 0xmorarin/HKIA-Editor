@@ -1058,12 +1058,12 @@
       }
     },
     "03_LINKAGE": {
-      "status": "VERSIONED_RECIPE_MEMBERSHIP_CAUSAL_IN_FLIGHT",
+      "status": "VERSIONED_RECIPE_HISTORY_CAUSAL_SELF_PASS_06A_READY_CANDY_ACCEPTED",
       "sourceSha256": "2fc3c8dc93a2c2adb2449f0f8da39bdca93dd991fbfcd787d9f1906aa4e7aff0",
       "newFamilies": 3,
       "conditionalRequired": "PARENT_FLAG_AND_COUNT_ROOT_PROGRESS_FOR_DECLARED_INCOMPLETE_TARGET",
       "groupRootCounters": "CONDITIONAL_VISIBLE_RECOUNT_OR_EXPLICIT_COHERENT_SNAPSHOT",
-      "next": "06A_SWITCH300_CANDY_CLOUD_POSTPROCESS_NULL_NATIVE_INDEPENDENT_QA; 03_WAIT_EXACT_INTERACTION_BUNDLE_OR_CONTROLLED_RUNTIME_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
+      "next": "06A_SWITCH300_301_RECIPE_VERSIONED_MEMBERSHIP_HISTORY_CAUSAL_INDEPENDENT_QA; 03_WAIT_NEW_RUNTIME_MIGRATION_CANDY_SOURCE_OR_QA_COUNTEREXAMPLE; 00_SERIAL_RESEARCH_AFTER_QA",
       "task": "NATIVE_ALWAYSRUN_ACHIEVEMENT_CAUSAL",
       "taskBaseSha256": "33ece2e6eb8347eec1d254b73bcd21da57b88023ff19cde9f786e68621ac298d",
       "scope": "V20 fixed 04/06 AlwaysRun slots; migration body, target achievement and counter write/delete conditions; no product modification",
@@ -1637,7 +1637,7 @@
       },
       "versionedRecipeMembershipCausal": {
         "task": "SWITCH300_301_RECIPE_VERSIONED_MEMBERSHIP_HISTORY_CAUSAL",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_SELF_PASS_06A_READY",
         "owner": "03 LINKAGE",
         "risk": "HIGH",
         "baseLedgerBlob": "fe857a5f599058d5f0dd203b5754711a95e7e80d",
@@ -1648,7 +1648,28 @@
           "manifest": "d956d32ca6482c9a995dfc3898a343e996b8a266b6e37f6f98f07d62db32a43a",
           "evidence": "518e4277b5c78500331bc5a03e1ee15a72455a04688ae936cadcb717254b4166"
         },
-        "next": "Typed mapping and targeted native migration closure, selfQA then 06A"
+        "next": "06A independent READY; 03 wait specific counterexample or new concrete runtime/migration/Candy interaction source",
+        "claimCommit": "09f76eb6a09afd19103727501a640af49769a4b5",
+        "artifact": "HKIA_03_SWITCH300_301_RECIPE_MEMBERSHIP_HISTORY_V41_DELTA_20261114.zip",
+        "deltaSha256": "37eeb968ef48f89fd6b3593c7445f24fdb387856aead2c79875c7f4d08ad3060",
+        "manifestSha256": "0dbbe5e06e2e10eb025353b74098919f5862d27fc9650468d9376426d8b3dac9",
+        "resultSha256": "530ff0b360cc05c5ed07e18b8443bad5d0aa520082501d65f86bf384299ecac2",
+        "nativeSha256": "44100341d93278ef963d85da5fafd45c22af62f98769802a346a15d641f262a6",
+        "observationSha256": "0304b85f981c3a9ba11b606e2b81b6dec4ed79fd54e83d5a5f73da1d346e879c",
+        "changes": "9 ADD + transport manifest, 0 MOD/DEL; V41 all 671 manifest bytes unchanged",
+        "verified": "29 exact membership changes (19 recipe=13 empty/6 food->recipe, six result Food, four other); 5 v300 Native ranges/1820 words/67 anchors/33 branch sites/10 slot bindings/13 methods; current CollectionGuid comparison, item ID Key1 serialize/deserialize, legacy GUID->ID Key0 migration existing-Key1 priority and clear path; 2 private archives, 4 distinct typed genuine slots (v300/83 3, v301/87 1), 116 rows, Key0 all empty, 13/13 v301 empty-membership recipes retain Key1, inventory positive 5/23/29/29, history 1/19/25/29, 4/4/4/0 positive without history; 3 duplicates/1 other excluded, original unchanged; native/observation/result byte-exact replay, 8 tests and 24 negative subtests PASS, npm check PASS, Library SHA/CRC/9 hashes byte exact",
+        "classification": "VERSIONED_MAPPING_AND_HISTORY_PRESERVATION_CONDITIONAL_STATIC_READONLY_ONLY; NO_NEW_UNCONDITIONAL_REQUIRED; NO_WRITER_AUTHORITY",
+        "productAuthorized": false,
+        "gameAccepted": false,
+        "remaining": "06A independent scoped oracle, actual registration/scheduler and v301 migration body, controlled before/after, game load/resave/reboot, exact fallback persistence and reward replay; Candy interaction body remains missing; Key0 nonempty/unknown preserve, no cross-version conversion authority",
+        "handoff": {
+          "to": "06A_QA_DATA_CORE",
+          "status": "READY",
+          "task": "SWITCH300_301_RECIPE_VERSIONED_MEMBERSHIP_HISTORY_CAUSAL_INDEPENDENT_QA",
+          "fixedSourceSha256": "37eeb968ef48f89fd6b3593c7445f24fdb387856aead2c79875c7f4d08ad3060",
+          "scope": "New 9 additive research paths, fixed V41 671. Independent Native current group GUID, shared item history, Key0->Key1 collision and clear; 4 genuine typed records/116 observations and exact 29 partitions, 13/13 v301 EMPTY retained history; 8 focused and source/version/empty/unknown/typed negatives. Reuse 01 accepted source and v301 membership, no repeat raw extraction or Candy/producer QA.",
+          "condition": "06A scoped acceptance -> 01/04/07 version-specific mapping/preservation, 05 display only (HIGH via 06B), 00 serial research integration; no new write authority"
+        }
       }
     },
     "04_SAVE_CORE": {
