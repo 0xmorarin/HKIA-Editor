@@ -1694,7 +1694,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_SVELTE_PR6_LOCK_A11Y_LEGACY_PORT_FIXED_CI; 05_AFTER_RESULT_OR_NEW_ACCEPTED_CORE; 06_ACTIVE_LIVE_RESEARCH_QA_AND_LATER_SVELTE; NO_REPEAT",
+      "next": "06_R1_INDEPENDENT_QA_PARALLEL_00_R2_ISOLATED_CI; 05_AFTER_R2_RESULT_OR_NEW_ACCEPTED_CORE; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2454,7 +2454,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R1_COMPILED_ISOLATED_BROWSER_PASS_FOLLOWUP_READY_CI",
+        "status": "R1_COMPILED_PASS_06_READY_R2_FIXED_BRANCH_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -2568,11 +2568,36 @@
         },
         "r2": {
           "task": "SVELTE_R2_SEARCH_FILTER_CONTROLS",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
           "basePrHead": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
           "scope": "Additive isolated svelte-ui R2 toolbar controls and typed legacy event port; preserve R1 frozen snapshot, existing product/V24/V33, lock, Writer, Pages. Exact V33 control metadata and event routing; test synthetic UI and legacy callbacks; no second session.",
-          "next": "05 implementation and fixed branch; 06 R1 independent QA in parallel; 00 isolated R2 CI"
+          "next": "00 isolate R2 fixed branch CI, retain PR6 R1 immutable, exact lock npm ci, check --fail-on-warnings/build/test, verify-filter-reference against repo V33-compatible actual HTML/app (if mismatch use fixed reference privately), both browser scripts. 06 independently accept R1 on d393c8b then R2 after compiled fixed source; 05 repairs only new failures; no product merge/deploy.",
+          "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
+          "deltaSha256": "a0a8fe3a6a38c2b2dbe58664d9f609922202e695eeaf32bae02c1aa013ca1475",
+          "manifestSha256": "7383a54393e0b52f4c1be8130df900b591b8dfa5b3711d4757aadf4d7f142f9f",
+          "transportSha256": "4ef1cd024492653d8b838eb89156906c63e1960e21e6389aac1919d632323df9",
+          "evidenceSha256": "afffeae74269253f875ab91c8a6530ccc0aebd490ea1cd97d148fc93718f000b",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteFilters_R2_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteFilters_R2_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteFilters_R2_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteFilters_R2_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteFilters_R2_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-filters-r2",
+            "head": "4888d776bc3e73af763a0941980b8d5fa700dc28",
+            "parent": "d393c8b44ff8b3dd7f04b9fec1772903c30c353e",
+            "tree": "820316ff8545aedce2ec9b06a39b07172331222c",
+            "changed": "1 MOD 6 ADD 0 DEL; 201 untouched; 7 exact blobs; R1 PR6 unchanged"
+          },
+          "verified": "43 Node tests (12 new) 0 fail; strict TS model and fixture check; seven V33 actual HTML control metadata; 25 V33 actual event registrations/callback transitions with synthetic DOM/render sinks; 16 Achievement renders/clears, 9 Collection renders, limit120; browser script syntax; 24 source/7 delta CRC and replay; 5 Library readbacks byte exact",
+          "unverified": [
+            "R2 actual Svelte compiler/check/build and built Chromium 320/375/1280",
+            "actual live JS controller/collection content binding, full product parity",
+            "06 independent R1 and R2 scoped acceptance"
+          ]
         }
       }
     },
