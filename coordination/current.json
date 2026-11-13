@@ -4882,10 +4882,10 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "READY_LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
-      "baseHead": "d51a5c25c2beb11645480b4b9bcb02249e7ee53c",
+      "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
       "decision": "OWNER_LOCALIZATION_DECISION_20261113",
       "scope": "Actual supported Switch300/301 locale metadata and game localization text, stable IDs/keys, existing EN/JA reuse; independent locale packs and editor catalog contract; no raw assets or shared UI/Writer changes",
       "allowedPaths": [
@@ -4901,7 +4901,8 @@
         "06 QA",
         "00 CTRL"
       ],
-      "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION"
+      "privacy": "PRIVATE_RAW_GAME_ASSETS_ONLY; DERIVED_MINIMAL_DATA_ALLOWLIST; NO_SAVE_TRANSMISSION",
+      "executionScope": "Locale source discovery, existing EN/JA audit and independent localization contracts/tests; no shared product changes"
     }
   },
   "p0FixCandidate": {
