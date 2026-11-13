@@ -12810,6 +12810,27 @@
       "instructionsChars": 7993,
       "source": "Owner explicit policy change 2026-11-13",
       "scope": "Active visual milestones promptly; independent QA/approval unchanged; no auto deploy; remote media reused"
+    },
+    "v38Acceptance": {
+      "task": "V38_PRIVATE_RESEARCH_REFERENCE_ACCEPTANCE",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "source": "8b326a64552e77497401d98a49266eac1a75fe0911047746e2c996a3d1c8eb5f",
+      "scope": "Fixed 06C acceptance only"
+    },
+    "svelteLocaleRepairCI": {
+      "task": "SVELTE_LOCALE_R1_REPAIR_FIXED_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "sourceHead": "6ebabfe7ebb29e06ff13edd9b5a45d7131f14995",
+      "scope": "Fixed 2-path repair; isolated workflow only; no deployment"
+    },
+    "r6CI": {
+      "task": "HKIA-RUST-014_R6_ISOLATED_NONDEPLOY_CI",
+      "owner": "00 CTRL",
+      "status": "IN_FLIGHT",
+      "sourceHead": "ba11ec40229b031e09e5d48a7b81edcb7365c477",
+      "scope": "Fixed 7-path R6, compile and paired synthetic capacity; no genuine CI or deployment"
     }
   },
   "formalRelease": {
