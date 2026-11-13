@@ -1,0 +1,19 @@
+{
+  "schema": "HKIA.R5.1",
+  "parent": "b0835830ef1b1d3d2e3ecb159866c2883bad7665",
+  "r4Pins": "070786d7ad0495572d8a578e337ca124a9c4e2ce37feeda36e22d3b55fe34d9d",
+  "files": {
+    "crates/hkia-save-core/wasm-bridge/Cargo.toml": "9edbdf7714cf932a8e3672329a657b187b1ec3779b35eb20941aec2ec9530560",
+    "crates/hkia-save-core/wasm-bridge/src/lib.rs": "a7ebd8c1b12cd65dd9f2918e0c856cdaec3837d7e9983efdd26049964271f8fd",
+    "rust-worker/writer-abi.ts": "bea6515d991576113d8eb23f2132279519a2db4fb4793cd0b7991a79c69b0e17",
+    "rust-worker/wasm-transport.ts": "7611d805e1078385bf108c897c24e60636246c02fa674a8d942ad3a4050ea4d6",
+    "rust-worker/module-worker.ts": "e64b3f5b9113161d42716cbdcc93e42e272d005797c2180d4b14cc267f17549f",
+    "rust-worker/worker-client.ts": "f66daf5fe40d506690e2a3c6e26bc827a5971795f6f5b0402c4812451f7c0817",
+    "tests/rust/writer-abi.test.mjs": "7013bdb6e28ef970bdef9196b230e3cd2ff7ba1cf2a3d74b58258059b620136d",
+    "tests/rust/wasm-browser/index.html": "30490666258a1e410e859e3c3bc7a2de87d52ba58c2f7feffba3a199db8ed96b",
+    "tests/rust/wasm-browser/browser-witness.ts": "89cce0ba548187e71c30b2be3d4a1a4d7bbc59a5dbe8679c6c7435d27a32f21d",
+    "tests/rust/wasm-browser/run-browser.py": "fa63e53bb23c8241fb328f739190530760bd58a015f51faf9f8596b58ed2f071",
+    "tests/rust/run-wasm-ci.py": "53a1246f2722a1cecfb9886d518a5c147e81e1fda159cdaf654b8f2a08fb15fd",
+    "contracts/rust/hkia-wasm-bridge-r5.md": "664a84df070e4a7cb0b7f7b745eafcb80a0d0ba136f42675fe356b2649fca601"
+  }
+}

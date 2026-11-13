@@ -1,0 +1,9 @@
+[package]
+name = "hkia-wasm-bridge"
+version = "0.1.0"
+edition = "2021"
+publish = false
+[lib]
+crate-type = ["cdylib", "rlib"]
+[dependencies]
+hkia-save-core = { path = ".." }
