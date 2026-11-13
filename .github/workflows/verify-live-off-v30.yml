@@ -1,0 +1,66 @@
+name: HKIA V30 OFF public HTTPS smoke (no deploy)
+on:
+  push:
+    branches:
+      - ctrl/pages-off-transport-20261113
+    paths:
+      - .github/workflows/verify-live-off-v30.yml
+permissions:
+  contents: read
+concurrency:
+  group: hkia-v30-live-smoke
+  cancel-in-progress: false
+jobs:
+  https:
+    if: github.repository == '0xmorarin/HKIA-Editor' && github.ref == 'refs/heads/ctrl/pages-off-transport-20261113' && github.event.before == '93cdb41780bceabb0111861b822912d2118a6269' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify actual public HTTPS bytes and deny non-site paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, urllib.request, urllib.error, time
+          root="https://0xmorarin.github.io/HKIA-Editor/"
+          pins={
+              "index.html":("51e08577d212f9d8f90095ada1d2acd2e6a373d3f9d8e875e8833e107c06dea4",12117),
+              "src/style.css":("0b7d37cde2933439fb8acf9f5708ab01ceb76d008f03ae2dfb267c9870b863e6",18716),
+              "src/app.js":("b736e11af8c527f497a1c975e1479aa3f6c5b7204fd8b6c44cc098921060d56d",106628),
+              "media/boot.mjs":("fb05169db82ff737d1f10ba60daf46c8cd159f3cd039c28a0f8e7a036966aea7",889),
+              "media/image-map.json":("00764f406aaa993d48c80de5fe477fb827869921259f8140fc7a99f800848a29",5758741),
+              "native-product/worker.mjs":("5fc4854be8f9e81724c1dedb0644bb7255fc1a10ddd2cd43013666290b67b63a",2484),
+              "assets/icons/collection_group_birthdays.webp":("92bbbedb647efb3624dba7d4b5c3ccd46f37f5412df081829a6ac57319697c5d",25210),
+              "native-product/dev-output-policy.mjs":("b2230091ce8be10b85d3932e1a5a028aac8e5080750fe4e649b07b7fb80ea4a3",10947),
+          }
+          def get(path):
+              req=urllib.request.Request(root+path,headers={"Cache-Control":"no-cache","Accept-Encoding":"identity","User-Agent":"HKIA-fixed-OFF-smoke"})
+              with urllib.request.urlopen(req,timeout=25) as r:
+                  assert r.status==200 and r.geturl().startswith(root)
+                  return r.read(),r.headers.get("Content-Type","")
+          for attempt in range(3):
+              try:
+                  b,t=get("")
+                  assert hashlib.sha256(b).hexdigest()==pins["index.html"][0] and b'data-native-preview="off"' in b
+                  break
+              except Exception:
+                  if attempt==2: raise
+                  time.sleep(5)
+          print("PASS HTTPS root exact V30 index.html")
+          for path,(sha,size) in pins.items():
+              b,t=get(path)
+              assert len(b)==size and hashlib.sha256(b).hexdigest()==sha,path
+              if path.endswith(".webp"): assert "image/webp" in t and b[0:4]==b"RIFF" and b[8:12]==b"WEBP"
+              if path.endswith((".js",".mjs")): assert "javascript" in t,t
+              print("PASS",path,sha)
+          for path in ["coordination/current.json","tests/save.test.mjs",".github/workflows/pages-off-repair.yml","site-manifest.json","README.md","HKIA_Pages_OFF_V30_V29_20261113.bundle","parts/0000.bin"]:
+              try:
+                  get(path)
+              except urllib.error.HTTPError as e:
+                  assert e.code in (403,404), (path,e.code)
+                  print("DENIED",path,e.code)
+              else: raise AssertionError("NON_SITE_PATH_EXPOSED "+path)
+          with urllib.request.urlopen("http://0xmorarin.github.io/HKIA-Editor/",timeout=25) as r:
+              assert r.geturl().startswith(root) and hashlib.sha256(r.read()).hexdigest()==pins["index.html"][0]
+          print("PASS HTTP redirects to HTTPS exact V30")
+          PY
