@@ -5279,8 +5279,8 @@
           "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
-          "observed": "Two bounded segments returned exact expected Git blob SHA; large request h2 failure; continue bounded transfer",
-          "next": "Transfer remaining exact binary segments from private Library, SHA compare and checkpoint each batch; nondeploy CI rebuild pinned Git bundle; then PR3 after refs verified.",
+          "observed": "Exact initial 2 binary blobs attached to durable isolated branch; full bundle SHA and 57 local part SHA verified; no deploy",
+          "next": "Stage remaining exact parts then verify bundle + pinned roots in nondeploy Actions",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
           "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
           "transportBranch": "ctrl/pages-off-transfer-20261113",
@@ -5288,7 +5288,19 @@
           "transportTree": "34c96ee4e94eb67895462e4a0d050d51c1a81b5c",
           "verifiedPartCount": 2,
           "totalParts": 57,
-          "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json"
+          "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json",
+          "transport": {
+            "branch": "ctrl/pages-off-transport-20261113",
+            "head": "0f46aaaff7bf2aec5d6c4f0ffdc52a13f89e7e90",
+            "tree": "34c96ee4e94eb67895462e4a0d050d51c1a81b5c",
+            "parts": 57,
+            "committedParts": [
+              0,
+              1
+            ],
+            "bytes": 3145728,
+            "method": "2MiB pinned parts; binary blob SHA and tree commit; resume by branch head; nondeploy reconstruction only"
+          }
         }
       },
       "ownerRecoveryPriority": {
@@ -5303,7 +5315,7 @@
     },
     "executionPolicy": "Existing accepted scope reuse; independent tasks parallel, direct handoff 01/02/03 -> 04/06 -> 05 -> 06 -> 00. Beta QA and formal source development use separate fixed bases and no merge into frozen V24; integrate later exact scoped accepted changes.",
     "integrationCandidate": {
-      "label": "V33_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
+      "label": "V33_FORMAL_OFF_COMBINED_SCOPED_PASS",
       "file": "HKIA_WEB05_FormalCelebration5UI_V31_20261113_Source.zip",
       "sha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
       "entries": 521,
@@ -5342,7 +5354,8 @@
         "flags": "OFF",
         "reconstruct": "V32 exact OFF + two-path distribution delta"
       },
-      "readback": "3 new private files byte-exact SHA CRC; source reused exact accepted bytes"
+      "readback": "3 new private files byte-exact SHA CRC; source reused exact accepted bytes",
+      "acceptance": "06_SCOPED_PASS_FORMAL_V33_OFF_COMBINED"
     },
     "previousIntegrationCandidate": {
       "label": "V32_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
