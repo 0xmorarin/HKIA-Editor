@@ -5773,11 +5773,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT",
-      "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA",
+      "status": "PARTIAL",
+      "task": "LOCALIZATION_R1_SCOPED_INDEPENDENT_QA_AND_SVELTE_R2",
       "scope": "08 R1 fixed private delta; independent pack, identity, registry/catalog, negative cases and source provenance; R2 compile/browser separate WAIT_DEP; no product changes",
-      "next": "06B independent scoped QA then direct 08/05 handoff; R2 WAIT compiled/browser",
-      "dependency": "00 R2 CI or 08 fixed",
+      "next": "08 focused runtime fix READY; 05 private data prep only and R3 disjoint; 06B after fixed runtime repair or R3 compiled/browser; no R1/R2 repeat",
+      "dependency": "R1 runtime repair by 08 + fixed self-QA; R3 actual fixed CI; full UI/selector/version mapping separately",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -5815,12 +5815,83 @@
       "claim": "20261113_06B_LOCALE_R1",
       "webClaim": {
         "task": "SVELTE_R2_SEARCH_FILTER_INDEPENDENT_QA",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SCOPED_PASS",
         "claim": "20261113_06B_WEB_R2",
         "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
         "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
         "run": 43378037110,
         "scope": "R2 seven changed paths, independent browser/negative cases only; R1 accepted reuse"
+      },
+      "claimStatus": "COMPLETE_SCOPED",
+      "evidence": {
+        "file": "HKIA_06B_R1_LOCALE_R2_WEB_INDEPENDENT_QA_20261113.zip",
+        "sha256": "db2746c6eefc1d5dcef82efbe1c57d73607a5c20b6389756b50e4a03c6378930",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "SHA_AND_CRC_PASS"
+      },
+      "localeR1": {
+        "status": "PARTIAL_DATA_SCOPED_PASS_RUNTIME_TRUE_RED",
+        "sourceSha256": "b351692fb4b5a07f0d561b00700c918bcfdb2a7c4df0997da2d8af8684578945",
+        "verified": {
+          "originalBabelSHA": 90,
+          "packsExact": 30,
+          "exactStrings": 458940,
+          "missing": 180,
+          "changedPairs": 245,
+          "identityCrosswalk": 13220,
+          "recipeSubset": 282,
+          "existingENJA": 3080,
+          "catalogs": 15,
+          "commonKeys": 44,
+          "producerTests": "8/8",
+          "independentTests": "6/8"
+        },
+        "trueRed": {
+          "id": "LOCALE-R1-STALE-REJECT",
+          "scope": "localization/runtime.mjs createLocaleLoader",
+          "repro": "A pending ja/300; B READY en/301; A rejects => REJECTED not STALE. invalidate pending A then reject same failure.",
+          "cause": "generation check only after fulfilled await",
+          "impact": "obsolete errors may surface; no live UI corruption observed",
+          "repair": "08 catch rejection; return STALE only if obsolete; rethrow active failure; regressions both branches + invalidate/current reject",
+          "recipient": "08 LOCALIZATION",
+          "status": "READY_REPAIR"
+        },
+        "unverified": [
+          "native selector/Turkish discrepancy",
+          "original typed definition reconstruction / Switch300 full identity and Switch301 remaining mapping parity",
+          "game fallback and account names",
+          "13 locales remaining 36 seed keys, full UI inventory, linguistic/Browser",
+          "storage write/remove denied handling by consumer",
+          "live Save/Session/Revision immutability and distribution"
+        ],
+        "handoff": {
+          "to08": "READY: focused stale rejection fix + self-QA and fixed Delta; preserve data hashes; continue unresolved native mapping/selector separately",
+          "to05": "PRIVATE_DATA_CATALOG_PREPARATION_ONLY; runtime integration waits 08 fix + 06B; no enablement; handle storage denial explicitly"
+        }
+      },
+      "webR2": {
+        "status": "DONE_SCOPED_PASS_ISOLATED_R2",
+        "sourceSha256": "32475289724648a3245303fd9ca5a396ecadaad6a32e78edbb46535713d6e457",
+        "head": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
+        "run": 43378037110,
+        "verified": {
+          "changedBlobs": 7,
+          "lockBlob": "7ebf888366fb358c687a6a471d969ceb8a594b05",
+          "localOriginalUnit": 43,
+          "independentTests": 3,
+          "independentTransitions": 33,
+          "ciBrowser": "ACTUAL_FIXED_CI_CHROMIUM_320_375_1280_SUCCESS_NOT_INDEPENDENT_RERUN",
+          "ciSteps": "fixed source+lock, compile/check/build/legacy parity, actual Chromium all success"
+        },
+        "unverified": [
+          "independent local compiled Browser rerun (CI no artifact, npm cache miss/online timeout)",
+          "actual production controller and save/session binding",
+          "full UI parity"
+        ],
+        "handoff": {
+          "to05": "R2 isolated accepted; reuse exact blobs; continue disjoint R3 and integration only within prerequisites",
+          "to00": "R2 scoped QA complete, R3 isolated fixed CI remains separate; no production merge/deploy permission"
+        }
       }
     },
     "06C_QA_RELEASE": {
