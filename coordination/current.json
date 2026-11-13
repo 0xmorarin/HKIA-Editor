@@ -7312,7 +7312,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "DONE_V35_ACCEPTED_R3_CI_DEPENDENCY_UNBLOCK",
+    "status": "DONE_V36_FIXED_06C_READY_DEPENDENCIES_RECONCILED",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -7422,19 +7422,20 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
-      "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
+      "07_R4_WASM_MODULE_WORKER_REAL_CHROME_GENUINE_MINIMUM",
+      "03_V301_EXACT29_VERSIONED_SOURCE_CONFIG_CAUSAL_ADJUDICATION",
       "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
+      "06B_LOCALIZATION_R2_RUNTIME_AND_NATIVE_VERSION_SCOPES",
       "05_NEXT_DISJOINT_SVELTE_SCOPE",
-      "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
+      "08_FULL_UI_INVENTORY_AND_REMAINING_CATALOG_KEYS",
+      "06C_V36_FIXED_625_SCOPED_INTEGRATION_QA"
     ],
     "nextAfterDep": [
-      "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
-      "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
-      "06B_LOCALIZATION_R2_AFTER_08_FIXED",
+      "00_ACCEPT_V36_AFTER_06C",
+      "06A_AFTER_07_WASM_OR_03_CAUSAL_FIXED_SELF_QA",
       "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
-      "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
-      "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
       "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
+      "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
       "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
@@ -8094,28 +8095,23 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "V35_ACCEPTANCE_AND_SVELTE_R3_CI",
-      "status": "DONE",
-      "next": [
-        "06A_R4_EXECUTION_AND_V301_DEFINITION_EXISTING_IN_FLIGHT",
-        "06B_SVELTE_R3_FIXED_COMPILED_SCOPE",
-        "05_NEXT_DISJOINT_SVELTE_SCOPE",
-        "08_LOCALIZATION_RUNTIME_REPAIR_EXISTING_IN_FLIGHT"
-      ],
-      "after": [
-        "07_WASM_WORKER_AFTER_06A_R4_ACCEPTANCE",
-        "01_02_03_04_07_AFTER_06A_V301_CONTRACT_ACCEPTANCE_OR_COUNTEREXAMPLE",
-        "06B_LOCALIZATION_R2_AFTER_08_FIXED",
-        "05_LOCALE_RUNTIME_ADAPTER_AFTER_06B_ACCEPTANCE",
-        "00_NEXT_SERIAL_INTEGRATION_AFTER_FIXED_ACCEPTED_SCOPE",
-        "06C_V24_AUTHORIZED_PRIVATE_BROWSER_WAIT_ENV",
-        "00_DEVELOPMENT_SWITCH_AFTER_MINIMUM_FOUNDATION_INDEPENDENT_QA",
-        "00_PRODUCTION_CUTOVER_AFTER_06C_AND_OWNER_APPROVAL"
-      ],
-      "ownerActivation": "STREAM_ID_ONLY_PER_OWNER_MINIMAL_ACTIVATION_DECISION_20261113",
-      "source": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
-      "ciHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
-      "scope": "V35 private research only; Svelte R3 isolated CI; no release/Writer activation"
+      "to": "06C QA-RELEASE",
+      "task": "V36_FIXED_625_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+      "fixedSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+      "scope": "10 ADD only, 615 exact V35; exact 01/02 accepted deltas and 06A research result; 31 focused tests, independent negative/reconstruction/rollback, 55 source-build exact, 54 direct full-manifest match + media boot index projection, 4146 prior map exact; no media rehash, no new product authorization; V24 and live V30 untouched",
+      "dependency": "NONE; V35 independently accepted",
+      "acceptance": "SCOPED_INTEGRATION_PASS_ONLY_NO_WRITER_NO_DEPLOY",
+      "evidence": {
+        "result": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_RESULT.json",
+          "sha256": "e340aa03a053698dfe6319ef018d19d8ac6e02a5b73cc3789724a39344c1a418"
+        },
+        "zip": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_Evidence.zip",
+          "sha256": "1d04c3cdbf494ee495f0d78d44933d0069cbc88b7614390686c70ff5749e5168"
+        }
+      },
+      "after": "00 accept fixed V36 reference; V24 browser remains WAIT_ENV"
     },
     "resumeCheckpoint20261113": {
       "task": "CTRL_POST_TIMEOUT_LIVE_RECONCILIATION",
@@ -8938,7 +8934,7 @@
     "v36Research": {
       "task": "V35_PLUS_ACCEPTED_V301_DEFINITIONS_RESEARCH_REFERENCE",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT",
+      "status": "DONE_SELF_PASS_FIXED_06C_READY",
       "baseHead": "6154c91dba606e5a89d7b9322d2de3c528344f8d",
       "baseSourceSha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
       "scope": "Exact accepted 01 and 02 v301 definition research deltas only; verify manifests, additive nonoverlap, fixed V35 unchanged, no product/distribution changes; no V24/Pages/Writer changes",
@@ -8947,7 +8943,95 @@
         "4f2cc0e599422b934a841e9e7ce853294f37649ab47e5584e6b8750934d53849"
       ],
       "acceptance": "ec444d4e795e696214c6754aa3512bb71326179e07d294188bd05e5594f44e40",
-      "risk": "RELEASE_INTEGRATION_REFERENCE_ONLY"
+      "risk": "RELEASE_INTEGRATION_REFERENCE_ONLY",
+      "candidate": {
+        "label": "V36_PRIVATE_RESEARCH_REFERENCE_OFF_06C_QA_READY",
+        "file": "HKIA_CTRL_V36_ResearchReference_20261113_Source.zip",
+        "sha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "entries": 625,
+        "bytes": 3564865,
+        "baseSha256": "9dc037f218b57d7dc0afb409daa6cbf4de87217ee634f94c0fc4bd08ea4abea8",
+        "manifest": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_Manifest.json",
+          "sha256": "e915cb92864de9dc755a2ba3d618b24f1023b6e679b06bb687053ca0540101bc"
+        },
+        "delta": {
+          "file": "HKIA_CTRL_V36_ResearchReference_20261113_Delta.zip",
+          "sha256": "7f43b0e9408d0d052b6eff1582f9f4d41af9b7bde9ebf4b9f1ae1978611bcaaa",
+          "added": 10,
+          "modified": 0,
+          "deleted": 0
+        },
+        "distribution": {
+          "artifactManifest": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_ArtifactManifest.json",
+            "sha256": "12877c97e403ecd6aae110165395d5c0cf9a0119df02304ce2ff475b97110ef5"
+          },
+          "baseArtifactManifestSha256": "1acba1b44c5c25ca502dbd5087930e641a4cce8081c8b2e254e874f53d45b500",
+          "entries": 4146,
+          "unchanged": 4146,
+          "modified": 0,
+          "added": 0,
+          "flags": "OFF",
+          "externalMediaRehashed": false
+        },
+        "evidence": {
+          "result": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_RESULT.json",
+            "sha256": "e340aa03a053698dfe6319ef018d19d8ac6e02a5b73cc3789724a39344c1a418"
+          },
+          "zip": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_Evidence.zip",
+            "sha256": "1d04c3cdbf494ee495f0d78d44933d0069cbc88b7614390686c70ff5749e5168"
+          }
+        },
+        "privateLibrary": "HKIA Editor Private",
+        "readback": "6_OF_6_BYTE_EXACT_SHA_3_ZIP_CRC_PASS",
+        "acceptance": "SELF_PASS_06C_READY"
+      },
+      "verified": {
+        "baseEntries": 615,
+        "entries": 625,
+        "add": 10,
+        "mod": 0,
+        "del": 0,
+        "unchanged": 615,
+        "focusedTests": 31,
+        "fail": 0,
+        "check": "PASS",
+        "build": "PASS_BOTH",
+        "sourceDerivedDistributionExact": 55,
+        "fullManifestSourceBuildMatches": 54,
+        "indexProjectionExact": true,
+        "fullDistributionManifestMapExact": 4146,
+        "rollbackSourceExact": 615,
+        "readback": "6_OF_6_BYTE_EXACT"
+      },
+      "unverified": [
+        "06C scoped integration acceptance",
+        "external media bytes not rehashed",
+        "V24 private genuine Browser and game persistence",
+        "no new product authority"
+      ],
+      "handoff": {
+        "to": "06C QA-RELEASE",
+        "task": "V36_FIXED_625_RESEARCH_REFERENCE_SCOPED_INTEGRATION_QA",
+        "fixedSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "scope": "10 ADD only, 615 exact V35; exact 01/02 accepted deltas and 06A research result; 31 focused tests, independent negative/reconstruction/rollback, 55 source-build exact, 54 direct full-manifest match + media boot index projection, 4146 prior map exact; no media rehash, no new product authorization; V24 and live V30 untouched",
+        "dependency": "NONE; V35 independently accepted",
+        "acceptance": "SCOPED_INTEGRATION_PASS_ONLY_NO_WRITER_NO_DEPLOY",
+        "evidence": {
+          "result": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_RESULT.json",
+            "sha256": "e340aa03a053698dfe6319ef018d19d8ac6e02a5b73cc3789724a39344c1a418"
+          },
+          "zip": {
+            "file": "HKIA_CTRL_V36_ResearchReference_20261113_Evidence.zip",
+            "sha256": "1d04c3cdbf494ee495f0d78d44933d0069cbc88b7614390686c70ff5749e5168"
+          }
+        },
+        "after": "00 accept fixed V36 reference; V24 browser remains WAIT_ENV"
+      }
     }
   },
   "formalRelease": {
