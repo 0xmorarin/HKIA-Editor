@@ -260,6 +260,15 @@
           "Manual first-progress structural producer still WAIT_DEP"
         ],
         "next": "06 independent new 11 ADD scoped QA; 03 exact Visitor/Mission causal advisory; 04 WAIT on reward/game and causal acceptance, no product permission; 02 WAIT exact first-progress or target-specific Mission/reward witness after QA; V24/V33 untouched"
+      },
+      "v300NativeParity": {
+        "task": "FORMAL_V300_MANUAL_NATIVE_PARITY",
+        "status": "IN_FLIGHT",
+        "owner": "02 ACHIEVEMENT",
+        "baseHead": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Switch 300 exact NSO/dump versus accepted v301 Manual scalar/group/Meta evidence; read-only static parity, no Writer authorization, no existing proof redo; V33 unchanged",
+        "dependency": "V33 scoped PASS, exact20/9 v301 Writer accepted; v300 original source newly located"
       }
     },
     "03_LINKAGE": {
