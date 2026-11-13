@@ -5656,7 +5656,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B; distribution -> 00/06C"
     },
     "07_RUST_CORE": {
-      "status": "PARTIAL_R6_FIXED_SOURCE_WAIT_CI_R5_1_BROWSER_WAIT_ENV",
+      "status": "PARTIAL_R6_1_FIXED_DIAGNOSTIC_MEASURED_WAIT_CI_R5_1_BROWSER_WAIT_ENV",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -5673,7 +5673,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "00 R6 isolated CI READY (PR10 fixed, PR9 frozen); 07 after fixed CI artifact measured paired capacity and private genuine parity; 06A scoped acceptance after self-QA. R5.1 authorized genuine Chrome separate WAIT_ENV; no Development Switch or capacity grant.",
+      "next": "00 R6.1 fixed nondeploy CI READY; 07 candidate measurement/private genuine self-QA after fixed artifact; 06A then independent scratch/capacity scope. Existing R6 CI correctness accepted evidence, no capacity grant. R5.1 actual Chrome WAIT_ENV separate.",
       "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
       "baseHead": "29426b0df7c009325b662c178998d78cdf77400b",
       "scope": "HIGH: R5.1 exact reply semantics, Plan/Preview/Apply and lifecycle proof binding; 5 MOD, 101 unchanged; R4 Rust and bridge unchanged",
@@ -5949,7 +5949,7 @@
           "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "R6 Rust compile/regression/paired measurement and genuine parity; R5.1 actual Chrome and independent browser/harness acceptance then 00 Development Switch; formal capacity targets and production cutover separate.",
+      "remaining": "R6.1 actual compile, 15 same-condition paired WASM, 5 byte exact, private genuine six, repeated edits/lifecycle, independent QA; R5.1 authorized genuine Chrome and independent acceptance; formal capacity targets and production cutover separate.",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -6931,12 +6931,95 @@
       "r6Followup": {
         "task": "HKIA-RUST-014_R6_MEASURED_CAPACITY_FOLLOWUP",
         "owner": "07 RUST CORE",
-        "status": "IN_FLIGHT",
+        "status": "PARTIAL_FIXED_R6_1_DIAGNOSTIC_MEASURED_WAIT_CI",
         "risk": "HIGH",
         "baseHead": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
         "claimBase": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
-        "scope": "Investigate fixed R6 allocation high-water, smallest safe improvement and paired measurements; no limits, R5.1/PR9, workflow or deployment change",
-        "reusedCI": 43405690901
+        "scope": "Four Rust product files (one source-generation-local empty Vec reuse across all existing independent reparses), three test/contract MOD, no ABI/limits/flags/CI/workflow changes. R5.1 and PR9 frozen; PR10 unchanged until 00 lease.",
+        "reusedCI": 43405690901,
+        "sourceHead": "76ab71edf507cdcec13a6faf0db8ebcd56d4b672",
+        "branch": "rust07/r6-scratch-reuse",
+        "pr10Base": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
+        "source": {
+          "file": "HKIA_Rust07_R6_1_ScratchReuse_20261113_Source.zip",
+          "sha256": "71bd19525b87e6f0bb7e5bb229a48f27cb68696a2cfaa05af7e84ce4abf58d1d",
+          "entries": 112
+        },
+        "delta": {
+          "file": "HKIA_Rust07_R6_1_ScratchReuse_20261113_Delta.zip",
+          "sha256": "2c7e2cfea33eecf1e1bd22bdd4b6542e15001ee5632d2066202ac4e0e21c95af",
+          "modified": 7,
+          "added": 0,
+          "deleted": 0,
+          "unchanged": 105
+        },
+        "manifest": {
+          "file": "HKIA_Rust07_R6_1_ScratchReuse_20261113_Manifest.json",
+          "sha256": "587cbeaed9bd9bb35cdbc53a80837d86b1ac10d68779a671b226d8ef7d6d1a3e"
+        },
+        "evidence": {
+          "file": "HKIA_Rust07_R6_1_ScratchReuse_20261113_Evidence.zip",
+          "sha256": "7bf370c6321f3a16ec413081671eb33d2649cc250afd24b1767f442565eb2253",
+          "result": "HKIA_Rust07_R6_1_ScratchReuse_20261113_RESULT.json",
+          "resultSha256": "f5943764880bd666f9a6e8230c2c5fc22c2a482c68caac4e3918f824a68503fb",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "6/6 byte exact, 112 source and 7 delta SHA, 3 CRC, evidence 20 entries/19 hashes, 7 Git blob exact"
+        },
+        "verified": {
+          "fixedCi": 43405690901,
+          "fixedR6Correctness": "REUSED Rust99/bridge4, paired15, synthetic Chrome6",
+          "diagnosticFixedArtifactCases": 10,
+          "diagnosticPhaseMemoryExact": 10,
+          "outputParity5": 5,
+          "liveRequestedPeak45MiB": {
+            "r51Preview": 142884122,
+            "r6Preview": 95698202,
+            "r6Verify": 95858403
+          },
+          "linear45MiB": {
+            "r51": 190971904,
+            "r6": 191102976,
+            "r6Preview": 143851520,
+            "r6Verify": 191102976,
+            "diagnosticSameSizeReuse": 97058816
+          },
+          "diagnosticReuseMeasurements": [
+            3866624,
+            12320768,
+            22872064,
+            54460416,
+            97058816
+          ],
+          "diagnosticReuseCases": 5,
+          "diagnosticLargeAllocTraceEvents": 16,
+          "diagnosticCacheReusePerCase": 6,
+          "diagnosticIsNotProduct": true,
+          "updatedStageRunnerFixedR6": 15,
+          "sourcePins": 99,
+          "generatedUnchanged": 54,
+          "gitChangedBlobs": 7,
+          "newRustTestsAdded": 4,
+          "newRustTestsRun": 0,
+          "candidateCompile": "NOT_RUN",
+          "candidateWasm": "NOT_BUILT",
+          "candidateGenuine": "NOT_RUN"
+        },
+        "rootCause": "Fixed R6 Preview/Apply requested live peak reduced 47185920; Verify expands linear memory by 47251456 at 45MiB despite same live peak as baseline. Large pointer trace confirms fresh 45MiB Verify allocation after freed buffers; allocator internals/fragmentation placement not fully instrumented. Diagnostic exact-size reuse preserves 5 output bytes and reduces committed pages; not compiled candidate evidence.",
+        "risks": [
+          "One empty scratch retains up to one decoded allocation during current source generation; idle requested memory increases. New Open/Close drops scratch; failed Open retains logical state but loses cache. Length growth may reallocate.",
+          "HIGH independent QA required; no candidate compile/peak/genuine PASS yet. Existing capacity bounds unchanged, 64/128MiB and 2M docs not met.",
+          "R5.1 actual Chrome WAIT_ENV separate."
+        ],
+        "blocker": "Local rustc/cargo absent; official distribution DNS unavailable. 00 owns workflow pin update. Candidate actual Rust/WASM cannot be measured locally until fixed nondeploy CI artifact.",
+        "handoff": {
+          "to": "00_CTRL",
+          "task": "HKIA-RUST-014_R6_1_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "file": "HKIA_Rust07_R6_1_ScratchReuse_20261113_HANDOFF_00_06A.md",
+          "sha256": "c35eb7abc545b763345fab6454e24015eee214fb480c6f011661838c4f6b61e5",
+          "condition": "00 exact candidate 76ab71edf507cdcec13a6faf0db8ebcd56d4b672, base PR10 3f659c06f5f77fddd36f2b5415ffc082226afd40, 7 MOD scope. Update isolated workflow guard/report pin only, lease PR10, same R4 ref/Rust1.85.1, native+bridge tests, WASM, paired15 exact baseline Artifact14019348055, per-RPC memory, actual synthetic Chrome6; code-only artifact. No deploy, genuine CI, R5.1/PR9 changes. 07 rebind new artifact and genuine6/lifecycle self-QA, then 06A HIGH independent."
+        },
+        "next": "00 R6.1 exact CI READY; 07 WAIT_CI then actual candidate memory improvement and genuine private parity; 06A after self-QA. R5.1 genuine Chrome WAIT_ENV separate."
       }
     },
     "08_LOCALIZATION": {
