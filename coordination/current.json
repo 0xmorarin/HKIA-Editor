@@ -262,6 +262,15 @@
           "scope": "Reuse exact accepted v301 static definition identity and V36 research reference only; no new Writer authority"
         },
         "next": "No new 01 activation until specific unblock; 00 and 06A existing R5.1/V37 work independent"
+      },
+      "stationSaveWitness": {
+        "task": "RECIPE6_SWITCH300_STATION_SAVED_CONDITIONS_WITNESS",
+        "status": "IN_FLIGHT",
+        "baseHead": "2addc8f551a6b09756b6c95a304a36160173d8ef",
+        "baseSourceSha256": "3b2f963452a67f3c340c0edf5ab68ec4c81925df5d80933b65c08caa3468b15d",
+        "risk": "HIGH",
+        "scope": "New read-only historical genuine v300 saved friendship/mission/blackboard evidence for exact 03 station source GUIDs; no repeat source extraction or producer, no runtime eligibility inference; 03 pending QA source treated conditional",
+        "dependency": "03 e22a5596e3695a6e04321970e1d3389c9bfa1cd57483495830dac3fbf4718a62 pending independent acceptance; disjoint save observation"
       }
     },
     "02_ACHIEVEMENT": {
