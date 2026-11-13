@@ -1,0 +1,60 @@
+name: HKIA Svelte R7 and R5 reselect repair fixed combined compile and browser
+on:
+  push:
+    branches:
+      - web05/svelte-r7-r5-reselect-combined
+permissions:
+  contents: read
+concurrency:
+  group: hkia-svelte-r7-r5-fixed
+  cancel-in-progress: false
+jobs:
+  isolated:
+    if: github.repository == 'Yumekiraboshi/HKIA-Editor' && github.repository_id == '1453520753' && github.ref == 'refs/heads/web05/svelte-r7-r5-reselect-combined'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Verify fixed combined source and lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor a527d33d994423e558a2ac0abbf17beae67f4e9c HEAD
+          test "$(git diff --name-only a527d33d994423e558a2ac0abbf17beae67f4e9c HEAD)" = .github/workflows/svelte05-r7-r5-fixed.yml
+          cd svelte-ui
+          printf '%s  package-lock.json\n' 8f8e45f756f9a1cc03e7f9e0f89b0962ce5d9200c321e5de20532a02e01c92bd | sha256sum -c -
+          npm ci --no-audit --no-fund
+          sha256sum package-lock.json
+      - name: Unit compile and legacy reference parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check -- --fail-on-warnings
+          node --experimental-strip-types scripts/verify-legacy-port.mjs ..
+          node --experimental-strip-types scripts/verify-filter-reference.mjs ..
+          node --experimental-strip-types scripts/verify-category-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-reference.mjs ..
+          node --experimental-strip-types scripts/verify-collection-detail-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-detail-reference.mjs ..
+          node --experimental-strip-types scripts/verify-achievement-facts-reference.mjs ..
+          npm run build
+      - name: Actual built Vite Chromium regression and R7 parity
+        working-directory: svelte-ui
+        run: |
+          set -euo pipefail
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser-parity.py dist
+          python3 scripts/browser-filter-parity.py dist
+          python3 scripts/browser-category-parity.py dist
+          python3 scripts/browser-achievement-parity.py dist
+          python3 scripts/browser-collection-detail-parity.py dist
+          python3 scripts/browser-achievement-detail-parity.py dist
+          python3 scripts/browser-achievement-facts-parity.py dist
