@@ -4514,7 +4514,7 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06 existing in-flight R3 scoped QA: consume new fixed compiled/binary/private genuine evidence now; no duplicate activation. 07 after independent scoped acceptance implement minimum transactional Writer both domains/versions, or focused repair if TRUE_RED. No R2 repeat, no JS formal duplication, no main merge/deploy or Beta gate.",
+      "next": "06 existing R3 independent QA IN_FLIGHT; consume fixed compiled/genuine evidence. Independent R4 reference oracle prep DONE (writerPreflight). 07 after R3 scoped acceptance implement minimal transactional Writer using fixed oracle, or focused repair if TRUE_RED; no R2/R3 repeat, no JS formal duplication, no main merge/deploy or Beta gate.",
       "task": "HKIA-RUST-006",
       "baseHead": "9045aba8b742d0f888445c466b71525150ba8d0c",
       "scope": "R3 compiled read-only Session/ABI + ZIP/Account/additional typed projection, genuine 300/301 actual execution, 22 negative cases; no product source changes",
@@ -5083,12 +5083,46 @@
         }
       },
       "writerPreflight": {
-        "status": "IN_FLIGHT_REFERENCE_ONLY",
+        "status": "DONE_REFERENCE_ONLY_PASS_WAIT_R3_ACCEPTANCE",
         "task": "HKIA-RUST-007_WRITER_ORACLE_PREP",
         "baseHead": "a6cc9d238c9be9ce826355e0f088bd2b44ba75f3",
         "baseSource": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
-        "scope": "Independent test-only preparation while 06 R3 QA in flight: V33 accepted history/progress/timestamp/batch contracts, candidate verifier, aggregate evidence; no product or Session mutation, no R2/R3 re-QA",
-        "dependency": "NONE_REFERENCE_ONLY; R3 independent acceptance still required before writer implementation"
+        "scope": "Private test/reference only; history 1 field, 100Fwishes progress 2 fields, beginningCreator timestamp 1 field, mixed batch 3 fields; both versions; v300 RELATED_EXACT_PAIR_POLICY, v301 REQUIRED_STATIC_RELOAD_TARGET; no R3 source change or JS product duplication",
+        "dependency": "06_R3_ACCEPTANCE_BEFORE_WRITER_INTEGRATION; JS_BETA_INDEPENDENT",
+        "fixedSource": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+        "referenceV33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "artifacts": {
+          "kit": {
+            "file": "HKIA_Rust07_R4_WriterReference_20261113_Kit.zip",
+            "sha256": "a12b4d632f3a0646aed7b786be4727d889add3a1031fa9a5521c6daceb43052c",
+            "entries": 5,
+            "bytes": 11194
+          },
+          "manifest": {
+            "file": "HKIA_Rust07_R4_WriterReference_20261113_Manifest.json",
+            "sha256": "72b6d0c57bda7df7954dacb6c62c896e55baef4d83ba836c043ac9b0efcf3c62"
+          },
+          "handoff": {
+            "file": "HKIA_Rust07_R4_WriterReference_20261113_HANDOFF.md",
+            "sha256": "5f8789974dc1fb9a85fcf9d32041264838a1c61520f03816ecff46eab844bfdf"
+          },
+          "resultSha256": "57834500583d077f70cb1b642b0a7042949acfbeab67e7ca62f38f7e6a8d0f29",
+          "readback": "3_ARTIFACTS_BYTE_EXACT_5_ENTRIES_SHA_CRC_PASS"
+        },
+        "verified": {
+          "source521": "PASS",
+          "existingV33OffPreview": 8,
+          "admissionReject": 14,
+          "noOpCandidateReject": 8,
+          "accountFrameTamperReject": 2,
+          "wrapperExact": "PASS",
+          "wrapperWrongSourcePinReject": "PASS",
+          "wrapperNoOpReject": "PASS",
+          "originalUnchanged": 2,
+          "actualRustWriterExecuted": false,
+          "candidatePositiveExecuted": false
+        },
+        "next": "After R3 independent acceptance, 07 implement R4 minimum Writer; use existing source_for_writer/witness, pinned semantic guard + exact raw spans, extend counter/time witness, bounded LZ4, ZIP one slot replace raw other 10 frames including Account, atomic reparse/diff and rollback, actual CI + genuine candidates, run pinned private oracle. 06 independently verify R4 new scope after execution."
       }
     },
     "08_LOCALIZATION": {
