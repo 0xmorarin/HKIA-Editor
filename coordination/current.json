@@ -8952,6 +8952,17 @@
           "Actual locale-aware product query/sort, product browser/session invariance, full UI coverage, native speaker and physical game; fixed manifest pins reused, full files not rehashed in this audit"
         ],
         "next": "05 actual product locale-aware binding and category/list source; no duplicate QA."
+      },
+      "categoryGridLocaleAudit": {
+        "task": "PRODUCT_CATEGORY_GRID_LOCALE_BINDING_PREFLIGHT",
+        "claim": "20261113_08_PRODUCT_CATEGORY_LOCALE",
+        "status": "IN_FLIGHT",
+        "baseLedgerBlob": "c434321ddb3442e972920470e621cae1dedce103",
+        "sourceHead": "fd893041d47051016fbc4797d9e8d67dc7865389",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "risk": "LOW_ADVISORY_EXISTING_CONTRACT",
+        "scope": "Exact new category grid Svelte/bridge and inherited R3 display contracts; audit existing key coverage and exact producer vs game text boundary; no new UI code, no duplicate 06B lifecycle QA",
+        "dependency": "R3 catalog accepted and fixed 05 category source; actual category grid QA separate"
       }
     },
     "06A_QA_DATA_CORE": {
