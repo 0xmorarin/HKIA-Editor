@@ -2208,7 +2208,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "00_R5_ISOLATED_CI_PARALLEL_06B_R4_AND_LOCALE_CONSUMER; 05_AFTER_R5_RESULT_OR_NEW_ACCEPTED_DEP; NO_REPEAT",
+      "next": "00_LOCALE_REPAIR_FIXED_CI_PARALLEL_06B_R5_INDEPENDENT_QA; 05_NEXT_DISJOINT_UI_OR_ACCEPTED_DEP; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2968,7 +2968,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R4_COMPILED_PASS_06B_READY_R5_FIXED_BRANCH_WAIT_CI",
+        "status": "R4_ACCEPTED_R5_COMPILED_06B_READY",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -3359,7 +3359,7 @@
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
       "localeIntegration": {
         "task": "SVELTE_LOCALE_R1_ACCEPTED_RUNTIME_SELECTOR",
-        "status": "TRUE_RED_REPAIR_IN_FLIGHT",
+        "status": "TRUE_RED_REPAIR_SELF_PASS_WAIT_CI",
         "baseHead": "783bee016dfd74d338b4eded0dd5da851dc55463",
         "basePrHead": "412b5c01f3fb2c9d31e3bf3f50d1cebeb8b5e6be",
         "scope": "isolated svelte-ui locale consumer port/selector and tests; exact accepted runtime/registry private reference, no 08 code modification, no full catalog claim, no R4 product file collision or live binding",
@@ -3427,11 +3427,36 @@
         },
         "repair": {
           "task": "SVELTE_LOCALE_R1_REENTRANT_CLOSE_COMMIT_REPAIR",
-          "status": "IN_FLIGHT",
+          "status": "SELF_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "baseHead": "0fe5c8f60c98b9ce5ad4aafdb8560fcc989614be",
           "basePrHead": "523cbd8508773042380362e21fcc2ce7d0770c6a",
           "scope": "locale-consumer.ts and focused regression tests only; guard external callbacks and commit; no accepted 08 changes",
-          "risk": "HIGH"
+          "risk": "HIGH",
+          "head": "6ebabfe7ebb29e06ff13edd9b5a45d7131f14995",
+          "branch": "web05/svelte-locale-consumer-r1-repair",
+          "tree": "e2fb5652cf780da4422f3a6d7f281eaa5dd0a254",
+          "sourceSha256": "6c4e9208eadf484469f9d8be3076987b67a8af428382fbcee0fe2e094b967fe0",
+          "deltaSha256": "a4f423c968cb13a2321ee1a4264972f579a20449c82804475c836c02244b96f9",
+          "manifestSha256": "3ff395a99ba31a35274bd73832a2d174e3d84f45a8de46b5812ffc86f807673e",
+          "transportSha256": "96e500d1e6b16dace2d10b862cbb72b39eec11cc4430dd2debef93704d8bbbef",
+          "evidenceSha256": "159dcbec0d2d73d2df8ab33e3772365a967bece4ab338f5ef24e602bd42c8fb3",
+          "logsSha256": "9d44e55390e632627515a32eff27069b0c87744f34251d27decf0f69c4864f7d",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_Evidence.json",
+            "logs": "HKIA_WEB05_SvelteLocaleConsumer_R1_Repair_20261113_Logs.zip"
+          },
+          "verified": "Original 06B QA archive SHA verified; exact original red-repro before 2 READY resurrection, after 2 STALE/CLOSED; 69 Node incl 11 new, 15 existing actual accepted runtime/registry tests incl 2 private verified packs, exact 06B independent test bodies developer rerun 6/6; strict TS; 40 source blobs exact, 2 change blobs exact; 225 untouched; 6 Library readbacks byte exact/CRC",
+          "unverified": [
+            "updated full Svelte check/build/Chromium",
+            "06B independent acceptance",
+            "actual production controller/session/locale binding",
+            "arbitrary external callback side effect rollback; synchronous StoragePort compare-and-restore best effort not cross-context atomic CAS"
+          ],
+          "next": "00 fixed nondeploy locale successor CI repin source guard to 6ebabfe; npm ci/test 69/check --fail-on-warnings/both builds/locale browser 320/375/1280 and R1-R3 browser regressions; no private packs in CI. 06B focused independent repair acceptance, actual accepted runtime/registry private rerun; no accepted 08 runtime changes."
         }
       }
     },
