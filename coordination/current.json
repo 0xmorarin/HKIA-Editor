@@ -115,6 +115,14 @@
         "next": "06 new 4 paths static scoped QA independently of prior 01/03; 03 exact six producer/definition and dynamic dispatch follow-up only; 04 WAIT accepted exact target contract; V24/Pages unchanged",
         "productAuthorized": false,
         "gameAccepted": false
+      },
+      "switch300Definition": {
+        "task": "FORMAL_RECIPE6_SWITCH300_EXACT_DEFINITION",
+        "status": "IN_FLIGHT",
+        "baseHead": "260c061d06f4a22875b4584f102d46dfb3899b81",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "scope": "Resolve MasterDefinition catalog dependencies and exact six Switch300 Recipe/Food definitions; no 03 provider or existing native repeats; additive research only",
+        "dependency": "03 v300 closed provider static evidence pending QA"
       }
     },
     "02_ACHIEVEMENT": {
