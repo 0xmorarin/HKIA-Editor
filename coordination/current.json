@@ -6605,11 +6605,11 @@
     },
     "06A_QA_DATA_CORE": {
       "owner": "06A QA-DATA-CORE",
-      "status": "IN_FLIGHT_R5_1_INDEPENDENT_REPAIR",
-      "task": "R5_1_REPLY_INTEGRITY_INDEPENDENT_QA",
+      "status": "IN_FLIGHT_RESOURCE_PREFLIGHT_SCOPED_QA",
+      "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
       "scope": "PR8 fixed d6401ccea03d67ad312ca1b052455974498ebe1e; R4 delta only, independent static/negative review; R3 and legacy V300 accepted evidence reused; execution conditional on fixed CI binary",
-      "next": "07 scoped client reply integrity repair; 00 existing R5 CI can finish independently, then new fixed repair CI; 00 serial v301 research integration. 06A wait fixed repair or independent new HIGH scope.",
-      "dependency": "07_R5_FIXED_REPAIR_SELF_QA; then compiled WASM/Chrome genuine evidence",
+      "next": "R5.1 repair and new exact artifact Node genuine scoped PASS; new independent synthetic resource preflight claim; 07 genuine Chrome WAIT_ENV; 00 ADR switch only after required gates.",
+      "dependency": "AUTHORIZED_PRIVATE_CHROME; RESOURCE_BOUNDARY_QA",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "8782b55ad96ff617c2f8af8e79fef041dfaff3bf",
       "legacyEvidence": {
@@ -6759,6 +6759,13 @@
         {
           "task": "R5_1_REPLY_INTEGRITY_INDEPENDENT_QA",
           "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+          "status": "DONE_SCOPED_PASS_REPLY_REPAIR_AND_FIXED_ARTIFACT_NODE_GENUINE",
+          "risk": "HIGH"
+        },
+        {
+          "task": "HKIA-RUST-011_RESOURCE_BASELINE_PRIVATE_PREFLIGHT",
+          "source": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+          "evidenceSha256": "0c815f3fcaf76790001216587eb241c7d2b111892793548bd0d3e044aa160cd5",
           "status": "IN_FLIGHT",
           "risk": "HIGH"
         }
@@ -6963,6 +6970,18 @@
           "task": "R5_SCOPED_CLIENT_REPLY_INTEGRITY_REPAIR",
           "status": "READY_TRUE_RED",
           "condition": "Fixed new source, 3 independent counterexamples rejected, scoped self-QA and new CI; existing R4 native acceptance reuse. Old fixed CI can complete for diagnosis, not repair acceptance."
+        },
+        "resolution": {
+          "status": "RESOLVED_ON_FIXED_R5_1_3_OF_3_INDEPENDENT",
+          "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+          "evidence": {
+            "file": "HKIA_06A_R5_1_INDEPENDENT_REPAIR_QA_20261113_EVIDENCE.zip",
+            "sha256": "2ed9e821b8b48f73c26faf68db75da0496db5ebb8993cd5edecd07fdf3e6a437",
+            "manifestSha256": "efddf4946b90b8c8bc3d2976de5bce5908f53512c1192c68e09e83c0dd90d204",
+            "bytes": 13268,
+            "privateLibrary": "HKIA Editor Private",
+            "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+          }
         }
       },
       "v301CausalResult": {
@@ -7009,6 +7028,104 @@
           "task": "V301_EXACT29_CAUSAL_RESEARCH_SERIAL_INTEGRATION_REFERENCE_ONLY",
           "status": "READY",
           "scope": "Five research paths only; 00 serial integration, 04/07 contract reference; no new writer permission. 03 wait concrete station/consumer witness."
+        }
+      },
+      "r51Result": {
+        "status": "SCOPED_PASS_REPLY_REPAIR_AND_FIXED_ARTIFACT_NODE_GENUINE_WASM",
+        "sourceHead": "41936b5a16505b4ba61782f6d960928ad9a26cdd",
+        "sourceSha256": "958094c81f9a40349de178e1e1e3ab98b221d2b1452edf1cdf076f74d1245622",
+        "deltaSha256": "de8cd3ccc3da4718730d3d0034992629c8c1c24831b1138e27373354dbcb63ea",
+        "manifestSha256": "70c60ba94e551d7a9b4ce09e0718ec76b6b74e5f2ff3477dd0ceda97c86faaf5",
+        "verified": {
+          "manifestEntries": 106,
+          "modified": 5,
+          "unchanged": 101,
+          "deltaExact": true,
+          "gitBlobs": 5,
+          "independentOldTrueRedRejected": 3,
+          "independentOtherNegativesRejected": 8,
+          "independentPositives": 2,
+          "strictTsc": 2,
+          "writerTs": 18,
+          "sessionTs": 14,
+          "actualNodeWasmGenuineCandidates": 6,
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "operations": [
+            "history",
+            "progress",
+            "batch"
+          ],
+          "exactFields": 12,
+          "nativeByteExact": 6,
+          "nonTargetFrames": 60,
+          "unchangedLz4Tokens": 192,
+          "changedBlocks": 12,
+          "accountRawUnchanged": 6,
+          "originalsUnchanged": 2,
+          "gateRequests": 372,
+          "rawRequests": 8,
+          "twoSequentialEdits": 6,
+          "undoRedoReset": 6,
+          "resetUndo": 6,
+          "failedOpenPreserved": 6,
+          "fileAB": 6,
+          "close": 6,
+          "backupExact": 6,
+          "rawLifecycle": [
+            "replay",
+            "stale",
+            "foreign",
+            "close"
+          ],
+          "maxLinearMemoryBytes": 25165824,
+          "oracle": "independent Python schema walk exact decoded token splices, ZIP/LZ4 raw, fixed R4 CLI byte exact; exact new CI JS and WASM direct Node"
+        },
+        "fixedArtifact": {
+          "head": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
+          "run": 43388662397,
+          "sha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
+          "wasmSha256": "ecadf4450acf79c6068e81ae3dd2c9f021870d77453ce656e46fcdc4d6940e4c",
+          "reportSha256": "6f25d8e1dbd68c16da8f7acae6bfecfc187280b5fadd2858cc55cd09c655d3f0",
+          "manifestCodeHashes": 8,
+          "jsByteExact": 6,
+          "zipEntries": 9,
+          "ci": "SUCCESS_UPSTREAM_SYNTHETIC_CHROME",
+          "wasmBinaryDifferenceCause": "UNKNOWN; old evidence reference only, independently executed new exact binary"
+        },
+        "trueRed": "PREVIOUS_3_RESOLVED_NO_NEW_REPRODUCED_IN_SCOPE",
+        "unverified": [
+          "actual repaired Module Worker Chrome genuine 0/6; prior administrator loopback restriction WAIT_ENV",
+          "64/128MiB decoded and 2M documents resource targets",
+          "game load/resave/persistence/auth",
+          "Development Switch"
+        ],
+        "evidence": {
+          "file": "HKIA_06A_R5_1_FIXED_ARTIFACT_QA_20261113_EVIDENCE.zip",
+          "sha256": "65acd834efd0e0c54ad9ca716de9a5ddbc1c47631f2924c23df1d198a19348e3",
+          "manifestSha256": "f9ef97bbf14c51e778f4e2bceb89ef71393b463562aca670769ec6dec6e6a4b1",
+          "handoffSha256": "642b66a6176191b40d324dc52d4f7f7c7496335b3dd4af85490c0fb447163aba",
+          "bytes": 8896,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
+        },
+        "previousRepairEvidence": {
+          "file": "HKIA_06A_R5_1_INDEPENDENT_REPAIR_QA_20261113_EVIDENCE.zip",
+          "sha256": "2ed9e821b8b48f73c26faf68db75da0496db5ebb8993cd5edecd07fdf3e6a437",
+          "manifestSha256": "efddf4946b90b8c8bc3d2976de5bce5908f53512c1192c68e09e83c0dd90d204",
+          "bytes": 13268,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_11_ENTRIES_10_MANIFEST_HASHES_PASS"
+        },
+        "handoff": {
+          "to": [
+            "00_CTRL",
+            "07_RUST_CORE"
+          ],
+          "status": "SCOPED_ACCEPTANCE_READY",
+          "conditions": "07 fixed repaired code-only artifact in authorized private Chrome, both versions and domains, six exact outputs/lifecycle/budgets; 06A independent fixed browser evidence then 00 ADR switch record. No duplicate Node QA."
         }
       }
     },
