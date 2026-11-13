@@ -7430,7 +7430,7 @@
     },
     "08_LOCALIZATION": {
       "owner": "08 LOCALIZATION",
-      "status": "PARTIAL",
+      "status": "IN_FLIGHT",
       "priority": "P0_FORMAL_LOCALIZATION_INDEPENDENT",
       "task": "LOCALE_INVENTORY_AND_GAME_TEXT_PROVENANCE",
       "baseHead": "bbb0ea37838c566eea9fef8858b326f91e49610f",
@@ -7519,9 +7519,8 @@
         "Switch physical selector 15 languages, official listing discrepancy Turkish, exact native code string mapping and runtime sentinel value/other call sites; static evidence now fixed",
         "Legacy static render-site inventory fixed (827 candidate sites), actual visibility/dynamic dataflow and semantic key binding not complete; future UI beyond R4",
         "05 actual locale adapter integration and 00 distribution allowlist",
-        "06B Switch300 new typed version contract independent acceptance",
         "Native-speaker linguistic review; actual browser/session invariance; full product UI coverage",
-        "Account platform-specific runtime titles: four-method Switch backend boundary self PASS, runtime factory/other provider/presentation unresolved; 06B new scoped QA pending"
+        "Account runtime factory/other provider/presentation and physical game UNVERIFIED; static boundary independent PASS"
       ],
       "handoff": {
         "to05": {
@@ -7535,9 +7534,9 @@
             "scope": "Use 89-key contract, Intl formatting, safe text; R3 category keys mapped; existing R1 data preparation and disjoint R4 continue"
           },
           "catalogR4": {
-            "status": "READY_AFTER_DEP",
+            "status": "READY",
             "scope": "Bind 17 R4 keys, 106 total catalog keys; preserve exact IDs/progress, unreadable/missing status, Intl counts and generation/session/selection",
-            "dependency": "R4 catalog accepted; wait relevant Web R4 fixed CI and independent acceptance only"
+            "dependency": "Catalog and relevant Web R4 accepted; product binding separate"
           },
           "legacyInventory": {
             "task": "LEGACY_UI_RENDER_SITE_INVENTORY",
@@ -7553,13 +7552,13 @@
             "readbackVerified": true
           },
           "switch300": {
-            "status": "READY_AFTER_DEP",
-            "dependency": "06B exact Switch300 typed version delta scoped PASS",
+            "status": "READY",
+            "dependency": "Exact independent scoped PASS; actual product binding separate",
             "scope": "Version-aware identity lookup with verified R1 packs; 12 v300 descriptions ABSENT_REF not MISSING_ID; preserve all raw texts, IDs, session. Existing accepted runtime/catalog integration independently READY."
           },
           "accountNative": {
-            "status": "READY_AFTER_DEP",
-            "dependency": "06B scoped Account Native boundary acceptance; existing R1 exact title refs already independently accepted and available",
+            "status": "READY",
+            "dependency": "Exact independent scoped PASS; actual product binding separate",
             "scope": "Preserve explicit 13 title refs / 18 absent refs / 31 absent description refs. No inferred game names; other platform names UNVERIFIED; no sync capability."
           }
         },
@@ -7630,7 +7629,7 @@
           },
           "switch300": {
             "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
-            "status": "IN_FLIGHT",
+            "status": "DONE_STATIC_NODE_SCOPED_PASS",
             "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
             "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
             "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
@@ -7641,11 +7640,12 @@
             "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
             "readbackVerified": true,
-            "claim": "20261113_06B_SWITCH300_TYPED"
+            "claim": "20261113_06B_SWITCH300_TYPED",
+            "independentEvidenceSha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8"
           },
           "accountNative": {
             "task": "LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_SCOPED_QA",
-            "status": "READY",
+            "status": "DONE_STATIC_SCOPED_PASS",
             "risk": "HIGH_NEW_NATIVE_NAME_PROVENANCE",
             "artifact": "HKIA_08_LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_20261113.zip",
             "sha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
@@ -7655,7 +7655,8 @@
             "dependency": "R1/R2 accepted exact identity; Switch300 typed delta fixed, 06B separate scoped claim IN_FLIGHT; backend proof independent, no game session/Writer changes",
             "acceptance": "Independent native decode of exact 8 method and 2 getter ranges, branch targets, metadata slots, static backing field 0x30, input argument nonuse within four methods. Reuse R1/R2 and Switch300 typed evidence; no platform name or runtime factory extrapolation. After PASS direct 05/08. No platform sync/save/Writer authority.",
             "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-            "readbackVerified": true
+            "readbackVerified": true,
+            "independentEvidenceSha256": "11ef5fe659d10f66d7d63a11cd0c7816497f5a934a3580eecff2a3db94126169"
           }
         },
         "sourceRecovery": {
@@ -7721,7 +7722,7 @@
         ],
         "nextAfterDep": {
           "switch300": {
-            "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
+            "status": "DONE_STATIC_NODE_SCOPED_PASS",
             "owner": "08 LOCALIZATION",
             "sourceArchiveSha256": "f55a24d321bc7744ddc5b972a5a31292a8aeb8470e0a6434d623811d29f4ca4a",
             "coreSha256": "883ad6551f01424f0f56fe3c9ce20d2576915a44c573609a011c5b112b28ef10",
@@ -7905,7 +7906,7 @@
       },
       "switch300": {
         "task": "LOCALIZATION_SWITCH300_FULL_TYPED_KEY_PARITY",
-        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
+        "status": "DONE_STATIC_NODE_SCOPED_PASS",
         "claim": "20261113_08_SWITCH300_TYPED",
         "baseHead": "4555081b2215753222cb07f89a3bfb9a2ff65433",
         "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
@@ -7914,7 +7915,7 @@
         "scope": "Actual Switch300 full typed identity, key and version delta, preserve R1 data until proven, private originals only",
         "fixed": {
           "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
-          "status": "IN_FLIGHT",
+          "status": "DONE_STATIC_NODE_SCOPED_PASS",
           "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
           "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
           "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
@@ -7925,7 +7926,8 @@
           "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
           "readbackVerified": true,
-          "claim": "20261113_06B_SWITCH300_TYPED"
+          "claim": "20261113_06B_SWITCH300_TYPED",
+          "independentEvidenceSha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8"
         },
         "verified": {
           "archiveBytes": 110017158,
@@ -7952,7 +7954,7 @@
         },
         "handoff": {
           "task": "LOCALIZATION_SWITCH300_TYPED_VERSION_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_STATIC_NODE_SCOPED_PASS",
           "risk": "HIGH_NEW_VERSION_TYPED_IDENTITY",
           "artifact": "HKIA_08_LOCALIZATION_SWITCH300_TYPED_VERSION_DELTA_20261113.zip",
           "sha256": "9b5df6f28abf0b2f689d0bd6d8a1f4a0cb990e75b61a35341f1c62d9addeab83",
@@ -7962,12 +7964,14 @@
           "dependency": "R1 fixed data and R2/R3/R4 accepted, exact original recovered in private HKIARE source, fixed v300 archive SHA",
           "acceptance": "Independent source typed oracle verifies class/PPtr/RID registration, exact 13220 IDs and 12 description-only delta; new API version/identity guard, 793200 actual lookup comparison and 180 status corrections only, invalid/mutation negatives. 54 producer tests incl 7 new. Reuse accepted R1 raw data/R2-R4 scopes. On PASS direct 05; no Writer or release authorization.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact; private original locator inside handoff",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "claim": "20261113_06B_SWITCH300_TYPED",
+          "independentEvidenceSha256": "7dfcf8fb62a01af0fec935ccfff86e11d5ab6f8268f025e3b590f57bc0f044f8"
         }
       },
       "accountNative": {
         "task": "ACCOUNT_SWITCH_NATIVE_BACKEND_TITLE_BOUNDARY",
-        "status": "DONE_SELF_QA_FIXED_HANDOFF_READY",
+        "status": "DONE_STATIC_SCOPED_PASS",
         "claim": "20261113_08_ACCOUNT_NATIVE_TITLE_BOUNDARY",
         "baseHead": "4705cb5613d0e9cc6fc35bce111667905a2e8f16",
         "risk": "HIGH_NEW_NATIVE_NAME_PROVENANCE",
@@ -7975,7 +7979,7 @@
         "dependency": "R2 native pins and Switch300/301 typed identity fixed; no external game or network query",
         "fixed": {
           "task": "LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_STATIC_SCOPED_PASS",
           "risk": "HIGH_NEW_NATIVE_NAME_PROVENANCE",
           "artifact": "HKIA_08_LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_20261113.zip",
           "sha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
@@ -7985,7 +7989,8 @@
           "dependency": "R1/R2 accepted exact identity; Switch300 typed delta fixed, 06B separate scoped claim IN_FLIGHT; backend proof independent, no game session/Writer changes",
           "acceptance": "Independent native decode of exact 8 method and 2 getter ranges, branch targets, metadata slots, static backing field 0x30, input argument nonuse within four methods. Reuse R1/R2 and Switch300 typed evidence; no platform name or runtime factory extrapolation. After PASS direct 05/08. No platform sync/save/Writer authority.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "11ef5fe659d10f66d7d63a11cd0c7816497f5a934a3580eecff2a3db94126169"
         },
         "verified": {
           "versions": 2,
@@ -8007,7 +8012,7 @@
         ],
         "handoff": {
           "task": "LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_SCOPED_QA",
-          "status": "READY",
+          "status": "DONE_STATIC_SCOPED_PASS",
           "risk": "HIGH_NEW_NATIVE_NAME_PROVENANCE",
           "artifact": "HKIA_08_LOCALIZATION_SWITCH_ACCOUNT_NATIVE_BOUNDARY_20261113.zip",
           "sha256": "28d568ad88d94110f18f28ca911682444d6df395f57f5d52e6a0ab8b4283af89",
@@ -8017,8 +8022,19 @@
           "dependency": "R1/R2 accepted exact identity; Switch300 typed delta fixed, 06B separate scoped claim IN_FLIGHT; backend proof independent, no game session/Writer changes",
           "acceptance": "Independent native decode of exact 8 method and 2 getter ranges, branch targets, metadata slots, static backing field 0x30, input argument nonuse within four methods. Reuse R1/R2 and Switch300 typed evidence; no platform name or runtime factory extrapolation. After PASS direct 05/08. No platform sync/save/Writer authority.",
           "evidenceLocation": "Private Library /HKIA Editor Private/ exact artifact name",
-          "readbackVerified": true
+          "readbackVerified": true,
+          "independentEvidenceSha256": "11ef5fe659d10f66d7d63a11cd0c7816497f5a934a3580eecff2a3db94126169"
         }
+      },
+      "r5r7": {
+        "task": "EDITOR_CATALOG_R5_R6_R7_READONLY_SURFACES",
+        "claim": "20261113_08_R5_R7_CATALOG",
+        "status": "IN_FLIGHT",
+        "baseHead": "fc0da8fa4b375b08bc3eec8836fa812ffb9cf7b7",
+        "risk": "HIGH_NEW_UI_KEY_CONTRACT",
+        "scope": "Exact accepted R5/R6/R7 compiled source 767decd9; new editor strings only, preserve 106 keys and all game text; private additive catalog delta",
+        "dependency": "R4 catalog and R5/R6/R7 exact accepted UI; no shared UI changes",
+        "sourceHead": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3"
       }
     },
     "06A_QA_DATA_CORE": {
