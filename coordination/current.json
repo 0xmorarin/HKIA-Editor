@@ -3354,6 +3354,16 @@
             "full locale integration"
           ],
           "decisions": "Read-only isolated fixture, 100-row increments and isolated 1200 bound not production limit; no game-derived IDs/text/media bytes in new files; unknown history disables history filter; exact int64 strings; category reselect resets local detail fixture; no production state changes; item image local WebP only; R4/Locale fixed branches unchanged."
+        },
+        "r6": {
+          "task": "SVELTE_R6_ACHIEVEMENT_READONLY_INSPECTOR",
+          "status": "IN_FLIGHT",
+          "owner": "05 WEB",
+          "basePrHead": "492490bd6e32d3b9429e3caa5cb1e2c08d38bc9a",
+          "baseHead": "7b0d6dc983b3ae272ea68e9b433a28f210c0cdb0",
+          "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+          "scope": "svelte-ui only; selected Achievement read-only detail header, exact source/status/time/progress, missing record warning and typed display-only linkage summary; selected GUID from existing fixture; no writer, preview or new game semantics; no R5 or locale fixed head change",
+          "next": "05 local reference QA, fixed branch; 00 isolated CI and 06B after; R5 QA and locale repair CI parallel"
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00",
