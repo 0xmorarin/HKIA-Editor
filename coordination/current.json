@@ -7076,6 +7076,15 @@
           "condition": "00 exact candidate 76ab71edf507cdcec13a6faf0db8ebcd56d4b672, base PR10 3f659c06f5f77fddd36f2b5415ffc082226afd40, 7 MOD scope. Update isolated workflow guard/report pin only, lease PR10, same R4 ref/Rust1.85.1, native+bridge tests, WASM, paired15 exact baseline Artifact14019348055, per-RPC memory, actual synthetic Chrome6; code-only artifact. No deploy, genuine CI, R5.1/PR9 changes. 07 rebind new artifact and genuine6/lifecycle self-QA, then 06A HIGH independent."
         },
         "next": "00 R6.1 exact CI READY; 07 WAIT_CI then actual candidate memory improvement and genuine private parity; 06A after self-QA. R5.1 genuine Chrome WAIT_ENV separate."
+      },
+      "browserKitRepair": {
+        "task": "HKIA-RUST-013_BROWSER_KIT_STRICT_EVIDENCE_VALIDATION_REPAIR",
+        "owner": "07 RUST CORE",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH",
+        "baseKit": "9504f1d381782ef3ec84e9d704c097f2b243b46e7dcda13a0e34bef7ef090616",
+        "scope": "Private test-only strict evidence validation, 9 counterexamples, JSON/publish and browser context parity; no core/flags/deploy; no genuine input before authorized environment",
+        "dependency": "06A TRUE_RED fixed kit evidence"
       }
     },
     "08_LOCALIZATION": {
