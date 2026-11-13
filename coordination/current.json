@@ -3695,7 +3695,12 @@
           },
           "privacy": "Only code and pins; no generated schema/fixture bytes or private source, no real saves, no Pages/live flags. CI runner generates exact crate and synthetic inputs from public JS.",
           "workflowOwner": "00 CTRL",
-          "next": "00 add isolated non-deploying Rust synthetic workflow on PR5; checkout exact PR head; read-only contents; no artifact publishing, no Pages; run 39 tests + release build; return exact head/run/job/conclusion to 07. Existing JS source closure CI is not Rust PASS."
+          "next": "00 add isolated non-deploying Rust synthetic workflow on PR5; checkout exact PR head; read-only contents; no artifact publishing, no Pages; run 39 tests + release build; return exact head/run/job/conclusion to 07. Existing JS source closure CI is not Rust PASS.",
+          "existingJsCI": {
+            "runId": 43342423704,
+            "conclusion": "SUCCESS",
+            "scope": "PUBLIC_SOURCE_CLOSURE_JS_TEST_BUILD_CHECK_ONLY_NOT_RUST"
+          }
         }
       },
       "remaining": "Inventory/recount/reference and collection migration number projection; ZIP/Account/Session/Writer/WASM/browser; no native auth/game acceptance"
