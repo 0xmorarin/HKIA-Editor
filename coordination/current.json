@@ -4627,6 +4627,18 @@
           "consumer": "06B QA-WEB-LOCALE",
           "consumerScope": "Exact 10 new paths + compiled module; independent DOM identity/negative/stale/paging >1200 fallback, actual V33 account/slot read projection and image parity, no prior R4/other binding repeat"
         }
+      },
+      "productAchievementDetail": {
+        "task": "SVELTE_PRODUCT_ACHIEVEMENT_HEADER_BINDING",
+        "owner": "05 WEB",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "baseHead": "28933f663b022660e45356633126d17eb564f7b4",
+        "baseSource": "767decd9c7cf4efa0259c391b3cf776a0e6ca2d3",
+        "baseArtifact": "8e2d8c790212fdcc1d3ab4ef96878e570f085b3d",
+        "scope": "05-owned additive Svelte achievement read-only header only; preserve exact legacy media, dependency, edit forms and panel host; no shared app composition or Writer",
+        "dependency": "R6 independently accepted; V33 exact reference; separate from tab/filter/category/list and locale",
+        "next": "Self-QA exact scope; 00 isolated compile/browser; 06B independent changed scope"
       }
     },
     "06_QA": {
