@@ -6825,11 +6825,11 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "IN_FLIGHT",
+      "status": "DONE_SCOPED_LOCALE_R3_R4_WAIT_WEB_R4",
       "task": "LOCALIZATION_R3_R4_CATALOG_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "R3/R4 catalog independent; R4 Web waits fixed green CI; LOW legacy advisory direct 05",
-      "dependency": "No remaining blocker within these three scopes. R4 waits 00 compile/browser; Switch300 exact originals + full UI/locale/product evidence pending; independent integration remains separate",
+      "next": "05 consume R3 fixed catalog and continue existing R4 browser oracle repair; 08 continue new fixed UI key/linguistic/Switch300 work only if actual READY; 00 rerun fixed R4 after repair; 06B after full fixed R4 CI or new HIGH locale scope; LOW legacy render inventory direct 05",
+      "dependency": "Web R4 oracle failure in run 43386305291; repair by 05 then 00 scope-pinned full CI. Catalog R4 acceptance separate; integration after relevant UI PASS",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
       "legacyEvidence": {
@@ -7099,7 +7099,9 @@
         "webR4": {
           "status": "WAIT_DEP",
           "head": "a6a0d8732f73b0e13817b943f294832c61d769dd",
-          "condition": "00 fixed R4 compile/check/build/actual Chromium evidence"
+          "condition": "05 test-only class token repair + 00 scope-pinned full compile/build and actual Chromium R4 widths; no unmodified rerun",
+          "repairStatus": "IN_FLIGHT",
+          "failedRun": 43386305291
         },
         "locale": {
           "status": "WAIT_NEW_FIXED_HIGH_SCOPE",
@@ -7109,16 +7111,89 @@
       "catalogClaims": {
         "r3": {
           "claim": "20261113_06B_LOCALE_R3",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS",
           "source": "82b1ac72b1b67d895fbfe8c241b9a2515686ec4d4fca08ae18e7ffbbad607939",
           "scope": "603 new cells, source mappings, overlay and negative tests"
         },
         "r4": {
           "claim": "20261113_06B_LOCALE_R4",
-          "status": "IN_FLIGHT",
+          "status": "DONE_SCOPED_PASS",
           "source": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
           "scope": "255 new cells, source mappings, overlay and negative tests"
         }
+      },
+      "localeR3": {
+        "status": "DONE_SCOPED_PASS_FIXED_CATALOG",
+        "sourceSha256": "82b1ac72b1b67d895fbfe8c241b9a2515686ec4d4fca08ae18e7ffbbad607939",
+        "manifestSha256": "142b2d9781f5ed279ae68fee010aadf402b08d6246f942270b1d0edf8fba8462",
+        "verified": {
+          "newCells": 603,
+          "priorCells": 732,
+          "catalogs": 15,
+          "keys": 89,
+          "placeholderOccurrences": 129,
+          "sourceBlobs": 4,
+          "manifestChanges": 25,
+          "unchangedPaths": 46,
+          "combinedTests": 31,
+          "regeneratedFiles": 18,
+          "gamePacksUnchanged": 30
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY",
+          "condition": "Fixed R3 catalogs, isolated integration only; semantic/source/structural acceptance, no native-speaker certification or full UI coverage"
+        },
+        "evidence": {
+          "file": "HKIA_06B_LOCALE_R3_R4_INDEPENDENT_QA_20261113.zip",
+          "sha256": "340eec4c6dde137f62dd8cee65000b9595f80a0fbaa9c32e892887fc679b688a",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
+        }
+      },
+      "localeR4": {
+        "status": "DONE_SCOPED_PASS_FIXED_CATALOG",
+        "sourceSha256": "ee1b87cb17f60d93ec45658dbf539a051fb28458c2ebe582d0af9825166651ef",
+        "manifestSha256": "fbffae86948d0c9392d7811410c588eb171984d2205caee19af64b73c6d3e0f5",
+        "verified": {
+          "newCells": 255,
+          "priorCells": 1335,
+          "catalogs": 15,
+          "keys": 106,
+          "placeholderOccurrences": 150,
+          "sourceBlobs": 5,
+          "manifestChanges": 23,
+          "unchangedPaths": 55,
+          "combinedTests": 47,
+          "regeneratedFiles": 17,
+          "gamePacksUnchanged": 30
+        },
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_AFTER_RELEVANT_UI_ACCEPTANCE",
+          "condition": "Fixed R4 catalog scoped acceptance; consume in isolated integration after R4 relevant UI acceptance; do not mark Web R4 PASS"
+        },
+        "evidence": {
+          "file": "HKIA_06B_LOCALE_R3_R4_INDEPENDENT_QA_20261113.zip",
+          "sha256": "340eec4c6dde137f62dd8cee65000b9595f80a0fbaa9c32e892887fc679b688a",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES"
+        }
+      },
+      "catalogR3R4Evidence": {
+        "file": "HKIA_06B_LOCALE_R3_R4_INDEPENDENT_QA_20261113.zip",
+        "sha256": "340eec4c6dde137f62dd8cee65000b9595f80a0fbaa9c32e892887fc679b688a",
+        "location": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA_CRC_PASS_7_ENTRIES",
+        "independentRuntimeTests": 16,
+        "fail": 0,
+        "scope": "New 858 cells, 26 source-key sites and 36 seed meanings; independent multiset/strict JSON and model textual semantic review; no native-speaker certification",
+        "unverified": [
+          "Actual Svelte binding, live escaping, per-locale Browser/a11y/Intl and Save/Session/Revision/Undo invariance",
+          "full legacy/product catalog, physical selector, regional linguistic final review",
+          "runtime validator checks placeholder sets, not multiplicity; fixed catalog multiset externally audited; runtime enforcement not modified"
+        ],
+        "advisory": "05/08 preserve exact fixed catalog bytes; if accepting unpinned catalogs enforce placeholder multiplicity in validation; existing R1 contract specifies set, no new runtime TRUE_RED claimed."
       }
     },
     "06C_QA_RELEASE": {
