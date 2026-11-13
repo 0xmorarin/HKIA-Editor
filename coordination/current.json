@@ -7865,7 +7865,7 @@
       ],
       "dependency": "Existing private game/source artifacts, accepted ID crosswalks, exact locale source evidence; 05 integration after fixed registry; 00 distribution allowlist",
       "acceptance": "Fixed per-version locale inventory, source SHA, exact text mappings, coverage/absence distinctions, manifest, tests; HIGH scope 06B independent acceptance, LOW direct after self-QA",
-      "next": "06B new R5-R7 catalog and Native literal scoped QA READY; 05 accepted version lookup/account boundary/locale consumer and product binding; 08 next fixed product dynamic UI keys after 05 source, physical/device-only evidence remains UNVERIFIED; no repeat. Native generic alias and [Error] do not change Editor policy.",
+      "next": "05 direct fixed tab/filter locale mapping READY; 06B R5-R7 catalog and Native literal scoped claims continue independently; 08 WAIT 05 fixed next product list/dynamic UI source or QA counterexample; no repeat. Physical/device-only evidence UNVERIFIED.",
       "handoffTo": [
         "06B QA-WEB-LOCALE",
         "05 WEB",
@@ -8004,6 +8004,12 @@
             "status": "READY_AFTER_DEP",
             "dependency": "06B exact Native literal scoped PASS",
             "scope": "Static provenance only; preserve accepted Editor BCP47 policy, locale inventory and explicit missing status"
+          },
+          "productTabsFilters": {
+            "recipient": "05 WEB",
+            "status": "READY_DIRECT_LOW_ADVISORY",
+            "scope": "33 display sites, 32 exact JA matches; one achievementSearch placeholder semantic mismatch (legacy JA/EN/GUID vs generic name/GUID). No new keys; all 495 cells already accepted R4. Fixed six source blobs and full per-site key map in private evidence.",
+            "condition": "Keep initial legacy JA checks and structural/state guards; mounted locale-aware text expectations from coherent accepted generation; preserve machine IDs/option values/order/focus/caret/filter/active tab/Save/Session/Revision/Undo. Do not claim multilingual search until query evidence; 05 actual change HIGH -> 06B scoped browser/negative QA; 00 distribution separate."
           }
         },
         "to00": {
@@ -8614,7 +8620,7 @@
       "productUiMapping": {
         "task": "PRODUCT_TABS_FILTERS_LOCALE_BINDING_PREFLIGHT",
         "claim": "20261113_08_PRODUCT_TABS_FILTERS_LOCALE",
-        "status": "IN_FLIGHT",
+        "status": "DONE_SELF_QA_DIRECT_ADVISORY",
         "baseHead": "ef5d052f8eed9c3f1686b462e185467762d0d798",
         "baseLedgerBlob": "5e44fee7b6308ddf4339653dfba46bbf5b19d60d",
         "risk": "LOW_ADVISORY_SOURCE_MAPPING_ONLY",
@@ -8623,7 +8629,33 @@
         "sourceHeads": [
           "a178d943fd44ea34934aea0738c7e292f1944b27",
           "a94cb913122df7cd63ab00fafea0428b2e7f4bac"
-        ]
+        ],
+        "artifact": "HKIA_08_PRODUCT_TABS_FILTERS_LOCALE_ADVISORY_20261113.json",
+        "sha256": "042cc9fe660b86b12043e7739dd9ad42d4ad97fcde2cb82c13dd9a4a3154c227",
+        "evidenceLocation": "Private Library /HKIA Editor Private/",
+        "readback": "BYTE_EXACT_SHA256_PASS",
+        "verified": {
+          "sourceBlobs": 6,
+          "sites": 33,
+          "exactJa": 32,
+          "semanticReview": 1,
+          "acceptedR4Keys": 33,
+          "acceptedR4CellsUnchanged": 495,
+          "catalogs": 15,
+          "priorR4R5R7ZipShaCrc": "PASS",
+          "newKeys": 0
+        },
+        "unverified": [
+          "Actual product locale switch and localized query semantics; no direct V33 app source read in this turn (artifact ref path 404)",
+          "Browser/session invariance and linguistic review"
+        ],
+        "handoff": {
+          "recipient": "05 WEB",
+          "status": "READY_DIRECT_LOW_ADVISORY",
+          "scope": "33 display sites, 32 exact JA matches; one achievementSearch placeholder semantic mismatch (legacy JA/EN/GUID vs generic name/GUID). No new keys; all 495 cells already accepted R4. Fixed six source blobs and full per-site key map in private evidence.",
+          "condition": "Keep initial legacy JA checks and structural/state guards; mounted locale-aware text expectations from coherent accepted generation; preserve machine IDs/option values/order/focus/caret/filter/active tab/Save/Session/Revision/Undo. Do not claim multilingual search until query evidence; 05 actual change HIGH -> 06B scoped browser/negative QA; 00 distribution separate."
+        },
+        "next": "WAIT 05 actual locale-aware product binding or explicit new capability keys; no repeat."
       }
     },
     "06A_QA_DATA_CORE": {
