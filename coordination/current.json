@@ -1668,7 +1668,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "04_V24_VERSIONED_MEMBERSHIP_IMPACT_PREFLIGHT_IN_FLIGHT",
+      "next": "06A_V24_VERSIONED_MEMBERSHIP_IMPACT_HIGH_READY; 04_WAIT_INDEPENDENT_VERDICT_OR_BETA_ENV_OR_NEW_AUTHORIZED_CONTRACT",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -2690,12 +2690,69 @@
       "versionedMembershipPreflight": {
         "task": "BETA_V24_VERSIONED_MEMBERSHIP_IMPACT_PREFLIGHT",
         "owner": "04 SAVE CORE",
-        "status": "IN_FLIGHT",
+        "status": "SELF_PASS_HIGH_06A_READY_CONTRACT_BOUNDARY",
         "risk": "HIGH_READ_ONLY_IMPACT",
         "baseLedgerBlob": "42dbe0660527093497b90a3f75b11ba06e808b00",
         "baseSourceSha256": "eb98dc80aae1f4c66f8eb97183beb8235de30edfb6d5ce2e6bd2b2de662f0384",
         "acceptedResearchSha256": "9515b0c60a35bf8d32a1aa650808965472eb6e2bab7b189ac82b1b7d68204cda",
-        "scope": "29 new versioned membership pairs vs frozen V24 source. Check exact catalog mismatch and typed Key1 plan gates; synthetic/read-only only; no change V24, no 01/03 reanalysis, no product authority. Escalate reproducible contractual mismatch only."
+        "scope": "29 new versioned membership pairs vs frozen V24 source. Check exact catalog mismatch and typed Key1 plan gates; synthetic/read-only only; no change V24, no 01/03 reanalysis, no product authority. Escalate reproducible contractual mismatch only.",
+        "evidence": {
+          "file": "HKIA_04_V24_VersionedMembership_Preflight_20261114_Evidence.zip",
+          "sha256": "0f7cc783483a73f3b3eb50804d093171abc33dc5224ba5c7a052551d36a0156c",
+          "manifestSha256": "6096fab9949851857a7dfdb2d17771dcc1aa0d1ec10a607fb4a227785c94bc14",
+          "resultSha256": "1e02857f3668b1aef4d7ae147ce57d5a8cf42448f3843856e0bda33ded2b1ef1",
+          "genuineAggregateSha256": "ea42187edbab72eacc4a66798cc7c7f0406cd66d301f2e6e7163cb0341961507",
+          "handoffSha256": "27ab3fcf1b20f85f92b6bcff6473deb1e59b5ea85dd2c49963ab19bb5d2bf383",
+          "privateLibrary": "HKIA Editor Private",
+          "bytes": 9912,
+          "readback": "BYTE_EXACT_SHA_CRC_7_ENTRIES_6_MANIFEST_HASHES_PASS"
+        },
+        "verified": {
+          "sourceEntries": 396,
+          "researchDeltaPaths": 4,
+          "versionedMembershipPairs": 29,
+          "v301CatalogMatches": 29,
+          "syntheticPlans": 174,
+          "v300NoWitnessDenied": 29,
+          "v300WrongVersionWitnessDenied": 29,
+          "v300SameVersionWitnessAllowed": 16,
+          "v300SameVersionWitnessDenied": 13,
+          "v300ExistingRemoveAllowed": 16,
+          "v301AddAllowed": 16,
+          "v301RemoveAllowed": 16,
+          "emptyV300WithSyntheticSameVersionWitnessAllowed": [
+            5664926,
+            909486228,
+            976928335,
+            1356362064
+          ],
+          "syntheticOutputExactKey1AccountRawOriginalUnchanged": 4,
+          "genuineV300DistinctRecords": 3,
+          "genuineV300EmptyFourHistoryCount": 0,
+          "genuineV301FourPresent": 4,
+          "genuineV300FourAddsDenied": 4,
+          "originalsUnchanged": 2,
+          "genuineNewOutputs": 0,
+          "regressionPass": 20,
+          "regressionFail": 0,
+          "recipeQuantityTargetIntersection": 0,
+          "productChanges": 0
+        },
+        "classification": "REPRODUCED_VERSIONED_CATALOG_BOUNDARY_NOT_PROVEN_GAME_CORRUPTION; existing history-only contract permits synthetic same-version witnessed restoration, new accepted definition shows exact four v300 empty membership. No unconditional new Writer permission. Actual originals all four denied. Independent adjudication required before any freeze change.",
+        "unverified": [
+          "06A_INDEPENDENT_SCOPE",
+          "VERSIONED_RUNTIME_MEMBERSHIP_MIGRATION_AND_HISTORICAL_LINEAGE",
+          "V24_GENUINE_BROWSER_WAIT_ENV",
+          "GAME_LOAD_RESAVE"
+        ],
+        "handoff": {
+          "to": "06A QA-DATA-CORE",
+          "status": "READY",
+          "scope": "Exact 29 versioned definitions vs frozen V24; four EMPTY_PAIR v300 synthetic witnessed adds accepted; no/wrong-version witness denied; actual v300 four denied. Independently distinguish history restoration from source membership and adjudicate fail-closed gate under new evidence. 03 causal contract if needed; 00 freeze change control if concrete violation. No broad repeated QA, no game or product permission.",
+          "nextAfter": "04 minimal scoped repair only if independent contract violation confirmed and 00 freeze decision; 07 reference version-correct mapping; otherwise retain frozen V24 and wait environment."
+        },
+        "noProductChange": true,
+        "noDeploy": true
       }
     },
     "05_WEB": {
