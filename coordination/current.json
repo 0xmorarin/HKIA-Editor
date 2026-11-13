@@ -3556,7 +3556,7 @@
   },
   "nextSerial": [
     "P0 OWNER 20261113: restore V30 OFF Pages immediately after authenticated exact V30/V29 push; no wait V33/Beta/Rust/Svelte; PR3 serial/manual dispatch/06 live QA; never branch-root or activate Writer.",
-    "06 V33 fixed 5 source/2 dist path scoped QA; V32 and UI accepted. 00 after QA.",
+    "V33 fixed 5 source/2 dist path independent SCOPED PASS recorded; next formal scope only on new evidence.",
     "V24 frozen; actual native HTTP/HTTPS WebCrypto Module Worker WAIT_ENV and game persistence UNVERIFIED; 07 independent WAIT_ENV."
   ],
   "imageAssets": {
@@ -4368,9 +4368,7 @@
       "condition": "First scoped activation and kit review READY; actual browser WAIT_ENV until authorized host. Determine only irreducible Native game evidence required for release-critical accepted operation scope; game acceptance remains unobserved.",
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
-    "nextReadyParallel": [
-      "06_V33_COMBINED_SCOPED_QA"
-    ],
+    "nextReadyParallel": [],
     "nextAfterDep": [
       "00_PAGES_PR3_AFTER_REMOTE_FIXED_REFS",
       "06_LIVE_ARTIFACT_HTTPS_AFTER_DEPLOY",
@@ -4487,7 +4485,7 @@
     },
     "formalIntegration": {
       "task": "SERIAL_V32_PLUS_05_CELEBRATION5_UI",
-      "status": "LOCAL_PASS_COMBINED_QA_PENDING",
+      "status": "DONE_SCOPED_PASS_FORMAL_V33_OFF_COMBINED",
       "owner": "00 CTRL",
       "baseMain": "10bac74d26791326f28cb07daf32ca826fa2e46c",
       "claimMain": "3a17ddd8ec68a211c025d64e662115ff8941cdb1",
@@ -4943,7 +4941,7 @@
         }
       },
       "candidate": {
-        "label": "V33_FORMAL_OFF_ACCEPTED_INPUTS_COMBINED_QA_PENDING",
+        "label": "V33_FORMAL_OFF_COMBINED_SCOPED_PASS",
         "file": "HKIA_WEB05_FormalCelebration5UI_V31_20261113_Source.zip",
         "sha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
         "entries": 521,
@@ -4992,12 +4990,56 @@
       "changes": "2 MOD 3 ADD 0 DEL; 516 unchanged; source byte-identical accepted 05; two distribution changes",
       "verified": "1034 PASS 36 SKIP 0 FAIL; npm build/check PASS; V30 and V32 4146 exact; V33 4146 hashes 4076 WebP 55-module closure and verifyDist PASS; 3 private readbacks exact; index.html retained exact existing media boot projection",
       "unverified": [
-        "06_V33_COMBINED_SCOPED_QA",
+        "ACTUAL_PAGES_FIXED_ARTIFACT_LIVE_ACCEPTANCE",
         "ACTUAL_HTTP_HTTPS_NATIVE_WEBCRYPTO_MODULE_WORKER",
-        "GAME_LOAD_RESAVE"
+        "GAME_AUTH_LOAD_RESAVE_REBOOT_RUNTIME_EFFECTS",
+        "V24_FROZEN"
       ],
       "rollback": "V32 exact OFF; restore two UI preimages/remove 3 QA additions. V24 frozen.",
-      "handoff": "06 V33 exact 5 source paths, 2 dist paths, 4146 hashes and 55 closure; reuse fixed V32 and identical 05 independent evidence; no broad retest. Pages separate."
+      "handoff": "V33 accepted OFF; no new deployment or flag authority. 00 Pages V30/V29 staging first; 06 live verification after deployment.",
+      "acceptance": {
+        "verdict": "SCOPED_PASS_FORMAL_V33_OFF_COMBINED",
+        "sourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "artifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
+        "evidence": {
+          "result": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_RESULT.json",
+            "sha256": "734919480356a2e3b2d4702f7d17d55e97ba75c9550fccea74917ce55ecbc0a0"
+          },
+          "report": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_REPORT.md",
+            "sha256": "b3baf159c01151e7eedf2589e1b98df6c8404695855c15d326386029ba63ed17"
+          },
+          "zip": {
+            "file": "HKIA_06_V33_COMBINED_QA_20261113_EVIDENCE.zip",
+            "sha256": "4b9aff5a735a04aa670838d42f060d3f1be36dadf7d088638e4509b26a2e2202",
+            "entries": 14
+          },
+          "readback": "ALL_3_BYTE_EXACT_CRC_PASS"
+        },
+        "verified": {
+          "sourceEntries": 521,
+          "modified": 2,
+          "added": 3,
+          "unchanged": 516,
+          "distributionEntries": 4146,
+          "distributionModified": 2,
+          "distributionUnchanged": 4144,
+          "webp": 4076,
+          "modules": 55,
+          "focused": 17,
+          "fail": 0,
+          "check": "PASS",
+          "build": "PASS",
+          "mediaProjection": "EXACT_1_LINE_4_MEDIA_FILES_4076_WEBP_UNCHANGED_MAP_PINS_MATCH",
+          "rollbackSource": 518,
+          "rollbackDist": 4146,
+          "rebuildExact": 4146,
+          "flagsOff": 18,
+          "realSaveEvidence": "REUSED_EXACT_05_SOURCE_AND_V32_CORE_NO_REPEAT",
+          "trueRedNew": 0
+        }
+      }
     },
     "inFlightStreams": []
   },
@@ -5245,14 +5287,20 @@
         "next": "Run existing private kit check/stage on authorized authenticated git host; verify both exact refs; then 00 serial PR3 integration/manual OFF deployment and 06 live QA. No further unchanged binary-chunk retries.",
         "stageExecution": {
           "task": "PAGES_FIXED_OFF_ARTIFACT_REMOTE_STAGE_AND_DEPLOY",
-          "status": "IN_FLIGHT_CONNECTOR_BINARY_SEGMENT_TRANSFER",
-          "baseMain": "51da83b1b01a914c0bbd677a5c6e3cf4b2882291",
+          "status": "IN_FLIGHT_RESUMABLE_REMOTE_CHECKPOINT",
+          "baseMain": "84ea907a64a607d4b1362612a8a4562091e11f5a",
           "scope": "Only fixed approved V30/V29 OFF bundle binary chunks and isolated staging branch; no private inputs, no Writer or gate change; verify exact remote refs before PR3",
           "bundleSha256": "b51fe186186d8cb5302a76f37f4c313ab3cf7b7b56d985c4290721927b807112",
           "observed": "Two bounded segments returned exact expected Git blob SHA; large request h2 failure; continue bounded transfer",
-          "next": "Verify every segment, reconstruct full pinned bundle in CI; PR3 only after both exact artifact refs exist.",
+          "next": "Transfer remaining exact binary segments from private Library, SHA compare and checkpoint each batch; nondeploy CI rebuild pinned Git bundle; then PR3 after refs verified.",
           "lastCheck": "Both pinned commit lookups HTTP 422; no artifact refs in branch list; direct git ls-remote DNS failure; exact kit SHA/CRC and bundle SHA + V30 checkout/fsck and 4146 file hashes confirmed; PR3 remains draft; no deploy",
-          "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required"
+          "method": "Private Drive raw bytes -> bounded GitHub create_blob -> isolated transport tree -> nondeploy CI reconstruct exact Git bundle and push pinned refs; no public Drive IDs; user PC not required",
+          "transportBranch": "ctrl/pages-off-transfer-20261113",
+          "transportHead": "9b4ebcccd91831e18dfcdeb7ca16955e143e9b1c",
+          "transportTree": "34c96ee4e94eb67895462e4a0d050d51c1a81b5c",
+          "verifiedPartCount": 2,
+          "totalParts": 57,
+          "partManifest": "HKIA_Pages_TransferParts_2MiB_20261113.json"
         }
       },
       "ownerRecoveryPriority": {
