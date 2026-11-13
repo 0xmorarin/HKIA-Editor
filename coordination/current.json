@@ -6735,6 +6735,16 @@
           "condition": "00 exact R6 branch nondeploy CI; fixed source guard 7 paths, prepare exact R4 reference checkout, Rust1.85.1 all native/bridge tests, WASM build; fixed baseline artifact id14019348055, paired synthetic15 and measured peak delta; code-only output. 07 after CI fixed artifact genuine private six/rollback and self-QA, then 06A HIGH independent. No main/PR9/deploy changes or genuine public CI."
         },
         "next": "00 isolated nondeploy CI READY; 07 WAIT_CI then exact R6 private genuine parity and measured self-QA; 06A after, 00 integration only accepted. R5.1 actual browser WAIT_ENV separate."
+      },
+      "r6Followup": {
+        "task": "HKIA-RUST-014_R6_MEASURED_CAPACITY_FOLLOWUP",
+        "owner": "07 RUST CORE",
+        "status": "IN_FLIGHT",
+        "risk": "HIGH",
+        "baseHead": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
+        "claimBase": "3363c1a857e922e6e651048e25d26bd7cbc40b56",
+        "scope": "Investigate fixed R6 allocation high-water, smallest safe improvement and paired measurements; no limits, R5.1/PR9, workflow or deployment change",
+        "reusedCI": 43405690901
       }
     },
     "08_LOCALIZATION": {
