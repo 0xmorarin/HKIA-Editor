@@ -540,7 +540,7 @@
       "blockedFamily": "COMPLETION_REWARD_AND_LOAD_ACCEPTANCE_UNVERIFIED",
       "nativeLoad": "V301_BOTH_STATIC_INT32_MARKERS_CONFIRMED_72_ANCHORS_6_REAL_RECORDS; DUPLICATE_INVENTORY_IMMEDIATE_RET; BOULDER_TARGETED_WORLD_OBJECT_ACTIVE_REPAIR; ALWAYSRUN_ACHIEVEMENT_03_CONTRACT_PENDING_QA; ADDITIONAL_AUTH_UNKNOWN",
       "specificBlocker": "RECIPE_SAME_RUNTIME_PRE_RESAVE_SCOPED_PASS; POST_GAME_RESAVE_LINEAGE_UNKNOWN; ADDITIONAL_AUTH_GAME_LOAD_UNOBSERVED; 03_CAUSAL_QA_AND_FINAL_BROWSER_QA",
-      "next": "WAIT_NEW_CAUSAL_SCOPE_OR_QA_FAILURE",
+      "next": "06_V300_ALLOCATOR_STATIC_SCOPE_AFTER_CURRENT_QA; 04_WAIT_EXACT_TARGET_PRODUCER_CAUSAL_REWARD_OR_QA_FAILURE",
       "execution": {
         "task": "FORMAL_V16_DISTINCT_FAMILY_ATOMIC_BATCH",
         "status": "PARTIAL_LOCAL_PASS_QA_READY",
@@ -1355,6 +1355,44 @@
         },
         "scope": "5 existing v301 quantity cancellations + 5 receipt restores; tag8 and account exact; 75 independent negatives; no generic acquisition",
         "next": "WAIT_NEW_CAUSAL_SCOPE_OR_QA_FAILURE; 05 UI delivered, 06 pending; V24 unchanged"
+      },
+      "v300AllocatorReview": {
+        "task": "FORMAL_V300_PROVIDER_ALLOCATOR_NATIVE_BOUNDARY",
+        "status": "STATIC_LOCAL_PASS_QA_READY_RESEARCH_ONLY",
+        "owner": "04 SAVE CORE",
+        "baseMain": "11dc190f0e046396fcb22f2603d289efdf4c87c8",
+        "baseSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+        "dependency": "01 historical 1550cd69…7bbd and 03 historical 872ce7ce…b66f pending independent QA; not product authority",
+        "scope": "Native v300 generic allocator, serializer and bounded inventory save path only; no target-specific producer or product changes",
+        "evidence": {
+          "file": "HKIA_04_V300_Allocator_Native_20261113_Evidence.zip",
+          "sha256": "a6da973577d8278c671b90aab7934a3f8c20499b9b17a31d1948f8b4a2742fbc",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_CRC_4_PAYLOAD_SHA_PASS"
+        },
+        "verified": {
+          "nsoSha256": "8c42ba0c99cfffe074f1f9c89fd7ec7cd79f67c453155f5e584c52cec5ef014a",
+          "dumpSha256": "ff61e4c9688e8be45422ed6c5c187ab36068c08f9b8cd7795999358374fbbf8a",
+          "buildId": "D0E7F0B11DADACFF",
+          "anchors": 69,
+          "branches": 6,
+          "directCalls": 5,
+          "metadataChecks": 10,
+          "upstreamDeltaHashes": 2,
+          "allocator": "INSERT_SINGLE_AND_ENUMERABLE_AND_NEW_UPSERT_ID_ZERO_PREINCREMENT_NEXTID_SET_ID",
+          "serializer": "CLEARS_DOCUMENTS_REBUILDS_FROM_LOOKUP",
+          "inventory": "RUNTIME_ADD_MAKE_ADD_EVENT; SAVE_CLONE_FIELDS_AND_EXISTING_ITEMID_UNIQUEID_ID_MATCH",
+          "productSourceChanged": 0,
+          "gameAccepted": false,
+          "productAuthorized": false
+        },
+        "unverified": [
+          "EXACT_SIX_NATIVE_ACQUISITION_TRIGGER_AND_FINAL_GENERIC_PROVIDER_DISPATCH",
+          "V300_TARGET_DEFINITION_AND_CONSUMER_PARITY",
+          "HISTORY_BACKFILL_AND_GAME_LOAD_RESAVE_AUTH",
+          "06_INDEPENDENT_NEW_STATIC_QA"
+        ],
+        "next": "06 scoped 69 anchors + 6 branches + 5 calls + 10 metadata; 01 consume allocator subcondition after acceptance; 03 exact target producer/runtime provider dispatch/history closure; 04 WAIT full accepted causal contract or QA fix. No product flag or V24/Pages change"
       }
     },
     "05_WEB": {
