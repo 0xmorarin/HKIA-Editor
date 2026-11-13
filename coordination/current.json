@@ -10440,12 +10440,15 @@
       "after": "00 release gate on final fixed accepted artifact and exact scope; Owner approval required actual flags/deploy; no claim V24 already ready to publish."
     },
     "nextReadyParallel": [
+      "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
       "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
       "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
       "00_V38_FIXED_ACCEPTANCE",
-      "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI"
+      "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI",
+      "05_R5_POSTCONDITION_AND_LOCALE_R1_REPAIR_DISJOINT"
     ],
     "nextAfterDep": [
+      "00_PAGES_FIXED_PREVIEW_AFTER_06C_AND_OWNER_APPROVAL",
       "00_MANUAL_FIXED_PREVIEW_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
       "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
       "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
@@ -11115,17 +11118,19 @@
     },
     "inFlightStreams": [],
     "currentHandoff": {
-      "task": "ACTIVE_PAGES_POLICY_AND_FIXED_R4_PREVIEW",
-      "status": "DONE_SCOPED_HANDOFF",
-      "source": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
-      "scope": "Owner policy recorded; R4 preview delta fixed PASS, 06C READY; no live deployment or Writer authorization; V38 acceptance and other CI independent",
+      "task": "OWNER_ACTIVE_PAGES_PREVIEW_POLICY_AND_FIXED_R4_DELTA",
+      "status": "DONE_POLICY_FIXED_CANDIDATE_06C_READY",
+      "scope": "Policy persisted, CI green, artifact exact; 06C next; no deployment",
       "next": [
+        "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
         "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
         "06A_EXISTING_RECIPE6_SAVED_HATS_OFF_BROWSER_KIT_IN_FLIGHT",
         "00_V38_FIXED_ACCEPTANCE",
-        "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI"
+        "00_RUST_R6_FIXED_CI_AND_WEB_REPAIRED_CI",
+        "05_R5_POSTCONDITION_AND_LOCALE_R1_REPAIR_DISJOINT"
       ],
       "after": [
+        "00_PAGES_FIXED_PREVIEW_AFTER_06C_AND_OWNER_APPROVAL",
         "00_MANUAL_FIXED_PREVIEW_DEPLOY_AFTER_06C_AND_OWNER_APPROVAL",
         "00_FIXED_LOCALE_R1_REPAIR_CI_AFTER_05",
         "06B_FOCUSED_LOCALE_R1_REPAIR_AFTER_CI",
@@ -12714,33 +12719,47 @@
     "previewRefresh": {
       "task": "PAGES_VISUAL_PREVIEW_DELTA_STAGING",
       "owner": "00 CTRL",
-      "status": "DONE_FIXED_R4_DELTA_SELF_PASS_06C_READY",
+      "status": "DONE_FIXED_PREVIEW_DELTA_SELF_PASS_06C_READY",
       "risk": "RELEASE",
       "baseArtifactRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
       "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
       "previewSource": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
       "scope": "Prepare isolated nondeploy candidate: preserve exact V30 root/assets, add /dev/ synthetic Svelte R4 accepted UI, explicit development/no-save and rights notice, no raw data or source maps, all hashes and policy, nested HTTP Chromium, delta-only artifact. R5 after independent acceptance; locale Consumer TRUE_RED excluded. Owner deployment approval separate.",
-      "ownerIntent": "Owner approved active Pages visual preview policy 2026-11-13; no separate unverified artifact deployment or automatic deploy approval",
-      "next": "06C fixed scoped integration QA then 00 manual artifact deployment preparation and existing Owner approval; R5/R6/Locale repairs separate.",
+      "ownerIntent": "Owner explicitly approved active visual preview cadence; fixed artifact deploy approval remains separate",
+      "next": "06C fixed delta scoped integration acceptance; then 00 fixed Owner deploy approval and manual workflow. No automatic deployment, no Writer or formal promotion.",
       "branch": "ctrl/visual-preview-delta-20261113",
       "head": "9d48b8261a79c30be983cd3347371f45a7951e2a",
       "run": 43396673488,
       "job": 131789159607,
       "verified": {
+        "ci": "SUCCESS",
+        "unit": 71,
+        "fail": 0,
+        "svelteCheck": "0 errors 0 warnings",
+        "build": "PASS",
         "baseUnchanged": 4146,
         "added": 3,
         "combined": 4149,
-        "artifactScope": "dev/ three files plus manifest outside site",
-        "build": "PASS",
-        "unit": "71 PASS",
-        "nestedChromiumWidths": [
+        "policy": "PASS_4149",
+        "browserWidths": [
           320,
           375,
           1280
         ],
-        "existingR1R4Regression": "PASS",
-        "privacyPolicy": "PASS",
-        "artifactReadback": "BYTE_EXACT_SHA_CRC_ALL_3_MEMBER_HASHES_MATCH"
+        "nestedPath": "PASS",
+        "r1r2r3r4Regression": "PASS",
+        "externalRequests": 0,
+        "pageErrors": 0,
+        "artifact": {
+          "id": 14022124789,
+          "file": "HKIA_VisualPreview_R4_Delta_43396673488.zip",
+          "sha256": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+          "bytes": 335761,
+          "manifestSha256": "fd9a8fbc41bc0bfe43cae6eefdc83fe8425a36d27e127fb5b3c1b6ad279f1ee3",
+          "entries": 4,
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_4_ENTRIES_3_DELTA_FILE_HASHES_MATCH"
+        }
       },
       "proposedUpdatePolicy": "Milestone-based visible preview updates, no research-only redeploy; preserve existing root, separate /dev/ synthetic no-save; reuse remote media, fixed manual artifact and rollback, independent 06C then Owner deployment approval. Not an automatic deploy authorization.",
       "ci": "SUCCESS",
@@ -12755,10 +12774,15 @@
       },
       "handoff": {
         "to": "06C QA-RELEASE",
-        "task": "PAGES_R4_VISUAL_PREVIEW_DELTA_FIXED_INTEGRATION_QA",
+        "task": "PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA",
         "status": "READY",
-        "scope": "Exact V30 4146 unchanged plus dev/ 3 ADD; verify manifest, fixed source R4 acceptance, distribution-only notice/back link, synthetic no-save and rights, independent privacy/path/negative/rollback/actual nested browser; no R5/Locale Consumer TRUE_RED; no repeat V30 full feature QA; no deploy",
-        "condition": "Fixed artifact readback and prior V30/R4 acceptances. After independent acceptance 00 prepare manual fixed artifact dispatch, separate Owner approval; actual HTTPS smoke after deployment."
+        "baseRef": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "baseManifestSha256": "564a5fc19b479931a616a3ce0fdc8f1c02b71b072fb84d9683cb5147029bf7f6",
+        "uiRef": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
+        "artifactSha256": "aa571253829415915effaa6fb214f2d8d3299a35ea882c16fa2c09bdee2496f9",
+        "manifestSha256": "fd9a8fbc41bc0bfe43cae6eefdc83fe8425a36d27e127fb5b3c1b6ad279f1ee3",
+        "run": 43396673488,
+        "scope": "3 ADD /dev/ only, exact V30 4146 root files, 4149 combined; independent manifest/base/delta/closure/privacy, actual nested browser and rights/no-save label, negative controls, rollback to exact V30; R4 accepted UI reuse; no R5/Locale Consumer TRUE_RED; no deployment in QA. After PASS 00 fixed approval/manual publish."
       }
     },
     "pagesActivePreviewPolicy": {
@@ -12777,6 +12801,17 @@
       "task": "OWNER_POLICY_UPDATE_AND_PREVIEW_CANDIDATE_HANDOFF",
       "owner": "00 CTRL",
       "projectInstructionsCharacters": 7993
+    },
+    "pagesPolicyChange": {
+      "status": "DONE_OWNER_APPROVED_ACTIVE",
+      "decision": "OWNER_PAGES_ACTIVE_VISUAL_PREVIEW_DECISION_20261113",
+      "adr": "coordination/pages-preview-decision-20261113.md",
+      "adrBlob": "7d1db2f7043d5459abe30f4c5ed144dd7e145105",
+      "gateBlob": "1e44539d44847f85494a73084b0eb1736f9e6802",
+      "instructionsBlob": "60119a9880c4cf37a6f0a560c3f8804b38fcc2a6",
+      "instructionsChars": 7993,
+      "source": "Owner explicit policy change 2026-11-13",
+      "scope": "Active visual milestones promptly; independent QA/approval unchanged; no auto deploy; remote media reused"
     }
   },
   "formalRelease": {
@@ -13193,6 +13228,35 @@
         "automaticDeploy": false,
         "writerAuthorization": false,
         "formalPromotionAuthorization": false
+      },
+      "visualPreviewPolicy": {
+        "decision": "OWNER_PAGES_ACTIVE_VISUAL_PREVIEW_DECISION_20261113",
+        "record": "coordination/pages-preview-decision-20261113.md",
+        "status": "OWNER_APPROVED_POLICY_ACTIVE",
+        "priority": "VISIBLE_ACCEPTED_MILESTONES_PROMPTLY",
+        "root": "PRESERVE_EXISTING_ACCEPTED_PRODUCT",
+        "path": "/HKIA-Editor/dev/",
+        "initialMode": "SYNTHETIC_NO_SAVE_WRITER_OFF",
+        "updateTrigger": "VISIBLE_UI_UX_IMAGES_LOCALIZATION_OR_ACCEPTED_OPERATION_CHANGE",
+        "skip": "RESEARCH_ONLY_OR_IDENTICAL_DISTRIBUTION",
+        "transport": "REUSE_PINNED_REMOTE_MEDIA_AND_BASE; COMPOSE_IN_ACTIONS; DELTA_INPUT_ONLY",
+        "acceptance": "RISK_BASED_SCOPED_QA_PLUS_06C_FIXED_DISTRIBUTION",
+        "publish": "MANUAL_FIXED_ARTIFACT_ONLY_AFTER_EXISTING_OWNER_APPROVAL",
+        "automaticDeploy": false,
+        "writerAuthorization": false,
+        "formalPromotionAuthorization": false,
+        "privacy": "NO_GENUINE_SAVE_RAW_GAME_DATA_PRIVATE_LOCATORS_SOURCE_MAPS_INTERNAL_PATHS",
+        "rollback": "LAST_ACCEPTED_FIXED_ARTIFACT",
+        "note": "No new Beta gate; do not wait unrelated formal work.",
+        "adrBlob": "7d1db2f7043d5459abe30f4c5ed144dd7e145105",
+        "gateBlob": "1e44539d44847f85494a73084b0eb1736f9e6802",
+        "instructionsBlob": "60119a9880c4cf37a6f0a560c3f8804b38fcc2a6",
+        "characters": 7993,
+        "ownerDecisionDate": "2026-11-13",
+        "latestEligible": "SVELTE_R4_SCOPED_ACCEPTED",
+        "lastActualDeployment": 43342655323,
+        "latestCandidate": "R4_DELTA_43396673488",
+        "pending": "06C scoped fixed distribution acceptance; explicit fixed-artifact Owner deployment approval; manual dispatch"
       }
     },
     "executionPolicy": "Self-QA all; LOW direct; HIGH scoped 06A data/core or 06B web/locale then direct; 00 serial integration; 06C changed integration/release only. Existing independent release/operation/cutover gates unchanged; V24 frozen.",
