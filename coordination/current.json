@@ -4124,7 +4124,7 @@
       "privateAcquisitionKit": "HKIA_MEDIA_EXTERNAL_ACQUISITION_KIT_20261112.zip"
     },
     "07_RUST_CORE": {
-      "status": "IN_FLIGHT_R3_BOUNDED_SESSION_ABI",
+      "status": "R3_SESSION_ABI_SOURCE_FROZEN_TS_PASS_WAIT_RUST_CI_06_SCOPED_READY",
       "owner": "07 RUST CORE",
       "priority": "P0_ARCHITECTURE_PARALLEL_NOT_BETA_GATE",
       "baseSourceSha256": "7a44a54c17518366f6b136a4f83c5403507ada9308a451f6dbdd2c43a74f23a9",
@@ -4141,56 +4141,50 @@
         "contracts/rust/**",
         "tests/rust/**"
       ],
-      "next": "06 independent R2 synthetic and real parity QA now; existing V30/research in-flight retain. After scoped acceptance 07 bounded read-only Session/ABI foundation with remaining ZIP/account/projection scope explicit, or focused repair if counterexample. No merge/deploy or JS Beta gate.",
-      "task": "HKIA-RUST-004",
-      "baseHead": "a82881115e8afeac81447e43886d85e9d8d6a681",
-      "scope": "Exact R2 compiled executable and V33 reference; genuine Switch300/301 full slot bytes and ordered target projection; 8 genuine-derived negative tests; local read-only; independent QA pending",
-      "sourceSha256": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
+      "next": "00 add isolated R3 CI on PR7 exact code HEAD, run 81 tests+release binary; 06 static new scope in parallel; 07 compile repair if necessary and actual local genuine projection parity; 06 independent scoped execution. No R2 full re-QA, no JS feature duplication or Beta gate.",
+      "task": "HKIA-RUST-005",
+      "baseHead": "e332e30c2203fbf72598901811a08039812bbe85",
+      "scope": "Bounded read-only ProductSession, ZIP32/DEFLATE, SettingsAccount, residual typed indexes, HKS1 Rust/TS binary ABI, CAS/generation/replay/close, writer witness only",
+      "sourceSha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
       "source": {
-        "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
-        "sha256": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
-        "entries": 47
+        "file": "HKIA_Rust07_R3_SessionABI_20261113_Source.zip",
+        "sha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+        "entries": 70,
+        "bytes": 91622
       },
       "manifest": {
-        "file": "HKIA_Rust07_Reader_R2_V33_20261113_Manifest.json",
-        "sha256": "5fb78d9687a233346095cb420ba90cce9b975737f51529938c6a7df7e66d338d"
+        "file": "HKIA_Rust07_R3_SessionABI_20261113_Manifest.json",
+        "sha256": "a78142abf4218c633111383f4ed69ca7806ca8d6fd63b172a622f62e454aa8cf"
       },
       "handoff": {
         "to": "06 QA",
-        "task": "HKIA-RUST-004_INDEPENDENT_R2_SYNTHETIC_AND_REAL_PARITY",
-        "status": "READY_NOW",
-        "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
-        "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb",
-        "fixedSource": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
-        "codeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
-        "scope": "Reuse 39 synthetic fixed CI + reproduce genuine local exact full slot/target spans 2 versions and independent negatives; no full rereview; no QA product edits; no raw save in CI",
-        "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
+        "task": "HKIA-RUST-005_R3_SCOPED_SESSION_ABI",
+        "status": "STATIC_READY_EXECUTION_WAIT_CI",
+        "file": "HKIA_Rust07_R3_SessionABI_20261113_HANDOFF_06.md",
+        "sha256": "199bde062915670d36c101f30ea5b4d28ac706b3fb9188b684d63224925fd086",
+        "fixedSource": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
+        "scope": "R3 delta only; R2 independent accepted scope reuse. Static review now; Rust compile and execution acceptance after 00 CI and private parity; no product edits by QA."
       },
       "verification": {
-        "rustCompile": "PASS_FIXED_CI",
-        "rustExecutedTests": 39,
-        "rustPassed": 39,
-        "rustFailed": 0,
-        "rustSkipped": 0,
-        "releaseBuild": "PASS",
-        "sourceZipCRC": "PASS",
-        "codeBlobs": "12_OF_12",
-        "generatedCrate": "40_OF_40",
-        "privateJSReference": "2_OF_2_PASS",
-        "privateRealRustParity": "PASS_2_OF_2_LOCAL",
-        "independentSyntheticQA": "READY_06",
-        "nativeAuthentication": "UNKNOWN",
-        "writer": "NOT_IMPLEMENTED",
-        "wasm": "UNVERIFIED",
+        "sourceReadback": "PASS_70_SHA_CRC_ALL_5_ARTIFACTS",
+        "gitBlobs": "PASS_18_OF_18",
+        "publicCrate": "PASS_56_OF_56_39_GENERATED",
+        "typescript": "PASS_14_OF_14_TSC_5_8_3_NODE_22_16",
+        "rustCompile": "UNVERIFIED_WAIT_00_CI",
+        "rustNewTestsPlanned": 42,
+        "rustNewTestsExecuted": 0,
+        "rustRegressionTestsPlanned": 39,
+        "privateV33Reference": "PASS_2_OF_2_NEW_PROJECTION_REFERENCE_ONLY",
+        "privateRustParity": "UNVERIFIED_0_OF_2",
+        "writer": "DISABLED_UNIMPLEMENTED",
+        "wasm": "UNVERIFIED_NOT_CONNECTED",
         "browser": "UNVERIFIED",
-        "genuineNegative": "PASS_8_OF_8",
-        "originalsUnchanged": 2,
-        "independentRealQA": "READY_06"
+        "gameAuth": "UNKNOWN"
       },
-      "implementation": "SAVEGAMEV2_SLOT_ENVELOPE_LZ4_BLOCK_SPANS_TYPED_NATIVE_SCHEMA_AND_TARGET_BYTE_RANGES; NO_ZIP_ACCOUNT_SESSION_WRITER_WASM",
-      "strictness": "KNOWN_SWITCH_300_301; UNKNOWN_SCHEMA_FAIL_CLOSED; LEADING_UTF8_BOM_REJECTED_PENDING_REAL_PARITY",
-      "handoffTo": "06_QA_DIRECT_SYNTHETIC_AND_REAL; 07_SESSION_ABI_OR_REPAIR_AFTER_ACCEPTANCE",
-      "dependency": "R2_INDEPENDENT_06_ACCEPTANCE_PENDING; JS_BETA_INDEPENDENT",
+      "implementation": "R3_READ_ONLY_SESSION_ABI_SOURCE_IMPLEMENTED_RUST_UNCOMPILED",
+      "strictness": "EXISTING_LIMITS_RETAINED; BOUNDED_PAGES; UNKNOWN_UNSUPPORTED_FAIL_CLOSED",
+      "handoffTo": "06_DIRECT_R3_SCOPE_STATIC_NOW; 00_CI_DEPENDENCY_ONLY; 07_EXECUTION_REPAIR_AND_PRIVATE_PARITY; 06_SCOPED_ACCEPTANCE",
+      "dependency": "00_R3_ISOLATED_NONDEPLOY_CI_THEN_07_PRIVATE_PARITY; 06_STATIC_SCOPE_READY_NOW; V24_BETA_INDEPENDENT",
       "resumeBaseHead": "e332e30c2203fbf72598901811a08039812bbe85",
       "resumeScope": "Add Rust-owned bounded ZIP/account/index projection, single read-only session/typed ABI, CAS/replay/generation/close/file switching and explicit disabled writer; preserve R2 reader bytes; new synthetic tests and scoped independent QA",
       "executionKit": {
@@ -4207,7 +4201,7 @@
         "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
       },
       "resumeTask": "HKIA-RUST-005",
-      "previousTask": "HKIA-RUST-003",
+      "previousTask": "HKIA-RUST-004",
       "r2": {
         "source": {
           "file": "HKIA_Rust07_Reader_R2_V33_20261113_Source.zip",
@@ -4296,9 +4290,135 @@
             "realParity": "NOT_RUN",
             "scope": "public synthetic only, no deployment or merge"
           }
+        },
+        "acceptance": {
+          "verdict": "SCOPED_PASS_R2_FIXED_READER_SYNTHETIC_AND_GENUINE_SLOT_PARITY",
+          "source": "136c23f9b07f85c2cbe4d2f8b93d5dfef4eac8df08bccee21a06bffabdd46d91",
+          "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+          "synthetic": 36,
+          "genuine": 2,
+          "report": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json"
+        },
+        "compiled": {
+          "head": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
+          "tree": "823653a6cd421b15d643de3c2223d340c34b7e01",
+          "codeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
+          "workflowBlob": "466fbaa6474963ef40ea89979c238a624c4ce260",
+          "run": 43343089052,
+          "job": 131615861710,
+          "scope": "PUBLIC_SYNTHETIC_ONLY",
+          "toolchain": "rustc/cargo 1.85.1; Node22.16.0",
+          "tests": {
+            "passed": 39,
+            "failed": 0,
+            "skipped": 0,
+            "groups": [
+              6,
+              26,
+              7
+            ]
+          },
+          "releaseBuild": "PASS",
+          "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+          "binaryArtifact": {
+            "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+            "run": 43353690282,
+            "job": 131650533560,
+            "id": 14004802204,
+            "file": "HKIA_Rust_R2_CodeOnly_43353690282.zip",
+            "sha256": "1f10dba2f7e0e71e2f0e3973f7f36fca7bf57948fa37689562ef398c8b580cdc",
+            "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
+            "binaryBytes": 598880,
+            "buildReportSha256": "cbc7db6556e0c26a272017c4f8368eb13e18ba57b0844e161e12caed2bf4953a",
+            "samePriorBinary": true,
+            "readback": "ZIP_CRC_AND_SHA_AND_BINARY_AND_BUILD_REPORT_PASS",
+            "diff": "ONLY_00_WORKFLOW",
+            "localCompatibility": "LINUX_X86_64_GLIBC_2_41_ACTUALLY_EXECUTED"
+          },
+          "codeBlobReadback": "12_OF_12_PASS",
+          "source47Hashes": "PASS",
+          "generatedCrate40": "PASS",
+          "ciDiff": "ONLY_00_WORKFLOW",
+          "independentQA": "READY_06_NOT_YET_ACCEPTED"
+        },
+        "privateParity": {
+          "status": "LOCAL_REAL_PARITY_PASS_06_INDEPENDENT_ACCEPTANCE_PENDING",
+          "referenceV33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "originals": "TWO_EXISTING_OWNER_PRIVATE_ORIGINALS_LOCATED_AND_FETCHED_TO_AUTHORIZED_WORKSPACE; NO_RAW_UPLOAD; INTERNAL_SWITCH_300_301_VERIFIED",
+          "crcMembers": 22,
+          "referenceJs": "PASS_2_OF_2_FULL_LOGICAL_PAYLOAD_AND_TARGET_SPANS",
+          "originalsUnchanged": 2,
+          "comparison": "2_OF_2_EXACT_FULL_DECODED_SLOT_AND_ORDERED_TYPED_TARGET_PROJECTION",
+          "blocker": "NONE_FOR_R2_REAL_LOCAL_EXECUTION",
+          "kit": {
+            "file": "HKIA_Rust07_R2_PrivateParityKit_20261113.zip",
+            "sha256": "bb25cc4a8030f09ea9beecc8db84dcecf6378a367175f42d2e2932ae09ba1491",
+            "entries": 8,
+            "manifest": "HKIA_Rust07_R2_PrivateParityKit_20261113_Manifest.json",
+            "manifestSha256": "9daa2fc7f0ce7c1c5fa22c6bad442cd5b5e676fd6e49a1858e2830ff5b768faf",
+            "wrapperTests": "19_OF_19_PASS",
+            "readback": "ALL_3_ARTIFACTS_BYTE_EXACT_8_ENTRY_SHA_CRC_PASS"
+          },
+          "acceptance": "EXACT_DECODED_BYTES_AND_ORDERED_TYPED_MODEL_COLLECTION_TAG8_RAW_SPANS_BOTH_VERSIONS; ORIGINALS_UNCHANGED; NO_GAME_ACCEPTANCE",
+          "next": "06_INDEPENDENT_REAL_AND_SYNTHETIC_QA_DIRECT; 07_NEXT_SESSION_ABI_FOUNDATION_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
+          "negative": "8_OF_8_REJECT_ZERO_STDOUT_ORIGINALS_UNCHANGED",
+          "observed": [
+            {
+              "version": "3.0.0",
+              "documents": 19936,
+              "achievements": 570,
+              "counters": 585,
+              "history": 5046,
+              "celebrations": 1,
+              "blocks": 34,
+              "decodedBytes": 1061258
+            },
+            {
+              "version": "3.0.1",
+              "documents": 20207,
+              "achievements": 571,
+              "counters": 586,
+              "history": 5164,
+              "celebrations": 1,
+              "blocks": 34,
+              "decodedBytes": 1068906
+            }
+          ],
+          "scope": "Full decoded slot and framing; typed document count; ordered target IDs/GUID/value/count/span and tag8 full union range. Counter list contents preserved in raw payload; not full typed semantic projection of every field; ZIP/account not Rust; no writer/auth/game acceptance.",
+          "evidence": {
+            "zip": {
+              "file": "HKIA_Rust07_R2_GenuineParity_20261113_Evidence.zip",
+              "sha256": "505b580575737da919c440f24bb95622821754e6af8f509ee4a0e1d09f1b2316",
+              "entries": 5
+            },
+            "manifest": {
+              "file": "HKIA_Rust07_R2_GenuineParity_20261113_Manifest.json",
+              "sha256": "f7edd53b0bc040b3cdd8b3f19e3742251b763055bc8a71a2a7e92e8db6d17e72"
+            },
+            "result": {
+              "file": "HKIA_Rust07_R2_GenuineParity_20261113_RESULT.json",
+              "sha256": "5447f658548d846c61e2c16412cc6e55f777e76ec87b5443f607cc23b6fe3774"
+            },
+            "handoff": {
+              "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
+              "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb"
+            },
+            "readback": "ALL_4_BYTE_EXACT_AND_5_ENTRY_SHA_CRC_PASS"
+          }
+        },
+        "handoff": {
+          "to": "06 QA",
+          "task": "HKIA-RUST-004_INDEPENDENT_R2_SYNTHETIC_AND_REAL_PARITY",
+          "status": "READY_NOW",
+          "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
+          "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb",
+          "fixedSource": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+          "codeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
+          "scope": "Reuse 39 synthetic fixed CI + reproduce genuine local exact full slot/target spans 2 versions and independent negatives; no full rereview; no QA product edits; no raw save in CI",
+          "dependency": "NONE_FOR_R2_LOCAL_REPRODUCTION; 06 EXISTING_IN_FLIGHT_MUST_NOT_DUPLICATE"
         }
       },
-      "remaining": "Inventory/recount/reference and collection migration number projection; ZIP/Account/Session/Writer/WASM/browser; no native auth/game acceptance",
+      "remaining": "Actual R3 Rust compile/81 tests and 2 genuine new-projection parity; independent 06 scoped execution; transactional Writer; WASM Module Worker; browser and resource budgets; game acceptance",
       "r1Historical": {
         "task": "HKIA-RUST-001",
         "sourceSha256": "8aa08644e2274d5466c84b37db71a07616c35e40b9ea83831efcbdd2d71dce88",
@@ -4348,113 +4468,6 @@
           "scope": "PRIVATE_OFFLINE_RUNNER; R1_SOURCE_UNCHANGED; NO_REAL_SAVE_OR_GAME_DATA_INCLUDED; RUST_NOT_RUN"
         }
       },
-      "compiled": {
-        "head": "034f7dbaeb5a029c12fb70ce432cf19178a8bc53",
-        "tree": "823653a6cd421b15d643de3c2223d340c34b7e01",
-        "codeHead": "7fb00a4f97d28c0e47ab4bac52b0a05db6cfe5dd",
-        "workflowBlob": "466fbaa6474963ef40ea89979c238a624c4ce260",
-        "run": 43343089052,
-        "job": 131615861710,
-        "scope": "PUBLIC_SYNTHETIC_ONLY",
-        "toolchain": "rustc/cargo 1.85.1; Node22.16.0",
-        "tests": {
-          "passed": 39,
-          "failed": 0,
-          "skipped": 0,
-          "groups": [
-            6,
-            26,
-            7
-          ]
-        },
-        "releaseBuild": "PASS",
-        "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
-        "binaryArtifact": {
-          "head": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
-          "run": 43353690282,
-          "job": 131650533560,
-          "id": 14004802204,
-          "file": "HKIA_Rust_R2_CodeOnly_43353690282.zip",
-          "sha256": "1f10dba2f7e0e71e2f0e3973f7f36fca7bf57948fa37689562ef398c8b580cdc",
-          "binarySha256": "9529aeaefe668d3861ecf151348d584b9d408687304edfb19a409600c2c808e6",
-          "binaryBytes": 598880,
-          "buildReportSha256": "cbc7db6556e0c26a272017c4f8368eb13e18ba57b0844e161e12caed2bf4953a",
-          "samePriorBinary": true,
-          "readback": "ZIP_CRC_AND_SHA_AND_BINARY_AND_BUILD_REPORT_PASS",
-          "diff": "ONLY_00_WORKFLOW",
-          "localCompatibility": "LINUX_X86_64_GLIBC_2_41_ACTUALLY_EXECUTED"
-        },
-        "codeBlobReadback": "12_OF_12_PASS",
-        "source47Hashes": "PASS",
-        "generatedCrate40": "PASS",
-        "ciDiff": "ONLY_00_WORKFLOW",
-        "independentQA": "READY_06_NOT_YET_ACCEPTED"
-      },
-      "privateParity": {
-        "status": "LOCAL_REAL_PARITY_PASS_06_INDEPENDENT_ACCEPTANCE_PENDING",
-        "referenceV33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
-        "originals": "TWO_EXISTING_OWNER_PRIVATE_ORIGINALS_LOCATED_AND_FETCHED_TO_AUTHORIZED_WORKSPACE; NO_RAW_UPLOAD; INTERNAL_SWITCH_300_301_VERIFIED",
-        "crcMembers": 22,
-        "referenceJs": "PASS_2_OF_2_FULL_LOGICAL_PAYLOAD_AND_TARGET_SPANS",
-        "originalsUnchanged": 2,
-        "comparison": "2_OF_2_EXACT_FULL_DECODED_SLOT_AND_ORDERED_TYPED_TARGET_PROJECTION",
-        "blocker": "NONE_FOR_R2_REAL_LOCAL_EXECUTION",
-        "kit": {
-          "file": "HKIA_Rust07_R2_PrivateParityKit_20261113.zip",
-          "sha256": "bb25cc4a8030f09ea9beecc8db84dcecf6378a367175f42d2e2932ae09ba1491",
-          "entries": 8,
-          "manifest": "HKIA_Rust07_R2_PrivateParityKit_20261113_Manifest.json",
-          "manifestSha256": "9daa2fc7f0ce7c1c5fa22c6bad442cd5b5e676fd6e49a1858e2830ff5b768faf",
-          "wrapperTests": "19_OF_19_PASS",
-          "readback": "ALL_3_ARTIFACTS_BYTE_EXACT_8_ENTRY_SHA_CRC_PASS"
-        },
-        "acceptance": "EXACT_DECODED_BYTES_AND_ORDERED_TYPED_MODEL_COLLECTION_TAG8_RAW_SPANS_BOTH_VERSIONS; ORIGINALS_UNCHANGED; NO_GAME_ACCEPTANCE",
-        "next": "06_INDEPENDENT_REAL_AND_SYNTHETIC_QA_DIRECT; 07_NEXT_SESSION_ABI_FOUNDATION_AFTER_ACCEPTANCE_OR_FOCUSED_REPAIR",
-        "negative": "8_OF_8_REJECT_ZERO_STDOUT_ORIGINALS_UNCHANGED",
-        "observed": [
-          {
-            "version": "3.0.0",
-            "documents": 19936,
-            "achievements": 570,
-            "counters": 585,
-            "history": 5046,
-            "celebrations": 1,
-            "blocks": 34,
-            "decodedBytes": 1061258
-          },
-          {
-            "version": "3.0.1",
-            "documents": 20207,
-            "achievements": 571,
-            "counters": 586,
-            "history": 5164,
-            "celebrations": 1,
-            "blocks": 34,
-            "decodedBytes": 1068906
-          }
-        ],
-        "scope": "Full decoded slot and framing; typed document count; ordered target IDs/GUID/value/count/span and tag8 full union range. Counter list contents preserved in raw payload; not full typed semantic projection of every field; ZIP/account not Rust; no writer/auth/game acceptance.",
-        "evidence": {
-          "zip": {
-            "file": "HKIA_Rust07_R2_GenuineParity_20261113_Evidence.zip",
-            "sha256": "505b580575737da919c440f24bb95622821754e6af8f509ee4a0e1d09f1b2316",
-            "entries": 5
-          },
-          "manifest": {
-            "file": "HKIA_Rust07_R2_GenuineParity_20261113_Manifest.json",
-            "sha256": "f7edd53b0bc040b3cdd8b3f19e3742251b763055bc8a71a2a7e92e8db6d17e72"
-          },
-          "result": {
-            "file": "HKIA_Rust07_R2_GenuineParity_20261113_RESULT.json",
-            "sha256": "5447f658548d846c61e2c16412cc6e55f777e76ec87b5443f607cc23b6fe3774"
-          },
-          "handoff": {
-            "file": "HKIA_Rust07_R2_GenuineParity_20261113_HANDOFF_06.md",
-            "sha256": "3f1a39336325b7c0381bf0ebb787ab41aa6c2c6f3884ae5ab498abafe3fca3fb"
-          },
-          "readback": "ALL_4_BYTE_EXACT_AND_5_ENTRY_SHA_CRC_PASS"
-        }
-      },
       "syntheticHandoff": {
         "to": "06 QA",
         "task": "HKIA-RUST-003_INDEPENDENT_SYNTHETIC_R2",
@@ -4472,6 +4485,109 @@
         "synthetic": 36,
         "genuine": 2,
         "report": "HKIA_06_LIVE_V30_RESEARCH_RUST_R2_QA_20261113_RESULT.json"
+      },
+      "r3": {
+        "source": {
+          "file": "HKIA_Rust07_R3_SessionABI_20261113_Source.zip",
+          "sha256": "ba7aa9dd77825735960abb437192599eaa991ab3edaa1e385897d1e556d5923c",
+          "entries": 70,
+          "bytes": 91622
+        },
+        "delta": {
+          "file": "HKIA_Rust07_R3_SessionABI_20261113_Delta.zip",
+          "sha256": "372f5a86dc5496f7e7a2942e270162595092b4a198ab8442c60d4729185d0e0b",
+          "modified": 3,
+          "added": 23,
+          "unchanged": 44
+        },
+        "manifest": {
+          "file": "HKIA_Rust07_R3_SessionABI_20261113_Manifest.json",
+          "sha256": "a78142abf4218c633111383f4ed69ca7806ca8d6fd63b172a622f62e454aa8cf"
+        },
+        "handoff": {
+          "to": "06 QA",
+          "task": "HKIA-RUST-005_R3_SCOPED_SESSION_ABI",
+          "status": "STATIC_READY_EXECUTION_WAIT_CI",
+          "file": "HKIA_Rust07_R3_SessionABI_20261113_HANDOFF_06.md",
+          "sha256": "199bde062915670d36c101f30ea5b4d28ac706b3fb9188b684d63224925fd086",
+          "fixedSource": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
+          "scope": "R3 delta only; R2 independent accepted scope reuse. Static review now; Rust compile and execution acceptance after 00 CI and private parity; no product edits by QA."
+        },
+        "verification": {
+          "sourceReadback": "PASS_70_SHA_CRC_ALL_5_ARTIFACTS",
+          "gitBlobs": "PASS_18_OF_18",
+          "publicCrate": "PASS_56_OF_56_39_GENERATED",
+          "typescript": "PASS_14_OF_14_TSC_5_8_3_NODE_22_16",
+          "rustCompile": "UNVERIFIED_WAIT_00_CI",
+          "rustNewTestsPlanned": 42,
+          "rustNewTestsExecuted": 0,
+          "rustRegressionTestsPlanned": 39,
+          "privateV33Reference": "PASS_2_OF_2_NEW_PROJECTION_REFERENCE_ONLY",
+          "privateRustParity": "UNVERIFIED_0_OF_2",
+          "writer": "DISABLED_UNIMPLEMENTED",
+          "wasm": "UNVERIFIED_NOT_CONNECTED",
+          "browser": "UNVERIFIED",
+          "gameAuth": "UNKNOWN"
+        },
+        "publicTransport": {
+          "file": "HKIA_Rust07_R3_SessionABI_20261113_PublicCodeTransport.json",
+          "sha256": "72d7b702e33fe30c6c93695b256c085de69d2828fa80f330f5f7982050340bda"
+        },
+        "pr": {
+          "number": 7,
+          "head": "c6253c9485c05001ee98cab953a6ecc29eb50e1e",
+          "tree": "0debe220edd3f7e0de0cccfaede4d7084ef3516d",
+          "branch": "rust07/r3-bounded-session-abi",
+          "basePr": 5,
+          "base": "c629e4d15bf108cf443f92a7824a62a0c851bbc5",
+          "draft": true,
+          "paths": 18,
+          "blobReadback": "18_OF_18"
+        },
+        "ci": {
+          "owner": "00 CTRL",
+          "status": "WAIT_WORKFLOW",
+          "runner": "RUSTUP_TOOLCHAIN=1.85.1 python3 tests/rust/run-session-ci.py --code-only-artifact <fresh-dir>",
+          "expectedTests": 81,
+          "artifact": "hkia-session-private + report only; no private inputs",
+          "toolchain": "Rust 1.85.1 Node 22.16 Python3; optional --abi-ts tsc 5.8.3"
+        },
+        "reference": {
+          "v33": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
+          "versions": [
+            "3.0.0",
+            "3.0.1"
+          ],
+          "zipMembers": [
+            11,
+            11
+          ],
+          "accountAchievements": [
+            31,
+            31
+          ],
+          "accountCounters": [
+            16,
+            16
+          ],
+          "inventory": [
+            13244,
+            13510
+          ],
+          "collectionKey0": [
+            0,
+            0
+          ],
+          "migration": [
+            83,
+            87
+          ],
+          "counterGuidRefs": [
+            1379,
+            1393
+          ],
+          "originalsUnchanged": 2
+        }
       }
     }
   },
