@@ -29,9 +29,9 @@ def main():
   bundle=w/'bundle';bundle.mkdir();assert run(['tsc','--version'],w).strip()=='Version 5.8.3'
   for lib,entry in [('ES2022,DOM','tests/rust/wasm-browser/browser-witness.ts'),('ES2022,WebWorker','rust-worker/module-worker.ts')]:run(['tsc','--strict','--target','ES2022','--module','ES2022','--lib',lib,'--rootDir',ROOT,'--outDir',bundle,ROOT/entry],w)
   web=bundle/'tests/rust/wasm-browser';shutil.copyfile(ROOT/'tests/rust/wasm-browser/index.html',web/'index.html')
-  env=dict(os.environ,HKIA_R5_JS=str(bundle/'rust-worker/writer-abi.js'));out=run(['node','--test',ROOT/'tests/rust/writer-abi.test.mjs'],w,env);assert re.search(r'^# pass 10$',out,re.M) and re.search(r'^# fail 0$',out,re.M)
+  env=dict(os.environ,HKIA_R5_JS=str(bundle/'rust-worker/writer-abi.js'));out=run(['node','--test',ROOT/'tests/rust/writer-abi.test.mjs'],w,env);assert re.search(r'^# pass 18$',out,re.M) and re.search(r'^# fail 0$',out,re.M)
   js=bundle/'rust-worker/session-abi.js';shutil.copyfile(js,w/'session-abi.mjs');out=run(['node','--test',ROOT/'tests/rust/session-abi.test.mjs'],w,dict(os.environ,HKIA_ABI_JS=str(w/'session-abi.mjs')));assert re.search(r'^# pass 14$',out,re.M) and re.search(r'^# fail 0$',out,re.M)
-  report={'status':'PREFLIGHT_PASS','r4CrateFiles':74,'bridgeFiles':2,'newTs':10,'r4Ts':14,'rustBridge':'NOT_RUN','wasm':'NOT_RUN','chrome':'NOT_RUN','realSave':'NOT_RUN'}
+  report={'status':'PREFLIGHT_PASS','r4CrateFiles':74,'bridgeFiles':2,'newTs':18,'r4Ts':14,'rustBridge':'NOT_RUN','wasm':'NOT_RUN','chrome':'NOT_RUN','realSave':'NOT_RUN'}
   if not a.preflight_only:
    assert a.chrome and a.code_only_artifact and not a.code_only_artifact.exists();env={k:v for k,v in os.environ.items() if k not in ('RUSTC','RUSTC_WRAPPER','RUSTC_WORKSPACE_WRAPPER','RUSTDOC','RUSTFLAGS','CARGO_ENCODED_RUSTFLAGS','CARGO_TARGET_DIR')};env.update(CARGO_NET_OFFLINE='true',CARGO_TERM_COLOR='never');assert run(['rustc','--version'],w,env).startswith('rustc 1.85.1 ');assert run(['cargo','--version'],w,env).startswith('cargo 1.85.1 ')
    out=run(['cargo','test','--offline','--manifest-path',bridge/'Cargo.toml','--target-dir',w/'target'],w,env);assert re.search(r'test result: ok\. 4 passed; 0 failed; 0 ignored',out)
