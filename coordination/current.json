@@ -10330,7 +10330,7 @@
   },
   "ctrlExecution": {
     "task": "V23_R2_RELEASE_EQUIVALENT_PRIVATE_ACTIVATION",
-    "status": "PARTIAL_ACTIVE_PAGES_POLICY_V38_ACCEPTED_LOCALE_REPAIR_CI_PASS_R6_CI_RUNNING",
+    "status": "DONE_ACTIVE_PAGES_POLICY_V38_ACCEPTED_LOCALE_REPAIR_CI_R6_MEASURED",
     "owner": "00 CTRL",
     "baseMain": "a8a30274eb959ff6377e09fb7cb3a654d2739fec",
     "baseSourceSha256": "73a2b9e72fea800c41f23b53ceb0f4100f2cddbc0dd4e405c76d8c29ff155ef3",
@@ -10442,8 +10442,8 @@
     "nextReadyParallel": [
       "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
       "06B_LOCALE_R1_FIXED_REPAIR_SCOPED_QA",
+      "07_R6_MEASURED_CAPACITY_FOLLOWUP",
       "05_R5_POSTCONDITION_REPAIR_EXISTING",
-      "00_R6_FIXED_CI_IN_FLIGHT",
       "06A_NEW_HIGH_OR_AUTHORIZED_ENV_ONLY"
     ],
     "nextAfterDep": [
@@ -10451,11 +10451,11 @@
       "05_LOCALE_CONSUMER_INTEGRATION_AFTER_06B",
       "00_R5_FIXED_REPAIR_CI_AFTER_05",
       "06B_R5_FOCUSED_REPAIR_AFTER_CI",
-      "07_R6_PRIVATE_GENUINE_AND_MEASURED_SELF_QA_AFTER_CI",
       "06A_R6_AFTER_07_FIXED_SELF_QA",
       "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
       "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
+      "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
+      "07_R6_PRIVATE_GENUINE_AND_MEASURED_SELF_QA_ON_SURVIVING_CANDIDATE"
     ],
     "risks": "V24 only private test candidate; V23 R2 OFF remains latest safe baseline; exact actual Browser and game behavior still unverified; no full activation suite PASS claimed. Browser kit representative runs do not replace final QA including batch and other operations.",
     "activationAcceptance": {
@@ -11115,14 +11115,14 @@
     "inFlightStreams": [],
     "currentHandoff": {
       "task": "ACTIVE_PAGES_POLICY_V38_ACCEPTANCE_AND_FIXED_CI",
-      "status": "PARTIAL_R6_CI_RUNNING",
+      "status": "DONE_SCOPED_HANDOFF",
       "source": "90d39d24fe7a82e0f77c867091eb18a984ae93d8",
-      "scope": "Pages policy active; R4 delta fixed QA priority; V38 accepted; locale repair CI PASS direct 06B; R6 fixed CI running; no deploy or flags",
+      "scope": "Pages active policy, R4 fixed preview 06C priority. V38 accepted. Locale repair CI PASS to 06B. R6 synthetic correctness PASS but measured capacity gain not met ->07 follow-up. No deploy or flags.",
       "next": [
         "06C_PAGES_R4_VISUAL_PREVIEW_FIXED_DELTA_SCOPED_QA_P0",
         "06B_LOCALE_R1_FIXED_REPAIR_SCOPED_QA",
+        "07_R6_MEASURED_CAPACITY_FOLLOWUP",
         "05_R5_POSTCONDITION_REPAIR_EXISTING",
-        "00_R6_FIXED_CI_IN_FLIGHT",
         "06A_NEW_HIGH_OR_AUTHORIZED_ENV_ONLY"
       ],
       "after": [
@@ -11130,11 +11130,11 @@
         "05_LOCALE_CONSUMER_INTEGRATION_AFTER_06B",
         "00_R5_FIXED_REPAIR_CI_AFTER_05",
         "06B_R5_FOCUSED_REPAIR_AFTER_CI",
-        "07_R6_PRIVATE_GENUINE_AND_MEASURED_SELF_QA_AFTER_CI",
         "06A_R6_AFTER_07_FIXED_SELF_QA",
         "07_R5_1_GENUINE_CHROME_WAIT_AUTHORIZED_ENV",
         "06C_V24_GENUINE_BROWSER_WAIT_ENV",
-        "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE"
+        "00_DEVELOPMENT_SWITCH_AFTER_ADR_GATE",
+        "07_R6_PRIVATE_GENUINE_AND_MEASURED_SELF_QA_ON_SURVIVING_CANDIDATE"
       ]
     },
     "resumeCheckpoint20261113": {
@@ -12503,7 +12503,7 @@
     "rustCapacityAssignment": {
       "task": "HKIA-RUST-014_BOUNDED_CAPACITY_FOUNDATION_R6",
       "owner": "07 RUST CORE",
-      "status": "READY",
+      "status": "IN_FLIGHT_R6_FOLLOWUP_CAPACITY_TARGET_NOT_MET",
       "risk": "HIGH",
       "baseHead": "cb40c1c67aa666b57dbdf20e94ff49b59546527f",
       "baseArtifactSha256": "f9cea14824fbcc7092cbff28a37599d119398f47a37653628981160b2d14a838",
@@ -12866,12 +12866,52 @@
     "r6CI": {
       "task": "HKIA-RUST-014_R6_ISOLATED_NONDEPLOY_CI",
       "owner": "00 CTRL",
-      "status": "IN_FLIGHT_FIXED_R6_CI",
+      "status": "DONE_FIXED_R6_CI_CORRECTNESS_PASS_CAPACITY_IMPROVEMENT_NOT_MET",
       "sourceHead": "ba11ec40229b031e09e5d48a7b81edcb7365c477",
       "scope": "One workflow ADD only; exact R4 reference; native/bridge and WASM compile, paired 15 synthetic capacity, actual synthetic Chrome using unchanged R5.1 JS, code-only bundle. No genuine data or deploy.",
       "head": "3f659c06f5f77fddd36f2b5415ffc082226afd40",
       "run": 43405690901,
-      "job": 131819384741
+      "job": 131819384741,
+      "ci": "SUCCESS",
+      "verified": {
+        "rustTests": 99,
+        "bridgeTests": 4,
+        "fail": 0,
+        "wasmBuild": "PASS",
+        "pairedSyntheticCases": 15,
+        "accepted": 8,
+        "rejected": 7,
+        "edits": 5,
+        "byteExactOutputs": 5,
+        "originalsUnchanged": 15,
+        "actualSyntheticChrome": "PASS_REAL_CHROME_MODULE_WORKER",
+        "syntheticChromeNativeExact": 6,
+        "networkDenied": 0,
+        "serverViolations": 0,
+        "baseline45MiBMemoryBytes": 190971904,
+        "candidate45MiBMemoryBytes": 191102976,
+        "delta45MiBBytes": 131072,
+        "capacityImprovementMeasured": false,
+        "resourceTargetAcceptance": false,
+        "artifact": {
+          "id": 14027895277,
+          "file": "HKIA_Rust_R6_CodeOnly_43405690901.zip",
+          "sha256": "733cc04b266485a6ac4b130a9a0b3fdb4271934abbc7bca084ca8a67f6724841",
+          "bytes": 132261,
+          "entries": 9,
+          "codeHashes": 8,
+          "wasmSha256": "274e9bdb75e9338630541174c585006cd44b1c784ba33f4b91eeec924b957360",
+          "reportSha256": "1662c9d881bb7c754129a5128c132ddb5710d63bb4fe950932db9486aac27402",
+          "privateLibrary": "HKIA Editor Private",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS"
+        }
+      },
+      "handoff": {
+        "to": "07 RUST CORE",
+        "task": "HKIA-RUST-014_R6_MEASURED_CAPACITY_FOLLOWUP",
+        "status": "READY",
+        "scope": "Fixed candidate correctness and synthetic Chrome pass, 45MiB linear memory +131072 bytes, 1/5/10 MiB also +131072, 25MiB unchanged; capacity improvement acceptance not met. Profile allocation high-water and minimal next optimization, no limits raise, no R5.1/PR9 changes. Reuse fixed artifact and paired oracle; genuine private parity on surviving candidate; 06A high-risk after self-QA and measured improvement. No integration or Development Switch."
+      }
     }
   },
   "formalRelease": {
