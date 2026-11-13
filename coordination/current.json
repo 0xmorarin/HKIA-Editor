@@ -1808,7 +1808,7 @@
       "ownerChromiumInlinePass": 8,
       "accountStaleExportFix": "IMPLEMENTED_NOT_INDEPENDENTLY_ACCEPTED",
       "nativeWriterFeature": "PREVIEW_API_ADAPTER_READY_AFTER_04_SCOPED_QA; APPLY_EXPORT_OFF",
-      "next": "R2 fixed CI SUCCESS; 06B independent changed scope READY; 05 next disjoint UI scope or localization after accepted registry",
+      "next": "06B_R2_INDEPENDENT_QA_PARALLEL_00_R3_ISOLATED_CI; 05_AFTER_R3_RESULT_OR_NEW_ACCEPTED_DEP; NO_REPEAT",
       "p0FixSource": "b044153711833ba6405524318c616259e0e33004cb8b843cd43f975b20408163",
       "localChromiumRaces": 8,
       "chromeViewport": [
@@ -2568,7 +2568,7 @@
       },
       "svelteMigration": {
         "task": "SVELTE_R1_PRIMARY_WORKSPACE_NAVIGATION",
-        "status": "R1_COMPILED_PASS_06_READY_R2_FIXED_BRANCH_WAIT_CI",
+        "status": "R2_COMPILED_PASS_06B_READY_R3_FIXED_BRANCH_WAIT_CI",
         "owner": "05 WEB",
         "baseHead": "56f9a9f10c794d9fb44f18f2c9450a208ef59d61",
         "referenceSourceSha256": "78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7",
@@ -2746,13 +2746,39 @@
         },
         "r3": {
           "task": "SVELTE_R3_COLLECTION_CATEGORY_GRID",
-          "status": "IN_FLIGHT",
+          "status": "PARTIAL_LOCAL_PASS_FIXED_BRANCH_READY_CTRL_CI",
           "owner": "05 WEB",
           "baseHead": "fa5a1640ab578a86ae704c967773488af2f1fcab",
           "basePrHead": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
           "scope": "Isolated collection category card grid, bounded typed view/selection port, exact legacy display descriptions, mapped local image/UNKNOWN handling, fixture filter/selection, independent reference tests. svelte-ui only; R2 fixed source preserved; no live product or Writer change.",
           "risk": "HIGH_MATERIAL_UI_ADAPTER",
-          "next": "05 local QA and fixed source; 06B R2 independent parallel; 00 R3 nondeploy CI; 06B R3 after compile"
+          "next": "00 isolated fixed R3 CI on branch, lock npm ci, tests/check --fail-on-warnings/build, verify-category-reference + both prior reference oracles, browser-category-parity + R1/R2 browser regression; no deployment. 06B R2 independent scope proceeds parallel on fixed CI HEAD 45946fa; 06B R3 after compiled fixed source. 05 repair only new failures or continue disjoint scope.",
+          "sourceSha256": "b41f04a60a3ebb283c42955b4bf590bcbb23670f4a4b65b5fac262d81908bf5c",
+          "deltaSha256": "129373dd61874c61331362a7ce656331c635a4b545846be653ad454d2cc70869",
+          "manifestSha256": "5b1c5c931162771f4975aee770ad1c8f1630a9f49004528835df9596e76d0cdf",
+          "transportSha256": "3a665fd09398e89323eb9c2516f4fa6bee8fdbff37b7d0748daf4e6a760d71c4",
+          "evidenceSha256": "05d2ba3d47837f234cf6faaf2ed767fad21b77fa07c1a15f56a9c42daf42e5e9",
+          "artifacts": {
+            "source": "HKIA_WEB05_SvelteCategoryGrid_R3_20261113_Source.zip",
+            "delta": "HKIA_WEB05_SvelteCategoryGrid_R3_20261113_Delta.zip",
+            "manifest": "HKIA_WEB05_SvelteCategoryGrid_R3_20261113_Manifest.json",
+            "transport": "HKIA_WEB05_SvelteCategoryGrid_R3_20261113_PublicCodeTransport.json",
+            "evidence": "HKIA_WEB05_SvelteCategoryGrid_R3_20261113_Evidence.json"
+          },
+          "remote": {
+            "branch": "web05/svelte-category-grid-r3",
+            "head": "3d5ddd8c8e22d84cc6a1df309c3ce481c75bd04f",
+            "parent": "45946fa10efed9e6065a190b3c4a487c7b7721fe",
+            "tree": "3c99300244e67915c1835522a0f254ffb395e5ee",
+            "changed": "1 MOD 7 ADD 0 DEL; 208 untouched; 8 exact blobs; R2 immutable"
+          },
+          "verified": "58 Node tests (15 new) 0 fail; strict TS pure model/fixture; actual V33 renderCollections VM with synthetic DOM/statistics: 9 description/image comparisons, 2 actual click transitions focus/scroll/clear detail selection, 5 history filter comparisons; R2 25 filter and R1 6 navigation transitions rerun; browser script syntax; 31 source/8 delta CRC and exact replay; 5 Library readbacks byte exact; fixed lock unchanged",
+          "unverified": [
+            "R3 Svelte compile/check/build and actual Chromium 320/375/1280",
+            "actual product controller/catalog/media binding and full UI parity",
+            "mapped image load failure in actual browser",
+            "06B independent R3 acceptance"
+          ]
         }
       },
       "qaRouting": "SELF_QA; HIGH -> 06B -> consumer/00"
