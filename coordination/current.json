@@ -9248,10 +9248,10 @@
     },
     "06B_QA_WEB_LOCALE": {
       "owner": "06B QA-WEB-LOCALE",
-      "status": "DONE_R5_RESELECT_R7_COMPILED_SCOPED_PASS_WAIT_PRODUCT_BINDING",
+      "status": "PARTIAL_PRODUCT_TABS_STATIC_PASS_WAIT_FIXED_CI",
       "task": "LOCALE_R1_R5_REPAIR_R6_INDEPENDENT_QA",
       "scope": "HIGH disjoint fixed R2 runtime repair, native/version static evidence, R3 isolated grid; no product changes",
-      "next": "05 READY consume exact R5/R7 acceptance in single-root product-equivalent binding; 06B next new fixed HIGH product binding or locale scope after self-QA; 00 composition/06C distribution only after relevant acceptance; no repeat",
+      "next": "00 fixed V30 product-tabs nondeploy CI READY; 06B product-tabs scoped acceptance after fixed compiled actual product browser; 05 product binding follow-up after result; no repeat R1-R7 or locale accepted scopes",
       "dependency": "Only new R5 definition reselect regression in this fixed combined candidate; old locale/R5 red closed; R6 seven paths and locale repaired scope accepted separately; no JS Beta gate",
       "decision": "OWNER_RISK_BASED_QA_DECISION_20261113",
       "baseHead": "4800a6f842475d9ce61719d025311f58b7bcaadb",
@@ -10195,10 +10195,49 @@
       },
       "productTabsClaim": {
         "claim": "20261113_06B_V30_PRODUCT_TABS_STATIC",
-        "status": "IN_FLIGHT",
+        "status": "DONE_STATIC_PREFLIGHT_WAIT_FIXED_CI",
         "source": "a178d943fd44ea34934aea0738c7e292f1944b27",
         "baseHead": "b931a399858872433250f5e746e5ee0617a6f676",
         "scope": "10 added product-tab files, independent state/lifecycle/negative preflight only; compiled/browser acceptance after fixed CI; no overlap with prior R1-R7"
+      },
+      "productTabs": {
+        "task": "V30_PRODUCT_TABS_INDEPENDENT_QA",
+        "status": "PARTIAL_NODE_STATIC_PASS_WAIT_FIXED_CI",
+        "risk": "HIGH_MATERIAL_UI_STATE_ADAPTER",
+        "sourceHead": "a178d943fd44ea34934aea0738c7e292f1944b27",
+        "standaloneHead": "b69bab53c10eef93fff0b0cde8c6469788f3fddc",
+        "baseArtifact": "b7e91df1e456ded1b50b4649797bf1b7df216717",
+        "manifestSha256": "fbcc42fe04e31c77a2f79406c510f3b98a3c284410ebe7e69fe7055e5eb5ac6e",
+        "verified": {
+          "newExactBlobs": 10,
+          "reusedExactBlobs": 2,
+          "producerPrivateEvidenceShaCrc": "PASS_13_ENTRIES",
+          "independentTests": 6,
+          "transitionSequences": 64,
+          "transitionSteps": 320,
+          "producerRegression": 9,
+          "fail": 0,
+          "strictTypeScript": "PASS",
+          "actualV30SetTabVM": "PASS_DOM_DOUBLE",
+          "newTrueRed": 0
+        },
+        "unverified": [
+          "Fixed CI compile/check/build and actual product Chromium 320/375/1280; no run observed on fixed combined branch",
+          "Actual compiled Svelte mount/fallback, keyboard, 25 real category images, full 4146 artifact hash and two-path distribution closure; DOM double is not browser PASS",
+          "Product Controller full migration, Session/Writer/locale/Rust, license/allowlist and release"
+        ],
+        "evidence": {
+          "file": "HKIA_06B_V30_PRODUCT_TABS_PREFLIGHT_20261113.zip",
+          "sha256": "cfaa04278ed23ec9fd485fd4b616dae3ec75631467cc1115fc8fa5b39bdb85c6",
+          "location": "Private Library /HKIA Editor Private/",
+          "readback": "BYTE_EXACT_SHA_CRC_PASS_11_ENTRIES"
+        },
+        "handoff": {
+          "recipient": "00 CTRL",
+          "task": "SVELTE_V30_PRODUCT_TABS_FIXED_NONDEPLOY_CI",
+          "status": "READY",
+          "condition": "Fixed 10 ADD scope and exact V30 artifact, 132 tests, compile/check/build product-tabs bundle, actual V30 candidate vs legacy Chromium 320/375/1280; 06B after green scoped browser/negative QA. No deploy/Writer."
+        }
       }
     },
     "06C_QA_RELEASE": {
