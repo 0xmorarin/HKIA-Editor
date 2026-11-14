@@ -628,9 +628,9 @@ function renderCollections(){
   }
   grid.append(frag);renderCollectionDetail();productCategoryBridge?.render(grid,all.map(c=>c.key),state.selectedCollection,state.collections.length,categoryFacts);
 }
-let productCollectionItems=null;
+let productCollectionItems=null,productCollectionItemsLocale=null;
 function renderCollectionDetail(){
-  productCollectionItems?.restore();
+  productCollectionItemsLocale?.clear();productCollectionItems?.restore();
   const panel=el('collectionDetail');
   const category=state.collections.find(c=>c.key===state.selectedCollection);
   if(!category){panel.hidden=true;return;}panel.hidden=false;panel.replaceChildren();
@@ -671,7 +671,7 @@ function renderCollectionDetail(){
   toolbar.append(sortItems);
   let limit=100;
   const renderRows=()=>{
-    productCollectionItems?.restore();
+    productCollectionItemsLocale?.clear();productCollectionItems?.restore();
     const q=query.value.trim().toLowerCase();const f=filter.value;const ids=state.collectionMatch?.recordedSet;
     const matches=selected.items.filter(item=>{const collected=ids?.has(item.id);return (!q||item.key.toLowerCase().includes(q)||String(item.id).includes(q)||item.guid?.includes(q)||imageUi()?.item(item.id,item.guid,rule.guid).spritePathId===q)&&(f==='all'||!ids||Boolean(collected)===(f==='collected'));});
     if(sortItems.value==='name')matches.sort((a,b)=>a.key.localeCompare(b.key,'ja'));
@@ -695,7 +695,7 @@ function renderCollectionDetail(){
     if(!matches.length)rows.append(node('p','placeholder','該当するアイテムはありません。'));else rows.append(frag);
     if(matches.length>limit){const more=node('button','btn-secondary show-more',`さらに表示（残り ${matches.length-limit}件）`);more.type='button';more.addEventListener('click',()=>{limit+=100;renderRows();});rows.append(more);}
     if(state.selectedItemId!==null&&selected.items.some(x=>x.id===state.selectedItemId))renderCollectionItemInspector(state.selectedItemId,itemInspector);
-    if(productCollectionItems)try{productCollectionItems.render(rows,{rows:projection,total:matches.length,limit},()=>state.selectedCollection===category.key&&state.selectedCollectionDefinition===rule.key&&panel.contains(section));}catch{}
+    if(productCollectionItems)try{const facts={rows:projection,total:matches.length,limit},current=()=>state.selectedCollection===category.key&&state.selectedCollectionDefinition===rule.key&&panel.contains(section);const mounted=productCollectionItems.render(rows,facts,current);if(productCollectionItemsLocale){if(mounted==='MOUNTED'){if(productCollectionItemsLocale.attach(section,facts,current)!=='APPLIED'){productCollectionItems.restore();productCollectionItemsLocale.invalidate();}}else if(!(limit>=1200&&matches.length>1200))productCollectionItemsLocale.invalidate();}}catch{productCollectionItems?.restore();productCollectionItemsLocale?.invalidate();}
   };
   query.addEventListener('input',()=>{limit=100;renderRows();});filter.addEventListener('change',()=>{limit=100;renderRows();});sortItems.addEventListener('change',()=>{limit=100;renderRows();});panel.append(section);renderRows();
 }
@@ -769,7 +769,7 @@ async function bootstrap(){
     try{const {createProductCategoryBridge,verifyCategoryCatalog}=await import('./product-categories-locale.mjs');productCategoryBridge=createProductCategoryBridge(document);productCategoryLocaleVerifier=verifyCategoryCatalog;}catch{}
     try{const {createProductAchievementListBridge}=await import('./product-achievement-list.mjs');productAchievementListBridge=createProductAchievementListBridge(document);}catch{}
     try{const {createProductAchievementHeader}=await import('./product-achievement-header.mjs');productAchievementHeader=createProductAchievementHeader(document);}catch{}
-    try{const {createProductCollectionItems}=await import('./product-collection-items.mjs');productCollectionItems=createProductCollectionItems(document);}catch{}
+    try{const {createProductCollectionItems}=await import('./product-collection-items.mjs');productCollectionItems=createProductCollectionItems(document);const {createProductCollectionItemsLocalePort}=await import('./product-collection-items-locale-port.mjs');productCollectionItemsLocale=createProductCollectionItemsLocalePort(document);}catch{}
     renderAchievements();renderCollections();
   }catch(e){error(`同梱アセット読み込み失敗：${e.message}。ローカル表示はHTTPサーバー経由で開いてください。`);}
   el('openNativePreview').addEventListener('click',async()=>{nativeNotice='';const epoch=state.sourceLoadEpoch,attempt=++nativeOpenAttempt;if(!nativeModuleStaged())return;const pending=nativePreview.connect();renderNativeSession();try{await pending;if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;adoptNativeDisplay();nativeNotice='';}catch(e){if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;closeNativePreviewSession();nativeNotice=e.message;}renderNativeSession();renderAchievements();renderCollections();});
@@ -814,6 +814,6 @@ async function bootstrap(){
   try{const {mountProductFilters}=await import('./product-filters.mjs');mountProductFilters(document,{achievement:onAchievementsFilter,collection:renderCollections},()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
   renderAchievements();
   try{const {mountProductTabs}=await import('./product-tabs.mjs');mountProductTabs(document,setTab,()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
-  try{const {startProductLocaleRoot192}=await import('./product-locale-root-192-boot.mjs');productLocaleRoot=startProductLocaleRoot192(productLocaleHeaderSnapshot,{verifyCategoryCatalog:productCategoryLocaleVerifier,paintLocale:locale=>productCategoryBridge.paintLocale(locale)});}catch{const host=el('hkiaLocaleChrome');if(host)host.hidden=true;}
+  try{const {startProductLocaleRoot192}=await import('./product-locale-root-192-boot.mjs');productLocaleRoot=startProductLocaleRoot192(productLocaleHeaderSnapshot,{verifyCategoryCatalog:productCategoryLocaleVerifier,paintLocale:locale=>productCategoryBridge.paintLocale(locale)},productCollectionItemsLocale);}catch{const host=el('hkiaLocaleChrome');if(host)host.hidden=true;}
 }
 bootstrap();

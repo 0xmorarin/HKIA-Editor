@@ -1,20 +1,22 @@
 {
   "schema": "HKIA.BetaArtifactPreparation.1",
-  "state": "V33_CATEGORY_ROOT_192_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
+  "state": "V33_ITEMS_ROOT_192_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
   "writer": "OFF",
-  "sourceSha256": "38cd125891421943cfd5a7c09d8ad4ba1f4e198183f919dfdf49e339d25bbade",
-  "baseArtifactManifestSha256": "0f8dc85d85162689746723d0c28ef1bacd4b665f3259debe3509a057ced15078",
-  "entries": 4174,
-  "bytes": 147300774,
+  "sourceSha256": "ab1edbca5ba669c35b567ef4e985e7c63fdce980a9798ce8f8607d8e5fa402d8",
+  "baseArtifactManifestSha256": "625379c7b0b7be5bf8d6310f26b2bdc596db977715a16d94e388909bcc1442e6",
+  "entries": 4177,
+  "bytes": 147322575,
   "webp": 4076,
-  "modules": 66,
+  "modules": 69,
   "modifiedPaths": [
     "src/app.js",
     "src/product-locale-root-192.mjs",
     "src/product-locale-root-192-boot.mjs"
   ],
   "addedPaths": [
-    "src/product-categories-locale.mjs"
+    "src/product-collection-items-locale.mjs",
+    "src/product-collection-items-locale-port.mjs",
+    "src/editor-catalog-composite.mjs"
   ],
   "files": {
     ".nojekyll": {
@@ -16598,8 +16600,8 @@
       "sha256": "8b5e3e7049055ef38a647afe75635a9fc45fc44b10af3e4b473417f9d2021019"
     },
     "src/app.js": {
-      "bytes": 113621,
-      "sha256": "9d1fcf155c1772a0722d016939db15d68a55aef7242ae22571b6cf0d0c8c4e96"
+      "bytes": 114365,
+      "sha256": "22d8b61ccb729fa3ff08cb418fd4baf4f6a57934feb4c52796630e114d6bf76d"
     },
     "src/collection-history-extension.js": {
       "bytes": 9717,
@@ -16628,6 +16630,10 @@
     "src/download.js": {
       "bytes": 424,
       "sha256": "fdfe0b9fa10371a4e1ea42689cbb2a08ebbec77b8824eb287f31856324d2da32"
+    },
+    "src/editor-catalog-composite.mjs": {
+      "bytes": 6420,
+      "sha256": "578e17c85a8af95ea5858b463031f01e49407174bf4ead1326aa6012b6f6c398"
     },
     "src/forward-compat-policy.js": {
       "bytes": 4801,
@@ -16665,6 +16671,14 @@
       "bytes": 76110,
       "sha256": "74f7e206733e404dbf98d2be21b381675e4da204bd5380d0f9a8c03411511eb6"
     },
+    "src/product-collection-items-locale-port.mjs": {
+      "bytes": 2457,
+      "sha256": "5a36bbf1243af6a0b92ccfe0ddd15990e024cc40b1d94f85d95fe57dff85f408"
+    },
+    "src/product-collection-items-locale.mjs": {
+      "bytes": 11256,
+      "sha256": "438ae82d9130e28ed9d4ff0265e2b7bbd0b98a12ae39de424a130ef5bac6e589"
+    },
     "src/product-collection-items.mjs": {
       "bytes": 76057,
       "sha256": "e2d2b989344cc7125a959f0ebf286cdd860298a474198271f6b455b195649978"
@@ -16674,16 +16688,16 @@
       "sha256": "f18f00d9d31e7190f659b1839d77b58360d7ad7576360113df51fe4401a9c0c5"
     },
     "src/product-locale-root-192-boot.mjs": {
-      "bytes": 1282,
-      "sha256": "53776e9666efa339848b21340577631395388f278cf968552085149123f64e82"
+      "bytes": 1381,
+      "sha256": "86b9c0713767c83583a11419e837e1fd1ae76876ff15e945993ce8f83dfe60db"
     },
     "src/product-locale-root-192.css": {
       "bytes": 524,
       "sha256": "c26d750d29ce9de549a160855858c9a0731b7afee3ee8c0ed05016db25db6074"
     },
     "src/product-locale-root-192.mjs": {
-      "bytes": 93349,
-      "sha256": "6dddfc6347c77a1ae169d8e208b3a6db88c913192660b562cc944c3e3d01de8b"
+      "bytes": 94174,
+      "sha256": "2bea563e895d279497582ed3082da943c2729cb44348336325792033a71932b5"
     },
     "src/product-tabs.mjs": {
       "bytes": 76066,
