@@ -11,6 +11,7 @@ on:
         required: true
         type: choice
         options:
+          - V33-LOCALE-192
           - V33-SVELTE-6
           - V33-SVELTE
           - V33
@@ -43,8 +44,9 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$ARTIFACT_REF" =~ ^[0-9a-f]{40}$ ]]
-          [[ "$TARGET" == V33-SVELTE-6 || "$TARGET" == V33-SVELTE || "$TARGET" == V33 || "$TARGET" == V30 || "$TARGET" == V29 ]]
+          [[ "$TARGET" == V33-LOCALE-192 || "$TARGET" == V33-SVELTE-6 || "$TARGET" == V33-SVELTE || "$TARGET" == V33 || "$TARGET" == V30 || "$TARGET" == V29 ]]
           case "$TARGET" in
+            V33-LOCALE-192) test "$ARTIFACT_REF" = 575082d9532844714216e99046f086ad52d5d1c8 ;;
             V33-SVELTE-6) test "$ARTIFACT_REF" = 58c67c7fb23494d7ea0b549ff5f2ec82ce6309f2 ;;
             V33-SVELTE) test "$ARTIFACT_REF" = e11308e345368e4fec95c5b89136f9c7506967a7 ;;
             V33) test "$ARTIFACT_REF" = 8e2d8c790212fdcc1d3ab4ef96878e570f085b3d ;;
@@ -71,6 +73,7 @@ jobs:
           set -euo pipefail
           test "$(git -C approved-artifact rev-parse HEAD)" = "$ARTIFACT_REF"
           case "$TARGET" in
+            V33-LOCALE-192) expected=0f8dc85d85162689746723d0c28ef1bacd4b665f3259debe3509a057ced15078; source=f9192abf38ef920e325b746a8829c21810663f77923227a5f10bdac49ad176e4 ;;
             V33-SVELTE-6) expected=fe321492bc56aff7ff789130972673c002c0319aaabe19d2139bdcdcd5c2cddd; source=dbe11b26053e832370cdd3d79ebe69695c7acb6bf961d2404a6814c11b4d2272 ;;
             V33-SVELTE) expected=d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b; source=ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352 ;;
             V33) expected=137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db; source=78c21b5cd4a764a42e7ed429f17d6c696a92d53fdf97cb8a332eea3a5381e7c7 ;;
@@ -79,7 +82,7 @@ jobs:
             *) exit 1 ;;
           esac
           node scripts/00-verify-beta-artifact.mjs approved-artifact/site approved-artifact/site-manifest.json "$expected"
-          EXPECTED_SOURCE="$source" TARGET="$TARGET" node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("approved-artifact/site-manifest.json"));if(m.writer!=="OFF"||m.sourceSha256!==process.env.EXPECTED_SOURCE||m.entries!==(process.env.TARGET==="V33-SVELTE-6"?4153:process.env.TARGET==="V33-SVELTE"?4152:4146)||m.webp!==4076||m.modules!==(process.env.TARGET==="V33-SVELTE-6"?61:process.env.TARGET==="V33-SVELTE"?60:55))throw Error("Unexpected OFF source or scope");if(Object.keys(m.files).some(p=>p.startsWith("coordination/")||p.startsWith("tests/")||p.startsWith(".github/")))throw Error("Internal path")'
+          EXPECTED_SOURCE="$source" TARGET="$TARGET" node --input-type=module -e 'import fs from "node:fs";const m=JSON.parse(fs.readFileSync("approved-artifact/site-manifest.json"));if(m.writer!=="OFF"||m.sourceSha256!==process.env.EXPECTED_SOURCE||m.entries!==(process.env.TARGET==="V33-LOCALE-192"?4173:process.env.TARGET==="V33-SVELTE-6"?4153:process.env.TARGET==="V33-SVELTE"?4152:4146)||m.webp!==4076||m.modules!==(process.env.TARGET==="V33-LOCALE-192"?65:process.env.TARGET==="V33-SVELTE-6"?61:process.env.TARGET==="V33-SVELTE"?60:55))throw Error("Unexpected OFF source or scope");if(Object.keys(m.files).some(p=>p.startsWith("coordination/")||p.startsWith("tests/")||p.startsWith(".github/")))throw Error("Internal path")'
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
