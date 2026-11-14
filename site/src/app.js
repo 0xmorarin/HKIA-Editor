@@ -587,7 +587,7 @@ function sourceCollectionStats(key){
   const m=state.collectionMatch;return m?.byKey.get(key)||null;
 }
 function sourceParentStats(key){return state.parentMatch?.byKey.get(key)||null;}
-let productCategoryBridge=null;
+let productCategoryBridge=null,productCategoryLocaleVerifier=null;
 function renderCollections(){
   productCategoryBridge?.restore();
   const query=el('collectionSearch').value.trim().toLowerCase();
@@ -611,7 +611,8 @@ function renderCollections(){
 
   }
   renderUnknownCollectionIds();
-  if(!all.length){grid.append(node('p','placeholder','該当するカテゴリがありません。'));productCategoryBridge?.render(grid,[],state.selectedCollection,state.collections.length);return;}
+  const categoryFacts={rows:[],selectedKey:state.selectedCollection,totalCategories:state.collections.length};
+  if(!all.length){grid.append(node('p','placeholder','該当するカテゴリがありません。'));productCategoryBridge?.render(grid,[],state.selectedCollection,state.collections.length,categoryFacts);return;}
   const frag=document.createDocumentFragment();
   for(const cat of all){
     const button=node('button','collection-card');button.type='button';button.classList.toggle('selected',state.selectedCollection===cat.key);
@@ -620,10 +621,12 @@ function renderCollections(){
     const summary=entries.reduce((o,rec)=>{const m=sourceCollectionStats(rec.key);o.total+=m?.items.length||0;o.recorded+=m?.recorded.length||0;return o;},{total:0,recorded:0});
     const family=entries.reduce((o,r)=>{const p=sourceParentStats(r.key);o.total+=p?.familyTotal||0;o.recorded+=p?.familyRecorded||0;return o;},{total:0,recorded:0});
     const description=state.collectionMatch?`収集ID照合 ${formatSourceCounts(summary.recorded,summary.total)}${state.parentMatch?` ／ 親単位・参考 ${family.recorded} / ${family.total}`:''}`:`未照合 / ${cat.count}件の定義`;
-    button.append(img,node('span','collection-title',titleForCategory(cat.key)),node('small','collection-meta',description));
+    const categoryTitle=titleForCategory(cat.key);
+    categoryFacts.rows.push({key:cat.key,title:categoryTitle,definitionCount:cat.count,matched:Boolean(state.collectionMatch),recorded:state.collectionMatch?summary.recorded:null,total:state.collectionMatch?summary.total:null,parent:state.collectionMatch&&state.parentMatch?{recorded:family.recorded,total:family.total}:null});
+    button.append(img,node('span','collection-title',categoryTitle),node('small','collection-meta',description));
     button.addEventListener('click',()=>{state.selectedCollection=cat.key;state.selectedCollectionDefinition=null;renderCollections();el('collectionGrid').querySelector('.collection-card.selected')?.focus();el('collectionDetail').scrollIntoView({block:'nearest',behavior:'smooth'});});frag.append(button);
   }
-  grid.append(frag);renderCollectionDetail();productCategoryBridge?.render(grid,all.map(c=>c.key),state.selectedCollection,state.collections.length);
+  grid.append(frag);renderCollectionDetail();productCategoryBridge?.render(grid,all.map(c=>c.key),state.selectedCollection,state.collections.length,categoryFacts);
 }
 let productCollectionItems=null;
 function renderCollectionDetail(){
@@ -763,7 +766,7 @@ async function bootstrap(){
     for(const r of d.achievement_references){
       const old=state.slotGroupMembers.get(r.group_counter_guid)||[];old.push(r);state.slotGroupMembers.set(r.group_counter_guid,old);
     }
-    try{const {createProductCategoryBridge}=await import('./product-categories.mjs');productCategoryBridge=createProductCategoryBridge(document);}catch{}
+    try{const {createProductCategoryBridge,verifyCategoryCatalog}=await import('./product-categories-locale.mjs');productCategoryBridge=createProductCategoryBridge(document);productCategoryLocaleVerifier=verifyCategoryCatalog;}catch{}
     try{const {createProductAchievementListBridge}=await import('./product-achievement-list.mjs');productAchievementListBridge=createProductAchievementListBridge(document);}catch{}
     try{const {createProductAchievementHeader}=await import('./product-achievement-header.mjs');productAchievementHeader=createProductAchievementHeader(document);}catch{}
     try{const {createProductCollectionItems}=await import('./product-collection-items.mjs');productCollectionItems=createProductCollectionItems(document);}catch{}
@@ -811,6 +814,6 @@ async function bootstrap(){
   try{const {mountProductFilters}=await import('./product-filters.mjs');mountProductFilters(document,{achievement:onAchievementsFilter,collection:renderCollections},()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
   renderAchievements();
   try{const {mountProductTabs}=await import('./product-tabs.mjs');mountProductTabs(document,setTab,()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
-  try{const {startProductLocaleRoot192}=await import('./product-locale-root-192-boot.mjs');productLocaleRoot=startProductLocaleRoot192(productLocaleHeaderSnapshot);}catch{const host=el('hkiaLocaleChrome');if(host)host.hidden=true;}
+  try{const {startProductLocaleRoot192}=await import('./product-locale-root-192-boot.mjs');productLocaleRoot=startProductLocaleRoot192(productLocaleHeaderSnapshot,{verifyCategoryCatalog:productCategoryLocaleVerifier,paintLocale:locale=>productCategoryBridge.paintLocale(locale)});}catch{const host=el('hkiaLocaleChrome');if(host)host.hidden=true;}
 }
 bootstrap();
