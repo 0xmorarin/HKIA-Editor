@@ -1,23 +1,18 @@
 {
   "schema": "HKIA.BetaArtifactPreparation.1",
-  "state": "V33_FIVE_SCOPE_COMBINED_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
+  "state": "V33_SIX_SCOPE_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
   "writer": "OFF",
-  "sourceSha256": "ca0268e4d1d87586f7aeac774985cfd65d5cbd46fb15295e841acfa7fc1e2352",
-  "baseArtifactManifestSha256": "137cc1cdc1dc783fa4cedadf3e16619a07c9cfa6f6559cb8d2f449b7603120db",
-  "entries": 4152,
-  "bytes": 146727089,
+  "sourceSha256": "dbe11b26053e832370cdd3d79ebe69695c7acb6bf961d2404a6814c11b4d2272",
+  "baseArtifactManifestSha256": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
+  "entries": 4153,
+  "bytes": 146804189,
   "webp": 4076,
-  "modules": 60,
+  "modules": 61,
   "modifiedPaths": [
     "src/app.js"
   ],
   "addedPaths": [
-    "data/svelte-license.json",
-    "src/product-achievement-header.mjs",
-    "src/product-achievement-list.mjs",
-    "src/product-categories.mjs",
-    "src/product-filters.mjs",
-    "src/product-tabs.mjs"
+    "src/product-collection-items.mjs"
   ],
   "files": {
     ".nojekyll": {
@@ -16537,8 +16532,8 @@
       "sha256": "8b5e3e7049055ef38a647afe75635a9fc45fc44b10af3e4b473417f9d2021019"
     },
     "src/app.js": {
-      "bytes": 111338,
-      "sha256": "adaf88bec2db44bd9b3babfa11519f052ccaf5b76a27d750ccf49913bbe3c663"
+      "bytes": 112381,
+      "sha256": "4155e46b6ab0bbe18d6883a5583c4a2e1f0d62b95eaf8b81ac57165590f9cbe6"
     },
     "src/collection-history-extension.js": {
       "bytes": 9717,
@@ -16595,6 +16590,10 @@
     "src/product-categories.mjs": {
       "bytes": 76110,
       "sha256": "74f7e206733e404dbf98d2be21b381675e4da204bd5380d0f9a8c03411511eb6"
+    },
+    "src/product-collection-items.mjs": {
+      "bytes": 76057,
+      "sha256": "e2d2b989344cc7125a959f0ebf286cdd860298a474198271f6b455b195649978"
     },
     "src/product-filters.mjs": {
       "bytes": 77573,

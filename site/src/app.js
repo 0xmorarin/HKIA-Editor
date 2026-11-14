@@ -625,7 +625,9 @@ function renderCollections(){
   }
   grid.append(frag);renderCollectionDetail();productCategoryBridge?.render(grid,all.map(c=>c.key),state.selectedCollection,state.collections.length);
 }
+let productCollectionItems=null;
 function renderCollectionDetail(){
+  productCollectionItems?.restore();
   const panel=el('collectionDetail');
   const category=state.collections.find(c=>c.key===state.selectedCollection);
   if(!category){panel.hidden=true;return;}panel.hidden=false;panel.replaceChildren();
@@ -666,29 +668,33 @@ function renderCollectionDetail(){
   toolbar.append(sortItems);
   let limit=100;
   const renderRows=()=>{
+    productCollectionItems?.restore();
     const q=query.value.trim().toLowerCase();const f=filter.value;const ids=state.collectionMatch?.recordedSet;
     const matches=selected.items.filter(item=>{const collected=ids?.has(item.id);return (!q||item.key.toLowerCase().includes(q)||String(item.id).includes(q)||item.guid?.includes(q)||imageUi()?.item(item.id,item.guid,rule.guid).spritePathId===q)&&(f==='all'||!ids||Boolean(collected)===(f==='collected'));});
     if(sortItems.value==='name')matches.sort((a,b)=>a.key.localeCompare(b.key,'ja'));
     if(sortItems.value==='id')matches.sort((a,b)=>a.id-b.id);
     bulk.replaceChildren();if(nativePreview.status().ready)renderCollectionBulk(bulk,matches,selected.items,records.flatMap(r=>sourceCollectionStats(r.key)?.items??[]));
     count.textContent=`該当 ${matches.length}件（${Math.min(matches.length,limit)}件表示）。履歴なしは未取得や未解放を意味しません。日時は保存済み100ns ticksを表示し、UTC・Kindは未検証です。`;
-    rows.replaceChildren();const frag=document.createDocumentFragment();
+    rows.replaceChildren();const frag=document.createDocumentFragment();const projection=[];
     for(const item of matches.slice(0,limit)){
       const typed=state.collectionReadModel?.getItem(item.id);const collected=typed?.historyRecorded;const row=node('div','collection-item-row');
-      if(imageUi())row.append(imageElement(imageUi().item(item.id,item.guid,rule.guid),{kind:'item',label:'アイテム画像'}));
+      const media=imageUi(),icon=media?media.item(item.id,item.guid,rule.guid):null;
+      if(media)row.append(imageElement(icon,{kind:'item',label:'アイテム画像'}));
+      let stamp=null;
       row.append(node('span',!typed?'unknown-mark':collected?'collected-mark':'missing-mark',!typed?'?':collected?'✓':'—'),node('span','item-source-name',item.key||`ItemId ${item.id}`),node('small','item-source-id',`ID ${item.id}`),node('small','collection-status',typed?`${typed.status} · ${typed.historyRecorded?'履歴あり':'履歴なし'}`:'未照合'));
-      if(typed&&state.collectionHistoryDisplay){const stamp=collectionHistoryUiStatus({model:state.collectionReadModel,display:state.collectionHistoryDisplay,itemId:item.id});
+      if(typed&&state.collectionHistoryDisplay){stamp=collectionHistoryUiStatus({model:state.collectionReadModel,display:state.collectionHistoryDisplay,itemId:item.id});
         if(stamp.recorded)row.append(node('small','collection-history-ticks',`100ns ticks ${stamp.rawTicks??'UNKNOWN'}${stamp.calendar?' · '+stamp.calendar+'（timezone UNKNOWN）':''}`));}
       const inspect=node('button','btn-secondary item-inspect-button','詳細・変更案');inspect.type='button';inspect.addEventListener('click',()=>{state.selectedItemId=item.id;renderCollectionItemInspector(item.id,itemInspector);itemInspector.scrollIntoView({block:'nearest'});});row.append(inspect);
       const parent=state.parentMatch?.parentByChild.get(item.id);if(parent)row.append(node('small','item-source-parent',`親ID ${parent.parent_id}${parent.relation==='cross-collection'?'（他カテゴリ）':''}`));
+      if(productCollectionItems&&limit<=1200)projection.push({id:item.id,key:item.key||'',guid:item.guid,history:typed?{kind:'known',status:typed.status,recorded:typed.historyRecorded,rawTicks:stamp?.recorded?stamp.rawTicks??null:null,calendar:stamp?.recorded?stamp.calendar??null:null,showTicks:!!stamp?.recorded}:{kind:'unknown'},parent:parent?{id:parent.parent_id,cross:parent.relation==='cross-collection'}:undefined,imageEnabled:!!media,image:icon});
       frag.append(row);
     }
     if(!matches.length)rows.append(node('p','placeholder','該当するアイテムはありません。'));else rows.append(frag);
     if(matches.length>limit){const more=node('button','btn-secondary show-more',`さらに表示（残り ${matches.length-limit}件）`);more.type='button';more.addEventListener('click',()=>{limit+=100;renderRows();});rows.append(more);}
     if(state.selectedItemId!==null&&selected.items.some(x=>x.id===state.selectedItemId))renderCollectionItemInspector(state.selectedItemId,itemInspector);
+    if(productCollectionItems)try{productCollectionItems.render(rows,{rows:projection,total:matches.length,limit},()=>state.selectedCollection===category.key&&state.selectedCollectionDefinition===rule.key&&panel.contains(section));}catch{}
   };
-  query.addEventListener('input',()=>{limit=100;renderRows();});filter.addEventListener('change',()=>{limit=100;renderRows();});sortItems.addEventListener('change',()=>{limit=100;renderRows();});renderRows();
-  panel.append(section);
+  query.addEventListener('input',()=>{limit=100;renderRows();});filter.addEventListener('change',()=>{limit=100;renderRows();});sortItems.addEventListener('change',()=>{limit=100;renderRows();});panel.append(section);renderRows();
 }
 function renderCollectionItemInspector(itemId,host){
   host.replaceChildren();const model=state.collectionReadModel;
@@ -760,6 +766,7 @@ async function bootstrap(){
     try{const {createProductCategoryBridge}=await import('./product-categories.mjs');productCategoryBridge=createProductCategoryBridge(document);}catch{}
     try{const {createProductAchievementListBridge}=await import('./product-achievement-list.mjs');productAchievementListBridge=createProductAchievementListBridge(document);}catch{}
     try{const {createProductAchievementHeader}=await import('./product-achievement-header.mjs');productAchievementHeader=createProductAchievementHeader(document);}catch{}
+    try{const {createProductCollectionItems}=await import('./product-collection-items.mjs');productCollectionItems=createProductCollectionItems(document);}catch{}
     renderAchievements();renderCollections();
   }catch(e){error(`同梱アセット読み込み失敗：${e.message}。ローカル表示はHTTPサーバー経由で開いてください。`);}
   el('openNativePreview').addEventListener('click',async()=>{nativeNotice='';const epoch=state.sourceLoadEpoch,attempt=++nativeOpenAttempt;if(!nativeModuleStaged())return;const pending=nativePreview.connect();renderNativeSession();try{await pending;if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;adoptNativeDisplay();nativeNotice='';}catch(e){if(epoch!==state.sourceLoadEpoch||attempt!==nativeOpenAttempt)return;closeNativePreviewSession();nativeNotice=e.message;}renderNativeSession();renderAchievements();renderCollections();});
