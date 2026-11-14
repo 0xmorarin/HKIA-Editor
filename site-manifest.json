@@ -1,18 +1,40 @@
 {
   "schema": "HKIA.BetaArtifactPreparation.1",
-  "state": "V33_SIX_SCOPE_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
+  "state": "V33_LOCALE_ROOT_192_SELF_QA_CANDIDATE_NOT_RELEASE_AUTHORIZED",
   "writer": "OFF",
-  "sourceSha256": "dbe11b26053e832370cdd3d79ebe69695c7acb6bf961d2404a6814c11b4d2272",
-  "baseArtifactManifestSha256": "d3267ba7132df5a8d311e41fd25425255aecff3eabb68fccccf65a3f99db5c8b",
-  "entries": 4153,
-  "bytes": 146804189,
+  "sourceSha256": "f9192abf38ef920e325b746a8829c21810663f77923227a5f10bdac49ad176e4",
+  "baseArtifactManifestSha256": "fe321492bc56aff7ff789130972673c002c0319aaabe19d2139bdcdcd5c2cddd",
+  "entries": 4173,
+  "bytes": 147202520,
   "webp": 4076,
-  "modules": 61,
+  "modules": 65,
   "modifiedPaths": [
-    "src/app.js"
+    "index.html",
+    "src/app.js",
+    "src/product-filters.mjs",
+    "src/product-tabs.mjs"
   ],
   "addedPaths": [
-    "src/product-collection-items.mjs"
+    "src/product-achievement-header-r8.mjs",
+    "src/product-locale-root-192.mjs",
+    "src/product-locale-root-192.css",
+    "src/product-locale-root-192-boot.mjs",
+    "localization/runtime.mjs",
+    "localization/ui/de.json",
+    "localization/ui/en-GB.json",
+    "localization/ui/en.json",
+    "localization/ui/es.json",
+    "localization/ui/fr-CA.json",
+    "localization/ui/fr.json",
+    "localization/ui/it.json",
+    "localization/ui/ja.json",
+    "localization/ui/ko.json",
+    "localization/ui/nl.json",
+    "localization/ui/pt-BR.json",
+    "localization/ui/ru.json",
+    "localization/ui/tr.json",
+    "localization/ui/zh-Hans.json",
+    "localization/ui/zh-Hant.json"
   ],
   "files": {
     ".nojekyll": {
@@ -16400,8 +16422,72 @@
       "sha256": "2be165233e6c3325ff25360ffdaee1c92c985eb8628234bf5fb11f6b62aecf16"
     },
     "index.html": {
-      "bytes": 12117,
-      "sha256": "51e08577d212f9d8f90095ada1d2acd2e6a373d3f9d8e875e8833e107c06dea4"
+      "bytes": 12224,
+      "sha256": "bb751375b519234d18830281e17c3c6b9de055343f40297537308945d8a9163a"
+    },
+    "localization/runtime.mjs": {
+      "bytes": 4377,
+      "sha256": "810082e0259971a450fca603bbd6739a03fd8f865f7cb491242c84eca8d6988b"
+    },
+    "localization/ui/de.json": {
+      "bytes": 12850,
+      "sha256": "bd5bb8948e5e15e886c4f58421b00b41f0ec68a8ec627b023776ac1525507edb"
+    },
+    "localization/ui/en-GB.json": {
+      "bytes": 11588,
+      "sha256": "af38facf8f7acbb982c9794909a1cc08edd5d94850795d69cd9ef23640e80c9f"
+    },
+    "localization/ui/en.json": {
+      "bytes": 11588,
+      "sha256": "af38facf8f7acbb982c9794909a1cc08edd5d94850795d69cd9ef23640e80c9f"
+    },
+    "localization/ui/es.json": {
+      "bytes": 12927,
+      "sha256": "fb3061db5c00ef1c32d24af6b49246e53924dd90bd7984993c4a0774d037950d"
+    },
+    "localization/ui/fr-CA.json": {
+      "bytes": 13567,
+      "sha256": "17360cc5e61429400bdf4fa703121a54a0aeaf2368902609bc2e0d7dfa166038"
+    },
+    "localization/ui/fr.json": {
+      "bytes": 13565,
+      "sha256": "1504c6d257bfb77003fecdd7acbc5cf114a8e51050a7521ab4ca42eeb2fc9737"
+    },
+    "localization/ui/it.json": {
+      "bytes": 13029,
+      "sha256": "252954237409005d1fee26f96f604619380001917dccd93b133ead52a6549619"
+    },
+    "localization/ui/ja.json": {
+      "bytes": 12408,
+      "sha256": "5729953617fdda2c39fef0499dc922a55c6b4a0d0bf134fa1a656cb3deb74851"
+    },
+    "localization/ui/ko.json": {
+      "bytes": 12358,
+      "sha256": "df8800988f3c50fcee9a73e5c60093da4ef2737bb62cd841466ecae2e41874c7"
+    },
+    "localization/ui/nl.json": {
+      "bytes": 12806,
+      "sha256": "a9c9f522c04c61a85e63d030a2407028e122a4c9cff95d57d7b1df6e1c7ae948"
+    },
+    "localization/ui/pt-BR.json": {
+      "bytes": 12921,
+      "sha256": "9befdaa8b85d09f623f75ed980af465afa88e7a07a163ec7f87f9aaf90974c13"
+    },
+    "localization/ui/ru.json": {
+      "bytes": 17942,
+      "sha256": "08c523b001893cb1c1b3a510ac68a1874c1194ef7a0690f2aad1cd8f1c2d57cd"
+    },
+    "localization/ui/tr.json": {
+      "bytes": 12509,
+      "sha256": "9e0a2f2ee46bb9f5c8eae28842e4ea53cc1000146d375250b132e450ee5530b5"
+    },
+    "localization/ui/zh-Hans.json": {
+      "bytes": 10952,
+      "sha256": "9a5b1098e6cf9a9f19a0dea90a48bda78ecd0ef95ade4c4ca54e4082237b0139"
+    },
+    "localization/ui/zh-Hant.json": {
+      "bytes": 11008,
+      "sha256": "9638729fca88ca34e47006eef3889b8b2491ddc0a79cf6588f155ad2de0633cc"
     },
     "media/boot.mjs": {
       "bytes": 889,
@@ -16532,8 +16618,8 @@
       "sha256": "8b5e3e7049055ef38a647afe75635a9fc45fc44b10af3e4b473417f9d2021019"
     },
     "src/app.js": {
-      "bytes": 112381,
-      "sha256": "4155e46b6ab0bbe18d6883a5583c4a2e1f0d62b95eaf8b81ac57165590f9cbe6"
+      "bytes": 112883,
+      "sha256": "9ebb7dede601988a87c011e95efc04fac024f6dec932b191c114108a4d44c87a"
     },
     "src/collection-history-extension.js": {
       "bytes": 9717,
@@ -16579,6 +16665,10 @@
       "bytes": 53233,
       "sha256": "60507af80a8d71b88e55f657333adf57ee8a5debaae9bcca5455c46403ecd930"
     },
+    "src/product-achievement-header-r8.mjs": {
+      "bytes": 79328,
+      "sha256": "1086cb3c31b67c62938200b8522330370d5bc9467273ad4e0ac1d7b26fb2d254"
+    },
     "src/product-achievement-header.mjs": {
       "bytes": 68360,
       "sha256": "af5e87d06fc5872fc504c1ec4c924fbd33b5f56c35953df765c4890e1bdcdaa7"
@@ -16596,12 +16686,24 @@
       "sha256": "e2d2b989344cc7125a959f0ebf286cdd860298a474198271f6b455b195649978"
     },
     "src/product-filters.mjs": {
-      "bytes": 77573,
-      "sha256": "6111b956a454601fb4beb8add6bbe697e3353895908b1b12ad0fd0261bff9de5"
+      "bytes": 96539,
+      "sha256": "f18f00d9d31e7190f659b1839d77b58360d7ad7576360113df51fe4401a9c0c5"
+    },
+    "src/product-locale-root-192-boot.mjs": {
+      "bytes": 1168,
+      "sha256": "e6216f8905622df1c76160085f5e3cbbe18658a9d053e8b15d55b3187b56a363"
+    },
+    "src/product-locale-root-192.css": {
+      "bytes": 524,
+      "sha256": "c26d750d29ce9de549a160855858c9a0731b7afee3ee8c0ed05016db25db6074"
+    },
+    "src/product-locale-root-192.mjs": {
+      "bytes": 92846,
+      "sha256": "5ba342e036205fcdf8862398b12a9e83b5ad4128dbc45e2ac51ab4ec3c0e5d20"
     },
     "src/product-tabs.mjs": {
-      "bytes": 67571,
-      "sha256": "2d37574dae31c6a54560f8116dc737ab444a5ebd805f4cbe581496e689e4d417"
+      "bytes": 76066,
+      "sha256": "bb4df333ae6171d050847ae0cc703884ed78d958f7271d9d68ea7bee82b96bbe"
     },
     "src/save.js": {
       "bytes": 23511,
@@ -16627,6 +16729,5 @@
       "bytes": 10284,
       "sha256": "5a794f9ebdf1e13e527cb2b487bcda488e8cc60ee58224b0eedfafa964a3cff8"
     }
-  },
-  "sourceKind": "COMPOSITION_PROVENANCE_JSON"
+  }
 }

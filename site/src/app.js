@@ -381,9 +381,9 @@ function renderAchievements(){
 }
 function detailLine(name,value){return withChildren('div','detail-line',node('b','',name),node('span','',value));}
 let productAchievementHeader=null;
+let productLocaleRoot=null,productLocaleHeaderSnapshot=null;
 function renderProductAchievementHeader(panel,record,mapped){
-  if(!productAchievementHeader)return;
-  try{const r=record?{guid:record.guid,title:achievementTitle(record),kind:record.kind,mapped,complete:typeof record.complete==='boolean'?record.complete:null,current:record.current===null?null:String(record.current),completed:typeof record.completed==='string'||record.completed===null?record.completed:undefined,documentId:record.id==null?null:String(record.id)}:null;productAchievementHeader.render(panel,r,()=>state.selectedAchievement??null);}catch{}
+  try{const r=record?{guid:record.guid,title:achievementTitle(record),kind:record.kind,mapped,complete:typeof record.complete==='boolean'?record.complete:null,current:record.current===null?null:String(record.current),completed:typeof record.completed==='string'||record.completed===null?record.completed:undefined,documentId:record.id==null?null:String(record.id)}:null;const readSelected=()=>state.selectedAchievement??null;productLocaleHeaderSnapshot={panel,record:r,readSelected};productAchievementHeader?.render(panel,r,readSelected);productLocaleRoot?.renderHeader(productLocaleHeaderSnapshot);}catch{}
 }
 function renderEditor(){
   const panel=el('editorPanel');panel.removeAttribute('data-hkia-svelte-achievement-header');panel.replaceChildren();
@@ -808,8 +808,9 @@ async function bootstrap(){
   const drop=el('dropArea');
   drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('drag');});drop.addEventListener('dragleave',()=>drop.classList.remove('drag'));
   drop.addEventListener('drop',async e=>{e.preventDefault();drop.classList.remove('drag');await loadFile(e.dataTransfer?.files?.[0]);});
-  try{const {mountProductFilters}=await import('./product-filters.mjs');mountProductFilters(document,{achievement:onAchievementsFilter,collection:renderCollections});}catch{}
+  try{const {mountProductFilters}=await import('./product-filters.mjs');mountProductFilters(document,{achievement:onAchievementsFilter,collection:renderCollections},()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
   renderAchievements();
-  try{const {mountProductTabs}=await import('./product-tabs.mjs');mountProductTabs(document,setTab);}catch{}
+  try{const {mountProductTabs}=await import('./product-tabs.mjs');mountProductTabs(document,setTab,()=>productLocaleRoot?.readFilterLocale()??null);}catch{}
+  try{const {startProductLocaleRoot192}=await import('./product-locale-root-192-boot.mjs');productLocaleRoot=startProductLocaleRoot192(productLocaleHeaderSnapshot);}catch{const host=el('hkiaLocaleChrome');if(host)host.hidden=true;}
 }
 bootstrap();
